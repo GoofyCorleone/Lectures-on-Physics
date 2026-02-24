@@ -1,0 +1,190 @@
+\documentclass[spanish,11pt,twoside,openright]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[none]{hyphenat}
+\usepackage{geometry}
+\geometry{letterpaper,textheight=8.0in,textwidth=6.5in,headheight=20pt}
+
+% Paquetes matemáticos y gráficos
+\usepackage{amsmath,amsfonts,amssymb,mathrsfs}
+\usepackage{graphicx,epstopdf,subcaption}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,
+	showstringspaces=false,
+	commentstyle=\color{red},
+	keywordstyle=\color{blue}
+}
+
+% Estética y formato
+\usepackage{titlesec,titletoc}
+\usepackage{fancyhdr}
+\usepackage{lineno}
+\usepackage{etoolbox}
+\usepackage{epigraph}
+\usepackage[colorlinks=true,urlcolor=black,linkcolor=black]{hyperref}
+\usepackage{natbib}
+\usepackage{braket}
+% Paquete de fecha
+\usepackage{datetime}
+
+% Configuración de fecha automática en español
+\newdateformat{mispanishdate}{\THEDAY\ de \monthname[\THEMONTH] \THEYEAR}
+\mispanishdate
+
+% Eliminar cualquier otra configuración de fecha
+
+% Configuración de página
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[RE]{\bfseries\nouppercase{\leftmark}}
+\fancyhead[LO]{\bfseries\nouppercase{\rightmark}}
+\fancyfoot[C]{\it Autores: Jafert, Dayan, Santiago, Angel, Brayan\quad UIS}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+% Configuración de capítulos con página completa
+\titleformat{\chapter}[display]
+{\normalfont\Huge\itshape\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}
+
+% Estilo para epígrafes de capítulos
+\setlength{\epigraphrule}{0pt}
+\renewcommand{\epigraphsize}{\large}
+\renewcommand{\textflush}{flushright}
+\setlength{\epigraphwidth}{0.8\textwidth}
+
+% Configuración de bibliografía
+\bibliographystyle{apalike}
+\usepackage{chapterbib}
+
+% Comandos personalizados
+\newtheorem{myteo}{Teorema}
+\newtheorem{myDef}{Definición}
+
+\begin{document}
+	
+	% Portada título minimalista
+	\begin{titlepage}
+		\vspace*{5cm}
+		\begin{center}
+			{\itshape\Huge Óptica Cuántica\par}
+			\vfill
+			{\large\itshape ``La belleza de lo simple, la elegancia de lo fundamental''\par}
+			\vspace{1cm}
+			{\large\today\par}
+		\end{center}
+	\end{titlepage}
+	
+	% Portada institucional
+	\cleardoublepage
+	\begin{titlepage}
+		\centering
+		\begin{minipage}{.4\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Figures/LoGOTS.png}
+		\end{minipage}%
+		\begin{minipage}{.4\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Figures/logouis.png}
+		\end{minipage}
+		
+		\vspace{2cm}
+		\rule{\textwidth}{2pt}
+		\vspace{1cm}
+		
+		{\Huge\textbf{ÓPTICA CUÁNTICA}\par}
+		
+		\vspace{1.5cm}
+		
+		{\Large\textbf{Jafert Serrano (Edición 1 y 2)}\\
+			\textbf{Brayan Pedraza (Edición 1)}\\
+			\textbf{Ángel Blanco (Edición 1)} \\
+			\textbf{Dayan Aselas (Edición 1 y 2)}\\
+			\textbf{Santiago Montes (Edición 2)}\par}
+		
+		\vspace{1cm}
+		
+		\textit{Profesor: Rafael Ángel Torres Amaris}\par
+		
+		\vspace{1cm}
+		
+		\textit{Universidad Industrial de Santander}\\
+		\textit{Facultad de Ciencias}\\
+		\textit{Escuela de Física}\\
+		\textit{Grupo de Óptica y Tratamiento de Señales}\par
+		
+		\vfill
+		{\large\today\par}
+	\end{titlepage}
+	
+	\frontmatter
+	\tableofcontents
+	\listoffigures
+	
+	\mainmatter
+	\chapter{Introducción a la propagación de la radiación y teoría estocástica de la luz}
+	\thispagestyle{empty}
+	\vspace*{2cm}
+	\begin{center}
+		{\itshape\Huge \par}
+		\vspace{1cm}
+		\epigraph{``La luz es la sombra de Dios''}{-- San Agustín}
+	\end{center}
+	\clearpage
+	
+	\input{Capitulo 1/cap1.tex}
+	
+	\chapter{Cuantización del campo electromagnético}
+	\thispagestyle{empty}
+	\vspace*{2cm}
+	\begin{center}
+		{\itshape\Huge Los físicos no podemos hacer el amor, cuando encontramos el momento, no encontramos la posición - Harold Paredes\par}
+		\vspace{1cm}
+		\epigraph{``El fotón es el portador cuántico de la realidad electromagnética''}{-- Roy J. Glauber}
+	\end{center}
+	\clearpage
+	
+	\input{Capitulo 2/cap2.tex}
+
+    \chapter{La propoagación fundamental de los fotones}
+	\thispagestyle{empty}
+	\vspace*{2cm}
+	\begin{center}
+		{\itshape\Huge \par}
+		\vspace{1cm}
+		\epigraph{``El fotón es emitido aquí, absorbido allá, y entre esos puntos no sabemos —ni podemos saber— qué camino siguió. La naturaleza solo exige que la suma de todos los caminos posibles contribuya a la probabilidad final''}{-- Richard Feynman }
+	\end{center}
+	\clearpage
+	
+	\input{Capitulo 3/cap3.tex}
+
+
+        \chapter{El Campo de Riemann-Silberstein}
+	\thispagestyle{empty}
+	\vspace*{2cm}
+	\begin{center}
+		{\itshape\Huge \par}
+		\vspace{1cm}
+		\epigraph{``El fotón no se encuentra en el campo eléctrico o en el campo magnético sino en ambos al mismo tiempo, por eso, el vector de Riemann-Silberstein es la mejor opción para describir una función de onda del fotón.''}{-- Iwo Bialynicki-Birula }
+	\end{center}
+	\clearpage
+	
+	\input{Capitulo 4/cap4.tex}
+
+    \chapter{Un modelo del fotón}
+    	\thispagestyle{empty}
+    	\vspace*{2cm}
+    	\begin{center}
+    		{\itshape\Huge \par}
+    		\vspace{1cm}
+    		\epigraph{Por el resto de mi vida, voy a reflexionar sobre lo que es la luz}{Albert Einstein}
+    	\end{center}
+    	\clearpage
+    	
+    	\input{Capitulo 5/cap5}
+	
+	\bibliography{referencias}
+	
+\end{document}

@@ -1,0 +1,276 @@
+\section{Propagador de fotones}
+
+    En esta parte vamos a abordar la naturaleza de la propagación de los fotones y su relación con el principio de Huygens-Fresnel. Aunque el uso de la fórmula de difracción de Rayleigh-Sommerfeld como propagador de fotones es ampliamente aceptado debido a la evidencia experimental disponible, aún existen interrogantes sobre la conexión directa entre la propagación del campo electromagnético en la óptica clásica y la propagación de los fotones, donde el cuadrado de la amplitud de probabilidad describe la probabilidad transversal de detección del fotón.
+
+    Además, se presenta una formulación matemática para la propagación de los fotones utilizando el formalismo de la cuantización del campo electromagnético y el método de la integral de camino. Esta formulación tiene una similitud destacada con una transformada de Fourier fraccional (FRFT, por sus siglas en inglés). Se demuestra que debido a la estrecha relación existente entre la FRFT y la integral de difracción de Fresnel, este propagador puede expresarse como una difracción de Fresnel, lo que plantea una discusión sobre su carácter fundamental a nivel de fotón en comparación con el principio de Huygens-Fresnel.
+    
+    Finalmente, se realiza un experimento de conteo de fotones utilizando una rendija rectangular, confirmando que el fenómeno de difracción en la aproximación de Fresnel se comporta de manera similar al límite clásico real.
+    \subsection{Propagador de fotón}
+    
+    La amplitud de transición correspondiente para el Hamiltoniano de un campo electromagnético cuantizado es calculada mediante el método de la integral de trayectoria:
+    
+    \begin{equation}
+        \left < q_{F} \left | e^{-i\hat{H}/\hbar} \right | q_{I} \right > = \left ( \frac{\omega}{2\pi i \hbar \sin (\omega t)} \right ) ^{\frac{1}{2}} \exp \left \{  \frac{i}{2\hbar}\omega  \left [ \left (  q_{I}^{2}+q_{F}^{2} \right ) \cot (\omega t) - \frac{2q_{I}q_{F}}{\sin (\omega t)} \right ] \right \} dq_{I}
+    \end{equation}
+    
+    Entonces, la evolución temporal de un sistema en un estado $\left | \psi  \right >$ en la representación de $q$ se escribe:
+    
+    \begin{equation}
+        \psi(q_{F},t)= \left ( \frac{\omega}{2\pi i \hbar \sin (\omega t)} \right ) ^{\frac{1}{2}} \int _{\mathbb{R}} \psi (q_{1},0) \exp \left \{  \frac{i}{2\hbar}\omega  \left [ \left (  q_{I}^{2}+q_{F}^{2} \right ) \cot (\omega t) - \frac{2q_{I}q_{F}}{\sin (\omega t)} \right ] \right \} dq_{I}
+        \label{propagfoton}
+    \end{equation}
+    Esta ecuación describe cómo evoluciona en el tiempo la “función de onda” a medida que se propaga la luz, cuyo núcleo se escribe como una transformada de Fourier y una fase cuadrática al igual que la integral de difracción de Fresnel en la propagación clásica del campo electromagnético. Esta similitud nos permite establecer una conexión donde la integral de difracción de Fresnel juega un papel importante en la propagación de fotones.
+    
+    \subsection{Propagador del campo electromagnético clásico}
+    
+    La integral de difracción de Fresnel en una dimensión, a una distancia $z$, en el marco de la óptica metaxial de Bonnet se escribe:
+    
+    \begin{equation}
+        U(x,z) = \left ( \frac{i}{\lambda z} \right )^{\frac{1}{2}} e^{ikz} \exp \left [ -\frac{ik}{2}\left ( \frac{1}{z} + \frac{1}{R_{B}}\right )x^{2} \right ]\int_{\Sigma }  \exp \left [ -\frac{ik}{2}\left ( \frac{1}{z} - \frac{1}{R_{A}}\right )x'^{2} \right ] \exp\left [ \frac{ik}{z}xx' \right ] U(x',0) dx'
+        \label{eqfresnel}
+    \end{equation}
+    
+    Donde las ondas esféricas se aproximan a parabólicas y el radio de curvatura para $U$ desde su vértice hasta el centro se define como la cantidad algebraica $R_{A} = \overline{VC}$, y se considera positivo si va en la dirección de propagación de la luz. 
+    
+    \begin{figure}[h]
+        \centering    \includegraphics[width=0.9\textwidth]{Capitulo 3/Figuras/difraccionfresnel.pdf}
+        \caption{Difracción de Fresnel entre la superficie esférica $A$ y la superficie esférica $B$.}
+        \label{fig:difraccionfresnel}
+    \end{figure}
+    
+    Pellat-Finet estableció una relación entre la difracción de Fresnel y la transformación de Fourier fraccionaria. Escribiendo las amplitudes del campo y las variables reducidas:
+    
+    \begin{equation}
+        V_{A}(\rho) = U_{A}(\sqrt{\lambda \varepsilon R_{A}}\rho)\, ,\hspace{0.7cm} 
+        V_{B}(\sigma) = U_{B}\left ( \frac{\sqrt{\lambda \varepsilon R_{A}}\sigma}{\cos \alpha + \varepsilon \sin \alpha} \right )
+    \end{equation}
+    \begin{equation}        
+        \rho = \frac{1}{\sqrt{\lambda \varepsilon R_{A}}}x'\, ,\hspace{0.7cm}
+        \sigma = \frac{1}{\sqrt{\lambda \varepsilon R_{A}}}(\cos \alpha + \varepsilon \sin \alpha)x
+        \label{variablered}
+    \end{equation}
+    
+    Dónde 
+    \begin{equation}
+        \cot \alpha = \varepsilon \frac{1-\mu}{\mu}\hspace{0.7cm} \mathrm{y} \hspace{0.7cm} \mu = \frac{z}{R_{A}}
+        \label{eqcot}
+    \end{equation}
+    \begin{equation}
+        \sin ^{2} \alpha = \frac{\mu ^{2}}{\mu ^{2} + \varepsilon ^{2} (1-\mu)^{2}}
+        \label{eqsin}
+    \end{equation}
+    Además $\varepsilon$ es la solución en número real distinta de cero de:
+    
+    \begin{equation}
+        \frac{1}{R_{B}} + \frac{1}{z} = \frac{\varepsilon^{2}(1-\mu)}{\mu R_{A}[\mu^{2} + \varepsilon^{2}(1-\mu)^{2}]}
+        \label{eqradios}
+    \end{equation}
+    
+    La ecuación $\ref{eqfresnel}$ se reescribe de la forma:
+    
+    \begin{equation}
+        V_{B}(\sigma) = \frac{i}{\sin\alpha} (\cos \alpha + \varepsilon \sin \alpha) \int_{\mathbb{R}} V_{A}(\rho) \exp \left [ i\pi (\rho^{2}+ \sigma^{2})\cot \alpha - \frac{2i\pi \sigma \rho}{\sin \alpha} \right ] d\rho
+        \label{tffr}
+    \end{equation}
+    
+    Con esto, la relación entre el propagador de fotones $(\ref{propagfoton})$ y la integral de difracción de Fresnel escrita en la forma de la ecuación $\ref{tffr}$ es más clara. Solo se necesita encontrar el factor de escala para las variables reducidas apropiadas para $q_{I}$ y $q_{F}$.
+    
+    \subsection{Propagación como una integral de Fresnel}
+    
+    Para establecer una relación entre el propagador $(\ref{propagfoton})$ y la transformada de Fourier fraccionaria, se realiza el siguiente cambio de variables:
+    
+    \begin{equation}
+        \rho^{2} = \frac{\omega}{2 \pi \hbar} q_{I}^{2}\, ,\hspace{0.7cm}
+        \sigma^{2} = \frac{\omega}{2 \pi \hbar} q_{F}^{2}
+    \end{equation}
+    
+    Usando $\alpha = wt$, $k = \frac{2\pi}{\lambda}$, $ct=\varepsilon R_{A}>0$ y difiniendo un término de masa $m_{\lambda} = \frac{\hbar k}{c}$ que está relacionado con el Hamiltoniano, es decir, el campo electromagnético cuantizado puede entenderse como un oscilador armónico mecánico cuántico con masa $m_{\lambda}$.
+    
+    \begin{equation}
+        \rho^{2} = \frac{1}{\lambda \varepsilon R_{A}} \frac{\alpha}{m_{\lambda}} q_{I}^{2}\, ,\hspace{0.7cm}
+        \sigma^{2} = \frac{1}{\lambda \varepsilon R_{A}} \frac{\alpha}{m_{\lambda}}  q_{F}^{2}
+    \end{equation}
+    
+    Luego, usando las expresiones en $(\ref{variablered})$ se encuentra que la escala entre el observable $q$ y una posición real $x$ es:
+    
+    \begin{equation}
+        x_{I}^{2} = \frac{\alpha}{m_{\lambda}}q_{I}^{2} \, ,\hspace{0.7cm}
+        x_{F}^{2} = \frac{\alpha}{m_{\lambda}}q_{F}^{2}
+    \end{equation}
+    
+    Donde 
+    \begin{equation}
+        \cos \alpha + \varepsilon \sin \alpha = 1
+        \label{eqcos}
+    \end{equation}
+    
+    Entonces la ecuación $\ref{propagfoton}$ se puede escribir de la forma:
+    
+    \begin{equation}
+        \Psi(x_{F},t) = \left ( \frac{\omega}{2i\pi \hbar \sin (\omega t)} \right )^{\frac{1}{2}}\left ( \frac{m_{\lambda}}{\alpha} \right ) ^{\frac{1}{2}} \int_{\mathbb{R}} \psi(x_{I},0) \exp \left \{ \frac{i\pi}{\lambda \varepsilon R_{A}} \left [ \left ( x_{I}^{2} + x_{F}^{2} \right ) \cot \alpha - \frac{2 x_{I} x_{F}}{\sin \alpha} \right ]\right \} dx_{I}
+        \label{propagador3}
+    \end{equation}
+    
+    Con 
+    \begin{equation}
+        \Psi(x_{I},0) = \psi \left ( \sqrt{\frac{m_{\lambda}}{\alpha}}x_{I},0 \right ) \hspace{0.7cm} \mathrm{y} \hspace{0.7cm} \Psi(x_{F},t) = \psi \left ( \sqrt{\frac{m_{\lambda}}{\alpha}}x_{F},t \right )
+    \end{equation}
+    
+    Además, usando $\ref{eqcot}$ y $\ref{eqcos}$ se llega a:
+    
+    \begin{equation}
+        \sin \alpha = \frac{\mu}{\varepsilon}
+        \label{eqsin2}
+    \end{equation}
+    
+    Entonces, igualando $\ref{eqsin}$ y $\ref{eqsin2}$ se tiene:
+    
+    \begin{equation}
+        \mu ^{2} + \varepsilon ^{2} (1-\mu)^{2} = \varepsilon ^{2}
+    \end{equation}
+    
+    Con $\varepsilon ^{2} = \frac{\mu}{2- \mu}$. Entonces la ecuación $\ref{eqradios}$ toma la forma:
+    
+    \begin{equation}
+        \frac{1}{R_{B}} + \frac{1}{z} = \frac{1-\mu}{\mu R_{A}}
+    \end{equation}
+    
+    Finalmente, teniendo $R_{B} = -R_{A}$ la expresión $(\ref{propagador3})$ se puede escribir explícitamente en términos de la posición y la distancia de propagación $z$ como
+    
+    \begin{equation}
+        \psi(x_{F},z) = \left ( \frac{i}{\lambda z} \right )^{\frac{1}{2}} \exp \left [ -\frac{ik}{2} \left ( \frac{1}{z} + \frac{1}{R_{B}} \right ) x^{2}  \right ] \int_{\Sigma} \exp \left [ -\frac{ik}{2} \left ( \frac{1}{z} - \frac{1}{R_{A}} \right ) x^{2}_{F}  \right ] \exp \left [ \frac{ik}{z} x_{I} x_{F} \right ] \psi (x_{I},0) dx_{I}
+        \label{eq:fresnelclasica}
+    \end{equation}
+    
+    La cual, es exactamente la fórmula clásica de difracción de Fresnel eliminando el factor de fase $e^{ikz}$. Además, se puede escribir en términos de las variables reducidas $\rho$ y $\sigma$ como la transformada de Fourier fraccionaria,
+    
+    \begin{equation}
+        \phi (\sigma) = \left ( \frac{1}{i \sin \alpha} \right )^{\frac{1}{2}} \int_{\mathbb{R}} \exp \left \{ i \pi \left [ \left ( \rho^{2} + \sigma^{2} \right ) \cot \alpha - \frac{2 \rho \sigma}{\sin \alpha} \right ] \right \} \phi (\rho) d \rho
+        \label{eq:FRFT}
+    \end{equation}
+    
+    De esta manera, la $FRFT$ expresa matemáticamente la propagación de fotones de la misma forma que se emplea para propagar el campo clásico en el régimen de Fresnel. Se debe tener en cuenta que cuando $\alpha = \frac{\pi}{2}$, la propagación se convierte en la transformada de Fourier estándar (régimen de Fraunhofer). Lo notable aquí es que ahora disponemos de una herramienta ampliamente reconocida para estudiar la propagación de fotones, y podemos aplicar todas las propiedades del análisis de Fourier a la óptica cuántica. \\
+    
+    Como podemos ver, la función de onda $\Psi(x,t)$ se comporta como una función de onda de campo eléctrico que está estrechamente relacionada por algunos factores de escala con la función de onda $\psi(x,t)$ en la representación $q$ y se puede propagar de la misma manera como la integral de difracción de Fresnel clásica. Dado que en ambos casos —cuántico y clásico— la amplitud de probabilidad y la amplitud del campo eléctrico evolucionan de la misma manera, esto significa que el observable $q$ puede considerarse como una posición en la dirección transversal a la propagación del campo y paralela a la dirección de propagación de polarización del campo eléctrico. \\
+    
+    Por lo tanto, la ecuación $(\ref{propagfoton})$ representaría la evolución de la amplitud de probabilidad transversal, $\psi(x,t)$, de detectar un fotón, quedando deslocalizado longitudinalmente. Esto significa que el observable $\hat{q}$ está lejos de lo que puede considerarse como la posición del fotón. Vale la pena mencionar que no existe un operador de posición para fotones y no existe una descripción mecánica cuántica satisfactoria para el fotón en el sentido habitual.
+    
+    
+    \subsection{Correspondencia a la teoría de la difracción escalar}
+    
+    ¿Es posible que la difracción de Fresnel no sea una simple aproximación a la fórmula de Rayleigh-Sommerfeld sino que describa de manera fundamental la propagación del campo de radiación? A continuación se mostrará cómo se puede ajustar la teoría de la difracción escalar para obtener una expresión diferente de un campo propagado. \\
+    Se propone que el campo electromagnético no puede estar confinado en una región puntual sino en un pequeño volumen. No es muy instintivo pensar en una fuente puntual para una onda electromagnética o fotones ya que la densidad de energía espacial sería infinita. Por ejemplo, en la Ref. [33], los autores demuestran que las fuentes secundarias de Huygen tienen una dimensión y una densidad de energía finitas; además, se ha demostrado [30] que los fotones no se pueden localizar de forma nítida, aunque se ha estudiado la posibilidad de tener pulsos monofotónicos de área cero [34]. Por lo tanto, consideramos que cualquier fuente de ondas electromagnéticas $U(r,t)$ con longitud de onda $\lambda$ debe tener una amplitud constante en una vecindad de al menos el orden de la longitud de onda. Ahora bien, recordemos que en la teoría escalar de la difracción se utiliza el teorema de Green para calcular la propagación del campo electromagnético [1,2,26]. Se desea resolver, para $U$, la expresión:
+    
+    \begin{equation}
+        \int_{V} U(\nabla ^{2} + k^{2}) G dv = \int_{S} \left ( U \frac{\partial G}{\partial n} - G \frac{\partial U}{\partial n} \right ) ds
+        \label{intgreen}
+    \end{equation}
+    
+    dónde $G$ es una función auxiliar, conocida como función de Green.
+    
+    \begin{equation}
+        (\nabla^{2} + k^{2})'G_{\pm}(\vec{r}, \vec{r'}) = -4\pi [\delta(\vec{r} - \vec{r'}) \pm \delta(\vec{r} - \widetilde{\vec{r'}})]
+        \label{condgreen}
+    \end{equation}
+    
+    que representa una fuente puntual en $\vec{r'}$ $\in$ $V$ y $\widetilde{\vec{r'}}$ $\notin$ $V$. Esto permite el cálculo del campo $U$ en la región $V$ del espacio a la derecha del plano [Fig. $\ref{ftesferica}$]. Una solución para $G$, en el sentido de distribuciones, corresponde a la onda esférica,
+    
+    \begin{equation}
+        G_{\pm} (\vec{r}, \vec{r'}) = \frac{e^{ik\left | \vec{r} - \vec{r'} \right |}}{\left | \vec{r} - \vec{r'} \right |} \pm \frac{e^{ik\left | \vec{r} - \widetilde{\vec{r'}} \right |}}{\left | \vec{r} - \widetilde{\vec{r'}} \right |}
+    \end{equation}
+    
+    \begin{figure}[h]
+    \centering
+        \subfloat[]{
+        \label{ftesferica}
+        \includegraphics[width=0.5\textwidth]{Capitulo 3/Figuras/ftesferica.pdf}}
+        \subfloat[]{
+        \label{ftparabol}
+        \includegraphics[width=0.5\textwidth]{Capitulo 3/Figuras/ftparabol.pdf}}
+    \caption{$(a)$ Problema de Green usando una distribución $\delta$ de Dirac. $(b)$ Problema propuesto para una distribución arbitraria.}
+    \label{fuentes}
+    \end{figure}
+     
+    respectivamente, la expresión $\ref{intgreen}$ se reduce a:
+    
+    \begin{equation}
+        U(r) = \frac{1}{4\pi} \int_{\Sigma} U \frac{\partial G_{-}}{\partial n} ds
+    \end{equation}
+    
+    lo que da lugar a la fórmula de Rayleigh-Sommerfeld del principio de Huygens-Fresnel. \\
+    Ahora bien, dado que nuestra premisa es que una onda electromagnética no puede definirse en un solo punto, sino distribuirse en una vecindad $v(\vec{r})$ $\subseteq $ $V$ de un punto definido por $\vec{r}$, la distribución de Dirac debe ser reemplazada por otra distribución que nos permita considerar el campo en la vecindad $v(\vec{r})$ como una constante, $U(v(\vec{r})) = U(\vec{r})$ [Fig. $\ref{ftparabol}$]. \\
+    
+    Por lo tanto, se propone, en lugar de la condición de Green $[Eq. (\ref{condgreen})]$, una nueva condición
+    
+    \begin{equation}
+        (\nabla^{2} + k^{2})'\mathcal{G}_{\pm}(\vec{r}, \vec{r'}) = \rho (\vec{r} - \vec{r'}) \pm \rho(\vec{r} - \widetilde{\vec{r'}})
+        \label{condgreen2}
+    \end{equation}
+    
+    donde la expresión
+    
+    \begin{equation}
+        \int_{V} U(\vec{r'}) \underbrace{(\nabla ^{2} + k^{2})' \mathcal{G} _{\pm}} dv' = U(v(\vec{r})) = U(\vec{r})  
+        \label{intgreen2}
+    \end{equation}
+    $\hspace{6.25cm}$ $ \rho(\vec{r} - \vec{r'}) $ \\
+    
+    se mantiene. Recuerde que la integral se calcula en la región $V$ [lado derecho de la figura (\ref{fuentes})], donde la fuente del espejo auxiliar no afecta el resultado. \\
+    
+    Notemos que si colocamos las fuentes puntuales en pares (uno en la región donde se mide el campo y otro en la imagen especular), un par tras otro hasta formar un cúmulo [Fig. $\ref{ftparabol}$], entonces $\rho$ se puede escribir en base a las distribuciones de Dirac, y se puede elegir que la función $G_{\pm}$ o su derivada sean cero en el plano $(\Sigma)$ que cumpla las condiciones de Dirichlet o Neumann. Es decir, se puede elegir $\mathcal{G}(\Sigma) = 0$ o $\frac{\mathcal{G}}{n} (\Sigma) = 0$, y luego el campo se puede resolver para una vecindad de volumen $v(\vec{r})$ (del orden de la longitud de onda).
+    La función $\mathcal{G}_{\pm}(\vec{r}, \vec{r'})$, que es solución de la Ec. (\ref{condgreen2}), ya no es una onda esférica y se puede escribir en la forma
+    
+    \begin{equation}
+        (\nabla^{2} + k^{2})'\mathcal{G}(\vec{r}, \vec{r'}) = \int_{v} \rho(\vec{r}'' - \vec{r}) [\delta(\vec{r}'' - \vec{r'}) \pm \delta(\vec{r}'' - \widetilde{\vec{r'}})] d\vec{r}''
+    \end{equation}
+    
+    lo que significa que $\mathcal{G}$ está compuesto por fuentes puntuales a lo largo de la vecindad $V$, es decir, un volumen de distribuciones de Dirac.
+    Entonces la solución para el campo $U$ está dada por
+    \begin{equation}
+        U(r) = \frac{1}{4\pi} \int_{\Sigma} U \frac{\partial \mathcal{G}_{-}}{\partial n} ds
+    \end{equation}
+    
+    y $\mathcal{G}_{-}$ puede elegirse para obtener cualquier otra solución para la integral de difracción siempre que (\ref{intgreen2}) sea válida.\\
+    
+    Dado que la propagación de fotones que obtuvimos es esencialmente la fórmula integral de difracción de Fresnel donde las ondas no son esféricas sino paraboloidales, no pueden asociarse con una distribución Dirac $\delta$, sino con un tipo diferente de distribución como se muestra antes. Es decir, los frentes de onda paraboloidales no pueden ser producidos por fuentes puntuales, sino por fuentes con alguna dimensión. El principio de Huygens es, en este sentido, un caso particular de fuentes puntuales que funciona bien cuando, en la vecindad $v$, el campo electromagnético se puede aproximar en la teoría clásica por una fuente puntual que difracta la luz en todas las direcciones. En consecuencia, podríamos pensar en la solución de la Ec. ($\ref{condgreen2}$) de tal forma que la nueva distribución conduce a una nueva función auxiliar $\mathcal{G}_{\pm}$, donde se obtiene directamente la difracción de Fresnel. \\
+    
+    Se ha demostrado que la difracción de Fresnel es una solución exacta de la ecuación de onda paraxial y que la ecuación paraxial también es equivalente a la ecuación de Schrödinger dependiente del tiempo para una partícula que se mueve en un potencial bidimensional, donde la coordenada $z$ desempeña el papel del tiempo y también se ha utilizado antes para estudiar la localización transversal de la luz. Nuestro tratamiento justificaría entonces el uso de la difracción de Fresnel como propagador de cuantos de luz, ya que sugiere que el propagador puede escribirse como tal basándose en un enfoque totalmente cuántico.
+    
+    \subsection{Experimento de conteo de fotones}
+    
+    Los resultados encontrados aquí se verifican mediante la implementación de un experimento de difracción por conteo de fotones (ver Fig. $\ref{fig:experimento}$). Este fue desarrollado con la única intención de mostrar la correspondencia entre este propagador de fotones y los experimentos, lo que justifica su uso, por ejemplo, para estudiar la correlación entre fotones entrelazados.
+    
+    \begin{figure}[h]
+        \centering    \includegraphics[width=0.8\textwidth]{Capitulo 3/Figuras/experimento.png}
+        \caption{Configuración experimental.}
+        \label{fig:experimento}
+    \end{figure}
+    
+    Los resultados se verifican en un experimento de difracción con un haz láser ($\lambda$ $= 632$ $nm$) colimado con polarización lineal, el cual es atenuado mediante un arreglo de filtros de densidad neutra $(NDF)$ hasta contar un número limitado de fotones, y luego el haz es difractado por una rendija rectangular de $1905$ $\mu m$. La difracción se realiza en propagación en el espacio libre, a una distancia de $96,84$ $cm$ de la rendija hasta un contador de fotones del fotodiodo de avalancha $(D)$, cuyo diámetro es de $50$ $\mu m$. Los datos se toman durante un tiempo de $10$ $ms$ escaneando el campo difractado. \\
+    
+    El ajuste correcto entre los datos experimentales y el propagador de fotones según la ecuación ($\ref{eq:fresnelclasica}$) (ver Fig. $\ref{fig:dataexp}$) revela que la representación $q$ de un estado del campo puede usarse como guía para estudiar la propagación de fotones.
+    
+    
+    \subsection{Simulación de la distribución de probabilidad para la propagación de fotones únicos}
+    
+    \begin{figure}[h]
+        \centering    
+        \includegraphics[width=0.7\textwidth]{Capitulo 3/Figuras/dataexp.png}
+        \caption{Los datos experimentales se superpusieron a la curva azul que es la densidad de probabilidad normalizada, $\left | \Psi (x,z) \right |^{2}$, obtenido por simulación computacional.}
+        \label{fig:dataexp}
+    \end{figure}
+    
+    Es muy interesante explorar cómo evoluciona la distribución de densidad de probabilidad a medida que aumenta la distancia del plano de observación en el experimento de doble rendija. Aquí se muestra una simulación para varios planos de observación usando el propagador en Eq. ($\ref{eq:FRFT}$). A medida que el orden de la $FRFT$ se aproxima a $\alpha = \pi /2$, la distribución de densidad de probabilidad cambia hasta que alcanza el patrón de difracción de Fraunhofer característico, como se muestra en la Fig. $\ref{fig:simulacion}$. Este es un interferómetro de Young que utiliza haces gaussianos como fuentes con cintura $1/e^{2}$ radio de $0,6$ $mm$ y separación pico a pico de $4$ $mm$. Las densidades de distribución se trazan desde $\alpha = 0,8 \pi /2$ hasta $\alpha = \pi /2$ en relación con la distancia de propagación $z$.
+    
+    \begin{figure}[h]
+        \centering    
+        \includegraphics[width=0.7\textwidth]{Capitulo 3/Figuras/simulacion.png}
+        \caption{Simulación de varias distribuciones de densidad de probabilidad a una distancia $z$.}
+        \label{fig:simulacion}
+    \end{figure}
+    
+    
+    Aquí, el uso de la integral de difracción de Fresnel o, de manera equivalente, la transformada de Fourier fraccionaria ahora está fundamentalmente justificado para la propagación de un solo fotón. Nuestro tratamiento concuerda con las distribuciones de densidad de probabilidad encontradas experimentalmente por Kocsis et al. En el que pudieron construir trayectorias clásicas para fotones individuales en el interferómetro de doble rendija mediante una medición débil del momento sin destruir la interferencia. Es decir, la conclusión general, donde esas trayectorias representan el comportamiento promedio del conjunto de fotones, es confirmado por el resultado obtenido. \\
+    
+    Se ha encontrado un propagador de fotones que toma la forma de la integral de difracción de Fresnel clásica, mediante la estrecha conexión entre ambas y la transformada fraccionaria de Fourier. Se mostró que el observable $q$, debidamente escalado, corresponde a una posición observable transversal a la propagación del campo y paralela a la polarización del campo eléctrico. \\
+    Esto significa que en el límite para un gran número de cuantos, la intensidad clásica del campo es entonces proporcional a la densidad de probabilidad, $|U(x,z)|^{2} \propto |\psi(q,t)|^{2}$, por lo que se satisface el principio de correspondencia, como se muestra en el experimento de conteo de fotones.

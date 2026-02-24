@@ -1,0 +1,715 @@
+El vector RS fue estudiado en detalle por primera vez en 1907 por Silberstein \cite{silberstein1907elektromagnetische}. En su segundo artículo \cite{silberstein1907nachtrag}, Silberstein mencionó que este vector hizo su primera aparición en las conferencias sobre ecuaciones diferenciales parciales de Bernhard Riemann, editadas y publicadas en 1901 por Weber. Posteriormente, Silberstein incorporó este vector en la formulación cuaterniónica de la teoría de la relatividad \cite{silberstein1912lxxvi}. El nombre \textit{vector de Riemann-Silberstein} fue introducido por nosotros en otro artículo escrito por el físico Polaco Iwo Białynicki-Birula y ahora es generalmente aceptado.
+
+    Vamos a estudiar este campo en dos partes: la teoría clásica del electromagnetismo y la electrodinámica cuántica. Mostraremos que el vector RS ofrece una descripción uniforme que vincula el aspecto de onda y el aspecto corpuscular del electromagnetismo. . También debemos mencionar las extensas revisiones realizadas por Keller y Saari, donde el vector RS se utiliza para describir la mecánica cuántica de los fotones, con especial énfasis en la localización de los fotones.
+    
+    El campo de RS tiene la siguiente forma:
+
+        \begin{equation}\label{eq:RSVector}
+            \Vec{F} = \Vec{E} + iC\Vec{B}\;,
+        \end{equation}
+
+        donde $\Vec{E}$ y $\Vec{B}$ son los vectores de campo eléctrico y campo magnético, $C$ es la velocidad de la luz e $i$ es la unidad imaginaria. Desde un punto de vista de la geometría diferencial, y desde la interpretación física surge a simple vista una particularidad del vector de RS pues el campo eléctrico es una uno-forma, debido a que lo podemos obtener desde un gradiente y el campo magnético es un vector\footnote{No siempre aplica esto podemos tener casos extremos en donde el campo magnético puede obtenerse de un gradiente en ese caso este sería una uno-forma.} en este orden de ideas, matemáticamente no es posible sumar aritméticamente un campo eléctrico y un campo magnético entonces ¿qué significa $i$ para que le dé esta nueva naturaleza al campo magnético? Si nos fijamos, aparentemente mediante matrices de Pauli podríamos obtener el vector de RS a partir de los campos por si solos.\\
+
+        Antes de adentrarnos en la matemática que nos permite el campo de RS quisiera hacer una pequeña discusión sobre la naturaleza relativa del campo electromagnético. Desde los cursos de pregrado se nos dice que el campo magnético surge de un efecto relativista del campo eléctrico, también es un ejercicio bastante común en cursos de electromagnetismo o física del plasma encontrar la velocidad \footnote{conocida como velocidad de deriva.} a la que debe moverse un observador tal que desde su perspectiva solo haya un campo magnético \footnote{también se puede hacer el cálculo para solo ver un campo eléctrico pero no es un ejercicio tan común, pues son campos magnéticos los que se utilizan para confinar plasmas.} tal que la trayectoria que tenga una partícula de prueba sea ciclotrónica pero en ambos ejemplos surge una naturaleza relativa al observador de los campos eléctricos y magnéticos, es necesario preguntarse \textbf{¿cuál es el campo verdadero?} a mi forma de ver, es el campo de Riemann-Silberstein.\\
+
+        La respuesta de esa pregunta creo que está la teoría de las señales analíticas, la cual se puede ver un poco en el apéndice \ref{Apx:AnaliticSig} esta es una teoría, por decirlo de una forma no muy exacta, una teoría sobre las mediciones naturales, en el sentido de que se ajusta muy bien a lo que se mide mayormente en le laboratorio, la luz es un fenómeno perfectamente estocástico. Cuando medimos algo, medimos y obtenemos una señal aleatoria, en este orden de ideas, si la naturaleza del campo electromagnético es aleatoria el hecho de que dos observadores que miden la misma fuente detecten más señales eléctricas que magnéticas uno y viceversa el otro ¿existe entonces una aleatoriedad entre la diferencia de campos que mide uno con el otro? Parece que sí pero no tiene mucho sentido físico en realidad es de más  interés físico un campo aleatorio que no dependa del observador, este podría ser el campo de RS.\\
+
+        Hay muchos indicios de que el campo que estamos buscando es el de RS porque este tiene las siguientes cualidades:
+
+        \begin{itemize}
+            \item Es autofunción del operador de Dirac.
+
+            \item Se acomoda naturalmente en la descripción del fotón y la función de onda de este.
+
+            \item Se pueden escribir las 4 ecuaciones de Maxwell de forma covariante en una sola ecuación (ver la sección \ref{subsec:ElecClasik}.
+
+            \item El vector RS está lo más cerca posible de la función de onda del fotón en el espacio de coordenadas, tomando en cuenta las limitaciones impuestas por la falta del operador de posición para fotones.
+        \end{itemize}
+
+        entre otras, pero hay otra cosa que me gustaría añadir y que hasta la fecha no hemos encontrado trabajos al respecto es que si el campo de RS es una señal analítica ¿esto implicaría que los campos eléctricos y magnéticos son pares conjugados de Hilbert? (ver apéndices \ref{Apx:AnaliticSig} y \ref{APx:HilbertTransform}) Demostrar esto matemáticamente debe ser todo un reto, pero en caso de que lo sean de forma general esto solucionaría el problema del observador, pues al transformarse de los campos electromagnéticos estos efectos se compensarían en el campo de RS el cual sería un invariante de Lorentz, si a esto le agregamos que muchas de las ecuaciones de la física a nivel clásico y cuántico se pueden escribir en términos del campo de RS ¿no implica que en este campo está una pista para unificar la cuántica con la relatividad? Pues si lograramos reescribir toda la relatividad general y la teoría cuántica de campos en términos de este campo habremos dado un paso enorme en la comprensión de la naturaleza (matemática) cuántica de la relatividad.
+    \section{Electrodinámica clásica}\label{subsec:ElecClasik}
+
+        Partamos este desarrollo con las ecuaciones de Maxwell sin fuentes:
+
+        \begin{equation}
+            \Vec{\nabla} \cdot \Vec{E} = 0 ,
+        \end{equation}
+
+        \begin{equation}
+            \Vec{\nabla} \cdot \Vec{B} = 0 ,
+        \end{equation}
+
+        \begin{equation}
+            \partial_t \Vec{B} + \Vec{\nabla}\times\Vec{E} = 0,
+        \end{equation}
+
+        \begin{equation}
+            \mu\epsilon\partial_t \Vec{E} - \Vec{\nabla}\times \Vec{B} = 0.
+        \end{equation}
+
+        Jugando con el álgebra, es fácil ver que estas 4 ecuaciones se pueden reducir a dos utilizando el vector de RS
+
+        \begin{equation}
+            \Vec{\nabla}\cdot\Vec{F}(\Vec{r},t) = 0,
+        \end{equation}
+
+        \begin{equation}
+            \partial_t \Vec{F}(\Vec{r},t) + i\Vec{\nabla}\times\left( \frac{\Vec{E}}{\sqrt{2\mu}} + i \frac{\Vec{B}}{\sqrt{2\epsilon\mu^2}}\right) = \partial_t \Vec{F}(\Vec{r},t) + i\Vec{\nabla}\times\Vec{T} = 0.
+        \end{equation}
+
+        Hay que tener en cuenta que mientras la permitividad eléctrica y la permeabilidad magnética no varíen con la posición o en el tiempo esta formulación funciona, las ecuaciones de Maxwell en la materia no las trataremos acá por el momento. 
+
+        \subsection{Propiedades básicas del vector de RS}
+
+            En la ausencia de fuente, separar el campo electromagnético en las correspondientes partes eléctricas y magnéticas es algo no absoluto porque en este caso las ecuaciones de Maxwell son invariantes bajo rotaciones de dualidad \footnote{La rotación de la dualidad, también conocida como "dualidad de rotación" o "rotación de Hodge", es un concepto matemático utilizado en álgebra lineal y geometría diferencial. Se relaciona con la noción de "dualidad" entre diferentes espacios vectoriales.
+
+            En la dualidad, dado un espacio vectorial V, se define su espacio dual V* como el conjunto de todos los funcionales lineales sobre V. Es decir, los elementos de V* son aplicaciones lineales que toman un vector de V y producen un escalar.
+
+            La rotación de la dualidad se refiere a la transformación que se aplica sobre los elementos del espacio dual cuando se realiza una rotación en el espacio vectorial original. Esta rotación puede ser en dos o tres dimensiones, dependiendo del contexto.
+
+            En el caso de la rotación de dos dimensiones, si se tiene un vector v en el espacio vectorial V y se realiza una rotación en sentido antihorario por un ángulo $\theta$, entonces el correspondiente funcional en el espacio dual V* experimentará una rotación en sentido horario por el mismo ángulo $\theta$. En otras palabras, la rotación en el espacio vectorial se refleja en una rotación opuesta en el espacio dual.
+
+            En el caso de la rotación de tres dimensiones, se utiliza el concepto de producto exterior y el operador de Hodge para describir la rotación de la dualidad. Aquí, los elementos del espacio dual se representan como k-formas diferenciales, y la rotación en el espacio vectorial original induce una rotación en las k-formas del espacio dual.} del campo electromagnético,
+
+            \begin{align}
+                \Vec{E'} = \Vec{E}cos\theta - C\Vec{B}sen\theta,\\
+                C\Vec{B}' = C\Vec{B}cos\theta + \Vec{E}sen\theta.
+            \end{align}
+
+            La rotación de dualidad en términos del vector de RS simplementa significa multiplicar este vector por una fase
+
+            \begin{equation}
+                \Vec{F} \rightarrow \Vec{F}e^{i\theta}.
+            \end{equation}
+
+            La rotación de dualidad cambia las proporciones relativas de los campos eléctrico y magnético. La presencia de cargas eléctricas en el mundo real rompe la simetría bajo las rotaciones de dualidad e introduce la distinción física entre electricidad y magnetismo. En otras palabras, en el plano de dualidad donde ocurren las rotaciones duales, se introduce una dirección distinguida debido a la carga eléctrica.
+
+            Existe cierta analogía entre el cambio de fase del vector RS y el cambio de fase de la función de onda en la mecánica de ondas. Es decir, las cantidades físicas más importantes, es decir, la energía del campo (Hamiltoniano) $H$, el momento $\Vec{P}$ y el momento angular $\Vec{M}$, son invariantes bajo el cambio de fase de $\Vec{F}$. Por supuesto, la fase de F, a diferencia de la fase de la función de onda, es observable una vez que distinguimos entre los campos eléctrico y magnético.
+
+            Las cantidades $H$, $\Vec{P}$ y $\Vec{M}$ son los generadores de las relaciones en el tiempo y el espacio y las rotaciones. La lista completa de generadores también incluye el generador de la transformación de Lorentz $\Vec{L}$.
+
+            \begin{equation}
+                \Vec{F}\cdot \Vec{F}^* = \frac{\epsilon}{2}E^2 + \frac{1}{2\mu}B^2\;,
+            \end{equation}
+
+            el cual, es bien sabido corresponde a la densidad de energía electromagnética, análogamente podemos encontrar la densidad de momentum ( que es el vector de Poyinting multiplicado por $\epsilon\mu$)
+
+            \begin{equation}
+                \frac{i}{C}\left( \Vec{F} \times \Vec{F}^*\right) =  \Vec{D}\times \Vec{B}.
+            \end{equation}
+
+            y las cantidades electrodinámicas están dadas por las siguientes integrales:
+
+            \begin{align}\label{eq:VariableselectrodinamicasRS}
+                H = \int_{-\infty}^{\infty} \Vec{F}\cdot\Vec{F}^*d^3r, \\
+                \Vec{P} = \frac{i}{C}\int_{-\infty}^{\infty}\left(\Vec{F}\times \Vec{F}^* \right)d^3r, \\
+                \Vec{M} = \frac{i}{C}\int_{-\infty}^{\infty}\Vec{r}\times\left(\Vec{F}\times \Vec{F}^* \right)d^3r, \\
+                \Vec{L} = \int_{-\infty}^{\infty} \Vec{r} \Vec{F}\cdot\Vec{F}^*d^3r.
+            \end{align}
+
+            El generador de la transformación de Lorentz $\Vec{L}$ toma la forma del primer momento de energía en $t=0$. Debido a que no es una integral de movimiento en otros instantes de tiempos, surge un término dependiente del tiempo $-C^2t\Vec{P}$.
+
+            El vector de RS tiene una propiedad bastante importante la cual nos servirá más adelante para escribir las 4 ecuaciones como una sola en espacios-tiempo planos y de forma covariante (es decir que no dependen del marco de referencia) y es que el cuadrado de este vector es la combinación lineal de dos \textit{invariantes electrodinámicos relativistas},
+
+            \begin{equation}
+                F^2 = \Vec{F}\cdot\Vec{F} = \epsilon\left[\frac{1}{2}(E^2 - C^2B^2) + iC \Vec{E}\cdot\Vec{B}\right].
+            \end{equation}
+
+            tanto la parte real como la parte imaginaria son invariantes, la parte real me habla sobre la invarianza de la densidad de energía pues si recordamos el campo eléctrico y magnético depende del observador que los mida entonces la diferencia de las amplitudes de estos (multiplicados por algunos factores de escala) debe ser una cantidad que no dependa del observador. 
+
+            El segundo invariante relativista $\Vec{E}\cdot\Vec{B}$ lo podemos interpretar de varias formas, si nos montamos en un marco de referencia inercial los campos eléctricos y magnéticos se verán transformados, pero esta transformación de Lorentz se puede ver como una cierta rotación especial en un diagrama de espacio-tiempo y como el producto punto en realidad lo podemos ver como una proyección es natural que estas rotaciones especiales (transformaciones de Lorentz) me conserven las proyecciones. Podemos ver esta invariancia también desde un punto de vista un poco cuántico, este producto punto lo podemos interpretar como una interacción en un cierto punto en un instante dado $(\Vec{r},t)$ entonces es de esperar que esta interacción de las funciones de onda no dependa del observador.\\
+
+            En este orden e ideas no sería sorprendente que la transformación de propiedades del campo electromagnético expresadas en términos del vector de RS tengan las forma de rotatciones que conservan el cuadrado de $\Vec{F}$. Bajo rotaciones ordinarias, el vector de RS transforma como un vector normal:
+
+            \begin{equation}
+                \Vec{F}' = \Vec{F}cos\theta + \hat{n}\times \Vec{F}sen\theta + \hat{n}(\hat{n}\cdot\Vec{F})(1-cos\theta),
+            \end{equation}
+
+            donde $\theta$ es el ángulo de rotación y $\hat{n}$ es el vector unitario del eje de rotación. Una transformación pura de Lorentz es obtenida de esta ecuación sustituyendo el ángulo $\theta$ por la rotación imaginaria $-i\Theta$:
+
+            \begin{equation}\label{eq:transformRS}
+                \Vec{F}' = \Vec{F}cosh\Theta - i\hat{n}\times\Vec{F}senh\Theta + \hat{n}(\hat{n}\cdot\Vec{F})(1-cosh\Theta),
+            \end{equation}
+
+            donde $\Theta = atanh\left(\frac{v}{C}\right)$ y $\hat{n}$ es el vector unitario en la dirección de la velocidad.
+
+
+            
+        \subsubsection{La polarización de la luz como vector en la esfera de Poincaré como solución a las ecuaciones de Maxwell}
+
+            Cuando se habla de la polarización de la luz, por lo general en la literatura de pregrado , solo se habla de estados perfectamente polarizados de haces perfectamente monocromáticos y muy rara vez se hace un énfasis sobre la naturaleza estocástica o \textit{topológica} de la polarización, estocástica en el sentido de que hay cierto grado de polarización de la luz pues esta se compone de campo aleatorios y topológica en el sentido de que la esfera de Poincaré, un espacio de configuraciones que utilizamos para representar cualquier estado de polarización sobre o dentro de dicha esfera, fue encontrada por Poincaré  y encontró que ciertas proyecciones estereográficas  coincidan con los parámetros de Stokes. Vamos a revisar cómo utilizando el vector de RS en el espacio de Fourier las ecuaciones de Maxwell nos dan paso a un formulación muy natural de la Polarización como un vector que vive en una esfera.\\
+
+            Aplicando la transformación de Fourier a las ecuaciones de Maxwell escritas en términos del vector de RS llegamos a las siguientes ecuaciones algebráicas
+
+            \begin{equation}\label{eq:RSEvolution}
+                \partial_t \Vec{F} = C \Vec{k}\times \Vec{F}(\Vec{k},t),
+            \end{equation}
+
+            \begin{equation}\label{eq:transversalidad}
+                \Vec{k}\cdot \Vec{F}(\Vec{k},t) = 0.
+            \end{equation}
+
+            La condición de transversalidad \ref{eq:transversalidad} nos dice que el vector de RS solución debe vivir en un plano ortogonal al vector de onda $\Vec{k}$. Construyamos este espacio a partir de dos vectores ortogonales de polarización pero utilizando una base compleja $\hat{e}_{\pm}(\Vec{k)}$ la cual proviene de los vectores propios del siguiente producto cruz:
+
+            \begin{equation}
+                \Vec{k}\times \hat{e}_{\pm} = \mp ik\hat{e}_{\pm},
+            \end{equation}
+
+            donde $k = |\Vec{k}|$. Todos los vectores normalizados que satisfacen estas ecuaciones difieren solo en fase. Vamos a escoger las fases de estos vectores tales que $\hat{e}_+ = \hat{e}$ y $\hat{e}_- = \hat{e}^* = \hat{e}(-\Vec{k})$ más adelante veremos que estos vectores en coordenadas esféricas representan puntos diametralmente opuestos. Vamos a escoger el vector de polarización de la siguiente forma
+
+            \begin{equation}
+                \hat{e}(\Vec{k}) = \frac{\Vec{k}\times(\hat{u}\times \Vec{k}) - ik \hat{u}\times \Vec{k}}{\sqrt{2}k|\hat{u}\times\Vec{k}|},
+            \end{equation}
+
+            donde $\hat{u}$ es un vector unitario arbitrario, ahora bien si escogemos a $\hat{u}$ como un vector unitario en dirección $z$ el vector de polarización tiene la siguiente forma
+
+            \begin{equation}
+                \hat{e}(\Vec{k}) = 
+                \frac{1}{\sqrt{2}k\sqrt{k_x^2 + k_y^2}}
+                \begin{bmatrix}
+                    -kxkz + ikk_y\\
+                    -kykz - ikk_x\\
+                    k_x^2 + k_y^2
+                \end{bmatrix}.
+            \end{equation}
+
+        Acá podemos ver que el vector de polarización es adimensional y está normalizado es decir $\langle \hat{e},\hat{e \rangle = 1}$ . En coordenadas esféricas sabemos que existen las siguientes relaciones de cambio de coordenadas
+
+        \begin{align}
+            k_x = kcos\phi sen\theta,\\
+            k_y = ksen\phi sen\theta,\\
+            k_z = kcos\theta,
+        \end{align}
+
+        entonces el vector de polarización adquiere la siguiente forma
+
+        \begin{equation}
+            \hat{e}(\phi,\theta) = \frac{1}{\sqrt{2}}
+            \begin{bmatrix}
+                -cos\phi cos\theta + isen\phi \\
+                -sen\phi cos\theta - icos\phi \\
+                sen\theta
+            \end{bmatrix}.
+        \end{equation}
+
+        A diferencia de cómo se hace en la literatura no debemos ignorar la parte imaginaria ni subinterpretar la parte real, primero fijémonos en la parte real. Si nos damos cuenta la forma de este vector es idéntica a la del de Stokes cuando lo escribimos en términos de los ángulos de elipticidad y orientación $\chi$,$\Psi$ respectivamente el cual es \cite{goldstein2017polarized}
+
+        \begin{equation}
+            \Vec{S} = S_0 
+            \begin{bmatrix}
+                1\\
+                cos2\chi cos2\Psi\\
+                cos2\chi sen2\Psi \\
+                sen2\chi
+            \end{bmatrix},
+        \end{equation}
+
+        es inevitable negar el parentesco de la parte real del vector de polarización con el vector que formarían $[s_1,s_2,s_3]$ en coordenadas polares, podemos demostrar que la correspondencia entre los ángulos $\phi$ y $\theta$ es tal que coinciden con los ángulos $2\chi$ y $2\Psi$. \\
+
+        La parte imaginaria no debe ser ignorada pues en realidad esta coincide con el vector de Young normalizado es decir, en este formalismo podemos encontrar dos representaciones importantísimas que se han usado a lo largo de la historia en el estudio de la polarización.
+        
+        \subsection{El tensor de RS en espacios-tiempo planos}
+
+        El objetivo principal de esta sección es entender las relación entre las ecuaciones de Maxwell, los observables electromagnéticos, y ciertas cantidades que llamamos invariantes relativistas electrodinámicos para formular un tensor de energía momentum, el cual contiene toda la información sobre los variables mecánicas, electromagnéticas y termodinámicas del sistema.\\
+
+        Partamos de una acción generalizada $S$ de la siguiente forma:
+        
+        \begin{equation}
+            S = \int L\left(q,\frac{\partial q}{\partial x^{\alpha}}\right)dt .
+        \end{equation}
+
+        Donde $L$ es el lagrangiano del sistema y el conjunto de pares conjungados es $\{q(x^{\alpha}) , \frac{\partial q}{\partial x^{\alpha}}\}\;\; \alpha = 0,1,2,3$. El hecho de considerar una coordenada "$\alpha = 0$" implica que consideramos una variedad espacio-temporal esto con el objetivo de analizar la electrodinámica del sistema en un espacio-tiempo un tratamiento más amplio que si tan solo tomáramos el espacio físico tridimensional al que estamos acostumbrados. \\
+
+        Como se mencionó anteriormente queremos relacionar las ecuaciones de Maxwell e invariantes con observables, desde este punto de vista físico no es tan conveniente trabajar con el lagrangiano, sino con una densidad lagrangiana $\mathcal{L}$ por lo cual la acción $S$ se escribiría como:
+
+        \begin{equation}
+            S = \int_{\mathcal{R}^4}\Lambda \left(q , \frac{\partial q}{\partial x^{\alpha}} \right)d^3rdt \;\;[J\;S] \;.
+        \end{equation}
+
+        A  través de principios variacionales, en los cuales extremamos el funcional  de acción $S$, se llega a la ecuación de Euler-Lagrange tal que podemos encontrar una densidad lagrangiana $\Lambda$ estacionaria para dicho funcional.
+
+        \begin{equation}\label{eq:EL}
+            \frac{\partial}{\partial x^{\alpha}}\left[\frac{\partial \Lambda}{\partial \left(\frac{\partial q}{\partial x^{\alpha}} \right)} \right] - \frac{\partial \Lambda}{\partial q} = 0 \; .
+        \end{equation}
+
+        Para calcular la ecuación de Euler-Lagrange \ref{eq:EL} vamos primero a calcular la derivada parcial respecto a la coordenada $\alpha$-ésima de la densidad lagrangiana $\Lambda$.
+
+        \begin{equation*}
+            \frac{\partial \Lambda}{\partial x^{\alpha}} = \frac{\partial \Lambda}{\partial q}\frac{\partial q}{\partial x^{\alpha}} + \frac{\partial \Lambda}{\partial \left(\frac{\partial q}{\partial x^{\beta}}\right)}\frac{\partial \left(\frac{\partial q}{\partial x^{\beta}} \right)}{\partial x^{\alpha}} \; ,
+        \end{equation*}
+
+        El segundo miembro de la anterior ecuación se anula y de la ecuación \ref{eq:EL} tenemos la siguiente ecuación diferencial parcial:
+
+        \begin{equation}\label{eq:LamAlf}
+            \frac{\partial \Lambda}{\partial x^{\alpha}} = \frac{\partial}{\partial x^{\beta}}\left[\frac{\partial \Lambda}{\partial \left(\frac{\partial q}{\partial x^{\beta}} \right)} \right]\frac{\partial q}{\partial x^{\alpha}} \; .
+        \end{equation}
+
+        Si en el sistema hay cantidades disipativas  podemos añadir sus respectivas densidades asociadas como una suma al miembro derecho de la ecuación \ref{eq:LamAlf}, en esta misma ecuación podemos observar derivadas cruzadas, es decir, la ecuación \ref{eq:LamAlf} se puede reescribir como:
+
+        \begin{equation}
+            \frac{\partial \Lambda}{\partial x^{\alpha}} = \frac{\partial}{\partial x^{\beta}}\left[\frac{\partial q}{\partial x^{\alpha}}\frac{\partial \Lambda}{\partial \left(\frac{\partial q}{\partial x^{\beta}} \right)} \right] \; ,
+        \end{equation}
+
+        Si jugamos un poco con esta ecuación llegaremos a la siguiente ley de conservación:
+
+        \begin{equation}
+            \frac{\partial}{\partial x^{\beta}}\left[-\delta_{\alpha}^{\;\beta}\Lambda + \frac{\partial q}{\partial x^{\alpha}}\frac{\partial \Lambda}{\partial \left(\frac{\partial q}{\partial x^{\beta}} \right)} \right] = 0 \; .
+        \end{equation}
+
+        Vemos que de manera natural surge una cantidad conservada, y por la naturaleza de las coordenadas $\{x^{\beta}\}$ es una cantidad conservada en el espacio y el tiempo o bien una cantidad que se conserva en el tiempo y otra que se conserva en el espacio, definiremos esta cantidad como el tensor de energía momentum $\mathbb{T}$ de la siguiente forma:
+
+        \begin{equation}
+            T^{\;\beta}_{\alpha} = -\delta_{\alpha}^{\;\beta}\Lambda + \frac{\partial q}{\partial x^{\alpha}}\frac{\partial \Lambda}{\partial \left(\frac{\partial q}{\partial x^{\beta}} \right)}\;.
+        \end{equation}  
+
+        \begin{equation*}
+            \frac{\partial}{\partial x^{\beta}} T^{\;\beta}_{\alpha} = 0\;.
+        \end{equation*}
+
+        El tensor de energía momentum es de vital importancia, no solo en el sentido de que me codifica la conservación de la energía y el momentum en un solo ente geométrico sino que sus interpretaciones nos arrastran directamente a la dinámica de fluidos y con una correcta elección de observadores o marcos de referncia podemos tener información sobre flujos de cantidades sobre ciertas superficies.\\
+
+
+        El alma fundamental de esta desarrollo son los invariantes electrodinámicos relativistas. La razón principal para utilizar invariantes es precisamente porque estos no dependen de un marco de referencia por lo que la cantidad física que me describen me da mucha información sobre el estado o en este caso, los observables. Por facilidad algebráica los calculos desarrollados en este apartado se harán en coordenadas geometrizadas, es decir $C = \epsilon_0 = \mu_0 = 1$ donde $C$ es la velocidad de la luz en el vacío, y $\epsilon_0 \;,\; \mu_0$ son la permitividad eléctrica y permeabilidad magnética, en el vacío, respectivamente. Los invariantes se escribirán respecto tal tensor de Faraday el cual está definido en una métrica plana, en este caso Minkowskiana, de la siguiente forma: 
+
+            \begin{equation}
+                F^{\alpha\beta} = \partial^{\alpha}A^{\beta} - \partial^{\beta}A^{\alpha}\;.
+            \end{equation}
+
+        Donde $A$ es el cuadri-potencial electromagnético. Los invariantes electromagnéticos relativistas son los siguientes:
+
+            \begin{enumerate}
+                \item $F^{\alpha\beta}F_{\alpha\beta} = 2(B^2-E^2)$,
+
+                \item $^*F^{\alpha\beta}F_{\alpha\beta}  =\epsilon^{\mu\nu\alpha\beta}F_{\mu\nu}F_{\alpha\beta} = -8\Vec{E}\cdot\Vec{B}$, 
+
+                \item
+                $^*F^{\alpha\beta}\;^*F_{\alpha\beta} = 12(B^2-E^2)$.
+            \end{enumerate}
+
+        Podemos identificar que el cuadrado del campo de RS es directamente proporcional a los invariantes anteriormente utilizados para encontrar las ecuaciones de Maxwell si nos fijamos el cuadrado del campo de RS se puede reescribir como:
+
+        \begin{equation}
+            F^2 = -\frac{1}{2}F^{\alpha\beta}F_{\alpha\beta} - \frac{i}{4}\;^*F^{\alpha\beta}F_{\alpha\beta}.
+        \end{equation}
+
+        Así que cabe preguntarnos ¿Qué ocurre si usamos como densidad lagrangiana este primer invariante del campo de RS? Planteemos la siguiente densidad lagrangiana:
+
+        \begin{equation}
+            \Lambda(x^{\alpha},A_{\alpha}) = K_1A_{\alpha}J^{\alpha} + K_2F_{RS}^2 = K_1A_{\alpha}J^{\alpha} +K_2F^{\alpha\beta}F_{\alpha\beta} + iK_3;^*F^{\alpha\beta}F_{\alpha\beta},
+        \end{equation}
+
+
+        Y utilizaremos la ecuación de Euler-Lagrange \ref{eq:EL}. Calculemos ambos miembros de la ecuación de Euler-Lagrange
+
+        \begin{equation*}
+            \frac{\partial \Lambda}{\partial A_{\alpha}} = K_1J^{\alpha}\;,
+        \end{equation*}
+
+        \begin{equation*}
+            \frac{\partial}{\partial x^{\beta}}\left(\frac{\partial \Lambda}{\partial(\partial_{\beta}A_{\alpha})} \right) = k_2\frac{\partial(F^{\mu\nu}F_{\mu\nu})}{\partial(\partial_{\beta}A_{\alpha})} +  i\frac{k_3}{2}\frac{\partial(\epsilon^{\mu\nu\omega\gamma F_{\omega\gamma}F_{\mu\nu}})}{\partial(\partial_{\beta}A_{\alpha})}\;,
+        \end{equation*}
+
+        \begin{equation*}
+            \frac{\partial}{\partial x^{\beta}}\left(\frac{\partial \Lambda}{\partial(\partial_{\beta}A_{\alpha})} \right) = -4k_2F^{\alpha\beta} + ik_3\frac{\epsilon^{\mu\nu\omega\gamma}}{2}\left[F_{\omega\gamma} \frac{\partial F_{\mu\nu}}{\partial(\partial_{\beta}A_{\alpha})} + F_{\mu\nu} \frac{\partial F_{\omega\gamma}}{\partial(\partial_{\beta}A_{\alpha})} \right]\;,
+        \end{equation*}
+
+        \begin{equation*}
+            \frac{\partial}{\partial x^{\beta}}\left(\frac{\partial \Lambda}{\partial(\partial_{\beta}A_{\alpha})} \right) = -4k_2F^{\alpha\beta} + ik_3\frac{\epsilon^{\mu\nu\omega\gamma}}{2}\left[F_{\omega\gamma}(\delta^{\mu}_{\beta}\delta^{\nu}_{\alpha} - \delta^{\nu}_{\beta}\delta^{\mu}_{\alpha}) + F_{\mu\nu}(\delta^{\omega}_{\beta}\delta^{\gamma}_{\alpha} - \delta^{\gamma}_{\beta}\delta^{\omega}_{\alpha})\right]\;,
+        \end{equation*}
+
+        \begin{equation*}
+            \frac{\partial}{\partial x^{\beta}}\left(\frac{\partial \Lambda}{\partial(\partial_{\beta}A_{\alpha})} \right) = -4k_2F^{\alpha\beta} - i\frac{k_3}{2}\left[4\epsilon^{\alpha\beta\omega\gamma}F_{\omega\gamma} \right] = -4k_2F^{\alpha\beta} - 4ik_3\;^*F^{\alpha\beta}\;.
+        \end{equation*}
+
+        De esta forma, tenemos que la ecuación de Euler-Lagrange nos lleva a la siguiente ecuación:
+
+        \begin{equation*}
+            \partial_{\beta}(-4k_2F^{\alpha\beta} - 4ik_3\;^*F^{\alpha\beta}) = k_1J^{\alpha}\;,
+        \end{equation*}
+
+        \begin{equation*}
+            \partial_{\beta}(F^{\alpha\beta} + i\frac{k_3}{k_2}\;^*F^{\alpha\beta}) =-\frac{k_1}{4k_2}J^{\alpha}\;.
+        \end{equation*}
+
+        Si imponemos que: $k_1 = 1$ , $k_2 = -\frac{1}{4}$ y $k_3 = k_2$. Llegaremos a:
+
+        \begin{equation}\label{eq:EcuaMax1}
+            \partial_{\beta}(F^{\alpha\beta} + i\;^*F^{\alpha\beta}) = J^{\alpha}\;.
+        \end{equation}
+
+        Definimos entonces el tensor de Riemann-Silberstein como:
+
+        \begin{equation}\label{eq:TR}
+            F^{\alpha\beta} + i\;^*F^{\alpha\beta} 
+        \end{equation}
+
+        Y las 4 ecuaciones de Maxwell \ref{eq:EcuaMax1} quedan reducidas a una sola:
+
+        \begin{equation}\label{eq:EcuaMax2}
+            \partial_{\beta}R^{\alpha\beta} = J^{\alpha}
+        \end{equation}
+
+        Y la densidad Lagrangiana sería:
+
+        \begin{equation*}
+            \Lambda = A_{\alpha}J^{\alpha} - \frac{1}{4}F^{\alpha\beta}F_{\alpha\beta} -\frac{i}{4}\;^*F^{\alpha\beta}F_{\alpha\beta}
+        \end{equation*}
+
+        \begin{equation}
+            \Lambda = A_{\alpha}J^{\alpha} + \frac{1}{4}F^{\alpha\beta}F_{\alpha\beta} + F_{RS}^2
+        \end{equation}
+
+        Antes de pasar a dar interpretaciones de esta reformulación de las 4 ecuaciones de Maxwell vale la pena calcular este nuevo tensor de Riemann-Silberstein $R^{\alpha\beta}$ pues con este y la nueva densidad Lagrangiana que hemos encontrado podemos calcular todas las leyes de conservación del electromagnetismo.
+
+        \begin{equation}
+            R^{\alpha\beta} = F^{\alpha\beta} + i\;^*F^{\alpha\beta},
+        \end{equation}
+
+        Y en su formulación matricial tenemos que el tensor de Faraday de forma contravariante y covariente se escriben de la siguiente forma:
+
+        \begin{equation}
+            [F^{\alpha\beta}]=
+            \begin{bmatrix}
+                0 & E^1 & E^2 & E^3 \\
+                -E^2 & 0 & B_3 & -B_2 \\
+                -E^2 & B_3 & 0 & B_1 \\
+                -E^3 & B_2 & -B_1 & 0
+            \end{bmatrix},
+        \end{equation}
+
+        \begin{equation}
+            [F_{\alpha\beta}]=
+            \begin{bmatrix}
+                0 & -E_1 & -E_2 & -E_3 \\
+                E_2 & 0 & B^3 & -B^2 \\
+                E_2 & B^3 & 0 & B^1 \\
+                E_3 & B^2 & -B^1 & 0
+            \end{bmatrix}.
+        \end{equation}
+
+        Para calcular $[\;^*F^{\alpha\beta}]$ debemos tener en cuenta lo siguiente:
+
+        \begin{equation}
+            F^{0i}=E^i,
+        \end{equation}
+        
+        \begin{equation}
+            F^{ii} = 0,
+        \end{equation}
+
+        \begin{equation}
+            F^{ij}=\epsilon^{ijk}B_k,
+        \end{equation}
+
+        \begin{equation}
+            B^i = \frac{1}{2}\epsilon^{ijk}F_{jk},
+        \end{equation}
+
+        \begin{equation}
+            ^*F^{\alpha\beta}=\frac{1}{2}\epsilon^{\alpha\beta\mu\nu}F_{\mu\nu}.
+        \end{equation}
+
+        Evaluemos todos los casos posibles para las combinaciones de índices $\alpha,\beta\mu\nu$ recordando que según esta notación los índices griegos van de 0 a 3 y los índices latinos van de 1 a 3.
+
+        \begin{enumerate}
+            \item $\alpha=\beta$ en este caso como tenemos dos índices en el símbolo de Levi-Civitta es fácil ver que:
+            \begin{equation*}
+                ^*F^{\alpha\alpha}=\frac{1}{2}\epsilon^{\alpha\alpha\mu\nu}F_{\mu\nu} = 0.
+            \end{equation*}
+
+            \item $\alpha = 0\;,\;\beta = i$ acá nos aprovecharmos de las propiedades del Levi-Civitta al cmabiar índices griegos por latinos pues ya está el valor de 0 fijo.
+            \begin{equation*}
+                ^*F^{0i}=\frac{1}{2}\epsilon^{0i\mu\nu}= \frac{1}{2}\epsilon^{0ijk}F_{jk} = \frac{1}{2}\epsilon^{ijk}F_{jk} = B^i.
+            \end{equation*}
+
+            \item $\alpha = i \;,\; \beta = 0$ acá nos aprovechamos de la antisimetría del símbolo de Levi-Civitta:
+            \begin{equation*}
+                ^*F^{i0} = \frac{1}{2}\epsilon^{i0\mu\nu} = - \frac{1}{2}\epsilon^{0i\mu\nu}F_{\mu\nu}=-B^i.
+            \end{equation*}
+
+            \item $\alpha = i \;,\; \beta = j$ acá permutaremos el símbolo de LC y nos aprovecharemos de la antisimetría del tensor de Faraday:
+            \begin{equation*}
+                ^*F^{ij}=\frac{1}{2}\epsilon^{ij0m}F_{0m} + \frac{1}{2}\epsilon^{ijl0}F_{l0} = \frac{1}{2}\epsilon^{ij0m}E_m -\frac{1}{2}\epsilon^{ij0l}(lE_l) = \epsilon^{ijm}E_m.
+            \end{equation*}
+        \end{enumerate}
+
+        Con todo lo anterior vemos que el tensor resultando de Riemann-Silberstein es:
+
+        \begin{equation}\label{eq:TensorRS}
+            [R^{\alpha\beta}]=
+            \begin{bmatrix}
+                0 & E^1+iB^1 & E^2+iB^2 & E^3+iB^3\\
+                -(E^1+iB^1) & 0 & E_3+iB_3 & -(E_2 + iB_2)\\
+                -(E^2+iB^2) & -(E_3+iB_3) & 0 & -(E_1+iB_1)\\
+                -(E^3+iB^3) & E_2 + iB_2 & E_1 + iB_1 & 0.
+            \end{bmatrix}
+        \end{equation}
+
+        Este resultado es simplemente magnífico pues forma que encontramos \ref{eq:EcuaMax2} para las ecuaciones de Maxwell con nuestro tensor de RS \ref{eq:TensorRS} es en realidad una forma similar a una ecuación de continuidad es decir que la presencia de cargas y densidades de corrientes (el término de la derecha de la ecuación \ref{eq:EcuaMax2}) crea divergencias y circulaciones del campo de Riemann-Silberstein esto es lo que quiere decir en realidad las ecuaciones de Maxwell, una argumento o una pista más a favor de que el campo de RS es el verdadero campo físico y no el campo eléctrico y magnético por separado.\\
+
+        De forma natural podemos desacoplar la ecuacióń \ref{eq:EcuaMax2} y obtener las ecuaciones de Maxwell homogéneas y no homogéneas. Desarrollemos la expresión:
+
+        \begin{equation*}
+            \partial_{\beta}R^{\alpha\beta}=J^{\alpha}
+        \end{equation*}
+
+        \begin{equation}
+            \partial_{\beta}(F^{\alpha\beta} + i\;^*F^{\alpha\beta}F_{\alpha\beta}) = J^{\alpha}.
+        \end{equation}
+
+        Aquí de manera no forzada podemos separar esta ecuación en dos ecuaciones, una para la parte real y otra para la parte 
+
+        \begin{equation}\label{eq:NoHomogeneas}
+            \partial_{\beta}F^{\alpha\beta} = J^{\alpha},
+        \end{equation}
+
+        \begin{equation}\label{eq:Homogeneas}
+            \partial_{\beta}\;^*F^{\alpha\beta} = 0.
+        \end{equation}
+
+
+        Hagamos primero el desarrollo para las ecuaciones no homogéneas \ref{eq:NoHomogeneas}, para esto recordemos las siguientes definiciones:
+
+        \begin{equation}
+            \partial_{\beta} = [\partial_t , \Vec{\nabla}] \;\;,\;\; J^{\alpha} = [\rho , \Vec{J}].
+        \end{equation}
+
+        Entonces evaluemos los posibles casos
+
+        \begin{enumerate}
+            \item $\alpha = 0$ 
+            \begin{equation}
+                \partial_{\beta}F^{0\beta} = \partial_{\i}F^{0i} =  \Vec{\nabla}\cdot\Vec{E} = \rho,
+            \end{equation}
+
+            Podemos ver que recuperamos la ley del Gauss para el campo eléctrico en coordenadas geometrizadas.
+
+            \item $\alpha = i$
+            \begin{equation}
+                \partial_{\beta}F^{i\beta} = J^i \rightarrow \partial_tF^{i0} + \partial_{j}F^{ij} = \epsilon^{ijk}\partial_jB_k - \partial_tE^i = J^i,
+            \end{equation}
+
+            ahora expresándolo vectorialmente obtendremos la ley de Ampere-Maxwell
+
+            \begin{equation}
+                \Vec{\nabla}\times\Vec{B} = \Vec{J} + \partial_t\Vec{E}.
+            \end{equation}
+        \end{enumerate}
+
+        Ahora desarrollemos las ecuaciones homogéneas \ref{eq:Homogeneas}:
+
+        \begin{enumerate}
+            \item $\alpha = 0$
+
+            \begin{equation*}
+                \epsilon^{0\beta\mu\nu}\partial_{\beta}F_{\mu\nu} = 0 \rightarrow \epsilon^{ijk}\partial_iF_{jk}=\partial_iB^i
+            \end{equation*}
+
+            reescribiendo esto de forma vectorial tenemos la ley de Gauss para el campo magnético
+
+            \begin{equation}
+                \Vec{\nabla}\cdot\Vec{B} = 0.
+            \end{equation}
+
+            \item $\alpha = l$
+
+            \begin{equation*}
+                \epsilon^{l\beta\mu\nu}\partial_{\beta}F_{\mu\nu} = 0 = \epsilon^{l0\mu\nu}\partial_tF{\mu\nu} + \epsilon^{li\alpha\beta}\partial_iF_{\mu\nu} = 0,
+            \end{equation*}
+
+            \begin{equation*}
+                \epsilon^{l0ij}\partial_tF_{ij} + \epsilon^{li0\nu}\partial_iF_{0\nu} + \epsilon^{lij\nu}\partial_iF_{j\nu} = 0,
+            \end{equation*}
+
+            \begin{equation*}
+                -\epsilon^{0lij}\partial_tF_{ij} + \epsilon^{li0j}\partial_iF_{0j} + \epsilon^{lij0}\partial_iF_{j0}=0,
+            \end{equation*}
+
+            \begin{equation*}
+                -\epsilon^{0lij}\partial_tF_{ij} - \epsilon^{0lij}\partial_iF_{j0}-\epsilon^{0lij}\partial_iF_{j0}=0,
+            \end{equation*}
+
+            \begin{equation}
+                2\partial_tB^{l}-2(\Vec{\nabla}\times\Vec{E})^{l} = 0.
+            \end{equation}
+
+            Reescribiendo esto en forma vectorial recuperamos la ley de Faraday.
+
+            \begin{equation}
+                \partial_t\Vec{B} + \Vec{\nabla}\times\Vec{E} = 0.
+            \end{equation}
+        \end{enumerate}
+
+        De esta forma vemos que la ecuación \ref{eq:EcuaMax2} contiene toda la información sobre las ecuaciones de Maxwell contenidas en una sola ecuación tensorial.
+
+        \subsection{El campo de RS en una configuración relativista}
+
+        El vector 3D de RS es parte del tensor relativista antisimétrico $F^{\mu\nu}$,
+
+        \begin{equation}\label{eq:FmunuGeneral}
+            F^{\mu\nu} = \sqrt{-g}\left( g^{\mu\lambda}g^{\nu\rho}f_{\lambda\rho} + \frac{i}{2\sqrt{-g}}\epsilon^{\mu\nu\lambda\rho} f_{\lambda\rho} \right),
+        \end{equation}
+
+        Donde $\epsilon^{\mu\nu\lambda\rho}$ es el símbolo de Levi-Civita (antisimétrico en todos los índices y 0123 = 1). El símbolo de Levi-Civita por sí solo no es un tensor, sino una densidad tensorial, se convierte en un tensor regular después de la división por $\sqrt{-g}$. Por lo tanto, para ser precisos, $F^{\mu\nu}$ es la densidad tensorial; es una suma de dos tensores multiplicados por $\sqrt{-g}$. La definición de $F^{\mu\nu}$ es válida en un sistema de coordenadas arbitrario, incluso en un espacio curvo.
+
+        
+        Dado que $f_{\lambda\rho}$ tiene seis componentes reales, solo tres componentes del tensor complejo $F^{\mu\nu}$ pueden ser independientes. De hecho, este tensor es auto-dual; se transforma en sí mismo bajo la siguiente transformación de dualidad:
+
+        \begin{equation}
+            F^{\mu\nu} = \frac{i}{2\sqrt{-g}}\epsilon^{\mu\nu}_{\;\;\lambda\rho}F^{\lambda\rho},
+        \end{equation}
+
+        este tensor relativistas obedece las ecuaciones de Maxwell en una forma bastante similar a como las habíamos encontrado en \ref{eq:EcuaMax2},
+
+        \begin{equation}
+            \partial_{\mu}F^{\mu\nu} = 0.
+        \end{equation}
+
+        Las componentes del vector RS también pueden ser identificadas con las componentes espacio-espacio de $F^{\mu\nu}$. Esto explica el por qué las componentes del vector RS bajo una transformación de Lorentz se transforman entre sí como vimos en la ecuación \ref{eq:transformRS}, a pesar de que al mismo tiempo son las componentes de un tensor relativista $F_{\mu\nu}$ cuyas componentes espacio-temporales deberían mezclarse con las componentes espacio-espacio.
+
+        En otras palabras, los vectores de campo eléctrico y magnético pueden combinarse en dos objetos geométricos equivalentes: un vector complejo F que se transforma bajo el grupo ortogonal complejo O(3,C), o un tensor real de segundo rango $f_{\mu\nu}$ que se transforma bajo el grupo real O(1, 3).
+        
+    \section{Electrodinámica cuántica}
+
+        El vector de Riemann-Silberstein es útil para estudiar la interacción entre la luz y los sistemas cuánticos. Por ejemplo, cuando un fotón interactúa con un átomo o una molécula, el vector de Riemann-Silberstein permite describir la absorción y emisión de fotones, así como los cambios resultantes en la polarización de la luz. La utilización del vector de Riemann-Silberstein en la óptica cuántica ha sido fundamental para comprender y manipular fenómenos cuánticos relacionados con la polarización de la luz. Ha permitido avances significativos en áreas como la generación de estados de luz cuántica, la teleportación cuántica y la computación cuántica basada en fotones. \\
+
+        A continuación vamos a re hacer la cuantización canónica que ya hicimos previamente pero utilizando el vector de RS, a su vez veremos cómo este se puede utilizar para poder hablar de la función de onda del fotón y empezar a darnos una idea sobre qué es un fotón y por último una pequeña revisión del cálculo espinorial y su relación con el vector de RS.
+        \subsection{Cuantización canónica}
+
+            El procedimiento estándar para formular la teoría cuántica es la cuantización canónica de la teoría clásica. Este procedimiento fue aplicado por primera vez al electromagnetismo por Heisenberg y Pauli. La cuantización canónica requiere la identificación de las variables canónicas, y esto fue realizado adecuadamente en el caso general por Born e Infeld. Las ecuaciones de Maxwell indican claramente la identificación correcta: las variables canónicas son los vectores de campo $\Vec{E}$ y $\Vec{B}$, cuyas derivadas temporales están determinadas por las ecuaciones de Farday y Ampere. No importa realmente si se asigna el papel de posición a $\Vec{B}$ y el papel de momento a $\Vec{E}$, o viceversa. Sin embargo, la primera elección es más natural, ya que las fuentes, que son los equivalentes de las fuerzas mecánicas externas, aparecen en la ecuación para $\Vec{E}$. De cualquier manera, lo único necesario son los corchetes de Poisson para las variables canónicas, que permitirán determinar los conmutadores de los operadores de campo. El requisito básico para los corchetes de Poisson es que reproduzcan las ecuaciones de movimiento,
+
+            \begin{equation}\label{eq:PoissLiouville}
+                \partial_t A(t) = \{A(t),H\},
+            \end{equation}
+
+            donde $A(t)$ es cualquier cantidad física y $H$ el hamiltoniano del sistema, esta ecuación para el corchete de Poisson es un caso particular de la ecuación de Boltzmann y se conoce como ecuación de Liouville. El corchete de Poisson para los campos $\Vec{E}$ y $\Vec{B}$ es de la forma
+
+            \begin{equation}\label{eq:CorcPoisBi}
+                \{B_i(\Vec{r},t), D_j(\Vec{r}',t)\} = \epsilon_{ijk}\partial_k \delta^3(\Vec{r}-\Vec{r}'),
+            \end{equation}
+
+            No solo reproducen la ecuación de Liouville \ref{eq:PoissLiouville}, sino que también garantizan la acción adecuada de los generadores restantes del grupo de Poincaré\footnote{El grupo de Poincaré combina las transformaciones de Lorentz, que describen las transformaciones entre sistemas de referencia en movimiento relativo a velocidades cercanas a la velocidad de la luz, con las traslaciones en el espacio y el tiempo. En otras palabras, el grupo de Poincaré incluye tanto las rotaciones y las transformaciones de Lorentz, como las traslaciones espaciales y temporales.}. Hay que tener en cuenta que los corchetes de Poisson \ref{eq:CorcPoisBi} son universales, es decir, no contienen constantes materiales. Esto valida la elección de $\Vec{B}$ y $\Vec{D}$ (y no, por ejemplo, $\Vec{H}$ y $\Vec{E}$) como las variables canónicas. Según las reglas de la cuantización canónica, los corchetes de Poisson se reemplazan por los conmutadores de los operadores correspondientes (divididos por i). Las relaciones de conmutación para $\Hat{B}$ y $\hat{D}$ conducen a los siguientes conmutadores para los operadores $\hat{F}$ y $\hat{F}^{\dagger}$ que representan los operadores de campo de RS y su adjunto conjugado:
+
+            \begin{equation}\label{eq:ConmutacionDeF}
+                \left[ \hat{F}_i(\Vec{r},t) , \hat{F}^{\dagger}(\Vec{r}',t) \right] = i\hbar\epsilon_{ijk}\partial_k\delta^3(\Vec{r}-\Vec{r'}).
+            \end{equation}
+
+            La imagen del fotón empiezna a surgir de manera más directa cuando se utiliza el vector RS en lugar de la formulación estándar. Después de la transformación de Fourier de los operadores RS de acuerdo con la siguiente fórmula:
+
+            \begin{equation}
+                \Vec{F}(\Vec{r},t) =  \frac{1}{(2\pi)^{3/2}}\int \left[f_+(\Vec{k})e^{i(\Vec{k}\cdot \Vec{r} - \omega t)} + f_-^*(\Vec{k})e^{-i(\Vec{k}\cdot \Vec{r} - \omega t)}\right]\hat{e}(\Vec{k})d^3k,
+            \end{equation}
+
+            elevando a operador tenemos
+
+            \begin{equation}
+                \hat{F}(\Vec{r},t) =  \frac{1}{(2\pi)^{3/2}}\int \left[\hat{f}_+(\Vec{k})e^{i(\Vec{k}\cdot \Vec{r} - \omega t)} + \hat{f}_-^{\dagger}(\Vec{k})e^{-i(\Vec{k}\cdot \Vec{r} - \omega t)}\right]\hat{e}(\Vec{k})d^3k.
+            \end{equation}
+
+            Para recuperar las relaciones de conmutación \ref{eq:ConmutacionDeF} para el operador RS, se deben imponer las siguientes relaciones de conmutación en los operadores $\hat{f}_{\alpha}$:
+
+            \begin{equation}
+                \left[ \hat{f}_{\alpha}(\Vec{k}) , \hat{f}_{\beta}^{\dagger}(\Vec{k}') \right] = \hbar\omega \delta_{\alpha\beta}d^3(\Vec{k}-\Vec{k}').
+            \end{equation}
+
+            Donde a excepción por el término $\hbar\omega$ esta relación de conmutación sería idéntica a la que hay entre los operadores de creación y destrucción para la radiación, vamos a reescalar estos operadores utilizando el factor $\hbar C$
+
+            \begin{equation}
+                \hat{f}_{\alpha}(\Vec{k}) = \sqrt{\hbar C}\hat{a}_{\alpha}(\Vec{k}), \;\;\; \hat{f}_{\alpha}^{\dagger} = \sqrt{\hbar C} \hat{a}_{\alpha}^{\dagger}(\Vec{k}).
+            \end{equation}
+
+            La conmutación entre los operadores de creación y aniquilación se obtiene después de reescalar estos factores
+
+            \begin{equation}
+                \left[\hat{a}_{\alpha}(\Vec{k}) , \hat{a}_{\beta}(\Vec{k}')^{\dagger}\right] = k \delta_{\alpha\beta}\delta^3(\Vec{k}-\Vec{k}').
+            \end{equation}
+
+            Mantenemos el factor k en estas relaciones porque su presencia está relacionada con la normalización relativista de las funciones de onda del fotón, como se mostrará más adelante. Finalmente, la representación de Fourier del operador de campo RS toma la siguiente forma:
+
+            \begin{equation}\label{eq:FdeFourierxd}
+                \hat{F}(\Vec{r},t) =  \frac{\sqrt{\hbar C}}{(2\pi)^{3/2}}\int \left[\hat{a}_+(\Vec{k})e^{i(\Vec{k}\cdot \Vec{r} - \omega t)} + \hat{a}_-^{\dagger}(\Vec{k})e^{-i(\Vec{k}\cdot \Vec{r} - \omega t)}\right]\hat{e}(\Vec{k})d^3k.
+            \end{equation}
+
+            La ecuación \ref{eq:FdeFourierxd} tiene mucha más información sobre el qué es un fotón que los estados número $\ket{n}$ que se ven en el oscilador armónico y al cual la literatura les llama fotón, pues en el operador de RS está toda la información sobre los operadores de campo eléctrico y magnético, es decir contiene ya la información de los fotones, podemos empezar a interpretarlos desde un punto de vista matemático como contribuciones de las componentes de Fourier, es decir, todos y cada uno de los fotones que se propagan como perturbaciones en el campo electromagnético de la radiación se pueden sumar como componentes de Fourier. El modelo del fotón como armónicos de Fourier lo discutiremos con más detalle más adelante. \\
+
+            La dependencia temporal de los operadores de aniquilación y creación se da mediante $e^{-i\omega t}$ y $e^{i\omega t}$, como debería ser. Con frecuencia, esta dependencia temporal se utiliza para distinguir los operadores de aniquilación de los de creación. Sin embargo, este método a veces falla, mientras que la asignación basada en las relaciones de conmutación canónicas siempre funciona. Los generadores de las transformaciones de Poincaré en la electrodinámica cuántica se obtienen reemplazando los vectores RS clásicos en \ref{eq:VariableselectrodinamicasRS} por operadores de campo cuántico. Expresados en términos de los operadores de creación y aniquilación, los generadores tienen la forma:
+
+            \begin{align}\label{eq:PoincaréQunatumF}
+                \hat{H} = \sum_{\alpha}\int_{-\infty}^{\infty}\frac{1}{k}\hat{a}^{\dagger}_\alpha\hbar\omega\hat{a}_{\alpha}d^3k,\\
+                \hat{\mathbb{P}} = \sum_{\alpha}\int_{-\infty}^{\infty}\frac{1}{k}\hat{a}_{\alpha}^{\dagger}\hbar\Vec{k}\hat{a}_{\alpha}d^3k,\\
+                \hat{\mathbb{M}} = \sum_{\alpha}\int_{-\infty}^{\infty}\frac{1}{k}\hat{a}_{\alpha}^{\dagger}\left[ i\hbar\Vec{D}_{\alpha}\times \Vec{k} + \alpha\hbar\Vec{n}\right]\hat{a}_{\alpha}d^3k,\\
+                \hat{\mathbb{N}} = \sum_{\alpha}\int_{-\infty}^{\infty}\frac{1}{k}\hat{a}^{\dagger}_{\alpha}i\hbar\omega\Vec{D}_{\alpha}\hat{a}_{\alpha}d^3k.
+            \end{align}
+
+        \subsection{El vector de RS y los espinores}
+
+            Para enfatizar la interpretación del vector RS como la función de onda del fotón, ahora demostraremos que encaja muy bien en el esquema general de las funciones de onda para partículas relativistas sin masa. Las propiedades relativistas de los campos y las partículas encuentran su descripción adecuada en términos de espinores y el vector RS no se aparta de esta regla general. El vector RS está directamente relacionado con el campo de espinor relativista simétrico de segundo rango $\phi_{AB}(\Vec{r},t)$. Tal campo de espinor tiene solo tres componentes independientes $(\psi_{00},\phi_{11},\phi_{01})$. Asumiendo las relaciones entre $\phi_{AB}$ y el vector RS en la forma
+
+            \begin{equation}\label{eq:RelacionesFphi}
+                F_x = \phi_{11} - \phi_{00},\;\; F_y = -i(\phi_{11} + \phi_{00}),\;\; F_z = 2\phi_{01}=2\phi_{10},
+            \end{equation}
+
+            podemos demostrar la equivalencia entre las ecuaciones espinoriales :
+
+            \begin{equation}\label{eq:SpinorAB}
+                \partial_t \phi_{AB} = -C(\mathbb{\sigma} \cdot \Vec{\nabla})_A^{\;C}\phi_{CB},
+            \end{equation}
+
+            con las ecuaciones de Maxwell. Para demostrar esto reescribamos la ecuación \ref{eq:SpinorAB} en forma matricial
+
+            \begin{equation}\label{eq:SpinorABMatricial}
+                \frac{\partial}{\partial t}
+                \begin{bmatrix}
+                    \phi_{00}&\phi_{01}\\
+                    \phi_{01}&\phi_{11}
+                \end{bmatrix} = -C
+                \begin{bmatrix}
+                    \partial_z\phi_{00} + \left(\partial_x - i\partial_y\right)\phi_{01} & \partial_z\phi_{01} + \left(\partial_x - i\partial_y\right)\phi_{11}\\
+                    \left(\partial_x + i \partial_y \right)\phi_{00} - \partial_z\phi_{01} & \left(\partial_x + i\partial_y \right)\phi_{01} - \partial_z\phi_{11}
+                \end{bmatrix},
+            \end{equation}
+
+            donde hemos utilizado la representación estándar de las matrices de Pauli. A continuación, utilizamos las relaciones \ref{eq:RelacionesFphi} para reproducir las ecuaciones de Maxwell \ref{eq:RSEvolution}. La simetría de la matriz del lado izquierdo de \ref{eq:SpinorABMatricial} impone la condición de que el lado derecho también sea simétrico, es decir,
+
+            \begin{equation}
+                \partial_z\phi_{01} + \left( \partial_x - i\partial_y\right)\phi_{11} = \left( \partial_x + i\partial_y \right)\phi_{00} - \partial_z \phi_{01}.
+            \end{equation}
+
+            Esta igualdad implica que la divergencia del vector RS se anula. Por lo tanto, existe una equivalencia completa entre la descripción del campo electromagnético en términos del vector RS y en términos del espinor simétrico de segundo rango. Sin embargo, cuando se trata de aplicaciones concretas, el uso del vector RS es mucho más conveniente debido a su conexión directa con los vectores de campo eléctrico y magnético.\\
+
+            Hay una conexión simple entre el espinor $\phi_{AB}$ y el tensor complejo $F^{\mu\nu}$ definido en \ref{eq:FmunuGeneral} que se puede expresar en términos de las matrices de Pauli combinadas en el tensor de espín $S^{\mu\nu AB}$,
+
+            \begin{equation}
+                S^{0k} = - S^{k0} = -i\sigma_2\sigma_k,\;\; S^{ij} = - S^{ji} = \epsilon^{ijk}\sigma_2\sigma_k,
+            \end{equation}
+
+            donde omitimos los super índices $AB$, utilizando las relaciones \ref{eq:RelacionesFphi} tenemos
+
+            \begin{equation}
+                F^{\mu\nu} = S^{\mu\nu AB}\phi_{AB}.
+            \end{equation}
+
+            Las ondas electromagnéticas nulas tienen una forma muy simple en términos de espinores. Específicamente, están descritas por un solo campo de espinor de rango uno $\phi_{AB}$ $(\phi_{AB} = \phi_A\phi_B)$. Por supuesto, no todos los campos de espinor $\phi_A$ dan lugar a una solución nula de las ecuaciones de Maxwell. El espinor de rango dos $\phi_{AB}$ aún debe cumplir con \ref{eq:SpinorABMatricial}.
+
+            La ecuación \ref{eq:SpinorABMatricial} es un caso especial de la ecuación de onda general para una partícula sin masa. Independientemente del valor de spin $s$, estas ecuaciones siempre tienen la misma forma general:
+
+            \begin{equation}
+                \partial_t \phi_{AB...W} = -C\left( \sigma \cdot \Vec{\nabla} \right)_A^{\;\;Z}\phi_{ZB...W}.
+            \end{equation}
+
+            Difieren solo en el rango del espinor que es igual a $2s$. El espinor de rango uno que describe un neutrino sin masa con espín $-1/2$ satisface la ecuación de Weyl
+
+            \begin{equation}
+                \partial_t\phi_A = -C\left(\sigma \cdot \Vec{\nabla} \right)_A^{\;\;Z}\phi_Z.
+            \end{equation}
+
+            El espinor de rango cuarto satisface la ecuación
+
+            \begin{equation}
+                \partial_t \phi_{ABCD} = -C\left( \sigma \cdot \Vec{\nabla} \right)_A^{\;\;Z}\phi_{ZBCD}.
+            \end{equation}
+
+            ¡Esta ecuación describe los gravitones, los cuantos del campo gravitacional!
+
+
+            Como hemos podido observar en esta sección, el campo de Riemann-Silberstein tiene una versatilidad increíble facilita muchos cálculos y da paso a nuevas soluciones desconocidas, a pesar de haber rosado solo la punta del iceberg, acá podemos ver que este campo funciona perfectamente tanto en el electromagnetismo clásico, como el cuántico y el relativista todo esto a punta a que este podría ser perfectamente un campo del todo, reescribir las ecuaciones de la física en términos del vector de RS podría darnos información que se ha ocultado a simple vista hasta el día de hoy.
