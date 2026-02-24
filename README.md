@@ -56,4 +56,3 @@ If you have questions or comments, you can reach me at [miguel2258037@correo.uis
 ---
 
 I hope you find these notes useful and enjoy exploring them as much as I enjoyed writing them!
-```
