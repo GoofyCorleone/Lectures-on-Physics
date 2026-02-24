@@ -1,6 +1,3 @@
-Certainly! Here's the English version of the README, ready for you to copy and paste directly into your repository:
-
-```markdown
 # Lectures on Physics
 
 This repository contains a collection of physics lecture notes that I have written in **LaTeX** over the years. Each set of notes is accompanied by original figures created with **Inkscape**, available in both PDF (for direct inclusion in the documents) and SVG (editable) formats.
@@ -31,11 +28,6 @@ The SVG files are the editable source (created with Inkscape), while the PDFs ar
 ## Compiling the notes
 
 To generate the PDF files from the source code, you will need a LaTeX distribution (e.g., [TeX Live](https://tug.org/texlive/) or [MikTeX](https://miktex.org/)). The typical compilation process is:
-
-```bash
-cd "Course name"
-pdflatex main.tex
-```
 
 If the document includes a bibliography, you will need to run `bibtex` and then compile again with `pdflatex` (sometimes two or three passes are required to resolve all cross-references).
 
