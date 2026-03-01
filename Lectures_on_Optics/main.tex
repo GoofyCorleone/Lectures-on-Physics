@@ -1,689 +1,153 @@
-\documentclass[spanish,notitlepage,letterpaper,11pt]{article} % para artÌculo en castellano
-\usepackage[utf8]{inputenc} % Acepta caracteres en castellano
-\usepackage[T1]{fontenc} % font encoding
-\usepackage[english]{babel}    % silabea palabras castellanas
-\usepackage[none]{hyphenat} 
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
+\documentclass[spanish,11pt,twoside,openright]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[none]{hyphenat}
+\usepackage{geometry}
+\geometry{letterpaper,textheight=8.0in,textwidth=6.5in,headheight=20pt}
+
+% Paquetes matemáticos y gráficos
+\usepackage{amsmath,amsfonts,amssymb,mathrsfs}
+\usepackage{graphicx,epstopdf,subcaption}
 \usepackage{listings}
-\usepackage{subcaption}
 \lstset{basicstyle=\ttfamily,
-  showstringspaces=false,
-  commentstyle=\color{red},
-  keywordstyle=\color{blue}
+	showstringspaces=false,
+	commentstyle=\color{red},
+	keywordstyle=\color{blue}
 }
-\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}% navega por el doc
-\usepackage{graphicx}
-\usepackage{geometry}      % See geometry.pdf to learn the layout options.
-\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
-%\geometry{landscape}                % Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{epstopdf}
-\usepackage{fancyhdr} % encabezados y pies de pg
+
+% Estética y formato
+\usepackage{titlesec,titletoc}
+\usepackage{fancyhdr}
 \usepackage{lineno}
-\usepackage{titling}
+\usepackage{etoolbox}
+\usepackage{epigraph}
+\usepackage[colorlinks=true, citecolor=black,urlcolor=black,linkcolor=black]{hyperref}
+\usepackage{natbib}
+\usepackage{braket}
+% Paquete de fecha
+\usepackage{datetime}
+
+% Configuración de fecha automática en español
+\newdateformat{mispanishdate}{\THEDAY\ de \monthname[\THEMONTH] \THEYEAR}
+\mispanishdate
+
+% Eliminar cualquier otra configuración de fecha
+
+% Configuración de página
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[RE]{\bfseries\nouppercase{\leftmark}}
+\fancyhead[LO]{\bfseries\nouppercase{\rightmark}}
+\fancyfoot[C]{\it Author: Jafert Serrano \quad UIS}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+% Configuración de capítulos con página completa
+\titleformat{\chapter}[display]
+{\normalfont\Huge\itshape\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}
+
+% Estilo para epígrafes de capítulos
+\setlength{\epigraphrule}{0pt}
+\renewcommand{\epigraphsize}{\large}
+\renewcommand{\textflush}{flushright}
+\setlength{\epigraphwidth}{0.8\textwidth}
+
+% Configuración de bibliografía
+\bibliographystyle{apalike}
+\usepackage{chapterbib}
+
+% Comandos personalizados
 \newtheorem{myteo}{Theorem}
 \newtheorem{myDef}{Definition}
-\newtheorem{myPrinciple}{Principle}
-
-\pagestyle{fancy} 
-\chead{\bfseries Lectures on physics} 
-\lhead{} % si se omite coloca el nombre de la seccion
-\rhead{10 de Julio 2023} 
-\lfoot{\it Jafert Serrano } 
-\cfoot{UIS} 
-\rfoot{\thepage} 
-
-\voffset = -0.25in 
-\textheight = 8.0in 
-\textwidth = 6.5in
-\oddsidemargin = 0.in
-\headheight = 20pt 
-\headwidth = 6.5in
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0,5pt}
-\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
-\numberwithin{equation}{subsection}
 
 \begin{document}
-
-\begin{titlepage}
-\centering
-\begin{minipage}{.4\textwidth}
-\centering
-\includegraphics[width=\linewidth]{Figures/LoGOTS.png}
-\end{minipage}%
-\begin{minipage}{.4\textwidth}
-\centering
-\includegraphics[width=\linewidth]{Figures/logouis.png}
-\end{minipage}
-
-\vspace{\baselineskip}
-\rule{\textwidth}{2pt}
-\vspace{\baselineskip}
-\vspace{\baselineskip}
-\vspace{\baselineskip}
-\vspace{\baselineskip}
-\vspace{\baselineskip}
-
-\huge\textbf{LECTURES ON PHYSICS} \\
-
-\vspace{\baselineskip}
-\vspace{\baselineskip}
-
-\textwidth
-\textbf{Miguel Jafert Serrano Mantilla}\\
-
-\vspace{\baselineskip}
-\vspace{\baselineskip}
-\textit{Universidad Industrial De Santander}\\
-\vspace{\baselineskip}
-\textit{Grupo De Óptica Y Tratamiento De Señales}\\
-\vspace{\baselineskip}
-\date{10/07/2023}
-\vspace{\baselineskip}
-
-
-\vspace{2cm} 
-\end{titlepage}
-
-\newpage
-%\title{Aqui va el nombre del proyecto}
-%\author{
-%\textbf{Autor \thanks{e-mail: \texttt{correo} }} \\ 
-%\textit{Nombre de la institución} \\ 
-%\textit{Dirección de la Institución}}
-%\date{Versión $\alpha \beta$ fecha del documento }
-%\maketitle
-\tableofcontents
-
-\newpage
-\begin{abstract}
-
-    The field of optics is a captivating and continually evolving branch of science that plays an indispensable role in our modern world. "Advances in Optics: Exploring the Boundaries of Light and Vision" presents a comprehensive overview of the latest developments, theories, and applications in optics, spanning from fundamental principles to cutting-edge technologies.
-
-    This book delves into the fundamental properties of light, offering a clear and concise explanation of wave-particle duality, the nature of electromagnetic waves, and the behavior of light in various media. It explores the principles of geometric optics, including reflection, refraction, and the formation of images, while also addressing wave optics phenomena such as interference, diffraction, and polarization.
+	
+	% Portada título minimalista
+	\begin{titlepage}
+		\vspace*{5cm}
+		\begin{center}
+			{\itshape\Huge Lectures on Optics\par}
+			\vfill
+			{\large\itshape ``To Understand the universe we must understand the light''\par}
+			\vspace{1cm}
+			{\large\today\par}
+		\end{center}
+	\end{titlepage}
+	
+	% Portada institucional
+	\cleardoublepage
+	\begin{titlepage}
+		\centering
+		\begin{minipage}{.4\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Figures/LoGOTS.png}
+		\end{minipage}%
+		\begin{minipage}{.4\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{Figures/logouis.png}
+		\end{minipage}
+		
+		\vspace{2cm}
+		\rule{\textwidth}{2pt}
+		\vspace{1cm}
+		
+		{\Huge\textbf{LECTURES ON OPTICS}\par}
+		
+		\vspace{4.5cm}
+		
+		{\Large\textbf{Jafert Serrano }}
+		
+		\vspace{1cm}
+		
+		\textit{Professor: Rafael Ángel Torres Amaris}\par
+		
+		\vspace{3cm}
+		
+		\textit{Universidad Industrial de Santander}\\
+		\textit{Sciences faculty}\\
+		\textit{Physics school}\\
+		\textit{Group of optics and signals treatment}\par
+		
+		\vfill
+		{\large\today\par}
+	\end{titlepage}
+	
+	\frontmatter
+	\tableofcontents
+	\listoffigures
+	
+	\mainmatter
+	
+	\input{Abstract/abstract.tex}
     
-    In addition to the foundational aspects, "Advances in Optics" goes beyond traditional optics to cover emerging topics and technologies. Readers will find detailed discussions on advanced optical materials, including metamaterials and photonic crystals, and their revolutionary applications in the manipulation of light for imaging, communication, and sensing. Quantum optics, an exciting frontier in optical science, is also explored, with a focus on quantum entanglement, quantum cryptography, and quantum computing.
-    
-    Moreover, this book highlights the practical applications of optics in various fields, including medicine, telecommunications, astronomy, and environmental monitoring. It provides insights into state-of-the-art optical instruments and techniques, such as lasers, optical fibers, and adaptive optics systems, and their pivotal roles in advancing technology and scientific discovery.
-    
-    "Advances in Optics" is designed to cater to a broad readership, from students and educators seeking a comprehensive textbook to researchers and professionals looking for the latest developments in the field. Its accessible style, accompanied by illustrative examples and diagrams, ensures that both newcomers and experts can appreciate the wonders of optics and its ever-expanding frontiers.
-    
-    As we venture further into the 21st century, the exploration of light and vision promises to yield groundbreaking discoveries and transformative technologies. "Advances in Optics" serves as an invaluable resource for anyone curious about the principles, innovations, and limitless potential of optics in shaping our future.
-     
-\end{abstract}
-
-
-\section{The loving story of optics}
-
-    When we study physics beyond doing long calculations, formulate complicated theories or doing extremely elaborated experiments in an advanced laboratory there is a really important fact many people ignore, the \textit{story of physics} if we want to study physics we must have understand where was born the physics and more important, how was it done. Here we are going to check the story of physics from the geometrical optics, to corpuscular optics to wave optics, to electromagnetic optics and the most recent the quantum optics.
-
-    \subsection{Optics from Euclid to Huygens}
-    
-         Here I'm going to copy and paste one of the best articles I've read about the story of optics \cite{herzberger1966optics}.\\
-
-         If I were endowed with dictatorial powers, I would require everyone receiving a degree in a scientific subject to know its history and to have read the classical papers relating to it.
-         Historical knowledge is important because it stimulates creative thinking. The man who first struggled with an idea, trying to find a law, looked at the situation with different eyes than do we who accept the law as a matter of course. He considered alternatives to the law, and different interpretations, and some of these alternatives and interpretations may still be stimulating and worth thinking about.\\
-         
-         I was fortunate during the eight years of my affiliation with the Zeiss works at the beginning of my career to have access to their extensive library; it contained the originals, or at least translations, of nearly all the writings in optics from Euclid to contemporary times. Over thirty years ago, I wrote a historical survey describing the content of important papers on geometrical optics. This task was immensely facilitated by the extensive bibliography in the third edition of Czapski-Eppenstein,I to which I had contributed my small part as a work student at the firm of Zeiss. Lately, I have looked through most of these papers again, as far as they were available to me, and have discovered many important details that I had not understood at that time. I should like to share these with you. I emphasize that my interest is not basically historical. I am not interested so much in questions of priority and originality of documents. My object is to entice you to read and to enjoy the old scriptures, and maybe take along an idea or two that might be of interest.
-
-         \subsubsection{Ancient times}
-
-            I am sure that the Egyptians and, even more, the Babylonians, with their great interest in astronomy,must have had some knowledge of optical laws. But the first important mention of one of the phenomena of refraction I found was in Plato's Republic.' Plato(427-347 B.C.) quotes Socrates as saying (Jowett's translation): `` . . . the same object appears straight when looked at out of the water, and crooked when in the water; and the concave becomes convex, owing to the illusion about colours to which the sight is liable. Thus every sort of confusion is revealed within us; and this is that weakness of the human mind on which the art of conjuring and of deceiving by light and shadow and other ingenious devices imposes, having an effect upon us like magic.¨ Our senses give an erroneous picture of reality; they are untrustworthy;alone can lead us to truth pure thinking. This idea persisted for two millennia under the influence of the misinterpreted teachings of Aristotle.\\
-
-            How we see is a question that long occupied the Greek philosophers, and, through them, the Neo-Platonists and the Scholastics. (Indeed, it cannot be said that the question is settled, and in recent times Ronchi  has set forth some cogent ideas.) Even before Plato there was speculation in the writings of the Greek philosophers about the process of seeing. Most of the Greek thinkers believed that the eye sends out rays to the object, and Aristotle (384-322 B.C.) seems to have been the first to question this belief. If, says Aristotle, the eye sends out fiery rays that stream from it as from a lantern, why can we not see in the dark? His explanation, that the eye contains a transparent substance and that seeing is associated with the motion of something between the object and the eye, seems quite modern.\\
-
-            After the conquest of Greece by Alexander, Alexandria (in Egypt) and Sicily became the strongholds of Greek culture. The first great textbook of optics was written by Euclid of Alexandria, who lived about 300 B.C. And is better known for his Elements of Geometry. This famous work is still must reading for every scientist and is available in several editions. When King Archelaos once complained about the difficulty of learning mathematics and asked whether there was not an easier way, Euclid's answer is supposed to have been: ``There is no royal route to geometry¨. When one of his pupils asked him what of material value could be gained by learning geometry, he told a slave, ``Give the man threepence and tell him to go away¨.\\
-
-            Under Euclid's name we have two books of interest in the present connection: Optics and Catoptrics. The first deals with the laws of vision and perspective and the second with reflection. An English translation of the first was published in the Journal of the Optical Society of America twenty years ago. 7 It is a striking fact that one of the definitions in this book contains an idea that could be used to develop many problems of diffraction theory.\\
-
-            I quote some of Euclid's definitions, slightly paraphrased from the Optical Society of America translation: ``Let it be assumed that lines drawn directly from the eye pass through a space of great extent [not infinite]; that the form of this space is the mantle of a cone with its apex in the eye and its base at the limits of our vision; that those things upon which the cone falls are seen and those things upon which the cone does not fall are not seen; and that things seen through several cones simultaneously appear to be more distinct.¨ From this, Euclid concludes, among other things, that nothing can be seen in its entirety. The same objects located nearby are seen more distinctly than if they were at a distance. Every object that is visible has a certain limit of distance. If that is reached-that is, if the object lies entirely inside the mantle of the cone of vision-it is no longer seen. These are the axioms from which he derives the laws of perspective.\\
-
-            In Catoptrics the law of reflection is stated, namely, that incoming and outgoing rays form the same angle with the surface normal. From this he derives the exact position of the image behind a plane mirror and the principle that left- and right-hand sides are interchanged. He generalizes these laws for spherical mirrors, both concave and convex, describing virtual images as well as stating that concave mirrors can give real images. As the position of the image is formed by reflection at curved surfaces, he suggests the point of intersection of the ray with the axis (shades of my definition of diapoint!). He shows the existence of a focal point for spherical mirrors, although he errs with respect to its position. One of his theorems says that an eye at the center of a spherical mirror sees only itself. Another states that you can light a fire at the focus of a concave mirror. He states that straight lines appear convex in a convex mirror. One can see the same object through many plane mirrors if they are positioned along the sides of a regular polygon with two more sides than there are mirrors.\\
-
-            According to Roman historians, the greatest mathematician of ancient times, Archimedes (287-212 B.C.), is supposed to have used mirrors to destroy the Roman fleet besieging Syracuse. Like most scientists, I have doubted this story, but a personal experience made me doubt my doubts.\\
-
-            Two years ago I had an optical accident. My wife had me get a large bottle of distilled water, and I left it in my auto in front of our laboratory. Driving home that evening I smelled smoke and stopped at a garage. After thoroughly investigating all the mechanical details and finding them in order, the mechanics discovered that smoke was coming out of the upholstery. The cylindrical bottle had acted like a lens and the sun had made a hole in the upholstery and ignited the stuffing inside. After this personal experience, I am somewhat more reluctant to doubt the story of Archimedes' mirrors.\\
-
-            The next person I should like to discuss, Hero of Alexandria, lived sometime between about 150 B.C. and A.D. 250. We have two outside dates for this philosopher: he mentions Hipparchos, who flourished between 146 B.C. and 126 B.C., but the mathematician Pappus (ca. A.D. 300) follows Hero's treatment in his own writings on mechanics. Be this as it may, Hero's Catoptrics is one of the most interesting books on optics. He is not content with Euclid's statement that light travels in straight lines, nor is he content with the form of the reflection law. He looks for a reason for both laws and derives it from the assumption that light chooses the shortest possible path between two points. We know that this minimum principle is not quite correct: the path is, in general, only an extremum. It may or may not be significant that Hero's book illustrates the concept with a picture of a convex mirror, for which the minimum principle is correct-not a concave mirror, for which it can be wrong. We shall find the same trick worked later by Fermat, who extended Hero's law to derive the refraction law. However, Fermat was called on the carpet for this by Abbé Mersenne, one of his contemporaries.\\
-
-            Hero of Alexandria-who, by the way, in his Mechanics described the so-called seven simple machines known to us-not only discussed spherical mirrors in his Catoptrics but, as an early practical experimentalist, also showed what can be done with cylindrical mirrors. If you go into an amusement parlor and see yourself in mirrors of all kinds (I especially like those that elongate the height and diminish the girth), you know the proprietor has read Hero of Alexandria. If you see a play in a tanagra theater, where the actors appear on the stage, by the skillful use of mirrors, as beautifully dressed dwarfs, you know that Hero of Alexandria wrote the prescription. If you want to see around the corner or look at a person without letting him see you, Hero of Alexandria tells you how to do it with mirrors.\\
-
-            Ptolemy of Alexandria, who lived about A.D. 150, is best known for his Almagest, but he was also the first to make a serious attempt to study the law of refraction. He wrote a five-part volume entitled Optics, several copies of which have come down to us. This work, of which the first part has been lost (although we have a description of its contents), can be summarized as follows.\\
-
-            The first part deals with the relations between the eye and light, and the second with the conditions of visibility: size, form, color, and motion of bodies. Ptolemy explains why we usually see only one image of an object, although we have two eyes, and describes the conditions under which we see more than one image. The third part deals with the laws of reflection by plane and convex mirrors. Ptolemy gives probably the first attempt at an explanation of why the moon and the sun appear larger at the horizon than at the zenith a question that is still being discussed.
-
-            In the fifth part, Ptolemy tries to find a law for refraction. First he observes that for small incident angles the angles of incidence and of refraction are proportional to each other. He also remarks that, in transition from a thinner to a denser medium, the refracted ray comes earer to the perpendicular, the opposite being true for the reverse direction of travel. He uses an ingenious contraption to measure the incident and the refracted angles for the transition from air into water, air into glass, and water into glass. This instrument consists of a circular disk divided into 3600 with a colored marker in the center and two movable markers on the periphery. You put the instrument into water, line up the three markers, and read the two positions, one giving the incident angle and the other the refracted angle. Ptolemy gives refraction tables in 100 intervals. My friend, the late Hans Boegehold, studied hese tables carefully and found that the values for 500 and 600 incident angles are surprisingly accurate, but that the other angles were obviously calculated by a second-degree interpolation formula. (The first differences are exactly 1 30'.14) Ptolemy applies the same method for the transition of light from air into glass and from water into glass. He also discusses atmospheric refraction, the cause of which he assumes to be that the densities of air and of ether vary with height. He points out that only for a star in the zenith do the true and the apparent positions coincide.
-
-            
-        \subsubsection{The arabain period}
-
-            After the fall of Greece, scientific progress ceased on the continent of Europe for nearly a century and a half, but Alexandria remained the center of scientific discovery. When the Arabs took over, they brought their scientific inheritance and knowledge of mathematics and the mathematical sciences into northern Africa and Spain. It is remarkable that, at a time when magic and mysticism and misinterpretation of Aristotelian doctrines prevented scientific progress over most of Europe, the Arabs held high the torch of science in their countries.\\
-
-            The next big contribution to our science was by Ibn al-Haitham, or Alhazen of Cairo, whose date is frequently set around 1100, although some sources tell us he lived from 965 to 1038. Alhazen's Optics" consists of seven parts. The first gives an anatomical description of the eye, which, he maintains, contains three liquids separated by four membranes. The names which he gives to them the watery medium, the crystalline medium, and the glassy medium are still used today. The phenomenon of binocular vision is explained by assuming that the pictures from the two eyes are transported to one visual nerve. Alhazen discusses the pupil of the eye and speaks of a pyramid of rays (rather than a cone) coming from the object to the eye.\\
-
-            The second part, like the corresponding book by Ptolemy, deals with the properties of bodies, and he distinguishes no fewer than twenty-two different properties.
-            
-            The third part deals with optical illusions. He draws attention to the illusions arising from a false interpretation of a picture by the human mind and imagination. The fourth, fifth, and sixth parts deal with problems of reflection and mirrors. One of the problems studied in great detail has since been called after Alhazen: it consists in finding the point on a mirror where the incident and the reflected rays meet. Alhazen corrects errors of the Greeks about the position of the images in spherical, conical, and cylindrical mirrors. He also emphasizes the fact that the incident and reflected rays lie in the same plane.\\
-
-            Alhazen's seventh part deals with refraction. He proposes methods for measuring incident and refracted rays through different media, but he gives no tables. He knows that a glass sphere magnifies. He explains the apparently large size of the sun at the horizon by the assumption that we compare the sun with objects of known size lying along the line of sight. He investigates binocular vision and makes a good guess at the height of the atmosphere. He breaks with the idea of the Greeks that light rays originate at the eye and go to the objects, supporting his claim by the circumstance that sunlight can hurt the eye and that we can see afterimages.\\
-
-            Other manuscripts show that Alhazen used the pinhole to view solar eclipses and that he knew how the mage becomes blurred and finally becomes circular as the pinhole increases in size. He did not write as though this were a discovery of his own, and Aristotle  had noted that the spot formed by the rays from the uneclipsed sun is circular when the rays pass through a rectangular hole in wickerwork if the hole is small, but becomes rectangular when the hole is large. However, Alhazen's is the first known unequivocal description of the camera obscura. Alhazen's works were of enormous influence in the development of optics.
-
-        \subsubsection{The middle ages}
-
-            The knowledge of the Arabs was transmitted to Europe via Spain and Sicily and set in motion the intellectual revival that culminated in the Renaissance. The first of the European scientists to play a role in optics was Vitello, a Polish mathematician who lived and studied in Italy about 1270. His book in ten parts is probably the most voluminous optical work ever written. It contains about five hundred closely printed folio pages. Unfortunately, he is more famous for his errors than for his contributions.\\
-
-            He reissued the tables of Ptolemy and added tables for the passage of light from water into air, from glass into air, and from glass into water. It is unfortunate that he never tells us how he arrived at his values, for they include impossible data, being in contradiction with the then unknown phenomenon of total reflection.
-            
-            It was this error that later prevented Kepler from finding the correct form of the refraction law. Nevertheless, Vitello made two notable contributions. He explained the colors of the rainbow as originating from refraction and reflection by the water drops, and he made the proposal to collect the light of the sun into a point by using parabolic mirrors.\\
-
-            The Englishman Roger Bacon (1215-1294) discovered the spherical aberration of a mirror; he further stated that rays forming a cone around the axis in object space also form a cone around the axis in image space. From the magnifying property of a sphere, he speculated that it might be possible to invent instruments in which a man would look like a mountain and a small group like a big army. However, since he did not say how this could be achieved, it is doubtful whether he should be called (as he was by Sir John Herschel) the inventor of the telescope. His writings are so sketchy and in definite that it is impossible to attribute specific inventions to him or to reach any conclusions about what he actually knew.
-
-        \subsubsection{The renaissance}
-
-            Coming to the Renaissance, we must mention Leonardo da Vinci (1452-1519). His notebooks show that he studied the eye anatomically and made a model of it, although he supposed the rays to cross twice in it to form an upright image. 18 , 9 Immediately afterward he described the camera obscura but correctly showed the image inverted!20 He described, with sketches, a Rumford-type photometer and a machine for grinding concave mirrors. Unfortunately for his optical reputation and the development of optics, he never organized his notes into publishable form, so they were practically unknown until Venturi published them in 1797.\\
-
-            About half a century later came another Italian we should mention, Francesco Maurolico (1494-1577), who solved one of the problems that had bothered previous thinkers: that the image of the sun is round even if formed by a square pinhole. He improved our knowledge of vision by suggesting that the crystalline lens of the eye works like a double-convex lens. This enabled him to attribute myopia and hyperopia to an eye whose lens has a larger or smaller curvature than is proper for the length of the eyeball. He emphasized for the first time that the rays from an object point envelop a surface that is now called the caustic surface and that this surface is the place of the highest light concentration. And he explained the colors of the rainbow by multiple reflection in the water drops. All this information was concisely organized by 1567 into a work entitled Photismi de lumine , although it was not published for some thirty years (1611) after the author's death, and then only as a consequence of the interest in optics engendered by Galileo's telescopic discoveries.\\
-
-            In Italy, under the influence of the philosophy of the time, scientific progress and magic were mixed in a way that led to interesting reading. The development of mathematical methods, however, served to gradually separate speculation and imagination from the solid basis of observation. 
-            
-            One of the most colorful books of the period was the Magia naturalis of Giovanni Battista della Porta (ca. 1538 or 1543 -1615). In his youth, della Porta had written a four-part volume entitled De miraculis rerum naturalium (1558) and, subsequently, many books and plays, including De refractione (Fig. 6) in nine parts in 1593. The Magia naturalis, which was an expansion of the earlier De iraculis into twenty volumes, appeared in 1589. It became so famous that it was soon translated from Latin into the vernacular languages Italian, French, Spanish, and English. It is a strange medley. Only the seventeenth part concerns optics, but some of the others are also worth noting for our amusement if nothing else. I mention the titles of a few of the twenty parts, to give you an idea of their contents. The first is entitled, "The Causes of the Miraculous. It deals with astrology, sympathy and antipathy, and the influence of place and time on events. The second deals with the origin of animals. He quotes many authorities who agree that snakes are made from the marrow of men and the hair of women. The third deals with garden plants; the fourth, with how to become wealthy by good housekeeping; the fifth, with how to make precious stones artificially; and the ninth, with make-up and other ways of improving the beauty of women (as if this were necessary!).\\
-
-            Finally, the seventeenth part deals with focal mirrors and other mirrors and explains what one can do with them. This book exhibits progress in the understanding of optical phenomena. In it are discussed the same tricks that Hero had dealt with 1400 years earlier, namely, how to use mirrors to obtain desired effects. However, we find here the first exact theory of multiple mirrors, the first complete description of the camera obscura, with pinhole or lens, and a discussion of combinations of positive and negative lenses designed to improve vision. Porta compares the eye and its pupil to the camera obscura and its stop. (Leonardo had anticipated him here, but less definitely and accurately.) At the end of this century also falls the invention of the telescope and the microscope. \\
-            
-            Eyeglasses had apparently been invented toward the end of the thirteenth century, but they seem not to have attracted the attention of writers on optics until the practical Leonardo discussed methods of making them. Some lens grinder-more likely, several independentlymust have discovered the principle of the Galilean telescope by accident, and certain passages in Leonardo's notebooks a hundred years before Galileo can be interpreted as instructions for making such a telescope. Be that as it may, a Dutchman, Zacharias Jansen (1588-1632), was said by his son to have made a telescope in 1604 according to the model of an Italian dated 1590, and soon telescopes became well known in Holland. Galileo Galilei (1564-1642) heard of them and, apparently independently, made an instrument that he exhibited in 1609, and in his lifetime made over a hundred. The Dutch instruments were so imperfect that a magnifying power of more than 3X was impractical. Galileo made instruments with a useful power of approximately 30 X, an order of magnitude greater. He was by no means the inventor of the telescope or even the first scientist to describe it; Vavilov reminds us that Leonardo may have anticipated him and that Porta described, three months after Galileo's demonstration, an instrument he had made independently. But Galileo is outstanding on two counts: he revolutionized man's ideas of the uni- verse by his applications of the telescope and, by improving it by an order of magnitude, Ronchi points out that Galileo is entitled to be considered the father of the art of fine optics.\\
-
-            Moreover, from telescope to microscope is a short optical step, and by 1624 Galileo was using lenses of short focal length and thus making precursors of the modern compound microscope. 9 A few decades thereafter, the Dutchman Antonj van Leeuwenhoek (1632-1723) improved the quality of simple lenses used for magnifiers or simple microscopes, and in a letter of 1674 he began the descriptions of the discoveries for which he became justly famous.24 Meanwhile, Robert Hooke (1635-1703) in England also improved the quality of lenses in order to make the compound microscope practical, and in 1665 the Royal Society published his Micrographia.\\
-
-            Aside from publications, which were in an embryonic state, the seventeenth century brought a lively exchange of ideas and thoughts between scientists, mostly friendly but sometimes polemical and frequently expressed in code to conceal them from the uninitiated. It is therefore necessary to study not only the books of these scientists but also their correspondence (cf. Leeuwenhoek's letters quoted by Dobell ).
-            
-            The same period witnessed the development of scientific knowledge to the system that is still important.Indeed, scientific development in the seventeenth century was greater than in any century before or since. Scientific giants like Kepler, Descartes, Pascal, Fermat, Newton, Leibniz, and Huygens appeared and left their marks in all fields of science, including optics. Let us sketch some of their contributions to geometrical optics. \\
-            
-            Johannes Kepler (1571-1630) wrote two books on optics: Supplements to Vitelo in 1604 and Dioptrice  in 1611. The object of the first is to find the law of refraction. Kepler nearly succeeds, though he does not look for a relation between the incident angle and the refracting angle but between the incident angle and the deviation. He asks himself what form a surface should have to refract a parallel beam of light exactly into a point image. He studies the hyperboloid, which, as we know, fulfills the condition; but he rejects it because it disagrees with the values that Vitello gave for the relation between the angles of the incident ray and the refracted ray. If only the Kepler of 1611 and the Dioptrice, in which he discovered the law of total reflection, had reread his book of 1604, he would have seen that the data of Vitello had been erroneous and thus he might have found the correct form of the law of refraction.\\
-
-            Kepler investigated the function of the eye more profoundly than his predecessors. He discovered that the eye is not at rest but moves around a point inside it, and he investigated the importance of this motion on our vision. He drew attention to the fact that the image on the retina is inverted. All this is in his Supplements to Vitello.\\
-            
-            His Dioptrice , although a relatively small book, was of importance to the development of optics. In it, Kepler assumes that for small angles the angle of refraction is proportional to the angle of incidence. From this assumption, he develops the laws of firstorder optics for thin lenses and systems of thin lenses with finite separations. He describes, among other things, the Keplerian telescope, in which two positive lenses are placed so that the back focus of the first is at the front focus of the second, and compares it with the form named after Galileo, consisting of a positive and a negative lens placed so that the focus of the former s at the virtual focus of the latter. He gives the focal length correctly for all forms of lenses. His book contains many practical proposals for lens design and is highly recommended to those who are interested in these problems.\\
-
-            Rene Descartes (1569-1650)  must be considered as one of the discoverers of the correct law of refraction, for he published the sine law in his Dioptrique in 1637. After his death, he was violently attacked by Isaac Voss, who accused him of stealing the law from Willebrord Snel* (1591-1626). Descartes had indeed visited Leyden in 1630, where Snell, a professor of physics, had written a book on optics containing the refraction law. Although the book had never appeared, Voss, in his posthumous attack, claimed that Descartes had seen it on his visit after Snell's death, and Voss quoted Snell's proof.\\
-
-            The question of priority has been much discussed in the literature. A recent study has been published by Boegehold, who refers to a paper by P. Kramer. Boegehold found that Descartes, in some letters written in 1627, had suggested making plano-convex lenses with hyperbolic surfaces. Since such a lens would give a sharp point image for an infinite object if and only if one assumes the sine law, it is fair to conclude that Descartes knew of the law three years before his visit to Leyden in 1630. It is strange that Voss should have years after waited for twenty-five years-twelve Descartes's death-to make his accusation. Credit for discovering the law of refraction should therefore be divided between Descartes and Snel, with a fair share going to Johannes Kepler, who failed to find the sine law only because he trusted the tables of Vitello.\\
-             
-            Descartes's Dioptrique is beautifully written. It tries to explain the law of refraction by means of the theory of elasticity. A light ray is compared to the path of a ball, first being bounced off the ground, then being slowed down as it goes into a denser medium. Descartes was the first to suggest determining the velocity of light from the position of the moon at an eclipse.\\
-
-            He also made experiments with human and animal eyes. If the eye is removed and put in the opening of a window in a darkened room, one can see the images of distant objects on the retina, and by pressing the eye a little, one can see the image of near-by objects, showing that the eye can accommodate.\\
-
-            In the eighth chapter of his book, Descartes investigates surfaces that image a point sharply-the socalled Cartesian surfaces, of which the conic sections constitute a special case. He proposes machines for grinding lenses and demonstrates the colors of the rainbow with small glass spheres filled with water.\\
-
-            But much of Descartes's reasoning in connection with the refraction law was faulty and was rejected by the great mathematician Pierre de Fermat (1601-1665), who pointed out that water would have to be less dense than air to fit Descartes's explanation. Fermat returned to the formulation of the refraction law given by Hero, deriving it from the assumption that light has different velocities in different media and takes the quickest path between any two points. Like Hero, he illustrates this idea with a drawing of a convex surface, for which the minimum principle is correct, rather than a concave surface, for which it can be wrong. But he was called on the carpet by Abbé Mersenne, as was mentioned earlier, one of the great scientists and letter writers of his day. Fermat's answer is a classic example of double talk: he says that the path would be a minimum if the surface were a plane, and the incoming ray sees so little of the surface that it cannot distinguish whether the surface is plane or curved!
-
-        \subsubsection{Newton and Huygens}
-
-            Sir Isaac Newton (1642-1727), in his Lectiones opticae of 1669-1671 (published posthumously), showed how to calculate the spherical aberration of a plano-convex lens for an infinite object point. This book contains the formula for locating the image, still known by his name, in terms of the distances of the object and the image from the focal points. It also contains a thorough investigation of reflection in prisms, including the position of minimum deviation. It even goes into some aberrations, in particular, image errors as functions of color, and it compares the size of the color aberration with the spherical aberration of a given lens and prism.\\
-
-            Although Newton's best known work in optics is his Opticcs , I should like to draw your attention especially to his beautiful paper on color, in which he describes the separation of white light into the colors of the spectrum by means of prisms. This charming paper should be read by every student of optics, especially since the writer not only gives his final conclusions but describes many false attempts at interpreting his experiments and the refutation of these attempts.\\
-
-            Newton was misled into believing that all materials have the same relative dispersion, since he found this to be true for such different media as glass and water. The conclusion that he drew-that telescopes should not contain refracting surfaces-was erroneous. But it led him to study mirror telescopes and, with his teacher Gregory, he contributed much to the development of these instruments.\\
-
-            Christian Huygens (1629-1695) wrote two books on optics: Dioptrical in 1653, published posthumously , and Traite de la lumiere , written in 1678 but not published for twelve years. The first book shows enormous advances with respect to the understanding of optical image formation. The second proposes a new and revolutionary theory of light, deriving refraction and reflection laws from a completely new principle.
-            
-            This principle, set forth earlier in the Dioptrica, is a starting point from which all the laws of Gaussian optics can be derived for lens systems with finite thicknesses. It is expressed as follows: if we interchange object and eye in an optical system, the object will have the same apparent size and orientation as before. The law is known to us in the form that the product of lateral magnification and angular magnification is constant in an optical system, and equal to the ratio of the refractive indices.\\
-            
-            Huygens found, before Newton, the law that, for a single surface or for a single lens, the image distance is proportional to the object distance when the distances are measured from the respective principal foci. He knew of the aplanatic surface. He was acquainted with the important property of the optical center of a lens (the point which divides the distance between the vertices in the ratio of the radii), namely, that a ray through it emerges parallel to its original direction. He had an approximate formula for the spherical aberration of a thick lens that enables the form for minimum spherical aberration to be determined.
-
-            In his Traite de la lumiere, which should be required reading for every physicist and is now readily available, Huygens derives optical laws from the fact that the light emerging from an object point P forms a wave surface S at any given time t. The light rays are then the normals to this surface and are not straight unless the velocity is constant throughout the medium.\\
-
-            The surface can also be constructed in the following way. At an arbitrary time , light from the point source P forms a wave surface S. (assumed to be spherical in the figure). Considering each point of S, as a source sending out a new wave, we see that the envelope of all the waves at the time gives the original wave surface S.
-            
-            With the help of this concept, Huygens derives the straight paths of light in a medium of constant velocity. He derives not only the reflection and refraction laws but also the law of refraction in the atmosphere and in doubly refracting crystals. He clearly defines the caustic as the evolute of the rays and investigates it after reflection and refraction, in addition to investigating the degenerate form of the wave surfaces in the points of the caustic. He proves Malus' law: that rays form a normal system for a single reflection and refraction.\\
-
-            It should be emphasized, however, that this formulation is mathematically identical with ray optics, as Hamilton showed in his paper of 1831. The assumption that light has a finite wavelength and that it can be described as a sine wave going along a ray is foreign to Huygens. However, once this theory was established, the methods of Huygens enabled Fresnel to derive all the laws of diffraction in a most elegant manner.
-
-\section{Geometrical optics}
-
-    \subsection{The postulates of geometrical optics and the dark Room}
-
-        We already know the history of the geometrical optics, well before starting the study of this theory we must take back the contributions of Al Azhen and talk about the \textbf{postulates of geometrical physics} which are
-    
-        \begin{enumerate}
-            \item The speed of light is finite.
-            \item The light propagates in a straight line.
-            \item The light rays obey the Euclid's postulates of plane geometry.
-            \begin{enumerate}
-                \item A straight line segment can be drawn joining any two points.
-                \item A finite straight line (line segment) can be extended continuously in a straight line indefinitely.
-                \item A circle can be drawn with any point as its center and any distance as its radius.
-                \item All right angles are equal to one another, regardless of their orientation.
-                
-                \item If a straight line falling on two straight lines makes the interior angles on the same side less than two right angles, the two lines, if extended indefinitely, will eventually meet on that same side.
-            \end{enumerate}
-            \item In the matter the light's speed is less than in vacuum.
-        \end{enumerate}
-
-        Now, before starting to use these postulates we must understand the physical meaning of them. The first postulate, \textbf{The speed of light is finite} is fundamental, it is incredibly important. \\
-
-        How could Hero of Alexandria understand that the speed of light must be finite? To be honest, I don't really know his motivation but, we could get an idea about why this should be like that from simple phenomenological reasoning without the use a mathematics or advanced physics. \textit{Lets imagine a world where the speed of light is infinite}\\
-
-        How are going to be the nights in such world? It should be a complete chaos. Every star in the sky is a source of light, a source of infinite rays which each one travels at an infinite speed. There wont be any night, all the day is going to be full of light and even every event in the universe is going to be seen simultaneously, the big bang, the birth and death of a star. \textit{Each past and present event is going to be seen at the same time}.\\
-
-        Other effect that only can be explained in a universe with light with finite speed. Imagine you're standing in the rain, which is falling vertically. If you start running, the rain hits you in the face. This happens because your movement changes the apparent direction of the rain. An astronomer, James Bradley, observed that the stars didn't appear to be exactly in their calculated positions. To see a star directly overhead, he had to tilt his telescope slightly in the direction of Earth's movement around the Sun, the light from the star "falls" toward Earth at a finite speed. Earth is moving. For the light beam to travel from the telescope lens to the eyepiece (and for us to see it), Earth has moved a little. Therefore, you have to point the telescope at a slight angle toward where Earth will be when the light reaches the eyepiece, not where it is at the moment it enters the lens.\\
-
-        If the speed of light were infinite, this effect wouldn't exist. The rain (light) would fall so fast that your (Earth's) movement would be irrelevant. The fact that we have to "aim ahead" of the target is irrefutable proof that light travels at a finite speed. \\
-
-        There are many other consequences but lets continue with all the other postulates. Now lets talk about \textbf{The light propagates in a straight line}. This does have sense because it is what is seen in any normal day, all the source of light can be seen as sources of infinite many rays which propagates at a finite speed. With tools purely geometrical there is no way to give a proof of this, however, from a wave theory for light, Huygens was able to prove that the rays are, in fact, the normal vectors of the wavefront are the rays, and, from a quantum perspective, Richard Feynman proved that the rays are the superposition of the ''watches'' that represent the probability amplitudes.\\
-
-        Often we see that light is not an straight line, for example, an easy experiment consists on a translucid bowl full of salted water, we're going to see that the ray presents a deflection, we're going to see that this curves can be generated as a composition of infinitely many straight refractions.\\
-
-        Because we've postulated that the light travels in straight lines, so we have to give a theory for the propagation so \textbf{The light rays obey the Euclid's postulates of plane geometry}. A point is going to be a source, a place where two rays meet, the place where two media separates, etc.\\
-
-        The extension of a line segment to a continuously straight line is a way to make or represent ray tracing. The circle postulate talks about the sphere that propagates alongside all the rays (which behave as the radius). The right angles are just a geometrical formalism which does not have a dramatic optical interpretation.\\
-
-        The last postulate is really important, from a physical point of view it tell us that all the rays are going to be propagate on a completely plane space, so we could ask ourselves if we want to study the light's behavior under the gravitational effects of compact objects we must change the fifth Euclid's postulate, and the short answer is yup, we have to. Under gravitational effects the differential geometry is a better tool to study the light-type observers on the curved space-time.\\
-
-        So, we have many arguments that supports the idea the light's speed must be finite, and if it is finite there should be a way to measure it, right? The answer is yes, and here we're going to use the postulates to follow the Fizeau's ideas on how to measure the light's speed. 
-
-        \begin{figure}[h]
-            \centering
-            \includegraphics[width = 0.9\textwidth]{Figures/Cap 1/Fizeau.pdf}
-            \caption{Schematic representation of the Fizeau's experiment pretended to measure the light's speed.}
-            \label{fig:Fizeau}
-        \end{figure}
-
-        In 1849, Hippolyte Fizeau performed a groundbreaking experiment that provided the first non-astronomical measurement of the speed of light. His ingenious setup transformed the problem of measuring an extremely short time interval into a problem of measuring a rotation speed, which could be done with much greater precision. Imagine a very fast runner who starts from a point $A$, runs to a point $B$ and immediately returns to $A$. To measure the runner's speed, you could place a door at $A$ that opens and closes at regular intervals. If you open the door just when the runner leaves, then close it and open it again periodically, you might catch a glimpse of him when he returns if the timing is right. But if the runner is extremely fast, the door might be closed when he gets back. This is exactly the idea Fizeau used with light, replacing the door with a rapidly rotating toothed wheel and the runner with a light pulse.\\
-
-        Fizeau set up his apparatus on two hills in the outskirts of Paris, with the light source and observer on one hill (Montmartre) and a mirror on the other (Mont Valérien), about $8.633$ kilometers away. A beam of light from a lamp was directed toward a partially reflecting mirror (a beam splitter) that sent part of the light toward a toothed wheel. The wheel could be spun at a controlled speed and had a large number of teeth and gaps – typically $720$ teeth, meaning $720$ gaps as well. After passing through a gap, the light traveled to the distant mirror, was reflected, and returned along the same path. On its way back, it would again have to pass through a gap in the wheel to reach the observer's eye via the beam splitter.\\
-
-        If the wheel were stationary, the returning light would pass through the same gap and be seen. But as the wheel began to rotate, the situation changed. When the wheel turned slowly, the gap through which the light had originally passed would have moved only slightly during the light's round trip, so most of the returning light still made it through. As the speed increased, the gap shifted more, and the light began to be partially blocked by the edge of a tooth. At a certain critical speed, the gap moved exactly so that by the time the light returned, the adjacent tooth had taken its place, completely eclipsing the light. The observer would see the light disappear for the first time. By knowing the rotation speed at which this first extinction occurred, the number of teeth, and the distance to the mirror, Fizeau could deduce the time it took for light to travel to the mirror and back.\\
-
-        Let us analyze the situation mathematically. In the figure \ref{fig:Fizeau} let $d$ be the distance from the wheel to the distant mirror. The total path for the light is $2d$. The wheel has $N$ teeth and consequently $N$ gaps, so the angular width of one tooth (or one gap) is $\pi/N$ radians (since a full circle has $2\pi$ radians and there are $2N$ segments – teeth and gaps – each of equal angular size). For the first extinction, the time required for the light to make the round trip must equal the time needed for the wheel to rotate by the angle corresponding to one tooth (i.e., to replace a gap with a tooth). If the wheel rotates with angular velocity $\omega$ (radians per second), the time to turn through an angle $\pi/N$ is 
-        \begin{equation}
-        t_{\text{rot}} = \frac{\pi/N}{\omega}.
-        \end{equation}
-        The light travel time is 
-        \begin{equation}
-        t_{\text{light}} = \frac{2d}{c},
-        \end{equation}
-        and equation these gives  us
-        \begin{equation}
-        \frac{2d}{c} = \frac{\pi}{N \omega}.
-        \end{equation}
-        
-        But $\omega = 2\pi f$ where $f$ is the rotation frequency in revolutions per second. Substituting,
-        \begin{equation}
-        \frac{2d}{c} = \frac{\pi}{N \cdot 2\pi f} = \frac{1}{2N f}.
-        \end{equation}
-        Solving for $c$ yields
-        \begin{equation}
-        c = 4 d N f.
-        \end{equation}
-        Fizeau used $d = 8.633 \times 10^3$ m, $N = 720$, and observed the first extinction at $f \approx 12.6$ revolutions per second. Plugging in these numbers,
-        \begin{equation}
-        c = 4 \times 8.633 \times 10^3 \times 720 \times 12.6 \approx 3.13 \times 10^8 \text{ m/s},
-        \end{equation}
-        a value about $5\%$ higher than the modern accepted value of $2.99792458 \times 10^8$ m/s, but remarkably accurate for the time. The discrepancy arose mainly from uncertainties in the distance measurement and the precise determination of the extinction condition. Fizeau's experiment was a triumph of experimental physics, demonstrating that light travels at a finite speed and providing a method that would be refined by later researchers, most notably Léon Foucault, who replaced the toothed wheel with a rotating mirror to achieve even greater precision. The conceptual beauty of Fizeau's approach lies in its translation of an infinitesimal time interval (on the order of $1/20000$ of a second) into a measurable mechanical rotation, a perfect illustration of the deep connection between optics and mechanics.\\
-
-        Now we know the speed of light is finit, so lets use these postulates to understand one of the biggest contribution of Al Azhen, the dark room, see figure \ref{fig:DarkRoom}.
-
-        \begin{figure}[h]
-            \centering
-            \includegraphics[width = 0.9\textwidth]{Figures/Cap 1/DarkRoom.pdf}
-            \caption{Graphical representation of a generic dark room which is a box of an arbitrary material which has a side opened and while it satisfies the Rayleigh's inequality i will form an inverted image.}
-            \label{fig:DarkRoom}
-        \end{figure}
-
-        Before develop mathematically the dark room we're going to set an important convention
-
-        \begin{itemize}
-            \item The light propagates from left to right along the $z$ direction.
-            \item A distance measured in the direction of light is positive and a distance measured against the direction of light is negative.
-        \end{itemize}
-
-        Once defined the convention lets do it. A source in the point $A_o$ is at a distance $d_o$ respect to the opening $O$ of the dark room, ($d_o$ is in fact negative because it is measure against the light direction from the point $O$), an image if formed at a distance $d_i$ from $O$ thus we must find out a relation between these parameters and the diameter $D$ of the DR. First we're going to calculate the distances $\overline{A_oOA_i}$, $\overline{A_oRA_i}$ where $R$ is the radius of the opening, therefore
-
-        \begin{equation}
-            \overline{A_oOA_i} = d_i-d_o \;\;d_i = \overline{OA_i}\;\; d_0 = \overline{OA_o},
-        \end{equation}
-
-        \begin{equation}
-            \overline{A_oRA_i} = \left[ d_i^2 + x^2 + y^2 \right]^{1/2}  - \left[ d_o^2 + x^2 + y^2 \right]^{1/2},
-        \end{equation}
-
-        having on count our convention implies that $\sqrt{d_o^2}=-d_o$ so
-
-        \begin{equation}
-            \overline{A_oRA_i} = d_i\left[1 + \frac{r^2}{d_i^2}\right]^{1/2} - d_o\left[1 + \frac{r^2}{d_o^2} \right]^{1/2}.
-        \end{equation}
-
-        Historically it was observed in the dark room that the image that was formed depended on the diameter of the opening and the distance of the object to view, it was observed that the image was formed for far objects, but how far is far? It is relative to the radius of the opening, then the ratios must satisfy that
-
-        \begin{equation}
-            \frac{r^2}{d_o^2} \ll 1\;,\;\;\frac{r^2}{d_i^2} \ll 1,
-        \end{equation}
-
-        using this and using the Taylor's theorem for a polynomial expansion of the function $\sqrt{1+x}$ then
-
-        \begin{equation}
-            \overline{A_oRA_i} \approx d_i\left[1 + \frac{1}{2}\frac{r^2}{d_i^2} + \mathcal{O}(\delta^2) \right] - d_o\left[ 1 + \frac{1}{2}\frac{r^2}{d_o^2} + \mathcal{O}(\delta^2) \right],
-        \end{equation}
-
-        \begin{equation}
-            \overline{A_oRA_i} \approx \left(d_i-d_o\right) + \frac{r^2}{2}\left(\frac{1}{d_i} - \frac{1}{d_o} \right) = \overline{A_oOA_i} + \frac{r^2}{2}\left(\frac{1}{d_i} - \frac{1}{d_o} \right)
-        \end{equation}
-
-        with this we can express this in terms the difference of the light's path and the diameter of the dark room
-
-        \begin{equation}\label{eq:PathDifferenceDR}
-            \triangle L = \frac{r^2}{2}\left(\frac{1}{d_i} - \frac{1}{d_o} \right) = \frac{D^2}{8}\left(\frac{1}{d_i} - \frac{1}{d_o} \right).
-        \end{equation}
-
-        In the equation \ref{eq:PathDifferenceDR} lies the hearth of the dark room, it was found by Rayleigh a certain relation between the light's wavelength and the light's path difference between the upper and lower part of the opening of the dark room, this relation (which will be discussed physically in a moment) is:
-
-        \begin{equation}\label{eq:RayleighIneq}
-            \triangle L < \frac{\lambda}{4}.
-        \end{equation}
-
-        Using this relation we will find the maximum diamater for the dark room
-
-        \begin{equation}
-             \frac{D^2}{8}\left(\frac{1}{d_i} - \frac{1}{d_o} \right) < \frac{\lambda}{4},
-        \end{equation}
-
-        \begin{equation}\label{eq:Maxdiameter}
-            D_{max} = \left(\frac{2\lambda d_id_o}{d_o-d_i} \right)^{1/2}.
-        \end{equation}
-
-        In the real life there is no monochromatic light, it is forbidden by the laws of quantum mechanics, we can have quasi-monochromatic light but it is only in advanced laboratories so for a polychromatic source in the equation \ref{eq:Maxdiameter} we should do the calculations with the maximum wavelength that conforms the beam the origin of this expression have many origins which converges to the same phenomena. If we want to form an image the electromagnetic field coming from the object must arrive at the same time at the image point, if there is some kind of phase difference there will be aberrations as astigmatism or chromatic aberration (even if it is not a lens we can see it from the equation \ref{eq:Maxdiameter}) from a quantum point of view this is related to an interpretation of the \textit{size} of a photon \cite{santos2018huygens}.\\
-
-        Now we're going to analyze how does the light interact (from a simple and geometrical point of view) with transparent media. Suppose a source radiates from a point $A$ and the ray light arrives at $B$, see figure \ref{fig:indicerefracciongeo}.
-
-        \begin{figure}[h]
-            \centering
-            \includegraphics[width = 0.8\textwidth]{Figures/Cap 1/indicerefracciongeo.pdf}
-            \caption{A schematic representation of a ray beam from $A$ to $B$ which goes through n different transparent media and in each one it had a different speed and traveled different length.}
-            \label{fig:indicerefracciongeo}
-        \end{figure}
-
-        There are $n$ different transparent media each one hast a different thickness and the light in each one is different, therefore the time that takes the light to go from $A$ to $B$ is
-
-        \begin{equation}
-            t_{AB} = \sum_{i=1}^n \frac{L_i}{v_i} = \sum_{i=1}^n\frac{L_iC}{v_i}\frac{1}{C}\;[s].
-        \end{equation}
-
-        Then we define the refraction index in the $i$th medium as the relation between the speed of light in vacuum and the speed of light in the $i$th medium. \textit{It is a scalar in linear and homogeneous and isotropic media but mostly it is a tensor.} 
-
-        \begin{equation}
-            t_{AB} = \frac{1}{C}\sum_{i=1}^nn_iL_i = \frac{L_{AB}}{C}\;[s],
-        \end{equation}
-
-        \begin{myDef}
-            (Optical path): The optical path $L_{AB}$ is the distance that must travel in vacuum the light to have the same time to go from a point $A$ to a point $B$ across $n$ different media each one characterized by a different (or equal) refraction index.
-        \end{myDef}
-
-        The optical path has a length greater than the geometrical path of the light, that is why it is called optical path. This can be easily generalized to continuous media using a Lebesgue's integral (or Riemann integral if it is well behaved)
-
-        \begin{equation}
-            L_{AB} = \int_A^Bn(S)ds\;[m].
-        \end{equation}
-
-        Before going further we must have to set some definitions.
-
-        \begin{myDef}
-            (Phase): The phase is the relative angular displacement the ray has.
-        \end{myDef}
-
-        \begin{myDef}
-            (Wavefront): The geometrical space where the phase of the light is constant is called the wavefront of the light.
-        \end{myDef}
-
-    \subsection{The Snell-Descartes law and the Fermat's principle }
-
-        As we wad discussed in the historical chapter it was Heron of Alexandria who realizes that in light reflection it travels the least distance and Al Azhen proposes a maximum time, it was Fermat who formalizes it as a principle the \textbf{Fermat's principle}
-
-        \begin{myPrinciple}
-            (Fermat's principle): The light travels a trajectory such that the optical path is stationary
-
-            \begin{equation}
-                \delta L = 0.
-            \end{equation}
-        \end{myPrinciple}
-
-        The Fermat's principle can be ``deduced¨ from the Hamilton principle or even more from a variational principle, lets give a look to it, lets look for an stationary curve for the time the light travels
-
-        \begin{equation}
-            t = \int_{t_0}^{t_f}dt = \int_{A}^B\frac{1}{C}dL = \int_{\tau_0}^{\tau_f}Ld\tau,
-        \end{equation}
-
-        from here we see that, in a mathematical way, if we want to find the relation between the trajectory of the light and the time it takes to go from $A$ to $B$ we will have to solve the Euler-Lagrange equation. Now lets use the Fermat's principle to see how the light interacts with a diopter (a refracting surface) in a vector way, known as the \textit{vectorial Snell-Descartes law}.\\
-
-        \begin{myDef}
-            \textit{(Diopter)}: A Diopter is a surface $\Sigma \subset \mathbb{R}^2$ such that it separates two media with different refraction index.
-        \end{myDef}
-
-        \begin{figure}[h]
-            \centering
-            \includegraphics[width = 0.9\textwidth]{Figures/Cap 1/SnellDescartes.pdf}
-            \caption{two media separated by a diopter which an observer $O$ measures the path the light will follow from $A$ to $B$ and proposes a displacement of the source $A$ to $A'$ to see how must be the light path.}
-            \label{fig:SnellDescartes}
-        \end{figure}
-
-        In the figure \ref{fig:SnellDescartes} we see two media separated by a transparent surface (diopter) with refractive index $n_o$,$n_1$, respectively, a source $A$ emits a beam which reaches the diopter in $I$ and it is refracted to $B$, from $A$ there is an unitary vector $\hat{u}_o$ in  the direction $\overline{AI}$ and the observer $O$ analyzes a variation of $A$ as $A'$ and the incident point on the diopter is $I'$, then lets analyze it vectorially
-
-        \begin{align}
-            L = \left|\left| \Vec{I} - \Vec{A} \right|\right|,\\
-            \triangle\Vec{I} = \Vec{I}'-\Vec{I},\\
-            \triangle\Vec{A} = \Vec{A}'-\Vec{A},
-        \end{align}
-
-        with this we can calculate the path difference $L - L'$ vectorially as a proyection of the unitary vector in the direction of $L$ given by $\hat{u}_o$ along $\triangle\Vec{I}-\triangle\Vec{A}$ 
-
-        \begin{equation}
-            \triangle L_A = \frac{\left(\Vec{I} - \Vec{A} \right)\cdot\left(\triangle \Vec{I} - \triangle \Vec{A} \right)}{\left|\left|\Vec{I} - \Vec{A} \right|\right|} = \hat{u}_o \cdot \left(\triangle\Vec{I}-\triangle\Vec{A} \right),
-        \end{equation}
-
-        now for the optical path
-
-        \begin{equation}
-            \mathcal{L}_A = n_o\triangle L = n_o\hat{u}_o \left(\triangle\Vec{I}-\triangle\Vec{A} \right),
-        \end{equation}
-
-        doing the same for the right side of the diopter but for the point $B$ we then have got the total optical path difference as
-
-        \begin{equation}
-            \triangle\mathcal{L} = n_o\hat{u}_o\cdot\left(\triangle\Vec{I}-\triangle\Vec{A} \right) + n_1\hat{u}_1\cdot\left(\triangle\Vec{B}-\triangle\Vec{I} \right)
-        \end{equation}
-
-        because the points $A$ and $B$ are fixed then $\triangle\Vec{A}=0$ and $\triangle\Vec{B}=0$ thus
-
-        \begin{equation}\label{eq:PathDifferenceSD}
-            \triangle\mathcal{L} = \left(n_o\hat{u_o}-n_1\hat{u}_1\right)\cdot\triangle\Vec{I}.
-        \end{equation}
-
-        If the Fermat's principle is satisfied the equation \ref{eq:PathDifferenceSD} implies straightfully that $\triangle\Vec{I}$ is a tangent vector to the diopter this implies then
-
-        \begin{equation}\label{eq:SnellDescartes}
-            n_o\hat{u_o}-n_1\hat{u_1} = k\hat{N}.
-        \end{equation}
-
-        The equation \ref{eq:SnellDescartes} is known as the vectorial Snell-Descartes law, from this equation we can arrive to the law of reflection and refraction to do it we only have to do the cross product of the equation \ref{eq:SnellDescartes}
-
-        \begin{equation}
-            \hat{N}\times \left(n_0\hat{u_0}-n_1\hat{u_1} \right) = k \hat{N}\times\hat{N}=0,
-        \end{equation}
-
-        \begin{equation}
-            n_0sin(\theta_0) = n_1sin(\theta_1).
-        \end{equation}
-
-        \subsubsection{The critical angle, and the refraction by a prism}
-
-            We had deduced the vectorial Snell-Descartes law, which is a strong law and we are going to apply it to some physical situations, but before doing that we are going to talk briefly about where is the physical regime where this law can work on.\\
-
-            We are working under the postulates of the geometrical optics, but lets analyze a bit the second one, \textit{the light propagates in a straight line} we haven't say anything about the light's shape, if we say it propagates in a straight line we can image light rays as circular cylinders but what about the radius of this ray? Well, in fact there are more shapes we can imagine of the wavefront and the beam's profile, but we are going to talk about it in the chapter of electromagnetic optics, for now keep with the cylinder image.\\
-
-            If we make this ray to inside over a perfectly polished mirror as shown in \ref{fig:Epejo} then we can see an prove easily experimentally the Snell-Descartes law will be fulfilled but what happen if we have not got a polished surface but an extremely irregular surface? we will have reflections in all the points over the surface as shown in the figure \ref{fig:NonRefract}.
-
-            \begin{figure}[h]
-                \centering
-                \includegraphics[width = 0.8\textwidth]{Figures/Cap 1/Epejo.pdf}
-                \caption{Representation of a cylindrical ray light being reflected by a perfectly polished mirror.}
-                \label{fig:Epejo}
-            \end{figure}
-
-
-            \begin{figure}[h]
-                \centering
-                \includegraphics[width = 0.9\textwidth]{Figures/Cap 1/NonRefract.pdf}
-                \caption{Representation of a cylindrical bunch of rays being reflected by an inhomogeneus surface.}
-                \label{fig:NonRefract}
-            \end{figure}
-
-            The pehonomena shown in the figure \ref{fig:NonRefract} is, often, called \textit{diffuse refraction} but it is a kind of macroscopic effect of the Snell-Descartes law but there are other behaviors of the refraction index which give a particular behavior to the SD law, which are related to the electromagnetic properties of the matter, in fact, the refraction indez $n$ is a complex quantity, which its real part is related to the refractive properties of the material and the imaginary part is related to absorption an losses in the energy but we will work on this later. \\
-
-            The are some other special materials where the equations \ref{eq:SnellDescartes} has an amazing behavior. The meta materials which has a negative refraction index, but how can we interpret this? It is easy to see in the equation \ref{eq:SnellDescartes} that a variable changes of $n \to -n$ implies a physical effect of $\theta \to -\theta$ this means, the rays will be reflected or refracted to the other side!\\
-
-            Well then, lets come back to our well defined Behavior, where the SD law \ref{eq:SnellDescartes} will be fulfilled. Can we find a condition between two material such that there is no refraction? It is worth to ask about it because in nature the reflection and refraction happen at the same time both simultaneously because a translucent surface is not perfectly transparent and a refractive surface is not perfectly reflective this is related to the Fresnel's coefficients but this will be hard work of the chapter of electromagnetic optics, for now have on mind reflection and refraction happen at the same time. To try to kill the refraction we have to study two cases between two media. 
-
-            \begin{enumerate}
-                \item $n_1 > n_2$ 
-
-                \item  $n_1 < n_1$
-            \end{enumerate}
-
-            For the first case then we have from \ref{eq:SnellDescartes}
-
-            \begin{equation}
-                n_1sin\theta_1 = n_2sin\theta_2,
-            \end{equation}
-
-            \begin{equation}
-                \frac{n_1}{n_2}sin\theta_1 = sin\theta_2.
-            \end{equation}
-
-            If $\theta_1 = 0$ then $\theta_2=0$ thus if the incident ray is perfectly parallel to the normal vector to surface there wont be any refracted ray, only a completely reflected in the same plane as the incident but with opposite direction, this is said to get a phase shift of $\pi$. If the ray's incidence angle is perpendicular to the normal vector to surface $\theta_1=\pi/2$ then we will have
-
-            \begin{equation}\label{eq:Nonrefrac}
-                \frac{n_1}{n_2}=sin\theta_2,
-            \end{equation}
-
-            but $n_1>n_2$ then $n_1/n_2 > 1$ which has no sense with the right hand side of the equation \ref{eq:Nonrefrac} because $0 \leq sin\theta_2 \leq 1$ therefore for $\theta_1=\pi/2$ there is no refracted ray this is illustrated in the figure \ref{fig:n1>n2}.
-
-            \begin{figure}[h]
-                \centering
-                \includegraphics[width=0.8\textwidth]{Figures/Cap 1/n1>n2.pdf}
-                \caption{Representation of all the incident and refracted rays from a media with refraction index $n_1$ to another with refraction index $n_2$ such that $n_1>n_2$. The angle $\theta_2$ here shown wont never reach a value equal to $asin\left(\frac{n_1}{n_2}\right)$.}
-                \label{fig:n1>n2}
-            \end{figure}
-
-            Now, we have to consider and study the case where $n_1<n_2$ the obvious case is when $\theta_1=0$ therefore $\theta_2=0$ and there wont be any refracted ray, but the interesting thing comes when $\theta_1 = \pi/2$ then again we have got the same equation \ref{eq:Nonrefrac} but here is the main difference, now we've got $n_1 < n_2$ or $n_1/n_2 < 1$ therefore there exists this angle and it is called the \textit{total reflection angle} or \textit{critical angle} $\theta_c$ this is illustrated in the figure \ref{fig:n1<n2}.
-
-            \begin{figure}[h]
-                \centering
-                \includegraphics[width=0.9\textwidth]{Figures/Cap 1/n1<n2.pdf}
-                \caption{Representation of all the incident and refracted rays from a media with refraction index $n_1$ to another with refraction index $n_2$ such that $n_1<n_2$. The angle $\theta_c$ here separates the rays that will be refracted , (angles less than $\theta_c$), and the rays that will be totally reflected internally.}
-                \label{fig:n1<n2}
-            \end{figure}
-
-    \subsection{The Descartes's ovoid and diopters}
-
-        From here on we are going to start to study the theory of image formation where the concepts of \textbf{object} and \textbf{image} are really important because there are real and virtual objects and image, this depends on the relation between these points ant the diopter, in fact, something is called virtual if we put a photo detector in that point and we wont measure any field if an object is to the left of a diopter is called real and if it is to the right is called virtual, in the same order of ideas if the image is to the left of the diopter it is virtual and if it is to the right is real.\\
-
-        Now we are going to develope the \textit{rigurous estigmatism} thes are system capable of making perfect images, this means from a point source there is a perfect point image. Let a diopter which separates two media with refraction index $n_o$ and $n_i$ to the left of the diopter there is an object $A_o$ at a point $[0,0,z_o]$ the field from $A_o$ reaches a point $I$, measured from the diopter's vertex $v$, from the point I the beam is refracted and forms an image $A_i$ at a point $[0,0,z_i]$ then we are going to find the relations between all these parameters to make all the rays from $A_o$ arrive at $A_i$ making a perfect image. From the Fermat's principle we have got
-
-        \begin{equation}
-            n_0l_0 + n_il_i = cte
-        \end{equation}
-
-        \begin{figure}[h]
-            \centering
-            \includegraphics[width=\textwidth]{Figures/Cap 1/AlmostOvoid.pdf}
-            \caption{Scheme representation of the development of a rigorously stigmatic system, from a point source $A_o$ at a position $[0,0,z_o]$ the diopter with a vertice $v$ forms a perfect image $A_i$ at $[0,0,z_i]$. }
-            \label{fig:AlmostOvoid}
-        \end{figure}
-
-        the, as we can see in the figure \ref{fig:AlmostOvoid} we then have
-
-        \begin{equation}
-            n_0[x^2+y^2 + (z-z_o)^2]^{1/2} + n_i[x^2+y^2 + (z-z_i)^2]^{1/2} = cte
-        \end{equation}
-
-        and, remembering our sign convention $\sqrt{z_o^2}=-zo$, $z_i^2=z_i$ and to find the constant we can see that if we want to make all the rays from $A_o$ arrive to $A_i$ then the rays that travel parallel to $z$ satisfy also the Fermat's principle, thus
-
-        \begin{equation}
-            n_iz_i-n_oz_o = cte,
-        \end{equation}
-
-        \begin{equation}
-            n_0[x^2+y^2 + (z-z_o)^2]^{1/2} + n_i[x^2+y^2 + (z-z_i)^2]^{1/2} = n_iz_i-n_oz_o,
-        \end{equation}
-
-        we can write it in terms of the position vector $\Vec{\rho}$ between the vertex $V$ and the incident point $I$ in the following way
-
-        \begin{equation}\label{eq:OvoideCasi}
-            n_0[\rho^2 + (z-z_o)^2]^{1/2} + n_i[\rho^2+ (z-z_i)^2]^{1/2} = n_iz_i-n_oz_o,
-        \end{equation}
-
-        lets develop the equation \ref{eq:OvoideCasi} to do it, we are going to square both sides 
-
-        \begin{equation}
-            n_o^2(\rho^2+z_o^2-2zz_o)+n_i^2(\rho^2+z_i^2+2zz_i)-(n_iz_i-n_oz_o)^2=-2n_on_1(\rho^2+z_o^2-2zz_o)^{1/2}(\rho^2+z_i^2-2zz_i)^{1/2},
-        \end{equation}
-
-        \begin{equation}
-            n_o^2(\rho^2-2zz_o)+n_i^2(\rho^2-2zz_i)+2n_in_oz_iz_o = -2n_on_1(\rho^2+z_o^2-2zz_o)^{1/2}(\rho^2+z_i^2-2zz_i)^{1/2},
-        \end{equation}
-
-        squaring both sides again then we have
-
-        \begin{align}
-            & \left[n_o^2(\rho^2-2zz_o)+n_i^2(\rho^2-2zz_i) \right]^2 + 4n_in_oz_iz_o\left[n_o^2(\rho^2-2zz_o) + n_i^2(\rho^2-2zz_i) \right]\\
-            & + 4n_i^2n_o^2z_i^2z_o^2 = 4n_o^2n_i^2(\rho^2+z_o^2-2zz_o)(\rho^2+z_i^2-2zz_i),
-        \end{align}
-
-        \begin{align*}
-            &\left[n_o^2(\rho^2-2zz_o)+n_i^2(\rho^2-2zz_i) \right]^2 + 4n_in_oz_iz_o\left[n_o^2(\rho^2-2zz_o) + n_i^2(\rho^2-2zz_i) \right] + 4n_i^2n_o^2z_i^2z_o^2\\
-            & = 4n_o^2n_i^2\left[(\rho^2-2zz_o)(\rho^2-2zz_i)+(\rho^2-2zz_o)z_i^2 + (\rho^2-2zz_i)z_o^2 + 4z^2z_oz_i \right],
-        \end{align*}
-
-        If we expand the first perfect squared and have on count the last term on the right hand side we can  see we have again a perfect squared but with opposite sign, therefore
-
-        \begin{align*}
-            & \left[n_o^2(\rho^2-2zz_o)-n_i^2(\rho^2-2zz_i) \right]^2 + 4n_in_oz_iz_o\left[n_o^2(\rho^2-2zz_o) + n_i^2(\rho^2-2zz_i) \right] - 4n_o^2n_i^2z_i^2(\rho^2-2zz_o) \\
-            & -4n_o^2n_i^2z_o^2(\rho^2-2zz_i)=0,
-        \end{align*}
-
-        \begin{align*}
-            & \left[n_o^2(\rho^2-2zz_o)-n_i^2(\rho^2-2zz_i) \right]^2 \\
-            & -4n_in_o\left[-z_iz_o\left\{n_o^2(\rho^2-2zz_o)+n_i^2(\rho^2-2zz_i) \right] + n_on_iz_o^2(\rho^2-2zz_i) + n_on_iz_i^2(\rho^2-2zz_o) \right\} = 0
-        \end{align*}
-
-        \begin{align*}
-            & \left[n_o^2(\rho^2-2zz_o)-n_i^2(\rho^2-2zz_i) \right]^2 \\
-            & -4n_on_i\left\{(\rho^2-2zz_o)\left[n_on_iz_i^2 - n_o^2z_iz_o \right] + (\rho^2 - 2zz_i)\left[n_on_iz_o^2 - n_i^2z_iz_o \right] \right\}=0
-        \end{align*},
-
-        \begin{align*}
-            & \left[n_o^2(\rho^2-2zz_o)-n_i^2(\rho^2-2zz_i) \right]^2 \\
-            & -4n_in_o\left\{n_oz_i(\rho^2-2zz_o)(n_iz_i-n_oz_o) - n_iz_o(\rho^2-2zz_i)(n_iz_i-n_oz_o) \right\} = 0,
-        \end{align*}
-
-        finally we can arrive to a quadric equation for the cartesian surface or the well known as the \textbf{\textit{Descartes ovoid}} which can generate point images from point objects perfectly.
-
-        \begin{equation}
-            \left[(n_i-n_o)^2 - 2z(n_i^2z_i - n_o^2z_o) \right]^2 - 4n_in_o(n_oz_i-n_iz_o)\left[(n_oz_i-n_iz_o)\rho^2 -2z_iz_oz(n_i-n_o) \right] = 0
-        \end{equation}
-
-\section{Electromagnetic optics}
-    
-    \appendix
-    
-    \section{Sommerfeld quantization}\label{APX:Sommerfeld}
-
-
-    
-{\bibliographystyle{apalike}}
-\bibliography{bibliografia.bib}
-
+	\chapter{The loving Story of Optics}
+	\thispagestyle{empty}
+	\vspace*{2cm}
+	\begin{center}
+		{\itshape\Huge \par}
+		\vspace{1cm}
+		\epigraph{``The light is the God's shadow''}{-- Saint Agustin}
+	\end{center}
+	\clearpage
+	
+	\input{Chapter 1/chap1.tex}
+	
+	\chapter{Geometrical Optics}
+	\thispagestyle{empty}
+	\vspace*{2cm}
+	\begin{center}
+		{\itshape\Huge The Euclidean Geometry exists thanks to light. Euclid wanted to undestand the light rays, so he discovered the plane geometry. \par}
+		\vspace{1cm}
+		\epigraph{``Music is the arithmetic of sounds as optics is the geometry of light.''}{-- Claude Debussy}
+	\end{center}
+	\clearpage
+	
+	\input{Chapter 2/chap2.tex}
+
+    \bibliographystyle{apalike}
+	\bibliography{references}
+	
 \end{document}
