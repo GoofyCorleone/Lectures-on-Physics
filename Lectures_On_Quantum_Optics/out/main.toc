@@ -1,0 +1,66 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Introducción a la propagación de la radiación y teoría estocástica de la luz}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Breve historia de la teoría de la difracción: De las sombras al mundo vectorial}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Teoría escalar de la difracción}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Ecuación de onda escalar (Ecuación de Helmholtz)}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Teoría escalar de la difracción}{6}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Teorema de Green}{7}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Teorema integral de Helmholtz-Kirchhoff}{7}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Formulación de Rayleigh-Sommerfeld}{11}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Aproximación de Fresnel}{12}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Aproximación de Fraunhofer}{13}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Fundamentos de la teoría de la coherencia}{15}{section.1.7}%
+\contentsline {section}{\numberline {1.8}¿Cómo se cuantifica la similaridad estadística?}{17}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Función de coherencia}{19}{section.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}Manifestaciones de la coherencia: Teorema de Wiener-Khinchin}{23}{subsection.1.9.1}%
+\contentsline {subsection}{\numberline {1.9.2}Ecuación de onda de la coherencia}{25}{subsection.1.9.2}%
+\contentsline {subsection}{\numberline {1.9.3}Propagación de la coherencia y la dirección del tiempo; el teorema de Van Cittert-Zernike}{26}{subsection.1.9.3}%
+\contentsline {chapter}{\numberline {2}Cuantización del campo electromagnético}{33}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Breve historia de la óptica cuántica}{34}{section.2.1}%
+\contentsline {section}{\numberline {2.2}La luz nunca ha sido clásica}{36}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}La Hipótesis Cuántica de Planck}{37}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}La Visión de Einstein: Cuantización de la Radiación y el Momento}{37}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Experimento de Compton (1923)}{38}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}El fotón es una partícula; el experimento de Alain Aspect}{39}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}De la Mecánica Clásica a la Teoría Cuántica de Campos}{40}{section.2.3}%
+\contentsline {section}{\numberline {2.4}La primera cuantización}{40}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Modos normales de la cavidad}{43}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Cuantización del campo electromagnético}{44}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}El Oscilador Armónico Cuántico de la radiación y los Estados de Fock}{46}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}El operador número}{46}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}La energía del vacío cuántico}{48}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Fluctuaciones del vacío}{48}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Los estados coherentes}{49}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Distribución de probabilidad de los estados coherentes}{55}{subsection.2.7.1}%
+\contentsline {section}{\numberline {2.8}La fase cuántica}{57}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}La fase de Dirac}{57}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}El formalismo de Susskind-Glogower}{63}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}La fase cuántica y la transformación de Fourier Fraccionaria}{67}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.4}Efectos de la transformación de Fourier Fraccionaria sobre los estados coherentes y la función de Wigner}{68}{subsection.2.8.4}%
+\contentsline {subsection}{\numberline {2.8.5}Operador Exponencial de fase}{72}{subsection.2.8.5}%
+\contentsline {subsection}{\numberline {2.8.6}Operador de fase cuántica}{74}{subsection.2.8.6}%
+\contentsline {section}{\numberline {2.9}El operador de diferencia de fase cuántica y su relación con la polarización}{77}{section.2.9}%
+\contentsline {chapter}{\numberline {3}La propoagación fundamental de los fotones}{81}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Propagador de fotones}{82}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Propagador de fotón}{82}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Propagador del campo electromagnético clásico}{82}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Propagación como una integral de Fresnel}{84}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Correspondencia a la teoría de la difracción escalar}{86}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Experimento de conteo de fotones}{88}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Simulación de la distribución de probabilidad para la propagación de fotones únicos}{89}{subsection.3.1.6}%
+\contentsline {chapter}{\numberline {4}El Campo de Riemann-Silberstein}{91}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Electrodinámica clásica}{93}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Propiedades básicas del vector de RS}{94}{subsection.4.1.1}%
+\contentsline {subsubsection}{La polarización de la luz como vector en la esfera de Poincaré como solución a las ecuaciones de Maxwell}{96}{subsubsection*.28}%
+\contentsline {subsection}{\numberline {4.1.2}El tensor de RS en espacios-tiempo planos}{98}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}El campo de RS en una configuración relativista}{104}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Electrodinámica cuántica}{105}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Cuantización canónica}{105}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}El vector de RS y los espinores}{108}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}Un modelo del fotón}{111}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Necesidad de plantear un modelo alternativo}{112}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Ecuación de onda de los fotones}{112}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Fotones como paquetes de ondas}{114}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Estados Coherentes de los paquetes de onda}{116}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}La emisión de fotones como estados paquetes de onda coherentes}{117}{subsection.5.2.3}%
+\contentsfinish 
