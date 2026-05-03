@@ -12,7 +12,7 @@ El vector RS fue estudiado en detalle por primera vez en 1907 por Silberstein \c
 
         Antes de adentrarnos en la matemática que nos permite el campo de RS quisiera hacer una pequeña discusión sobre la naturaleza relativa del campo electromagnético. Desde los cursos de pregrado se nos dice que el campo magnético surge de un efecto relativista del campo eléctrico, también es un ejercicio bastante común en cursos de electromagnetismo o física del plasma encontrar la velocidad \footnote{conocida como velocidad de deriva.} a la que debe moverse un observador tal que desde su perspectiva solo haya un campo magnético \footnote{también se puede hacer el cálculo para solo ver un campo eléctrico pero no es un ejercicio tan común, pues son campos magnéticos los que se utilizan para confinar plasmas.} tal que la trayectoria que tenga una partícula de prueba sea ciclotrónica pero en ambos ejemplos surge una naturaleza relativa al observador de los campos eléctricos y magnéticos, es necesario preguntarse \textbf{¿cuál es el campo verdadero?} a mi forma de ver, es el campo de Riemann-Silberstein.\\
 
-        La respuesta de esa pregunta creo que está la teoría de las señales analíticas, la cual se puede ver un poco en el apéndice \ref{Apx:AnaliticSig} esta es una teoría, por decirlo de una forma no muy exacta, una teoría sobre las mediciones naturales, en el sentido de que se ajusta muy bien a lo que se mide mayormente en le laboratorio, la luz es un fenómeno perfectamente estocástico. Cuando medimos algo, medimos y obtenemos una señal aleatoria, en este orden de ideas, si la naturaleza del campo electromagnético es aleatoria el hecho de que dos observadores que miden la misma fuente detecten más señales eléctricas que magnéticas uno y viceversa el otro ¿existe entonces una aleatoriedad entre la diferencia de campos que mide uno con el otro? Parece que sí pero no tiene mucho sentido físico en realidad es de más  interés físico un campo aleatorio que no dependa del observador, este podría ser el campo de RS.\\
+        La respuesta de esa pregunta creo que está la teoría de las señales analíticas ---una teoría sobre las mediciones naturales, en el sentido de que se ajusta muy bien a lo que se mide mayormente en el laboratorio--- la luz es un fenómeno perfectamente estocástico. Cuando medimos algo, medimos y obtenemos una señal aleatoria, en este orden de ideas, si la naturaleza del campo electromagnético es aleatoria el hecho de que dos observadores que miden la misma fuente detecten más señales eléctricas que magnéticas uno y viceversa el otro ¿existe entonces una aleatoriedad entre la diferencia de campos que mide uno con el otro? Parece que sí pero no tiene mucho sentido físico en realidad es de más interés físico un campo aleatorio que no dependa del observador, este podría ser el campo de RS.\\
 
         Hay muchos indicios de que el campo que estamos buscando es el de RS porque este tiene las siguientes cualidades:
 
@@ -26,7 +26,7 @@ El vector RS fue estudiado en detalle por primera vez en 1907 por Silberstein \c
             \item El vector RS está lo más cerca posible de la función de onda del fotón en el espacio de coordenadas, tomando en cuenta las limitaciones impuestas por la falta del operador de posición para fotones.
         \end{itemize}
 
-        entre otras, pero hay otra cosa que me gustaría añadir y que hasta la fecha no hemos encontrado trabajos al respecto es que si el campo de RS es una señal analítica ¿esto implicaría que los campos eléctricos y magnéticos son pares conjugados de Hilbert? (ver apéndices \ref{Apx:AnaliticSig} y \ref{APx:HilbertTransform}) Demostrar esto matemáticamente debe ser todo un reto, pero en caso de que lo sean de forma general esto solucionaría el problema del observador, pues al transformarse de los campos electromagnéticos estos efectos se compensarían en el campo de RS el cual sería un invariante de Lorentz, si a esto le agregamos que muchas de las ecuaciones de la física a nivel clásico y cuántico se pueden escribir en términos del campo de RS ¿no implica que en este campo está una pista para unificar la cuántica con la relatividad? Pues si lograramos reescribir toda la relatividad general y la teoría cuántica de campos en términos de este campo habremos dado un paso enorme en la comprensión de la naturaleza (matemática) cuántica de la relatividad.
+        entre otras, pero hay otra cosa que me gustaría añadir y que hasta la fecha no hemos encontrado trabajos al respecto es que si el campo de RS es una señal analítica ¿esto implicaría que los campos eléctricos y magnéticos son pares conjugados de Hilbert? Demostrar esto matemáticamente debe ser todo un reto, pero en caso de que lo sean de forma general esto solucionaría el problema del observador, pues al transformarse de los campos electromagnéticos estos efectos se compensarían en el campo de RS el cual sería un invariante de Lorentz, si a esto le agregamos que muchas de las ecuaciones de la física a nivel clásico y cuántico se pueden escribir en términos del campo de RS ¿no implica que en este campo está una pista para unificar la cuántica con la relatividad? Pues si lograramos reescribir toda la relatividad general y la teoría cuántica de campos en términos de este campo habremos dado un paso enorme en la comprensión de la naturaleza (matemática) cuántica de la relatividad.
     \section{Electrodinámica clásica}\label{subsec:ElecClasik}
 
         Partamos este desarrollo con las ecuaciones de Maxwell sin fuentes:
@@ -479,7 +479,7 @@ El vector RS fue estudiado en detalle por primera vez en 1907 por Silberstein \c
         \begin{enumerate}
             \item $\alpha = 0$ 
             \begin{equation}
-                \partial_{\beta}F^{0\beta} = \partial_{\i}F^{0i} =  \Vec{\nabla}\cdot\Vec{E} = \rho,
+                \partial_{\beta}F^{0\beta} = \partial_{i}F^{0i} =  \Vec{\nabla}\cdot\Vec{E} = \rho,
             \end{equation}
 
             Podemos ver que recuperamos la ley del Gauss para el campo eléctrico en coordenadas geometrizadas.
@@ -568,7 +568,504 @@ El vector RS fue estudiado en detalle por primera vez en 1907 por Silberstein \c
         Las componentes del vector RS también pueden ser identificadas con las componentes espacio-espacio de $F^{\mu\nu}$. Esto explica el por qué las componentes del vector RS bajo una transformación de Lorentz se transforman entre sí como vimos en la ecuación \ref{eq:transformRS}, a pesar de que al mismo tiempo son las componentes de un tensor relativista $F_{\mu\nu}$ cuyas componentes espacio-temporales deberían mezclarse con las componentes espacio-espacio.
 
         En otras palabras, los vectores de campo eléctrico y magnético pueden combinarse en dos objetos geométricos equivalentes: un vector complejo F que se transforma bajo el grupo ortogonal complejo O(3,C), o un tensor real de segundo rango $f_{\mu\nu}$ que se transforma bajo el grupo real O(1, 3).
+    
+    \section{Unificación de las ecuaciones de Maxwell mediante el tensor de Riemann-Silberstein}
         
+        El objetivo de esta sección es extender el resultado obtenido en la sección anterior al marco de la \textbf{Relatividad General} (RG). En la sección anterior se demostró que, en un espacio-tiempo plano de Minkowski, las cuatro ecuaciones de Maxwell se reducen a la única ecuación tensorial $\partial_{\beta}R^{\alpha\beta} = J^{\alpha}$. La pregunta natural es: ¿qué forma toma esta ecuación cuando el espacio-tiempo es \emph{curvo}? La respuesta requiere reemplazar cuidadosamente los objetos geométricos planos por sus análogos covariantes en una variedad pseudo-Riemanniana general.
+
+        \subsection{Elementos de geometría diferencial en espacio-tiempo curvo}\label{subsec:GeomDif}
+    %----------------------------------------------------------
+
+            En la Relatividad General el espacio-tiempo es una variedad diferenciable $(\mathcal{M}, g_{\mu\nu})$, donde $g_{\mu\nu}$ es el \emph{tensor métrico} pseudo-Riemanniano de signatura $(-,+,+,+)$.  Todo el contenido físico del campo gravitacional queda codificado en $g_{\mu\nu}$.  Adoptamos a lo largo de esta sección las unidades geometrizadas $c = \epsilon_0 = \mu_0 = 1$.
+
+            \begin{myDef}[Tensor métrico y su inversa]
+                El tensor métrico $g_{\mu\nu}$ es un campo tensorial covariante de rango 2, simétrico ($g_{\mu\nu}=g_{\nu\mu}$) y no degenerado.  Su inversa
+                $g^{\mu\nu}$ satisface
+                \begin{equation}
+                    g^{\mu\alpha}g_{\alpha\nu} = \delta^{\mu}_{\ \nu}\;.
+                \end{equation}
+                El determinante de la métrica se denota $g = \det(g_{\mu\nu})$; con la signatura Lorentziana se tiene $g < 0$, por lo que $\sqrt{-g}$ es siempre real y positivo.
+            \end{myDef}
+
+            \begin{myDef}[Símbolo y tensor de Levi-Civita]\label{def:LC}
+                Se distingue con rigor entre dos objetos:
+                \begin{enumerate}
+                    \item El \textbf{símbolo de Levi-Civita} $\varepsilon^{\mu\nu\rho\sigma}$,
+                        totalmente antisimétrico con $\varepsilon^{0123}=+1$, es una \emph{densidad tensorial de peso} $+1$: bajo un cambio de coordenadas $x\to x'$ transforma con un factor adicional igual al determinante del jacobiano $\det(\partial x/\partial x')$.  Por tanto \textbf{no es un tensor genuino}.
+
+                    \item El \textbf{tensor de Levi-Civita} se define corrigiendo el peso
+                        con $\sqrt{-g}$:
+                        \begin{equation}\label{eq:TensorLC}
+                            \mathcal{E}^{\mu\nu\rho\sigma}
+                                = \frac{1}{\sqrt{-g}}\,\varepsilon^{\mu\nu\rho\sigma}\;,
+                            \qquad
+                            \mathcal{E}_{\mu\nu\rho\sigma}
+                                = \sqrt{-g}\,\varepsilon_{\mu\nu\rho\sigma}\;.
+                        \end{equation}
+                        Este sí es un tensor $(4,0)$ genuino en espacio curvo.
+                \end{enumerate}
+            \end{myDef}
+
+            Una identidad fundamental del tensor de Levi-Civita, que usaremos repetidamente, es la contracción de dos índices:
+            \begin{equation}\label{eq:ContrLC}
+                \mathcal{E}^{\mu\nu\rho\sigma}\mathcal{E}_{\mu\nu\alpha\beta}
+                = -2\!\left(\delta^{\rho}_{\ \alpha}\delta^{\sigma}_{\ \beta}
+                        -\delta^{\rho}_{\ \beta}\delta^{\sigma}_{\ \alpha}\right)\;.
+            \end{equation}
+
+            \begin{myDef}[Derivada covariante y símbolos de Christoffel]
+                La derivada covariante, compatible con la métrica de Levi-Civita, actúa sobre un tensor contravariante $T^{\mu\nu}$ como
+                \begin{equation}\label{eq:DerCov}
+                    \nabla_{\lambda}T^{\mu\nu}
+                        = \partial_{\lambda}T^{\mu\nu}
+                        + \Gamma^{\mu}_{\ \lambda\sigma}T^{\sigma\nu}
+                        + \Gamma^{\nu}_{\ \lambda\sigma}T^{\mu\sigma}\;,
+                \end{equation}
+                donde los \emph{símbolos de Christoffel} de segunda especie son
+                \begin{equation}\label{eq:Christoffel}
+                    \Gamma^{\sigma}_{\ \mu\nu}
+                        = \frac{1}{2}g^{\sigma\lambda}
+                        \!\left(\partial_{\mu}g_{\nu\lambda}
+                                +\partial_{\nu}g_{\mu\lambda}
+                                -\partial_{\lambda}g_{\mu\nu}\right)\;.
+                \end{equation}
+                La conexión de Levi-Civita es libre de torsión:
+                $\Gamma^{\sigma}_{\ \mu\nu} = \Gamma^{\sigma}_{\ \nu\mu}$.
+            \end{myDef}
+
+            Un resultado que usaremos extensamente es la expresión de la divergencia covariante de un tensor antisimétrico en términos de derivadas parciales ordinarias.
+
+            \begin{myteo}[Divergencia covariante de tensor antisimétrico]\label{teo:DivCov} 
+                Sea $T^{\mu\nu}$ un tensor antisimétrico ($T^{\mu\nu}=-T^{\nu\mu}$). Entonces
+                \begin{equation}\label{eq:DivCovAntis}
+                    \nabla_{\nu}T^{\mu\nu}
+                        = \frac{1}{\sqrt{-g}}\,
+                        \partial_{\nu}\!\left(\sqrt{-g}\;T^{\mu\nu}\right)\;.
+                \end{equation}
+            \end{myteo}
+
+            \begin{proof}
+                Expandiendo la derivada covariante mediante \eqref{eq:DerCov}:
+                \begin{equation*}
+                    \nabla_{\nu}T^{\mu\nu}
+                        = \partial_{\nu}T^{\mu\nu}
+                        + \Gamma^{\mu}_{\ \nu\lambda}T^{\lambda\nu}
+                        + \Gamma^{\nu}_{\ \nu\lambda}T^{\mu\lambda}\;.
+                \end{equation*}
+                El segundo término se anula: $\Gamma^{\mu}_{\ \nu\lambda}$ es simétrico en $(\nu,\lambda)$ mientras $T^{\lambda\nu}$ es antisimétrico, de modo que su contracción es cero.  Para el tercer término usamos la identidad estándar de la traza de Christoffel:
+                \begin{equation*}
+                    \Gamma^{\nu}_{\ \nu\lambda}
+                        = \partial_{\lambda}\ln\sqrt{-g}\;.
+                \end{equation*}
+                Entonces
+                \begin{equation*}
+                    \nabla_{\nu}T^{\mu\nu}
+                        = \partial_{\nu}T^{\mu\nu}
+                        + T^{\mu\lambda}\partial_{\lambda}\ln\sqrt{-g}
+                        = \frac{1}{\sqrt{-g}}
+                        \partial_{\nu}\!\left(\sqrt{-g}\;T^{\mu\nu}\right)\;,
+                \end{equation*}
+                que es exactamente la regla del producto para $\partial_{\nu}(\sqrt{-g}\;T^{\mu\nu})$.
+            \end{proof}
+
+            \begin{myteo}[Nulidad de la derivada covariante del tensor de Levi-Civita]
+                \label{teo:NablaLC}
+                $\nabla_{\lambda}\mathcal{E}_{\mu\nu\rho\sigma} = 0$.
+            \end{myteo}
+
+            \begin{proof}
+                Por definición $\mathcal{E}_{\mu\nu\rho\sigma}=\sqrt{-g}\,\varepsilon_{\mu\nu\rho\sigma}$.  La derivada covariante actúa como
+                \begin{equation*}
+                    \nabla_{\lambda}\mathcal{E}_{\mu\nu\rho\sigma}
+                        = \partial_{\lambda}(\sqrt{-g})\,\varepsilon_{\mu\nu\rho\sigma}
+                        - \Gamma^{\alpha}_{\ \lambda\mu}\mathcal{E}_{\alpha\nu\rho\sigma}
+                        - \Gamma^{\alpha}_{\ \lambda\nu}\mathcal{E}_{\mu\alpha\rho\sigma}
+                        - \Gamma^{\alpha}_{\ \lambda\rho}\mathcal{E}_{\mu\nu\alpha\sigma}
+                        - \Gamma^{\alpha}_{\ \lambda\sigma}\mathcal{E}_{\mu\nu\rho\alpha}\;.
+                \end{equation*}
+                Usando $\partial_{\lambda}\sqrt{-g}=\sqrt{-g}\,\Gamma^{\nu}_{\ \nu\lambda}$ y la total antisimetría de $\varepsilon$, los cuatro términos con Christoffel producen exactamente $-\sqrt{-g}\,\Gamma^{\nu}_{\ \nu\lambda} \varepsilon_{\mu\nu\rho\sigma}$, que cancela el primer término. Por tanto el resultado es cero.
+            \end{proof}
+
+        \subsection{El tensor de Faraday en espacio-tiempo curvo}\label{subsec:Faraday}
+
+            \begin{myDef}[Tensor de Faraday en espacio curvo]
+                El tensor de Faraday en espacio-tiempo curvo se define como
+                \begin{equation}\label{eq:FaradayCurvo}
+                    F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}\;.
+                \end{equation}
+            \end{myDef}
+
+            Nótese que, aunque en RG las derivadas de tensores covariantes ordinariamente producen objetos que no son tensores, en el caso antisimetrzado los símbolos de Christoffel se cancelan mutuamente:
+            \begin{equation*}
+                \nabla_{\mu}A_{\nu} - \nabla_{\nu}A_{\mu}
+                = (\partial_{\mu}A_{\nu} - \Gamma^{\lambda}_{\ \mu\nu}A_{\lambda})
+                - (\partial_{\nu}A_{\mu} - \Gamma^{\lambda}_{\ \nu\mu}A_{\lambda})
+                = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}\;,
+            \end{equation*}
+            donde se ha usado la libre de torsión $\Gamma^{\lambda}_{\ \mu\nu}= \Gamma^{\lambda}_{\ \nu\mu}$.  Por consiguiente $F_{\mu\nu}$ es un tensor $(0,2)$ genuino. La versión contravariante se obtiene subiendo ambos índices con la métrica inversa:
+            \begin{equation}\label{eq:FContra}
+                F^{\mu\nu} = g^{\mu\alpha}g^{\nu\beta}F_{\alpha\beta}\;.
+            \end{equation}
+
+            \begin{myDef}[Dual de Hodge en espacio curvo]
+                \label{def:Dual}
+                El dual de Hodge del tensor de Faraday en espacio curvo se define usando
+                el \emph{tensor} de Levi-Civita (no el símbolo):
+                \begin{equation}\label{eq:DualCurvo}
+                    {}^{*}F^{\mu\nu}
+                        = \frac{1}{2}\,\mathcal{E}^{\mu\nu\rho\sigma}F_{\rho\sigma}
+                        = \frac{1}{2\sqrt{-g}}\,\varepsilon^{\mu\nu\rho\sigma}F_{\rho\sigma}\;.
+                \end{equation}
+            \end{myDef}
+
+            Puesto que $\mathcal{E}^{\mu\nu\rho\sigma}$ es tensor y $F_{\rho\sigma}$ es tensor, ${}^{*}F^{\mu\nu}$ es también un tensor $(2,0)$ antisimétrico.
+
+            Una propiedad algebraica esencial del operador dual en cuatro dimensiones con signatura Lorentziana es que \emph{aplicado dos veces sobre una 2-forma reproduce el negativo de la 2-forma original}:
+
+            \begin{myteo}[Doble dual en cuatro dimensiones Lorentzianas]
+                \label{teo:DobleDual}
+                ${}^{**}F^{\mu\nu} = -F^{\mu\nu}$.
+            \end{myteo}
+
+            \begin{proof}
+                Por la definición \eqref{eq:DualCurvo} aplicada dos veces:
+                \begin{align*}
+                    {}^{**}F^{\mu\nu}
+                    &= \frac{1}{2}\mathcal{E}^{\mu\nu\rho\sigma}
+                    \left({}^{*}F_{\rho\sigma}\right)
+                    = \frac{1}{2}\mathcal{E}^{\mu\nu\rho\sigma}
+                    \cdot\frac{1}{2}\mathcal{E}_{\rho\sigma\alpha\beta}F^{\alpha\beta}\\
+                    &= \frac{1}{4}\mathcal{E}^{\mu\nu\rho\sigma}
+                    \mathcal{E}_{\rho\sigma\alpha\beta}F^{\alpha\beta}\;.
+                \end{align*}
+                Usando la identidad de contracción \eqref{eq:ContrLC}:
+                \begin{equation*}
+                    \mathcal{E}^{\mu\nu\rho\sigma}\mathcal{E}_{\rho\sigma\alpha\beta}
+                    = -2\!\left(\delta^{\mu}_{\ \alpha}\delta^{\nu}_{\ \beta}
+                            -\delta^{\mu}_{\ \beta}\delta^{\nu}_{\ \alpha}\right)\;,
+                \end{equation*}
+                por tanto
+                \begin{equation*}
+                    {}^{**}F^{\mu\nu}
+                    = \frac{1}{4}\cdot(-2)
+                    \!\left(\delta^{\mu}_{\ \alpha}\delta^{\nu}_{\ \beta}
+                            -\delta^{\mu}_{\ \beta}\delta^{\nu}_{\ \alpha}\right)
+                    F^{\alpha\beta}
+                    = -\frac{1}{2}(F^{\mu\nu}-F^{\nu\mu})
+                    = -F^{\mu\nu}\;,
+                \end{equation*}
+                donde en el último paso se usó la antisimetría $F^{\nu\mu}=-F^{\mu\nu}$.
+            \end{proof}
+
+        \subsection{Las ecuaciones de Maxwell en espacio-tiempo curvo}\label{subsec:MaxwellCurvo}
+
+            El principio de acoplamiento mínimo de la Relatividad General establece que las leyes físicas en espacio plano se extienden a espacio curvo mediante la sustitución $\partial_{\mu}\to\nabla_{\mu}$ y $\varepsilon^{\mu\nu\rho\sigma} \to\mathcal{E}^{\mu\nu\rho\sigma}$.  Bajo este principio las ecuaciones de Maxwell en espacio curvo son:
+
+            \begin{equation}\label{eq:MaxNoHomRG}
+                \nabla_{\nu}F^{\mu\nu} = J^{\mu}
+                \quad\Longleftrightarrow\quad
+                \frac{1}{\sqrt{-g}}\,\partial_{\nu}
+                \!\left(\sqrt{-g}\;F^{\mu\nu}\right) = J^{\mu}\;,
+            \end{equation}
+
+            \begin{equation}\label{eq:MaxHomRG}
+                \nabla_{\lambda}{}^{*}F^{\mu\nu} = 0
+                \quad\Longleftrightarrow\quad
+                \partial_{[\lambda}F_{\mu\nu]} = 0\;.
+            \end{equation}
+
+            La equivalencia en \eqref{eq:MaxNoHomRG} es consecuencia directa del Teorema~\ref{teo:DivCov}, pues $F^{\mu\nu}$ es antisimétrico.  La equivalencia en \eqref{eq:MaxHomRG} se verifica notando que la antisimetrización de $\nabla_{\lambda}F_{\mu\nu}$ colapsa a $\partial_{[\lambda}F_{\mu\nu]}$ al cancelarse los Christoffel (idéntico argumento que en \S\ref{subsec:Faraday}).
+
+            Ahora vamos a ahacer la deducción desde una densidad lagrangiana como ya se hizo previamente, esto, con el fin de dar rigurosidad al resultado.
+
+            En espacio plano la acción de Maxwell es $S=\int\Lambda\,d^4x$. En espacio curvo el elemento de volumen invariante bajo difeomorfismos es$\sqrt{-g}\,d^4x$, y la acción se escribe
+
+            \begin{equation}\label{eq:AccionRG}
+                S = \int_{\mathcal{M}}\Lambda_{\text{RG}}\,\sqrt{-g}\;d^4x\;.
+            \end{equation}
+
+            El factor $\sqrt{-g}$ es \emph{indispensable}: sin él la integral no seríaun escalar bajo cambios de coordenadas, pues $d^4x\to\det(\partial x'/\partial x)\,d^4x'$ y $\sqrt{-g}\to\det(\partial x/\partial x')\sqrt{-g'}$, de modo que el producto $\sqrt{-g}\,d^4x$ es invariante.
+
+            Siguiendo la misma lógica variacional de las secciones anteriores, la densidad lagrangiana en espacio curvo para el campo electromagnético con fuentes es
+
+            \begin{equation}\label{eq:LagDenRG}
+                \Lambda_{\text{RG}}
+                    = A_{\mu}J^{\mu}
+                    -\frac{1}{4}F^{\mu\nu}F_{\mu\nu}
+                    -\frac{i}{4}\,{}^{*}F^{\mu\nu}F_{\mu\nu}\;.
+            \end{equation}
+
+            Nótese que los escalares $F^{\mu\nu}F_{\mu\nu}$ y ${}^{*}F^{\mu\nu}F_{\mu\nu}$ son ya invariantes de Lorentz en espacio plano; en espacio curvo siguen siendo escalares genuinos (su contracción se efectúa con la métrica $g_{\mu\nu}$).
+
+            En la sección anterior el campo de Riemann-Silberstein se definió en espacio plano como $\vec{F}_{RS}=\vec{E}+i\vec{B}$ y su cuadrado resultó ser
+            \begin{equation*}
+                F^2_{RS} = -\frac{1}{2}F^{\alpha\beta}F_{\alpha\beta} - \frac{i}{4}\,{}^{*}F^{\alpha\beta}F_{\alpha\beta}\;.
+            \end{equation*}
+            Esta expresión escalar se transporta directamente al espacio curvo sin modificación, pues las contracciones tensoriales son covariantes.  Los invariantes del campo electromagnético en espacio curvo son entonces:
+            \begin{enumerate}
+                \item $F^{\mu\nu}F_{\mu\nu} = g^{\mu\alpha}g^{\nu\beta}F_{\mu\nu}F_{\alpha\beta}$ (escalar real).
+                \item ${}^{*}F^{\mu\nu}F_{\mu\nu}$ (pseudo-escalar real).
+                \item $F^2_{RS} = -\frac{1}{2}F^{\mu\nu}F_{\mu\nu} -\frac{i}{4}\,{}^{*}F^{\mu\nu}F_{\mu\nu}$(escalar complejo).
+            \end{enumerate}
+
+            Antes de continuar, vamos a dar la definición que extiende al tensor de Riemann-Silberstein en espacio-tiempos curvos.
+
+            \begin{myDef}[Tensor de Riemann-Silberstein en espacio curvo] \label{def:RSRG}
+                Sea $(\mathcal{M},g_{\mu\nu})$ un espacio-tiempo pseudo-Riemanniano de signatura $(-,+,+,+)$.  El \textbf{tensor de Riemann-Silberstein en relatividad general} se define como
+                \begin{equation}\label{eq:RSRG}
+                    \boxed{R^{\mu\nu} = F^{\mu\nu} + i\,{}^{*}F^{\mu\nu} = F^{\mu\nu} + \frac{i}{2\sqrt{-g}}\,\varepsilon^{\mu\nu\rho\sigma}F_{\rho\sigma} \;.}
+                \end{equation}
+            \end{myDef}
+
+            $F^{\mu\nu}$ es un tensor $(2,0)$ real (demostrado en \S\ref{subsec:Faraday}).  ${}^{*}F^{\mu\nu}$ es también un tensor $(2,0)$ (véase Definición~\ref{def:Dual}).  La combinación lineal de dos tensores del mismo tipo con coeficientes escalares (incluyendo escalares complejos) es un tensor del mismo tipo.  Por tanto $R^{\mu\nu}$ es un tensor $(2,0)$ complejo. $\square$
+
+            Tanto $F^{\mu\nu}$ como ${}^{*}F^{\mu\nu}$ son antisimétricos; por linealidad $R^{\mu\nu}=-R^{\nu\mu}$. $\square$
+
+            Usando el Teorema ~\ref{teo:DobleDual}:
+            \begin{equation}\label{eq:AutoDual}
+                {}^{*}R^{\mu\nu} = {}^{*}F^{\mu\nu} + i\,{}^{**}F^{\mu\nu} = {}^{*}F^{\mu\nu} - iF^{\mu\nu} = -i\,R^{\mu\nu}\;.
+            \end{equation}
+            Es decir, $R^{\mu\nu}$ es un \emph{tensor auto-dual complejo}: la operación de dualidad actúa sobre él como multiplicación por $-i$.  Esta propiedad refleja que el operador $\star$ actúa como $\sqrt{-1}$ en el espacio de 2-formas Lorentzianas de cuatro dimensiones.
+
+            En espacio plano, la ecuación de Euler-Lagrange para una densidad lagrangiana $\Lambda$ es la ecuación \eqref{eq:EL}.  En espacio curvo el campo dinámico es $A_{\mu}$ y la densidad lagrangiana que multiplica al volumen invariante $\sqrt{-g}$ es $\Lambda_{\text{RG}}$.  La acción es
+            \begin{equation*}
+                S = \int\Lambda_{\text{RG}}(x^{\mu}, A_{\mu}, \partial_{\nu}A_{\mu}) \,\sqrt{-g}\;d^4x\;.
+            \end{equation*}
+            Extremando $S$ respecto a $A_{\mu}$ con condiciones de frontera fijas, la ecuación de Euler-Lagrange covariante toma la forma
+            \begin{equation}\label{eq:ELcurvo}
+                \frac{\partial(\sqrt{-g}\,\Lambda_{\text{RG}})}{\partial A_{\mu}} - \partial_{\nu} \frac{\partial(\sqrt{-g}\,\Lambda_{\text{RG}})}{\partial(\partial_{\nu}A_{\mu})} = 0\;.
+            \end{equation}
+            Nótese que \eqref{eq:ELcurvo} contiene derivadas \emph{parciales} ordinarias porque la acción ya está escrita con la medida invariante $\sqrt{-g}\,d^4x$; el factor $\sqrt{-g}$ absorbe la curvatura en la densidad lagrangiana efectiva $\tilde{\Lambda}=\sqrt{-g}\,\Lambda_{\text{RG}}$.
+
+            Planteamos la siguiente densidad lagrangiana en espacio-tiempo curvo, motivada directamente por el invariante $F^2_{RS}$:
+
+            \begin{equation}\label{eq:LagRS_RG}
+                \Lambda_{\text{RG}}(x^{\mu},A_{\mu}) = K_1 A_{\mu}J^{\mu} + K_2 F^{\mu\nu}F_{\mu\nu} + iK_3\,{}^{*}F^{\mu\nu}F_{\mu\nu}\;,
+            \end{equation}
+            que reproduce la estructura de la densidad lagrangiana del campo de Riemann-Silberstein.  La densidad lagrangiana efectiva es $\tilde{\Lambda} = \sqrt{-g}\,\Lambda_{\text{RG}}$.
+
+            Calculemos cada miembro de la ecuación de Euler-Lagrange \eqref{eq:ELcurvo}.
+
+            \vspace{4pt}
+            \noindent\textbf{Primer miembro} (variación respecto a $A_{\mu}$):
+
+            La única dependencia explícita en $A_{\mu}$ proviene del término de acoplamiento
+            con la corriente:
+            \begin{equation}\label{eq:EL1}
+                \frac{1}{\sqrt{-g}}\,
+                \frac{\partial(\sqrt{-g}\,\Lambda_{\text{RG}})}{\partial A_{\mu}}
+                = K_1 J^{\mu}\;.
+            \end{equation}
+
+            \vspace{4pt}
+            \noindent\textbf{Segundo miembro} (variación respecto a $\partial_{\nu}A_{\mu}$):
+
+            El tensor de Faraday en espacio curvo cumple $F_{\rho\sigma}=\partial_{\rho}A_{\sigma}
+            -\partial_{\sigma}A_{\rho}$, lo que implica
+            \begin{equation}\label{eq:dFdA}
+                \frac{\partial F_{\rho\sigma}}{\partial(\partial_{\nu}A_{\mu})}
+                = \delta^{\nu}_{\ \rho}\delta^{\mu}_{\ \sigma}
+                - \delta^{\nu}_{\ \sigma}\delta^{\mu}_{\ \rho}\;.
+            \end{equation}
+
+            Calculemos la variación del término $F^{\rho\sigma}F_{\rho\sigma}$.
+            Con la ayuda de \eqref{eq:dFdA}:
+            \begin{align*}
+                \frac{\partial(F^{\rho\sigma}F_{\rho\sigma})}{\partial(\partial_{\nu}A_{\mu})}
+                &= F^{\rho\sigma}
+                \frac{\partial F_{\rho\sigma}}{\partial(\partial_{\nu}A_{\mu})}
+                + F_{\rho\sigma}
+                \frac{\partial F^{\rho\sigma}}{\partial(\partial_{\nu}A_{\mu})}\\
+                &= 2F^{\rho\sigma}\!\left(\delta^{\nu}_{\ \rho}\delta^{\mu}_{\ \sigma}
+                                        -\delta^{\nu}_{\ \sigma}\delta^{\mu}_{\ \rho}\right)
+                = 2F^{\nu\mu} - 2F^{\mu\nu} = -4F^{\mu\nu}\;,
+            \end{align*}
+            donde en el último paso se usó la antisimetría.  Por tanto:
+            \begin{equation}\label{eq:VarFF}
+                \frac{1}{\sqrt{-g}}\,
+                \partial_{\nu}\!\left[\sqrt{-g}\,
+                \frac{\partial(K_2 F^{\rho\sigma}F_{\rho\sigma})}
+                    {\partial(\partial_{\nu}A_{\mu})}\right]
+                = \frac{-4K_2}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;F^{\mu\nu}\right)\;.
+            \end{equation}
+
+            Calculemos ahora la variación del término dual
+            ${}^{*}F^{\rho\sigma}F_{\rho\sigma}
+            = \frac{1}{2\sqrt{-g}}\varepsilon^{\rho\sigma\alpha\beta}F_{\alpha\beta}F_{\rho\sigma}$.
+            Usando \eqref{eq:dFdA} dos veces:
+            \begin{align*}
+                \frac{\partial({}^{*}F^{\rho\sigma}F_{\rho\sigma})}
+                    {\partial(\partial_{\nu}A_{\mu})}
+                &= \frac{\varepsilon^{\rho\sigma\alpha\beta}}{2\sqrt{-g}}
+                \left[F_{\rho\sigma}\!\left(\delta^{\nu}_{\ \alpha}\delta^{\mu}_{\ \beta}
+                                            -\delta^{\nu}_{\ \beta}\delta^{\mu}_{\ \alpha}\right)
+                        +F_{\alpha\beta}\!\left(\delta^{\nu}_{\ \rho}\delta^{\mu}_{\ \sigma}
+                                            -\delta^{\nu}_{\ \sigma}\delta^{\mu}_{\ \rho}\right)
+                \right]\\
+                &= \frac{\varepsilon^{\rho\sigma\nu\mu}}{2\sqrt{-g}}\cdot 2\,F_{\rho\sigma}
+                \cdot 2
+                = \frac{2}{\sqrt{-g}}\,\varepsilon^{\rho\sigma\nu\mu}F_{\rho\sigma}
+                = -4\,{}^{*}F^{\mu\nu}\;,
+            \end{align*}
+            donde en el último paso se usó la definición \eqref{eq:DualCurvo} y la
+            antisimetría de $\varepsilon$ para reordenar índices.  Por tanto:
+            \begin{equation}\label{eq:VarFdF}
+                \frac{1}{\sqrt{-g}}\,
+                \partial_{\nu}\!\left[\sqrt{-g}\,
+                \frac{\partial(iK_3\,{}^{*}F^{\rho\sigma}F_{\rho\sigma})}
+                    {\partial(\partial_{\nu}A_{\mu})}\right]
+                = \frac{-4iK_3}{\sqrt{-g}}\,
+                \partial_{\nu}\!\left(\sqrt{-g}\;{}^{*}F^{\mu\nu}\right)\;.
+            \end{equation}
+
+            Sumando \eqref{eq:EL1}, \eqref{eq:VarFF} y \eqref{eq:VarFdF} la ecuación
+            de Euler-Lagrange \eqref{eq:ELcurvo} queda:
+            \begin{equation*}
+                K_1 J^{\mu}
+                = \frac{-4K_2}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;F^{\mu\nu}\right)
+                + \frac{-4iK_3}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;{}^{*}F^{\mu\nu}\right)
+                \;,
+            \end{equation*}
+            es decir,
+            \begin{equation}\label{eq:ELprev}
+                \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left[
+                \sqrt{-g}\!\left(F^{\mu\nu} + i\frac{K_3}{K_2}{}^{*}F^{\mu\nu}\right)
+                \right]
+                = -\frac{K_1}{4K_2}\,J^{\mu}\;.
+            \end{equation}
+
+            Imponemos ahora las mismas condiciones que en la sección anterior:
+            \begin{equation}\label{eq:CondK}
+                K_1 = 1\;,\quad K_2 = -\frac{1}{4}\;,\quad K_3 = K_2\;.
+            \end{equation}
+            Sustituyendo en \eqref{eq:ELprev}:
+            \begin{equation}\label{eq:MaxRS_RG_prev}
+                \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left[
+                \sqrt{-g}\!\left(F^{\mu\nu} + i\,{}^{*}F^{\mu\nu}\right)
+                \right]
+                = J^{\mu}\;.
+            \end{equation}
+
+            Reconocemos $F^{\mu\nu}+i\,{}^{*}F^{\mu\nu} = R^{\mu\nu}$ de la
+            Definición~\ref{def:RSRG}.  Usando el Teorema~\ref{teo:DivCov} la expresión
+            izquierda de \eqref{eq:MaxRS_RG_prev} es exactamente $\nabla_{\nu}R^{\mu\nu}$,
+            y obtenemos:
+
+            \begin{equation}\label{eq:MaxRS_RG}
+                \boxed{
+                    \nabla_{\nu}R^{\mu\nu} = J^{\mu}
+                    \quad\Longleftrightarrow\quad
+                    \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;R^{\mu\nu}\right)
+                    = J^{\mu}\;.
+                }
+            \end{equation}
+
+            Esta es la \textbf{extensión a la Relatividad General} de la ecuación de
+            Riemann-Silberstein.  La densidad lagrangiana asociada es
+
+            \begin{equation}\label{eq:LagFinalRG}
+                \Lambda_{\text{RG}}
+                    = A_{\mu}J^{\mu}
+                    - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}
+                    - \frac{i}{4}\,{}^{*}F^{\mu\nu}F_{\mu\nu}
+                    = A_{\mu}J^{\mu} + F^2_{RS}\;.
+            \end{equation}
+
+        \subsection{Verificación: deducción de las cuatro ecuaciones de Maxwell} \label{subsec:VerificacionRG}
+
+            \begin{myteo}[Equivalencia de la ecuación de Riemann-Silberstein en RG]
+                \label{teo:EquivRG}
+                En un espacio-tiempo pseudo-Riemanniano $(\mathcal{M},g_{\mu\nu})$ de signatura $(-,+,+,+)$, la ecuación
+                \begin{equation}\label{eq:MaxRS_RG_teo}
+                    \nabla_{\nu}R^{\mu\nu} = J^{\mu}
+                \end{equation}
+                es equivalente a las cuatro ecuaciones de Maxwell en espacio curvo:
+                \begin{align}
+                    \nabla_{\nu}F^{\mu\nu} &= J^{\mu}\;,\label{eq:M1RG}\\
+                    \nabla_{[\lambda}F_{\mu\nu]} &= 0\;.\label{eq:M2RG}
+                \end{align}
+            \end{myteo}
+
+            \begin{proof}
+                Expandimos \eqref{eq:MaxRS_RG_teo} usando la definición~\ref{def:RSRG}:
+                \begin{equation*}
+                    \nabla_{\nu}(F^{\mu\nu} + i\,{}^{*}F^{\mu\nu}) = J^{\mu}\;,
+                \end{equation*}
+                \begin{equation}\label{eq:SepPartes}
+                    \nabla_{\nu}F^{\mu\nu} + i\,\nabla_{\nu}{}^{*}F^{\mu\nu} = J^{\mu}\;.
+                \end{equation}
+                La 4-corriente $J^{\mu}$ es un campo real (densidad de carga y corriente de carga física).  Separando partes real e imaginaria en
+                \eqref{eq:SepPartes}:
+                \begin{align}
+                    \text{Re:}\quad &\nabla_{\nu}F^{\mu\nu} = J^{\mu}\;, \label{eq:ParteReal}\\
+                    \text{Im:}\quad &\nabla_{\nu}{}^{*}F^{\mu\nu} = 0\;.\label{eq:ParteImag}
+                \end{align}
+                La ecuación \eqref{eq:ParteReal} es precisamente la ecuación no homogénea \eqref{eq:M1RG}.  La ecuación \eqref{eq:ParteImag} es equivalente a la ecuación homogénea \eqref{eq:M2RG} (identidad de Bianchi), como se muestra a continuación.
+
+                Usando el Teorema~\ref{teo:DivCov} y la definición \eqref{eq:DualCurvo}:
+                \begin{equation*}
+                    \nabla_{\nu}{}^{*}F^{\mu\nu} = \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;{}^{*}F^{\mu\nu}\right) = \frac{1}{2\sqrt{-g}}\,\partial_{\nu}\!\left(\varepsilon^{\mu\nu\rho\sigma} F_{\rho\sigma}\right)\;.
+                \end{equation*}
+                Como $\varepsilon^{\mu\nu\rho\sigma}$ es constante en coordenadas generale (es la densidad tensorial de peso $+1$ con componentes $0,\pm1$):
+                \begin{equation*}
+                    \nabla_{\nu}{}^{*}F^{\mu\nu} = \frac{1}{2\sqrt{-g}}\,\varepsilon^{\mu\nu\rho\sigma} \partial_{\nu}F_{\rho\sigma} = 0 \quad\Longleftrightarrow\quad \varepsilon^{\mu\nu\rho\sigma}\partial_{[\nu}F_{\rho\sigma]} = 0 \quad\Longleftrightarrow\quad \partial_{[\mu}F_{\nu\rho]} = 0\;,
+                \end{equation*}
+                que es la identidad de Bianchi \eqref{eq:M2RG} (los Christoffel se cancelan en la antisimetrización total como se argumentó en \S\ref{subsec:Faraday}).
+
+                Recíprocamente, si se satisfacen \eqref{eq:M1RG} y \eqref{eq:M2RG}, multiplicamos la segunda por $i$ y sumamos a la primera:
+                \begin{equation*}
+                    \nabla_{\nu}F^{\mu\nu}+i\,\nabla_{\nu}{}^{*}F^{\mu\nu} = \nabla_{\nu}(F^{\mu\nu}+i\,{}^{*}F^{\mu\nu}) = \nabla_{\nu}R^{\mu\nu} = J^{\mu}\;.\quad\square
+                \end{equation*}
+            \end{proof}
+
+            A continuación mostramos explícitamente que las cuatro leyes de Maxwell clásicas se recuperan de \eqref{eq:ParteReal} y \eqref{eq:ParteImag}.
+
+            \subsubsection*{Ecuaciones no homogéneas: $\nabla_{\nu}F^{\mu\nu}=J^{\mu}$}
+
+                Usando el Teorema~\ref{teo:DivCov} escribimos equivalentemente:
+                \begin{equation}\label{eq:MaxNoHom_exp}
+                    \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;F^{\mu\nu}\right) = J^{\mu}\;.
+                \end{equation}
+
+                \textbf{Caso} $\mu=0$ (Ley de Gauss eléctrica generalizada):
+                \begin{equation}
+                    \frac{1}{\sqrt{-g}}\,\partial_{i}\!\left(\sqrt{-g}\;F^{0i}\right) = J^{0} = \rho\;.
+                \end{equation}
+                En el límite de espacio plano $\sqrt{-g}\to1$ y $F^{0i}\to E^i$, recuperando $\vec{\nabla}\cdot\vec{E}=\rho$.
+
+                \textbf{Caso} $\mu=k$ (Ley de Ampère-Maxwell generalizada):
+                \begin{equation}
+                    \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;F^{k\nu}\right) = J^{k}\;,
+                \end{equation}
+                que en espacio plano recupera $\vec{\nabla}\times\vec{B} = \vec{J}+\partial_t\vec{E}$.
+
+            \subsubsection*{Ecuaciones homogéneas: $\nabla_{\nu}{}^{*}F^{\mu\nu}=0$}
+
+                Equivalentemente $\partial_{[\mu}F_{\nu\rho]}=0$, i.e., $\varepsilon^{\mu\nu\rho\sigma}\partial_{\nu}F_{\rho\sigma}=0$.
+
+                \textbf{Caso} $\mu=0$ (Ley de Gauss magnética generalizada):
+                \begin{equation}
+                    \varepsilon^{0\nu\rho\sigma}\partial_{\nu}F_{\rho\sigma} = 0 \quad\xrightarrow{\text{plano}}\quad \vec{\nabla}\cdot\vec{B}=0\;.
+                \end{equation}
+
+                \textbf{Caso} $\mu=l$ (Ley de Faraday generalizada):
+                \begin{align*}
+                    \varepsilon^{l\nu\rho\sigma}\partial_{\nu}F_{\rho\sigma} &= 0\\
+                    \varepsilon^{l0ij}\partial_0 F_{ij} +\varepsilon^{li0j}\partial_i F_{0j} +\varepsilon^{lij0}\partial_i F_{j0} &= 0\\
+                    -\varepsilon^{0lij}\partial_t F_{ij}  -2\varepsilon^{0lij}\partial_i F_{j0} &= 0\\
+                    2\partial_t B^l - 2(\vec{\nabla}\times\vec{E})^l &= 0\;,
+                \end{align*}
+                que en forma vectorial da la ley de Faraday:
+                \begin{equation}
+                    \partial_t\vec{B} + \vec{\nabla}\times\vec{E} = 0\;.
+                \end{equation}
+
+            De esta forma queda demostrado que la ecuación
+            \begin{equation*}
+                \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;R^{\mu\nu}\right) = J^{\mu}
+            \end{equation*}
+            contiene, en una sola expresión tensorial covariante válida en cualquier espacio-tiempo pseudo-Riemanniano, la totalidad de las cuatro ecuaciones de Maxwell: la ley de Gauss eléctrica, la ley de Ampère-Maxwell, la ley de Gauss magnética y la ley de Faraday.  En el límite de espacio plano $g_{\mu\nu}\to \eta_{\mu\nu}$, se tiene $\sqrt{-g}\to1$ y $\nabla_{\nu}\to\partial_{\nu}$, recuperando exactamente el resultado de la relatividad especial $\partial_{\nu}R^{\mu\nu}=J^{\nu}$ de la ecuación \eqref{eq:EcuaMax2}.
+
     \section{Electrodinámica cuántica}
 
         El vector de Riemann-Silberstein es útil para estudiar la interacción entre la luz y los sistemas cuánticos. Por ejemplo, cuando un fotón interactúa con un átomo o una molécula, el vector de Riemann-Silberstein permite describir la absorción y emisión de fotones, así como los cambios resultantes en la polarización de la luz. La utilización del vector de Riemann-Silberstein en la óptica cuántica ha sido fundamental para comprender y manipular fenómenos cuánticos relacionados con la polarización de la luz. Ha permitido avances significativos en áreas como la generación de estados de luz cuántica, la teleportación cuántica y la computación cuántica basada en fotones. \\
@@ -640,6 +1137,8 @@ El vector RS fue estudiado en detalle por primera vez en 1907 por Silberstein \c
                 \hat{\mathbb{M}} = \sum_{\alpha}\int_{-\infty}^{\infty}\frac{1}{k}\hat{a}_{\alpha}^{\dagger}\left[ i\hbar\Vec{D}_{\alpha}\times \Vec{k} + \alpha\hbar\Vec{n}\right]\hat{a}_{\alpha}d^3k,\\
                 \hat{\mathbb{N}} = \sum_{\alpha}\int_{-\infty}^{\infty}\frac{1}{k}\hat{a}^{\dagger}_{\alpha}i\hbar\omega\Vec{D}_{\alpha}\hat{a}_{\alpha}d^3k.
             \end{align}
+        
+        
 
         \subsection{El vector de RS y los espinores}
 

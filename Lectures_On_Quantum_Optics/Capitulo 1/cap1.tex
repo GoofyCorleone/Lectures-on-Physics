@@ -232,7 +232,7 @@ La clave reside en seleccionar $g$ como la función de Green $G(\vec{r}; \vec{r}
 \end{equation}
 Curiosamente, podemos sumar una cantidad infinita de funciones de Green tales que la solución se mantiene invariante. Lo que podemos hacer es sumar una inifinidad de cargas imagen pero fuera del volumen de integración delimitado por la superficie $\Sigma(V)$ como se muestra en la imagen \ref{fig:greenimagenes}.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Capitulo 1/Figuras/GreenImagenes}
 	\caption{Sobre la frontera $\Sigma(V)$ se muestra la contribución de las componentes del campo $U(\vec{r})$, dentro de la región se muestra el campo total por la contribución de todos los puntos sobre la frontera. Se pueden agregar infinitas cargas de green puntuales, tales que estas pueden tener una naturaleza de propagación arbitraria, la condición para la invarianza de la ecuación \ref{eq:Grennhomogenea} es que estas cargas imagen se encuentren fuera de $\Sigma(V)$.}
@@ -261,7 +261,7 @@ correspondiente a una onda esférica saliente centrada en $\vec{r}''$. Sustituye
 
 conocida como la fórmula integral de Helmholtz-Kirchhoff. Esta ecuación permite calcular $\psi(\vec{r}'', \nu)$ en cualquier punto del volumen $V$ mediante una integral sobre su frontera $\Sigma(V)$.\\
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Capitulo 1/Figuras/GreenPuntual}
 	\caption{Representación de las funciones de Green para fuentes puntuales. Bajo estas condiciones de frontera, las funciones de Green se comportan como cargas puntuales, una la imagen especular de la otra.}
@@ -275,7 +275,7 @@ Antes de seguir con el desarrollo, vale la pena mencionar que la naturaleza de c
 \end{equation}
 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Capitulo 1/Figuras/GreenNoPuntual}
 	\caption{Representación de las funciones de Green para fuentes no puntuales. Bajo estas condiciones de frontera, las funciones de Green se siguen comportando como imágenes especulares pero con volumen y geometrías dadas, la única ligadura que hay sobre la naturaleza de la emisión de estas fuentes es que, sobre la frontera $z=0$ el campo total ha de ser cero, por las condiciones de Dirichlet asumidas.}
@@ -320,12 +320,12 @@ Retomando la ecuación \ref{green}, y escogiendo la condición de Dirichlet para
 	\psi(\vec{r}'', \nu) = \frac{1}{4\pi} \int_{\Sigma_1} \left[\psi(\vec{r}', \nu) \nabla G \cdot\hat{n}\right] d\sigma,
 \end{equation}
 
-considerando la superficie de integración que estamos considerando, podemos expresar a \ref{sol_Green} como 
+considerando la superficie de integración que estamos considerando, podemos expresar a \ref{sol_Green} como
 
 
 \begin{equation}
-	\label{sol_Green}
-	G(\vec{r}'; \vec{r}'') = \frac{e^{ik|\vec{r}'' - \vec{r}'_+|}}{|\vec{r}'' - \vec{r}'_+|} - \frac{e^{ik|\vec{r}'' - \vec{r}'_-|}}{|\vec{r}'' - \vec{r}'_-|}, 
+	\label{sol_Green_RS}
+	G(\vec{r}'; \vec{r}'') = \frac{e^{ik|\vec{r}'' - \vec{r}'_+|}}{|\vec{r}'' - \vec{r}'_+|} - \frac{e^{ik|\vec{r}'' - \vec{r}'_-|}}{|\vec{r}'' - \vec{r}'_-|},
 \end{equation}
 
 \noindent donde  
@@ -416,7 +416,7 @@ donde podemos hacer la consideración de campo lejano $\exp\left( \frac{ik}{2z} 
 Allí, es posible apreciar aún un término de fase cuadrática fuera de la integral, la cual suele denominarse factor de curvatura y muestra justamente el desfase que induce la diferencia de camino entre un plano denominado pantalla de observación y una superficie esférica de radio $z$ (distancia de propagación del campo en el eje óptico) conocida como esfera cardinal. La introducción de esta superficie esférica resulta bastante útil al momento de querer describir la difracción de Fraunhofer sobre una pantalla como una propagación de Fresnel a través de dos esferas cardinales cofocales, como se observa en la figura \ref{fig:cardinales} \\
 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\linewidth]{Capitulo 1/Figuras/Cardinales}
 	\caption{Esquema de las esferas cardinales cofocales, con radios equivalentes a la propagación $z$ del campo.}
@@ -445,7 +445,7 @@ rescatando así una expresión de Fraunhofer para la difracción sobre $\mathcal
 
 
 
-Estudiar la propagación del campo haciendo uso de la difracción de Fresnel resulta de suma importancia dado que, como se ahonda en el capítulo \ref{capitulo_7}, este guarda estrecha relación con lo que será eventualmente introducido como la Transformación de Fourier Fraccionaria, la cual puede describir matemáticamente lo que se entiende como propagador del fotón. 
+Estudiar la propagación del campo haciendo uso de la difracción de Fresnel resulta de suma importancia dado que, como se discutirá más adelante, este guarda estrecha relación con lo que será eventualmente introducido como la Transformación de Fourier Fraccionaria, la cual puede describir matemáticamente lo que se entiende como propagador del fotón.
 
 \section{Fundamentos de la teoría de la coherencia}
 
@@ -483,7 +483,7 @@ La historia de la coherencia, en resumen, es un viaje desde la abstracción mate
 
 \section{¿Cómo se cuantifica la similaridad estadística?}
 
-Supongamos que tenemos un fenómeno completamente aleatorio como se muestra en la imagen \ref{fig:averages} o incluso, podemos suponer muchos más casos; la radiación electromagnética emitida por una bombilla incadescente que no se encuentra en equilibrio termodinámico, el número de autos en alguna ciudad capital a lo largo del día, el movimiento de un ión en un plasma o algo tan sencillo como lanzar una pelota al aire bajo condiciones no ideales.\\
+Supongamos que tenemos un fenómeno completamente aleatorio ---como la radiación electromagnética emitida por una bombilla incandescente que no se encuentra en equilibrio termodinámico, el número de autos en alguna ciudad capital a lo largo del día, el movimiento de un ión en un plasma o algo tan sencillo como lanzar una pelota al aire bajo condiciones no ideales.\\
 
 Cuando queremos analizar estadísticamente un único objeto o variable aleatoria surgen las herramientas ya conocidas; la densidad de probabilidad, el valor medio, la desviación estándar, la curtosis, etc. ¿Qué sucede cuando queremos estudiar al menos dos variables aleatorias y cómo se relacionan estas? Cuando queremos  estudiar la estadística de dos o más variables aleatorias debemos estudiar la similaridad estadística entre estas pero, la similaridad estadística, es un concepto bastante amplio, puesto que podemos tener similitud en los valores medios, o en las desviaciones estándar o en sus densidades de probabilidad. Para abordar este problema vamos a devolvernos al álgebra lineal.\\
 
@@ -518,7 +518,7 @@ es decir, como el promedio de ensamble de $x_1\cdot x_2$.
 El concepto de función de coherencia, a nivel matemático, es idéntico al de la función de correlación dada en la ecuación \ref{eq:FuncCorr}, ambas representan correlaciones, sin embargo, la coherencia es un término ampliamente usado en el estudio de la radiación electromagnética, veamos un poco el por qué de esto.
 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.4\linewidth]{Capitulo 1/Figuras/RandomVar}
 	\caption{representación de $E(\vec{r},t)$ como variable aleatoria.}
@@ -691,7 +691,7 @@ y, en este régimen de espectro estrecho, tenemos que la función de coherencia 
 \end{equation}
 lo cual podemos representar gráficamente como se muestra en la figura \ref{fig:estrecho}, en donde se puede ver el comportamiento de la función de coherencia en el régimen de espectro estrecho \footnote{Usualmente se puede encontrar en la literatura un término similar más no igual al de espectro estrecho, el cual se conoce como condición de quasi-monocromaticidad, esta condición se escribe como $\frac{\triangle \lambda}{\lambda} \ll 1$ pero esta acota la longitud de onda para que sea lo más monocromática posible, mientras que la condición de espectro estrecho admite varias frecuencias pero cortas en relación a todo el espectro de frecuencias.} en la cual se evidencia una envolvente (el observable) que envuelven, valga la redundancia, todas las frecuencias fundamentales. Más tarde, en estas mismas notas, mostraremos la relación que hay entre esta condición de espectro estrecho con un modelo, hecho por el grupo de investigación GOTS, para el fotón.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Capitulo 1/Figuras/Estrecho}
 	\caption{Representación gráfica de la función de coherencia de espectro estrecho. De color negro se ilustra la envolvente $\tilde{\Gamma}(\vec{r},\tau)$ y de color negro las oscilaciones $e^{i2\pi\tilde{\nu}\tau}$ Estas oscilaciones están cofinadas en algo que se conoce como tiempo de coherencia $\tau_C$ que veremos más adelante.}
@@ -747,7 +747,7 @@ Las ecuaciones \ref{eq:coherenciaOnda1} y \ref{eq:coherenciaOnda2} nos hablan di
 
 \subsection{Propagación de la coherencia y la dirección del tiempo; el teorema de Van Cittert-Zernike}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\linewidth]{Capitulo 1/Figuras/Propagation}
 	\caption{}
@@ -777,7 +777,7 @@ y, tomando la aproximación de espectro estrecho tenemos
 
 Podemos visualizar, gráficamente, el cómo estamos pretendiendo propagar en la figura \ref{fig:propagation2} en donde podemos observar que estamos partiendo de la función de coherencia entre dos puntos $\vec{r},\vec{r}'$ entre unos instantes $t,t'$, respectivamente, y llevándola a una función de coherencia en los puntos $\vec{r}_1,\vec{r}_2$ entre dos instantes $t_1,t_2$, respectivamente. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\linewidth]{Capitulo 1/Figuras/Propagation2}
 	\caption{}
@@ -803,7 +803,7 @@ Partiendo de la ecuación \ref{eq:IntegralEz} podemos calcular la función de co
 	\Gamma_z (\vec{r}_1,\vec{r}_2;\tau) = \frac{1}{\tilde{\lambda}^2}\int_{\Sigma}\int_{\Sigma'} \Gamma_0 \left(\vec{r},\vec{r}';\tau + \frac{|| \vec{r}_1 - \vec{r}|| + || \vec{r}_2 - \vec{r}' ||}{V}\right) \frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r}' \right) }{|| \vec{r}_2-\vec{r}' ||\cdot || \vec{r}_1 - \vec{r}||} d\sigma d\sigma'
 \end{equation}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.6\linewidth]{Capitulo 1/Figuras/Random2}
 	\caption{Evolución de las realizaciones al propagar el campo eléctrico.}
@@ -863,7 +863,7 @@ Si hacemos $\vec{S}_2 = \vec{0}$ llegamos a la integral de Fourier
 \end{equation}
 lo que, básicamente, significa que las correlaciones, bajo todas las aproximaciones que hemos tomado, se propagan mediante una integral de Fourier, o lo que es lo mismo; el teorema de Van Citter-Zernike nos dice que la coherencia difracta, se propaga naturalmente como una integral de Difracción (ver figura \ref{fig:fouriergamma} ).\\
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.65\linewidth]{Capitulo 1/Figuras/FourierGamma}
 	\caption{}

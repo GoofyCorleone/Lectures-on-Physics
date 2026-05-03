@@ -32,7 +32,7 @@
     
     Donde las ondas esféricas se aproximan a parabólicas y el radio de curvatura para $U$ desde su vértice hasta el centro se define como la cantidad algebraica $R_{A} = \overline{VC}$, y se considera positivo si va en la dirección de propagación de la luz. 
     
-    \begin{figure}[h]
+    \begin{figure}[htbp]
         \centering    \includegraphics[width=0.9\textwidth]{Capitulo 3/Figuras/difraccionfresnel.pdf}
         \caption{Difracción de Fresnel entre la superficie esférica $A$ y la superficie esférica $B$.}
         \label{fig:difraccionfresnel}
@@ -179,7 +179,7 @@
         G_{\pm} (\vec{r}, \vec{r'}) = \frac{e^{ik\left | \vec{r} - \vec{r'} \right |}}{\left | \vec{r} - \vec{r'} \right |} \pm \frac{e^{ik\left | \vec{r} - \widetilde{\vec{r'}} \right |}}{\left | \vec{r} - \widetilde{\vec{r'}} \right |}
     \end{equation}
     
-    \begin{figure}[h]
+    \begin{figure}[htbp]
     \centering
         \subfloat[]{
         \label{ftesferica}
@@ -240,7 +240,7 @@
     
     Los resultados encontrados aquí se verifican mediante la implementación de un experimento de difracción por conteo de fotones (ver Fig. $\ref{fig:experimento}$). Este fue desarrollado con la única intención de mostrar la correspondencia entre este propagador de fotones y los experimentos, lo que justifica su uso, por ejemplo, para estudiar la correlación entre fotones entrelazados.
     
-    \begin{figure}[h]
+    \begin{figure}[htbp]
         \centering    \includegraphics[width=0.8\textwidth]{Capitulo 3/Figuras/experimento.png}
         \caption{Configuración experimental.}
         \label{fig:experimento}
@@ -253,7 +253,7 @@
     
     \subsection{Simulación de la distribución de probabilidad para la propagación de fotones únicos}
     
-    \begin{figure}[h]
+    \begin{figure}[htbp]
         \centering    
         \includegraphics[width=0.7\textwidth]{Capitulo 3/Figuras/dataexp.png}
         \caption{Los datos experimentales se superpusieron a la curva azul que es la densidad de probabilidad normalizada, $\left | \Psi (x,z) \right |^{2}$, obtenido por simulación computacional.}
@@ -262,7 +262,7 @@
     
     Es muy interesante explorar cómo evoluciona la distribución de densidad de probabilidad a medida que aumenta la distancia del plano de observación en el experimento de doble rendija. Aquí se muestra una simulación para varios planos de observación usando el propagador en Eq. ($\ref{eq:FRFT}$). A medida que el orden de la $FRFT$ se aproxima a $\alpha = \pi /2$, la distribución de densidad de probabilidad cambia hasta que alcanza el patrón de difracción de Fraunhofer característico, como se muestra en la Fig. $\ref{fig:simulacion}$. Este es un interferómetro de Young que utiliza haces gaussianos como fuentes con cintura $1/e^{2}$ radio de $0,6$ $mm$ y separación pico a pico de $4$ $mm$. Las densidades de distribución se trazan desde $\alpha = 0,8 \pi /2$ hasta $\alpha = \pi /2$ en relación con la distancia de propagación $z$.
     
-    \begin{figure}[h]
+    \begin{figure}[htbp]
         \centering    
         \includegraphics[width=0.7\textwidth]{Capitulo 3/Figuras/simulacion.png}
         \caption{Simulación de varias distribuciones de densidad de probabilidad a una distancia $z$.}
