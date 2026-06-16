@@ -54,7 +54,7 @@ Paralelamente, el advenimiento de computadoras llevó a métodos numéricos:
 \begin{itemize}
 	\item \textbf{Algoritmo de Difracción Angular Espectral (S-AD)}: Para propagación en medios homogéneos.
 	\item \textbf{Integral de Rayleigh-Sommerfeld}: Mejora la precisión cerca de la apertura.
-	\item \textbf{Modelado FDTD (Diferencia Finitas en el Dominio del Tiempo)}: Resuelve ecuaciones de Maxwell directamente, esencial en nanotecnología.
+	\item \textbf{Modelado FDTD (Diferencias Finitas en el Dominio del Tiempo)}: Resuelve ecuaciones de Maxwell directamente, esencial en nanotecnología.
 \end{itemize}
 
 Hoy, la teoría de difracción vive una edad dorada:
@@ -68,7 +68,7 @@ Desde las franjas de Grimaldi hasta los hologramas cuánticos, la teoría de la 
 
 \section{Teoría escalar de la difracción}\label{Sec:Difracción}
 
-Las ondas electromagnéticas poseen inherentemente un carácter vectorial: en cada punto $\overrightarrow{r}$, el campo eléctrico puede exhibir un estado de polarización distinto. Esta propiedad se expresa matemáticamente como:
+Las ondas electromagnéticas poseen inherentemente un carácter vectorial: en cada punto $\vec{r}$, el campo eléctrico puede exhibir un estado de polarización distinto. Esta propiedad se expresa matemáticamente como:
 
 \begin{equation}
 \vec{E}(\vec{r},t) = E(\vec{r},t) \, \hat{\vec{e}}(\vec{r},t),
@@ -125,23 +125,23 @@ Sea $\Psi(\mathbf{r},t)$ una componente arbitraria del campo electromagnético. 
 donde $\Psi$ representa un campo policromático. Para descomponer temporalmente el campo, aplicamos la transformada de Fourier:
 
 \begin{equation}
-	\Psi(\mathbf{r},t) = \int_{\mathbb{R}^{+}} \psi(\mathbf{r},\nu) \, \exp(-2\pi\mathrm{i}\nu t) \, d\nu,
+	\Psi(\mathbf{r},t) = \int_{\mathbb{R}^{+}} U(\mathbf{r},\nu) \, \exp(-2\pi\mathrm{i}\nu t) \, d\nu,
 	\label{eq.TF}
 \end{equation}
 
 Sustituyendo \ref{eq.onda.clasica} en \ref{eq.TF}, la ecuación se reexpresa como:
 
 \begin{equation}
-	\int_{\mathbb{R}^{+}} \left[ \nabla^{2}\psi(\mathbf{r},\nu) + \frac{\omega^{2}}{v^{2}} \psi(\mathbf{r},\nu) \right] \exp(-2\pi\mathrm{i}\nu t) \, d\nu = 0,
+	\int_{\mathbb{R}^{+}} \left[ \nabla^{2}U(\mathbf{r},\nu) + \frac{\omega^{2}}{v^{2}} U(\mathbf{r},\nu) \right] \exp(-2\pi\mathrm{i}\nu t) \, d\nu = 0,
 \end{equation}
 
 lo que conduce directamente a la ecuación de Helmholtz para cada componente espectral:
 
 \begin{equation}
-	(\nabla^{2} + k^{2})\psi(\mathbf{r},\nu) = 0,
+	(\nabla^{2} + k^{2})U(\mathbf{r},\nu) = 0,
 \end{equation}
 
-Aquí, $k = 2\pi/\lambda$ denota el número de onda, y $\lambda = c/(n\nu)$ corresponde a la longitud de onda en un medio con índice de refracción $n$. Esta formulación describe matemáticamente cómo cada componente monocromática del campo (caracterizada por su amplitud compleja $\psi$) obedece a una ecuación independiente de la frecuencia temporal.
+Aquí, $k = 2\pi/\lambda$ denota el número de onda, y $\lambda = c/(n\nu)$ corresponde a la longitud de onda en un medio con índice de refracción $n$. Esta formulación describe matemáticamente cómo cada componente monocromática del campo (caracterizada por su amplitud compleja $U$) obedece a una ecuación independiente de la frecuencia temporal.
 
 
 
@@ -164,7 +164,7 @@ el cual cuenta con una naturaleza vectorial. Ahora bien, podemos acotar nuestro 
 \begin{equation}
 	\left(\nabla^2 E(\vec{r},t) - \frac{1}{v^2} \frac{\partial^2 E(\vec{r},t)}{\partial t^2}\right) \hat{e} 
 	\quad \longrightarrow \quad 
-	(\nabla + k^2) E(\vec{r},t) = 0,
+	(\nabla^2 + k^2) E(\vec{r},t) = 0,
 \end{equation}
 
 
@@ -213,24 +213,24 @@ Esta igualdad permite expresar la solución de ecuaciones diferenciales inhomog�
 
 \subsection{Teorema integral de Helmholtz-Kirchhoff}
 
-El teorema integral de Helmholtz-Kirchhoff adapta el formalismo de Green a la propagación de campos electromagnéticos. Partiendo de la identidad de Green y sumando el término $k^2 f\psi$ en ambos lados, se obtiene:
+El teorema integral de Helmholtz-Kirchhoff adapta el formalismo de Green a la propagación de campos electromagnéticos. Partiendo de la identidad de Green y sumando el término $k^2 fg$ en ambos lados, se obtiene:
 
 \begin{equation}
 	\oint_{\Sigma(V)} \left[ f(\vec{r})\nabla g(\vec{r}) - g(\vec{r})\nabla f(\vec{r}) \right] \cdot d\vec{\sigma} = \int_{V} f(\vec{r})\left(\nabla^2 + k^2\right)g(\vec{r})\, dV - \int_{V} g(\vec{r})\left(\nabla^2 + k^2\right)f(\vec{r})\, dV,
 \end{equation}
 
-donde $f$ y $g$ son funciones escalares. Al elegir $f = \psi(\vec{r}, \nu)$, solución de la ecuación de Helmholtz, y $g$ como una función arbitraria suave, la expresión se simplifica a:
+donde $f$ y $g$ son funciones escalares. Al elegir $f = U(\vec{r}, \nu)$, solución de la ecuación de Helmholtz, y $g$ como una función arbitraria suave, la expresión se simplifica a:
 
 \begin{equation}
-	\oint_{\Sigma(V)} \left[ \psi(\vec{r}, \nu)\nabla g(\vec{r}) - g(\vec{r})\nabla \psi(\vec{r}, \nu) \right] \cdot d\vec{\sigma} = \int_{V} \psi(\vec{r}, \nu)\left(\nabla^2 + k^2\right)g(\vec{r})\, dV.
+	\oint_{\Sigma(V)} \left[ U(\vec{r}, \nu)\nabla g(\vec{r}) - g(\vec{r})\nabla U(\vec{r}, \nu) \right] \cdot d\vec{\sigma} = \int_{V} U(\vec{r}, \nu)\left(\nabla^2 + k^2\right)g(\vec{r})\, dV.
 \end{equation}
 
-La clave reside en seleccionar $g$ como la función de Green $G(\vec{r}; \vec{r}'')$, definida por:
+La clave reside en seleccionar $g$ como la función de Green $G(\vec{r}, \vec{r}')$, definida por:
 
 \begin{equation}\label{eq:Grennhomogenea}
-	\left(\nabla^2 + k^2\right)G(\vec{r}; \vec{r}'') = 4\pi \delta(\vec{r}'' - \vec{r}).
+	\left(\nabla^2 + k^2\right)G(\vec{r}, \vec{r}') = 4\pi \delta(\vec{r} - \vec{r}').
 \end{equation}
-Curiosamente, podemos sumar una cantidad infinita de funciones de Green tales que la solución se mantiene invariante. Lo que podemos hacer es sumar una inifinidad de cargas imagen pero fuera del volumen de integración delimitado por la superficie $\Sigma(V)$ como se muestra en la imagen \ref{fig:greenimagenes}.
+Curiosamente, podemos sumar una cantidad infinita de funciones de Green tales que la solución se mantiene invariante. Lo que podemos hacer es sumar una infinidad de cargas imagen pero fuera del volumen de integración delimitado por la superficie $\Sigma(V)$ como se muestra en la figura \ref{fig:greenimagenes}.
 
 \begin{figure}[htbp]
 	\centering
@@ -242,24 +242,24 @@ Curiosamente, podemos sumar una cantidad infinita de funciones de Green tales qu
 En este orden de ideas la ecuación \ref{eq:Grennhomogenea} se convierte en 
 
 \begin{equation}
-	(\nabla^2 + k^2)G(\vec{r}',\vec{r}'') = 4\pi \delta(\vec{r}-\vec{r}') + 4\pi \sum_{i=1}^{\infty} \delta(\vec{r}-\vec{r}'_i).
+	(\nabla^2 + k^2)G(\vec{r},\vec{r}') = 4\pi \delta(\vec{r}-\vec{r}') + 4\pi \sum_{i=1}^{\infty} \delta(\vec{r}-\vec{r}''_i).
 \end{equation}
 
-La  solución explícita para un medio homogéneo de la ecuaicón \ref{eq:Grennhomogenea} es:
+La solución explícita para un medio homogéneo de la ecuación \ref{eq:Grennhomogenea} es:
 
 \begin{equation}
 	\label{sol_Green}
-	G(\vec{r}'; \vec{r}'') = \frac{e^{ik|\vec{r}'' - \vec{r}'|}}{|\vec{r}'' - \vec{r}'|},
+	G(\vec{r}, \vec{r}') = \frac{e^{ik\|\vec{r} - \vec{r}'\|}}{\|\vec{r} - \vec{r}'\|},
 \end{equation}
 
-correspondiente a una onda esférica saliente centrada en $\vec{r}''$. Sustituyendo $G$ en la identidad de Green, se deriva:
+correspondiente a una onda esférica saliente centrada en $\vec{r}'$. Sustituyendo $G$ en la identidad de Green, se deriva:
 
 \begin{equation}
 	\label{green}
-	\psi(\vec{r}'', \nu) = \frac{1}{4\pi} \oint_{\Sigma(V)} \left[ \psi(\vec{r}', \nu)\nabla G(\vec{r}'; \vec{r}'')- G(\vec{r}'; \vec{r}'')\nabla \psi(\vec{r}', \nu)  \right ] \cdot d\vec{\sigma},
+	U(\vec{r}', \nu) = \frac{1}{4\pi} \oint_{\Sigma(V)} \left[ U(\vec{r}, \nu)\nabla G(\vec{r}, \vec{r}')- G(\vec{r}, \vec{r}')\nabla U(\vec{r}, \nu)  \right ] \cdot d\vec{\sigma},
 \end{equation}
 
-conocida como la fórmula integral de Helmholtz-Kirchhoff. Esta ecuación permite calcular $\psi(\vec{r}'', \nu)$ en cualquier punto del volumen $V$ mediante una integral sobre su frontera $\Sigma(V)$.\\
+conocida como la fórmula integral de Helmholtz-Kirchhoff. Esta ecuación permite calcular $U(\vec{r}', \nu)$ en cualquier punto del volumen $V$ mediante una integral sobre su frontera $\Sigma(V)$.\\
 
 \begin{figure}[htbp]
 	\centering
@@ -268,10 +268,10 @@ conocida como la fórmula integral de Helmholtz-Kirchhoff. Esta ecuación permit
 	\label{fig:greenpuntual}
 \end{figure}
 
-Antes de seguir con el desarrollo, vale la pena mencionar que la naturaleza de carga puntual para las funciones de Green $G(\vec{r}',\vec{r}'')$ es una suposición que se da por hecho, sin embargo, no existen ninguna limitación para la naturaleza física de las funciones de Green. Como es bien sabido, en la teoría electromagnética, las fuentes de radiación pueden tener un volumen y forma cualesquiera, por lo tanto, nuestro problema \ref{fig:greenpuntual} puede ser un poco más general, como se muestra en la figura \ref{fig:greennopuntual} y la ecuación diferencial para las funciones de Green con volumen sería la siguiente
+Antes de seguir con el desarrollo, vale la pena mencionar que la naturaleza de carga puntual para las funciones de Green $G(\vec{r},\vec{r}')$ es una suposición que se da por hecho, sin embargo, no existen ninguna limitación para la naturaleza física de las funciones de Green. Como es bien sabido, en la teoría electromagnética, las fuentes de radiación pueden tener un volumen y forma cualesquiera, por lo tanto, nuestro problema \ref{fig:greenpuntual} puede ser un poco más general, como se muestra en la figura \ref{fig:greennopuntual} y la ecuación diferencial para las funciones de Green con volumen sería la siguiente
 
 \begin{equation}
-	\left( \nabla^2 + k^2 \right)G(\vec{r}',\vec{r}'') = 4\pi \rho(\vec{r}-\vec{r}') - 4\pi\rho(\vec{r}-\vec{r}'').
+	\left( \nabla^2 + k^2 \right)G(\vec{r},\vec{r}') = 4\pi \rho(\vec{r}-\vec{r}') - 4\pi\rho(\vec{r}-\vec{r}'').
 \end{equation}
 
 
@@ -283,22 +283,22 @@ Antes de seguir con el desarrollo, vale la pena mencionar que la naturaleza de c
 \end{figure}
 
 
-Continuemos con el desarollo para las funciones de Grenn puntuales. Para simplificar la evaluación de la integral, se considera un volumen $V$ delimitado por un plano infinito $\Sigma_1$ ($z=0$) y una semiesfera $\Sigma_2$ de radio $R$ (ver figura \ref{fig:greenpuntual}). La contribución de $\Sigma_2$ se anula cuando $R \to \infty$ (debido a la condición de radiación de Sommerfeld), reduciendo la expresión a:
+Continuemos con el desarrollo para las funciones de Green puntuales. Para simplificar la evaluación de la integral, se considera un volumen $V$ delimitado por un plano infinito $\Sigma_1$ ($z=0$) y una semiesfera $\Sigma_2$ de radio $R$ (ver figura \ref{fig:greenpuntual}). La contribución de $\Sigma_2$ se anula cuando $R \to \infty$ (debido a la condición de radiación de Sommerfeld), reduciendo la expresión a:
 
 \begin{equation}
-	\psi(\vec{r}'', \nu) = \frac{1}{4\pi} \int_{\Sigma_1} \left[\psi(\vec{r}', \nu)\frac{\partial G}{\partial n} -   G(\vec{r}'; \vec{r}'')\frac{\partial \psi}{\partial n} \right] d\sigma,
+	U(\vec{r}', \nu) = \frac{1}{4\pi} \int_{\Sigma_1} \left[U(\vec{r}, \nu)\frac{\partial G}{\partial n} -   G(\vec{r}, \vec{r}')\frac{\partial U}{\partial n} \right] d\sigma,
 \end{equation}
 
 
 
-donde $\frac{\partial}{\partial n} = \hat{n} \cdot \nabla$ denota la derivada normal. No obstante, esta formulación requiere especificar simultáneamente $\psi$ y $\partial \psi/\partial n$ en $\Sigma_1$, lo cual sobredetermina el problema. Esta dificultad motiva la introducción de condiciones de frontera físicamente realistas, como las de Kirchhoff, para resolver la ambigüedad.\\
+donde $\frac{\partial}{\partial n} = \hat{n} \cdot \nabla$ denota la derivada normal. No obstante, esta formulación requiere especificar simultáneamente $U$ y $\partial U/\partial n$ en $\Sigma_1$, lo cual sobredetermina el problema. Esta dificultad motiva la introducción de condiciones de frontera físicamente realistas, como las de Kirchhoff, para resolver la ambigüedad.\\
 
 Este problema se agudiza al considerar un teorema de análisis complejo, atribuido a Riemann, que establece: si una función y su derivada normal se anulan en una región abierta de un plano, entonces la función debe ser idénticamente cero en todo el dominio. Esta restricción motiva la necesidad estratégica de eliminar uno de los términos en la integral de superficie de Helmholtz-Kirchhoff.\\
 
 La clave reside en aprovechar los grados de libertad inherentes a la selección de la función de Green auxiliar $G$. Kirchhoff propuso inicialmente condiciones de frontera intuitivas:
 \begin{itemize}
-	\item $\psi = 0$ fuera de la apertura en $\Sigma$ (campo bloqueado),
-	\item $\partial \psi/\partial n = 0$ en regiones opacas (derivada normal nula).
+	\item $U = 0$ fuera de la apertura en $\Sigma$ (campo bloqueado),
+	\item $\partial U/\partial n = 0$ en regiones opacas (derivada normal nula).
 \end{itemize}
 
 Aunque estas condiciones reprodujeron resultados experimentales en difracción, introdujeron inconsistencias matemáticas al violar el teorema de unicidad de Cauchy-Riemann. Poincaré demostró que tales suposiciones generan contradicciones en las derivadas mixtas del campo. La resolución llegó con Sommerfeld, quien redefinió $G$ empleando una función de Green de doble capa, garantizando que:
@@ -317,7 +317,7 @@ Retomando la ecuación \ref{green}, y escogiendo la condición de Dirichlet para
 
 \begin{equation}
 	\label{psi_expr}
-	\psi(\vec{r}'', \nu) = \frac{1}{4\pi} \int_{\Sigma_1} \left[\psi(\vec{r}', \nu) \nabla G \cdot\hat{n}\right] d\sigma,
+	U(\vec{r}', \nu) = \frac{1}{4\pi} \int_{\Sigma_1} \left[U(\vec{r}, \nu) \nabla G \cdot\hat{n}\right] d\sigma,
 \end{equation}
 
 considerando la superficie de integración que estamos considerando, podemos expresar a \ref{sol_Green} como
@@ -325,14 +325,12 @@ considerando la superficie de integración que estamos considerando, podemos exp
 
 \begin{equation}
 	\label{sol_Green_RS}
-	G(\vec{r}'; \vec{r}'') = \frac{e^{ik|\vec{r}'' - \vec{r}'_+|}}{|\vec{r}'' - \vec{r}'_+|} - \frac{e^{ik|\vec{r}'' - \vec{r}'_-|}}{|\vec{r}'' - \vec{r}'_-|},
+	G(\vec{r}, \vec{r}') = \frac{e^{ik\|\vec{r} - \vec{r}'\|}}{\|\vec{r} - \vec{r}'\|} - \frac{e^{ik\|\vec{r} - \vec{r}''\|}}{\|\vec{r} - \vec{r}''\|},
 \end{equation}
 
 \noindent donde  
 \begin{align}
-	|\vec{r}'' - \vec{r}'_{-} | &= |\vec{r}'' - \vec{r}'_{+} | 
-	\Rightarrow \quad |(x'' - x'_{+})| = |(x'' - x'_{-})|, \quad 
-	|(y'' - y'_{+})| = |(y'' - y'_{-})|.
+	\|\vec{r} - \vec{r}''\| &= \|\vec{r} - \vec{r}'\|, \qquad x'' = x', \quad y'' = y', \quad z'' = -z'.
 \end{align}
 
 
@@ -340,7 +338,7 @@ considerando la superficie de integración que estamos considerando, podemos exp
 de modo que 
 
 \begin{equation}
-	\nabla G \cdot \hat{z}  = 2 \left[ik - \dfrac{1}{|\vec{1}-\vec{r}'|} \right]\dfrac{e^{ik|\vec{r}-\vec{r}'|}}{|\vec{r}-\vec{r}'|} \cos(\vec{r} - \vec{r}',\hat{z})
+	\nabla G \cdot \hat{z}  = 2 \left[ik - \dfrac{1}{\|\vec{r}-\vec{r}'\|} \right]\dfrac{e^{ik\|\vec{r}-\vec{r}'\|}}{\|\vec{r}-\vec{r}'\|} \cos(\vec{r} - \vec{r}',\hat{z})
 \end{equation}
 
 
@@ -348,13 +346,13 @@ de modo que
 y con ello, \ref{psi_expr} nos queda:
 
 \begin{equation}
-	u (\vec{r}',\nu) = \dfrac{1}{2\pi} \int_{\Sigma} u(\vec{r},\nu) \left[ik - \dfrac{1}{|\vec{r} - \vec{r}'|} \right] \dfrac{e^{ik|\vec{r}-\vec{r}'|}}{|\vec{r}-\vec{r}'|} \cos(\vec{r} - \vec{r}',\hat{z})d\sigma
+	U(\vec{r}',\nu) = \dfrac{1}{2\pi} \int_{\Sigma} U(\vec{r},\nu) \left[ik - \dfrac{1}{\|\vec{r} - \vec{r}'\|} \right] \dfrac{e^{ik\|\vec{r}-\vec{r}'\|}}{\|\vec{r}-\vec{r}'\|} \cos(\vec{r} - \vec{r}',\hat{z})d\sigma
 \end{equation}
 
-donde podemos hacer la aproximación correspondiente al régimen de Rayleigh-Sommerfield donde $|\vec{r}-\vec{r}'| \gg \lambda$ y con ello obtenemos 
+donde podemos hacer la aproximación correspondiente al régimen de Rayleigh-Sommerfeld donde $\|\vec{r}-\vec{r}'\| \gg \lambda$ y con ello obtenemos 
 
 \begin{equation}
-	u (\vec{r}',\nu) = \dfrac{ik}{2\pi} \int_{\Sigma} u(\vec{r},\nu)\dfrac{e^{ik|\vec{r}-\vec{r}'|}}{|\vec{r}-\vec{r}'|} \cos(\vec{r} - \vec{r}',\hat{z})d\sigma,
+	U(\vec{r}',\nu) = \dfrac{ik}{2\pi} \int_{\Sigma} U(\vec{r},\nu)\dfrac{e^{ik\|\vec{r}-\vec{r}'\|}}{\|\vec{r}-\vec{r}'\|} \cos(\vec{r} - \vec{r}',\hat{z})d\sigma,
 \end{equation}
 
 expresión matemática que representa el principio de Huygens-Fresnel: como puede apreciarse se tiene onda esférica por cada punto de la superficie de integración.\\
@@ -363,7 +361,7 @@ expresión matemática que representa el principio de Huygens-Fresnel: como pued
 \section{Aproximación de Fresnel}
 Partiendo del campo 
 \begin{align}
-	U(\overrightarrow{r}') = \frac{ik}{2\pi}\int_{\Sigma} U(\overrightarrow{r}) \frac{e^{ik \left | \overrightarrow{r} - \overrightarrow{r}' \right |}}{\left | \overrightarrow{r} - \overrightarrow{r}' \right |} \cos(\overrightarrow{r} - \overrightarrow{r}', \widehat{z}) \mathrm{d}\sigma 
+	U(\vec{r}') = \frac{ik}{2\pi}\int_{\Sigma} U(\vec{r}) \frac{e^{ik \left\| \vec{r} - \vec{r}' \right\|}}{\left\| \vec{r} - \vec{r}' \right\|} \cos(\vec{r} - \vec{r}', \hat{z}) \mathrm{d}\sigma 
 \end{align}
 
 
@@ -371,24 +369,24 @@ es posible efectuar la denominada aproximación de campo medio o de Fresnel. Par
 
 \begin{align}
 	\label{aprox_|r|}
-	|\vec{r}-\vec{r}'| &= \left[(x-x')^2 + (y-y')^2 + (z-z')^2\right]^{1/2} \notag \\
+	\|\vec{r}-\vec{r}'\| &= \left[(x-x')^2 + (y-y')^2 + (z-z')^2\right]^{1/2} \notag \\
 	&= z\left(1 + \dfrac{(x-x')^2 + (y-y')^2}{z^2} \right)^{1/2} \notag \\
 	&\approx z + \dfrac{(x-x')^2+(y-y')^2}{2z}
 \end{align}.
 
 
 
-Es claro que en cuanto el factor $\dfrac{1}{|\vec{r}- \vec{r}'|}$, una expansión hasta el primer término de \ref{aprox_|r|} es suficiente, hecho que no resulta suficiente para el factor $e^{ik \left | \overrightarrow{r} - \overrightarrow{r}' \right |}$, puesto que este presenta un comportamiento oscilatorio en su dominio, por lo que ambos términos son requeridos. Estamos tomando además la consideración $\cos (\vec{r}-\vec{r}', \hat{z}) = \dfrac{z}{|\vec{r} - \vec{r} '|} \approx 1$. \\    
+Es claro que en cuanto el factor $\dfrac{1}{\|\vec{r}- \vec{r}'\|}$, una expansión hasta el primer término de \ref{aprox_|r|} es suficiente, hecho que no resulta suficiente para el factor $e^{ik \left\| \vec{r} - \vec{r}' \right\|}$, puesto que este presenta un comportamiento oscilatorio en su dominio, por lo que ambos términos son requeridos. Estamos tomando además la consideración $\cos (\vec{r}-\vec{r}', \hat{z}) = \dfrac{z}{\|\vec{r} - \vec{r} '\|} \approx 1$. \\    
 
 
-En este orden de ideas, el obtendríamos una expresión para el campo de la forma: 
+En este orden de ideas, obtendríamos una expresión para el campo de la forma: 
 
 \begin{equation}
 	\label{Fresnel}
-	U(\vec{r}') = \dfrac{i e^{ikz}}{\lambda z} \int u(\vec{r}) exp \left(\dfrac{ik}{2z} ((x-x')^2 + (y-y')^2) \right) d\sigma,
+	U(\vec{r}') = \dfrac{i e^{ikz}}{\lambda z} \int U(\vec{r}) \exp \left(\dfrac{ik}{2z} ((x-x')^2 + (y-y')^2) \right) d\sigma,
 \end{equation}
 
-siendo esta la ecuación que describe la propagación o difracción del campo electromagnético en el régimen de Fresnel. Es de resaltar que la ecuación \ref{Fresnel} describe una onda parabólica, y pese a haber mencionado previamente que, al menor de forma conceptual tal propagación es válida para un campo medio, experimentalmente ha resultado más que suficiente para distancias lo suficientemente próximas. %mencionar lo que dijo Rafa acerca del posible tamaño del fotón. 
+siendo esta la ecuación que describe la propagación o difracción del campo electromagnético en el régimen de Fresnel. Es de resaltar que la ecuación \ref{Fresnel} describe una onda parabólica, y pese a haber mencionado previamente que, al menos de forma conceptual tal propagación es válida para un campo medio, experimentalmente ha resultado más que suficiente para distancias lo suficientemente próximas. %mencionar lo que dijo Rafa acerca del posible tamaño del fotón. 
 
 \section{Aproximación de Fraunhofer}
 
@@ -408,7 +406,7 @@ donde podemos hacer la consideración de campo lejano $\exp\left( \frac{ik}{2z} 
 
 \begin{equation}
 	\label{Fraunhofer}
-	U(\vec{r}) = \dfrac{e^{ikz}}{\lambda z} \exp \left(\dfrac{ik}{2z} (x'^2 + y'^2)\right) \int u(r) exp\left( -\frac{ik}{z} (xx' + yy') \right) d\sigma
+	U(\vec{r}') = \dfrac{e^{ikz}}{\lambda z} \exp \left(\dfrac{ik}{2z} (x'^2 + y'^2)\right) \int U(\vec{r}) \exp\left( -\frac{ik}{z} (xx' + yy') \right) d\sigma
 \end{equation}
 
 %( falta ilustrar que es el factor de curvatura y las esferas cardinales, por qué difractar con Fraunhofer es equivalente a montar el campo en dos esferas cardinales con su correspondiente factor de curvatura asociado...) \\
@@ -424,7 +422,7 @@ Allí, es posible apreciar aún un término de fase cuadrática fuera de la inte
 \end{figure}
 
 
-Esto cobra mayor sentido una vez que anlizamos el efecto que tendría cada paso de la propagación. Es claro que, sin imponer de manera inicial aproximaciones de campo lejano propagamos çon la aproximación de Fresnel el campo en $\mathcal{A}$, hacia $\mathcal{F}$ obtendríamos 
+Esto cobra mayor sentido una vez que analizamos el efecto que tendría cada paso de la propagación. Es claro que, sin imponer de manera inicial aproximaciones de campo lejano propagamos con la aproximación de Fresnel el campo en $\mathcal{A}$, hacia $\mathcal{F}$ obtendríamos 
 
 \begin{equation}
 	U_{\mathcal{F}}(\vec{r}) = \dfrac{ie^{ikz}}{\lambda z} \exp\left( \frac{ik}{2z} (x^2 + y^2) \right)  \int u_{\mathcal{A}}  
@@ -440,7 +438,7 @@ aquí podemos asociar $u_{\mathcal{A}}$, es decir el campo sobre la esfera $\mat
 	\exp\left( -\frac{ik}{z} (xx' + yy') \right)d\sigma', 
 \end{equation}
 
-rescatando así una expresión de Fraunhofer para la difracción sobre $\mathcal{Q}$. Cabe resaltar que debe tenerse si el estudio que estamos realizando sobre el campo propagado tiene validez o no dentro de un régimen paraxial, donde el campo se delimita a la vecindad del eje óptico y por ende la curvatura de la esfera cardinal no dista mucho del plano (la pantalla). En casos donde el factor de curvatura deja de ser despreciable, el régimen paraxial pierde validez y es necesario abordar el problema desde un enfoque metaxial.\\
+rescatando así una expresión de Fraunhofer para la difracción sobre $\mathcal{Q}$. Cabe resaltar que debe tenerse en cuenta si el estudio que estamos realizando sobre el campo propagado tiene validez o no dentro de un régimen paraxial, donde el campo se delimita a la vecindad del eje óptico y por ende la curvatura de la esfera cardinal no dista mucho del plano (la pantalla). En casos donde el factor de curvatura deja de ser despreciable, el régimen paraxial pierde validez y es necesario abordar el problema desde un enfoque metaxial.\\
 
 
 
@@ -449,7 +447,7 @@ Estudiar la propagación del campo haciendo uso de la difracción de Fresnel res
 
 \section{Fundamentos de la teoría de la coherencia}
 
-Previo a empezar siempre es interesante conocer, aunque esa superficialmente, la historia detrás de todo desarrollo físico, acá veremos una breve historia de la teoría de la coherencia.\\
+Previo a empezar siempre es interesante conocer, aunque sea superficialmente, la historia detrás de todo desarrollo físico, acá veremos una breve historia de la teoría de la coherencia.\\
 
 La historia de la teoría de la coherencia es un relato intrincado y apasionante que hunde sus raíces en la matemática, la estadística y la física, y que se ramifica en direcciones clásicas y cuánticas con implicaciones profundas para nuestra comprensión del mundo. Para contarla, debemos retroceder hasta los albores de la teoría de la probabilidad, donde comenzó a gestarse la idea de medir relaciones entre eventos y variables, un concepto que, con los siglos, evolucionaría hacia nociones más refinadas de correlación y, finalmente, hacia la coherencia tal como la entendemos hoy.\\
 
@@ -485,14 +483,14 @@ La historia de la coherencia, en resumen, es un viaje desde la abstracción mate
 
 Supongamos que tenemos un fenómeno completamente aleatorio ---como la radiación electromagnética emitida por una bombilla incandescente que no se encuentra en equilibrio termodinámico, el número de autos en alguna ciudad capital a lo largo del día, el movimiento de un ión en un plasma o algo tan sencillo como lanzar una pelota al aire bajo condiciones no ideales.\\
 
-Cuando queremos analizar estadísticamente un único objeto o variable aleatoria surgen las herramientas ya conocidas; la densidad de probabilidad, el valor medio, la desviación estándar, la curtosis, etc. ¿Qué sucede cuando queremos estudiar al menos dos variables aleatorias y cómo se relacionan estas? Cuando queremos  estudiar la estadística de dos o más variables aleatorias debemos estudiar la similaridad estadística entre estas pero, la similaridad estadística, es un concepto bastante amplio, puesto que podemos tener similitud en los valores medios, o en las desviaciones estándar o en sus densidades de probabilidad. Para abordar este problema vamos a devolvernos al álgebra lineal.\\
+Cuando queremos analizar estadísticamente un único objeto o variable aleatoria surgen las herramientas ya conocidas; la densidad de probabilidad, el valor medio, la desviación estándar, la curtosis, etc. ¿Qué sucede cuando queremos estudiar al menos dos variables aleatorias y cómo se relacionan estas? Cuando queremos estudiar la estadística de dos o más variables aleatorias debemos estudiar la similaridad estadística entre estas pero, la similaridad estadística, es un concepto bastante amplio, puesto que podemos tener similitud en los valores medios, o en las desviaciones estándar o en sus densidades de probabilidad. Para abordar este problema vamos a devolvernos al álgebra lineal.\\
 
 Si tenemos dos vectores $\vec{A},\vec{B} \in \mathbb{R}^n$ el producto punto  $\vec{A}\cdot\vec{B}$ se interpreta como la magnitud de la proyección de $\vec{A}$ sobre $\vec{B}$ y viceversa, también se puede ver cómo \textit{qué tanto de $\vec{A}$ está sobre $\vec{B}$}. Este comportamiento se puede extrapolar a espacios vectoriales continuos, en donde se suele usar la noción de producto interno, si $f_A , f_B$ son dos elementos de un espacio de Hilbert $L^2$ de dimensión $1$ entonces, se puede definir un producto interno como
 
 \begin{equation}\label{eq:ProdIn}
 	\braket{f_A,f_B} = \int_\mathbb{R} f_A(x)f_B(x) W(x)dx,
 \end{equation}
-donde $W(x)$ es alguna función de peso \footnote{$W(x)$ recibe este nombre porque, tal como lo dice, da un peso a cada valor que pueda tomar el integrando, es decir, no hay contribuciones uniformes, sino que cada posible valor que tengo el integrando dentro del dominio tiene una contribución pesada por el valor de $W$ en ese punto.}. Sin embargo, la interpretación aún puede ser válida, esto se puede ver cómo cuánto de la funcion $f_A$ sobre todo los reales coinciden con la función $f_B$ sobre todos los reales.\\
+donde $W(x)$ es alguna función de peso \footnote{$W(x)$ recibe este nombre porque, tal como lo dice, da un peso a cada valor que pueda tomar el integrando, es decir, no hay contribuciones uniformes, sino que cada posible valor que tengo el integrando dentro del dominio tiene una contribución pesada por el valor de $W$ en ese punto.}. Sin embargo, la interpretación aún puede ser válida, esto se puede ver cómo cuánto de la función $f_A$ sobre todos los reales coinciden con la función $f_B$ sobre todos los reales.\\
 
 Para llegar a la noción de correlación desde el álgebra lineal vamos a usar un poco de la notación braket, en donde el ket $\ket{f_A}$ representa un vector de un espacio de Hilbert $L^2$ cualquiera y el bra $\bra{f_A}$ representa un elemento del dual del mismo espacio de Hilbert \footnote{El espacio de Hilbert corresponde con un caso particular de los espacios $L^p$, el espacio de los funcionales de $p-norma$ Lebesgue-integrable, para Hilbert se tiene que $p=2$ y esta tiene la propiedad de que el dual de $L^2$ es también $L^2$, lo que permite que la mecánica cuántica surja de manera natural en este espacio.} y el producto interno entre estos $\braket{f_A,f_A}= \braket{f_A|f_A}$ es igual a la densidad de probabilidad de encontrar a $f_A$ en un estado $q \pm \triangle q$, donde $q$ representa alguna coordenada generalizada. Supongamos que $f_A,f_B \in L^2$ tienen la siguiente forma
 
@@ -504,9 +502,9 @@ en donde $\hat{A},\hat{B}$ corresponden a los  operadores de las cantidades fís
 \begin{equation}
 	\braket{f_A | f_B} = \int_{\mathbb{R^n}} \hat{A}\hat{B} \braket{\Psi_A|\Psi_B} d^nq = \int_{\mathbb{R^n}} \hat{A}\hat{B} P(A;B) d^nq,
 \end{equation}
-en donde podemos ver que, la similitud que hay entre $\ket{f_A}$  y $\ket{f_B}$ la podemos ver como el producto de $\hat{A}$ con $\hat{B}$ por la densidad de probabilidad de tener los estados $A$ y $B$, es decir, la simitud o cuán \textit{correlacionados} están dos variables la podemos ver como la integral del producto de las variables por la densidad de probabilidad mutua de estas.\\
+en donde podemos ver que, la similitud que hay entre $\ket{f_A}$  y $\ket{f_B}$ la podemos ver como el producto de $\hat{A}$ con $\hat{B}$ por la densidad de probabilidad de tener los estados $A$ y $B$, es decir, la similitud o cuán \textit{correlacionados} están dos variables la podemos ver como la integral del producto de las variables por la densidad de probabilidad mutua de estas.\\
 
-Con esta analogía en mente podemos entender a la correlación como una primera medida de la similutd entre una o más variables a lo largo del espacio-tiempo. Si $x_1(\vec{r},t_1), x_2(\vec{r}',t_2)$ son dos variables aleatorias y si $p_2(x_2,t';x_1,t)$ es la densidad de probabilidad mutua entonces se define a la correlación entre $x_1,x_2$ como
+Con esta analogía en mente podemos entender a la correlación como una primera medida de la similitud entre una o más variables a lo largo del espacio-tiempo. Si $x_1(\vec{r},t_1), x_2(\vec{r}',t_2)$ son dos variables aleatorias y si $p_2(x_2,t';x_1,t)$ es la densidad de probabilidad mutua entonces se define a la correlación entre $x_1,x_2$ como
 
 \begin{equation}\label{eq:FuncCorr}
 	\Gamma(\vec{r},\vec{r}';t_1,t_2) = E\left\{ x_1(\vec{r},t_1) x_2(\vec{r}',t_2)\right\},
@@ -526,20 +524,20 @@ El concepto de función de coherencia, a nivel matemático, es idéntico al de l
 \end{figure}
 
 
-En la figura \ref{fig:randomvar} podemos observar a una componente del campo elećtrico, representada por $E(\vec{r},t)$ vista a lo largo de varias observaciones o realizaciones. Esta al comportarse como variable aleatoria en cada realización tiene un comportamiento diferente a lo largo del tiempo en un punto $\vec{r}$, en general, acá hemos identado a $^{(i)}E_(\vec{r},t)$ con números enteros pero, en general, podría haber un conjuto no contable de posibles estados para el campo eléctrico. Si observamos la gráfica \ref{fig:randomvar} hay dos puntos temporales, $t,t'$ en los cuales aíslamos unas partes de estas oscilaciones aleatorias; podríamos preguntarnos cuán correlacionadas estas estas oscilaciones a lo largo de las realizaciones en este intervalor $t'-t$, o dicho de otra manera, qué tan \textit{coherentes} son las oscilaciones a lo largo de las realizaciones.\\
+En la figura \ref{fig:randomvar} podemos observar a una componente del campo eléctrico, representada por $E(\vec{r},t)$ vista a lo largo de varias observaciones o realizaciones. Esta al comportarse como variable aleatoria en cada realización tiene un comportamiento diferente a lo largo del tiempo en un punto $\vec{r}$, en general, acá hemos indexado a $^{(i)}E(\vec{r},t)$ con números enteros pero, en general, podría haber un conjunto no contable de posibles estados para el campo eléctrico. Si observamos la gráfica \ref{fig:randomvar} hay dos puntos temporales, $t,t'$ en los cuales aislamos unas partes de estas oscilaciones aleatorias; podríamos preguntarnos cuán correlacionadas están estas oscilaciones a lo largo de las realizaciones en este intervalo $t'-t$, o dicho de otra manera, qué tan \textit{coherentes} son las oscilaciones a lo largo de las realizaciones.\\
 
 Hablamos de coherencia cuando queremos analizar la correlación de radiación electromagnética entre momentos espacio-temporales. Si tenemos dos fuentes que emiten campo eléctrico (por el momento entendido como escalar) su función de coherencia está dada por
 
 \begin{equation}
 	\Gamma(\vec{r},\vec{r}';t,t') = E \left\{ \mathcal{E} (\vec{r},t) \mathcal{E}^*(\vec{r}',t') \right\},
 \end{equation}
-en done estamos encontrando el promedio de ensamble de las componentes $\mathcal{E}$, las cuales son números complejos como ya hemos discutido en estas notas. Si tomamos a $\vec{r}=\vec{r}'$ tendremos a lo que se conoce como \textit{función de coherencia mutua}
+en donde estamos encontrando el promedio de ensamble de las componentes $\mathcal{E}$, las cuales son números complejos como ya hemos discutido en estas notas. Si tomamos a $\vec{r}=\vec{r}'$ tendremos a lo que se conoce como \textit{función de coherencia mutua}
 
 \begin{equation}
-	\Gamma(\vec{r'};t,t') = E \left\{ \mathcal{E}(\vec{r}',t) \mathcal{E}^*(\vec{r},t') \right\}.
+	\Gamma(\vec{r}';t,t') = E \left\{ \mathcal{E}(\vec{r}',t) \mathcal{E}^*(\vec{r}',t') \right\}.
 \end{equation}
 
-Podemos incluso ir un poco más allá incluyendo el concepto de \textit{estacionareidad estadística} pero hay que tener cuidado con esta puesto que hay varios tipos. Formalmente, un proceso estocástico $\{X_t\}$ se considera estacionario cuando sus propiedades estadísticas son invariantes bajo traslaciones temporales. Esta condición se manifiesta en diferentes grados:
+Podemos incluso ir un poco más allá incluyendo el concepto de \textit{estacionariedad estadística} pero hay que tener cuidado con esta puesto que hay varios tipos. Formalmente, un proceso estocástico $\{X_t\}$ se considera estacionario cuando sus propiedades estadísticas son invariantes bajo traslaciones temporales. Esta condición se manifiesta en diferentes grados:
 
 \begin{enumerate}
 	\item \textbf{Estacionariedad Estricta (Fuerte)}:La forma más exigente de estacionariedad requiere que todas las distribuciones de probabilidad conjuntas sean invariantes en el tiempo:
@@ -571,13 +569,13 @@ Podemos incluso ir un poco más allá incluyendo el concepto de \textit{estacion
 	donde $\epsilon_t$ es estacionario. La no estacionariedad aquí proviene exclusivamente de la tendencia temporal $\beta t$.
 \end{enumerate}
 
-Vamos a usar una hipótesis de estacionareidad fuerte, (aunque muchas veces basta con la estacionareidad débil). En este orden de ideas si $\tau = t-t'$ tenemos que 
+Vamos a usar una hipótesis de estacionariedad fuerte, (aunque muchas veces basta con la estacionariedad débil). En este orden de ideas si $\tau = t-t'$ tenemos que 
 
 \begin{equation}
-	\Gamma(\vec{r}',t,t') = \Gamma(\vec{r}',t-t',t'-') = \Gamma(\vec{r}',\tau).
+	\Gamma(\vec{r}',t,t') = \Gamma(\vec{r}',t-t') = \Gamma(\vec{r}',\tau).
 \end{equation}
 
-Como podemos ver, la coherencia mutua en un punto $\vec{r}'$ bajo una hipótesis de estacionareidad da a lugar a una depenencia explícita en la diferencia de tiempos $\tau$ en el promedio de ensamble.\\
+Como podemos ver, la coherencia mutua en un punto $\vec{r}'$ bajo una hipótesis de estacionariedad da lugar a una dependencia explícita en la diferencia de tiempos $\tau$ en el promedio de ensamble.\\
 
 Vale la pena preguntarse ¿qué tan necesario es analizar el promedio de ensamble, por qué no tomar el promedio temporal? Responder a esta pregunta es \textbf{muy complicado} puesto que esto responde al problema de la \textit{ergodicidad.} La ergodicidad, en el sentido de la teoría ergódica, requiere que un sistema dinámico cumpla que los promedios temporales coincidan con los promedios espaciales para casi todo condición inicial. Su demostración rigurosa es altamente no trivial al punto de que son contados los problemas en los cuales se ha demostrado, en el rigor matemático, que son ergódicos. \\
 
@@ -590,7 +588,7 @@ Desde un punto de vista fenomenológico asumiremos, de ahora en adelante, una \t
 La función de coherencia mutua tiene varias propiedades, algunas de esas son
 
 \begin{itemize}
-	\item[a)] $\Gamma(\vec{r}',0) \geq 0$. Esto proviene de la definición puesto que $\Gamma(\vec{r}',0) = \braket{|\epsilon(\vec{r}')|^2}$, es decir, corresponden a la intensidad del campo eléctrico y solo puede ser cero cuando trivialmente en todo instante el campo es cero.
+	\item[a)] $\Gamma(\vec{r}',0) \geq 0$. Esto proviene de la definición puesto que $\Gamma(\vec{r}',0) = \braket{|\mathcal{E}(\vec{r}')|^2}$, es decir, corresponden a la intensidad del campo eléctrico y solo puede ser cero cuando trivialmente en todo instante el campo es cero.
 	
 	\item[b)] $\Gamma(\vec{r}',-\tau) = \Gamma^*(\vec{r}',\tau)$. Esta se conoce como la \textit{propiedad hermítica} de la función de coherencia mutua, y viene del hecho de que $\mathcal{E}(\vec{r}',t)$ es estacionaria, lo cual nos permite hacer traslaciones temporales arbitrarias desde el origen. En este orden de ideas
 	
@@ -598,15 +596,15 @@ La función de coherencia mutua tiene varias propiedades, algunas de esas son
 		& \Gamma(\vec{r}',\tau) = \braket{\mathcal{E}(\vec{r}')\mathcal{E}^*(\vec{r}',t + \tau)} = \braket{\mathcal{E}(\vec{r}',t-\tau)\mathcal{E}^*(\vec{r}')} = \Gamma^*(\vec{r}',-\tau).
 	\end{align}
 	
-	\item[c)] $|\Gamma(\vec{r},\tau) \leq \Gamma(\vec{r}',0)$. Esta propiedad proviene de la \textit{desiguadlad de Cauchy-Schwarz} 
+	\item[c)] $|\Gamma(\vec{r}',\tau)| \leq \Gamma(\vec{r}',0)$. Esta propiedad proviene de la \textit{desigualdad de Cauchy-Schwarz} 
 	
 	\begin{equation}
 		|\Gamma(\vec{r}',\tau)|^2 = | \braket{\mathcal{E}(\vec{r}')\mathcal{E}^*(\vec{r}',t+\tau)} |^2 \leq  \braket{\mathcal{E}(\vec{r}',t)\mathcal{E}^*(\vec{r}',t)} \braket{\mathcal{E}(\vec{r}',t+\tau)\mathcal{E}^*(\vec{r}',t+\tau)} = \Gamma^2(\vec{r}',0),
 	\end{equation}
 	
-	lo cual implica que $|\Gamma(\vec{r}',\tau)$ no puede nunca exceder su valor inicial $\Gamma(\vec{r}',0)$. (Esta propiedad es, recordemos, exclusiva de la función de coherencia mutua, cuando veamos la coherencia entre dos fuentes veremos que no se satisface, al contrario, irá incrementando).
+	lo cual implica que $|\Gamma(\vec{r}',\tau)|$ no puede nunca exceder su valor inicial $\Gamma(\vec{r}',0)$. (Esta propiedad es, recordemos, exclusiva de la función de coherencia mutua, cuando veamos la coherencia entre dos fuentes veremos que no se satisface, al contrario, irá incrementando).
 	
-	\item[d)] $\Gamma(\vec{r}',\tau)$ es no negativa. Esto lo podemos ver a partir de al definición desde la siguiente desigualdad, un tanto obvia
+	\item[d)] $\Gamma(\vec{r}',\tau)$ es no negativa. Esto lo podemos ver a partir de la definición desde la siguiente desigualdad, un tanto obvia
 	
 	\begin{equation}
 		\left\langle \left| \int_{T_1}^{T_2} f(t)\mathcal{E}(t)dt \right|^2\right\rangle \geq 0,
@@ -617,13 +615,13 @@ La función de coherencia mutua tiene varias propiedades, algunas de esas son
 		\int_{T_1}^{T_2}\int_{T_1}^{T_2} f^*(\vec{r}',t)f(\vec{r}',t')\Gamma(\vec{r}',t'-t)dtdt' \geq 0.
 	\end{equation}
 	
-	\item[e)] Si el campo elećtrico es aleatorio, y estacionario y diferencialbe entonces podemos hallar uan velocidad $\xi (\vec{r}',t) = \dot{\mathcal{E}(\vec{r}',t)}$ y esta es estacionaria, aleatoria y de valor medio igual a cero, y su función de coherencia mutua es 
+	\item[e)] Si el campo eléctrico es aleatorio, y estacionario y diferenciable entonces podemos hallar una velocidad $\xi (\vec{r}',t) = \dot{\mathcal{E}}(\vec{r}',t)$ y esta es estacionaria, aleatoria y de valor medio igual a cero, y su función de coherencia mutua es 
 	
 	\begin{equation}
 		\Gamma_\xi(\vec{r}',\tau) = - \Ddot{\Gamma}_\mathcal{E}(\vec{r}',\tau).
 	\end{equation}
 	
-	\item[f)] $\Gamma(\vec{r}',\tau)$ es continua. Esto es cierto incluso aún cuando existen discontinudiades de tipo salto.
+	\item[f)] $\Gamma(\vec{r}',\tau)$ es continua. Esto es cierto incluso aún cuando existen discontinuidades de tipo salto.
 \end{itemize}
 Por último, vale la pena mencionar que existe una cantidad que conocemos como grado complejo de coherencia y este está dado por 
 
@@ -638,17 +636,17 @@ La función de coherencia mutua y el espectro de potencia espectral son dos cara
 
 La importancia de esta conexión trasciende lo teórico. En aplicaciones prácticas como las telecomunicaciones ópticas, la coherencia mutua ayuda a diseñar fibras que mantengan la integridad de las señales a largas distancias, mientras que el análisis espectral garantiza que los canales de información no se solapen en frecuencia. En astronomía, telescopios como el Event Horizon Telescope combinan mediciones de coherencia entre antenas distantes para reconstruir imágenes de agujeros negros, al tiempo que el espectro de potencia revela la composición química de nebulosas mediante sus líneas de emisión. Esta dualidad también es crucial en tecnologías láser, donde controlar la coherencia temporal permite generar pulsos ultracortos, y su espectro asociado determina aplicaciones en cirugía o medición de precisión. Así, la relación entre coherencia y espectro no solo unifica conceptos físicos, sino que habilita herramientas versátiles para explorar y manipular la luz en contextos que van desde lo microscópico hasta lo cósmico.\\
 
-Vamos a encontrar uno de los teoremas más importantes que existen en la teoría de la coherencia, el \textit{teorema de Wiener-Khinchin}. Fijémonos que las señales aleatorias estacionarias no tienen transformada de Fourier, por ende, podemos definir las siguietnes señales aleatorias del campo elećtrico
+Vamos a encontrar uno de los teoremas más importantes que existen en la teoría de la coherencia, el \textit{teorema de Wiener-Khinchin}. Fijémonos que las señales aleatorias estacionarias no tienen transformada de Fourier, por ende, podemos definir las siguientes señales aleatorias del campo eléctrico
 
 \begin{equation}\label{eq:CasiWiener}
 	^\omega \mathcal{E}_T (\vec{r},t) = \left\{ 
 	\begin{matrix}
-		^\omega\mathcal{E}(\vec{r},t) & -\frac{T}{2}\leq T \leq \frac{T}{2}\\
-		0 & fuera
+		^\omega\mathcal{E}(\vec{r},t) & -\frac{T}{2}\leq t \leq \frac{T}{2}\\
+		0 & \text{fuera}
 	\end{matrix} \right.
 \end{equation}
 
-y definiremos a la potencial espectral para una realización $\omega$ como la magnitud al cuadrado de las transformadas de Fourier de los campos elećtricos \ref{eq:CasiWiener} , es decir
+y definiremos a la potencia espectral para una realización $\omega$ como la magnitud al cuadrado de las transformadas de Fourier de los campos eléctricos \ref{eq:CasiWiener} , es decir
 
 \begin{equation}\label{eq:EspecWT}
 	^\omega S_T (\vec{r},\nu) = \left| \int_\mathbb{R} ^\omega \mathcal{E}_T(\vec{r},t)e^{i2\pi\nu t}dt \right|^2 = \left| \int_{-T/2}^{T/2}\;^\omega \mathcal{E}(\vec{r},t)e^{i2\pi\nu t}dt \right|^2,
@@ -662,14 +660,14 @@ y a la \textit{densidad de potencia espectral del evento }$\omega$ la calcularem
 Como ya poseemos una herramienta para estudiar en cada evento o realización a la densidad de potencia espectral entonces, mediante su promedio de ensamble, podemos encontrar a la densidad total, es decir
 
 \begin{equation}
-	S(\vec{r},\nu) = E\left\{^\omega S(\vec{r},t)\right\},
+	S(\vec{r},\nu) = E\left\{^\omega S(\vec{r},\nu)\right\},
 \end{equation}
 
 introduciendo las ecuaciones \ref{eq:EspecWT} y \ref{eq:EspecW} tenemos entonces
 
 \begin{align}
 	& S(\vec{r},\nu) = E\left\{ \lim_{T \to \infty} \left| \frac{1}{T} \int_{-T/2}^{T/2}\;^\omega \mathcal{E}(\vec{r},t)e^{i2\pi\nu t}dt \right|^2 \right\},\\
-	& S(\vec{r},t) = \lim_{T \to \infty} \frac{1}{T}  \int_{-T/2}^{T/2}\int_{-T/2}^{T/2} E \left\{ \mathcal{E}(\vec{r},t)\mathcal{E}^*(\vec{r'},t') \right\} e^{i2\pi\nu(t-t')}dtdt',\\
+	& S(\vec{r},\nu) = \lim_{T \to \infty} \frac{1}{T}  \int_{-T/2}^{T/2}\int_{-T/2}^{T/2} E \left\{ \mathcal{E}(\vec{r},t)\mathcal{E}^*(\vec{r'},t') \right\} e^{i2\pi\nu(t-t')}dtdt',\\
 	& S(\vec{r},\nu) = \int_{R}\Gamma(\vec{r},\vec{r}';\tau)e^{i2\pi\nu \tau}d\tau,
 \end{align}
 
@@ -677,9 +675,9 @@ introduciendo las ecuaciones \ref{eq:EspecWT} y \ref{eq:EspecW} tenemos entonces
 	\boxed{S(\vec{r},\nu) = \mathcal{F}\left\{ \Gamma(\vec{r},\vec{r}',\tau) \right\}}.
 \end{equation}
 
-El resultado \ref{eq:WienerKhinchin} se lee como: la transformada de Fourier de la función de coherencia corresponde con la densidad de potencia espectal y se conoce como el teorema de Wiener-Khinchin y su uso es fundamental, puesto que nos habla que, por métodos como la espectrometría podemos encontrar la función de coherencia de cualquier fenómeno, incluso, podemos ir más allá, puesto que este resultado en realidad proviene de algo más general, desde la función de correlación, es decir, todo fenómeno estocástico tiene asociado un espectro y a partir de las mediciones o estimaciones de dicho espectro podemos calcular las correlaciones en el sistema.\\
+El resultado \ref{eq:WienerKhinchin} se lee como: la transformada de Fourier de la función de coherencia corresponde con la densidad de potencia espectral y se conoce como el teorema de Wiener-Khinchin y su uso es fundamental, puesto que nos habla que, por métodos como la espectrometría podemos encontrar la función de coherencia de cualquier fenómeno, incluso, podemos ir más allá, puesto que este resultado en realidad proviene de algo más general, desde la función de correlación, es decir, todo fenómeno estocástico tiene asociado un espectro y a partir de las mediciones o estimaciones de dicho espectro podemos calcular las correlaciones en el sistema.\\
 
-Si hacemos una observación sencilla, el rango óptico de la radiación, es decir, el visible, corresponde con una franja de frecuencias muy baja respecto a todo el espectro, el visible va desde los $400$ [nm] hasta los $900$ [nm], podemos decir que toda la óptica es de \textit{espectro estrecho} esto obedece a la desiguadlad 
+Si hacemos una observación sencilla, el rango óptico de la radiación, es decir, el visible, corresponde con una franja de frecuencias muy baja respecto a todo el espectro, el visible va desde los $400$ [nm] hasta los $900$ [nm], podemos decir que toda la óptica es de \textit{espectro estrecho} esto obedece a la desigualdad 
 
 \begin{equation}
 	\frac{\triangle \nu}{\nu} \ll 1,
@@ -689,12 +687,12 @@ y, en este régimen de espectro estrecho, tenemos que la función de coherencia 
 \begin{equation}
 	\Gamma(\vec{r};\tau) = \tilde{\Gamma}(\vec{r})e^{i2\pi \tilde{\nu}\tau},
 \end{equation}
-lo cual podemos representar gráficamente como se muestra en la figura \ref{fig:estrecho}, en donde se puede ver el comportamiento de la función de coherencia en el régimen de espectro estrecho \footnote{Usualmente se puede encontrar en la literatura un término similar más no igual al de espectro estrecho, el cual se conoce como condición de quasi-monocromaticidad, esta condición se escribe como $\frac{\triangle \lambda}{\lambda} \ll 1$ pero esta acota la longitud de onda para que sea lo más monocromática posible, mientras que la condición de espectro estrecho admite varias frecuencias pero cortas en relación a todo el espectro de frecuencias.} en la cual se evidencia una envolvente (el observable) que envuelven, valga la redundancia, todas las frecuencias fundamentales. Más tarde, en estas mismas notas, mostraremos la relación que hay entre esta condición de espectro estrecho con un modelo, hecho por el grupo de investigación GOTS, para el fotón.
+lo cual podemos representar gráficamente como se muestra en la figura \ref{fig:estrecho}, en donde se puede ver el comportamiento de la función de coherencia en el régimen de espectro estrecho \footnote{Usualmente se puede encontrar en la literatura un término similar mas no igual al de espectro estrecho, el cual se conoce como condición de quasi-monocromaticidad, esta condición se escribe como $\frac{\triangle \lambda}{\lambda} \ll 1$ pero esta acota la longitud de onda para que sea lo más monocromática posible, mientras que la condición de espectro estrecho admite varias frecuencias pero cortas en relación a todo el espectro de frecuencias.} en la cual se evidencia una envolvente (el observable) que envuelven, valga la redundancia, todas las frecuencias fundamentales. Más tarde, en estas mismas notas, mostraremos la relación que hay entre esta condición de espectro estrecho con un modelo, hecho por el grupo de investigación GOTS, para el fotón.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Capitulo 1/Figuras/Estrecho}
-	\caption{Representación gráfica de la función de coherencia de espectro estrecho. De color negro se ilustra la envolvente $\tilde{\Gamma}(\vec{r},\tau)$ y de color negro las oscilaciones $e^{i2\pi\tilde{\nu}\tau}$ Estas oscilaciones están cofinadas en algo que se conoce como tiempo de coherencia $\tau_C$ que veremos más adelante.}
+	\caption{Representación gráfica de la función de coherencia de espectro estrecho. De color negro se ilustra la envolvente $\tilde{\Gamma}(\vec{r},\tau)$ y de color rojo las oscilaciones $e^{i2\pi\tilde{\nu}\tau}$. Estas oscilaciones están confinadas en algo que se conoce como tiempo de coherencia $\tau_C$ que veremos más adelante.}
 	\label{fig:estrecho}
 \end{figure}
 
@@ -711,12 +709,12 @@ donde $C$ es la velocidad de la luz en el vacío. Y también tenemos que, por an
 	\mathcal{E}(\vec{r},t) = \int_0^{\infty} \tilde{\mathcal{E}}(\vec{r},t) e^{-i2\pi\nu t}d\nu.
 \end{equation}
 
-Y si aplicamos el operador D'Alembertiano $\square = \nabla^2 - \frac{1}{C^2}\frac{\partial^2}{\partial t^2}$ a la ecuación \ref{eq:EyFourier} tenemos que $\tilde{\mathbb{E}}(\vec{r},t)$ tendrá forma de una ecuación tipo Helmholtz, es decir
+Y si aplicamos el operador D'Alembertiano $\square = \nabla^2 - \frac{1}{C^2}\frac{\partial^2}{\partial t^2}$ a la ecuación \ref{eq:EyFourier} tenemos que $\tilde{\mathcal{E}}(\vec{r},\nu)$ tendrá forma de una ecuación tipo Helmholtz, es decir
 
 \begin{equation}
 	\nabla^2 \mathcal{E}(\vec{r},t) - \frac{1}{C^2}\frac{\partial^2 \mathcal{E}(\vec{r},t)}{\partial t^2} = \int_0^{\infty} \left[ \nabla^2 \tilde{\mathcal{E}}(\vec{r},\nu) + k^2 \tilde{\mathcal{E}}(\vec{r},\nu) \right]e^{-i2\pi\nu t}d\nu,
 \end{equation}
-nos lleva esto a que el campo elećtrico como señal analítica y compleja también obedece uan ecuación tipo onda
+nos lleva esto a que el campo eléctrico como señal analítica y compleja también obedece una ecuación tipo onda
 
 \begin{equation}
 	\nabla^2 \mathcal{E}(\vec{r},t) = \frac{1}{C^2}\frac{\partial^2 \mathcal{E}(\vec{r},t)}{\partial t^2}.
@@ -743,7 +741,7 @@ y , de manera similar, si usamos $\square' = \nabla'^2 - \frac{\partial^2}{\part
 	\nabla'^2 \Gamma(\vec{r},\vec{r}';t,t') = \frac{1}{C^2}\frac{\partial^2}{\partial t'^2} \Gamma(\vec{r},\vec{r}';t,t').
 \end{equation}
 
-Las ecuaciones \ref{eq:coherenciaOnda1} y \ref{eq:coherenciaOnda2} nos hablan directamente que las funciones de coherencia entre dos puntos espacio-temporales evolucionan a lo largo del tiempo siguiendo una ecuación tipo onda, por separado, respecto a cada par de coordenadas espacio-temporales, un resultado, sin duda alguno increíble, sin embargo, este resultado lo podemos llevar aún más allá y ver esta propagación en la siguiente sección.
+Las ecuaciones \ref{eq:coherenciaOnda1} y \ref{eq:coherenciaOnda2} nos hablan directamente que las funciones de coherencia entre dos puntos espacio-temporales evolucionan a lo largo del tiempo siguiendo una ecuación tipo onda, por separado, respecto a cada par de coordenadas espacio-temporales, un resultado, sin duda alguna increíble, sin embargo, este resultado lo podemos llevar aún más allá y ver esta propagación en la siguiente sección.
 
 \subsection{Propagación de la coherencia y la dirección del tiempo; el teorema de Van Cittert-Zernike}
 
@@ -754,25 +752,25 @@ Las ecuaciones \ref{eq:coherenciaOnda1} y \ref{eq:coherenciaOnda2} nos hablan di
 	\label{fig:propagation}
 \end{figure}
 
-Como sabemos, el campo eléctrico obedece uan ecuación tipo onda y la orientación de los campo está dada por la polarización del campo, a su vez, como vimos en el capítulo de Difracción (ver sección \ref{Sec:Difracción}) , a nivel clásico, la luz fundamentalmente se propaga como ondas esféricas, así como se ilustra en la imagen \ref{fig:propagation}, y en cada punto del frente de onda, las componentes del campo eléctrico oscilarán de manera aleatoria pero dentro de la elipse polarización media de su estado representativo. Matemáticamente podemos representar a esta componente como
+Como sabemos, el campo eléctrico obedece una ecuación tipo onda y la orientación de los campos está dada por la polarización del campo, a su vez, como vimos en el capítulo de Difracción (ver sección \ref{Sec:Difracción}) , a nivel clásico, la luz fundamentalmente se propaga como ondas esféricas, así como se ilustra en la imagen \ref{fig:propagation}, y en cada punto del frente de onda, las componentes del campo eléctrico oscilarán de manera aleatoria pero dentro de la elipse polarización media de su estado representativo. Matemáticamente podemos representar a esta componente como
 
 \begin{equation}
-	\mathcal{E}_z(\vec{r}_1,\nu) = \frac{i}{\lambda} \int_{\Sigma} \mathcal{E}_0 (\vec{r},\nu) \frac{e^{ik || \vec{r_1}-\vec{r}||}}{|| \vec{r_1}-\vec{r}}cos(\hat{z}; \vec{r}_1-\vec{r})d\sigma.
+	\mathcal{E}_z(\vec{r}_1,\nu) = \frac{i}{\lambda} \int_{\Sigma} \mathcal{E}_0 (\vec{r},\nu) \frac{e^{ik \|\vec{r}_1-\vec{r}\|}}{\|\vec{r}_1-\vec{r}\|}\cos(\hat{z}; \vec{r}_1-\vec{r})d\sigma.
 \end{equation}
 Utilizando la ecuación \ref{eq:EyFourier} tenemos
 
 \begin{equation}
-	\mathcal{E}_z(\vec{r}_1,t) = \frac{1}{i}\int_{\mathbb{R}^+} \frac{\nu}{V} \int_{\Sigma} \mathcal{E}_0(\vec{r},\nu)\frac{\cos\left(  \hat{z}; \vec{r}_1 - \vec{r} \right)}{|| \vec{r}_1 - \vec{r} ||} e^{i2\pi \nu \left( t + \frac{|| \vec{r}_1 - \vec{r} ||}{V} \right)} d\sigma d\nu,
+	\mathcal{E}_z(\vec{r}_1,t) = \frac{1}{i}\int_{\mathbb{R}^+} \frac{\nu}{V} \int_{\Sigma} \mathcal{E}_0(\vec{r},\nu)\frac{\cos\left(  \hat{z}; \vec{r}_1 - \vec{r} \right)}{\|\vec{r}_1 - \vec{r}\|} e^{i2\pi \nu \left( t + \frac{\|\vec{r}_1 - \vec{r}\|}{V} \right)} d\sigma d\nu,
 \end{equation}
 en donde $V$ es la velocidad de propagación de la envolvente. Reescribiendo un poco más tenemos
 
 \begin{equation}
-	\mathcal{E}_z(\vec{r}_1,t) = \frac{1}{i} \int_{\Sigma} \frac{\cos\left( \hat{z}; \vec{r}_1-\vec{r} \right)}{|| \vec{r}_1 -\vec{r} ||} \int _{\mathbb{R}^+} \frac{\nu}{V} \mathcal{E}_0 (\vec{r},\nu)e^{i2\pi\nu \left(t + \frac{|| \vec{r}_1 - \vec{r} ||}{v}\right)}d\nu d\sigma,
+	\mathcal{E}_z(\vec{r}_1,t) = \frac{1}{i} \int_{\Sigma} \frac{\cos\left( \hat{z}; \vec{r}_1-\vec{r} \right)}{\|\vec{r}_1 -\vec{r}\|} \int _{\mathbb{R}^+} \frac{\nu}{V} \mathcal{E}_0 (\vec{r},\nu)e^{i2\pi\nu \left(t + \frac{\|\vec{r}_1 - \vec{r}\|}{v}\right)}d\nu d\sigma,
 \end{equation}
 y, tomando la aproximación de espectro estrecho tenemos
 
 \begin{equation}\label{eq:IntegralEz}
-	\mathcal{E}_z(\vec{r}_1,t) = \frac{1}{i\tilde{\lambda}} \int_{\Sigma} \mathcal{E}_0 \left(\vec{r}, t +\frac{|| \vec{r}_1 - \vec{r} ||}{V}\right) \frac{\cos\left(\hat{z} ; \vec{r}_1 - \vec{r}\right)}{|| \vec{r}_|-\vec{r} |||} d\sigma.
+	\mathcal{E}_z(\vec{r}_1,t) = \frac{1}{i\tilde{\lambda}} \int_{\Sigma} \mathcal{E}_0 \left(\vec{r}, t +\frac{\|\vec{r}_1 - \vec{r}\|}{V}\right) \frac{\cos\left(\hat{z} ; \vec{r}_1 - \vec{r}\right)}{\|\vec{r}_1-\vec{r}\|} d\sigma.
 \end{equation}
 
 Podemos visualizar, gráficamente, el cómo estamos pretendiendo propagar en la figura \ref{fig:propagation2} en donde podemos observar que estamos partiendo de la función de coherencia entre dos puntos $\vec{r},\vec{r}'$ entre unos instantes $t,t'$, respectivamente, y llevándola a una función de coherencia en los puntos $\vec{r}_1,\vec{r}_2$ entre dos instantes $t_1,t_2$, respectivamente. 
@@ -787,20 +785,20 @@ Podemos visualizar, gráficamente, el cómo estamos pretendiendo propagar en la 
 Partiendo de la ecuación \ref{eq:IntegralEz} podemos calcular la función de coherencia en su propagación así:
 
 \begin{equation}
-	\Gamma_z(\vec{r}_1,\vec{r}2;\tau) = E \left\{ \mathcal{E}_z(\vec{r}_1,t) \mathcal{E}_z^*(\vec{r}_2,t-\tau) \right\},
+	\Gamma_z(\vec{r}_1,\vec{r}_2;\tau) = E \left\{ \mathcal{E}_z(\vec{r}_1,t) \mathcal{E}_z^*(\vec{r}_2,t-\tau) \right\},
 \end{equation}
 
 \begin{align}
-	&\Gamma_z(\vec{r}_1,\vec{r}_2;\tau) = E\left\{\frac{1}{i\tilde{\lambda}} \int_{\Sigma} \mathcal{E}_0 \left(\vec{r},t + \frac{|| \vec{r}_1 - \vec{r} ||}{V}\right) \frac{\cos\left(\hat{z};\vec{r}_1-\vec{r}\right)}{||\vec{r}_1-\vec{r} ||}d\sigma \right. \\
-	& \left. \cdot \frac{1}{-i\tilde{\lambda'}} \int_{\Sigma'} \mathcal{E}_0^* \left(\vec{r}',t - \tau + \frac{|| \vec{r}_2 - \vec{r}' ||}{V}\right) \frac{\cos\left(\hat{z};\vec{r}_2-\vec{r}'\right)}{||\vec{r}_2-\vec{r}' ||}d\sigma'  \right\},
+	&\Gamma_z(\vec{r}_1,\vec{r}_2;\tau) = E\left\{\frac{1}{i\tilde{\lambda}} \int_{\Sigma} \mathcal{E}_0 \left(\vec{r},t + \frac{\|\vec{r}_1 - \vec{r}\|}{V}\right) \frac{\cos\left(\hat{z};\vec{r}_1-\vec{r}\right)}{\|\vec{r}_1-\vec{r}\|}d\sigma \right. \\
+	& \left. \cdot \frac{1}{-i\tilde{\lambda'}} \int_{\Sigma'} \mathcal{E}_0^* \left(\vec{r}',t - \tau + \frac{\|\vec{r}_2 - \vec{r}'\|}{V}\right) \frac{\cos\left(\hat{z};\vec{r}_2-\vec{r}'\right)}{\|\vec{r}_2-\vec{r}'\|}d\sigma'  \right\},
 \end{align}
 
 \begin{align}
-	& \Gamma_z(\vec{r}_1,\vec{r}_2;\tau) = \frac{1}{\tilde{\lambda}^2} \int_{\Sigma}\int_{\Sigma'} E \left\{ \mathcal{E}_0\left(\vec{r}, t + \frac{||  \vec{r}_1 - \vec{r}||}{V}\right) \mathcal{E}_0^* \left(\vec{r}', t-\tau + \frac{||  \vec{r}_2 - \vec{r}' ||}{V}\right) \right\}\frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r}' \right) }{|| \vec{r}_2-\vec{r}' ||\cdot || \vec{r}_1 - \vec{r}||} d\sigma d\sigma',
+	& \Gamma_z(\vec{r}_1,\vec{r}_2;\tau) = \frac{1}{\tilde{\lambda}^2} \int_{\Sigma}\int_{\Sigma'} E \left\{ \mathcal{E}_0\left(\vec{r}, t + \frac{\|\vec{r}_1 - \vec{r}\|}{V}\right) \mathcal{E}_0^* \left(\vec{r}', t-\tau + \frac{\|\vec{r}_2 - \vec{r}'\|}{V}\right) \right\}\frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r}' \right) }{\|\vec{r}_2-\vec{r}'\|\cdot \|\vec{r}_1 - \vec{r}\|} d\sigma d\sigma',
 \end{align}
 
 \begin{equation}\label{eq:IntGamma}
-	\Gamma_z (\vec{r}_1,\vec{r}_2;\tau) = \frac{1}{\tilde{\lambda}^2}\int_{\Sigma}\int_{\Sigma'} \Gamma_0 \left(\vec{r},\vec{r}';\tau + \frac{|| \vec{r}_1 - \vec{r}|| + || \vec{r}_2 - \vec{r}' ||}{V}\right) \frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r}' \right) }{|| \vec{r}_2-\vec{r}' ||\cdot || \vec{r}_1 - \vec{r}||} d\sigma d\sigma'
+	\Gamma_z (\vec{r}_1,\vec{r}_2;\tau) = \frac{1}{\tilde{\lambda}^2}\int_{\Sigma}\int_{\Sigma'} \Gamma_0 \left(\vec{r},\vec{r}';\tau + \frac{\|\vec{r}_1 - \vec{r}\| + \|\vec{r}_2 - \vec{r}'\|}{V}\right) \frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r}' \right) }{\|\vec{r}_2-\vec{r}'\|\cdot \|\vec{r}_1 - \vec{r}\|} d\sigma d\sigma'
 \end{equation}
 
 \begin{figure}[htbp]
@@ -820,31 +818,31 @@ Vamos a imponer la siguiente condición sobre la función de coherencia
 que en pocas palabras significa que, espacialmente hablando, la distribución que representa la función de coherencia está localizada puntualmente y pesada por la coherencia mutua en el punto $\vec{r}'$, imponiendo esto en la ecuación \ref{eq:IntGamma} tenemos
 
 \begin{equation}
-	\Gamma_z\left(\vec{r}_1,\vec{r}_2;\tau\right) = \frac{1}{\tilde{\lambda}^2}\int_{\Sigma}\Gamma_0 \left( \vec{r}; \tau + \frac{|| \vec{r}-\vec{r}_1 || - || \vec{r} -\vec{r}_2 || }{V} \right)\frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r} \right) }{|| \vec{r}_2-\vec{r} ||\cdot || \vec{r}_1 - \vec{r}||} d\sigma 
+	\Gamma_z\left(\vec{r}_1,\vec{r}_2;\tau\right) = \frac{1}{\tilde{\lambda}^2}\int_{\Sigma}\Gamma_0 \left( \vec{r}; \tau + \frac{\|\vec{r}-\vec{r}_1\| - \|\vec{r} -\vec{r}_2\| }{V} \right)\frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r} \right) }{\|\vec{r}_2-\vec{r}\|\cdot \|\vec{r}_1 - \vec{r}\|} d\sigma 
 \end{equation}
 
-En la naturaleza no siempre vamos a tener fuentes de espectro estrecho, sin embargo, podemos acudir a otro argumento, y es que, la mayoría de instrumentos no tengo rango infintio o amplio sino un rango corto, o dicho de otra manera, los instrumentos de medición miden una parte estrecha del espectro, por lo tanto, incluyendo la condición de espectro estrecho tenemos
+En la naturaleza no siempre vamos a tener fuentes de espectro estrecho, sin embargo, podemos acudir a otro argumento, y es que, la mayoría de instrumentos no tienen rango infinito o amplio sino un rango corto, o dicho de otra manera, los instrumentos de medición miden una parte estrecha del espectro, por lo tanto, incluyendo la condición de espectro estrecho tenemos
 
 \begin{equation}
-	\Gamma_z(\vec{r}_1,\vec{r}_2)e^{i2\pi\tilde{\nu}\tau} = \frac{1}{\tilde{\lambda}^2} \int_{\Sigma} \Gamma_0(\vec{r})e^{i2\pi\tilde{\nu} \left( \tau + \frac{|| \vec{r} - \vec{r}_1|| - || \vec{r}-\vec{r}_2||}{V} \right) } \frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r} \right) }{|| \vec{r}_2-\vec{r} ||\cdot || \vec{r}_1 - \vec{r}||} d\sigma.
+	\Gamma_z(\vec{r}_1,\vec{r}_2)e^{i2\pi\tilde{\nu}\tau} = \frac{1}{\tilde{\lambda}^2} \int_{\Sigma} \Gamma_0(\vec{r})e^{i2\pi\tilde{\nu} \left( \tau + \frac{\|\vec{r} - \vec{r}_1\| - \|\vec{r}-\vec{r}_2\|}{V} \right) } \frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r} \right) }{\|\vec{r}_2-\vec{r}\|\cdot \|\vec{r}_1 - \vec{r}\|} d\sigma.
 \end{equation}
 
-Dada el tiempo de coherencia definido por $\tau_C = \int_{\mathbb{R}^+}| \gamma(\vec{r},\tau) |^2 d\tau$ y si imponemos una condición de tiempos muy pequeños, menores a un tiempo de coherencia $\tau \ll \tau_C$ tenemos
+Dado el tiempo de coherencia definido por $\tau_C = \int_{\mathbb{R}^+}| \gamma(\vec{r},\tau) |^2 d\tau$ y si imponemos una condición de tiempos muy pequeños, menores a un tiempo de coherencia $\tau \ll \tau_C$ tenemos
 
 \begin{equation}
-	\Gamma_z(\vec{r}_1,\vec{r}_2) = \frac{1}{\tilde{\lambda}^2}\int_{\Sigma}I_0(\vec{r})e^{i2\pi \left( \frac{|| \vec{r}-\vec{r}_1 || - || \vec{r} - \vec{r}_2 ||}{V/\tilde{\nu}} \right)} \frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r} \right) }{|| \vec{r}_2-\vec{r} ||\cdot || \vec{r}_1 - \vec{r}||} d\sigma.
+	\Gamma_z(\vec{r}_1,\vec{r}_2) = \frac{1}{\tilde{\lambda}^2}\int_{\Sigma}I_0(\vec{r})e^{i2\pi \left( \frac{\|\vec{r}-\vec{r}_1\| - \|\vec{r} - \vec{r}_2\|}{V/\tilde{\nu}} \right)} \frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r} \right) }{\|\vec{r}_2-\vec{r}\|\cdot \|\vec{r}_1 - \vec{r}\|} d\sigma.
 \end{equation}
 
 Tomando la aproximación de campo lejano podemos simplificar el problema de la siguiente manera
 
 \begin{equation}\label{eq:IntegralProx}
-	\Gamma_z(\vec{r}_1,\vec{r}_2) = \frac{1}{\tilde{\lambda}^2 z^2} \int_{\Sigma} I_0(\vec{r}) e^{i2\pi \left( \frac{|| \vec{r}-\vec{r}_1 || - || \vec{r} - \vec{r}_2 ||}{V/\tilde{\nu}} \right)} d\sigma,
+	\Gamma_z(\vec{r}_1,\vec{r}_2) = \frac{1}{\tilde{\lambda}^2 z^2} \int_{\Sigma} I_0(\vec{r}) e^{i2\pi \left( \frac{\|\vec{r}-\vec{r}_1\| - \|\vec{r} - \vec{r}_2\|}{V/\tilde{\nu}} \right)} d\sigma,
 \end{equation}
-ahora podremos hacer uan expansión en series de Taylor, la misma que se realizó en el capítulo de difracción. En este orden de ideas los siguientes términos se convierten en
+ahora podremos hacer una expansión en series de Taylor, la misma que se realizó en el capítulo de difracción. En este orden de ideas los siguientes términos se convierten en
 
 \begin{align}
-	& || \vec{r} - \vec{r}_1 || = \left( z^2 + (x-x_1)^2 + (y-y_1)^2 \right)^{1/2} = z \left(1 + \frac{(x-x_1)^2 + (y-y_1)^2}{z^2}\right)^{1/2} \approx z + \frac{(x-x_1)^2 + (y-y_1)^2}{2z},\\
-	& || \vec{r}-\vec{r}_2 || \approx z + \frac{(x-x_2)^2 + (y-y_2)^2}{2z}.
+	& \|\vec{r} - \vec{r}_1\| = \left( z^2 + (x-x_1)^2 + (y-y_1)^2 \right)^{1/2} = z \left(1 + \frac{(x-x_1)^2 + (y-y_1)^2}{z^2}\right)^{1/2} \approx z + \frac{(x-x_1)^2 + (y-y_1)^2}{2z},\\
+	& \|\vec{r}-\vec{r}_2\| \approx z + \frac{(x-x_2)^2 + (y-y_2)^2}{2z}.
 \end{align}
 Introduciendo esto en la integral \ref{eq:IntegralProx} se tiene que
 
@@ -854,14 +852,14 @@ Introduciendo esto en la integral \ref{eq:IntegralProx} se tiene que
 Vamos a definir al vector $\vec{S}_1 = (x_1,y_1)$, $\vec{S}_2 = (x_2,y_2)$ y $\vec{S} = (x,y)$. Entonces
 
 \begin{equation}
-	\Gamma_z(\vec{S_1},\vec{S}_2) = \frac{e^{i \frac{\pi}{\tilde{\lambda}z} (|\vec{S}_1|^2 - |\vec{S}_2|^2)}}{\tilde{\lambda}^2 z^2} \int_{\mathbb{R}^2} I_0(\vec{S})e^{-i \frac{2\pi}{\tilde{\lambda}z}\vec{S}\cdot (\vec{S}_1 - \vec{S}_2)}dS.
+	\Gamma_z(\vec{S}_1,\vec{S}_2) = \frac{e^{i \frac{\pi}{\tilde{\lambda}z} (\|\vec{S}_1\|^2 - \|\vec{S}_2\|^2)}}{\tilde{\lambda}^2 z^2} \int_{\mathbb{R}^2} I_0(\vec{S})e^{-i \frac{2\pi}{\tilde{\lambda}z}\vec{S}\cdot (\vec{S}_1 - \vec{S}_2)}dS.
 \end{equation} 
 Si hacemos $\vec{S}_2 = \vec{0}$ llegamos a la integral de Fourier
 
 \begin{equation}
-	\boxed{ \Gamma_z (\vec{S}_1)  = \frac{e^{\frac{i\pi}{\tilde{\lambda}z}|\vec{S}_1|^2} }{\tilde{\lambda}^2z^2}\int_{\mathbb{R}^2} \Gamma_0(\vec{S}) e^{-\frac{i2\pi}{\tilde{\lambda}z}\vec{S}\cdot\vec{S}_1}dS},
+	\boxed{ \Gamma_z (\vec{S}_1)  = \frac{e^{\frac{i\pi}{\tilde{\lambda}z}\|\vec{S}_1\|^2} }{\tilde{\lambda}^2z^2}\int_{\mathbb{R}^2} \Gamma_0(\vec{S}) e^{-\frac{i2\pi}{\tilde{\lambda}z}\vec{S}\cdot\vec{S}_1}dS},
 \end{equation}
-lo que, básicamente, significa que las correlaciones, bajo todas las aproximaciones que hemos tomado, se propagan mediante una integral de Fourier, o lo que es lo mismo; el teorema de Van Citter-Zernike nos dice que la coherencia difracta, se propaga naturalmente como una integral de Difracción (ver figura \ref{fig:fouriergamma} ).\\
+lo que, básicamente, significa que las correlaciones, bajo todas las aproximaciones que hemos tomado, se propagan mediante una integral de Fourier, o lo que es lo mismo; el teorema de Van Cittert-Zernike nos dice que la coherencia difracta, se propaga naturalmente como una integral de Difracción (ver figura \ref{fig:fouriergamma} ).\\
 
 \begin{figure}[htbp]
 	\centering
@@ -871,6 +869,6 @@ lo que, básicamente, significa que las correlaciones, bajo todas las aproximaci
 \end{figure}
 
 
-¿Cómo podemos saber en qué dirección va el tiempo? Puede sonar como una pregunta demasiado sacada del contexto de estas notas pero, si pudiéramos volver en el tiempo a la época de oro de Boltzmann, encontraríamos que había un acalorado debate en la época, sobre el cómo la física estadística le daba una dirección al tiempo, una \textit{flecha}. Parafraseando a Boltzmann se dice que \textit{el tiempo avanza en la dirección en que las correlaciones incrementan}. Si nos fijamos, en le teormea de Van Citter-Zernike, podemos partir de dos fuentes completamente descorrelacionadas pero, en la medida en que se propaga, se irán correlacionando, el tiempo crecerá y la coherencia a su vez, hasta que llegue un punto en el cual la radiación de dichas fuentes sea coherente, es, es sin duda alguna, uno de los resultados más fuertes y hermosos que podemos encontrar en la física estadística.
+¿Cómo podemos saber en qué dirección va el tiempo? Puede sonar como una pregunta demasiado sacada del contexto de estas notas pero, si pudiéramos volver en el tiempo a la época de oro de Boltzmann, encontraríamos que había un acalorado debate en la época, sobre el cómo la física estadística le daba una dirección al tiempo, una \textit{flecha}. Parafraseando a Boltzmann se dice que \textit{el tiempo avanza en la dirección en que las correlaciones incrementan}. Si nos fijamos, en el teorema de Van Cittert-Zernike, podemos partir de dos fuentes completamente descorrelacionadas pero, en la medida en que se propaga, se irán correlacionando, el tiempo crecerá y la coherencia a su vez, hasta que llegue un punto en el cual la radiación de dichas fuentes sea coherente, es, sin duda alguna, uno de los resultados más fuertes y hermosos que podemos encontrar en la física estadística.
 
 

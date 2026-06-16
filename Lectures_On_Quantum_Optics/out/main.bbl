@@ -1,8 +1,9 @@
 \begin{thebibliography}{}
 
-\bibitem[A.~Aspect, 1986]{Alan-Aspect}
-A.~Aspect, P.~Grangier, G.~R. (1986).
-\newblock Experimental evidence for a photon anticorrelation effect on a beam splitter: A new light on single-photon interferences.
+\bibitem[Aspect et~al., 1986]{Alan-Aspect}
+Aspect, A., Grangier, P., and Roger, G. (1986).
+\newblock Experimental evidence for a photon anticorrelation effect on a beam
+  splitter: A new light on single-photon interferences.
 \newblock {\em Europhysics Letters}.
 
 \bibitem[Bennett et~al., 1992]{bennett1992quantum}
@@ -12,8 +13,16 @@ Bennett, C.~H., Brassard, G., and Ekert, A.~K. (1992).
 
 \bibitem[Bernoulli, 1713]{bernoulli1713}
 Bernoulli, J. (1713).
-\newblock {\em Ars Conjectandi, Opus Posthumum: Accedit Tractatus de Seriebus Infinitis, et Epistola Gallice Scripta de Ludo Pilae Reticularis}.
+\newblock {\em Ars Conjectandi, Opus Posthumum: Accedit Tractatus de Seriebus
+  Infinitis, et Epistola Gallice Scripta de Ludo Pilae Reticularis}.
 \newblock Impensis Thurnisiorum Fratrum, Basilea.
+\newblock Edici\'on p\'ostuma.
+
+\bibitem[Casimir, 1948]{Casimir1948}
+Casimir, H. B.~G. (1948).
+\newblock On the attraction between two perfectly conducting plates.
+\newblock {\em Proceedings of the Royal Netherlands Academy of Arts and
+  Sciences}, 51:793--795.
 
 \bibitem[Cohen-Tannoudji et~al., 1986]{cohen1986quantum}
 Cohen-Tannoudji, C., Diu, B., and Laloe, F. (1986).
@@ -24,12 +33,14 @@ Cohen-Tannoudji, C., Diu, B., and Laloe, F. (1986).
 Dirac, P. A.~M. (1958).
 \newblock {\em The Principles of Quantum Mechanics}.
 \newblock Oxford University Press, Oxford, 4th edition.
-\newblock Obra clásica fundamental sobre los fundamentos de la mecánica cuántica.
+\newblock Obra clásica fundamental sobre los fundamentos de la mecánica
+  cuántica.
 
 \bibitem[Einstein, 2016]{einstein20167}
 Einstein, A. (2016).
 \newblock 7 on the quantum theory of radiation.
-\newblock {\em The Old Quantum Theory: The Commonwealth and International Library: Selected Readings in Physics}, page 167.
+\newblock {\em The Old Quantum Theory: The Commonwealth and International
+  Library: Selected Readings in Physics}, page 167.
 
 \bibitem[Fock, 1932]{Fock1932}
 Fock, V. (1932).
@@ -38,16 +49,17 @@ Fock, V. (1932).
 
 \bibitem[Garrison and Wong, 1970]{garrison1970canonically}
 Garrison, J.~C. and Wong, J. (1970).
-\newblock Canonically conjugate pairs, uncertainty relations, and phase operators.
+\newblock Canonically conjugate pairs, uncertainty relations, and phase
+  operators.
 \newblock {\em Journal of Mathematical Physics}, 11(8):2242--2249.
-
-\bibitem[Gerry, ]{Introd-QO}
-Gerry, C.~C., . K. P.~L.
-\newblock {\em Introductory quantum optics}.
-\newblock Cambridge university press.
 
 \bibitem[Gerry et~al., 2005]{gerry2005introductory}
 Gerry, C., Knight, P., and Knight, P.~L. (2005).
+\newblock {\em Introductory quantum optics}.
+\newblock Cambridge university press.
+
+\bibitem[Gerry and Knight, 2005]{Introd-QO}
+Gerry, C.~C. and Knight, P.~L. (2005).
 \newblock {\em Introductory quantum optics}.
 \newblock Cambridge university press.
 
@@ -61,8 +73,8 @@ Goldstein, D.~H. (2017).
 \newblock {\em Polarized light}.
 \newblock CRC press.
 
-\bibitem[Hanbury~Brown, 1954]{HBT}
-Hanbury~Brown, R. ;~Twiss, R. (1954).
+\bibitem[Hanbury~Brown and Twiss, 1954]{HBT}
+Hanbury~Brown, R. and Twiss, R.~Q. (1954).
 \newblock A new type of interferometer for use in radio astronomy.
 \newblock {\em Philosophical Magazine}.
 
@@ -70,11 +82,6 @@ Hanbury~Brown, R. ;~Twiss, R. (1954).
 Jackson, J.~D. (1999).
 \newblock {\em Classical Electrodynamics}.
 \newblock Wiley, New York, 3rd edition.
-
-\bibitem[Jonas~Larson, ]{Jaynes-Cummings}
-Jonas~Larson, T. K.~M.
-\newblock {\em The Jaynes-Cummings model and its descendants}.
-\newblock IoP Publishing.
 
 \bibitem[Judge and Lewis, 1963]{judge1963commutator}
 Judge, D. and Lewis, J. (1963).
@@ -86,6 +93,11 @@ Laplace, P.~S. (1820).
 \newblock {\em Th{\'e}orie analytique des probabilit{\'e}s}.
 \newblock Courcier.
 
+\bibitem[Larson and Mavrogordatos, 2021]{Jaynes-Cummings}
+Larson, J. and Mavrogordatos, T.~K. (2021).
+\newblock {\em The Jaynes-Cummings model and its descendants}.
+\newblock IoP Publishing.
+
 \bibitem[London, 1926]{london1926jacobischen}
 London, F. (1926).
 \newblock {\"U}ber die jacobischen transformationen der quantenmechanik.
@@ -93,8 +105,14 @@ London, F. (1926).
 
 \bibitem[London, 1927]{london1927winkelvariable}
 London, F. (1927).
-\newblock Winkelvariable und kanonische transformationen in der undulationsmechanik.
+\newblock Winkelvariable und kanonische transformationen in der
+  undulationsmechanik.
 \newblock {\em Zeitschrift f{\"u}r Physik}, 40(3):193--210.
+
+\bibitem[Luis and S{\'a}nch{\'e}z-Soto, 1993]{Diferencia-Fase}
+Luis, A. and S{\'a}nch{\'e}z-Soto, L.~L. (1993).
+\newblock Phase-difference operator.
+\newblock {\em Physical Review A}.
 
 \bibitem[Merzbacher, 1998]{merzbacher1998quantum}
 Merzbacher, E. (1998).
@@ -103,13 +121,15 @@ Merzbacher, E. (1998).
 
 \bibitem[Namias, 1980]{namias1980fractional}
 Namias, V. (1980).
-\newblock The fractional order fourier transform and its application to quantum mechanics.
+\newblock The fractional order fourier transform and its application to quantum
+  mechanics.
 \newblock {\em IMA Journal of Applied Mathematics}, 25(3):241--265.
 
 \bibitem[Rosenblum, 1962]{rosenblum1962self}
 Rosenblum, M. (1962).
 \newblock Self-adjoint toeplitz operators and associated orthonormal functions.
-\newblock {\em Proceedings of the American Mathematical Society}, 13(4):590--595.
+\newblock {\em Proceedings of the American Mathematical Society},
+  13(4):590--595.
 
 \bibitem[Sakurai and Commins, 1995]{sakurai1995modern}
 Sakurai, J.~J. and Commins, E.~D. (1995).
@@ -122,23 +142,20 @@ Silberstein, L. (1907a).
 
 \bibitem[Silberstein, 1907b]{silberstein1907nachtrag}
 Silberstein, L. (1907b).
-\newblock Nachtrag zur abhandlung {\"u}ber „elektromagnetische grundgleichungen in bivektorieller behandlung” ︁.
+\newblock Nachtrag zur abhandlung {\"u}ber ``elektromagnetische
+  grundgleichungen in bivektorieller behandlung''.
 \newblock {\em Annalen der Physik}, 329(14):783--784.
 
 \bibitem[Silberstein, 1912]{silberstein1912lxxvi}
 Silberstein, L. (1912).
 \newblock Lxxvi. quaternionic form of relativity.
-\newblock {\em The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science}, 23(137):790--809.
+\newblock {\em The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science}, 23(137):790--809.
 
 \bibitem[Swendsen, 2020]{swendsen2020introduction}
 Swendsen, R. (2020).
 \newblock {\em An introduction to statistical mechanics and thermodynamics}.
 \newblock Oxford University Press, USA.
-
-\bibitem[Sánchéz-Soto, 1993]{Diferencia-Fase}
-Sánchéz-Soto, A. L. L.~L. (1993).
-\newblock Phase-difference operator.
-\newblock {\em Phisical Review}.
 
 \bibitem[Zettili, 2009]{zettili2009quantum}
 Zettili, N. (2009).

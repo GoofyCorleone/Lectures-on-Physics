@@ -1,0 +1,553 @@
+\section{A historical context of diffraction theory: from shadows to the vector world}
+
+Diffraction --- that phenomenon in which light bends around obstacles and paints
+patterns of light and shadow where geometry promised only sharp silhouettes --- is one
+of the richest stories in physics. Its evolution spans from Renaissance observations to
+the vector equations that today model nanotechnologies, and the tale shows how humankind
+slowly learned to tame the undulations of light.
+
+The story begins around 1660, when the Italian Jesuit Francesco Maria Grimaldi observed
+something disconcerting: when sunlight was passed through a small hole into a dark room,
+the edge of the shadow cast by an object was not sharp; instead, coloured fringes and
+illuminated zones appeared where the ray geometry of Euclid predicted darkness. In his
+posthumous book \textit{Physico-Mathesis de Lumine} (1665) \cite{grimaldi1665physico},
+Grimaldi coined the term \textit{diffractio} (from the Latin \textit{dis-} +
+\textit{fractus}, ``to break into pieces''), suggesting that light was not merely
+reflected or refracted but also ``broke'' when skirting obstacles. Nevertheless, in an
+age dominated by Newton's corpuscular theory, these ideas remained in the penumbra.
+
+The first theory capable of qualitatively explaining diffraction arrived in 1690 with
+Christiaan Huygens. In his \textit{Traité de la Lumière} \cite{huygens1690traite}, he
+proposed that every point of a wavefront acts as a source of new secondary wavelets (the
+\textbf{Huygens principle}), and that the envelope of these wavelets generates the
+propagating front. Although he did not explicitly incorporate interference --- which
+limited the predictive power of his model --- his construction already suggested that
+light could deviate when passing near edges.
+
+The true leap occurred in the nineteenth century. Thomas Young, with his double-slit
+experiment (1801) \cite{young1804bakerian}, demonstrated that light interferes with
+itself; but it was Augustin-Jean Fresnel who, between 1815 and 1820, fused the Huygens
+principle with the principle of interference, creating the \textbf{Huygens--Fresnel
+principle}. In his \textit{Mémoire sur la diffraction de la lumière}
+\cite{fresnel1819memoire}, Fresnel cast diffraction as an integral superposition of
+secondary wavelets with relative phases. His expression for the intensity at a point
+$P$,
+
+\begin{equation}
+	I(P) \propto \left| \int_{\text{aperture}} \frac{A e^{i(kr - \omega t)}}{r} K(\theta) \, dS \right|^2,
+\end{equation}
+
+where $K(\theta)$ is the \textit{obliquity factor}, accounted quantitatively for the
+observed diffraction patterns. The climactic moment came in 1818: Siméon Denis Poisson,
+using Fresnel's theory, predicted that a circular disc should project a bright spot at
+the very centre of its shadow (the \textbf{Poisson--Arago spot}). When Dominique Arago
+verified it experimentally, the wave theory triumphed over Newtonian corpuscularism.
+
+Powerful as it was, Fresnel's theory remained heuristic. In 1883 Gustav Kirchhoff gave
+it mathematical rigour through the wave equation and Green's theorem. In his memoir
+\textit{Zur Theorie der Lichtstrahlen} \cite{kirchhoff1883theorie}, he derived the
+\textbf{Kirchhoff integral formula}
+
+\begin{equation}
+	U(P) = \frac{1}{4\pi} \iint_{\Sigma} \left( U \frac{\partial}{\partial n} \left( \frac{e^{iks}}{s} \right) - \frac{e^{iks}}{s} \frac{\partial U}{\partial n} \right) d\Sigma,
+\end{equation}
+
+where $U$ is the scalar field (assuming monochromatic light and uniform polarisation),
+$s$ the distance from the source point to $P$, and $\Sigma$ the integration surface.
+This formulation --- although it assumes mutually inconsistent boundary conditions, as
+pointed out by Henri Poincaré --- became the cornerstone of the \textbf{scalar theory of
+diffraction}, valid whenever polarisation effects are negligible.
+
+Kirchhoff's inconsistencies were resolved in 1896 by Arnold Sommerfeld
+\cite{sommerfeld1896mathematische}. By eliminating the need to impose Dirichlet and
+Neumann conditions simultaneously, he derived rigorous solutions for the diffraction by
+a plane screen:
+
+\begin{equation}
+	U(P) = \frac{1}{i\lambda} \iint_{\text{aperture}} U_0 \frac{e^{ikr}}{r} \cos\theta \, dS \quad \text{(Rayleigh--Sommerfeld diffraction)}.
+\end{equation}
+
+This approach, later detailed in his \textit{Vorlesungen über Theoretische Physik}
+\cite{sommerfeld1954optics}, allowed diffraction patterns to be computed without
+unphysical infinities, extending the theory to arbitrary apertures.
+
+The scalar theory, however, ignored the vector nature of light. In 1908 Gustav Mie,
+studying the diffraction (scattering) of light by spheres --- today called \textbf{Mie
+scattering} --- solved Maxwell's equations directly for the electric field $\mathbf{E}$
+and magnetic field $\mathbf{B}$ \cite{mie1908beitrage}. Shortly afterwards, Peter Debye,
+in his 1909 thesis, introduced inhomogeneous vector waves to describe the focusing of
+beams, laying the foundations of the \textbf{vector theory of diffraction}.
+
+The modern synthesis was consolidated by Max Born and Emil Wolf in \textit{Principles of
+Optics} (1959) \cite{born1999principles}, where it was shown that the scalar
+approximation fails for systems with high numerical aperture, anisotropic or chiral
+media, and structures smaller than the wavelength. The vector theory, built directly on
+Maxwell's curl equations
+
+\begin{equation}
+	\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad \nabla \times \mathbf{H} = \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t},
+\end{equation}
+
+allows one to model polarisation effects, surface plasmons and metasurfaces.
+
+The invention of the laser in 1960 boosted practical applications. Joseph Goodman, in
+\textit{Introduction to Fourier Optics} (1968) \cite{goodman2005introduction},
+reinterpreted diffraction as a \textbf{linear, space-invariant system}, in which the
+far-field pattern is the Fourier transform of the aperture. This viewpoint enabled the
+design of holograms, diffractive lenses and computational aberration correction.
+Today the field enjoys a golden age: sub-wavelength \textbf{metasurfaces} that shape
+wavefronts through vector diffraction \cite{yu2011light}, electron and neutron
+diffraction used to map atomic structures, and diffraction in nonlinear media probed
+with femtosecond lasers. From Grimaldi's fringes to engineered wavefronts, diffraction
+theory has continuously challenged and refined our understanding of light. In every
+diffracted corner we still hear an echo of Fresnel's question: how far can light bend
+before it breaks our certainties?
+
+\section{Scalar theory of diffraction}\label{Sec:Diffraction}
+
+Electromagnetic waves are inherently vectorial: at each point $\vec{r}$ the electric
+field may exhibit a different state of polarisation. This property is expressed
+mathematically as
+
+\begin{equation}
+\vec{E}(\vec{r},t) = E(\vec{r},t) \, \hat{\vec{e}}(\vec{r},t),
+\end{equation}
+
+where $E(\vec{r},t)$ denotes the amplitude of the field and $\hat{\vec{e}}(\vec{r},t)$
+represents the polarisation vector, which besides varying in space may evolve in time in
+a stochastic manner.
+
+The associated wave equation then takes the form
+
+\begin{equation}
+\nabla^2 \left[ E(\vec{r},t)\hat{\vec{e}}(\vec{r},t) \right] - \mu\varepsilon \frac{\partial^2}{\partial t^2} \left[ E(\vec{r},t)\hat{\vec{e}}(\vec{r},t) \right] = 0,
+\end{equation}
+
+whose direct solution presents notable complexities. To tackle this problem one resorts
+to simplifying strategies, such as decomposing the field into scalar components. These
+scalar solutions may afterwards be combined to reconstruct the full vector behaviour.
+
+The temporal variation of amplitude, phase and polarisation is analysed rigorously
+through coherence theory (a topic explored in depth in Chapter~\ref{chap:Coherence}).
+Nevertheless, under certain approximations the temporal dependence of the amplitude is
+attributed solely to the intrinsic oscillations of the field, while the polarisation is
+regarded as static. The electric field then simplifies to
+
+\begin{equation}
+\vec{E}(\vec{r},t) = E(\vec{r},t) \, \hat{\vec{e}}(\vec{r}),
+\end{equation}
+
+allowing its expansion in an orthogonal polarisation basis,
+
+\begin{equation}
+\vec{E}(\vec{r},t) = E_1(\vec{r},t)\hat{\vec{e}}_1 + E_2(\vec{r},t)\hat{\vec{e}}_2.
+\end{equation}
+
+Here $\hat{\vec{e}}_1$ and $\hat{\vec{e}}_2$ correspond to opposite polarisation states on
+the Poincaré sphere. Each scalar component $E_i$ individually satisfies the wave equation
+
+\begin{equation}
+\nabla^2 E_i - \mu\varepsilon \frac{\partial^2 E_i}{\partial t^2} = 0 \quad (i=1,2),
+\end{equation}
+
+thereby decoupling the vector problem into manageable scalar equations.
+
+In situations where one component is negligible (for instance $E_2 \to 0$), the field
+reduces to
+
+\begin{equation}
+	\vec{E}(\vec{r},t) = E(\vec{r},t) \, \hat{\vec{e}},
+\end{equation}
+
+defining a purely scalar case. This formalism underlines how the general vector
+description can emerge from the controlled superposition of scalar solutions.
+
+\section{The scalar wave equation (Helmholtz equation)}
+
+Let $\Psi(\mathbf{r},t)$ be an arbitrary component of the electromagnetic field. This
+quantity satisfies the classical wave equation
+
+\begin{equation}
+	\nabla^{2}\Psi(\mathbf{r},t) - \mu\varepsilon \frac{\partial^{2}\Psi(\mathbf{r},t)}{\partial t^{2}} = 0,
+	\label{eq.wave.classic}
+\end{equation}
+
+where $\Psi$ represents a polychromatic field. To decompose the field temporally we apply
+the Fourier transform
+
+\begin{equation}
+	\Psi(\mathbf{r},t) = \int_{\mathbb{R}^{+}} U(\mathbf{r},\nu) \, \exp(-2\pi\mathrm{i}\nu t) \, d\nu .
+	\label{eq.FT}
+\end{equation}
+
+Substituting \eqref{eq.FT} into \eqref{eq.wave.classic}, the equation is re-expressed as
+
+\begin{equation}
+	\int_{\mathbb{R}^{+}} \left[ \nabla^{2}U(\mathbf{r},\nu) + \frac{\omega^{2}}{v^{2}} U(\mathbf{r},\nu) \right] \exp(-2\pi\mathrm{i}\nu t) \, d\nu = 0,
+\end{equation}
+
+which leads directly to the Helmholtz equation for each spectral component:
+
+\begin{equation}
+	(\nabla^{2} + k^{2})U(\mathbf{r},\nu) = 0 .
+\end{equation}
+
+Here $k = 2\pi/\lambda$ denotes the wavenumber, and $\lambda = c/(n\nu)$ is the wavelength
+in a medium of refractive index $n$. This formulation describes mathematically how each
+monochromatic component of the field (characterised by its complex amplitude $U$) obeys
+an equation independent of the temporal frequency.
+
+\section{The Kirchhoff scalar boundary-value problem}
+
+The scalar theory of diffraction, based on solutions of the wave equation under boundary
+conditions, describes the propagation of fields in paraxial approximations or with smooth
+phase modulations. Despite its scalar formulation, the formalism --- developed by
+Kirchhoff by means of Green's functions --- is adaptable to vector fields.
+
+The original inconsistency of Kirchhoff, pointed out by Poincaré, lies in the
+over-determination of the boundary conditions (prescribing both the field and its normal
+derivative on a plane), which violates the uniqueness theorems of differential equations.
+Sommerfeld resolved this by redefining the Green's function so as to eliminate the
+redundancy, guaranteeing mathematical consistency.
+
+We therefore start from the physical entity under study --- the electromagnetic field ---
+and as a first step it is appropriate to recall its wave equation
+
+\begin{equation}
+	\nabla^2 \vec{E}(\vec{r},t) - \frac{1}{v^2} \frac{\partial^2 \vec{E}(\vec{r},t)}{\partial t^2} = 0,
+\end{equation}
+
+which is of a vector nature. We may restrict our phenomenon to the study of the
+propagation of its components, grouping the vector character into the polarisation vector
+$\hat{e}(\vec{r},t)$. In order to avoid possible space--time correlations between the
+evolution of the components and the polarisation of the field, the dependence of the
+polarisation vector on these variables is dropped, so that
+
+\begin{equation}
+	\left(\nabla^2 E(\vec{r},t) - \frac{1}{v^2} \frac{\partial^2 E(\vec{r},t)}{\partial t^2}\right) \hat{e}
+	\quad \longrightarrow \quad
+	(\nabla^2 + k^2) E(\vec{r},t) = 0,
+\end{equation}
+
+thus obtaining the Helmholtz equation for the scalar electric field.
+
+\subsection{Green's theorem}
+
+Green's theorem, a direct corollary of Gauss's theorem, establishes fundamental relations
+between volume and surface integrals for scalar fields. Let $f(\vec{r})$ and $g(\vec{r})$
+be scalar functions with continuous second derivatives in a domain $V$. We start from the
+differential identity
+
+\begin{equation}
+	\nabla \cdot \left[ f(\vec{r})\nabla g(\vec{r}) \right] = f(\vec{r})\nabla^{2}g(\vec{r}) + \nabla f(\vec{r}) \cdot \nabla g(\vec{r}).
+\end{equation}
+
+Subtracting the analogous expression with $f$ and $g$ interchanged, we obtain
+
+\begin{equation}
+	\nabla \cdot \left[ f\nabla g - g\nabla f \right] = f\nabla^{2}g - g\nabla^{2}f.
+\end{equation}
+
+Integrating this relation over a volume $V$ and applying the Gauss divergence theorem,
+
+\begin{equation}
+	\int_{V} \nabla \cdot \left[ f(\vec{r})\nabla g(\vec{r}) - g(\vec{r})\nabla f(\vec{r}) \right] dV = \int_{V} \left( f\nabla^{2}g - g\nabla^{2}f \right) dV,
+\end{equation}
+
+which allows the volume integral on the right-hand side to be converted into a surface
+integral over $\partial V$:
+
+\begin{equation}
+	\oint_{\Sigma(V)} \left[ f(\vec{r})\nabla g(\vec{r}) - g(\vec{r})\nabla f(\vec{r}) \right] \cdot d\vec{\sigma} = \int_V \left( f\nabla^2 g - g\nabla^2 f \right) dV,
+\end{equation}
+
+where:
+\begin{itemize}
+	\item $ d\vec{\sigma} = \hat{n}\, d\sigma $ is the differential surface element oriented along the outward normal $\hat{n}$ to the surface $\Sigma(V)$.
+	\item $\frac{\partial}{\partial n} = \hat{n} \cdot \nabla$ denotes the directional derivative along $\hat{n}$.
+	\item The operator $\nabla$ acts exclusively on the spatial coordinates $\vec{r}$.
+\end{itemize}
+
+This identity allows the solution of inhomogeneous differential equations (e.g.\ the
+Helmholtz equation) to be expressed in terms of integrals over the sources and the
+boundary conditions. The presence of $\hat{n}$ emphasises that the surface contribution
+depends critically on the geometry of the volume $V$.
+
+\subsection{The Helmholtz--Kirchhoff integral theorem}
+
+The Helmholtz--Kirchhoff integral theorem adapts Green's formalism to the propagation of
+electromagnetic fields. Starting from Green's identity and adding the term $k^2 fg$ to
+both sides, one obtains
+
+\begin{equation}
+	\oint_{\Sigma(V)} \left[ f(\vec{r})\nabla g(\vec{r}) - g(\vec{r})\nabla f(\vec{r}) \right] \cdot d\vec{\sigma} = \int_{V} f(\vec{r})\left(\nabla^2 + k^2\right)g(\vec{r})\, dV - \int_{V} g(\vec{r})\left(\nabla^2 + k^2\right)f(\vec{r})\, dV,
+\end{equation}
+
+where $f$ and $g$ are scalar functions. Choosing $f = U(\vec{r}, \nu)$, a solution of the
+Helmholtz equation, and $g$ as an arbitrary smooth function, the expression simplifies to
+
+\begin{equation}
+	\oint_{\Sigma(V)} \left[ U(\vec{r}, \nu)\nabla g(\vec{r}) - g(\vec{r})\nabla U(\vec{r}, \nu) \right] \cdot d\vec{\sigma} = \int_{V} U(\vec{r}, \nu)\left(\nabla^2 + k^2\right)g(\vec{r})\, dV.
+\end{equation}
+
+The key lies in selecting $g$ as the Green's function $G(\vec{r}, \vec{r}')$, defined by
+
+\begin{equation}\label{eq:GreenHomogeneous}
+	\left(\nabla^2 + k^2\right)G(\vec{r}, \vec{r}') = 4\pi \delta(\vec{r} - \vec{r}').
+\end{equation}
+
+Remarkably, we may add an arbitrary number of Green's functions while keeping the solution
+invariant. What we can do is add an infinity of image charges, but \emph{outside} the
+integration volume bounded by the surface $\Sigma(V)$, as shown in
+Figure~\ref{fig:greenimages}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Chapter 5/Figures/GreenImagenes}
+	\caption{On the boundary $\Sigma(V)$ the contribution of the field components $U(\vec{r})$ is shown; inside the region the total field is built from the contribution of all the points on the boundary. One may add infinitely many point Green charges of arbitrary propagation nature; the condition for the invariance of equation \eqref{eq:GreenHomogeneous} is that these image charges lie outside $\Sigma(V)$.}
+	\label{fig:greenimages}
+\end{figure}
+
+In this spirit, equation \eqref{eq:GreenHomogeneous} becomes
+
+\begin{equation}
+	(\nabla^2 + k^2)G(\vec{r},\vec{r}') = 4\pi \delta(\vec{r}-\vec{r}') + 4\pi \sum_{i=1}^{\infty} \delta(\vec{r}-\vec{r}''_i).
+\end{equation}
+
+The explicit solution for a homogeneous medium of equation \eqref{eq:GreenHomogeneous} is
+
+\begin{equation}
+	\label{sol_Green}
+	G(\vec{r}, \vec{r}') = \frac{e^{ik\|\vec{r} - \vec{r}'\|}}{\|\vec{r} - \vec{r}'\|},
+\end{equation}
+
+corresponding to an outgoing spherical wave centred at $\vec{r}'$. Substituting $G$ into
+Green's identity, one derives
+
+\begin{equation}
+	\label{green}
+	U(\vec{r}', \nu) = \frac{1}{4\pi} \oint_{\Sigma(V)} \left[ U(\vec{r}, \nu)\nabla G(\vec{r}, \vec{r}')- G(\vec{r}, \vec{r}')\nabla U(\vec{r}, \nu)  \right ] \cdot d\vec{\sigma},
+\end{equation}
+
+known as the Helmholtz--Kirchhoff integral formula. This equation allows $U(\vec{r}',
+\nu)$ to be computed at any point of the volume $V$ by means of an integral over its
+boundary $\Sigma(V)$.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Chapter 5/Figures/GreenPuntual}
+	\caption{Representation of the Green's functions for point sources. Under these boundary conditions the Green's functions behave as point charges, one the mirror image of the other.}
+	\label{fig:greenpoint}
+\end{figure}
+
+Before continuing, it is worth noting that the point-charge nature of the Green's functions
+$G(\vec{r},\vec{r}')$ is an assumption taken for granted; there is, however, no restriction
+on their physical nature. As is well known in electromagnetic theory, radiation sources may
+have any volume and shape, so our problem (Figure~\ref{fig:greenpoint}) can be made more
+general, as shown in Figure~\ref{fig:greennonpoint}, and the differential equation for
+Green's functions with volume would read
+
+\begin{equation}
+	\left( \nabla^2 + k^2 \right)G(\vec{r},\vec{r}') = 4\pi \rho(\vec{r}-\vec{r}'_+) - 4\pi\rho(\vec{r}-\vec{r}'_-).
+\end{equation}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Chapter 5/Figures/GreenNoPuntual}
+	\caption{Representation of the Green's functions for non-point sources. Under these boundary conditions the Green's functions still behave as mirror images, but now with given volume and geometry; the only constraint on the emission of these sources is that, on the boundary $z=0$, the total field must vanish, as required by the assumed Dirichlet conditions.}
+	\label{fig:greennonpoint}
+\end{figure}
+
+Let us continue with the development for point Green's functions. To simplify the
+evaluation of the integral, we consider a volume $V$ bounded by an infinite plane
+$\Sigma_1$ ($z=0$) and a hemisphere $\Sigma_2$ of radius $R$ (see
+Figure~\ref{fig:greenpoint}). The contribution of $\Sigma_2$ vanishes as $R \to \infty$
+(owing to the Sommerfeld radiation condition), reducing the expression to
+
+\begin{equation}
+	U(\vec{r}', \nu) = \frac{1}{4\pi} \int_{\Sigma_1} \left[U(\vec{r}, \nu)\frac{\partial G}{\partial n} -   G(\vec{r}, \vec{r}')\frac{\partial U}{\partial n} \right] d\sigma,
+\end{equation}
+
+where $\frac{\partial}{\partial n} = \hat{n} \cdot \nabla$ denotes the normal derivative.
+However, this formulation requires specifying simultaneously $U$ and $\partial U/\partial
+n$ on $\Sigma_1$, which over-determines the problem. This difficulty motivates the
+introduction of physically realistic boundary conditions, such as those of Kirchhoff, in
+order to resolve the ambiguity.
+
+This problem is aggravated by a theorem of complex analysis, attributed to Riemann, which
+states that if a function and its normal derivative vanish on an open region of a plane,
+then the function must be identically zero throughout the domain. This restriction
+motivates the strategic need to eliminate one of the terms in the Helmholtz--Kirchhoff
+surface integral.
+
+The key is to exploit the degrees of freedom inherent in the choice of the auxiliary
+Green's function $G$. Kirchhoff initially proposed the intuitive boundary conditions
+\begin{itemize}
+	\item $U = 0$ outside the aperture on $\Sigma$ (blocked field),
+	\item $\partial U/\partial n = 0$ on opaque regions (vanishing normal derivative).
+\end{itemize}
+
+Although these conditions reproduced the experimental results of diffraction, they
+introduced mathematical inconsistencies by violating the Cauchy--Riemann uniqueness
+theorem. Poincaré showed that such assumptions generate contradictions in the mixed
+derivatives of the field. The resolution came with Sommerfeld, who redefined $G$ by means
+of a double-layer (mirror) Green's function, ensuring that
+\begin{itemize}
+	\item $G = 0$ on $\Sigma$ (Dirichlet condition),
+	\item $\partial G/\partial n$ remains non-singular,
+\end{itemize}
+
+thus eliminating the redundancy in the boundary conditions and preserving the
+self-consistency of the formalism.
+
+\subsection{The Rayleigh--Sommerfeld formulation}
+
+Returning to equation \eqref{green} and choosing the Dirichlet condition for the function
+$G$, we have
+
+\begin{equation}
+	\label{psi_expr}
+	U(\vec{r}', \nu) = \frac{1}{4\pi} \int_{\Sigma_1} \left[U(\vec{r}, \nu) \nabla G \cdot\hat{n}\right] d\sigma .
+\end{equation}
+
+Given the integration surface under consideration, we may express \eqref{sol_Green} as
+
+\begin{equation}
+	\label{sol_Green_RS}
+	G(\vec{r}, \vec{r}') = \frac{e^{ik\|\vec{r} - \vec{r}'\|}}{\|\vec{r} - \vec{r}'\|} - \frac{e^{ik\|\vec{r} - \vec{r}''\|}}{\|\vec{r} - \vec{r}''\|},
+\end{equation}
+
+\noindent where
+\begin{align}
+	\|\vec{r} - \vec{r}''\| &= \|\vec{r} - \vec{r}'\|, \qquad x'' = x', \quad y'' = y', \quad z'' = -z',
+\end{align}
+
+since $\vec{r}''$ is the mirror image of $\vec{r}'$ across the plane $\Sigma_1$. It follows
+that
+
+\begin{equation}
+	\nabla G \cdot \hat{z}  = 2 \left[ik - \dfrac{1}{\|\vec{r}-\vec{r}'\|} \right]\dfrac{e^{ik\|\vec{r}-\vec{r}'\|}}{\|\vec{r}-\vec{r}'\|} \cos(\vec{r} - \vec{r}',\hat{z}),
+\end{equation}
+
+and with this, \eqref{psi_expr} becomes
+
+\begin{equation}
+	U(\vec{r}',\nu) = \dfrac{1}{2\pi} \int_{\Sigma} U(\vec{r},\nu) \left[ik - \dfrac{1}{\|\vec{r} - \vec{r}'\|} \right] \dfrac{e^{ik\|\vec{r}-\vec{r}'\|}}{\|\vec{r}-\vec{r}'\|} \cos(\vec{r} - \vec{r}',\hat{z})\,d\sigma .
+\end{equation}
+
+We may now make the approximation appropriate to the Rayleigh--Sommerfeld regime, in which
+$\|\vec{r}-\vec{r}'\| \gg \lambda$, obtaining
+
+\begin{equation}
+	U(\vec{r}',\nu) = \dfrac{ik}{2\pi} \int_{\Sigma} U(\vec{r},\nu)\dfrac{e^{ik\|\vec{r}-\vec{r}'\|}}{\|\vec{r}-\vec{r}'\|} \cos(\vec{r} - \vec{r}',\hat{z})\,d\sigma,
+\end{equation}
+
+a mathematical expression that embodies the Huygens--Fresnel principle: as can be
+appreciated, there is one spherical wave per point of the integration surface.
+
+\section{The Fresnel approximation}
+
+Starting from the field
+
+\begin{align}
+	U(\vec{r}') = \frac{ik}{2\pi}\int_{\Sigma} U(\vec{r}) \frac{e^{ik \left\| \vec{r} - \vec{r}' \right\|}}{\left\| \vec{r} - \vec{r}' \right\|} \cos(\vec{r} - \vec{r}', \hat{z}) \, \mathrm{d}\sigma,
+\end{align}
+
+it is possible to carry out the so-called mid-field or Fresnel approximation. To this end
+we take
+
+\begin{align}
+	\label{aprox_r}
+	\|\vec{r}-\vec{r}'\| &= \left[(x-x')^2 + (y-y')^2 + (z-z')^2\right]^{1/2} \notag \\
+	&= z\left(1 + \dfrac{(x-x')^2 + (y-y')^2}{z^2} \right)^{1/2} \notag \\
+	&\approx z + \dfrac{(x-x')^2+(y-y')^2}{2z}.
+\end{align}
+
+It is clear that, for the factor $\dfrac{1}{\|\vec{r}- \vec{r}'\|}$, an expansion up to the
+first term of \eqref{aprox_r} suffices; this is not enough for the factor $e^{ik
+\left\| \vec{r} - \vec{r}' \right\|}$, however, since the latter has oscillatory behaviour
+over its domain, so both terms are required. We additionally take $\cos (\vec{r}-\vec{r}',
+\hat{z}) = \dfrac{z}{\|\vec{r} - \vec{r} '\|} \approx 1$.
+
+In this spirit, we obtain an expression for the field of the form
+
+\begin{equation}
+	\label{Fresnel}
+	U(\vec{r}') = \dfrac{i e^{ikz}}{\lambda z} \int U(\vec{r}) \exp \left(\dfrac{ik}{2z} ((x-x')^2 + (y-y')^2) \right) d\sigma,
+\end{equation}
+
+which describes the propagation or diffraction of the electromagnetic field in the Fresnel
+regime. It is worth stressing that equation \eqref{Fresnel} describes a parabolic wave,
+and although, at least conceptually, such propagation is valid for a mid-field, in
+practice it has proved more than sufficient for sufficiently short distances.
+
+\section{The Fraunhofer approximation}
+
+Finally, from expression \eqref{Fresnel} a second approximation may be carried out,
+corresponding to the far field or Fraunhofer regime, in which the observation distances are
+considerably larger than the area over which one wishes to study the propagated field
+(whether through a slit or another object). We focus on the factor
+
+\begin{align}
+	\exp\left( \frac{ik}{2z} ((x-x')^2 + (y-y')^2) \right)
+	&= \exp\left( \frac{ik}{2z} (x^2 + y^2) \right)
+	\exp\left( \frac{ik}{2z} (x'^2 + y'^2) \right)
+	\exp\left( -\frac{ik}{z} (xx' + yy') \right),
+\end{align}
+
+where we may make the far-field assumption $\exp\left( \frac{ik}{2z} (x^2 + y^2) \right)
+\approx 1$, so that we obtain
+
+\begin{equation}
+	\label{Fraunhofer}
+	U(\vec{r}') = \dfrac{e^{ikz}}{\lambda z} \exp \left(\dfrac{ik}{2z} (x'^2 + y'^2)\right) \int U(\vec{r}) \exp\left( -\frac{ik}{z} (xx' + yy') \right) d\sigma .
+\end{equation}
+
+There we can still appreciate a quadratic phase term outside the integral, usually called
+the curvature factor, which shows precisely the dephasing induced by the difference of
+optical path between a plane called the observation screen and a spherical surface of
+radius $z$ (the propagation distance of the field along the optical axis) known as the
+cardinal sphere. The introduction of this spherical surface is rather useful when one
+wishes to describe Fraunhofer diffraction on a screen as a Fresnel propagation through two
+confocal cardinal spheres, as shown in Figure~\ref{fig:cardinals}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{Chapter 5/Figures/Cardinales}
+	\caption{Scheme of the confocal cardinal spheres, with radii equal to the propagation distance $z$ of the field.}
+	\label{fig:cardinals}
+\end{figure}
+
+This makes more sense once we analyse the effect of each propagation step. It is clear
+that, without imposing far-field approximations from the outset, propagating the field at
+$\mathcal{A}$ towards $\mathcal{F}$ with the Fresnel approximation, we would obtain
+
+\begin{equation}
+	U_{\mathcal{F}}(\vec{r}) = \dfrac{ie^{ikz}}{\lambda z} \exp\left( \frac{ik}{2z} (x^2 + y^2) \right)  \int u_{\mathcal{A}}
+	\exp\left( \frac{ik}{2z} (x'^2 + y'^2) \right)
+	\exp\left( -\frac{ik}{z} (xx' + yy') \right)d\sigma' ,
+\end{equation}
+
+where we may associate $u_{\mathcal{A}}$, i.e.\ the field on the sphere $\mathcal{A}$, with
+the field on $\mathcal{P}$ multiplied by its corresponding quadratic factor
+$u_{\mathcal{P}} = u_{\mathcal{A}} (\vec{r}') \exp{\left( \dfrac{ik}{2z}(x'^2+y'^2)
+\right)}$, while the term $\exp{\left( \frac{ik}{2z} (x^2 + y^2) \right)}$ may be
+understood as the factor resulting from passing the field from the sphere $\mathcal{F}$ to
+the screen $\mathcal{Q}$, so that the field on $\mathcal{F}$ would correspond to
+
+\begin{equation}
+	u_{\mathcal{Q}}(\vec{r}) = \dfrac{ie^{ikz}}{\lambda z} \int u_{\mathcal{P}}
+	\exp\left( -\frac{ik}{z} (xx' + yy') \right)d\sigma' ,
+\end{equation}
+
+thus recovering a Fraunhofer expression for diffraction on $\mathcal{Q}$. It should be
+noted that one must check whether the study of the propagated field is valid within a
+paraxial regime, where the field is confined to the neighbourhood of the optical axis and
+hence the curvature of the cardinal sphere does not differ much from the plane (the
+screen). In cases where the curvature factor ceases to be negligible, the paraxial regime
+loses validity and the problem must be addressed from a meta-axial standpoint.
+
+Studying the propagation of the field through Fresnel diffraction is of great importance
+because, as will be discussed later, it bears a close relationship with what is known as
+the fractional Fourier transform, a tool that arises naturally when one chains paraxial
+propagation steps.

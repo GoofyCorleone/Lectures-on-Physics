@@ -1,76 +1,48 @@
-This is BibTeX, Version 0.99d (TeX Live 2025)
+This is BibTeX, Version 0.99e (TeX Live 2026)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
 Database file #1: referencias.bib
-Repeated entry---line 51 of file referencias.bib
- : @book{gerry2005introductory
- :                            ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 102 of file referencias.bib
- : @book{gerry2005introductory
- :                            ,
-I'm skipping whatever remains of this entry
-You're missing a field name---line 237 of file referencias.bib
- :  address   = {Basilea},  
- :                          % Agregar la ciudad de publicación (opcional pero recomendado)
-I'm skipping whatever remains of this entry
-I was expecting an "="---line 277 of file referencias.bib
- :     year 
- :          {2023}=
-I'm skipping whatever remains of this entry
-I was expecting an "="---line 299 of file referencias.bib
- :     year 
- :          {2021}=
-I'm skipping whatever remains of this entry
-Too many commas in name 1 of "Gerry, C. C., & Knight, P. L." for entry Introd-QO
-while executing---line 1023 of file apalike.bst
-Too many commas in name 1 of "Gerry, C. C., & Knight, P. L." for entry Introd-QO
-while executing---line 1023 of file apalike.bst
-Too many commas in name 1 of "Gerry, C. C., & Knight, P. L." for entry Introd-QO
-while executing---line 1098 of file apalike.bst
-Warning--empty year in Introd-QO
-Warning--empty year in Jaynes-Cummings
 Warning--empty journal in zettili2009quantum
-You've used 29 entries,
+You've used 30 entries,
             1935 wiz_defined-function locations,
-            653 strings with 7440 characters,
-and the built_in function-call counts, 9333 in all, are:
-= -- 914
-> -- 254
+            664 strings with 7678 characters,
+and the built_in function-call counts, 9934 in all, are:
+= -- 975
+> -- 296
 < -- 27
-+ -- 89
-- -- 76
-* -- 701
-:= -- 1673
-add.period$ -- 86
-call.type$ -- 29
-change.case$ -- 175
-chr.to.int$ -- 28
-cite$ -- 32
-duplicate$ -- 404
-empty$ -- 723
-format.name$ -- 111
-if$ -- 1811
++ -- 103
+- -- 90
+* -- 767
+:= -- 1775
+add.period$ -- 90
+call.type$ -- 30
+change.case$ -- 187
+chr.to.int$ -- 29
+cite$ -- 31
+duplicate$ -- 418
+empty$ -- 752
+format.name$ -- 134
+if$ -- 1926
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 38
-newline$ -- 147
-num.names$ -- 87
-pop$ -- 163
+missing$ -- 39
+newline$ -- 153
+num.names$ -- 90
+pop$ -- 168
 preamble$ -- 1
-purify$ -- 183
+purify$ -- 195
 quote$ -- 0
-skip$ -- 308
+skip$ -- 322
 stack$ -- 0
-substring$ -- 634
-swap$ -- 34
+substring$ -- 671
+swap$ -- 35
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 154
-warning$ -- 3
-while$ -- 81
+type$ -- 160
+warning$ -- 1
+while$ -- 85
 width$ -- 0
-write$ -- 364
-(There were 8 error messages)
+write$ -- 381
+(There was 1 warning)

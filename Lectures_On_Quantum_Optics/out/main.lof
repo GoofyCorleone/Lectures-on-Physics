@@ -5,28 +5,28 @@
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Representación de las funciones de Green para fuentes no puntuales. Bajo estas condiciones de frontera, las funciones de Green se siguen comportando como imágenes especulares pero con volumen y geometrías dadas, la única ligadura que hay sobre la naturaleza de la emisión de estas fuentes es que, sobre la frontera $z=0$ el campo total ha de ser cero, por las condiciones de Dirichlet asumidas.}}{10}{figure.caption.5}%
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Esquema de las esferas cardinales cofocales, con radios equivalentes a la propagación $z$ del campo.}}{14}{figure.caption.6}%
 \contentsline {figure}{\numberline {1.5}{\ignorespaces representación de $E(\vec {r},t)$ como variable aleatoria.}}{20}{figure.caption.7}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Representación gráfica de la función de coherencia de espectro estrecho. De color negro se ilustra la envolvente $\tilde {\Gamma }(\vec {r},\tau )$ y de color negro las oscilaciones $e^{i2\pi \tilde {\nu }\tau }$ Estas oscilaciones están cofinadas en algo que se conoce como tiempo de coherencia $\tau _C$ que veremos más adelante.}}{25}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces \relax }}{27}{figure.caption.9}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces \relax }}{28}{figure.caption.10}%
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Evolución de las realizaciones al propagar el campo eléctrico.}}{29}{figure.caption.11}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces \relax }}{32}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Representación gráfica de la función de coherencia de espectro estrecho. De color negro se ilustra la envolvente $\tilde {\Gamma }(\vec {r},\tau )$ y de color rojo las oscilaciones $e^{i2\pi \tilde {\nu }\tau }$. Estas oscilaciones están confinadas en algo que se conoce como tiempo de coherencia $\tau _C$ que veremos más adelante.}}{26}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces \relax }}{28}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces \relax }}{29}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Evolución de las realizaciones al propagar el campo eléctrico.}}{31}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces \relax }}{33}{figure.caption.12}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Esquema experimental del estudio efectuado por Alan Aspect, Philippe Grangier y Gérard Roger en 1986.}}{40}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Campo eléctrico en todos sus modos confinado en una cavidad con paredes conductoras perfectas}}{42}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Se representan gráficamente los primeros 6 niveles de energía para un oscilador harmónico cuántico, en este caso correspondiente al hamiltoniano del campo electromagnético. Para los niveles de energía; $1,3,6$ se ilustran estos estados en la base de posición, los cuales corresponden a las funciones de Hermite-Gauss.}}{54}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Los estados coherentes oscilan armónicamente a lo largo del potencial entre los puntos de retorno clásicos. Debido a la forma de estos estados, que sus autovalores con el operador de aniquilación correspondan a una representación compleja de los valores medios de los operadores cuadratura apunta a que físicamente estos estados representan la oscilación bien dirigida de la energía de la radiación.}}{55}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Densidad de probabilidad para los estados número coherentes.}}{56}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Distribución de fase para los estados coherentes, en los cuales se ilustran dos estados centrados en el origen y con dos valores medios del número de cuantos de energía distintos.}}{57}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Representación esquemática sobre el plano complejo $\mathbb {C}^2$ en el cual se ve el efecto del exponencial de $e^{i\hat {\phi }}$ y su adjunto conjugado $e^{i\hat {\phi }}$.}}{60}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Relación entre el operador de ángulo restringido $\hat {\phi }$ con $-\pi < \hat {\phi } \leq \pi $ y el operador de ángulo $\hat {\chi }$.}}{62}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Effecto de la TFF sobre la distribución de Wigner en el espacio de fase de los estados coherentes $\mathinner {|{\alpha }\rangle }$.}}{71}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Representación gráfica de los estados de fase como la rotación de los estados numeral $\mathinner {|{\#}\rangle }$}}{72}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Esquema experimental del estudio efectuado por Alan Aspect, Philippe Grangier y Gérard Roger en 1986.}}{42}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Campo eléctrico en todos sus modos confinado en una cavidad con paredes conductoras perfectas}}{44}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Se representan gráficamente los primeros 6 niveles de energía para un oscilador harmónico cuántico, en este caso correspondiente al hamiltoniano del campo electromagnético. Para los niveles de energía; $1,3,6$ se ilustran estos estados en la base de posición, los cuales corresponden a las funciones de Hermite-Gauss.}}{56}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Los estados coherentes oscilan armónicamente a lo largo del potencial entre los puntos de retorno clásicos. Debido a la forma de estos estados, que sus autovalores con el operador de aniquilación correspondan a una representación compleja de los valores medios de los operadores cuadratura apunta a que físicamente estos estados representan la oscilación bien dirigida de la energía de la radiación.}}{57}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Densidad de probabilidad para los estados número coherentes.}}{59}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Distribución de fase para los estados coherentes, en los cuales se ilustran dos estados centrados en el origen y con dos valores medios del número de cuantos de energía distintos.}}{60}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Representación esquemática sobre el plano complejo $\mathbb {C}^2$ en el cual se ve el efecto del exponencial de $e^{i\hat {\phi }}$ y su adjunto conjugado $e^{i\hat {\phi }}$.}}{63}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Relación entre el operador de ángulo restringido $\hat {\phi }$ con $-\pi < \hat {\phi } \leq \pi $ y el operador de ángulo $\hat {\chi }$.}}{65}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Effecto de la TFF sobre la distribución de Wigner en el espacio de fase de los estados coherentes $\mathinner {|{\alpha }\rangle }$.}}{74}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Representación gráfica de los estados de fase como la rotación de los estados numeral $\mathinner {|{\#}\rangle }$}}{75}{figure.caption.22}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Difracción de Fresnel entre la superficie esférica $A$ y la superficie esférica $B$.}}{83}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces $(a)$ Problema de Green usando una distribución $\delta $ de Dirac. $(b)$ Problema propuesto para una distribución arbitraria.}}{87}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Configuración experimental.}}{89}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Los datos experimentales se superpusieron a la curva azul que es la densidad de probabilidad normalizada, $\left | \Psi (x,z) \right |^{2}$, obtenido por simulación computacional.}}{90}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Simulación de varias distribuciones de densidad de probabilidad a una distancia $z$.}}{90}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Difracción de Fresnel entre la superficie esférica $A$ y la superficie esférica $B$.}}{87}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces $(a)$ Problema de Green usando una distribución $\delta $ de Dirac. $(b)$ Problema propuesto para una distribución arbitraria.}}{91}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Configuración experimental.}}{93}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Los datos experimentales se superpusieron a la curva azul que es la densidad de probabilidad normalizada, $\left | \Psi (x,z) \right |^{2}$, obtenido por simulación computacional.}}{94}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Simulación de varias distribuciones de densidad de probabilidad a una distancia $z$.}}{94}{figure.caption.27}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 
