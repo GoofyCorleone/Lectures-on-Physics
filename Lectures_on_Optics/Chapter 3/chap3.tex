@@ -1,70 +1,248 @@
 \section{A historical context of electromagnetic optics and polarisation}
 
-The idea that light is an electromagnetic phenomenon --- and that its transverse vibration
-carries a hidden orientation we call polarisation --- is one of the great unifications of
-nineteenth-century physics. Before light could be understood as a travelling disturbance of
-electric and magnetic fields, it had to shed two older skins: Newton's corpuscles and the
-purely mechanical aether of the early wave theorists. The story of polarisation, in
-particular, is the story of how a seemingly minor curiosity --- light reflected from a
-window behaving differently from ordinary light --- forced physicists to accept that the
-optical vibration is transverse, and ultimately vectorial.
+    The idea that light is an electromagnetic phenomenon - and that its transverse vibration
+    carries a hidden orientation we call polarisation - is one of the great unifications of
+    nineteenth-century physics. Before light could be understood as a travelling disturbance of
+    electric and magnetic fields, it had to shed two older skins: Newton's corpuscles and the
+    purely mechanical aether of the early wave theorists. The story of polarisation, in
+    particular, is the story of how a seemingly minor curiosity - light reflected from a
+    window behaving differently from ordinary light - forced physicists to accept that the
+    optical vibration is transverse, and ultimately vectorial.
 
-The first quantitative encounter with polarisation came in 1808, when Étienne-Louis Malus,
-looking through a calcite crystal at sunlight reflected from the windows of the Luxembourg
-Palace in Paris, noticed that the intensity of the transmitted beam changed as he rotated
-the crystal. From these observations he extracted the law that bears his name, $I =
-I_0\cos^2\theta$, relating the transmitted intensity to the angle between the analyser and
-the plane of polarisation \cite{malus1809theorie}. Malus had discovered that reflection
-could endow light with the same directional property that double refraction revealed,
-without invoking any crystal at all. A few years later, in 1815, David Brewster
-established the law that the polarisation upon reflection is complete at a particular angle,
-the Brewster angle, for which the reflected and refracted rays are perpendicular
-\cite{brewster1815laws}.
+    The first quantitative encounter with polarisation came in 1808, when Étienne-Louis Malus,
+    looking through a calcite crystal at sunlight reflected from the windows of the Luxembourg
+    Palace in Paris, noticed that the intensity of the transmitted beam changed as he rotated
+    the crystal. From these observations he extracted the law that bears his name, $I =
+    I_0\cos^2\theta$, relating the transmitted intensity to the angle between the analyser and
+    the plane of polarisation \cite{malus1809theorie}. Malus had discovered that reflection
+    could endow light with the same directional property that double refraction revealed,
+    without invoking any crystal at all. A few years later, in 1815, David Brewster
+    established the law that the polarisation upon reflection is complete at a particular angle,
+    the Brewster angle, for which the reflected and refracted rays are perpendicular
+    \cite{brewster1815laws}.
 
-These facts were deeply puzzling within the longitudinal wave picture inherited from sound.
-The resolution came from Augustin-Jean Fresnel and François Arago, who between 1816 and 1819
-showed experimentally that two beams polarised at right angles do not interfere. Fresnel
-drew the inevitable, audacious conclusion: the optical vibration must be \emph{transverse}
-to the direction of propagation. From this single hypothesis he derived the laws governing
-the amplitudes of reflected and refracted light --- the Fresnel equations --- which remain
-in use today. Transversality made polarisation a natural attribute of light: a wave
-oscillating in a plane perpendicular to its motion can do so along infinitely many
-directions, and the choice of that direction \emph{is} its state of polarisation.
+    These facts were deeply puzzling within the longitudinal wave picture inherited from sound.
+    The resolution came from Augustin-Jean Fresnel and François Arago, who between 1816 and 1819
+    showed experimentally that two beams polarised at right angles do not interfere. Fresnel
+    drew the inevitable, audacious conclusion: the optical vibration must be \emph{transverse}
+    to the direction of propagation. From this single hypothesis he derived the laws governing
+    the amplitudes of reflected and refracted light - the Fresnel equations - which remain
+    in use today. Transversality made polarisation a natural attribute of light: a wave
+    oscillating in a plane perpendicular to its motion can do so along infinitely many
+    directions, and the choice of that direction \emph{is} its state of polarisation.
 
-A decisive step toward a quantitative description of partially polarised light was taken by
-George Gabriel Stokes in 1852. Recognising that realistic beams are never perfectly
-polarised, Stokes introduced four measurable quantities --- today called the Stokes
-parameters --- that completely characterise the state of polarisation, including the degree
-of polarisation, of any beam, coherent or not \cite{stokes1852composition}. Decades later,
-Henri Poincaré gave these parameters a beautiful geometric home: every state of
-polarisation corresponds to a point on the surface of a sphere, the Poincaré sphere, on
-which the poles represent circular polarisation and the equator linear polarisation. This
-geometric picture is the one that reappears, in the scalar reduction of diffraction theory,
-when one decomposes the field onto two opposite states of the sphere.
+    A decisive step toward a quantitative description of partially polarised light was taken by
+    George Gabriel Stokes in 1852. Recognising that realistic beams are never perfectly
+    polarised, Stokes introduced four measurable quantities - today called the Stokes
+    parameters - that completely characterise the state of polarisation, including the degree
+    of polarisation, of any beam, coherent or not \cite{stokes1852composition}. Decades later,
+    Henri Poincaré gave these parameters a beautiful geometric home: every state of
+    polarisation corresponds to a point on the surface of a sphere, the Poincaré sphere, on
+    which the poles represent circular polarisation and the equator linear polarisation. This
+    geometric picture is the one that reappears, in the scalar reduction of diffraction theory,
+    when one decomposes the field onto two opposite states of the sphere.
 
-The grand synthesis arrived with James Clerk Maxwell. In his 1865 memoir \textit{A
-Dynamical Theory of the Electromagnetic Field} \cite{maxwell1865dynamical}, Maxwell showed
-that the equations governing electricity and magnetism admit wave solutions propagating at
-a speed numerically equal to the measured speed of light, and concluded that ``light is an
-electromagnetic disturbance.'' Polarisation was thereby identified with the direction of
-the electric field vector $\mathbf{E}$, and the whole edifice of physical optics became a
-chapter of electromagnetism. The experimental confirmation came in 1887, when Heinrich
-Hertz generated and detected electromagnetic waves in the laboratory, verifying that they
-reflect, refract and polarise exactly as light does \cite{hertz1893electric}.
+    The grand synthesis arrived with James Clerk Maxwell. In his 1865 memoir \textit{A
+    Dynamical Theory of the Electromagnetic Field} \cite{maxwell1865dynamical}, Maxwell showed
+    that the equations governing electricity and magnetism admit wave solutions propagating at
+    a speed numerically equal to the measured speed of light, and concluded that ``light is an
+    electromagnetic disturbance.'' Polarisation was thereby identified with the direction of
+    the electric field vector $\vec{E}$, and the whole edifice of physical optics became a
+    chapter of electromagnetism. The experimental confirmation came in 1887, when Heinrich
+    Hertz generated and detected electromagnetic waves in the laboratory, verifying that they
+    reflect, refract and polarise exactly as light does \cite{hertz1893electric}.
 
-In the twentieth century the description of polarisation was recast in the language of
-linear algebra. R.\ Clark Jones, in a celebrated series of papers beginning in 1941,
-introduced the calculus of two-component complex vectors and $2\times2$ matrices that now
-bears his name, ideally suited to fully polarised, coherent light \cite{jones1941new}. For
-partially polarised or depolarising systems, the complementary $4\times4$ Mueller calculus
-acting on the Stokes vector provides the appropriate tool. The modern treatment of all
-these matters --- transversality, the Fresnel equations, the Stokes--Poincaré formalism and
-the Jones and Mueller calculi --- is presented with classic completeness in Born and Wolf's
-\textit{Principles of Optics} \cite{born1999principles}, the reference against which later
-treatments are still measured.
+    In the twentieth century the description of polarisation was recast in the language of
+    linear algebra. R.\ Clark Jones, in a celebrated series of papers beginning in 1941,
+    introduced the calculus of two-component complex vectors and $2\times2$ matrices that now
+    bears his name, ideally suited to fully polarised, coherent light \cite{jones1941new}. For
+    partially polarised or depolarising systems, the complementary $4\times4$ Mueller calculus
+    acting on the Stokes vector provides the appropriate tool. The modern treatment of all
+    these matters - transversality, the Fresnel equations, the StokesPoincaré formalism and
+    the Jones and Mueller calculi - is presented with classic completeness in Born and Wolf's
+    \textit{Principles of Optics} \cite{born1999principles}, the reference against which later
+    treatments are still measured.
 
-From Malus's rotating crystal to the polarisation-encoded qubits of quantum information,
-the orientation of the optical field has proven to be far more than an ornament: it is a
-genuine degree of freedom of light, vectorial in nature, and the bridge between the scalar
-optics of rays and the full electromagnetic description developed in the chapters that
-follow.
+    From Malus's rotating crystal to the polarisation-encoded qubits of quantum information,
+    the orientation of the optical field has proven to be far more than an ornament: it is a
+    genuine degree of freedom of light, vectorial in nature, and the bridge between the scalar
+    optics of rays and the full electromagnetic description developed in the chapters that
+    follow.
+
+
+\section{The vector behavior of the electromagnetic radiation}
+
+    Until this part of the lectures, we've studied the light as a ray, however, a better model for the light becomes with the $4$ Maxwell's equations, which are:
+    
+    \begin{align}
+        & \bm{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}, & \text{\textit{Gauss Law for the electric field}}\label{eq:GaussE}\\
+        & \bm{\nabla} \cdot \vec{B} = 0, & \text{\textit{Gauss Law for the magnetic field}} \label{eq:GaussB}\\
+        & \bm{\nabla} \times \vec{E} = -\frac{\partial}{\partial t} \vec{B}, & \text{\textit{Faraday-Lenz law}} \label{eq:FaradayLens}\\
+        & \bm{\nabla} \times \vec{B} = \mu_0\epsilon_0 \frac{\partial}{\partial t} \vec{E} + \mu_0 \vec{J}, & \text{Ampére-Maxwell Law}. \label{eq:AmpereMaxwell}.
+    \end{align}
+
+    The equations from \ref{eq:GaussE} to \ref{eq:AmpereMaxwell} have got such elegant form thanks to the vector notation given by the physicist Oliver Heaviside and thanks to some of the most useful theorems of the mathematical analysis, the divergence (Gauss) and curl (Stokes) theorems, which allow a smoth transition from the integral form of the Maxwell equations to the differential ones. 
+
+    The Gauss Law for the electric field \ref{eq:GaussE} is really easy to read when we know the geometric interpretatio4n of the divergence operator $\nabla \cdot $ which quantifies how much the electric field $\vec{E}$ goes into (also gets out) from a point, but the right hand side of the equation \ref{eq:GaussE} tells us that the presence of any \textit{charge density} $\rho$ produces sources and sinks of electric field (positive charge densities produce sources and negative charge densities produce sinks of electric field).
+
+    The Gauss Law for the magnetic field \ref{eq:GaussB} tells us that \textbf{alwyas the sources of magnetic fields are compensated by sinks of magnetic fields}, also it is interpreted as \textbf{there are no magnetic fields monopoles}.
+
+    The equation \ref{eq:FaradayLens} is known as the Faraday-Lenz law, the Faraday law tells us that every circulation of electric field produces a variation of magnetic field and every time variation of magnetic field produces circulations of electric field, however there is something importart, because if we take the equation \ref{eq:FaradayLens} as $\nabla \times \vec{E} = \partial_t \vec{B} $ without the minus sign there wont be energy conservation, so the minus sign is introduced by Lenz and this equation can describe the beahavior of eddy currents.
+
+    The fourth equation \ref{eq:AmpereMaxwell} describes the circulations of magnetic fields, due to the Gauss Law \ref{eq:GaussB} there wont be any polar magnetic field, it is only possible to have axial-like magnetic fields so, this circulations can only be created by two ways, from the presence of density currents $\vec{J}$ or by time variation of the electric fields, Maxwell added this term such that the continuity equation
+    \begin{equation}
+        \frac{\partial}{\partial t}\rho + \bm{\nabla}\cdot \vec{J} = 0,
+    \end{equation}
+    is satisfied.
+    
+
+    Now,because we're interested in the study of the electromagnetic radiation \textit{light} we must look for a wave equation, to do this, we're going to use the following mathematical identity:
+    \begin{equation}\label{eq:TripleCurl}
+        \bm{\nabla}\times \left(\bm{\nabla} \times \vec{B} \right) =  \bm{\nabla} \left(\bm{\nabla} \cdot \vec{A}\right) - \nabla^2 \vec{A}.
+    \end{equation}
+
+    From the Faraday-Lenz law \ref{eq:FaradayLens} we've got applying the curl to both sides
+    \begin{align*}
+        & \bm{\nabla}\left(\bm{\nabla} \times \vec{E} \right) = -\bm{\nabla} \times \left(\frac{\partial}{\partial t}\vec{B} \right),
+    \end{align*}
+    now, befores we're going further we're going to suppose that the electromagnetic fields are smooth vector functions, or at least of class $\mathcal{C}^2 := \left\{ f : D^2f \in \mathcal{C} \right\}$ (this means all the second derivaties are continuos), therefore because these are continuous we can use the identity \ref{eq:TripleCurl} and interchange the curl with the time derivative on $\vec{B}$, thus
+    \begin{equation*}
+        \bm{\nabla}\left(\bm{\nabla} \cdot \vec{E} \right) - \nabla^2 \vec{E} = - \frac{\partial}{\partial t} \left(\bm{\nabla} \times \vec{B} \right),
+    \end{equation*}
+    to solve the left hand side we are going to use the Gauss law of the electric field \ref{eq:GaussE} and for the right hand side we're going to use the Ampére-Maxwell law \ref{eq:AmpereMaxwell} such that we've got
+    \begin{align*}
+        \bm{\nabla}\left(\frac{\rho}{\epsilon_0} \right) - \nabla^2 \vec{E} = -\frac{\partial}{\partial t}\left(\mu_0\epsilon_0 \frac{\partial}{\partial t}\vec{E} + \mu_0 \vec{J}  \right),
+    \end{align*}
+    \begin{equation}\label{eq:WaveEqESources}
+        \nabla^2\vec{E} - \frac{1}{C^2}\frac{\partial^2}{\partial t^2}\vec{E} = \frac{1}{\epsilon_0}\bm{\nabla}\rho - \mu_0 \frac{\partial}{\partial t}\vec{J},
+    \end{equation}
+    where $C^2 = \frac{1}{\epsilon_0 \mu_0}$. 
+
+    The \ref{eq:WaveEqESources} is the formal wave equation for the electric field. In the left hand side we find the traditional well known wave equation but on the right hand side we can see some physical information about how can those waves be generated. We can see that any gradient of electric charg densities produces electric waves and also time variations of the current density, and the minus sign isn't there just to be beauty, the minus sign comes from the Lenz-law, therefore that minus sign guarantees the energy conservation on the electric field waves. Now, we've shown that there are electric waves so we're going to proof that there are also magnetic waves.
+
+    From the Ampére-Maxwell law \ref{eq:AmpereMaxwell} we've got applying the curl on both sides
+    \begin{equation*}
+        \bm{\nabla}\left(\bm{\nabla} \times \vec{B} \right) = \bm{\nabla} \times \left( \mu_0\epsilon_0 \frac{\partial}{\partial t}\vec{E} + \mu_0 \vec{J}\right),
+    \end{equation*}
+    now, under our assumptions and also $\rho, \vec{J}$ are at leat $\mathcal{C}^2$, then we can apply the identity \ref{eq:TripleCurl} and interchange the time derivatide with the curl on $\vec{E}$, thus
+    \begin{equation*}
+        \bm{\nabla}\left(\bm{\nabla} \cdot \vec{B} \right) -\nabla^2 \vec{B} = \mu_0\epsilon_0 \frac{\partial}{\partial t}\left(\bm{\nabla}\times E\right) + \mu_0 \bm{\nabla}\times \vec{J}.
+    \end{equation*}
+    On the left side we can use the Gauss law for the magnetic field \ref{eq:GaussB}, and on the right hand side we can use the Faraday-Lenz law thus
+    \begin{equation*}
+        -\nabla^2 \vec{B} = \mu_0\epsilon_0 \frac{\partial}{\partial t}\left(-\frac{\partial}{\partial t}\vec{B}\right) + \mu_0 \bm{\nabla}\times \vec{J},
+    \end{equation*}
+    \begin{equation}\label{eq:WaveEqBSources}
+        \nabla^2 \vec{B} - \frac{1}{C^2}\frac{\partial^2}{\partial t^2}\vec{B} = - \mu_0 \bm{\nabla}\times \vec{J}.
+    \end{equation}
+
+    The equation \ref{eq:WaveEqBSources} is the wave equation for the magnetic field, on the left hand side we can recognize the traditional wave terms and on the right hand side we can see the sources of magnetic waves, because there are no magnetic monopoles there is not term for gradients of such charges, only the circulations of density currents produces this magnetic waves.
+
+    Befores going any further we must stop and think about something important, if the light is both electric and magnetic radiation, why the equations \ref{eq:WaveEqESources} and \ref{eq:WaveEqBSources} are only coupled by the density current, or even more, in the vacuum, both equation are independent, so if we think on photons we can question ourselves, \textit{\textbf{Where are the photons? Are the photons on the electric or magnetic field}} We are so used to learn they're on both, but how?
+
+\section{Maxwell equations are the Schrödinger equation for photons}
+
+    The sentence \textit{photons are in the electromagnetic radiation} is easy to beliave but hard to proof from a classical point of view. We could be tempted by the devil and add both equation \ref{eq:WaveEqESources} and \ref{eq:WaveEqBSources} and get something like
+    \begin{equation}\label{eq:WaveEqDevil}
+        \nabla^2\left(\vec{E}+\vec{B}\right)- \frac{1}{C^2}\frac{\partial^2}{\partial t^2} \left(\vec{E}+\vec{B}\right) = \frac{1}{\epsilon_0}\bm{\nabla}\rho - \mu_0 \left(\frac{\partial}{\partial t} + \bm{\nabla}\times \right)\vec{J},
+    \end{equation}
+    which is correct, completely correct \textbf{in a world where does not exist physics and analysis}.
+
+    From an analysis point of view, the electric field $\vec{E}$ and the magnetic field $\vec{B}$ have got completely different natures, the electric field is a polar vector function, and the magnetic field is an axial vector function, so both fields live on differente vector spaces and the addition $\vec{E}+\vec{B}$ does not have any sense.
+
+    To solve this problem, there is an interesing vector field called the \textbf{\textit{Riemann-Silberstein field}} which is a correct mathematical (and physical as we we'll see) superposition of the electric and magnetic fields given by
+    \begin{equation}\label{eq:RiemannSilberstein}
+        \vec{F} = \vec{E} + iC\vec{B}.
+    \end{equation}
+    That imaginary unit $i$ may be seen innocent, however adding this complex topology to $\vec{E},\vec{B}$ solves the superposition problem. It is called for Riemann because he was the first one who studied (alongside Gauss) the electromagnetism using complex numbers, and for Riemann because he used the vector field \ref{eq:RiemannSilberstein} to rewrite the Einstein's field equations in a quaternions formulation. This may be seen as an innocent superpostion but we're going to see that this will allow us, from a classical point of view, to arrive to the correct \textit{photon wave function} and showing that the Maxwell equations acting on \ref{eq:RiemannSilberstein} (which behaves as the photon field) are also quantum equations.
+
+    Lets rewrite the Maxwell equations \ref{eq:GaussE}-\ref{eq:AmpereMaxwell} in terms of the photon field $\vec{F}$. First, just multiply the Gauss law for the magnetic field \ref{eq:GaussB} by $iC$ and add to the electric Gauss law \ref{eq:GaussE} and we'll have
+    \begin{equation}
+        \bm{\nabla}\cdot\left(\vec{E}+iC\vec{B} \right) = \frac{\rho}{\epsilon_0}.
+    \end{equation}
+    And, also multiply the Ampére-Maxwell law \ref{eq:AmpereMaxwell} by $iC$ and add it to the Faraday-Lenz law \ref{eq:FaradayLens} we will have
+    \begin{equation}
+        \bm{\nabla}\times \left(\vec{E}+iC\vec{B} \right) = \frac{i}{C}\frac{\partial}{\partial t}\left(\vec{E}+iC\vec{B} \right) + iC\mu_0 \vec{J}.
+    \end{equation}
+
+    Joning both equations and using the definitions of $\vec{F}$ we'll wave that the four Maxwell's equations becomes two
+    \begin{align}
+        & \bm{\nabla} \cdot \vec{F} = \frac{\rho}{\epsilon_0}, & \text{Gauss law for the photon field} \label{eq:GaussF}\\
+        & \bm{\nabla}\times \vec{F} = \frac{i}{C}\frac{\partial}{\partial t}\vec{F} + iC\mu_0 \vec{J}, & \text{Faraday-Lenz-Ampére-Maxwell laws for the photon field.} \label{eq:FLAMF}
+    \end{align}
+
+    The physical interpretaion of the equations \ref{eq:GaussF} and \ref{eq:FLAMF} becomes clear. The Gauss law \ref{eq:GaussF} tells us that the presence of charge densities produces sources and sinks of photon fields (electromagnetic fields), and the second equation \ref{eq:FLAMF} says that time variatons of the photon field produces circulations of photon fields and also, the mere presence of density currents produces also circulations of this photon fields. Now it is becoming clearer the relation between where are the photons and how can it be seen in the elctromagnetic field at classical levels.
+
+    Now, we're going to proof that the set of equations \ref{eq:GaussF} and \ref{eq:FLAMF} contains two wave equation. One traditional wave equation for $\vec{F}$ and an Schrödigner wave equation for $\vec{F}$, showing this beauty behavior both classical and quantum of the Maxwells equation. Lets apply the curl of the second law \ref{eq:FLAMF} to both sides as follows
+
+    \begin{equation*}
+        \bm{\nabla}\times \left(\bm{\nabla} \times \vec{F} \right) = \frac{i}{C}\bm{\nabla}\times \left(\frac{\partial}{\partial t}\vec{F} \right) + iC\mu_0 \bm{\nabla}\times \vec{J},
+    \end{equation*}
+    applying the identity \ref{eq:TripleCurl} on the left han side and permutting th time derivative and the curl in the right hand side as
+    \begin{equation*}
+        \bm{\nabla}\left(\bm{\nabla}\cdot\vec{F}\right) - \nabla^2\vec{F} = \frac{i}{C}\frac{\partial}{\partial t}\left(\bm{\nabla}\times \vec{F}\right) + iC\mu_0 \bm{\nabla}\times\vec{J},
+    \end{equation*}
+    using the Gauss law \ref{eq:GaussF} and the FRAM law \ref{eq:FLAMF} we'll have 
+    \begin{equation*}
+        \frac{1}{\epsilon_0}\bm{\nabla}\rho - \nabla^2 \vec{F} = \frac{i}{C}\frac{\partial}{\partial t}\left(\frac{i}{C}\frac{\partial}{\partial t}\vec{F} + iC\mu_0 \vec{J} \right)+iC\mu_0 \bm{\nabla}\times \vec{J},
+    \end{equation*}
+    and ordergin the terms we are going to have the \textit{classical wave equation for the photon field}
+    \begin{equation}\label{eq:WaveEqF}
+        \nabla^2\vec{F} - \frac{1}{C^2}\frac{\partial^2}{\partial t^2}\vec{F} = \frac{1}{\epsilon_0}\bm{\nabla}\rho - \mu_0 \left(\frac{\partial}{\partial t} + \bm{\nabla}\times \right)\vec{J}.
+    \end{equation}
+
+    We can see that looks very similar to the sinister equation \ref{eq:WaveEqDevil} but that was a really forced one insted of our beauty \ref{eq:WaveEqF} which was calculated from the Maxwell's equations, and we see the origin of this electromagnetic or photon fields, these waves are originated as from charge density gradientes, and time variations and circulations of the density current, now the behavior of the photons, from a classical perspective can be seen in the presence of charges and currents.
+
+    Now, to find out the quantum wave equation from the classical equation \ref{eq:FLAMF} we are going to use, the following algebraic identity:
+    \begin{align}
+        & \vec{A}\times\vec{B} = i \left(\vec{A}\cdot\vec{S}\right)\vec{B},\qquad \vec{S}= S_x \hat{i} + S_y\hat{j} + S_z\hat{k} \label{eq:IdentityS}\\
+        & S_x =
+        \begin{bmatrix}
+            0 & 0 & 0 \\
+            0 & 0 & -i\\
+            0 & i & 0
+        \end{bmatrix}, \;
+        S_y =
+        \begin{bmatrix}
+            0 & 0 & i\\
+            0 & 0 & 0\\
+            -i & 0 & 0
+        \end{bmatrix},\;
+        S_z =
+        \begin{bmatrix}
+            0 & -i & 0\\
+            i & 0 & 0\\
+            0 & 0 & 0
+        \end{bmatrix}. \nonumber
+    \end{align}
+
+    The matrices $S_x,S_y,S_z$ are called teh photon spin $1$ matrices, and $\vec{A},\vec{B}$ are arbitrary vectors. Uusing the identity \ref{eq:IdentityS} on \ref{eq:FLAMF} we'll have
+    \begin{align*}
+        & \bm{\nabla}\times \vec{F} = -i\left(\bm{\nabla}\cdot\vec{S}\right)\vec{F}, \quad \text{using the product rule}\\
+        & \bm{\nabla}\times \vec{F} = -i\left(\vec{S}\cdot \bm{\nabla}\right)\vec{F},\\
+        & \frac{i}{C}\frac{\partial}{\partial t}\vec{F} = -i\left(\vec{S}\cdot \bm{\nabla}\right)\vec{F} -i C\mu_0\vec{J},
+    \end{align*}
+    multipliying both sides by $C\hbar$ we'll have
+    \begin{equation}
+        i\hbar \frac{\partial}{\partial t}\vec{F} = C \left(\vec{S}\cdot \frac{\hbar}{i}\bm{\nabla}\right)\vec{F} - i \hbar C^2\mu_0 \vec{J},
+    \end{equation}
+    which is the Schrödinger-like equation for the photon field $\vec{F}$ with the perturbation of the density currents $\vec{J}$ if we're on the vacuum, we'll have the well known as the \textit{\textbf{Birula's photon wave function}} \cite{bialynicki1994wave}
+    \begin{equation}
+        i\hbar \frac{\partial}{\partial t}\vec{F} = C \left(\vec{S}\cdot \frac{\hbar}{i}\bm{\nabla}\right)\vec{F}.
+    \end{equation}
+
+    Therefore the Maxwells equation by themselves are classical and quantum, contains the wave functions that describes the photon behavior and, as we we'll see further in this lectures, we can carry on this result to general relativity using a tensor that I named \textbf{Riemann-Silberstein tenstor} which even condensates the four equations to just one.
+
+\section{Properties of the electromagnetic waves}
+
+    \subsection{Principal solutions of the electric wave equation}
+
+    \subsection{From 3D wavefronts to 2D wavefronts}
+
+\section{Light's polarisation}
+
+    \subsection{Monochromatic and deterministic formulation: Jones spinors and the polarization ellipse}
+
+    \subsection{Time evolution of the polarisations: Stokes paramters and the Poincaré sphere}
+
+    \subsection{Transformations of Polarisation}

@@ -281,7 +281,7 @@
 
             \begin{figure}[h]
                 \centering
-                \includegraphics[width = 0.8\textwidth]{Chapter 2/Figures/Epejo.pdf}
+                \includegraphics[width = 0.5\textwidth]{Chapter 2/Figures/Mirror.pdf}
                 \caption{Representation of a cylindrical ray light being reflected by a perfectly polished mirror.}
                 \label{fig:Epejo}
             \end{figure}
@@ -289,7 +289,7 @@
 
             \begin{figure}[h]
                 \centering
-                \includegraphics[width = 0.9\textwidth]{Chapter 2/Figures/NonRefract.pdf}
+                \includegraphics[width = 0.7\textwidth]{Chapter 2/Figures/NonRefract.pdf}
                 \caption{Representation of a cylindrical bunch of rays being reflected by an inhomogeneus surface.}
                 \label{fig:NonRefract}
             \end{figure}
@@ -326,7 +326,7 @@
 
             \begin{figure}[h]
                 \centering
-                \includegraphics[width=0.8\textwidth]{Chapter 2/Figures/n1>n2.pdf}
+                \includegraphics[width=0.46\textwidth]{Chapter 2/Figures/n1>n2.pdf}
                 \caption{Representation of all the incident and refracted rays from a media with refraction index $n_1$ to another with refraction index $n_2$ such that $n_1>n_2$. The angle $\theta_2$ here shown wont never reach a value equal to $asin\left(\frac{n_1}{n_2}\right)$.}
                 \label{fig:n1>n2}
             \end{figure}
@@ -335,7 +335,7 @@
 
             \begin{figure}[h]
                 \centering
-                \includegraphics[width=0.9\textwidth]{Chapter 2/Figures/n1<n2.pdf}
+                \includegraphics[width=0.6\textwidth]{Chapter 2/Figures/n1<n2.pdf}
                 \caption{Representation of all the incident and refracted rays from a media with refraction index $n_1$ to another with refraction index $n_2$ such that $n_1<n_2$. The angle $\theta_c$ here separates the rays that will be refracted , (angles less than $\theta_c$), and the rays that will be totally reflected internally.}
                 \label{fig:n1<n2}
             \end{figure}
@@ -344,7 +344,71 @@
 
         From here on we are going to start to study the theory of image formation where the concepts of \textbf{object} and \textbf{image} are really important because there are real and virtual objects and image, this depends on the relation between these points ant the diopter, in fact, something is called virtual if we put a photo detector in that point and we wont measure any field if an object is to the left of a diopter is called real and if it is to the right is called virtual, in the same order of ideas if the image is to the left of the diopter it is virtual and if it is to the right is real.\\
 
-        Now we are going to develope the \textit{rigurous estigmatism} thes are system capable of making perfect images, this means from a point source there is a perfect point image. Let a diopter which separates two media with refraction index $n_o$ and $n_i$ to the left of the diopter there is an object $A_o$ at a point $[0,0,z_o]$ the field from $A_o$ reaches a point $I$, measured from the diopter's vertex $v$, from the point I the beam is refracted and forms an image $A_i$ at a point $[0,0,z_i]$ then we are going to find the relations between all these parameters to make all the rays from $A_o$ arrive at $A_i$ making a perfect image. From the Fermat's principle we have got
+        Before starting we have to give some fundamental definitions
+
+        \begin{myDef}
+            \textit{(Optical system)} an optical system is a set of translucid media (diopters) and reflective media (catopters) and we say that the \textbf{system is centered} if all the diopters are revolution surfaces and shared the same symmetry axis.
+
+            The systems conformed only by refractive surfaces all called \textbf{dioptric systems} and the system conformed only by reflective surfaces are called \textbf{catoptric systems} and the systems formed by these two kind of surfaces are called \textbf{catadioptrics systems}.
+        \end{myDef}
+
+        \begin{myDef}
+            \textit{(Real and virtual points)} Given a optical system $\mathcal{S}$ we say that an object point $A_o$ is real if it is to the left and outside the optical system and we way that the object point is virtual if it is to the right and inside the optical system.
+
+            In the same way, we say that an image point $A_i$ is real if it is to the right and outside the optical system, and we way that the image point is virtual if it is inside the optical system.
+        \end{myDef}
+
+        \begin{figure}[h]
+            \centering
+            \subfloat[\centering Optical system $\mathcal{S}$ formed by two diopters $\mathcal{S}_1,\mathcal{S}_2$ where the point $A_o$ is a real object and $A_i$ is a real image point.]{{\includegraphics[width=0.45\textwidth]{Chapter 2/Figures/OpticalSystem_1.pdf} }}%
+            \qquad
+            \subfloat[\centering Optical system $\mathcal{S}$ formed by two diopters $\mathcal{S}_1,\mathcal{S}_2$ where the point $A_o$ is a real object and $A_i$ is a virtual image point.]{{\includegraphics[width=0.45\textwidth]{Chapter 2/Figures/OpticalSystem_2.pdf} }}
+            \caption{Representation of two optical systems where appear real object points, real and virtual image points.}%
+            \label{fig:OpticalSystem12}
+        \end{figure}
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.5\textwidth]{Chapter 2/Figures/OpticalSystem_3.pdf}
+            \caption{Optical system $\mathcal{S}$ formed by two diopters $\mathcal{S}_1,\mathcal{S}_2$ where the point $A_o$ is a virtual object and $A_i$ is a virtual image point.}
+            \label{fig:OpticalSystem3}
+        \end{figure}
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.9\textwidth]{Chapter 2/Figures/OpticalSystem_4.pdf}
+            \caption{Optical system $\mathcal{S}$ formed by three optical systems $\mathcal{S}_1,\mathcal{S}_2,\mathcal{S}_3$ where the point $A_o$ is a real object point, $A'$ is a virtual image point for $\mathcal{S}_1$, but a real object point for $\mathcal{S}_2,\mathcal{S}_3$, $A''$ is a virtual image for the real object $A'$ and $A_i$ is the real image of the virtual object $A''$.}
+            \label{fig:OpticalSystem4}
+        \end{figure}
+
+        To understand better these two definitions lets follow the figures \ref{fig:OpticalSystem12} there we can see two examples of optical systems. In the first one we can see an object point located to the left and outside of the system $\mathcal{S}$ so it is a real object point, and the point $A_i$ is located to the right and outside the optical system, therefore it is a real image point. In the second optical system we can see that the same real object point  and that the point $A_i$ is located inside the optical system, therefore it is a virtual image point for $A_o$.\\
+
+        In the figure \ref{fig:OpticalSystem3} we can see two diopter $\mathcal{S}_1,\mathcal{S}_2$ which forms the optical system $\mathcal{S}$ where the point $A_o$ is located inside the optical system, then it behaves as a virtual object point and $A_i$ is to the right of $A_o$ and also inside the optical systen, therefore it is a virtual image point.\\
+
+        In the optical system \ref{fig:OpticalSystem4} we can see three optical systems $\mathcal{S}_1,\mathcal{S}_2,\mathcal{S}_3$ and a configuration of many points. The first one, $A_o$ is completely to the left and outside any optical system, so it is a real object point, and the point $A'$ is inside the optical system $\mathcal{S}_1$ so it is the \textbf{the virtual image of the real object $A_o$} but, as we can see, $A'$ is to the left and outside the optical system $\mathcal{S}_2$ so it is a real object point for the rest of the total optical system. The point $A''$ is inside the optical system $\mathcal{S}_3$ so it is the virtual image of the real object $A'$, and in the very last there is the point $A_i$ which is completely to the right and outside any optical system, so it is the real image point of the virtual object point $A''$.\\
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.8\textwidth]{Chapter 2/Figures/Stigmatism.pdf}
+            \caption{The stigmatic system transform the incident wavefront $\mathcal{A}$ to another new spherical wavefront $\mathcal{A}'$.}
+            \label{fig:Stigmatism}
+        \end{figure}
+
+        \begin{myDef}
+            \textit{(Stigmatism)} From a \textbf{geometrical point of view} we say that an optical system $\mathcal{S}$ is \textbf{stigmatic} if for any given point source, all the rays that pass through $\mathcal{S}$ converge to a point source. In other words, a optical system $\mathcal{S}$ is stigmatic if for any  object point there is one unique image point.\\
+
+            We can also, define the stigmatism from a wavefront perspective. An rigorously stigmatic system is one that transforms an spherical wavefront $\mathcal{A}$ to a new spherical wavefront $\mathcal{A}'$ whose curvature centers, $A_o$ and $A_i$ are the rigorously stigmatic points (see figure \ref{fig:Stigmatism} ). Thus, the spherical wavefront $\mathcal{A}'$ is the image of the spherical wavefront $\mathcal{A}$.
+        \end{myDef}
+
+        Understanding that an image-forming optical system is one that maps each point source of an object's electromagnetic field to the point sources of the image's electromagnetic field, corresponding to a homothety between these fields, the interest arises in studying what these optical systems are and what their characteristics are. In general, these systems can be composed of multiple elements, but initially we will study the simplest configuration for two reasons:
+
+        \begin{enumerate}
+            \item because it most easily allows us to understand the principles of these systems.
+            \item because later, more complex systems can be understood as compositions of these.
+        \end{enumerate}
+        These elementary systems are made up of a single optical surface, either refractive or reflective, which is capable of perfectly focusing all the rays emitted by a point source into a perfect point image. In geometric optics, this means that all the rays travel the same optical path length. Initially, this property associated with a single pair of points (stigmatism) will be studied, and then the conditions under which this property becomes invariant to the translation of these points, which is known as aplanetism, will be studied.\\
+ 
+        Now we are going to develope the \textit{rigurous stigmatism} thes are system capable of making perfect images, this means from a point source there is a perfect point image. Let a diopter which separates two media with refraction index $n_o$ and $n_i$ to the left of the diopter there is an object $A_o$ at a point $[0,0,z_o]$ the field from $A_o$ reaches a point $I$, measured from the diopter's vertex $v$, from the point I the beam is refracted and forms an image $A_i$ at a point $[0,0,z_i]$ then we are going to find the relations between all these parameters to make all the rays from $A_o$ arrive at $A_i$ making a perfect image. From the Fermat's principle we have got
 
         \begin{equation}
             n_0l_0 + n_il_i = cte
@@ -370,62 +434,383 @@
         \end{equation}
 
         \begin{equation}
-            -n_0[x^2+y^2 + (z-z_o)^2]^{1/2} + n_i[x^2+y^2 + (z-z_i)^2]^{1/2} = n_iz_i-n_oz_o,
+            n_i[x^2+y^2 + (z-z_i)^2]^{1/2} -n_0[x^2+y^2 + (z-z_o)^2]^{1/2}  = n_iz_i-n_oz_o,
         \end{equation}
-
-        we can write it in terms of the position vector $\Vec{\rho}$ between the vertex $V$ and the incident point $I$ in the following way
-
-        \begin{equation}\label{eq:OvoideCasi}
-            -n_0[\rho^2 + (z-z_o)^2]^{1/2} + n_i[\rho^2+ (z-z_i)^2]^{1/2} = n_iz_i-n_oz_o,
-        \end{equation}
-
-        lets develop the equation \ref{eq:OvoideCasi} to do it, we are going to square both sides 
+        now, we are going to do the following change of variables given by 
 
         \begin{equation}
-            n_o^2(\rho^2+z_o^2-2zz_o)+n_i^2(\rho^2+z_i^2-2zz_i)-(n_iz_i-n_oz_o)^2=-2n_on_1(\rho^2+z_o^2-2zz_o)^{1/2}(\rho^2+z_i^2-2zz_i)^{1/2},
+            \rho^2 = x^2 + y^2 + z^2,
         \end{equation}
-        now, we're going to reorganize all the terms to have a more convenient form which will allow us to complete squares later
+        which represents the square of the vector from the vertex to the interface shown in \ref{fig:AlmostOvoid}, so, having this on count, the equation  becomes
+        
+        \begin{align}\label{eq:Ovoid1}
+            & n_i\left[\rho^2 +z_i^2 -2zz_i\right]^{1/2}- n_0\left[ \rho^2 +z_0^2 -2zz_0 \right]^{1/2} = n_iz_i - n_0z_0.
+        \end{align}        
+
+        Now, the main goal is to transform the equation \ref{eq:Ovoid1} into a more explicit and useful algebraic equation, so, the first thing we're going to do is to square both side of the equation \ref{eq:Ovoid1} and then we'll have
+
+        \begin{equation*}
+            n_o^2 \left[ \rho^2 + z_o^2 - 2zz_o \right] + n_i^2\left[  \rho^2 + z_i - 2zz_i\right] - 2n_on_1 \left[ \rho^2 + z_o^2 -2zz_o \right]^{1/2}\left[\rho^2 + z_i^2 - 2zz_i\right]^{1/2} = \left( n_iz_i - n_oz_o \right)^2
+        \end{equation*}
+
+        Now, we're going to re-order all the equation for convenience as follows
+
+        \begin{equation*}
+            n_o^2 \left[ \rho^2 + z_o^2 - 2zz_o \right] + n_i^2\left[  \rho^2 + z_i - 2zz_i\right] - \left( n_iz_i - n_oz_o \right)^2 = 2n_on_1 \left[ \rho^2 + z_o^2 -2zz_o \right]^{1/2}\left[\rho^2 + z_i^2 - 2zz_i\right]^{1/2},
+        \end{equation*}
+        on the left hand side we have got the following
+        \begin{align*}
+            & n_o^2 \left[ \rho^2 + z_o^2 - 2zz_o \right] + n_i^2\left[  \rho^2 + z_i - 2zz_i\right] - \left( n_iz_i - n_oz_o \right)^2 = \\
+            & n_o^2 \left[ \rho^2 + z_o^2 - 2zz_o \right] + n_i^2\left[  \rho^2 + z_i - 2zz_i\right] - \left( n_i^2z_i^2 + n_o^2z_o^2 - 2n_on_iz_oz_i \right) = \\
+            & n_o^2\left[ \rho^2 - 2zz_o \right] + n_i^2\left[ \rho^2 - 2zz_i \right] + 2n_on_iz_oz_i,
+        \end{align*}
+        where we just only simplified the common terms. Having this on count, the equation reduces to
 
         \begin{equation}
-            n_o^2(\rho^2-2zz_o)+n_i^2(\rho^2-2zz_i)+2n_in_oz_iz_o = -2n_on_1(\rho^2+z_o^2-2zz_o)^{1/2}(\rho^2+z_i^2-2zz_i)^{1/2},
+            n_o^2\left[ \rho^2 - 2zz_o \right] + n_i^2\left[ \rho^2 - 2zz_i \right] + 2n_on_iz_oz_i = 2n_on_1 \left[ \rho^2 + z_o^2 -2zz_o \right]^{1/2}\left[\rho^2 + z_i^2 - 2zz_i\right]^{1/2}.
         \end{equation}
 
-        squaring both sides again then we have
+        Now, we must square again, the whole equation as follows
+        \begin{align*}
+            & \left[ n_o^2\left( \rho^2 -2zz_o \right) + n_i^2\left( \rho^2-2zz_i \right) \right]^2 +\left( 2n_on_iz_oz_i \right)^2 + 4n_on_iz_oz_i \left[ n_o^2\left( \rho^2-2zz_o \right) + n_i^2\left( \rho^2 - 2zz_i \right) \right] = \\
+            & 4n_o^2n_i^2\left( \rho^2 + z_o^2 - 2zz_o \right)\left( \rho^2 + z_i^2 - 2zz_i \right),
+        \end{align*}
+        now we are going to expand the product on the right hand side in the following way
+
+        \begin{align*}
+            & \left[ n_o^2\left( \rho^2 -2zz_o \right) + n_i^2\left( \rho^2-2zz_i \right) \right]^2 +\left( 2n_on_iz_oz_i \right)^2 + 4n_on_iz_oz_i \left[ n_o^2\left( \rho^2-2zz_o \right) + n_i^2\left( \rho^2 - 2zz_i \right) \right] = \\
+            & \text{\color{red} $4n_o^2n_i^2\left( \rho^2 - 2zz_o \right)\left( \rho^2 - 2zz_i \right)$} + 4n_o^2n_i^2 \left[ z_o^2 \left( \rho^2 - 2zz_i \right) + z_i^2\left( \rho^2-2zz_o \right)  +z_o^2z_i^2 \right].
+        \end{align*}
+
+        Now, we must do a simplification, to do this, we must expand the first term of the left hand side like this
+        \begin{equation*}
+            \left[ n_o^2\left( \rho^2 -2zz_o \right) + n_i^2\left( \rho^2-2zz_i \right) \right]^2 = \left[ n_o^2\left( \rho^2-2zz_o \right)\right]^2 + \left[ n_i^2\left( \rho^2-2zz_i \right)\right]^2 + \text{\color{red} $ 2n_o^2n_i^2\left( \rho^2 -2zz_o \right)\left( \rho^2 -2zz_i \right) $ },
+        \end{equation*}
+        so the first term of the left hand side have on common in its expansion the same term than the expansion of the term on the right hand side, so, we could simplify then and look at the binomial is the same but with a minus sign instead of a plus sign, thus
+
+        \begin{align*}
+            & \left[ n_o^2\left( \rho^2 -2zz_o \right) - n_i^2\left( \rho^2-2zz_i \right) \right]^2 +\left( 2n_on_iz_oz_i \right)^2 + 4n_on_iz_oz_i \left[ n_o^2\left( \rho^2-2zz_o \right) + n_i^2\left( \rho^2 - 2zz_i \right) \right] = \\
+            & 4n_o^2n_i^2 \left[ z_o^2 \left( \rho^2 - 2zz_i \right) + z_i^2\left( \rho^2-2zz_o \right)  +z_o^2z_i^2 \right].
+        \end{align*}
+
+        Now, we are going to forget, momentarily the first term of the left hand side and focus on all the rest of the equations because there are going to be many important simplifications. Then, having this on count we'll have the following:
+
+        \begin{align*}
+            & \left( 2n_on_iz_oz_i \right)^2 + 4n_on_iz_oz_i \left[ n_o^2\left( \rho^2-2zz_o \right) + n_i^2\left( \rho^2 - 2zz_i \right) \right] - 4n_o^2n_i^2 \left[ z_o^2 \left( \rho^2 - 2zz_i \right) + z_i^2\left( \rho^2-2zz_o \right)  +z_o^2z_i^2 \right] = 0
+        \end{align*}
+        \begin{align*}
+            & 4n_on_i \left[ z_oz_in_o^2\left( \rho^2 -2zz_o\right) + z_oz_in_i^2\left(\rho^2 - 2zz_i  \right) -n_on_iz_o^2 \left( \rho^2 -2zz_i \right) - n_on_iz_i^2\left( \rho^2 -2zz_o \right)  \right.\\
+            & \left.  - n_on_izo^2z_i^2 + n_on_iz_o^2z_i^2\right],
+        \end{align*}
+        now, we have to factorize the common factors
+        \begin{align*}
+            & 4n_on_i\left[ \left( \rho^2-2zz_o \right)\left( z_oz_in_o^2 - n_on_iz_i^2 \right) + \left( \rho^2 - 2zz_i \right)\left( z_oz_in_i^2-n_on_iz_o^2 \right) \right] = \\
+        & 4n_on_i\left[ z_in_o \left( \rho2 - 2zz_o \right)\left( z_on_o - n_iz_i \right) + z_on_i \left( \rho^2 - 2zz_i \right)\left( z_in_i - z_on_o \right) \right] = \\
+        & 4n_on_i \left[ n_iz_i - n_oz_o \right]\left[ n_iz_o \left( \rho^2 - 2zz_i \right) - n_oz_i \left( \rho^2 - 2zz_o \right) \right]=\\
+        & 4n_on_i \left[ n_iz_i-n_oz_o \right]\left[ \rho^2\left( n_iz_o - n_oz_i \right) + 2zz_iz_o \left(n_o-n_i\right) \right].
+        \end{align*}
+
+        So, joining this result with the first term we will have the following
+
+        \begin{equation*}
+            \left[ n_o^2\left( \rho^2 -2zz_o \right) - n_i^2\left( \rho^2-2zz_i \right) \right]^2 +  4n_on_i \left[ n_iz_i-n_oz_o \right]\left[ \rho^2\left( n_iz_o - n_oz_i \right) + 2zz_iz_o \left(n_o-n_i\right) \right] = 0,
+        \end{equation*}
+        so, the last things we have to do are: multiply everything by a minus sign $(-)$ and re organize in the following way
+
+        \begin{equation}\label{eq:DescartesOvoid}
+            \left[ \left(n_i^2-n_o^2\right)\rho^2 + 2z\left( n_i^2z_i - n_o^2z_o \right) \right]^2 - 4n_in_o \left[ n_iz_i - n_oz_o \right]\left[ \left( n_oz_i - z_iz_o \right)\rho^2 + 2zz_oz_i\left(n_o - n_o\right) \right]=0.
+        \end{equation}
+
+        \textbf{\textit{The equation \ref{eq:DescartesOvoid} is the algebraic expression for the Descartes Ovoid the rigorously stigmatic surface we wanted.}} 
+
+    \section{The spherical diopter}
+
+        Now, we are going to see that the Descartes Ovoid \ref{eq:DescartesOvoid} contains the information of all the other diopters known. So, the first one we are going to deduce is the spherical diopter this is obtained in a vicinity of the vertex shown in the figure \ref{fig:AlmostOvoid}. Therefore, to deduce this particular case, we are going to take the equation \ref{eq:DescartesOvoid} and rewrite in the following convenient way
+
+        \begin{equation}\label{eq:DescartesOvoid2}
+            \left[ \left(n_i^2-n_o^2\right)\rho^2 + 2zz_oz_i\left( \frac{n_i^2}{z_o} - \frac{n_o^2}{z_i}\right) \right]^2 - 4n_in_o \left[ n_iz_i - n_oz_o \right]\left[ \left( n_oz_i - z_iz_o \right)\rho^2 + 2zz_oz_i\left(n_o - n_o\right) \right]=0.
+        \end{equation}
+
+        So, the main idea is to construct the sphere that is located in the vertex $v$. To do this, we must see that the squared term in \ref{eq:DescartesOvoid2} looks very similar to the right factor term in the second term, so, we want to equate them and then simplify, which leads us to the following equations
 
         \begin{align}
-            & \left[n_o^2(\rho^2-2zz_o)+n_i^2(\rho^2-2zz_i) \right]^2 + 4n_in_oz_iz_o\left[n_o^2(\rho^2-2zz_o) + n_i^2(\rho^2-2zz_i) \right]\\
-            & + 4n_i^2n_o^2z_i^2z_o^2 = 4n_o^2n_i^2(\rho^2+z_o^2-2zz_o)(\rho^2+z_i^2-2zz_i),
+            & n_o^2 - n_i^2 = c\left( n_oz_i - n_iz_o \right)\label{eq:1},\\
+            & \frac{n_i^2}{z_o} - \frac{n_o^2}{z_i} = c\left(n_i - n_o\right)\label{eq:2}
         \end{align}
-
-        \begin{align*}
-            &\left[n_o^2(\rho^2-2zz_o)+n_i^2(\rho^2-2zz_i) \right]^2 + 4n_in_oz_iz_o\left[n_o^2(\rho^2-2zz_o) + n_i^2(\rho^2-2zz_i) \right] + 4n_i^2n_o^2z_i^2z_o^2\\
-            & = 4n_o^2n_i^2\left[(\rho^2-2zz_o)(\rho^2-2zz_i)+(\rho^2-2zz_o)z_i^2 + (\rho^2-2zz_i)z_o^2 + 4z^2z_oz_i \right],
-        \end{align*}
-
-        If we expand the first perfect squared and have on count the last term on the right hand side we can  see we have again a perfect squared but with opposite sign, therefore
-
-        \begin{align*}
-            & \left[n_o^2(\rho^2-2zz_o)-n_i^2(\rho^2-2zz_i) \right]^2 + 4n_in_oz_iz_o\left[n_o^2(\rho^2-2zz_o) + n_i^2(\rho^2-2zz_i) \right] - 4n_o^2n_i^2z_i^2(\rho^2-2zz_o) \\
-            & -4n_o^2n_i^2z_o^2(\rho^2-2zz_i)=0,
-        \end{align*}
-
-        \begin{align*}
-            & \left[n_o^2(\rho^2-2zz_o)-n_i^2(\rho^2-2zz_i) \right]^2 \\
-            & -4n_in_o\left[-z_iz_o\left\{n_o^2(\rho^2-2zz_o)+n_i^2(\rho^2-2zz_i) \right] + n_on_iz_o^2(\rho^2-2zz_i) + n_on_iz_i^2(\rho^2-2zz_o) \right\} = 0
-        \end{align*}
-
-        \begin{align*}
-            & \left[n_o^2(\rho^2-2zz_o)-n_i^2(\rho^2-2zz_i) \right]^2 \\
-            & -4n_on_i\left\{(\rho^2-2zz_o)\left[n_on_iz_i^2 - n_o^2z_iz_o \right] + (\rho^2 - 2zz_i)\left[n_on_iz_o^2 - n_i^2z_iz_o \right] \right\}=0
-        \end{align*},
-
-        \begin{align*}
-            & \left[n_o^2(\rho^2-2zz_o)-n_i^2(\rho^2-2zz_i) \right]^2 \\
-            & -4n_in_o\left\{n_oz_i(\rho^2-2zz_o)(n_iz_i-n_oz_o) - n_iz_o(\rho^2-2zz_i)(n_iz_i-n_oz_o) \right\} = 0,
-        \end{align*}
-
-        finally we can arrive to a quadric equation for the cartesian surface or the well known as the \textbf{\textit{Descartes ovoid}} which can generate point images from point objects perfectly.
-
-        \begin{equation}
-            \left[(n_i^2-n_o)\rho^2 - 2z(n_i^2z_i - n_o^2z_o) \right]^2 - 4n_in_o(n_iz_i-n_oz_o)\left[(n_oz_i-n_iz_o)\rho^2 +2z_iz_oz(n_i-n_o) \right] = 0
+        where $c$ is a constant we must calculate. The second thing we are going to do, is to re-order the equation \ref{eq:1} in the following way
+        \begin{equation}\label{eq:3}
+            n_o^2 - cz_in_o = n_i^2 - cz_on_i,
         \end{equation}
+        and if we re-order the equation \ref{eq:2} we'll have
+        \begin{align*}
+            &z_in_i^2 - z_on_o^2 = cz_oz_i(n_i-n_o),\\
+            &z_in_i^2 - cz_oz_in_i = z_on_o^2 - cz_oz_in_o,
+        \end{align*}
+        \begin{equation}\label{eq:4}
+            z_o\left( n_o^2 - cz_in_o \right) = z_i \left( n_i^2 - cz_on_i \right).
+        \end{equation}
+
+        So if we use \ref{eq:3} on \ref{eq:4} we have got the following two equations
+        \begin{align}
+            & \left( z_o-z_i \right)\left( n_i^2 - cz_on_i \right) = 0 \label{eq:5},\\
+            & \left( z_o-z_i \right)\left( n_o^2 - cz_in_o \right) = 0 \label{eq:6},
+        \end{align}
+        using the equations \ref{eq:5} and \ref{eq:6} we will have
+        \begin{equation}\label{eq:Case1}
+            z_o = \frac{n_i}{c}, \qquad z_i = \frac{n_0}{c},
+        \end{equation}
+        and using the equation \ref{eq:1} we will have
+        \begin{equation}\label{eq:Case2}
+            z_0 = z_i \qquad z_{0,i} = \frac{n_o+n_i}{c}.
+        \end{equation}
+
+        Now, before going further analyzing this results, we have to use the equations \ref{eq:1}, \ref{eq:2} on \ref{eq:DescartesOvoid2}
+
+        \begin{align*}
+        & \left[ c\left( n_oz_i - n_iz_o \right)\rho^2 + 2zz_oz_ic(n_i-n_o) \right]^2 - 4n_in_o \left[ n_iz_i - n_oz_o \right]\left[ \left( n_oz_i - z_iz_o \right)\rho^2 + 2zz_oz_i\left(n_o - n_o\right) \right]=0,\\
+        & \left[\left( n_oz_i - n_iz_o \right)c\rho^2 + 2zz_oz_ic(n_i-n_o) \right]\left[ \left( n_oz_i - n_iz_o \right)\rho^2 + 2zz_oz_i(n_i-n_o) - 4n_in_o\left(n_iz_i-n_oz_o\right) \right] = 0,
+        \end{align*}
+        and by the fundamental theorem of Algebra, we have got the equation for the spherical diopter
+        \begin{equation}\label{eq:SphericalDiopter}
+            \left( n_oz_i - n_iz_o \right)\rho^2 + 2zz_oz_i(n_i-n_o) = 0.
+        \end{equation}
+
+        \subsection{The Young-Weirstrass points}
+
+            From the case \ref{eq:Case1} we have that
+            \begin{equation*}
+                n_iz_i - n_oz_o=0,
+            \end{equation*}
+            and using the equation \ref{eq:SphericalDiopter} we will have
+            \begin{equation}
+                \rho^2\left( n_o^2-n_i^2\right) + 2czz_on_i(n_i-n_o) = 0,
+            \end{equation}
+            now, dividing by $n_o^2-n_i^2$ and then we must complete squares as follows
+
+            \begin{equation*}
+                x^2+y^2 + z^2 + \frac{2czz_oz_i}{n_i+n_o} = x^2 + y^2 + z^2 + \frac{2czz_oz_i}{n_i+n_o} + \text{\color{red} $\left( \frac{cz_oz_i}{n_i+n_o} \right)^2$}
+                = \text{\color{red} $\left( \frac{cz_oz_i}{n_i+n_o} \right)^2$},
+            \end{equation*}
+
+            \begin{equation}\label{eq:SphericalDiopter1}
+                x^2 + y^2 + \left(z - c\frac{z_oz_i}{n_o+n_i}\right)^2 = c^2 \frac{z_o^2z_i^2}{(n_i+n_o)^2},
+            \end{equation}
+            which corresponds to the equation of an sphere whose radius is given by
+            \begin{equation}
+                R = c \frac{z_oz_i}{n_o+n_i} \longrightarrow x^2 + y^2 + \left(z-R\right)^2 = R^2,
+            \end{equation}
+            and using \ref{eq:Case1} $z_o=n_i/c,\;z_i=n_o/c$ we will have
+
+            \begin{align}
+                & R = c \frac{z_in_i}{c(n_o+n_i)} \longrightarrow z_i = R\left(1 + \frac{n_o}{n_i}\right),\\
+                & R = c \frac{z_on_o}{c(n_o+n_i)} \longrightarrow z_i = R\left(1 + \frac{n_i}{n_o}\right)
+            \end{align}
+            which are known as \textbf{Young-Weirstrass} points or the aplanetic points. One of these points is inside and the other outside the sphere as is shown in \ref{fig:YoungWeirstrass}.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=0.8\textwidth]{Chapter 2/Figures/YoungWeirstrass.pdf}
+                \caption{The spherical Diopter for the first case, where the object point is real and it is outside the sphere but the image point is virtual and inside the diopter.}
+                \label{fig:YoungWeirstrass}
+            \end{figure}
+
+        \subsection{The second spherical diopter}
+
+            So, for the second case we have \ref{eq:Case2} and the equation \ref{eq:SphericalDiopter} then let $z_c$ given by
+            \begin{equation*}
+                z_c=z_o=z_i = \frac{n_i+n_o}{c},
+            \end{equation*}
+            then we will have 
+
+            \begin{align}
+                & \rho^2 \left( n_oz_c - n_iz_c \right) + 2zz_c^2 (n_i-n_o) = 0,\\
+                & \rho^2 - 2zz_c=0,
+            \end{align}
+            again we must complete squares in the following way
+            \begin{align}
+                & x^2 + y^2 + z^2 - 2zz_c + \text{\color{red}$z_c^2$} = \text{\color{red} $z_c^2$},\\
+                & x^2 + y^2 + (z-z_c)^2 = z_c^2\label{eq:SphericalDiopter2}.
+            \end{align}
+
+            The equation \ref{eq:SphericalDiopter2} is an spherical diopter where the object point is on the center and the image point is also on the center.
+
+        \section{Objects and images to the infinity}
+
+            Some other cases arise when either the object or the image is at infinity, which is a convenient condition when the object is very far away, for example, in telescopes.
+
+            But even in microscopy, systems are designed to form the image at infinity, since under these conditions, an eyepiece facilitates visual accommodation for observation.
+
+            For an object in the infinity we divide by $z_o^2$ and take the limit $z_o\to -\infty$ in \ref{eq:DescartesOvoid} in the following way
+
+            \begin{align*}
+                & \lim_{z_o\to-\infty} \left[ \frac{\rho^2 \left( n_o^2-n_i^2 \right)}{z_o} + 2z \frac{n_o^2z_o + n_i^2z_i}{z_o} \right]^2 - \lim_{z_o\to-\infty} \frac{4n_on_i \left( n_oz_o + n_iz_i \right)}{z_o}\left[ \frac{\rho^2 \left( n_oz_i + n_iz_o \right)}{z_o} \right.\\
+                & \left. - \frac{2zz_oz_i(n_i-n_o)}{z_o} \right] = 0,\\
+                & (2zn_o^2)^2 - 4n_o2n_i^2\left[ \rho^2 n_i - 2zz_i(n_i-n_o) \right] = 0,\\
+                & 4z^2n_o^4 - 4n_o^2n_i^2\rho^2 + 8zz_in_o^2n_i^2 - 8zz_in_o^3n_i = 0, \qquad \text{Dividing all the equation by $4n_o^2$},\\
+                & z^2\left( n_o^2-n_i^2 \right) + 2zn_iz_i(n_i-n_o) - n_i (x^2+y^2) = 0,\\
+                & \left[ n_o-n_i \right] \left[ z^2\left( n_o+n_i \right) - 2zn_iz_i \right] - n_i(x^2+y^2) = 0.
+            \end{align*}
+
+            Now, to complete the algebraic expression we must multiply all the equation by $(n_o+n_i)$ and complete the squares as follows 
+
+            \begin{align*}
+                & (n_o-n_i)\left[(n_o+n_i)\text{\color{red}$(n_o+n_i)$}  z^2 - 2zn_iz_i \text{\color{red}$(n_o+n_i)$}\right] - n_i^2 \text{\color{red}$(n_o+n_i)$} (x^2+y^2) = 0,\\
+                & (n_o-n_i)\left[ (n_o+n_i)^2z^2 - 2zn_iz_i(n_o+n_i) + \text{\color{red} $n_i^2z_i^2$} - n_i^2(n_o+n_i)(x^2+y^2) \right] = \text{\color{red} $(n_o-n_i)n_i^2z_i^2$ },\\
+                & (n_o-n_i) \left[(n_o+n_i)z-n_iz_i\right]^2 - n_i^2(n_o+n_i)(x^2+y^2) = (n_o-n_i)n_i^2z_i^2
+            \end{align*}
+            and dividing all by $(n_o-n_i)n_i^2z_i^2$ we will have
+
+            \begin{equation}\label{eq:ConicalDiopter}
+                \left( \frac{n_i+n_o}{n_iz_i} \right)^2 \left[ z - \frac{n_iz_i}{n_i+n_o} \right]^2 + \frac{n_i+n_o}{z_i^2(n_i-n_o)}(x^2+y^2) = 1.
+            \end{equation}
+
+            The result \ref{eq:ConicalDiopter} represents a conical section of revolution around the z-axis from this equation we are going to obtain the Ellipsoid and the hyperboloid.
+
+            \subsection{Revolution Ellipsoid}
+
+                if $n_i>n_o$ we are going to define the following scalars
+
+                \begin{equation}
+                    a = \left( \frac{n_i-n_o}{n_i+n_o} \right)^{1/2}|z_i|, \qquad b = \left( \frac{n_i}{n_i+n_o} \right)|z_i|,
+                \end{equation}
+                and notice that $b>a$ so we will have \textbf{prolate ellipsoid} (see figure \ref{fig:Ellipsoid} given by
+                \begin{equation}
+                    \frac{1}{b^2}\left(z-b\right)^2 + \frac{1}{a^2}(x^2+y^2) = 1.
+                \end{equation}
+
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.6\textwidth]{Chapter 2/Figures/Ellipsoid.pdf}
+                    \caption{Prolate Ellipsoid centered and $z=B$.}
+                    \label{fig:Ellipsoid}
+                \end{figure}
+
+                We have got two cases, when $z_i > 0$ and $z_i< 0$. For both cases what is next is to study the eccentricity of the ellipse and the foci of the ellipsoids.
+
+                \textbf{When $z_i>0$} lets define the segment $c = \overline{F_1B}$ such that the eccentricty is given by
+
+                \begin{equation}
+                    \epsilon = \frac{c}{b}= \frac{\sqrt{b^2-a^2}}{b} = \sqrt{1 - \frac{a^2}{b^2}} = \sqrt{\frac{n_o^2}{n_i^2}} = \frac{n_o}{n_i}<1,
+                \end{equation}
+                therefore the foci $F_1$ is centered to a distance
+                \begin{equation}
+                    f_1 = b-c = b-\epsilon b = (1-\epsilon)b = \frac{n_i-n_o}{n_i+n_o}z_i,
+                \end{equation}
+                and the second foci is at
+                \begin{equation}
+                    f_2 = b+c = b+\epsilon b = (1+\epsilon)b = z_i.
+                \end{equation}
+
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.8\textwidth]{Chapter 2/Figures/Ellipsoid2.pdf}
+                    \caption{Ellipsoid diopter when $n_i > n_o$.}
+                    \label{fig:Ellipsoid2}
+                \end{figure}
+
+                This means, that for this first case that all the rays that comes parallel to the $z$-axis from infinity converges to the second Foci of the ellipsoid.\\
+
+                If $z_i<0$ by the convention we have that $\sqrt{z_i^2} = -z_i$ and we define 
+
+                \begin{equation}
+                    b = - \frac{n_i}{n_i+n_o} z_i,
+                \end{equation}
+                then the conical section equation \ref{eq:ConicalDiopter} becomes 
+
+                \begin{equation}
+                    \frac{1}{b^2}(z+b)^2 + \frac{1}{a^2}(x^2+y^2) = 1.
+                \end{equation}
+
+                Again, we define $c= \overline{F_1B}$ so the eccentricty is given by
+
+                \begin{equation*}
+                    \epsilon = \frac{c}{b}\frac{\sqrt{b^2-a^2}}{b} = \sqrt{1 - \frac{a^2}{b^2}} = \frac{n_o}{n_i}<1,
+                \end{equation*}
+                and the foci is now going to be to a distance
+                \begin{equation}
+                    f_1 = -b -c = -b - \epsilon b = -b (1+\epsilon) = z_i,
+                \end{equation}
+                and the second one is at
+                \begin{equation}
+                    f_2 = -b+c = -b + \epsilon b = (\epsilon-1)b = \frac{n_i-n_o}{n_i+n_o}z_i.
+                \end{equation}
+
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.9\textwidth]{Chapter 2/Figures/Ellipsoid3.pdf}
+                    \caption{Ellipsoid diopter when $n_i>n_o$ and $z_i < 0$.}
+                    \label{fig:Ellipsoid3}
+                \end{figure}
+
+                Having all these results on count, we can see in figure \ref{fig:Ellipsoid3} that all the rays that becomes parallel to the $z$-axis and from infinity diverges as they would come from a point source from $F_1$.
+            \subsection{Revolution Hyperboloid}
+
+                In the case $n_i < n_o$ we have got that the equation \ref{eq:ConicalDiopter} becomes an hyperboloid and, again, there are two possibilities, $z_i<0,z_i>0$, so the conical equation becomes
+
+                \begin{equation}
+                    \left( \frac{n_i+no}{n_iz_i} \right)^2\left[ z - \frac{n_iz_i}{n_i+n_o} \right] - \frac{n_i+n_o}{z_i^2(n_o-n_i)}(x^2+y^2) = 1.
+                \end{equation}
+
+                If $z_i > 0$ we define again the following scalars
+                \begin{align*}
+                    & b^2 = \frac{n_i^2}{(n_i+n_o)^2}z_i^2,\\
+                    & a^2 = \frac{n_o-n_i}{(n_i+n_o)^2}z_i^2,
+                \end{align*}
+                so the equation of the hyperboloid (see figure \ref{fig:Hyperboloid}) becomes
+
+                \begin{equation}
+                    \frac{1}{b^2}(z-b)^2 - \frac{1}{a^2}(x^2+y^2) = 1.
+                \end{equation}
+
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{Chapter 2/Figures/Hyperboloid.pdf}
+                    \caption{Geometrical representation of the two leaf hyperboloid with the parameters $a,b$ and foci $F_1$ and $F_2$.}
+                    \label{fig:Hyperboloid}
+                \end{figure}
+
+                Again, to give a characterization of the conical surface we are going to define the segment $c = \overline{F_1B}$ such that the eccentricity is given by
+                
+                \begin{equation*}
+                    \epsilon = \frac{c}{b} = \frac{\sqrt{a^2+b^2}}{b} = \sqrt{1+\frac{a^2}{b^2}} = \frac{n_o}{n_i} > 1.
+                \end{equation*}
+
+                Thus the two Foci $F_1$ and $F_2$ are located at the distances
+                \begin{align}
+                    & f_1 = b-c = b-\epsilon b = (1-\epsilon)b = \frac{n_i-n_o}{n_o+n_i}z_o,\\
+                    &f_2 = b+c = b + \epsilon b = (1+\epsilon) b = z_i.
+                \end{align}
+
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.8\textwidth]{Chapter 2/Figures/Hyperboloid2.pdf}
+                    \caption{Geometrical representation of the first case of a two leaf hyperboloid. }
+                    \label{fig:Hyperboloid2}
+                \end{figure}
+
+                In the figure \ref{fig:Hyperboloid2} we can see the geometrical behavior of this first case, all the rays comes from the infinity and converges to a point which is located in the second foci $F_2$.\\
+
+                Now, for the second case, if $z_i < 0$ we define 
+                \begin{equation*}
+                    b= - \frac{n_i}{n_i+n_o}z_o,
+                \end{equation*}
+                in such way that $b > 0$ with this we write
+                \begin{equation*}
+                    \frac{1}{b^2}(z+b)^2 - \frac{1}{a^2}(x^2+y^2) = 1.
+                \end{equation*}
+
+                Again, we define the segment $c = \overline{F_1B}$ such that the eccentricity is given by
+                \begin{equation*}
+                    \epsilon = \frac{c}{b}= \frac{\sqrt{a^2+b^2}}{b} = \sqrt{1 + \frac{a^2}{b^2}} = \frac{n_o}{n_i}>1. 
+                \end{equation*}
+
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.8\textwidth]{Chapter 2/Figures/Hyperboloid3.pdf}
+                    \caption{Geometrical representation of the first case of a two leaf hyperboloid.}
+                    \label{fig:Hyperboloid3}
+                \end{figure}
+
+                As we can see in the figure \ref{fig:Hyperboloid3} all the rays come from the infinity and interact with the hyperboloid diopter an the rays refracted in such geometrical way that they behave as they come from a object point source located in the foci of the first leaf at $F_1$.
+                
+        \section{Rigurously stigmatic surfaces by reflection}
