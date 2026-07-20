@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: apalike.bst
+Database file #1: references.bib
+Warning--empty publisher in fresnel1819memoire
+You've used 35 entries,
+            1935 wiz_defined-function locations,
+            696 strings with 8741 characters,
+and the built_in function-call counts, 12349 in all, are:
+= -- 1235
+> -- 328
+< -- 34
++ -- 110
+- -- 100
+* -- 981
+:= -- 2152
+add.period$ -- 105
+call.type$ -- 35
+change.case$ -- 215
+chr.to.int$ -- 35
+cite$ -- 36
+duplicate$ -- 503
+empty$ -- 977
+format.name$ -- 144
+if$ -- 2419
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 46
+newline$ -- 178
+num.names$ -- 105
+pop$ -- 180
+preamble$ -- 1
+purify$ -- 224
+quote$ -- 0
+skip$ -- 385
+stack$ -- 0
+substring$ -- 1019
+swap$ -- 45
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 188
+warning$ -- 1
+while$ -- 116
+width$ -- 0
+write$ -- 449
+(There was 1 warning)

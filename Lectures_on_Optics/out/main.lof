@@ -1,0 +1,38 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Schematic representation of the Fizeau's experiment pretended to measure the light's speed.}}{18}{figure.caption.3}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Graphical representation of a generic dark room which is a box of an arbitrary material which has a side opened and while it satisfies the Rayleigh's inequality i will form an inverted image.}}{20}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces A schematic representation of a ray beam from $A$ to $B$ which goes through n different transparent media and in each one it had a different speed and traveled different length.}}{22}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces two media separated by a diopter which an observer $O$ measures the path the light will follow from $A$ to $B$ and proposes a displacement of the source $A$ to $A'$ to see how must be the light path.}}{24}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Representation of a cylindrical ray light being reflected by a perfectly polished mirror.}}{26}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Representation of a cylindrical bunch of rays being reflected by an inhomogeneus surface.}}{27}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Representation of all the incident and refracted rays from a media with refraction index $n_1$ to another with refraction index $n_2$ such that $n_1>n_2$. The angle $\theta _2$ here shown wont never reach a value equal to $asin\left (\frac {n_1}{n_2}\right )$.}}{27}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Representation of all the incident and refracted rays from a media with refraction index $n_1$ to another with refraction index $n_2$ such that $n_1<n_2$. The angle $\theta _c$ here separates the rays that will be refracted , (angles less than $\theta _c$), and the rays that will be totally reflected internally.}}{28}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Representation of two optical systems where appear real object points, real and virtual image points.}}{29}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Optical system $\mathcal {S}$ formed by two diopters $\mathcal {S}_1,\mathcal {S}_2$ where the point $A_o$ is a virtual object and $A_i$ is a virtual image point.}}{29}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Optical system $\mathcal {S}$ formed by three optical systems $\mathcal {S}_1,\mathcal {S}_2,\mathcal {S}_3$ where the point $A_o$ is a real object point, $A'$ is a virtual image point for $\mathcal {S}_1$, but a real object point for $\mathcal {S}_2,\mathcal {S}_3$, $A''$ is a virtual image for the real object $A'$ and $A_i$ is the real image of the virtual object $A''$.}}{30}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces The stigmatic system transform the incident wavefront $\mathcal {A}$ to another new spherical wavefront $\mathcal {A}'$.}}{31}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Scheme representation of the development of a rigorously stigmatic system, from a point source $A_o$ at a position $[0,0,z_o]$ the diopter with a vertice $v$ forms a perfect image $A_i$ at $[0,0,z_i]$. }}{32}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces The spherical Diopter for the first case, where the object point is real and it is outside the sphere but the image point is virtual and inside the diopter.}}{36}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Prolate Ellipsoid centered and $z=B$.}}{38}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Ellipsoid diopter when $n_i > n_o$.}}{39}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Ellipsoid diopter when $n_i>n_o$ and $z_i < 0$.}}{40}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Geometrical representation of the two leaf hyperboloid with the parameters $a,b$ and foci $F_1$ and $F_2$.}}{41}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Geometrical representation of the first case of a two leaf hyperboloid. }}{42}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Geometrical representation of the first case of a two leaf hyperboloid.}}{43}{figure.caption.22}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces On the boundary $\Sigma (V)$ the contribution of the field components $U(\vec {r})$ is shown; inside the region the total field is built from the contribution of all the points on the boundary. One may add infinitely many point Green charges of arbitrary propagation nature; the condition for the invariance of equation \eqref {eq:GreenHomogeneous} is that these image charges lie outside $\Sigma (V)$.}}{63}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Representation of the Green's functions for point sources. Under these boundary conditions the Green's functions behave as point charges, one the mirror image of the other.}}{64}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Representation of the Green's functions for non-point sources. Under these boundary conditions the Green's functions still behave as mirror images, but now with given volume and geometry; the only constraint on the emission of these sources is that, on the boundary $z=0$, the total field must vanish, as required by the assumed Dirichlet conditions.}}{65}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Scheme of the confocal cardinal spheres, with radii equal to the propagation distance $z$ of the field.}}{69}{figure.caption.26}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Representation of $E(\vec {r},t)$ as a random variable.}}{76}{figure.caption.27}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Graphical representation of the narrowband coherence function. In black, the envelope $\tilde {\Gamma }(\vec {r},\tau )$ is shown, and in red the oscillations $e^{i2\pi \tilde {\nu }\tau }$. These oscillations are confined within something known as the coherence time $\tau _C$, which we shall see later.}}{81}{figure.caption.28}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Propagation of the electric field from a plane $Z=0$ to a plane $Z$, where each point of the wavefront carries its mean polarisation ellipse.}}{83}{figure.caption.29}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Propagation of the coherence function between two points $\vec {r},\vec {r}'$ on the initial plane to the coherence between two points $\vec {r}_1,\vec {r}_2$ on the observation plane.}}{84}{figure.caption.30}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Evolution of the realisations upon propagating the electric field.}}{86}{figure.caption.31}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces The mutual coherence propagated to the far field is the Fourier transform of the intensity distribution $\Gamma _0(\vec {S})$ of the source.}}{88}{figure.caption.32}%
+\contentsfinish 
