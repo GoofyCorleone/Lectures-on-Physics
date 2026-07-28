@@ -515,10 +515,10 @@
         \begin{equation*}
             \left[ n_o^2\left( \rho^2 -2zz_o \right) - n_i^2\left( \rho^2-2zz_i \right) \right]^2 +  4n_on_i \left[ n_iz_i-n_oz_o \right]\left[ \rho^2\left( n_iz_o - n_oz_i \right) + 2zz_iz_o \left(n_o-n_i\right) \right] = 0,
         \end{equation*}
-        so, the last things we have to do are: multiply everything by a minus sign $(-)$ and re organize in the following way
+        so, the last things we have to do are is re organize in the following way
 
         \begin{equation}\label{eq:DescartesOvoid}
-            \left[ \left(n_i^2-n_o^2\right)\rho^2 + 2z\left( n_i^2z_i - n_o^2z_o \right) \right]^2 - 4n_in_o \left[ n_iz_i - n_oz_o \right]\left[ \left( n_oz_i - z_iz_o \right)\rho^2 + 2zz_oz_i\left(n_o - n_o\right) \right]=0.
+            \left[ \left(n_i^2-n_o^2\right)\rho^2 - 2z\left( n_o^2z_o - n_i^2z_i  \right) \right]^2 - 4n_in_o \left[ n_iz_i - n_oz_o \right]\left[ \left( n_oz_i - n_iz_o \right)\rho^2 + 2zz_oz_i\left(n_i - n_o\right) \right]=0.
         \end{equation}
 
         \textbf{\textit{The equation \ref{eq:DescartesOvoid} is the algebraic expression for the Descartes Ovoid the rigorously stigmatic surface we wanted.}} 
@@ -528,7 +528,7 @@
         Now, we are going to see that the Descartes Ovoid \ref{eq:DescartesOvoid} contains the information of all the other diopters known. So, the first one we are going to deduce is the spherical diopter this is obtained in a vicinity of the vertex shown in the figure \ref{fig:AlmostOvoid}. Therefore, to deduce this particular case, we are going to take the equation \ref{eq:DescartesOvoid} and rewrite in the following convenient way
 
         \begin{equation}\label{eq:DescartesOvoid2}
-            \left[ \left(n_i^2-n_o^2\right)\rho^2 + 2zz_oz_i\left( \frac{n_i^2}{z_o} - \frac{n_o^2}{z_i}\right) \right]^2 - 4n_in_o \left[ n_iz_i - n_oz_o \right]\left[ \left( n_oz_i - z_iz_o \right)\rho^2 + 2zz_oz_i\left(n_o - n_o\right) \right]=0.
+            \left[ \left(n_o^2-n_i^2\right)\rho^2 + 2zz_oz_i\left( \frac{n_i^2}{z_o} - \frac{n_o^2}{z_i}\right) \right]^2 - 4n_in_o \left[ n_iz_i - n_oz_o \right]\left[ \left( n_oz_i - z_iz_o \right)\rho^2 + 2zz_oz_i\left(n_i - n_o\right) \right]=0.
         \end{equation}
 
         So, the main idea is to construct the sphere that is located in the vertex $v$. To do this, we must see that the squared term in \ref{eq:DescartesOvoid2} looks very similar to the right factor term in the second term, so, we want to equate them and then simplify, which leads us to the following equations
@@ -814,3 +814,125 @@
                 As we can see in the figure \ref{fig:Hyperboloid3} all the rays come from the infinity and interact with the hyperboloid diopter an the rays refracted in such geometrical way that they behave as they come from a object point source located in the foci of the first leaf at $F_1$.
                 
         \section{Rigurously stigmatic surfaces by reflection}
+                
+                The reflective surfaces are the main components in the morden giant telescopes, for example, the James Webb telecopes is an array of many reflective surfaces which are electronically displaced such that the image formation gets the least aberration possible. Also, the reflective surfaces are better than the refractive ones in certain cases, because the optical systems can be smaller and don't have chromatic aberrations.
+
+                Tradionally, the reflective surface are developed indepentdenly from the refractive surface. Under this formulations, the rigurously stigmatic surfaces by reflection can be obtained doing $n_i = -n_o$, where the Descartes ovals become a conic surface. To this case, the equation \ref{eq:DescartesOvoid} becomes
+                \begin{align*}
+                    & \left\{ \left[\left(-n_o\right)^2-n_o^2 \right]\rho^2 - 2z\left[\left( n_o^2z_o- (-n_o\right)^2z_i  \right] \right\}^2 \\
+                    & -4(-n_o)n_o\left[(-n_o)z_i -n_oz_o \right]\left\{\left[n_oz_i - (-n_o)z_o \right]\rho^2 + 2zz_oz_i\left[(-n_o) - n_o \right]  \right\}=0,
+                \end{align*}
+                simplyfing we've got
+                \begin{align*}
+                    & \left\{ -2zn_o^2\left[z_o-z_i\right] \right\}^2 -4n_o^3\left[z_i+z_o\right]\left\{n_o\left[z_i+z_o \right]\rho^2 - 4zz_oz_in_o \right\} = 0,\\
+                    & 4z^2n_o^4\left(z_o-z_i\right)^2 - 4n_o^4\left(z_o+z_i\right)^2\rho^2 + 16n_o^4zz_oz_i\left(z_o+z_i\right) = 0,
+                \end{align*}
+                dividing all by $-16n_o^4z_oz_i$ an having on count that $\rho^2 = x^2+y^2+z^2$ we've got
+                \begin{align*}
+                    & \frac{(z_o+z_i)^2}{4z_oz_i}\left(x^2+y^2\right) + \frac{(z_o-z_i)^2}{4z_oz_i}z^2 - \frac{(z_o+z_i)^2}{4z_oz_i}z^2 - z(z_o+z_i) = 0,\\
+                    & \frac{(z_o+z_i)^2}{4z_oz_i}\left(x^2+y^2\right) +z^2 - z(z_o+z_i) = 0,
+                \end{align*}
+                and completing the squares we've got
+                \begin{equation}\label{eq:ReflectionConic}
+                    \left(z - \frac{z_o+z_i}{2}\right)^2 + \frac{(z_o+z_i)^2}{4z_oz_i}\left(x^2+y^2\right) = \left(\frac{z_o+z_i}{2}\right)^2,
+                \end{equation}
+                which is precisely the equation of a conic of revolution around the $z$ axis, exactly as it happened with the refractive surfaces, only that now the two indices have collapsed into a single reflective condition. The whole family of stigmatic mirrors is hidden inside \ref{eq:ReflectionConic}, and the sign of the product $z_oz_i$ is what decides which conic we are looking at. When $z_oz_i>0$ the coefficient multiplying $x^2+y^2$ is positive and the surface closes onto itself as an ellipsoid, whereas when $z_oz_i<0$ that coefficient turns negative and the surface opens as a hyperboloid. There is also a beautiful limit waiting in \ref{eq:ReflectionConic}, because if we push the object to infinity, $z_o\to-\infty$, the conic degenerates into a paraboloid, which is the case that rules every telescope. We are going to walk through each of these situations, since each one corresponds to a real optical instrument.
+
+        \subsection{The ellipsoidal mirror}
+                
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.8\textwidth]{Chapter 2/Figures/EllipsoidalMirror.pdf}
+                    \caption{Ellipsoidal mirror. The object $F_1$ and the image $F_2$ coincide with the two foci of the ellipse, so every ray leaving one focus is reflected exactly onto the other.}
+                    \label{fig:EllipsoidalMirror}
+                \end{figure}
+
+                Lets start with $z_oz_i>0$, so that the object and the image sit on the same side of the vertex and the mirror is an ellipsoid. Dividing \ref{eq:ReflectionConic} by $\left(\frac{z_o+z_i}{2}\right)^2$ the equation takes the canonical shape
+                \begin{equation}
+                    \frac{\left(z - \frac{z_o+z_i}{2}\right)^2}{\left(\frac{z_o+z_i}{2}\right)^2} + \frac{x^2+y^2}{z_oz_i} = 1,
+                \end{equation}
+                and if we baptise the two semi-axes as
+                \begin{equation}
+                    b^2 = \frac{(z_o+z_i)^2}{4}, \qquad a^2 = z_oz_i,
+                \end{equation}
+                we recognise a prolate ellipsoid centered at $z = b = \frac{z_o+z_i}{2}$, that is
+                \begin{equation}
+                    \frac{1}{b^2}\left(z-b\right)^2 + \frac{1}{a^2}(x^2+y^2) = 1.
+                \end{equation}
+                That the ellipsoid comes out prolate, and not oblate, is not an accident, because
+                \begin{equation*}
+                    b^2 - a^2 = \frac{(z_o+z_i)^2}{4} - z_oz_i = \frac{(z_o-z_i)^2}{4} \geq 0,
+                \end{equation*}
+                so the semi-axis along the optical axis is always the largest one and the mirror is stretched along $z$. The distance from the center to each focus is then $c = \sqrt{b^2-a^2} = \frac{|z_o-z_i|}{2}$, and the eccentricity becomes
+                \begin{equation}
+                    \epsilon = \frac{c}{b} = \frac{\sqrt{b^2-a^2}}{b} = \sqrt{1-\frac{a^2}{b^2}} = \frac{|z_o-z_i|}{z_o+z_i}<1,
+                \end{equation}
+                which confirms once more that we are dealing with an ellipse. The really interesting thing is where the foci land, because measured from the vertex they sit at $z = b\pm c$, that is
+                \begin{equation}
+                    b-c = \frac{z_o+z_i}{2} - \frac{|z_o-z_i|}{2}, \qquad b+c = \frac{z_o+z_i}{2} + \frac{|z_o-z_i|}{2},
+                \end{equation}
+                and no matter which of the two conjugate points is the larger one, these two numbers are nothing but $z_o$ and $z_i$ themselves. \textbf{The two foci of the ellipsoid are exactly the object point and the image point.}
+
+                This is the whole magic of the ellipsoidal mirror and the reason it is rigorously stigmatic. An ellipse has the geometric property that any ray leaving one focus is reflected straight into the other focus, because the sum of the two focal distances is constant along the whole curve, and a constant optical path is exactly the Fermat's principle at work. Placing a point source at one focus therefore produces a perfect point image at the other one, with no aberration at all. This is the principle behind the elliptical reflectors used to concentrate the light coming from one focus onto a detector sitting at the other, and it is the same property that makes the whispering galleries carry a voice from one focus of the room to the other.
+
+                When both $z_o$ and $z_i$ are negative the algebra is identical once we define $b = -\frac{z_o+z_i}{2}>0$, so that the ellipsoid is now centered at $z=-b$ and its equation reads $\frac{1}{b^2}(z+b)^2 + \frac{1}{a^2}(x^2+y^2)=1$. The eccentricity is the same and the foci again fall on $z_o$ and $z_i$, the only difference being that both conjugate points now live on the opposite side of the vertex.
+
+
+        \subsection{The hyperboloidal mirror}
+                
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.8\textwidth]{Chapter 2/Figures/HyperboloidMirror.pdf}
+                    \caption{Hyperboloid mirror. The rays from the object $F_1$ diverge as they were emited by a virtual image locaed in $F_2$.}
+                    \label{fig:HypberboloidMirror}
+                \end{figure}
+
+                Now we let the product change sign, $z_oz_i<0$, which happens when the object and the image sit on opposite sides of the mirror and one of them is virtual. The coefficient of $x^2+y^2$ in \ref{eq:ReflectionConic} becomes negative, so writing $a^2 = -z_oz_i>0$ while keeping $b^2 = \frac{(z_o+z_i)^2}{4}$ the canonical form is now
+                \begin{equation}
+                    \frac{1}{b^2}(z-b)^2 - \frac{1}{a^2}(x^2+y^2) = 1,
+                \end{equation}
+                a hyperboloid of two sheets around the optical axis. The focal distance is measured with a plus sign this time, $c = \sqrt{a^2+b^2}$, and a short computation gives again $c = \frac{|z_o-z_i|}{2}$, so the eccentricity is
+                \begin{equation}
+                    \epsilon = \frac{c}{|b|} = \frac{\sqrt{a^2+b^2}}{|b|} = \sqrt{1+\frac{a^2}{b^2}} = \frac{|z_o-z_i|}{|z_o+z_i|}>1,
+                \end{equation}
+                which is greater than one exactly because $z_oz_i<0$ forces $|z_o-z_i|>|z_o+z_i|$. And just as before, the foci $z = b\pm c$ collapse onto $z_o$ and $z_i$, so once more the two conjugate points are the two foci of the conic.
+
+                The hyperboloidal mirror is therefore stigmatic between its two foci as well, but with a twist, because since the foci lie on opposite sheets one of the conjugate points is always virtual. This is precisely the behavior exploited by the convex secondary mirror of a Cassegrain telescope, where the light that is already converging toward the focus of the primary mirror is intercepted by a hyperboloidal secondary and redirected, without adding any aberration, to a more comfortable focus behind the primary. The stigmatic pair of the hyperboloid is what lets these compact folded telescopes keep a perfect image on the axis.
+
+        \subsection{Special cases: the spherical and the plane mirror}
+
+                Two very familiar mirrors are hiding inside \ref{eq:ReflectionConic} as degenerate cases. The first one appears when the object and the image coincide, $z_o = z_i = R$. The coefficient of $x^2+y^2$ becomes $\frac{(2R)^2}{4R^2}=1$ and the conic reduces to $z^2 - 2Rz + x^2+y^2 = 0$, and completing the square by adding ${\color{blue}R^2}$ to both sides we get
+                \begin{equation}
+                    (z-R)^2 + x^2+y^2 = R^2,
+                \end{equation}
+                which is simply a sphere of radius $R$ centered at $z=R$. This tells us that a spherical mirror is rigorously stigmatic for one very special pair of points, both of them sitting together at the center of the sphere, since a source placed at the center sends every ray along a radius, the ray strikes the surface perpendicularly and comes straight back on itself, forming a perfect image right on top of the source. For any other position the sphere is only approximately stigmatic, and this is the origin of the spherical aberration that spoils cheap mirrors and that the conics above were designed to cure.
+
+                The second degenerate case is $z_o = -z_i$, for which the sum $z_o+z_i$ vanishes. Both the linear term and the whole right hand side of \ref{eq:ReflectionConic} die at once, and the equation collapses to $z^2 = 0$, that is, the plane $z=0$. We recover the ordinary plane mirror, which is stigmatic for every point and always produces an image symmetric to the object at $z_i=-z_o$, which is nothing more than the everyday statement that a plane mirror puts your reflection as far behind the glass as you stand in front of it.
+
+        \subsection{The parabolic mirror and objects at infinity}
+
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.8\textwidth]{Chapter 2/Figures/ParaboloidMirror.pdf}
+                    \caption{Parabolic mirror obtained as the limit $z_o\to-\infty$. The rays coming parallel to the axis from an object at infinity are all focused onto the single point $z=z_i$.}
+                    \label{fig:ParabolicMirror}
+                \end{figure}
+
+                The most important mirror of all comes from letting the object recede to infinity, $z_o\to-\infty$, which is the situation of a telescope pointed at a star. Going back to \ref{eq:ReflectionConic} and expanding the square on the left, the terms ${\color{red}\frac{(z_o+z_i)^2}{4}}$ appear on both sides and cancel,
+                \begin{equation*}
+                    z^2 - z(z_o+z_i) + {\color{red}\frac{(z_o+z_i)^2}{4}} + \frac{(z_o+z_i)^2}{4z_oz_i}(x^2+y^2) = {\color{red}\frac{(z_o+z_i)^2}{4}},
+                \end{equation*}
+                leaving the expanded conic
+                \begin{equation*}
+                    z^2 - z(z_o+z_i) + \frac{(z_o+z_i)^2}{4z_oz_i}(x^2+y^2) = 0.
+                \end{equation*}
+                Dividing everything by $z_o$ and taking the limit $z_o\to-\infty$, the term $z^2/z_o$ vanishes, the factor $\frac{z_o+z_i}{z_o}\to 1$ and $\frac{(z_o+z_i)^2}{4z_o^2z_i}\to\frac{1}{4z_i}$, so we are left with the remarkably clean surface
+                \begin{equation}\label{eq:ParabolicMirror}
+                    x^2+y^2 = 4z_iz,
+                \end{equation}
+                a paraboloid of revolution whose opening is fixed by the sign of $z_i$.
+
+                The paraboloid is the crown jewel of the reflective optics. A parabola has the defining property that every ray arriving parallel to its axis is reflected exactly through the focus, so a bundle of parallel rays coming from a star, which is an object at infinity, is gathered into a single perfect point at $z=z_i$, the focus of the mirror. There is no chromatic aberration, because the reflection does not depend on the wavelength, and there is no spherical aberration, because the surface is a true paraboloid instead of a sphere. This is why every serious reflecting telescope, from the first design of Newton to the segmented primary of the James Webb, uses a parabolic mirror as its light collecting surface, and it is also why the same shape reappears in the satellite dishes and the searchlights, where the ray tracing simply runs the other way and a source placed at the focus is turned into a parallel beam.
+
+                
+                
