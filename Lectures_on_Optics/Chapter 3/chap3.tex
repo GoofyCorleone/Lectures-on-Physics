@@ -235,7 +235,167 @@
 
 \section{Properties of the electromagnetic waves}
 
+    From now on we're going to focus on the electric wave equation \ref{eq:WaveEqESources} and not the complete electromagnetic wave equation \ref{eq:WaveEqF} for three reasons:
+    \begin{enumerate}
+        \item For now, we're going to focus on the radiation propagation on the vacuum, so the electric field intensity $||\vec{E}||$ is a lot bigger than the magnetic field intensity $||\vec{B}||$ with a relation approximadelety like $||\vec{E}|| \approx C ||\vec{B}||$.
+        \item The interaction between light and matter is really hard to study when we consider the electric polarization and even more when we consider all the magnetic properties and effects. This topics are going to be study in the lectures on quantum optics.
+        \item This is still a lecture on fundamentals, so we're going to start from the basic notions and getting richer models while we advance.
+    \end{enumerate}
+
     \subsection{Principal solutions of the electric wave equation}
+
+        Due to the last reasons, we're going to to focus on the study of the electric wave equation
+        \begin{equation}\label{eq:WaveEqVacuum}
+            \nabla^2 \vec{E}(\vec{r},t) = \frac{1}{C^2}\frac{\partial^2\vec{E}(\vec{r},t)}{\partial t^2}.
+        \end{equation}
+
+        We're going to solver this equation in a physical way (latter on this lectures we're going to solve it in a more sophisticaed way). We know from a physical point of view that $\vec{E}$ should be a propagation function with a constant velcity $\vec{v}$ (because there is no matter so the momentum is conserved), therefore we could suppose the electric wave have got the following expression
+        \begin{equation}
+            \vec{E}(\vec{r}, t) = \vec{u}(\vec{k}\cdot \vec{r}\pm\omega t, t),
+        \end{equation}
+       where we have got that $\omega^2/k^2 = C^2$. The two most popular solutions in the basics literature are the plane wave equation
+       \begin{equation}\label{eq:WavePlane}
+            \vec{E}(\vec{r},t) = E(\vec{r},t)e^{i\left(\vec{k}\cdot r - \omega t + \phi\right)}\hat{e}(\vec{r},t),
+       \end{equation}
+       where $E(\vec{r},t)$ is the amplitude, $\vec{k}$ is the waver number, a kind of spatial frequency, $\omega$ is the angular frequency, $\phi$ is the proper fase, an $\hat{e}$ is the unit vector that describes the vector behavior of the electric wave, also we will identify $\hat{e}$ as the \textit{polarisation}.
+
+       The other one, very popular is the spherical wave
+       \begin{equation}\label{eq:WaveSpherical}
+            \vec{E}(\vec{r},t) = \frac{E(t)}{\left|\left|\vec{r} \right|\right|}e^{i\left( kr - \omega t + \phi \right)}\hat{e}.
+       \end{equation}
+
+       Both expressions are usually written down as if they had fallen from the sky, but each of them is a genuine solution of the wave equation \ref{eq:WaveEqVacuum} and can be obtained directly from it. Let us do it carefully, first for the plane wave and then for the spherical one.
+
+       In the vacuum the wave equation \ref{eq:WaveEqVacuum} acts on every Cartesian component of $\vec{E}$ in exactly the same way and without mixing them, so for the moment we can forget the vector character, write $\vec{E}(\vec{r},t) = \psi(\vec{r},t)\hat{e}$ with $\hat{e}$ a fixed unit vector, and solve the scalar equation
+       \begin{equation}\label{eq:ScalarWave}
+            \nabla^2 \psi = \frac{1}{C^2}\frac{\partial^2\psi}{\partial t^2}.
+       \end{equation}
+       A natural way to attack it is to separate the space and time dependence, proposing $\psi(\vec{r},t) = R(\vec{r})T(t)$. Substituting into \ref{eq:ScalarWave} and dividing by $R\,T$ we get
+       \begin{equation*}
+            \frac{\nabla^2 R}{R} = \frac{1}{C^2}\frac{\ddot{T}}{T}.
+       \end{equation*}
+       The left hand side depends only on the position and the right hand side only on the time, so the only way for them to be equal for every $\vec{r}$ and every $t$ is that both are the same constant. We call that constant $-k^2$, where the minus sign is chosen so that the time part stays bounded and oscillatory, as a wave must be. The time equation then becomes
+       \begin{equation*}
+            \ddot{T} + C^2 k^2 T = 0,
+       \end{equation*}
+       and defining $\omega = Ck$, which is precisely the relation $\omega^2/k^2 = C^2$ we anticipated, its solution is $T(t) = e^{\mp i\omega t}$. The spatial part becomes the Helmholtz equation
+       \begin{equation}\label{eq:Helmholtz}
+            \nabla^2 R + k^2 R = 0.
+       \end{equation}
+       Now we ask for the simplest possible geometry of the wavefronts. If we want the surfaces of constant phase to be planes, the field must depend on the position only through a single linear combination of the coordinates, that is, through $\vec{k}\cdot\vec{r}$ for some fixed vector $\vec{k}$. This suggests
+       \begin{equation*}
+            R(\vec{r}) = e^{i\vec{k}\cdot\vec{r}},
+       \end{equation*}
+       and since $\nabla^2 e^{i\vec{k}\cdot\vec{r}} = -\left|\left|\vec{k}\right|\right|^2 e^{i\vec{k}\cdot\vec{r}}$, the Helmholtz equation \ref{eq:Helmholtz} is satisfied as long as $\left|\left|\vec{k}\right|\right| = k$. The vector $\vec{k}$ that was born as a mere separation constant turns out to point along the direction of propagation and to have a length fixed by the frequency. Putting the space and time parts back together, restoring the amplitude $E_0$ and a constant phase $\phi$, and recovering the polarisation vector, we arrive at
+       \begin{equation*}
+            \vec{E}(\vec{r},t) = E_0\, e^{i\left(\vec{k}\cdot\vec{r} - \omega t + \phi \right)}\hat{e},
+       \end{equation*}
+       which is exactly the plane wave \ref{eq:WavePlane}. If instead of the constant $E_0$ and the fixed $\hat{e}$ we allow a slowly varying amplitude $E(\vec{r},t)$ and polarisation $\hat{e}(\vec{r},t)$, we recover the modulated waves that we will use later, whose wavefronts are still approximately planes over regions small compared with the modulation.
+
+       There is still one condition we have not used, and it is the one that makes the wave truly electromagnetic. In the vacuum the Gauss law \ref{eq:GaussE} reads $\bm{\nabla}\cdot\vec{E} = 0$, and evaluating it on our solution
+       \begin{equation*}
+            \bm{\nabla}\cdot\left(E_0\, e^{i\left(\vec{k}\cdot\vec{r} - \omega t + \phi\right)}\hat{e}\right) = i\, E_0\left(\vec{k}\cdot\hat{e}\right)e^{i\left(\vec{k}\cdot\vec{r} - \omega t + \phi\right)} = 0,
+       \end{equation*}
+       which can only hold if $\vec{k}\cdot\hat{e} = 0$. The polarisation is forced to be perpendicular to the direction of propagation, and we recover, now as a theorem instead of a hypothesis, the transversality that Fresnel had to postulate a century and a half earlier.
+
+       The plane wave describes a field whose wavefronts are infinite parallel planes, an idealisation that is excellent far from the source but says nothing about how the radiation spreads out from a small emitter. For that situation the natural symmetry is not translational but spherical, so we now look for a field that depends on the position only through the distance $r = \left|\left|\vec{r}\right|\right|$ to the source. Working again with the scalar amplitude $\psi(r,t)$, we need the Laplacian of a function that depends on $r$ alone, which in spherical coordinates is
+       \begin{equation*}
+            \nabla^2\psi = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial\psi}{\partial r}\right).
+       \end{equation*}
+       This expression hides a very useful identity. If we expand it and compare it with the second derivative of the product $r\psi$, we find
+       \begin{equation}\label{eq:RadialLaplacian}
+            \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial\psi}{\partial r}\right) = \frac{1}{r}\frac{\partial^2}{\partial r^2}\left(r\psi\right),
+       \end{equation}
+       which turns the awkward radial Laplacian into an ordinary second derivative acting on $r\psi$. Using \ref{eq:RadialLaplacian}, the wave equation \ref{eq:ScalarWave} for a spherically symmetric field becomes
+       \begin{equation*}
+            \frac{1}{r}\frac{\partial^2}{\partial r^2}\left(r\psi\right) = \frac{1}{C^2}\frac{\partial^2\psi}{\partial t^2}.
+       \end{equation*}
+       Multiplying both sides by $r$ and noticing that $r$ does not depend on the time, so it can go inside the time derivative on the right, we get
+       \begin{equation*}
+            \frac{\partial^2}{\partial r^2}\left(r\psi\right) = \frac{1}{C^2}\frac{\partial^2}{\partial t^2}\left(r\psi\right).
+       \end{equation*}
+       If we now baptise the combination $u(r,t) = r\,\psi(r,t)$, this is nothing but the one dimensional wave equation
+       \begin{equation}\label{eq:OneDimWave}
+            \frac{\partial^2 u}{\partial r^2} = \frac{1}{C^2}\frac{\partial^2 u}{\partial t^2},
+       \end{equation}
+       whose general solution, by d'Alembert, is the sum of a disturbance travelling outwards and one travelling inwards,
+       \begin{equation*}
+            u(r,t) = f(r - Ct) + g(r + Ct).
+       \end{equation*}
+       The term $g(r+Ct)$ represents a wave collapsing towards the source, so for radiation escaping from an emitter we keep only the outgoing part $u(r,t) = f(r - Ct)$. Undoing the change $u = r\psi$ we finally obtain
+       \begin{equation*}
+            \psi(r,t) = \frac{f(r - Ct)}{r},
+       \end{equation*}
+       and the factor $1/r$, which we had to guess before, now appears on its own as a direct consequence of the geometry. Choosing a monochromatic profile $f(r - Ct) = E_0\, e^{ik(r - Ct)} = E_0\, e^{i(kr - \omega t)}$, again with $\omega = Ck$, and restoring the phase and the polarisation we reach the spherical wave \ref{eq:WaveSpherical},
+       \begin{equation*}
+            \vec{E}(\vec{r},t) = \frac{E_0}{r}\, e^{i\left(kr - \omega t + \phi\right)}\hat{e}.
+       \end{equation*}
+       It is worth pausing on the $1/r$. The amplitude of the field falls off as the inverse of the distance, so its square, which measures the intensity, falls off as $1/r^2$. Since the area of a spherical wavefront grows exactly as $r^2$, the total power crossing every sphere centred on the source is the same, and energy is conserved as the wave expands. This is why the field goes as $1/r$ and not as $1/r^2$: the inverse square law belongs to the intensity, not to the field itself.
+
+       The plane wave and the spherical wave look like very different objects, and yet they are intimately related, because far enough from the source the spherical wave is indistinguishable from a plane wave. To see it, place ourselves at a large distance $r_0$ from the emitter along a fixed direction $\hat{n} = \vec{r}_0/r_0$, and look at the field only inside a small region around that point, writing $\vec{r} = \vec{r}_0 + \vec{\delta}$ with $\left|\left|\vec{\delta}\right|\right| \ll r_0$. The distance to the source is then
+       \begin{equation*}
+            r = \left|\left|\vec{r}_0 + \vec{\delta}\right|\right| = r_0\sqrt{1 + \frac{2\,\hat{n}\cdot\vec{\delta}}{r_0} + \frac{\left|\left|\vec{\delta}\right|\right|^2}{r_0^2}} \approx r_0 + \hat{n}\cdot\vec{\delta},
+       \end{equation*}
+       where we kept only the first order in $\vec{\delta}/r_0$. The phase of the spherical wave becomes, up to the constant $kr_0$,
+       \begin{equation*}
+            kr \approx kr_0 + k\,\hat{n}\cdot\vec{\delta} = kr_0 + \vec{k}\cdot\vec{\delta}, \qquad \vec{k} = k\,\hat{n},
+       \end{equation*}
+       so it depends on the position through the single linear combination $\vec{k}\cdot\vec{\delta}$, which is exactly the signature of a plane wave travelling along $\hat{n}$. The amplitude, on the other hand, is $E_0/r \approx E_0/r_0$, which over the small region hardly changes and can be treated as the constant $E_0/r_0$. Putting both together, in the neighbourhood of the point the field reads
+       \begin{equation*}
+            \vec{E}(\vec{r},t) \approx \frac{E_0}{r_0}\, e^{i\left(kr_0 + \vec{k}\cdot\vec{\delta} - \omega t + \phi\right)}\hat{e},
+       \end{equation*}
+       which is precisely a plane wave \ref{eq:WavePlane} of amplitude $E_0/r_0$ and wavevector $\vec{k} = k\hat{n}$. In physical terms, a small patch of a sphere of enormous radius is almost flat, and the observer far from the source sees the curved wavefronts as if they were planes. This is the regime in which the plane wave, despite carrying infinite energy across an infinite front, becomes a legitimate and extremely convenient approximation, and it is the reason why so much of optics can be done with plane waves even though every real source radiates spherically.
+
+    \subsection{Beams with a particular phase and structured light}
+
+       The plane wave and the spherical wave are the two solutions that every textbook writes down first, and for a good reason, since they are the simplest geometries the wave equation admits. It would be a serious mistake, however, to believe that they are the only solutions, or even the most important ones. Both are idealisations that no laboratory ever produces exactly, because the plane wave has an infinite transverse extent and carries an infinite power, and the pure spherical wave demands a perfectly point like source radiating in every direction at once. The light we actually generate and use, above all the light of a laser, comes in the form of \textit{beams}, that is, fields well confined around a propagation axis that carry a finite power. What distinguishes one beam from another, and what grants each one its remarkable properties, is not so much its amplitude as the way its \textit{phase} is organised across the wavefront. This subsection is a short tour through the most relevant of these structured beams.
+
+       Before writing any of them it helps to have a common equation from which they all descend. Almost every beam of interest travels mostly along one axis, which we take to be $z$, with only a gentle spreading in the transverse plane, and this is what we call the \textit{paraxial regime}. We therefore look for solutions of the Helmholtz equation \ref{eq:Helmholtz} of the form
+       \begin{equation*}
+            \vec{E}(\vec{r},t) = u(x,y,z)\,e^{i(kz-\omega t)}\hat{e},
+       \end{equation*}
+       where the exponential carries the fast oscillation along the axis and $u$ is a slowly varying envelope that sculpts the beam. Substituting this into the Helmholtz equation and cancelling the common factor we obtain
+       \begin{equation*}
+            \nabla_\perp^2 u + \frac{\partial^2 u}{\partial z^2} + 2ik\frac{\partial u}{\partial z} = 0, \qquad \nabla_\perp^2 = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2},
+       \end{equation*}
+       and because the envelope varies slowly over a wavelength we may neglect $\partial_z^2 u$ against $2k\,\partial_z u$, arriving at the \textit{paraxial wave equation}
+       \begin{equation}\label{eq:Paraxial}
+            i\frac{\partial u}{\partial z} = -\frac{1}{2k}\nabla_\perp^2 u.
+       \end{equation}
+       It is impossible not to notice that \ref{eq:Paraxial} is formally identical to the Schrödinger equation of a free particle in two dimensions, with the propagation coordinate $z$ playing the role of the time and $1/k$ playing the role of $\hbar/m$. This is not a coincidence but another face of the deep link between Maxwell and Schrödinger we met earlier in this chapter, and it tells us that the whole catalogue of structured beams is, in a precise mathematical sense, the catalogue of the wave packets of a free particle.
+
+       The simplest and most important solution of \ref{eq:Paraxial} is the one whose transverse profile is a Gaussian. Writing $\rho^2 = x^2+y^2$ for the transverse radius, its electric field is
+       \begin{equation}\label{eq:GaussianBeam}
+            \vec{E} = E_0\,\frac{w_0}{w(z)}\exp\left(-\frac{\rho^2}{w(z)^2}\right)\exp\left(i\left[kz - \omega t + \frac{k\rho^2}{2R(z)} - \zeta(z)\right]\right)\hat{e},
+       \end{equation}
+       where the three functions that govern the beam are the width, the radius of curvature and the Gouy phase,
+       \begin{equation}
+            w(z) = w_0\sqrt{1 + \left(\frac{z}{z_R}\right)^2}, \qquad R(z) = z\left[1 + \left(\frac{z_R}{z}\right)^2\right], \qquad \zeta(z) = \arctan\frac{z}{z_R},
+       \end{equation}
+       and $z_R = \frac{kw_0^2}{2} = \frac{\pi w_0^2}{\lambda}$ is the \textit{Rayleigh range}, the distance over which the beam stays approximately collimated, while $w_0$ is the \textit{waist}, the minimal radius the beam reaches at $z=0$. Reading the phase of \ref{eq:GaussianBeam} term by term makes the physics appear. The piece $kz$ is the ordinary plane wave advance along the axis. The quadratic piece $k\rho^2/2R(z)$ is exactly the phase that a spherical wave of radius $R(z)$ carries near the axis, so it tells us that the wavefronts are neither planes nor full spheres but gently curved caps, flat at the waist where $R\to\infty$, most strongly curved around the Rayleigh range, and flattening again far away where $R(z)\approx z$ and the beam finally looks spherical. The last piece, the \textit{Gouy phase} $\zeta(z)$, is an extra amount of phase, close to $\pi$ in total, that the beam accumulates as it crosses the focus, an anomaly with no counterpart in the plane wave and measurable by interferometry. The amplitude factor $w_0/w(z)$ in front of the Gaussian keeps the power constant while the beam widens, since as $w(z)$ grows the peak drops so that the integrated intensity is conserved. The beam spreads with a divergence half angle $\theta = \lambda/\pi w_0$, and this reciprocal relation between waist and divergence is nothing but the diffraction limit and, once more, an uncertainty relation between the transverse position and the transverse momentum of the field. The Gaussian beam is the fundamental transverse mode of a laser resonator, the famous $\text{TEM}_{00}$, and it is the most confined beam that diffraction permits, which is why it is the default description of any well behaved laser and the starting point for the design of almost every optical system that works with coherent light.
+
+       The Gaussian is only the lowest member of a whole family. Since \ref{eq:Paraxial} is linear, it admits complete sets of higher order modes that share the same Gaussian envelope but decorate it with nodal structure. In Cartesian coordinates these are the \textit{Hermite-Gauss} modes, indexed by two integers and built from Hermite polynomials, which display a rectangular grid of bright lobes. In cylindrical coordinates the natural family is that of the \textit{Laguerre-Gauss} modes, indexed by a radial number $p$ and an azimuthal number $\ell$, whose field is
+       \begin{equation}\label{eq:LaguerreGauss}
+       \begin{aligned}
+            \vec{E}_{p\ell} = E_0\,\frac{w_0}{w(z)}&\left(\frac{\rho\sqrt{2}}{w(z)}\right)^{|\ell|} L_p^{|\ell|}\!\left(\frac{2\rho^2}{w(z)^2}\right)\exp\left(-\frac{\rho^2}{w(z)^2}\right)e^{i\ell\varphi}\\
+            &\times\exp\left(i\left[kz-\omega t + \frac{k\rho^2}{2R(z)} - (2p+|\ell|+1)\,\zeta(z)\right]\right)\hat{e},
+       \end{aligned}
+       \end{equation}
+       where $L_p^{|\ell|}$ are the associated Laguerre polynomials and $\varphi$ is the azimuthal angle. Two features of \ref{eq:LaguerreGauss} deserve attention. The Gouy phase now grows in proportion to the mode order $2p+|\ell|+1$, so different modes advance their phase at different rates, a fact that governs how a superposition of them rotates and reshapes as it propagates. Far more striking is the azimuthal factor $e^{i\ell\varphi}$, which winds the phase through $\ell$ complete turns around the axis and forces the field to vanish exactly on the axis, giving these beams their characteristic doughnut profile with a dark core. The wavefront is then no longer a stack of caps but a set of intertwined helices, an \textit{optical vortex} of topological charge $\ell$. This helical phase is not a mere decoration, because a field carrying $e^{i\ell\varphi}$ transports orbital angular momentum, and each of its photons carries exactly $\ell\hbar$ of it, a quantity entirely separate from the spin angular momentum $\pm\hbar$ associated with circular polarisation. For this reason the Laguerre-Gauss beams have become one of the central tools of modern optics. They are used in the \textit{optical tweezers} to trap microscopic particles and set them spinning, in super resolution microscopy where the dark core of a doughnut beam switches off the fluorescence everywhere except at the very centre, and in classical and quantum communications alike, where the unbounded integer $\ell$ offers a new and in principle limitless alphabet that lets a single photon encode much more than a single bit.
+
+       All the beams written so far spread as they travel, because they are paraxial and diffraction is unavoidable for any field of finite width. It is natural to ask whether the exact Helmholtz equation admits a beam that does not spread at all, and it does. If we demand a field whose transverse intensity profile is literally independent of $z$, separation of variables in cylindrical coordinates leads to the \textit{Bessel beam}
+       \begin{equation}\label{eq:BesselBeam}
+            \vec{E} = E_0\, J_\ell(k_\perp\rho)\,e^{i\ell\varphi}\,e^{i(k_z z - \omega t)}\hat{e}, \qquad k_\perp^2 + k_z^2 = k^2,
+       \end{equation}
+       where $J_\ell$ is the Bessel function of order $\ell$. Its transverse pattern, a bright central spot when $\ell=0$ or a vortex ring when $\ell\neq 0$, surrounded by concentric rings, is exactly the same at every plane $z$, so the beam is said to be \textit{non-diffracting}. The picture behind \ref{eq:BesselBeam} is illuminating, since it is the coherent superposition of plane waves whose wavevectors all lie on a cone of fixed half angle $\arctan(k_\perp/k_z)$, and the interference of that cone regenerates the same profile plane after plane. This conical construction also explains the beam's most surprising property, its \textit{self-healing}, because if an obstacle blocks the central spot the outer rays that build the cone continue past it and reconstruct the pattern a short distance downstream. The ideal Bessel beam pays for these gifts with an infinite power, since its rings extend forever and each one carries a comparable share of energy, so in practice it is produced with an axicon or a ring aperture and remains non-diffracting only over a finite range. Its long, thin and self-repairing focus makes it invaluable for light sheet microscopy, for precise optical alignment and for material processing whenever a large depth of focus is required.
+
+       There is a last beam whose behaviour borders on the paradoxical. Looking again at the paraxial equation \ref{eq:Paraxial}, now in a single transverse dimension, one finds a solution written in terms of the Airy function,
+       \begin{equation}\label{eq:AiryBeam}
+            u(x,z=0) = \text{Ai}\!\left(\frac{x}{x_0}\right)e^{\,a x/x_0}, \qquad a>0,
+       \end{equation}
+       where $x_0$ sets the transverse scale and the exponential aperture $e^{ax/x_0}$ is introduced to make the total energy finite. As it propagates, the \textit{Airy beam} shows two properties that seem to contradict everything the plane wave taught us. It is non-diffracting, keeping its intensity profile over long distances, and it is \textit{self-accelerating}, since its main lobe does not travel in a straight line but follows a parabolic trajectory $x\propto z^2$, so the beam bends sideways even though no force and no index gradient act on it. Nothing is being violated here, because the centre of mass of the whole field does travel straight, and it is only the intensity pattern that curves, in the same way that the crest of a water wave may move differently from the water itself. Like the Bessel beam it is also self-healing, and these curved, resilient trajectories have been used to route light around obstacles, to guide electric discharges along curved plasma channels, to sweep microscopic particles along a chosen path and, once again, in advanced microscopy.
+
+       Seen together, this family teaches a lesson that the plane and the spherical waves, taken alone, keep hidden, namely that what organises a beam and endows it with a useful behaviour is the shape of its phase across the wavefront. A phase linear in the transverse coordinate, $e^{i\vec{k}_\perp\cdot\vec{\rho}}$, simply tilts the beam. A phase quadratic in $\rho$, $e^{ik\rho^2/2R}$, focuses or defocuses it and is exactly what a thin lens imprints. A phase linear in the azimuth, $e^{i\ell\varphi}$, gives it a vortex and orbital angular momentum. A conical phase produces the non-diffracting Bessel beam, and a cubic phase produces the self bending Airy beam. Modern devices such as the spatial light modulators and the metasurfaces let us paint almost any of these phase profiles onto a wavefront at will, and this ability to engineer the phase is the whole discipline known today as \textit{structured light}. The plane wave and the spherical wave remain useful as building blocks and as limiting cases, but from here on the reader should keep in mind that they are only two convenient points in a vastly richer landscape of solutions.
 
     \subsection{From 3D wavefronts to 2D wavefronts}
 
