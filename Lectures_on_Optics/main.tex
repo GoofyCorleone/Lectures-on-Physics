@@ -3,9 +3,18 @@
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage[none]{hyphenat}
+\usepackage{microtype}
 \usepackage{geometry}
 \usepackage{bm} % to use bold on greek words
 \geometry{letterpaper,textheight=8.0in,textwidth=6.5in,headheight=20pt}
+
+% Espaciado por defecto entre párrafos (reemplaza el uso manual de \\ al final de cada párrafo)
+\setlength{\parskip}{0.5em plus 0.2em minus 0.2em}
+
+% \flushbottom estira el \parskip elástico para que cada página termine exactamente
+% en el margen inferior, lo cual infla el hueco alrededor de ecuaciones de forma
+% impredecible; con \raggedbottom cada página usa el espacio natural, sin estirar.
+\raggedbottom
 
 % Paquetes matemáticos y gráficos
 \usepackage{amsmath,amsfonts,amssymb,mathrsfs}

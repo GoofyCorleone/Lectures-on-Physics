@@ -398,11 +398,639 @@
        Seen together, this family teaches a lesson that the plane and the spherical waves, taken alone, keep hidden, namely that what organises a beam and endows it with a useful behaviour is the shape of its phase across the wavefront. A phase linear in the transverse coordinate, $e^{i\vec{k}_\perp\cdot\vec{\rho}}$, simply tilts the beam. A phase quadratic in $\rho$, $e^{ik\rho^2/2R}$, focuses or defocuses it and is exactly what a thin lens imprints. A phase linear in the azimuth, $e^{i\ell\varphi}$, gives it a vortex and orbital angular momentum. A conical phase produces the non-diffracting Bessel beam, and a cubic phase produces the self bending Airy beam. Modern devices such as the spatial light modulators and the metasurfaces let us paint almost any of these phase profiles onto a wavefront at will, and this ability to engineer the phase is the whole discipline known today as \textit{structured light}. The plane wave and the spherical wave remain useful as building blocks and as limiting cases, but from here on the reader should keep in mind that they are only two convenient points in a vastly richer landscape of solutions.
 
     \subsection{From 3D wavefronts to 2D wavefronts}
+       
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.8\textwidth]{Chapter 3/Figures/3Dto2D.pdf}
+            \caption{A source $\mathcal{S}$ produces an arbitrary kind of wave which propagates in the space-time, then, for any given time and position we can take an arbitrary point $p$ and, due to the smooth manifold nature of this wave, there exists a neighborhood $N$ of $p$ where the wavefront is plane.}
+            \label{fig:3Dto2D}
+        \end{figure} 
+
+        As we've seen the electromagnetic radiation has got many presentations, however, there is a very strong formulation where the light is studied in $2D$, in fact, the following chapter treats the electromagnetic radiation as a $2D$ field. 
+
+        From the mathematical point of view there is a whole theory about arbitrary surfaces or complex geometries, here, we're going to use the properties of \textit{smooth manifolds}\footnote{A smooth manifold if a set which can be completely covered by subsets and there are smooth functions from the manifold to $\mathbb{R}^n$.} This is thanks to the nature of the physical solution of the wave equations, so, given any arbitrary wavefront as shown \ref{fig:3Dto2D} we can choose any point a set and observer on a neighborhood $N$, and because the wavefront behaves as an smooth manifold then this neighborhood is $\mathbb{R}^2$. 
+
+        What we are doing is thinkg on this surface like the earth, because we're son tiny we see the earth as plane but it is not. The same phenomena is here, we step on and observer across the point $p$ on the wavefront and for us there is a neighborhood $N$ where it behaves exactly as $\mathbb{R}^2$ ad that is going to allow us to start the study of the polarisation.
 
 \section{Light's polarisation}
 
+    In the electromagnetic theory the word \textit{polarisation} is used as a tendency of the electric dipoles to orientate in a given microscopic volume. However, this word also is used to describe the \textbf{electric field orientation} in its propagation. Those two definitions then seem completely indepent, however, as we are going to show in the microscopic theory of radiation these two are completely related. 
+
+    The polarisation of light is one of the most usefull properties of light, there are many applications on real life which uses this property, for example, the cancer cells stole the glucose from the healthy ones, so there is a higher sugar concentration in cancer cells than the healthy ones, so if we irradiate a sample with linearly polarized light and study the transmited radiation, we're going to see that the light which went across the cancer cells changed their polarization, rotating a given agle (which depends on the concentration of glucose)  so we can detected the presence of cancer cells using the polarisation.
+
+
     \subsection{Monochromatic and deterministic formulation: Jones spinors and the polarization ellipse}
 
-    \subsection{Time evolution of the polarisations: Stokes paramters and the Poincaré sphere}
+        As we've said, we're going to focus on the electric field behavior in a $2D$ formulation, so the electric field is going to be a vector field $\vec{E} \in \mathcal{C}^2\left(\mathbb{C}^2\right)$ which means it is \textit{a complex vector function which their second derivatives are continuous}. Its general form is given by
+        \begin{equation}
+            \vec{E}(\vec{r},t; \omega) =
+            \begin{bmatrix}
+                \mathcal{E}_1 e^{i\left(\vec{k}\cdot\vec{r} - \omega t + \phi_1\right)}\\
+                \mathcal{E}_2 e^{i\left(\vec{k}\cdot\vec{r} - \omega t + \phi_2\right)}
+            \end{bmatrix},
+        \end{equation}
+        where we're considering only one frequency $\omega$ so this describes the electric field of a monocrhomatic field and as we can see, this vector field is a plane wave. 
 
-    \subsection{Transformations of Polarisation}
+        We can factor the propagation phase $\exp\left[i \left(\vec{k}\cdot\vec{r} - \omega t\right)\right]$ in both components ad we will have the following vector field
+        \begin{equation}\label{eq:JonesVec}
+            \vec{e} =
+            \begin{bmatrix}
+                \mathcal{E}_1e^{i\phi_1}\\
+                \mathcal{E}_2e^{i\phi_2}
+            \end{bmatrix}.
+        \end{equation}
+
+        The vector field \ref{eq:JonesVec} is known as the \textit{Jones vector} but, in fact, their true nature ist vectorial, the field \ref{eq:JonesVec} is a \textbf{spinor}\footnote{We can see a spinor a $1/2$ tensor. From a geometric point of view, we say that a vector $\vec{v}$ is, in fact, and spinor if it needs two complete rotation of $360$° to arrive its original position} a we're going to see this spinor behavior in this chapter. 
+
+        The Jones spinor \ref{eq:JonesVec} is a vector that describes how the electric field oscillates, in general, under our assumptions\footnote{deterministic, $2D$, monocrhomatic, space-time independent, propagation on vacuum} is an ellipse, well known as the polarization ellipse. To get the ellipse from \ref{eq:JonesVec} we're going to define the following electric field componentes, given by
+        \begin{align}
+            & \frac{E_1}{\mathcal{E}_1}e^{-i\phi_2} = \frac{1}{2}e^{i\triangle\phi}, \label{eq:E1Jones}\\
+            & \frac{E_2}{\mathcal{E}_2}e^{-i\phi_1} = \frac{1}{2}e^{-i\triangle\phi}, \label{eq:E2Jones}\\
+            & \triangle\phi = \phi_1-\phi_2. \nonumber
+        \end{align}
+
+        Now, we're going to calculate the magnitude of the difference between \ref{eq:E1Jones} and \ref{eq:E2Jones}, and because these are complex number, it is given by
+        \begin{align*}
+            & \left(\frac{E_1}{\mathcal{E}_1}e^{-i\phi_2} -  \frac{E_2}{\mathcal{E}_2}e^{-i\phi_1}\right)\left(\frac{E_1}{\mathcal{E}_1}e^{-i\phi_2} -  \frac{E_2}{\mathcal{E}_2}e^{-i\phi_1}\right)^* = \frac{1}{4}\left(e^{i\triangle\phi} - e^{-i\triangle\phi} \right)\left(e^{i\triangle\phi} - e^{-i\triangle\phi} \right)^*,
+        \end{align*}
+        where $*$ represents the complex conjugate. In the right hand side we can see tha the difference between those two exponentials are the sine of the phase difference $\triangle$ thus
+        \begin{equation}\label{eq:EllipseRHS}
+            \frac{1}{4}\left(e^{i\triangle\phi} - e^{-i\triangle\phi} \right)\left(e^{i\triangle\phi} - e^{-i\triangle\phi} \right)^* = \frac{1}{4}\left(2i\sin\triangle\phi \right)\left(-2i\sin\triangle\phi \right) = \sin^2\triangle\phi.
+        \end{equation}
+
+        In the left hand side we've got the following
+        \begin{align*}
+            & \left(\frac{E_1}{\mathcal{E}_1}e^{-i\phi_2} -  \frac{E_2}{\mathcal{E}_2}e^{-i\phi_1}\right)\left(\frac{E_1}{\mathcal{E}_1}e^{-i\phi_2} -  \frac{E_2}{\mathcal{E}_2}e^{-i\phi_1}\right)^* = \\
+            & \frac{|E_1|^2}{\mathcal{E}_1^2} \text{\color{blue} $- \frac{E_1E_2^*}{\mathcal{E}_1\mathcal{E}_2}e^{i\triangle\phi} - \frac{E_2E_1^*}{\mathcal{E}_2\mathcal{E}_1}e^{-i\triangle\phi} $} + \frac{|E_2|^2}{\mathcal{E}_2^2},
+        \end{align*}
+        the crossed terms in blue corresponds to the same quantity but one is the complex conjugate of the other, so if we factor the minus sign we'll have the real part of that complex number, so, the left hand side is given by
+        \begin{equation}\label{eq:EllipseLHS}
+            \frac{|E_1|^2}{\mathcal{E}_1^2} + \frac{|E_2|^2}{\mathcal{E}_2^2} - 2\frac{Re\left\{E_1E_2^*\right\}}{\mathcal{E}_1\mathcal{E}_2}\cos\triangle\phi.
+        \end{equation}
+
+        Combining the LHS \ref{eq:EllipseLHS} and the RHS \ref{eq:EllipseRHS} we will have the \textit{polarisation ellipse}
+        \begin{equation}\label{eq:EllipsePol}
+            \frac{|E_1|^2}{\mathcal{E}_1^2} + \frac{|E_2|^2}{\mathcal{E}_2^2} - 2\frac{Re\left\{E_1E_2^*\right\}}{\mathcal{E}_1\mathcal{E}_2}\cos\triangle\phi = \sin^2\triangle\phi.
+        \end{equation}
+
+        Then we've shown the electric field lives on an geometric space on $\mathcal{C}^2$ which is a real rotated elllipse, before going further we should notice something. 
+
+        The Jones spinor \ref{eq:JonesVec} is not an unique thing of the electric field, also describes the magnetic field under these assumptions but also \textbf{describes any complex field with 2 degrees of freedom}, for example the gravitational waves have got a polarisation ellipse, $2D$ phonons have polarisation ellipse, and so on. 
+
+        From a mathematical point of view the origin of the ellipse is obvious, the Jones spinor \ref{eq:JonesVec} corresponds to two unit complex circles which rotate asincronically, so the general figure is an ellipse not a circle, but, there is a further a more fundamental question, and it is \textbf{why does the nature choose an elllipse as the fundamental description of the orientation of the electric field} The short answer is: $No, the nature does not choose that$, the long answer is going to be shown in the theory of coherence chapter.
+
+        \subsubsection{How to build the polarisation ellipse: Phasors}
+
+            Given any Jones spinor \ref{eq:JonesVec} how can we construct the polarisation ellipse? To answer this we're going to use phasors which is a formal word for a polar form of a complex number.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=0.8\textwidth]{Chapter 3/Figures/Phasors.pdf}
+                \caption{The polarisation ellipse can be reconstructred taking all the possible rotations of the two phasors (which corresponds to the compoenentes of the Jones spinor).}
+                \label{fig:Phasors}
+            \end{figure} 
+
+            Because we've got a $2D$ vector we've got two components, two polar complex numbers $\mathcal{E}_me^{i\phi_m}$ with $m=1,2$ so we can describe these two phasors as two circunferences as is shown in \ref{fig:Phasors}. The $x$ component or $1-st$ component is a circunference with radius $\mathcal{E}_1$ and the initial point on this circunference is located at an angle $\phi_1$ respect to the $x-axis$ (shown as the red circunference in the figure \ref{fig:Phasors}). The second phasor, corresponding to the $y$ component of the jones spinor is another circunference but the radius is $\mathcal{E}_2$ and the initial point is located at an angle of $\phi_2$ but respect to the $y-axis$.
+
+            To construct the polarisation ellipse, we start with the two initial points an draw two straight lines, for the horizontal phasor (the red one) the lines are horizontal, and for the vertical phasor (the blue one) the lines are vertical. In the intersection of the two rects we draw a point, and we desplace both initial points by the same angle, lets call it $\delta\phi$ until we arrive at the initial point. The set of all intersection points draw the polarisation ellipse, which their semi-axes are going to be $\mathcal{E}_1,\mathcal{E}_2$ and the orientation is going to depends on $\triangle\phi$ if $\triangle\phi = \frac{\pi}{2} + n\pi$ with $n\in \mathbb{Z}$ the ellipse isn't going to be orientated also $\triangle\phi$ conditionates if the electric field is going to rotate clockwise or counterclockwise. 
+
+        \subsubsection{How to build the polarisation ellipse: Ellipse angles}
+            
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=0.7\textwidth]{Chapter 3/Figures/PolarisationEllipseGen.pdf}
+                \caption{The general form of the polarisation ellipse can be described with only two angles; the orientation angle $\alpha$ and the elipticity angle $\chi$. }
+                \label{fig:EllipPolGen}
+            \end{figure} 
+
+            It is not very comfortable to work with phasor and even we can't see the ellipse inmediately with the Jones spinor, so we would like a more visual or efficient way to interpretate the polarisation. First we must notice that the electric field amplitudes only change the size of the ellipse, but the relative phases $\phi_1,\phi_2$ are the ones who determine the form of the ellipse, so we can work out with a Jones spinor as an unit vector, this means $\vec{e} \to \hat{e}$ such that $\hat{e}\cdot \hat{e} = 1$. 
+
+            The general polarisation ellipse can be seen in \ref{fig:EllipPolGen} which can be fully described using just two angles $\alpha$ and $\chi$. 
+
+            \begin{myDef}
+                \textit{(Characteristic polarisation angles)}: We define the two characteristic polarisation angles as the orientation angle $-\pi \leq \alpha \leq \pi$ which describes how orientated is the ellipse respect to the horizontal axis, and the elipticity angle $-\pi/2 \leq \chi \leq \pi/2$ which describes completily the form of the ellipse.
+            \end{myDef}
+
+            \textbf{How can we translate the Jones spinor with characteristic angles?} To do this, lets remind that without any loss of generality we can say the Jones spinor is unitary $(\hat{e}\cdot\hat{e}=1)$ and lets consider the following phases $\phi_1 =0$ and $\phi_2 = \pi/2$ and we'll have a polarization elllipse as in shown in \ref{fig:EllipPolBase}.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=0.7\textwidth]{Chapter 3/Figures/PolarisationEllipseBase.pdf}
+                \caption{The polarisation ellipse is completely unrotated due to the relative phases between the componentes of the electric field. }
+                \label{fig:EllipPolBase}
+            \end{figure} 
+
+            As we can see, the polarization vector can be describe using a polar parametrization with the angle $\chi$, so the Jones spinor becomes
+            \begin{equation}\label{eq:JonesChi}
+                \hat{e}(\chi) =
+                \begin{bmatrix}
+                    \cos\chi\\
+                    i\sin\chi
+                \end{bmatrix},
+            \end{equation}
+            the $i$ term comes from the phase $\phi_2 = \pi/2$ where $\exp\left(\pi/2\right)=i$. Now, to construct the full polarization states shown in \ref{fig:EllipPolGen} we only have to rotate the Jones spinor \ref{eq:JonesChi} an angle $\alpha$, so, the polarisation states is given by
+            \begin{align*}
+                & \hat{e}(\alpha,\chi) =
+                \begin{bmatrix}
+                    \cos\alpha & -\sin\alpha\\
+                    \sin\alpha & \cos\alpha
+                \end{bmatrix}
+                \begin{bmatrix}
+                    \cos\chi\\
+                    i\sin\chi
+                \end{bmatrix},\\
+                & \hat{e}(\alpha,\chi) = 
+                \begin{bmatrix}
+                    \cos\alpha \cos\chi - i\sin\alpha \sin\chi \\
+                    \sin\alpha \cos\chi + i\cos\alpha\sin\chi
+                \end{bmatrix}
+            \end{align*}
+
+            \begin{myDef}
+                \textit{(Polarisation convention)}: From now on in this lectures whenever we're working with polarisation states in terms of the angles $(\alpha.\chi)$ instead of using $\hat{e}(\alpha,\chi)$ we're going to use the ket notation, therefore $\hat{e}(\alpha,\chi) \longmapsto \ket{\alpha;\chi}$ where we use the semicolon $;$ instead of the comma $,$ because the angles are two parameters and does not represente a two level ket $(\ket{\alpha,\chi} )$ (however polarisation is a two level system).
+            \end{myDef}
+
+            Having on count this convention, we've got that the general description of a polarisation state in terms of the characteristic angles is given by 
+
+            \begin{equation}\label{eq:JonesKet}
+                \ket{\alpha;\chi} =
+                \begin{bmatrix}
+                    \cos\alpha \cos\chi - i\sin\alpha \sin\chi \\
+                    \sin\alpha \cos\chi + i\cos\alpha\sin\chi
+                \end{bmatrix}.
+            \end{equation}
+
+            Because the polarisation is a $2D$ vector in this formulation it can be written as the superposition of, at leat, two linearly independent polarisation states. There is a convention, whenever we talk about polarisation we always write it as the superposition of two ortognal polarisation states, so, how can we build this orthogonal states? We have got two answers, using the orientation angle or the elipticity angle. Using the orientation angle is the most obvious and inmediate way, because we only have to put the two ellipses orthogonal, this means taking the state $\ket{\alpha;\chi}$ and rotate it like $\ket{\alpha + \frac{\pi}{2};\chi}$.
+
+            To think about orthogonal states using elipticity we only have got to think about that given any two orthogonal polarisation states $\ket{0; \chi}$, $\ket{0; \chi'}$ the following two states $\ket{\alpha;\chi}$ and $\ket{0; \chi'}$ are also orthogonal because the rotation transformation preservers the relative angle between vectors. Having this on count, lets suppose that $\chi' = \chi + \theta$ and by orthogonality lets calculate the value of the angle $\theta$ that guarantees the orthogonality between polarisation states. Lets calculate the dot product
+            \begin{align*}
+                & \left\langle 0;\chi | 0 ; \chi + \theta \right\rangle = \left[ \cos\chi, -i\sin\chi \right]
+                \begin{bmatrix}
+                    cos(\chi + \theta)\\
+                    i\sin(\chi + \theta)
+                \end{bmatrix} = 0,\\
+                & \cos\chi \cos(\chi+\theta) + \sin\chi \sin(\chi + \theta) = 0,\\
+                & \cos\left(\chi + \theta - \chi\right) = 0,\\
+                & \cos\theta = 0 \longrightarrow \theta = (2n-1)\frac{\pi}{2}\quad n \in \mathbb{Z},
+            \end{align*}
+            where we have used the cosine of the sum of two angles, so for the cosine of $\theta$ to vanish it must ve an odd multiple of $pi/2$, without any loss of generality lets take $n = 1$, so $\theta = \pi/2$ and the orthogonal state can be obtained just taking a displacemente of $\pi/2$ on the elipticity, then any polarization state can be writeen as
+            \begin{equation}\label{eq:PolSuperposition}
+                \ket{\alpha;\chi} = c_1 \ket{\alpha';\chi'} + c_2 \left|\alpha'; \chi' + \frac{\pi}{2}\right\rangle. 
+            \end{equation}
+
+        \subsubsection{The canonical polarisation states: horizontal, vertical, diagonal and circular}
+
+            Equation \ref{eq:JonesKet} already contains the whole catalogue of polarisation states, so it is worth stopping here and finding explicitly the handful of states that we are going to meet again and again in the laboratory: the two linear states aligned with the coordinate axes, the two diagonal linear states, and the two circular states. For every one of them we want three things: the amplitudes and phases $\mathcal{E}_1,\mathcal{E}_2,\phi_1,\phi_2$ of the original spinor \ref{eq:JonesVec}, normalised so that $\mathcal{E}_1^2+\mathcal{E}_2^2=1$, and the pair of characteristic angles $(\alpha,\chi)$ that reproduce that spinor in \ref{eq:JonesKet}.
+
+            Since $\ket{\alpha;\chi}$ has got a real first term in its combination and a purely imaginary second term whenever we compare it componentwise with a target spinor $\vec{e} = [e_1,e_2]^{\mathsf{T}}$, it is convenient to split \ref{eq:JonesKet} into its real and imaginary parts once and for all,
+            \begin{equation}\label{eq:AlphaChiSystem}
+                \cos\alpha\cos\chi = \text{Re}\{e_1\}, \quad -\sin\alpha\sin\chi = \text{Im}\{e_1\}, \quad \sin\alpha\cos\chi = \text{Re}\{e_2\}, \quad \cos\alpha\sin\chi = \text{Im}\{e_2\}.
+            \end{equation}
+            Every state below is obtained by feeding a particular $\vec{e}$ into the system \ref{eq:AlphaChiSystem} and solving for $\alpha,\chi$ inside their allowed ranges $-\pi\leq\alpha\leq\pi$ and $-\pi/2\leq\chi\leq\pi/2$.
+
+            \textbf{Horizontal linear polarisation.} The field only oscillates along the $x$ axis, so the second component of the spinor must vanish, $\mathcal{E}_2=0,\mathcal{E}_1=1$. A common phase multiplying the whole spinor has got no physical meaning, since it is only a redefinition of the origin of time, so we are free to set $\phi_1=0$; the phase $\phi_2$ plays no role at all because it multiplies a null amplitude. The normalised spinor is
+            \begin{equation}\label{eq:JonesHoriz}
+                \vec{e}_H = \begin{bmatrix}1\\0\end{bmatrix}, \qquad \phi_1=0,\quad \mathcal{E}_2=0.
+            \end{equation}
+            Plugging $e_1=1,e_2=0$ into \ref{eq:AlphaChiSystem} gives $\cos\alpha\cos\chi=1$ together with $\sin\alpha\sin\chi=\sin\alpha\cos\chi=\cos\alpha\sin\chi=0$, and because $\cos\alpha\cos\chi=1$ is the maximum value that a product of two cosines can reach, it forces $\cos\alpha=\cos\chi=1$, that is
+            \begin{equation}\label{eq:HorizAngles}
+                \boxed{\alpha=0,\qquad \chi=0} \qquad\Longrightarrow\qquad \ket{0;0}=\begin{bmatrix}1\\0\end{bmatrix}.
+            \end{equation}
+
+            \textbf{Vertical linear polarisation.} By the same argument, now the field only oscillates along $y$, so $\mathcal{E}_1=0,\mathcal{E}_2=1$ and we set $\phi_2=0$ (again, $\phi_1$ is irrelevant),
+            \begin{equation}\label{eq:JonesVert}
+                \vec{e}_V = \begin{bmatrix}0\\1\end{bmatrix}, \qquad \phi_2=0,\quad \mathcal{E}_1=0.
+            \end{equation}
+            Feeding $e_1=0,e_2=1$ into \ref{eq:AlphaChiSystem} gives $\sin\alpha\cos\chi=1$, which forces $\sin\alpha=\cos\chi=1$, so
+            \begin{equation}\label{eq:VertAngles}
+                \boxed{\alpha=\frac{\pi}{2},\qquad \chi=0} \qquad\Longrightarrow\qquad \ket{\pi/2;0}=\begin{bmatrix}0\\1\end{bmatrix}.
+            \end{equation}
+
+            \textbf{Diagonal linear polarisation, at $\pi/4$ from the horizontal.} Now both components carry the same amplitude, $\mathcal{E}_1=\mathcal{E}_2=1/\sqrt{2}$, and, this being the new ingredient, they also share the same phase, $\phi_1=\phi_2=0$, so that $\triangle\phi=\phi_1-\phi_2=0$ and
+            \begin{equation}\label{eq:JonesDiag}
+                \vec{e}_{D} = \frac{1}{\sqrt{2}}\begin{bmatrix}1\\1\end{bmatrix}, \qquad \phi_1=\phi_2=0.
+            \end{equation}
+            Here \ref{eq:AlphaChiSystem} reads $\cos\alpha\cos\chi=\sin\alpha\cos\chi=1/\sqrt2$ and $\sin\alpha\sin\chi=\cos\alpha\sin\chi=0$. If $\sin\chi$ were different from zero the last two equations would force $\sin\alpha=\cos\alpha=0$ at once, which is impossible, so we must have $\chi=0$; the first two equations then reduce to $\cos\alpha=\sin\alpha=1/\sqrt2$, giving
+            \begin{equation}\label{eq:DiagAngles}
+                \boxed{\alpha=\frac{\pi}{4},\qquad \chi=0}.
+            \end{equation}
+
+            \textbf{Antidiagonal linear polarisation, at $-\pi/4$ from the horizontal.} The amplitudes are the same as in the diagonal case, but now the two components oscillate in opposition, $\phi_1=0,\phi_2=\pi$, so that $e^{i\phi_2}=-1$, $\triangle\phi=-\pi$, and
+            \begin{equation}\label{eq:JonesAntiDiag}
+                \vec{e}_{A} = \frac{1}{\sqrt{2}}\begin{bmatrix}1\\-1\end{bmatrix}, \qquad \phi_1=0,\quad\phi_2=\pi.
+            \end{equation}
+            The same reasoning used above forces again $\chi=0$, and now $\cos\alpha=1/\sqrt2,\sin\alpha=-1/\sqrt2$, so
+            \begin{equation}\label{eq:AntiDiagAngles}
+                \boxed{\alpha=-\frac{\pi}{4},\qquad \chi=0}.
+            \end{equation}
+            It is worth pausing on the four linear states \ref{eq:HorizAngles}, \ref{eq:VertAngles}, \ref{eq:DiagAngles} and \ref{eq:AntiDiagAngles}: all of them share $\chi=0$, and this is not a coincidence, since the ellipticity angle measures how far the ellipse has departed from a straight segment, and every linear state is nothing but a degenerate ellipse of zero ellipticity. The orientation angle $\alpha$ is the only one that changes from state to state, and it does exactly what its name promises, it tells us the tilt of that segment with respect to the $x$ axis.
+
+            \textbf{Circular polarisations.} We now ask for the opposite extreme, the states in which the two orthogonal oscillations have got the same amplitude, $\mathcal{E}_1=\mathcal{E}_2=1/\sqrt2$, but are shifted by a quarter of a cycle rather than being in phase or in opposition, $\phi_1=0,\phi_2=\mp\pi/2$, so that $e^{i\phi_2}=\pm i$, $\triangle\phi=\pm\pi/2$, and
+            \begin{equation}\label{eq:JonesCirc}
+                \vec{e}_{\pm} = \frac{1}{\sqrt2}\begin{bmatrix}1\\ \pm i\end{bmatrix}, \qquad \phi_1=0,\quad\phi_2=\mp\frac{\pi}{2}.
+            \end{equation}
+            Plugging $e_1=1/\sqrt2,e_2=\pm i/\sqrt2$ into \ref{eq:AlphaChiSystem}, the real part of the second line, $\sin\alpha\cos\chi=0$, together with the imaginary part of the first line, $\sin\alpha\sin\chi=0$, can only be satisfied inside the allowed ranges by $\alpha=0$ (the case $\cos\chi=0$ is discarded because it would force the left hand side of $\cos\alpha\cos\chi=1/\sqrt2$ to vanish). With $\alpha=0$ the remaining equations collapse to $\cos\chi=1/\sqrt2$ and $\sin\chi=\pm1/\sqrt2$, so
+            \begin{equation}\label{eq:CircAngles}
+                \boxed{\alpha=0,\qquad \chi=\pm\frac{\pi}{4}} \qquad\Longrightarrow\qquad \ket{0;\pm\pi/4}=\frac{1}{\sqrt2}\begin{bmatrix}1\\\pm i\end{bmatrix}.
+            \end{equation}
+            Notice that the orientation angle $\alpha$ is completely undetermined by the shape of the state, and indeed it must be so, a circle has got no preferred direction to be tilted towards, so setting $\alpha=0$ is only a matter of convenience. What really distinguishes the two circular states is the sign of $\chi$, and this sign is directly inherited from the sign of $\triangle\phi=\phi_1-\phi_2$, exactly as anticipated when we built the ellipse from the two phasors: a positive $\triangle\phi$ produces $\chi<0$ and a negative $\triangle\phi$ produces $\chi>0$. To see the rotation itself, we restore the time dependence at a fixed point in space and take the real part of the spinor \ref{eq:JonesCirc},
+            \begin{equation*}
+                E_1(t) = \frac{1}{\sqrt2}\cos(\omega t), \qquad E_2(t) = \frac{1}{\sqrt2}\cos\left(\omega t \mp \frac{\pi}{2}\right) = \pm\frac{1}{\sqrt2}\sin(\omega t),
+            \end{equation*}
+            so that at $\omega t=0$ the vector $(E_1,E_2)$ points along $+x$, and an instant later it has acquired a small positive component along $+y$ for the upper sign and along $-y$ for the lower sign. In other words, the state with $\chi=+\pi/4$ traces a counterclockwise circle and the state with $\chi=-\pi/4$ traces a clockwise circle in the $x$-$y$ plane as time goes on. Whether counterclockwise is called left or right circular polarisation depends on whether the observer is defined to look along the propagation direction or against it, a convention we postpone fixing until the Poincaré sphere is introduced; for the moment we simply keep the two states labelled by the unambiguous quantity $\chi=\pm\pi/4$, the largest ellipticity angle allowed, exactly as $\chi=0$ was the smallest.
+
+            Together, the six states \ref{eq:HorizAngles}, \ref{eq:VertAngles}, \ref{eq:DiagAngles}, \ref{eq:AntiDiagAngles} and \ref{eq:CircAngles} already reveal the whole geometric role of the pair $(\alpha,\chi)$: $\alpha$ only rotates a state that has got some elongation, while $\chi$ interpolates continuously between a straight segment at $\chi=0$ and a circle at $|\chi|=\pi/4$, with its sign fixing the sense in which the tip of the electric field turns; every other value of $\chi$ in between will describe, as we should expect by now, a genuine ellipse of intermediate eccentricity.
+
+    \subsection{Time evolution of the polarisations: Stokes parameters and the Poincaré sphere}
+
+        The mathematics developed so far describes a beam of light whose polarisation is perfectly defined at every instant, the situation formalised by the Jones spinor \ref{eq:JonesVec}. Real light is seldom so cooperative: sunlight, the light of an incandescent lamp, or even laser light after it has bounced once off a rough surface, is generally a superposition of many independent wavetrains whose relative phase drifts randomly and far too fast to be tracked. Nothing in the deterministic polarisation ellipse built in the previous subsection can describe such a beam, and it was precisely this gap that George Gabriel Stokes set out to close in 1852, in a paper read before the Cambridge Philosophical Society and modestly titled \textit{On the composition and resolution of streams of polarized light from different sources} \citep{stokes1852composition}. Stokes, who a few years later became Lucasian Professor of Mathematics at Cambridge (the same chair later held by Dirac and, more recently, by Hawking), and whose name today is more readily attached to the Navier-Stokes equations of fluid motion, to Stokes' theorem of vector calculus and to the Stokes shift of fluorescence, proposed four real quantities, built from simple combinations of intensities measured behind a polariser and a quarter wave plate held at a handful of fixed orientations, that could characterise the polarisation of any beam whatsoever, fully polarised, fully unpolarised, or anything in between. Unlike the Jones spinor \ref{eq:JonesVec}, which needs a single coherent phase to be written down at all, Stokes' four numbers are honest time averages, and they remain perfectly well defined even when no such phase exists.
+
+        It is a curious fact that this construction, so evidently useful and so close in spirit to the density matrix that quantum mechanics would introduce some seventy years later for exactly the same reason (to describe mixtures that a single wavefunction cannot capture), attracted almost no attention for the rest of the nineteenth century. Stokes himself never returned to it: he went on to serve as secretary and later as president of the Royal Society, absorbed by the administrative life such offices demanded, and his scientific attention drifted to fluorescence, to the wave theory of light in the aether, and above all to hydrodynamics. Nor did the wider community pick it up. Optics in the second half of the nineteenth century was still occupied with problems that were, by construction, coherent and deterministic, interference, diffraction, the propagation of well defined wavefronts, and the statistical treatment of an ensemble of independent wavetrains had no natural home in that programme. Even the form in which Stokes left his result, four numbers without an accompanying algebra of matrices to act on them, made it look more like a table of measurements than like a theory. His four coefficients, not yet known by the name \textit{Stokes parameters} that later authors would give them, waited in the pages of the \textit{Transactions of the Cambridge Philosophical Society} for the better part of a century.
+
+        The first person to give this problem a genuinely new geometric life, although without building explicitly on Stokes' algebra, was Henri Poincaré. Poincaré (1854 to 1912) is often remembered as the last of the great universalist mathematicians, equally at home in celestial mechanics, where his study of the three body problem contained, without his fully realising it, the first seeds of chaos theory, in topology, where the conjecture that bears his name would only be settled a century later, and in the foundations of mathematical physics, where his work on the Lorentz group anticipated several of the kinematic ingredients of special relativity. In 1892, in the second volume of his lecture course \textit{Théorie Mathématique de la Lumière}, Poincaré proposed representing every state of polarisation as a single point on the surface of a sphere \citep{poincare1892theorie}. He built this sphere directly from the orientation and ellipticity angles of the polarisation ellipse, the very angles $\alpha$ and $\chi$ of the ket \ref{eq:JonesKet}, so that the poles of the sphere fall on the two circular states, its equator is entirely covered by the linear states, exactly as anticipated in the historical overview at the beginning of this chapter, and every other point corresponds to one particular ellipse. It was only later, once the sphere and Stokes' four numbers were laid side by side, that it became clear the coordinates Poincaré had been plotting are, up to normalisation by the total intensity, precisely the three last Stokes parameters: two men, working four decades apart with entirely different tools, one through operational measurements of intensity and the other through the geometry of spherical trigonometry, had arrived at the same object from opposite directions. The sphere has carried Poincaré's name ever since, even though, as we shall see, its natural coordinates are Stokes'.
+
+        The parameters finally found the audience they deserved when a new generation of physicists needed to follow partially polarised light through processes that destroy coherence outright, above all multiple scattering in planetary atmospheres, in colloidal suspensions, and in the interstellar medium, a regime where the Jones calculus \citep{jones1941new}, powerful as it is, simply cannot be used, since it presupposes a single coherent amplitude that scattering does not leave behind. Soleillet, in 1929, and Francis Perrin, in a 1942 study of light scattered by opalescent media \citep{perrin1942polarization}, independently rebuilt essentially the same four component, matrix based description that the problem demanded, at first without fully recognising it as Stokes' own. The decisive act of recognition, and the paper usually credited with rescuing Stokes' parameters from a century of obscurity, restoring his original notation and giving the whole subject the name by which it is still taught, was published by Walter McMaster in the \textit{American Journal of Physics} in 1954 \citep{mcmaster1954polarization}. Subrahmanyan Chandrasekhar's monumental treatise on radiative transfer, appearing in the same decade, adopted the Stokes vector as the natural object to propagate through a scattering atmosphere and cemented its place in astrophysics \citep{chandrasekhar1950radiative}. From ellipsometry and remote sensing to the polarisation maps of the cosmic microwave background and to modern quantum optics, where the Stokes parameters reappear as the expectation values of the photon's Pauli operators, the formalism that Stokes wrote down in 1852, that the nineteenth century forgot, and that Poincaré unknowingly rediscovered forty years later in the language of spheres, is today one of the most used tools in the whole of optics.
+
+        Let us now build these four parameters explicitly, starting from nothing more than the polarisation ellipse \ref{eq:EllipsePol} itself, and see why Stokes was forced to define them as time averages rather than simply reading them off the field.
+
+        The ellipse \ref{eq:EllipsePol} is a fixed curve, but the physical field is not a curve, it is a point running around that curve once every optical period. To say this with equations, the real components $E_1,E_2$ that satisfy \ref{eq:EllipsePol} at every instant are themselves functions of time,
+        \begin{equation}\label{eq:RealFieldComponents}
+            E_1(t) = \mathcal{E}_1\cos(\omega t-\phi_1), \qquad E_2(t) = \mathcal{E}_2\cos(\omega t-\phi_2),
+        \end{equation}
+        the real part of the electric field \ref{eq:JonesVec} at a fixed point in space (its constant spatial phase $\vec k\cdot\vec r$ has simply been absorbed into $\phi_1,\phi_2$). Therefore the expression for the polarisation ellipse is given by
+
+        \begin{equation}\label{eq:EllipsePolTime}
+            \frac{|E_1(t)|^2}{\mathcal{E}_1^2} + \frac{|E_2(t)|^2}{\mathcal{E}_2^2} - 2\frac{Re\left\{E_1(t)E_2^*(t)\right\}}{\mathcal{E}_1\mathcal{E}_2}\cos\triangle\phi(t) = \sin^2\triangle\phi(t)
+        \end{equation}
+        
+        One can check directly that eliminating $t$ between the two equations \ref{eq:RealFieldComponents}, exactly as was done with the phasors \ref{eq:E1Jones} and \ref{eq:E2Jones}, returns \ref{eq:EllipsePol}; the ellipse is nothing but the trace, frozen in space, left behind by the point $\left(E_1(t),E_2(t)\right)$ as it oscillates.
+
+        A single period of visible light lasts a few femtoseconds, $T=\lambda/C\sim2\times10^{-15}\,\mathrm{s}$ for green light, while even the fastest photodetector available in a laboratory needs picoseconds to respond, and the human eye needs tens of milliseconds. In either case an enormous number of optical cycles, somewhere between $10^{6}$ and $10^{13}$ of them depending on the instrument, go by before any detector can register a single reading; the point $\left(E_1(t),E_2(t)\right)$ has swept around the ellipse an enormous number of times before any instrument manages to read anything at all. No detector, in other words, can ever measure the instantaneous field $E(t)$ itself, only some average of it taken over a great many periods. This is not a limitation that better technology could one day remove, it is what intensity means: the energy flux carried by a wave is proportional to the square of the field, so what a detector physically integrates is always $\left\langle E^2\right\rangle$, never $E$. This is exactly the operation Stokes performed, building his four parameters out of quadratic, time averaged combinations of the oscillating field rather than out of the ellipse itself, and it is why they, unlike the Jones spinor, remain meaningful even when no single coherent phase exists to write down.
+        Over one period $T=2\pi/\omega$, define the time average of any function $f(t)$ as $\langle f\rangle\equiv\frac1T\int_0^T f(t)\,dt$. The first two averages we need are the mean square amplitudes,
+        \begin{equation*}
+            \langle E_1^2\rangle = \frac{\mathcal E_1^2}{T}\int_0^T\cos^2(\omega t-\phi_1)\,dt = \frac{\mathcal E_1^2}{2T}\int_0^T\left[1+\cos(2\omega t-2\phi_1)\right]dt = \frac{\mathcal E_1^2}{2T}\left[T+0\right] = \frac{\mathcal E_1^2}{2},
+        \end{equation*}
+        where we used $\cos^2\theta=\frac12(1+\cos2\theta)$ and the fact that $\cos(2\omega t-2\phi_1)$ completes exactly two full oscillations as $t$ runs from $0$ to $T$, so its integral over that stretch vanishes; the identical computation gives $\langle E_2^2\rangle=\mathcal E_2^2/2$.
+
+        The remaining piece of information lives in how $E_1$ and $E_2$ oscillate together, and for that we need the cross average
+        \begin{align*}
+            \langle E_1E_2\rangle &= \frac{\mathcal E_1\mathcal E_2}{T}\int_0^T\cos(\omega t-\phi_1)\cos(\omega t-\phi_2)\,dt \\
+            &= \frac{\mathcal E_1\mathcal E_2}{2T}\int_0^T\left[\cos(\phi_1-\phi_2)+\cos(2\omega t-\phi_1-\phi_2)\right]dt = \frac{\mathcal E_1\mathcal E_2}{2}\cos\triangle\phi,
+        \end{align*}
+        where we used $\cos A\cos B=\frac12[\cos(A-B)+\cos(A+B)]$, the phase difference $\triangle\phi=\phi_1-\phi_2$ already defined near \ref{eq:E1Jones}, and, once again, that the piece oscillating at $2\omega$ averages to zero over a full period.
+
+        This single average, however, only ever gives us $\cos\triangle\phi$, and a beam with $\triangle\phi$ and one with $-\triangle\phi$ (opposite handedness, exactly as when we built the circular states \ref{eq:CircAngles}) would be indistinguishable from $\langle E_1E_2\rangle$ alone. To tell them apart we need a second, independent combination, and the natural one to try is $E_2$ sampled a quarter of a period earlier,
+        \begin{equation*}
+            \tilde{E}_2(t) \equiv E_2\!\left(t-\frac{T}{4}\right) = \mathcal E_2\cos\!\left(\omega t - \frac{\pi}{2}-\phi_2\right) = \mathcal E_2\sin(\omega t-\phi_2),
+        \end{equation*}
+        using $\cos(x-\pi/2)=\sin x$ and $\omega T/4=\pi/2$; physically, this quarter period delay is exactly what a birefringent plate cut to a quarter of a wavelength does to whichever component crosses it, so $\tilde E_2$ is not a mere mathematical trick but a genuinely measurable field. Its cross average with $E_1$ is
+        \begin{align*}
+            \langle E_1\tilde E_2\rangle &= \frac{\mathcal E_1\mathcal E_2}{T}\int_0^T \cos(\omega t-\phi_1)\sin(\omega t-\phi_2)\,dt \\
+            &= \frac{\mathcal E_1\mathcal E_2}{2T}\int_0^T\left[\sin(2\omega t-\phi_1-\phi_2) + \sin\triangle\phi\right]dt = \frac{\mathcal E_1\mathcal E_2}{2}\sin\triangle\phi,
+        \end{align*}
+        where now we used $\cos A\sin B=\frac12[\sin(A+B)-\sin(A-B)]$ with $A-B=\phi_2-\phi_1=-\triangle\phi$, together with the vanishing, as always, of the term oscillating at $2\omega$.
+
+        Having these time averages the time-dependent polarisation ellipse \ref{eq:EllipsePolTime} becomes
+        \begin{align*}
+            & \frac{\mathcal{E}_1^2}{2\mathcal{E}_1^2} + \frac{\mathcal{E}_2^2}{2\mathcal{E}_2^2} - \frac{2 \mathcal{E}_1\mathcal{E}_2}{2\mathcal{E}_1\mathcal{E}_2}\cos^2\triangle\phi = \sin^2\triangle\phi,
+        \end{align*}
+        multiplying both side by $4\mathcal{E}_1^2\mathcal{E}_2^2$ we'll have
+        \begin{align*}
+            & 2\mathcal{E}_1^2\mathcal{E}_2^2 + 2\mathcal{E}_1^2\mathcal{E}_2^2 - \left(2\mathcal{E}_1\mathcal{E}_2\cos\triangle\phi\right)^2 = \left(2\mathcal{E}_1\mathcal{E}_2\sin\triangle\phi\right)^2,
+        \end{align*}
+        by mathematical convenience we're going to add zero as $0 = \mathcal{E}_1^4 + \mathcal{E}_2^4 - \mathcal{E}_1^4 - \mathcal{E}_2^4$ as follows
+        
+        \begin{align*}
+            & \text{\color{blue}$\mathcal{E}_1^4 + \mathcal{E}_2^4$} + 2\mathcal{E}_1^2\mathcal{E}_2^2 \text{\color{blue}$-\mathcal{E}_1^4 - \mathcal{E}_2^4$} + 2\mathcal{E}_1^2\mathcal{E}_2^2 - \left(2\mathcal{E}_1\mathcal{E}_2\cos\triangle\phi\right)^2 = \left(2\mathcal{E}_1\mathcal{E}_2\sin\triangle\phi\right)^2,\\
+            & \left(\mathcal{E}_1^2 + \mathcal{E}_2^2 \right)^2 - \left(\mathcal{E}_1^2 - \mathcal{E}_2^2\right)^2 - \left(2\mathcal{E}_1\mathcal{E}_2\cos\triangle\phi\right)^2 = \left(2\mathcal{E}_1\mathcal{E}_2\sin\triangle\phi\right)^2
+        \end{align*}
+
+        We finally have everything we need. Stokes defined his four parameters, up to the overall factor of two needed to cancel the one half that every average above carries, as
+        \begin{align}
+            S_0 &\equiv 2\langle E_1^2\rangle + 2\langle E_2^2\rangle = \mathcal E_1^2+\mathcal E_2^2, \label{eq:S0trig}\\
+            S_1 &\equiv 2\langle E_1^2\rangle - 2\langle E_2^2\rangle = \mathcal E_1^2-\mathcal E_2^2, \label{eq:S1trig}\\
+            S_2 &\equiv 4\langle E_1E_2\rangle = 2\mathcal E_1\mathcal E_2\cos\triangle\phi, \label{eq:S2trig}\\
+            S_3 &\equiv 4\langle E_1\tilde E_2\rangle = 2\mathcal E_1\mathcal E_2\sin\triangle\phi. \label{eq:S3trig}
+        \end{align}
+        Four numbers built out of only two amplitudes and one phase difference cannot be independent, and indeed squaring and adding \ref{eq:S1trig} to \ref{eq:S3trig} gives
+        \begin{align*}
+            S_1^2+S_2^2+S_3^2 &= \left(\mathcal E_1^2-\mathcal E_2^2\right)^2 + 4\mathcal E_1^2\mathcal E_2^2\cos^2\triangle\phi + 4\mathcal E_1^2\mathcal E_2^2\sin^2\triangle\phi \\
+            &= \mathcal E_1^4 - 2\mathcal E_1^2\mathcal E_2^2 + \mathcal E_2^4 + 4\mathcal E_1^2\mathcal E_2^2\left(\cos^2\triangle\phi+\sin^2\triangle\phi\right) \\
+            &= \mathcal E_1^4 + 2\mathcal E_1^2\mathcal E_2^2 + \mathcal E_2^4 = \left(\mathcal E_1^2+\mathcal E_2^2\right)^2,
+        \end{align*}
+        where the whole phase difference $\triangle\phi$ has disappeared through the single identity $\cos^2\triangle\phi+\sin^2\triangle\phi=1$, leaving, by \ref{eq:S0trig},
+        \begin{equation}\label{eq:StokesIdentityTrig}
+            S_1^2+S_2^2+S_3^2 = S_0^2.
+        \end{equation}
+        This is the equality Stokes was really after: of the four numbers describing a fully polarised beam, only three are independent, exactly as only three are needed to fix a point on a sphere of given radius, a hint of the Poincaré sphere we will make precise shortly.
+
+        Every one of these four combinations is quadratic in the field, and this is precisely what lets us rewrite them, exactly, in terms of the complex components $e_1\equiv\mathcal E_1e^{i\phi_1}$ and $e_2\equiv\mathcal E_2e^{i\phi_2}$ of the spinor \ref{eq:JonesVec}, without a single cosine or sine left in sight. Since $e_1e_1^*=\mathcal E_1^2$, $e_2e_2^*=\mathcal E_2^2$, and $e_1e_2^*=\mathcal E_1\mathcal E_2e^{i(\phi_1-\phi_2)}=\mathcal E_1\mathcal E_2\left(\cos\triangle\phi+i\sin\triangle\phi\right)$, comparing real and imaginary parts term by term with \ref{eq:S2trig} and \ref{eq:S3trig} shows that
+        \begin{equation*}
+            \mathcal E_1^2\pm\mathcal E_2^2 = e_1e_1^*\pm e_2e_2^*, \qquad 2\mathcal E_1\mathcal E_2\cos\triangle\phi = e_1e_2^*+e_2e_1^*, \qquad 2\mathcal E_1\mathcal E_2\sin\triangle\phi = i\left(e_1^*e_2-e_1e_2^*\right),
+        \end{equation*}
+        the last equality following from $e_1^*e_2-e_1e_2^*=\mathcal E_1\mathcal E_2\left(e^{-i\triangle\phi}-e^{i\triangle\phi}\right)=-2i\,\mathcal E_1\mathcal E_2\sin\triangle\phi$, so multiplying through by $i$ removes the leftover $i^2=-1$ and leaves a real number, exactly as a physical intensity must be.
+
+        \begin{myDef}
+            \textit{(Stokes parameters)}: Given the Jones spinor $\vec e=[e_1,e_2]^{\mathsf T}$ of a fully polarised, monochromatic beam \ref{eq:JonesVec}, its Stokes parameters are the four real numbers
+            \begin{align}
+                S_0 &= e_1e_1^*+e_2e_2^*, \label{eq:StokesS0}\\
+                S_1 &= e_1e_1^*-e_2e_2^*, \label{eq:StokesS1}\\
+                S_2 &= e_1e_2^*+e_2e_1^*, \label{eq:StokesS2}\\
+                S_3 &= i\left(e_1^*e_2-e_1e_2^*\right). \label{eq:StokesS3}
+            \end{align}
+        \end{myDef}
+
+        Each of the four carries its own, immediate physical meaning. $S_0=\mathcal E_1^2+\mathcal E_2^2$ is simply the total intensity of the beam, the same quantity we normalised to one when we wrote the Jones ket \ref{eq:JonesKet} as a unit vector. $S_1=\mathcal E_1^2-\mathcal E_2^2$ measures how much the beam prefers the horizontal axis over the vertical one, positive for a beam closer to $\ket{0;0}$ and negative for one closer to $\ket{\pi/2;0}$. $S_2=2\mathcal E_1\mathcal E_2\cos\triangle\phi$ measures the same kind of preference, only rotated by forty five degrees, between the two diagonal states \ref{eq:DiagAngles} and \ref{eq:AntiDiagAngles}. And $S_3=2\mathcal E_1\mathcal E_2\sin\triangle\phi$ measures the preference between the two senses of circulation \ref{eq:CircAngles}.
+
+        Together, $(S_1,S_2,S_3)$ are nothing but three Cartesian coordinates. Writing the components of the general ket \ref{eq:JonesKet} as $e_1=\cos\alpha\cos\chi-i\sin\alpha\sin\chi$ and $e_2=\sin\alpha\cos\chi+i\cos\alpha\sin\chi$, for which $S_0=1$ since \ref{eq:JonesKet} is already a unit vector, and substituting into \ref{eq:StokesS1} to \ref{eq:StokesS3}, a short calculation using $\cos^2\theta-\sin^2\theta=\cos2\theta$ and $2\sin\theta\cos\theta=\sin2\theta$ on each term gives
+        \begin{equation}\label{eq:StokesFromAlphaChi}
+            S_1=S_0\cos2\alpha\cos2\chi, \qquad S_2=S_0\sin2\alpha\cos2\chi, \qquad S_3=-S_0\sin2\chi,
+        \end{equation}
+        so that $(S_1,S_2,S_3)/S_0$ is, quite literally, a point on a sphere of unit radius, parametrised by twice the orientation angle and twice the ellipticity angle: this is exactly the Poincaré (see the figure \ref{fig:PoincareSphere}) sphere of the historical discussion above, and \ref{eq:StokesFromAlphaChi} is the dictionary between its Cartesian coordinates and the angles $\alpha,\chi$ used throughout this chapter.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width = 0.6\textwidth]{Chapter 3/Figures/PoincareSphere.pdf}
+            \caption{In the Poincaré any polarisation state is a point on the surface on the sphere, howerver if the state is partially polarized it would be a pointe inside the poincaré sphere whose distance from the center is $\sqrt{S_1^2+S_2^2 + S_3^2}$.}
+            \label{fig:PoincareSphere}
+        \end{figure}
+
+        As a consistency check, squaring and adding the three equalities \ref{eq:StokesFromAlphaChi} reproduces the identity \ref{eq:StokesIdentityTrig} once more, $S_1^2+S_2^2+S_3^2=S_0^2\cos^22\chi\left(\cos^22\alpha+\sin^22\alpha\right)+S_0^2\sin^22\chi=S_0^2\left(\cos^22\chi+\sin^22\chi\right)=S_0^2$, this time because every fully polarised beam corresponds to a single, definite pair of angles $\alpha,\chi$, that is, to a single point sitting exactly on the surface of the Poincaré sphere.
+
+        Real light, as we already remarked in the historical discussion, is rarely so cooperative: sunlight, or light that has scattered even once, is better described as a rapidly and randomly fluctuating superposition of many such states, with $\alpha(t)$ and $\chi(t)$ themselves wandering on a timescale far shorter than any detector can follow, so that what actually gets measured is not the Stokes vector of one ellipse but a further time average over many different ones. Averaging a family of unit vectors that point in different directions on the sphere never gives a vector as long as the individual ones were, so for such partially polarised light the equality \ref{eq:StokesIdentityTrig} is generally replaced by the inequality $S_1^2+S_2^2+S_3^2<S_0^2$, with the extreme case $S_1=S_2=S_3=0$ describing completely unpolarised light, a beam with a perfectly well defined intensity but no preferred point on the Poincaré sphere at all. We will not develop this idea further here, since it belongs properly to the theory of coherence taken up in \ref{chap:Coherence}, but it is worth keeping in mind already that the four numbers built in this subsection say everything there is to say about polarisation, deterministic or not, while the single ket \ref{eq:JonesKet} only ever describes the former.
+
+        In the poincaré sphere \ref{fig:PoincareSphere} and the Stokes parameters \ref{eq:StokesFromAlphaChi} we see an interesting relation, given any state $\ket{\alpha;\chi}$ on the Poincaré sphere the characteristic angles aren't the same, these two are the double, so a full roation on the Jones spinor becomes two full rotations of the Stokes vector $\vec{S} = \left[S_1, S_2, S_3\right]^T$. In fact, we've proven in \ref{eq:PolSuperposition} that two orthogonal polarisation states are separated an angle of $\pi/2$ but, on the Poincaré sphere this angle is the double, so two orthogonal states are separated $\pi$ from the other, this means \textbf{any two orthogonal polarization states are diametrally opposite on the Poincaré sphere}.
+
+        \subsubsection{Why the Stokes vector is not a vector}
+
+            It is customary, and we shall keep the custom, to arrange the four numbers \ref{eq:StokesS0} to \ref{eq:StokesS3} into a column and to call the result the \textit{Stokes vector}. The name is convenient and completely standard, but taken literally it is wrong, and the reason is not a pedantic one, since it is the very same doubling of angles that makes the Poincaré sphere work in the first place.
+
+            In physics an object does not earn the name of vector by being a list of numbers. It earns it by transforming in a definite way under the symmetry group of the space it is supposed to live in, so that a rotation of the laboratory axes by an angle $\theta$ takes its components $v_i$ into $R_{ij}(\theta)v_j$. The triple $(S_1,S_2,S_3)$ fails this test at the first attempt. Turn the laboratory axes by $\theta$ about the propagation direction; the orientation of every ellipse is now measured from the new $x$ axis, so $\alpha\to\alpha-\theta$, and \ref{eq:StokesFromAlphaChi} gives at once
+            \begin{equation}\label{eq:StokesRotation}
+                S_1' = S_1\cos2\theta+S_2\sin2\theta, \qquad S_2' = -S_1\sin2\theta+S_2\cos2\theta, \qquad S_3'=S_3.
+            \end{equation}
+            The pair $(S_1,S_2)$ does rotate, but by twice the angle through which the laboratory was turned. The cleanest way to see how fatal this is, is to turn the laboratory by half a turn, $\theta=\pi$. Every polarisation ellipse is centrally symmetric, so it is carried exactly onto itself, no state of light has changed, and every measurable quantity must come back unchanged; and indeed \ref{eq:StokesRotation} returns $S_i'=S_i$, because $2\theta=2\pi$. A genuine vector of the transverse plane would have come back as $-\vec{v}$ instead. So $(S_1,S_2,S_3)$ is not a vector of the physical space in which the experiment sits, and there is no direction one could point at in the laboratory and call the direction of $S_3$.
+
+            The second failure is algebraic rather than geometric. A vector lives in a vector space, and a vector space is closed under multiplication by any real number, in particular by $-1$. But $-\vec{S}$ has got $S_0<0$, a beam of negative intensity, which is not a state of anything, so no physical Stokes vector possesses an additive inverse. What the physical Stokes vectors form is not a vector space but a convex cone, the region carved out by $S_0\geq0$ together with the inequality $S_0^2\geq S_1^2+S_2^2+S_3^2$ discussed above. Even the addition that this cone does admit is not the one a physicist would naively expect: adding two Stokes vectors describes the superposition of two mutually \textit{incoherent} beams, which was precisely Stokes' purpose, and it is emphatically not the coherent superposition of two fields, for which one must add the Jones spinors first and only afterwards form the four averages. The Stokes parameters are quadratic in the field, and quadratic quantities never add the way the field itself does.
+
+            If the four numbers are not the components of a vector, then components of what are they? Of an operator. It is enough to collect the very same products that appear in \ref{eq:StokesS0} to \ref{eq:StokesS3} into a single array.
+
+            \begin{myDef}
+                \textit{(Polarisation matrix)}: The polarisation matrix, also called the coherence matrix, of a beam with Jones spinor $\vec{e}=[e_1,e_2]^{\mathsf{T}}$ is the Hermitian, positive semidefinite matrix
+                \begin{equation}\label{eq:CoherenceMatrix}
+                    J \equiv \left\langle \vec{e}\,\vec{e}^{\,\dagger}\right\rangle = \begin{bmatrix}
+                        \left\langle e_1e_1^*\right\rangle & \left\langle e_1e_2^*\right\rangle \\
+                        \left\langle e_2e_1^*\right\rangle & \left\langle e_2e_2^*\right\rangle
+                    \end{bmatrix},
+                \end{equation}
+                the averages being taken over the response time of the detector, exactly as in the construction of the Stokes parameters themselves.
+            \end{myDef}
+
+            Take now the four Hermitian matrices
+            \begin{equation}\label{eq:PauliOptics}
+                \sigma_0=\begin{bmatrix}1&0\\0&1\end{bmatrix}, \qquad \sigma_1=\begin{bmatrix}1&0\\0&-1\end{bmatrix}, \qquad \sigma_2=\begin{bmatrix}0&1\\1&0\end{bmatrix}, \qquad \sigma_3=\begin{bmatrix}0&i\\-i&0\end{bmatrix},
+            \end{equation}
+            the identity together with the three Pauli matrices, ordered and signed to match the conventions we have been using. Any Hermitian $2\times2$ matrix can be expanded in this set, and carrying out the four traces term by term against \ref{eq:CoherenceMatrix} reproduces exactly the definitions \ref{eq:StokesS0} to \ref{eq:StokesS3},
+            \begin{equation}\label{eq:StokesFromCoherence}
+                S_\mu = \text{tr}\left(J\sigma_\mu\right), \qquad J = \frac{1}{2}\sum_{\mu=0}^{3}S_\mu\sigma_\mu.
+            \end{equation}
+            The $S_\mu$ are therefore the coordinates of a Hermitian \textit{operator} in the basis $\{\sigma_\mu\}$, which is a tensorial object living in an internal, abstract space, and not a vector of the laboratory. This reading also explains, in one line, the inequality that partially polarised light forced upon us, because writing \ref{eq:StokesFromCoherence} out gives
+            \begin{equation*}
+                J = \frac{1}{2}\begin{bmatrix} S_0+S_1 & S_2+iS_3 \\ S_2-iS_3 & S_0-S_1 \end{bmatrix}, \qquad \det J = \frac{1}{4}\left(S_0^2-S_1^2-S_2^2-S_3^2\right)\geq0,
+            \end{equation*}
+            the determinant being non negative precisely because $J$ is positive semidefinite, that is, because no measurement of intensity may ever return a negative number. That single physical demand is the entire content of $S_1^2+S_2^2+S_3^2\leq S_0^2$, with equality, a vanishing determinant and a rank one matrix, describing fully polarised light.
+
+            There is, finally, one honest sense in which the word vector can be rescued. The combination $S_0^2-S_1^2-S_2^2-S_3^2$ that has just appeared is exactly a Minkowski interval, with $S_0$ in the role of the time component and $(S_1,S_2,S_3)$ in that of the spatial one, and the physical states fill the forward light cone of an abstract four dimensional space: fully polarised light sits on the cone itself, where the interval vanishes, partially polarised light strictly inside it, and completely unpolarised light on the time axis, where the three spatial components vanish together. The real matrices that describe the action of optical elements on this four tuple, the Mueller matrices to which we will come later, then turn out to belong to a group closely related to the Lorentz group, an observation already made by McMaster when he rescued the formalism \citep{mcmaster1954polarization}. The Stokes four tuple is a four vector of that abstract space, never a three vector of the laboratory, and keeping the traditional name is harmless as long as we remember which space it is a vector of.
+
+    \subsection{The bridge between Jones and Stokes: the stereographic projection}
+
+        We now own two different languages for one and the same physical object. The Jones formalism describes a polarisation state with two complex numbers \ref{eq:JonesVec}, and the Stokes formalism describes it with four real ones, \ref{eq:StokesS0} to \ref{eq:StokesS3}, which for fully polarised light are constrained by \ref{eq:StokesIdentityTrig} to live on the surface of the Poincaré sphere \ref{fig:PoincareSphere}. Two languages that speak about the same thing must be translatable into each other, and the translation here is not a mere change of symbols: it is a piece of geometry, and a very old and very beautiful one, the stereographic projection. What follows is a deliberately phenomenological tour of that bridge, close in spirit to the way Azzam and Bashara present it in their treatise on polarised light \citep{azzam1977ellipsometry}, where the reader will also find all the fine print we happily skip here.
+
+        \subsubsection{What the stereographic projection is}
+
+            Stereographic projection is the oldest recipe known for drawing a sphere on a flat sheet of paper. Take a sphere resting on a plane, single out the point $N$ of the sphere diametrically opposite to the point of contact, and call it the centre of projection. To find where a point $P$ of the sphere lands on the paper, draw the straight line joining $N$ to $P$ and follow it until it pierces the plane; the piercing point $Q$ is the image of $P$. That is the whole construction, and figure \ref{fig:ProyStereo1} shows it at a glance.
+
+            \begin{myDef}
+                \textit{(Stereographic projection)}: Let $S^2$ be a sphere resting on a plane $\mathbb{R}^2$, and let $N\in S^2$ be the point diametrically opposite to the point of contact. The stereographic projection from $N$ assigns to every point $P\in S^2$, with $P\neq N$, the unique point $Q\in\mathbb{R}^2$ at which the straight line through $N$ and $P$ meets the plane. The map is one to one, it sends circles drawn on the sphere to circles or straight lines drawn on the plane, and it preserves the angle at which any two curves cross. The centre $N$ alone has no image, so the plane is completed with a single extra point, the point at infinity, declared to be the image of $N$.
+            \end{myDef}
+
+            \begin{figure}[!ht]
+                \centering
+                \includegraphics[width=0.75\textwidth]{Chapter 3/Figures/ProyStereo1.pdf}
+                \caption{The stereographic projection. A ray leaving the centre of projection $N$ and passing through a point $P$ of the sphere $S^2$ meets the plane $\mathbb{R}^2$ at a single point $Q$. Points near the contact point fall near the origin, and points near $N$ fly off towards infinity.}
+                \label{fig:ProyStereo1}
+            \end{figure}
+
+            The last clause of the definition is the one that carries all the physics. The plane by itself is not enough to hold the whole sphere, since one point of the sphere always escapes; but as soon as we agree that all the ways of running off to infinity on the plane are one and the same destination, the accounting becomes exact and the sphere and the completed plane become the same object seen twice. This completed plane, $\mathbb{C}\cup\{\infty\}$, is what mathematicians call the extended complex plane, and the sphere carrying it is what they call the Riemann sphere. The construction is far older than that name: Hipparchus and Ptolemy already used it to draw star charts, and the medieval astrolabe is nothing but a stereographic map of the celestial sphere engraved on a brass disc, which works precisely because the projection turns circles into circles and keeps angles honest.
+
+        \subsubsection{Why a polarisation state is a single complex number}
+
+            Nothing in the previous paragraph mentions light, so we must now ask what a sphere and a plane have to do with polarisation. The answer starts with a simple count. The Jones spinor \ref{eq:JonesVec} carries two complex numbers, that is, four real ones, the two amplitudes $\mathcal{E}_1,\mathcal{E}_2$ and the two phases $\phi_1,\phi_2$; but two of those four say nothing whatsoever about polarisation. The overall size of the spinor is the intensity of the beam, and dimming the light does not change the shape of its ellipse; the overall phase is only a choice of the origin of time, and starting the clock a little earlier does not change that shape either. Multiplying the whole spinor by any complex number therefore leaves the polarisation state untouched, and what survives such a multiplication is only the \textit{ratio} of the two components.
+
+            \begin{myDef}
+                \textit{(Complex polarisation ratio)}: Given the Jones spinor $\vec{e}=[e_1,e_2]^{\mathsf{T}}$ of a fully polarised beam \ref{eq:JonesVec}, its complex polarisation ratio is the number
+                \begin{equation}\label{eq:ComplexRatio}
+                    w \equiv \frac{e_2}{e_1} = \frac{\mathcal{E}_2}{\mathcal{E}_1}\,e^{i\left(\phi_2-\phi_1\right)} = \frac{\mathcal{E}_2}{\mathcal{E}_1}\,e^{-i\triangle\phi} \;\in\; \mathbb{C}\cup\{\infty\},
+                \end{equation}
+                with the value $w=\infty$ reserved for the case $e_1=0$. Two Jones spinors describe the same polarisation state if and only if they share the same $w$.
+            \end{myDef}
+
+            Both pieces of $w$ are quantities we have already been using throughout this chapter, only now packed into one symbol. Its modulus $|w|=\mathcal{E}_2/\mathcal{E}_1$ is the ratio of the two amplitudes, which decides how elongated the ellipse is and towards which axis it leans, and its argument $\arg w=-\triangle\phi$ is the phase lag between the two oscillations, which decides how open the ellipse is and in which sense the field turns. Feeding the six canonical states of the previous subsection into \ref{eq:ComplexRatio} gives, immediately,
+            \begin{equation}\label{eq:CanonicalW}
+                w_H = 0, \qquad w_V = \infty, \qquad w_D = 1, \qquad w_A = -1, \qquad w_{\pm} = \pm i,
+            \end{equation}
+            read off from the spinors \ref{eq:JonesHoriz}, \ref{eq:JonesVert}, \ref{eq:JonesDiag}, \ref{eq:JonesAntiDiag} and \ref{eq:JonesCirc}. Notice that the list already forces the point at infinity upon us: vertical polarisation has got no finite ratio at all, since its first component vanishes, and it is a perfectly ordinary state of light that no honest map is allowed to leave out. So the natural home of polarisation is not the plane $\mathbb{C}$ but the completed plane $\mathbb{C}\cup\{\infty\}$, and by the previous subsubsection that home is a sphere.
+
+        \subsubsection{The Poincaré sphere is that sphere}
+
+            The sphere we have just been handed is not a new one. Rest the Poincaré sphere on the complex plane of $w$, so that it touches the plane at the origin, and project from the point $N$ on top, as in figure \ref{fig:ProyStereo2}. Every reading of the resulting picture is a statement about light.
+
+            \begin{figure}[!ht]
+                \centering
+                \includegraphics[width=0.8\textwidth]{Chapter 3/Figures/ProyStereo2.pdf}
+                \caption{The Poincaré sphere resting on the complex plane of the ratio $w$. Horizontal polarisation sits at the point of contact, $w=0$, vertical polarisation sits at the centre of projection and is sent to the point at infinity, and the equator, where the two amplitudes are equal, is mapped onto the unit circle $|w|=1$. The angles $2\alpha$ and $2\chi$ that locate a state $P$ on the sphere are twice the orientation and ellipticity angles of its ellipse.}
+                \label{fig:ProyStereo2}
+            \end{figure}
+
+            The point of contact carries $w=0$, and by \ref{eq:CanonicalW} that is horizontal polarisation; the centre of projection is sent to infinity, and that is vertical polarisation. The two states that our coordinate axes single out therefore sit at the two poles of the picture, diametrically opposite each other, exactly as they should, since they are orthogonal states and we already knew that orthogonal states are antipodal on the Poincaré sphere. Halfway between them lies the equator, the set of states for which the two amplitudes are equal, and it is mapped onto the unit circle $|w|=1$. On that circle sit the diagonal state at $w=1$, the antidiagonal at $w=-1$, and the two circular states at $w=\pm i$, each pair again antipodal, again orthogonal. Moving radially outwards from the origin means pouring amplitude into the second component and turning a horizontal state gradually into a vertical one; going around at fixed radius means sliding the phase difference $\triangle\phi$ and opening or closing the ellipse without touching its amplitudes.
+
+            The antipodal rule survives the trip down to the plane in a form worth recording. The state orthogonal to $\vec{e}=[e_1,e_2]^{\mathsf{T}}$ is $[-e_2^*,e_1^*]^{\mathsf{T}}$, whose ratio is $e_1^*/(-e_2^*)$, so on the plane the antipodal map reads
+            \begin{equation}\label{eq:AntipodalW}
+                w \;\longmapsto\; -\frac{1}{w^*},
+            \end{equation}
+            which indeed exchanges $0$ with $\infty$, $1$ with $-1$, and $+i$ with $-i$, that is, horizontal with vertical, diagonal with antidiagonal, and each circular state with the other one. A statement that on the sphere was a plain geometric fact, going to the other side, becomes on the plane a short algebraic rule.
+
+            The dictionary between the two formalisms is now explicit. Dividing the Stokes parameters \ref{eq:StokesS0} to \ref{eq:StokesS3} by $S_0$ and writing them in terms of the ratio \ref{eq:ComplexRatio} gives
+            \begin{equation}\label{eq:StokesFromW}
+                \frac{S_1}{S_0} = \frac{1-|w|^2}{1+|w|^2}, \qquad \frac{S_2}{S_0} = \frac{2\,\text{Re}\{w\}}{1+|w|^2}, \qquad \frac{S_3}{S_0} = \frac{-2\,\text{Im}\{w\}}{1+|w|^2},
+            \end{equation}
+            and these three expressions are, letter for letter, the classical formulae of the inverse stereographic projection, the ones that lift a point of the plane back up to the sphere. The sign carried by $S_3$ is only the mirror convention of the drawing, and says which of the two circular states we agree to place on the upper half of the imaginary axis. Nothing else in \ref{eq:StokesFromW} is a matter of convention: the Jones ratio and the Stokes vector are the same information, once written on the plane and once written on the sphere.
+
+        \subsubsection{A flat atlas of every polarisation state}
+
+            Because the projection loses nothing, we may throw the sphere away and keep only the map. Figure \ref{fig:ProyStereo3} does exactly that: it is the complex plane of $w$ with the polarisation ellipse of each state drawn at the point that represents it, a complete atlas of polarised light on a single sheet.
+
+            \begin{figure}[!ht]
+                \centering
+                \includegraphics[width=0.6\textwidth]{Chapter 3/Figures/ProyStereo3.pdf}
+                \caption{The flattened Poincaré sphere. Each point of the complex plane of $w$ carries the ellipse of the state it represents. The origin is horizontal polarisation, the real axis carries every linear state, the imaginary axis carries the ellipses aligned with the coordinate axes together with the two circular states, and every direction of escape to infinity leads to one and the same state, the vertical one.}
+                \label{fig:ProyStereo3}
+            \end{figure}
+
+            Three features of the atlas deserve to be read out loud. First, the whole real axis is filled with linear states: a real $w$ means $\triangle\phi=0$ or $\triangle\phi=\pi$, the two components oscillate in step or in opposition, and the ellipse collapses to a segment, whose tilt sweeps through every possible orientation as $w$ runs from one end of the axis to the other. Second, the imaginary axis carries the states whose ellipse is aligned with the coordinate axes, growing from the flat horizontal segment at the origin, through wider and wider ellipses, to a perfect circle at $w=\pm i$, and then closing again into the vertical segment far away. Third, and most striking, the edges of the atlas in every direction, $+\infty$, $-\infty$, $+i\infty$ and $-i\infty$ alike, all carry the same vertical polarisation, because on the sphere all those escape routes converge on the single point $N$. The plane looks infinite, but it is not: it closes up on itself, and the object it really depicts is compact, bounded and without edges, a sphere.
+
+            This is the sense in which the Jones and the Stokes formalisms are one theory. A polarisation state is a point; call it $w$ and you are doing Jones calculus on the plane, call it $(S_1,S_2,S_3)/S_0$ and you are doing Stokes calculus on the sphere, and \ref{eq:StokesFromW} carries you back and forth at will. The choice between them is a choice of convenience, and each has got its own: the sphere makes orthogonality and the doubling of angles visible at a glance, while the plane reduces a state to a single number that can simply be divided or multiplied. The next subsection exploits precisely this, because once a state is a single complex number, what an optical element does to light becomes a transformation of the plane onto itself, and the geometry of the sphere tells us in advance which transformations are allowed.
+
+    \subsection{Transformations of Polarisation: Jones matrices}
+
+        Every polarisation state built so far is a fixed vector in $\mathbb{C}^2$, but light does not stay the same forever: it crosses lenses, reflects off mirrors, is dimmed by tinted glass, or travels through crystals whose very atomic arrangement singles out a preferred direction in space. Every one of these processes, as long as it acts linearly and does not depend on where or when the light arrives (that is, as long as it is a genuine, homogeneous optical element and not, say, a nonlinear medium or a time varying modulator), can only do one thing to the Jones spinor \ref{eq:JonesVec}: multiply it by a fixed matrix.
+
+        \begin{myDef}
+            \textit{(Jones matrix)}: A linear, homogeneous optical element acting on a fully polarised, monochromatic beam is represented by a matrix $J\in\mathbb{C}^{2\times2}$, its Jones matrix, such that the outgoing spinor \ref{eq:JonesVec} is related to the incoming one by
+            \begin{equation*}
+                \vec{e}\,' = J\,\vec{e}.
+            \end{equation*}
+        \end{myDef}
+
+        Almost every optical element used in a real laboratory falls into one of three families, according to what kind of matrix $J$ it is: retarders, rotators and dichroics. We build all three from the same simple idea, that of writing $J$ in the basis of its own eigenstates, and we let the physics of each device tell us what those eigenvalues should be.
+
+        \subsubsection{Retarders}
+
+            Physically, a retarder, also called a wave plate, is cut from a birefringent crystal, quartz, calcite or mica, whose internal atomic arrangement is not the same along every direction, so that the refractive index it presents to light depends on how that light is polarised. Every birefringent plate has, built into it, two mutually orthogonal privileged directions, its fast axis and its slow axis, and light polarised exactly along one of them propagates through unchanged in form, picking up only an ordinary propagation phase, but at a different rate along the fast axis, index $n_f$, than along the slow one, index $n_s$. After a thickness $d$, the component travelling along the slow axis has fallen behind the one along the fast axis by a phase
+            \begin{equation}\label{eq:Retardance}
+                \delta = \frac{2\pi d}{\lambda}\left(n_s-n_f\right),
+            \end{equation}
+            called the retardance, while any other input, being a superposition of the two axes, comes out with its ellipse reshaped, because the two halves of the superposition have rotated relative to each other in the complex plane.
+
+            \begin{myDef}
+                \textit{(Retarder)}: Let $\ket{\psi_1}=\ket{\alpha;\chi}$ and $\ket{\psi_2}=\ket{\alpha+\pi/2;-\chi}$ be a pair of orthogonal Jones kets \ref{eq:JonesKet}\footnote{Writing out the components of $\ket{\alpha;\chi}$ and $\ket{\alpha+\pi/2;-\chi}$ and multiplying term by term shows that $\braket{\psi_1|\psi_2}=0$ identically, for every $\alpha$ and every $\chi$, so this pair is always orthogonal.}. A retarder of eigenstates $\ket{\psi_1},\ket{\psi_2}$ and retardance $\delta$ is the Jones matrix
+                \begin{equation}\label{eq:RetarderSpectral}
+                    W(\alpha,\chi;\delta) = e^{i\delta/2}\ket{\psi_1}\bra{\psi_1} + e^{-i\delta/2}\ket{\psi_2}\bra{\psi_2}.
+                \end{equation}
+            \end{myDef}
+
+            Equation \ref{eq:RetarderSpectral} is exactly the spectral decomposition of $W$: $\ket{\psi_1},\ket{\psi_2}$ are, by construction, its eigenvectors, with eigenvalues $e^{\pm i\delta/2}$ of unit modulus, so $W$ is unitary and preserves the total intensity $\vec{e}^{\,\dagger}\vec{e}$ of any beam it acts on, exactly as an element that only dephases, and never absorbs, should.
+
+            The case $\chi=0$ is by far the most common, since it is what an ordinary birefringent plate, cut with its fast axis in the plane of the crystal, produces; we call it a linear retarder, because both eigenstates $\ket{\alpha;0}=[\cos\alpha,\sin\alpha]^{\mathsf T}$ and $\ket{\alpha+\pi/2;0}=[-\sin\alpha,\cos\alpha]^{\mathsf T}$ are linearly polarised. Substituting them into \ref{eq:RetarderSpectral} and writing $e^{\pm i\delta/2}=\cos(\delta/2)\pm i\sin(\delta/2)$, the four entries work out to
+            \begin{align*}
+                W_{11} &= \cos^2\alpha\,e^{i\delta/2} + \sin^2\alpha\,e^{-i\delta/2} = \cos\frac{\delta}{2} + i\sin\frac{\delta}{2}\cos2\alpha, \\
+                W_{22} &= \sin^2\alpha\,e^{i\delta/2} + \cos^2\alpha\,e^{-i\delta/2} = \cos\frac{\delta}{2} - i\sin\frac{\delta}{2}\cos2\alpha, \\
+                W_{12}=W_{21} &= \sin\alpha\cos\alpha\left(e^{i\delta/2}-e^{-i\delta/2}\right) = i\sin\frac{\delta}{2}\sin2\alpha,
+            \end{align*}
+            so that the linear retarder of fast axis at $\alpha$ and retardance $\delta$ is
+            \begin{equation}\label{eq:LinRetarderMatrix}
+                W(\alpha,0;\delta) = \begin{bmatrix}
+                    \cos\dfrac{\delta}{2}+i\sin\dfrac{\delta}{2}\cos2\alpha & i\sin\dfrac{\delta}{2}\sin2\alpha \\[8pt]
+                    i\sin\dfrac{\delta}{2}\sin2\alpha & \cos\dfrac{\delta}{2}-i\sin\dfrac{\delta}{2}\cos2\alpha
+                \end{bmatrix}.
+            \end{equation}
+
+            Two particular values of $\delta$ are so useful that they have earned their own names. When $\delta=\pi/2$, a quarter of a full cycle, we speak of a quarter wave plate; taking the fast axis horizontal, $\alpha=0$, equation \ref{eq:LinRetarderMatrix} becomes, up to the irrelevant global phase $e^{i\pi/4}$,
+            \begin{equation}\label{eq:QuarterWaveMatrix}
+                W_{\lambda/4} = \begin{bmatrix}1 & 0\\ 0 & -i\end{bmatrix},
+            \end{equation}
+            whose action on the diagonal state \ref{eq:DiagAngles} is immediate to check: $\ket{\pi/4;0}=\frac{1}{\sqrt2}[1,1]^{\mathsf T}$ is sent to $\frac{1}{\sqrt2}[1,-i]^{\mathsf T}=\ket{0;-\pi/4}$, one of the circular states \ref{eq:CircAngles}. This is exactly why a quarter wave plate is the standard tool for turning linear polarisation into circular, and back.
+
+            When instead $\delta=\pi$, half a full cycle, we get the half wave plate,
+            \begin{equation}\label{eq:HalfWaveMatrix}
+                W(\alpha,0;\pi) = i\begin{bmatrix}\cos2\alpha & \sin2\alpha\\ \sin2\alpha & -\cos2\alpha\end{bmatrix},
+            \end{equation}
+            and, up to the global phase $i$, this matrix is a reflection: acting on a linear state it sends $\ket{\theta;0}$ to $\ket{2\alpha-\theta;0}$, reflecting its orientation about the fast axis, so a half wave plate rotates any linear input by twice the angle between the input and the fast axis, and it is the tool of choice whenever an arbitrary rotation of a linear polarisation is needed. Acting instead on a circular state, a short calculation with \ref{eq:HalfWaveMatrix} shows that $\ket{0;\pi/4}$ is sent to $\ket{0;-\pi/4}$ for every value of $\alpha$, so a half wave plate always reverses the handedness of a circular input, whatever its own orientation happens to be.
+
+            Nothing prevents us from choosing genuinely elliptical eigenstates, $0<|\chi|<\pi/4$: the resulting elliptical retarder is a real, if less common, device, built from a birefringent material whose axes have additionally been twisted by a small optical activity, so that its privileged states are ellipses rather than straight lines, and it is worth constructing its Jones matrix properly, both because it is the fully general case of \ref{eq:RetarderSpectral} and because doing so will let us obtain the rotator, further on, in a single line.
+
+            Write the first eigenstate $\ket{\psi_1}=\ket{\alpha;\chi}$ of \ref{eq:JonesKet} as $\ket{\psi_1}=[a,b]^{\mathsf T}$ with
+            \begin{equation*}
+                a = \cos\alpha\cos\chi-i\sin\alpha\sin\chi, \qquad b=\sin\alpha\cos\chi+i\cos\alpha\sin\chi,
+            \end{equation*}
+            so that $|a|^2+|b|^2=1$, since $\ket{\psi_1}$ is a unit vector. Comparing component by component with $\ket{\psi_2}=\ket{\alpha+\pi/2;-\chi}$ shows the compact relation $\ket{\psi_2}=[-b^*,a^*]^{\mathsf T}$, so that the matrix built from the two orthonormal eigenstates as columns,
+            \begin{equation}\label{eq:ChangeOfBasisMatrix}
+                U(\alpha,\chi) = \begin{bmatrix}\ket{\psi_1} & \ket{\psi_2}\end{bmatrix} = \begin{bmatrix}a & -b^*\\ b & a^*\end{bmatrix},
+            \end{equation}
+            is unitary, $U^\dagger U=UU^\dagger=I$, precisely because $\ket{\psi_1},\ket{\psi_2}$ are orthonormal. Equation \ref{eq:ChangeOfBasisMatrix} is nothing but the change of basis matrix from the eigenbasis $\{\ket{\psi_1},\ket{\psi_2}\}$, in which the retarder is diagonal by definition, to the standard basis in which we write the Jones spinor \ref{eq:JonesVec}. Writing $\Lambda(\delta)=\mathrm{diag}\left(e^{i\delta/2},e^{-i\delta/2}\right)$ for the retarder expressed in its own eigenbasis, this change of basis gives a second, completely explicit way of writing \ref{eq:RetarderSpectral},
+            \begin{equation}\label{eq:RetarderChangeOfBasis}
+                W(\alpha,\chi;\delta) = U(\alpha,\chi)\,\Lambda(\delta)\,U(\alpha,\chi)^\dagger,
+            \end{equation}
+            and carrying out the product explicitly,
+            \begin{equation*}
+                U\Lambda U^\dagger = \begin{bmatrix}a&-b^*\\b&a^*\end{bmatrix}\begin{bmatrix}e^{i\delta/2}&0\\0&e^{-i\delta/2}\end{bmatrix}\begin{bmatrix}a^*&b^*\\-b&a\end{bmatrix} = \begin{bmatrix}
+                    |a|^2e^{i\delta/2}+|b|^2e^{-i\delta/2} & ab^*\left(e^{i\delta/2}-e^{-i\delta/2}\right) \\
+                    a^*b\left(e^{i\delta/2}-e^{-i\delta/2}\right) & |b|^2e^{i\delta/2}+|a|^2e^{-i\delta/2}
+                \end{bmatrix}.
+            \end{equation*}
+            Squaring and multiplying the two expressions for $a,b$ above gives $|a|^2-|b|^2=\cos2\alpha\cos2\chi$, $|a|^2+|b|^2=1$ and $ab^*=\frac12\sin2\alpha\cos2\chi-\frac{i}{2}\sin2\chi$, exactly the same three combinations already met while building the linear retarder; using them, together with $e^{\pm i\delta/2}=\cos(\delta/2)\pm i\sin(\delta/2)$, the elliptical retarder takes the closed form
+            \begin{equation}\label{eq:EllipticalRetarderMatrix}
+                W(\alpha,\chi;\delta) = \begin{bmatrix}
+                    \cos\dfrac\delta2+i\sin\dfrac\delta2\cos2\alpha\cos2\chi & \sin\dfrac\delta2\sin2\chi+i\sin\dfrac\delta2\sin2\alpha\cos2\chi \\[8pt]
+                    -\sin\dfrac\delta2\sin2\chi+i\sin\dfrac\delta2\sin2\alpha\cos2\chi & \cos\dfrac\delta2-i\sin\dfrac\delta2\cos2\alpha\cos2\chi
+                \end{bmatrix}.
+            \end{equation}
+            Setting $\chi=0$ in \ref{eq:EllipticalRetarderMatrix} gives $\cos2\chi=1,\sin2\chi=0$ and collapses it exactly back to the linear retarder \ref{eq:LinRetarderMatrix}, as it must: the fully general elliptical case was, after all, only ever hiding the extra angle $\chi$ inside the change of basis matrix \ref{eq:ChangeOfBasisMatrix}.
+
+        \subsubsection{Rotators}
+
+            Let us push the general elliptical retarder \ref{eq:EllipticalRetarderMatrix} to the opposite extreme from the linear case and choose circular eigenstates, $\alpha=0,\chi=\pi/4$, that is $\ket{\psi_1}=\ket{0;\pi/4}$ and $\ket{\psi_2}=\ket{0;-\pi/4}$ of \ref{eq:CircAngles}. Since $\cos2\chi=\cos(\pi/2)=0$ and $\sin2\chi=\sin(\pi/2)=1$, every term in \ref{eq:EllipticalRetarderMatrix} carrying a factor of $\cos2\chi$ vanishes identically and we are left with
+            \begin{equation}\label{eq:RotatorFromRetarder}
+                W(0,\pi/4;\delta) = \begin{bmatrix}\cos\dfrac{\delta}{2} & \sin\dfrac{\delta}{2}\\[6pt] -\sin\dfrac{\delta}{2} & \cos\dfrac{\delta}{2}\end{bmatrix},
+            \end{equation}
+            and the right hand side is exactly the rotation matrix already used in \ref{eq:JonesKet} to build every ellipse out of the unrotated form \ref{eq:JonesChi}. A retarder of circular eigenstates, in other words, is nothing but a rotation of the whole Jones plane: it sends $\ket{\alpha;\chi}$ to $\ket{\alpha-\delta/2;\chi}$ for every $\alpha$ and every $\chi$, leaving the ellipticity untouched and shifting only the orientation.
+
+            \begin{myDef}
+                \textit{(Rotator)}: A rotator by an angle $\theta$ is the Jones matrix
+                \begin{equation}\label{eq:RotatorMatrix}
+                    R(\theta) = \begin{bmatrix}\cos\theta & -\sin\theta\\ \sin\theta & \cos\theta\end{bmatrix},
+                \end{equation}
+                equivalently the circular retarder \ref{eq:RotatorFromRetarder} of retardance $\delta=-2\theta$, so that $R(\theta)\ket{\alpha;\chi}=\ket{\alpha+\theta;\chi}$ for every $\alpha,\chi$.
+            \end{myDef}
+
+            Physically, this is exactly what happens inside an optically active medium: a solution of chiral sugar molecules, or a slab of quartz cut along its optic axis, where it is not the two linear directions that see different refractive indices, but the two circular ones. The phenomenon is called circular birefringence, and a beam of any polarisation crossing a thickness $d$ of such a medium has its ellipse rotated, rigidly and without distortion, by an angle proportional to $d$; the same net effect, a pure rotation with no change of ellipticity, is produced by a Faraday rotator, a piece of glass or crystal placed in a strong magnetic field along the beam, in which it is the magnetic field rather than molecular chirality that splits the two circular eigenstates. Notice that $R(\theta)$, unlike a generic retarder, is a real matrix: rotators are the only non-trivial polarisation transformations whose Jones matrix has got no imaginary part at all, a reflection of the fact that neither optical activity nor the Faraday effect privileges any particular linear direction in space, only a sense of circulation.
+
+        \subsubsection{Dichroics and polarisers}
+
+            Every element considered so far is unitary: it reshapes the polarisation ellipse but never changes the total intensity. A dichroic element breaks this on purpose. Physically, it is again built from an anisotropic material, but now one whose two privileged directions are absorbed differently rather than merely retarded differently, because the microscopic charges responsible for the absorption, free electrons in a metal wire, iodine chains in a stretched polymer, the delocalised electrons of an elongated organic molecule, can oscillate much more easily along one direction than along the perpendicular one. Mathematically we only have to repeat the construction \ref{eq:RetarderSpectral} once more, replacing the two phase factors of unit modulus by two real, non-negative amplitude transmittances.
+
+            \begin{myDef}
+                \textit{(Dichroic)}: A dichroic element of eigenstates $\ket{\psi_1},\ket{\psi_2}$ (orthogonal, as in the retarder) and amplitude transmittances $t_1,t_2\in\mathbb{R}$, $t_1,t_2\geq0$, is the Jones matrix
+                \begin{equation}\label{eq:DichroicSpectral}
+                    D = t_1\ket{\psi_1}\bra{\psi_1} + t_2\ket{\psi_2}\bra{\psi_2}.
+                \end{equation}
+            \end{myDef}
+
+            Because $t_1,t_2$ are real, $D$ in \ref{eq:DichroicSpectral} is Hermitian rather than unitary, unless $t_1=t_2$, the trivial case in which nothing happens to the polarisation, only to the overall brightness: light along $\ket{\psi_1}$ comes out multiplied by $t_1$ and light along $\ket{\psi_2}$ by $t_2$, and any state in between comes out reshaped towards whichever eigenstate survives best.
+
+            Taking $\chi=0$ once again gives the linear dichroic, and repeating the same short calculation that led to \ref{eq:LinRetarderMatrix}, now with $t_1,t_2$ in place of $e^{\pm i\delta/2}$,
+            \begin{equation}\label{eq:LinDichroicMatrix}
+                D(\alpha,0;t_1,t_2) = \begin{bmatrix}
+                    t_1\cos^2\alpha + t_2\sin^2\alpha & (t_1-t_2)\sin\alpha\cos\alpha \\
+                    (t_1-t_2)\sin\alpha\cos\alpha & t_1\sin^2\alpha + t_2\cos^2\alpha
+                \end{bmatrix}.
+            \end{equation}
+
+            The most important member of this family is obtained by pushing the contrast between the two eigenstates to its limit, $t_1=1$ and $t_2=0$: the surviving axis is transmitted perfectly and the other is extinguished completely. Equation \ref{eq:LinDichroicMatrix} then collapses to
+            \begin{equation}\label{eq:LinPolariserMatrix}
+                P(\alpha) = \begin{bmatrix}\cos^2\alpha & \sin\alpha\cos\alpha\\ \sin\alpha\cos\alpha & \sin^2\alpha\end{bmatrix} = \ket{\alpha;0}\bra{\alpha;0},
+            \end{equation}
+            which we recognise, on the right, as the orthogonal projector onto the linear state $\ket{\alpha;0}$.
+
+            \begin{myDef}
+                \textit{(Ideal linear polariser)}: An ideal linear polariser of transmission axis at angle $\alpha$ is the limiting linear dichroic \ref{eq:LinDichroicMatrix} with $t_1=1,t_2=0$, that is, the orthogonal projector $P(\alpha)=\ket{\alpha;0}\bra{\alpha;0}$ of \ref{eq:LinPolariserMatrix}.
+            \end{myDef}
+
+            This is the deepest sense in which a polariser is a simple device: it does not really transform a polarisation state, it projects it, discarding every component along $\ket{\alpha+\pi/2;0}$ and keeping only the shadow that the incoming ellipse casts onto its own transmission axis. Every partial linear dichroic \ref{eq:LinDichroicMatrix} with $t_2\neq0$ is only an imperfect version of this same projection, letting some of the unwanted component leak through.
+
+            Circular dichroism is built the same way, with $\ket{\psi_1}=\ket{0;\pi/4}$ and $\ket{\psi_2}=\ket{0;-\pi/4}$ in \ref{eq:DichroicSpectral}. Specialising $a,b$ from the change of basis matrix \ref{eq:ChangeOfBasisMatrix} to $\alpha=0,\chi=\pi/4$ gives $a=1/\sqrt2$, $b=i/\sqrt2$, so that $|a|^2=|b|^2=1/2$ and $ab^*=-i/2$; repeating, with these values, the same matrix multiplication that led to \ref{eq:EllipticalRetarderMatrix}, but with the real transmittances $t_1,t_2$ in place of the phases $e^{\pm i\delta/2}$,
+            \begin{equation}\label{eq:CircDichroicMatrix}
+                D_\circlearrowleft(t_1,t_2) = \begin{bmatrix}
+                    \dfrac{t_1+t_2}{2} & -i\dfrac{t_1-t_2}{2} \\[8pt]
+                    i\dfrac{t_1-t_2}{2} & \dfrac{t_1+t_2}{2}
+                \end{bmatrix},
+            \end{equation}
+            describing a material that absorbs its two circular eigenstates differently. Circular dichroism is a much smaller effect than linear dichroism in most materials, but it is an extremely sensitive probe of molecular chirality, proteins, sugars and DNA are all optically active and mildly circularly dichroic, which is why circular dichroism spectroscopy is a standard tool in structural biology and chemistry.
+
+            Stepping back from the algebra, what actually makes a material dichroic is always some built in anisotropy at the microscopic level: an elongated molecule, a stretched polymer chain, or a crystal lattice, along which charges are freer to respond to the oscillating electric field of light in one direction than in the perpendicular one, so the material absorbs, rather than merely slows down, one polarisation component more strongly than the other. A polariser, more generally, is simply any device, dichroic or not, designed to output light of a well controlled polarisation state from an input that may not have one at all; dichroism is only one of the physical mechanisms that nature and engineering have found to build one.
+
+            Three real polarisers illustrate how different those mechanisms can be. Tourmaline, the mineral in which dichroism was first noticed, is naturally dichroic, but the polariser found today in almost every pair of sunglasses, camera filter and liquid crystal display is Edwin Land's Polaroid sheet, a film of polyvinyl alcohol stretched in one direction to align its long polymer chains and then doped with iodine, whose mobile electrons run freely along the chains and absorb the field component parallel to them, the linear dichroic \ref{eq:LinDichroicMatrix} realised in a plastic film. A wire grid polariser applies the same physical idea to a metal instead of a dye: an array of parallel conducting wires, spaced much closer together than the wavelength of the light, lets the free electrons in the wires oscillate and reflect the field component parallel to them, while the perpendicular component, unable to drive a current across the gaps between wires, passes through almost unaffected; because it works by reflection rather than absorption, it survives far higher optical powers than a dyed polymer sheet, and it is the polariser of choice in the infrared and in microwave optics. Finally, the Glan-Thompson prism takes a completely different route, using no absorption at all: two prisms of calcite, a strongly birefringent crystal, are cut and cemented together so that, at the internal interface, the ordinary ray strikes beyond its critical angle and is totally internally reflected out of the beam, while the extraordinary ray, seeing a different refractive index, is transmitted straight through. Being lossless for the transmitted beam and free of any absorbing dye, this kind of polariser can handle the intense, focused light of a laser without being damaged, which the simple dichroic sheet cannot.
+
+    \subsection{The elliptic general Malus law}
+
+    \subsection{The law of elliptic birrefringents}
