@@ -778,7 +778,7 @@
             \begin{myDef}
                 \textit{(Polarisation matrix)}: The polarisation matrix, also called the coherence matrix, of a beam with Jones spinor $\vec{e}=[e_1,e_2]^{\mathsf{T}}$ is the Hermitian, positive semidefinite matrix
                 \begin{equation}\label{eq:CoherenceMatrix}
-                    J \equiv \left\langle \vec{e}\,\vec{e}^{\,\dagger}\right\rangle = \begin{bmatrix}
+                    \Phi \equiv \left\langle \vec{e}\,\vec{e}^{\,\dagger}\right\rangle = \begin{bmatrix}
                         \left\langle e_1e_1^*\right\rangle & \left\langle e_1e_2^*\right\rangle \\
                         \left\langle e_2e_1^*\right\rangle & \left\langle e_2e_2^*\right\rangle
                     \end{bmatrix},
@@ -792,13 +792,13 @@
             \end{equation}
             the identity together with the three Pauli matrices, ordered and signed to match the conventions we have been using. Any Hermitian $2\times2$ matrix can be expanded in this set, and carrying out the four traces term by term against \ref{eq:CoherenceMatrix} reproduces exactly the definitions \ref{eq:StokesS0} to \ref{eq:StokesS3},
             \begin{equation}\label{eq:StokesFromCoherence}
-                S_\mu = \text{tr}\left(J\sigma_\mu\right), \qquad J = \frac{1}{2}\sum_{\mu=0}^{3}S_\mu\sigma_\mu.
+                S_\mu = \text{tr}\left(\Phi\sigma_\mu\right), \qquad \Phi = \frac{1}{2}\sum_{\mu=0}^{3}S_\mu\sigma_\mu.
             \end{equation}
             The $S_\mu$ are therefore the coordinates of a Hermitian \textit{operator} in the basis $\{\sigma_\mu\}$, which is a tensorial object living in an internal, abstract space, and not a vector of the laboratory. This reading also explains, in one line, the inequality that partially polarised light forced upon us, because writing \ref{eq:StokesFromCoherence} out gives
             \begin{equation*}
-                J = \frac{1}{2}\begin{bmatrix} S_0+S_1 & S_2+iS_3 \\ S_2-iS_3 & S_0-S_1 \end{bmatrix}, \qquad \det J = \frac{1}{4}\left(S_0^2-S_1^2-S_2^2-S_3^2\right)\geq0,
+                \Phi = \frac{1}{2}\begin{bmatrix} S_0+S_1 & S_2+iS_3 \\ S_2-iS_3 & S_0-S_1 \end{bmatrix}, \qquad \det \Phi = \frac{1}{4}\left(S_0^2-S_1^2-S_2^2-S_3^2\right)\geq0,
             \end{equation*}
-            the determinant being non negative precisely because $J$ is positive semidefinite, that is, because no measurement of intensity may ever return a negative number. That single physical demand is the entire content of $S_1^2+S_2^2+S_3^2\leq S_0^2$, with equality, a vanishing determinant and a rank one matrix, describing fully polarised light.
+            the determinant being non negative precisely because $\Phi$ is positive semidefinite, that is, because no measurement of intensity may ever return a negative number. That single physical demand is the entire content of $S_1^2+S_2^2+S_3^2\leq S_0^2$, with equality, a vanishing determinant and a rank one matrix, describing fully polarised light.
 
             There is, finally, one honest sense in which the word vector can be rescued. The combination $S_0^2-S_1^2-S_2^2-S_3^2$ that has just appeared is exactly a Minkowski interval, with $S_0$ in the role of the time component and $(S_1,S_2,S_3)$ in that of the spatial one, and the physical states fill the forward light cone of an abstract four dimensional space: fully polarised light sits on the cone itself, where the interval vanishes, partially polarised light strictly inside it, and completely unpolarised light on the time axis, where the three spatial components vanish together. The real matrices that describe the action of optical elements on this four tuple, the Mueller matrices to which we will come later, then turn out to belong to a group closely related to the Lorentz group, an observation already made by McMaster when he rescued the formalism \citep{mcmaster1954polarization}. The Stokes four tuple is a four vector of that abstract space, never a three vector of the laboratory, and keeping the traditional name is harmless as long as we remember which space it is a vector of.
 
@@ -925,7 +925,14 @@
                 \end{bmatrix}.
             \end{equation}
 
-            Two particular values of $\delta$ are so useful that they have earned their own names. When $\delta=\pi/2$, a quarter of a full cycle, we speak of a quarter wave plate; taking the fast axis horizontal, $\alpha=0$, equation \ref{eq:LinRetarderMatrix} becomes, up to the irrelevant global phase $e^{i\pi/4}$,
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=0.8\textwidth]{Chapter 3/Figures/QuarterWavePlate.pdf}
+                \caption{A quarter wave plate retarder is a retarder with $\delta = \pi/2$ and when it has got its fast axis oriented with the horizontal one it transforms the polarization in a very specific way. The $\pm 45$° diagonal states transform into circular polarization states, and the circular polarization states transform into $\pm 45$° diagonal states. }
+                \label{fig:QuarterWavePlate}
+            \end{figure}
+
+            Two particular values of $\delta$ are so useful that they have earned their own names. When $\delta=\pi/2$, a quarter of a full cycle, we speak of a quarter wave plate (see figure \ref{fig:QuarterWavePlate}); taking the fast axis horizontal, $\alpha=0$, equation \ref{eq:LinRetarderMatrix} becomes, up to the irrelevant global phase $e^{i\pi/4}$,
             \begin{equation}\label{eq:QuarterWaveMatrix}
                 W_{\lambda/4} = \begin{bmatrix}1 & 0\\ 0 & -i\end{bmatrix},
             \end{equation}
@@ -966,6 +973,8 @@
                 \end{bmatrix}.
             \end{equation}
             Setting $\chi=0$ in \ref{eq:EllipticalRetarderMatrix} gives $\cos2\chi=1,\sin2\chi=0$ and collapses it exactly back to the linear retarder \ref{eq:LinRetarderMatrix}, as it must: the fully general elliptical case was, after all, only ever hiding the extra angle $\chi$ inside the change of basis matrix \ref{eq:ChangeOfBasisMatrix}.
+
+
 
         \subsubsection{Rotators}
 
@@ -1016,6 +1025,13 @@
                 \textit{(Ideal linear polariser)}: An ideal linear polariser of transmission axis at angle $\alpha$ is the limiting linear dichroic \ref{eq:LinDichroicMatrix} with $t_1=1,t_2=0$, that is, the orthogonal projector $P(\alpha)=\ket{\alpha;0}\bra{\alpha;0}$ of \ref{eq:LinPolariserMatrix}.
             \end{myDef}
 
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=0.8\textwidth]{Chapter 3/Figures/LinearPolarizer.pdf}
+                \caption{A linear polariser with its polariser axis oriented parallel to the horizontal axis proyects all the incident states to horizontal ones, however the transmited intensity is reduced by the relative angle between the incident state $\ket{\alpha;\chi}$ and the polariser axis $\alpha_{pol}$ in this case $\alpha_{pol}=0$°. }
+                \label{fig:LinearPolariser}
+            \end{figure}
+
             This is the deepest sense in which a polariser is a simple device: it does not really transform a polarisation state, it projects it, discarding every component along $\ket{\alpha+\pi/2;0}$ and keeping only the shadow that the incoming ellipse casts onto its own transmission axis. Every partial linear dichroic \ref{eq:LinDichroicMatrix} with $t_2\neq0$ is only an imperfect version of this same projection, letting some of the unwanted component leak through.
 
             Circular dichroism is built the same way, with $\ket{\psi_1}=\ket{0;\pi/4}$ and $\ket{\psi_2}=\ket{0;-\pi/4}$ in \ref{eq:DichroicSpectral}. Specialising $a,b$ from the change of basis matrix \ref{eq:ChangeOfBasisMatrix} to $\alpha=0,\chi=\pi/4$ gives $a=1/\sqrt2$, $b=i/\sqrt2$, so that $|a|^2=|b|^2=1/2$ and $ab^*=-i/2$; repeating, with these values, the same matrix multiplication that led to \ref{eq:EllipticalRetarderMatrix}, but with the real transmittances $t_1,t_2$ in place of the phases $e^{\pm i\delta/2}$,
@@ -1030,6 +1046,318 @@
             Stepping back from the algebra, what actually makes a material dichroic is always some built in anisotropy at the microscopic level: an elongated molecule, a stretched polymer chain, or a crystal lattice, along which charges are freer to respond to the oscillating electric field of light in one direction than in the perpendicular one, so the material absorbs, rather than merely slows down, one polarisation component more strongly than the other. A polariser, more generally, is simply any device, dichroic or not, designed to output light of a well controlled polarisation state from an input that may not have one at all; dichroism is only one of the physical mechanisms that nature and engineering have found to build one.
 
             Three real polarisers illustrate how different those mechanisms can be. Tourmaline, the mineral in which dichroism was first noticed, is naturally dichroic, but the polariser found today in almost every pair of sunglasses, camera filter and liquid crystal display is Edwin Land's Polaroid sheet, a film of polyvinyl alcohol stretched in one direction to align its long polymer chains and then doped with iodine, whose mobile electrons run freely along the chains and absorb the field component parallel to them, the linear dichroic \ref{eq:LinDichroicMatrix} realised in a plastic film. A wire grid polariser applies the same physical idea to a metal instead of a dye: an array of parallel conducting wires, spaced much closer together than the wavelength of the light, lets the free electrons in the wires oscillate and reflect the field component parallel to them, while the perpendicular component, unable to drive a current across the gaps between wires, passes through almost unaffected; because it works by reflection rather than absorption, it survives far higher optical powers than a dyed polymer sheet, and it is the polariser of choice in the infrared and in microwave optics. Finally, the Glan-Thompson prism takes a completely different route, using no absorption at all: two prisms of calcite, a strongly birefringent crystal, are cut and cemented together so that, at the internal interface, the ordinary ray strikes beyond its critical angle and is totally internally reflected out of the beam, while the extraordinary ray, seeing a different refractive index, is transmitted straight through. Being lossless for the transmitted beam and free of any absorbing dye, this kind of polariser can handle the intense, focused light of a laser without being damaged, which the simple dichroic sheet cannot.
+
+    \subsection{Transformations of Polarisation: Mueller matrices}
+
+        The Jones calculus of the previous subsection is exact, elegant and, for a large class of problems, entirely sufficient. It is also, in a very precise sense, too narrow. A Jones matrix acts on the spinor \ref{eq:JonesVec}, and that spinor exists only when the beam has got a single, well defined phase relation between its two components, that is, only when the light is fully polarised. The moment we point our instrument at sunlight, at a cloud, at a sheet of paper, at a biological tissue or at any surface rough on the scale of a wavelength, the object we must transform is no longer a spinor but the four Stokes parameters \ref{eq:StokesS0} to \ref{eq:StokesS3}, and no $2\times2$ complex matrix will do the job.
+
+        There is a second and deeper failure, and it is worth stating before we build anything. A Jones matrix can never \textit{depolarise}. Whatever it does to a fully polarised beam, the outgoing beam is again fully polarised, so a formalism built on Jones matrices alone cannot describe the single most common thing that real matter does to light. We shall prove this in a moment, and the proof will also tell us exactly what has to be added.
+
+        The formalism that repairs both defects was assembled by Hans Mueller at the Massachusetts Institute of Technology in the early nineteen forties, building on the earlier scattering work of Soleillet and of Perrin \citep{perrin1942polarization}, and it was the same wave of activity that rescued the Stokes parameters from the obscurity described at the beginning of this section. Its later systematisation owes a great deal to McMaster \citep{mcmaster1954polarization} and to Chandrasekhar's treatment of radiative transfer \citep{chandrasekhar1950radiative}, where polarised light must be propagated through a scattering atmosphere and where Jones spinors are simply not available.
+
+        \subsubsection{From the Jones matrix to the coherence matrix}
+
+            The bridge between the two calculi is the polarisation matrix \ref{eq:CoherenceMatrix}, and building it is a one line calculation whose consequences occupy the rest of this subsection. Let a linear, homogeneous element with Jones matrix $J$ act on the beam, so that $\vec{e}\,'=J\vec{e}$. The outgoing polarisation matrix is, by definition,
+            \begin{equation}\label{eq:CoherenceTransform}
+                \Phi' = \left\langle\vec{e}\,'\vec{e}\,'^{\dagger}\right\rangle = \left\langle J\vec{e}\left(J\vec{e}\right)^{\dagger}\right\rangle = \left\langle J\,\vec{e}\,\vec{e}^{\,\dagger}J^{\dagger}\right\rangle = J\left\langle\vec{e}\,\vec{e}^{\,\dagger}\right\rangle J^{\dagger} = J\,\Phi\,J^{\dagger} .
+            \end{equation}
+            Every step is elementary, but the third one is the whole point and deserves to be said out loud: the matrix $J$ could be taken outside the time average because the \textit{element} is deterministic even when the \textit{light} is not. The waveplate does not flicker; only the field does. This is precisely why \ref{eq:CoherenceTransform} remains valid for partially polarised and even for completely unpolarised light, where the spinor $\vec{e}$ has got no meaning at all and only the averages survive.
+
+            Notice also the shape of the transformation. The field transforms linearly, $\vec{e}\to J\vec{e}$, but the polarisation matrix transforms by a \textbf{congruence}, $\Phi\to J\Phi J^\dagger$, with $J$ appearing twice. Since the Stokes parameters are themselves quadratic in the field, this is exactly what we should have expected, and it is the algebraic reason why the Mueller matrix we are about to build is quadratic in the Jones matrix.
+
+        \subsubsection{The Mueller matrix}
+
+            Because the Stokes parameters are linear coordinates of $\Phi$ through \ref{eq:StokesFromCoherence}, and because \ref{eq:CoherenceTransform} is linear in $\Phi$, the map induced on the four Stokes parameters must be linear as well.
+
+            \begin{myDef}
+                \textit{(Mueller matrix)}: A linear, homogeneous optical element acting on a beam of arbitrary degree of polarisation is represented by a real $4\times4$ matrix $M$, its Mueller matrix, such that the outgoing Stokes vector is related to the incoming one by
+                \begin{equation}\label{eq:MuellerAction}
+                    S'_\mu = \sum_{\nu=0}^{3}M_{\mu\nu}S_\nu , \qquad \text{that is} \qquad \vec{S}\,' = M\vec{S} .
+                \end{equation}
+            \end{myDef}
+
+            When the element also possesses a Jones matrix, the two descriptions must agree, and forcing them to agree hands us the Mueller matrix explicitly. Insert \ref{eq:CoherenceTransform} into the first of \ref{eq:StokesFromCoherence} and then expand the incoming $\Phi$ with the second,
+            \begin{equation*}
+                S'_\mu = \text{tr}\left(\Phi'\sigma_\mu\right) = \text{tr}\left(J\Phi J^{\dagger}\sigma_\mu\right) = \text{tr}\left(J\left[\frac{1}{2}\sum_{\nu=0}^{3}S_\nu\sigma_\nu\right]J^{\dagger}\sigma_\mu\right) = \sum_{\nu=0}^{3}\left[\frac{1}{2}\text{tr}\left(\sigma_\mu J\sigma_\nu J^{\dagger}\right)\right]S_\nu ,
+            \end{equation*}
+            where the trace has been taken through the finite sum and the cyclic property $\text{tr}(AB)=\text{tr}(BA)$ has been used to bring $\sigma_\mu$ to the front. Comparing with \ref{eq:MuellerAction} we can read off the coefficients at once.
+
+            \begin{myDef}
+                \textit{(Mueller matrix of a Jones element)}: An element whose action on fully polarised light is given by the Jones matrix $J$ has got the Mueller matrix
+                \begin{equation}\label{eq:MuellerFromJones}
+                    \boxed{\;M_{\mu\nu} = \frac{1}{2}\,\text{tr}\left(\sigma_\mu\,J\,\sigma_\nu\,J^{\dagger}\right)\;}
+                \end{equation}
+                with $\sigma_\mu$ the four matrices \ref{eq:PauliOptics}. A Mueller matrix that can be written in this form is called \textbf{non depolarising}, or a \textbf{Mueller-Jones} matrix.
+            \end{myDef}
+
+            Formula \ref{eq:MuellerFromJones} is the dictionary we were after, and three of its properties are worth extracting immediately.
+
+            Taking the complex conjugate of \ref{eq:MuellerFromJones} and using $\overline{\text{tr}\,A}=\text{tr}\,A^{\dagger}$ together with the hermiticity $\sigma_\mu^{\dagger}=\sigma_\mu$,
+            \begin{equation*}
+                \overline{M_{\mu\nu}} = \frac{1}{2}\text{tr}\left(\left[\sigma_\mu J\sigma_\nu J^{\dagger}\right]^{\dagger}\right) = \frac{1}{2}\text{tr}\left(J\sigma_\nu J^{\dagger}\sigma_\mu\right) = M_{\mu\nu} ,
+            \end{equation*}
+            the last step being once more the cyclic property. So $M$ is a real matrix, as it must be, since it maps four measurable intensities into four measurable intensities.
+
+            Replacing $J$ by $e^{i\theta}J$ leaves \ref{eq:MuellerFromJones} untouched, because the phase from $J$ cancels against the conjugate phase from $J^{\dagger}$. The map $J\mapsto M$ is therefore not injective: all Jones matrices differing by an overall phase collapse onto the same Mueller matrix. This is not a defect but an improvement, since that phase was never measurable in the first place, and we shall see in a moment that it is the same two to one correspondence that produces the doubling of angles on the Poincaré sphere.
+
+            If light crosses first the element $J_1$ and then the element $J_2$, the combined Jones matrix is $J_2J_1$, and substituting it into \ref{eq:MuellerFromJones} while inserting the resolution $\tfrac12\sum_\lambda\sigma_\lambda\text{tr}(\sigma_\lambda\,\cdot\,)$ between the two factors shows that
+            \begin{equation}\label{eq:MuellerComposition}
+                M\left(J_2J_1\right) = M\left(J_2\right)M\left(J_1\right) ,
+            \end{equation}
+            so that \ref{eq:MuellerFromJones} is a group homomorphism and an optical bench is described, exactly as in the Jones calculus, by the ordered product of the matrices of its elements.
+
+        \subsubsection{Retarders are rotations of the Poincaré sphere}
+
+            Let us now compute a Mueller matrix explicitly, and let us choose the simplest retarder, the linear one with its fast axis along $x$, whose Jones matrix is \ref{eq:LinRetarderMatrix} with $\alpha=0$, that is $W=\text{diag}\left(e^{i\delta/2},e^{-i\delta/2}\right)$. We need the four objects $W\sigma_\nu W^{\dagger}$. The first two are immediate, since $W$ is unitary and diagonal and therefore commutes with $\sigma_0$ and $\sigma_1$,
+            \begin{equation*}
+                W\sigma_0W^{\dagger} = WW^{\dagger} = \sigma_0 , \qquad W\sigma_1W^{\dagger} = \sigma_1 .
+            \end{equation*}
+            The interesting ones are the other two. Multiplying out,
+            \begin{equation*}
+                W\sigma_2W^{\dagger} = \begin{bmatrix}0 & e^{i\delta}\\ e^{-i\delta} & 0\end{bmatrix} = \cos\delta\begin{bmatrix}0&1\\1&0\end{bmatrix}+\sin\delta\begin{bmatrix}0&i\\-i&0\end{bmatrix} = \cos\delta\,\sigma_2+\sin\delta\,\sigma_3 ,
+            \end{equation*}
+            where we simply split $e^{\pm i\delta}=\cos\delta\pm i\sin\delta$ and recognised the two Pauli matrices, and in exactly the same way
+            \begin{equation*}
+                W\sigma_3W^{\dagger} = \begin{bmatrix}0 & ie^{i\delta}\\ -ie^{-i\delta} & 0\end{bmatrix} = -\sin\delta\,\sigma_2+\cos\delta\,\sigma_3 .
+            \end{equation*}
+            Since $\tfrac12\text{tr}(\sigma_\mu\sigma_\nu)=\delta_{\mu\nu}$, the coefficients just found are literally the columns of $M$, and we obtain
+            \begin{equation}\label{eq:MuellerLinRetarder}
+                M_W(\delta) = \begin{bmatrix}
+                    1 & 0 & 0 & 0\\
+                    0 & 1 & 0 & 0\\
+                    0 & 0 & \cos\delta & -\sin\delta\\
+                    0 & 0 & \sin\delta & \cos\delta
+                \end{bmatrix}.
+            \end{equation}
+
+            Read this matrix slowly, because it is the central geometrical fact of the whole subsection. The first row and the first column are those of the identity, so $S_0$ is untouched: a retarder absorbs nothing, exactly as its unitarity promised. The remaining $3\times3$ block leaves $S_1$ alone and rotates the pair $(S_2,S_3)$ by the angle $\delta$. In other words, on the Poincaré sphere the element performs a \textbf{rigid rotation by the retardance $\delta$ about the $S_1$ axis}, and the $S_1$ axis is precisely the diameter joining the two eigenstates of this retarder, the horizontal and vertical states \ref{eq:HorizAngles} and \ref{eq:VertAngles}. The eigenstates are the fixed points of the motion, as fixed points of a rotation must be, and every other state is carried around them on a circle of constant latitude.
+
+            Nothing in this conclusion depends on our having chosen $\alpha=0$. Repeating the computation with the general elliptical retarder \ref{eq:EllipticalRetarderMatrix} is a longer but entirely mechanical exercise, and it yields the following statement, which we record as the geometrical heart of the Mueller calculus.
+
+            \begin{myteo}
+                \textit{(Retarders as rotations)}: The Mueller matrix of a retarder of retardance $\delta$ whose eigenstates are $\ket{\alpha;\chi}$ and its orthogonal partner is
+                \begin{equation}\label{eq:MuellerRetarderGeneral}
+                    M_W = \begin{bmatrix} 1 & \vec{0}^{\,\mathsf{T}} \\ \vec{0} & R\left(\hat{n},\delta\right)\end{bmatrix},
+                \end{equation}
+                where $R(\hat n,\delta)$ is the ordinary $3\times3$ rotation by the angle $\delta$ about the unit vector
+                \begin{equation}\label{eq:RetarderAxis}
+                    \hat{n} = \left(\cos2\alpha\cos2\chi,\;\sin2\alpha\cos2\chi,\;-\sin2\chi\right),
+                \end{equation}
+                which by \ref{eq:StokesFromAlphaChi} is exactly the point of the Poincaré sphere representing the eigenstate $\ket{\alpha;\chi}$.
+            \end{myteo}
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=0.6\textwidth]{Chapter 3/Figures/RetarderOnPoincare.pdf}
+                \caption{An initial state $\ket{\alpha ;\chi}$ under the effect of a rotated retarder with retar $\delta$ and eigenstate $r$ is rotated an angle of $\delta$ arounde the $r$-axis to a final state $\ket{\alpha'.\chi'}$. }
+                \label{fig:RetarderOnPoincare}
+            \end{figure}
+
+            Every waveplate on an optical bench is therefore a rotation of the Poincaré sphere (see figure \ref{fig:RetarderOnPoincare}), and the two numbers that specify it have got transparent meanings: the orientation of its axis fixes \textit{about which diameter} the sphere turns, and its retardance fixes \textit{by how much}. Three familiar devices become obvious.
+
+
+            A \textbf{quarter wave plate}, $\delta=\pi/2$, turns the sphere by a quarter of a full turn. Starting from a linear state on the equator and choosing the axis at $\pi/4$ from it, a quarter turn lands exactly on a pole, which is the statement that a quarter wave plate converts linear light into circular light, as we found by direct matrix multiplication in the previous subsection.
+
+            A \textbf{half wave plate}, $\delta=\pi$, turns the sphere by half a full turn about an equatorial axis. A rotation by $\pi$ about the axis $\hat n$ sends any vector $\vec{v}$ to $2(\hat n\cdot\vec v)\hat n-\vec v$, so a linear state at azimuth $2\theta$ on the equator, acted on by a plate whose axis sits at azimuth $2\alpha$, is carried to azimuth $4\alpha-2\theta$. Dividing by two, the physical polarisation direction goes from $\theta$ to $2\alpha-\theta$: \textbf{a half wave plate reflects the plane of polarisation about its own fast axis}. Applying the same rule to the poles, $\vec v=(0,0,\pm1)$ with $\hat n$ equatorial gives $\vec v\to-\vec v$, so the two circular states are exchanged and the handedness of any beam is reversed.
+
+            A \textbf{rotator} \ref{eq:RotatorMatrix} is, as we proved, a circular retarder, so its axis \ref{eq:RetarderAxis} is the polar axis $\hat n=(0,0,-1)$ and it spins the sphere about the line joining the two circular states. A rotator that turns the physical polarisation by an angle $\theta$ has got retardance $\delta=2\theta$, so it rotates the Poincaré sphere by $2\theta$. This is the doubling of angles once more, and we can now see its true origin: the map \ref{eq:MuellerFromJones} restricted to unitary Jones matrices is the classical two to one homomorphism from $SU(2)$ onto the rotation group $SO(3)$. Turning a waveplate through a full physical revolution, $\theta:0\to\pi$, returns the Jones matrix not to $+I$ but to $-I$, while the Mueller matrix has already completed a full $2\pi$ rotation and returned to the identity. The polarisation spinor is a spinor in exactly the sense that an electron wavefunction is, and the Poincaré sphere is its Bloch sphere.
+
+        \subsubsection{Polarisers, dichroics and the Malus law}
+
+            Not every element is unitary, and the non unitary ones move the sphere in a completely different way. Take first the ideal linear polariser \ref{eq:LinPolariserMatrix}, whose Jones matrix is the projector $J=\ket{\psi}\bra{\psi}$ onto the transmitted state. Feeding it into \ref{eq:MuellerFromJones} and writing $\hat n$ for the Stokes vector of that state, the result is the strikingly simple
+            \begin{equation}\label{eq:MuellerPolariser}
+                M_P = \frac{1}{2}\begin{bmatrix} 1 & \hat n^{\mathsf{T}} \\ \hat n & \hat n\,\hat n^{\mathsf{T}}\end{bmatrix}.
+            \end{equation}
+            This matrix has got rank one in a strong sense: whatever comes in, the outgoing Stokes vector is proportional to $(1,\hat n)$, that is, the entire Poincaré sphere is crushed onto the single point $\hat n$. The map is catastrophically non invertible, which is the geometric expression of the obvious physical fact that a polariser destroys information and cannot be undone.
+
+            The Malus law now drops out with no effort at all. Send in linear light at an angle $\theta$, whose Stokes vector is $\vec S=(1,\cos2\theta,\sin2\theta,0)$, through a polariser whose axis is at $\alpha$, so that $\hat n=(\cos2\alpha,\sin2\alpha,0)$. The transmitted intensity is the zeroth component of \ref{eq:MuellerPolariser} acting on $\vec S$,
+            \begin{equation*}
+                S'_0 = \frac{1}{2}\left(1+\hat n\cdot\vec{S}_{123}\right) = \frac{1}{2}\left[1+\cos2\alpha\cos2\theta+\sin2\alpha\sin2\theta\right] = \frac{1}{2}\left[1+\cos\left(2\theta-2\alpha\right)\right] = \cos^2\left(\theta-\alpha\right),
+            \end{equation*}
+            which is the Malus law, obtained here as a statement about the angle between two vectors on the Poincaré sphere rather than as a statement about a projection in the laboratory. Feeding unpolarised light $\vec S=(1,0,0,0)$ into the same formula gives $S'_0=1/2$ together with a fully polarised output, which is the equally familiar fact that a polariser transmits exactly half of natural light.
+
+            The general linear dichroic \ref{eq:LinDichroicMatrix}, with real transmittances $t_1$ and $t_2$ along its two eigenstates, interpolates between the retarder and the polariser and is more interesting still. Taking $J=\text{diag}(t_1,t_2)$ in \ref{eq:MuellerFromJones} and computing the four congruences as before,
+            \begin{equation}\label{eq:MuellerDichroic}
+                M_D = \begin{bmatrix}
+                    a & b & 0 & 0\\
+                    b & a & 0 & 0\\
+                    0 & 0 & c & 0\\
+                    0 & 0 & 0 & c
+                \end{bmatrix}, \qquad a=\frac{t_1^2+t_2^2}{2},\quad b=\frac{t_1^2-t_2^2}{2},\quad c=t_1t_2 ,
+            \end{equation}
+            and a one line computation shows that these three numbers are not independent,
+            \begin{equation*}
+                a^2-b^2 = \frac{\left(t_1^2+t_2^2\right)^2-\left(t_1^2-t_2^2\right)^2}{4} = t_1^2t_2^2 = c^2 .
+            \end{equation*}
+            The relation $a^2-b^2=c^2$ is the signature of a hyperbolic rotation. Writing $a=c\cosh\zeta$ and $b=c\sinh\zeta$, which the constraint permits, \ref{eq:MuellerDichroic} becomes
+            \begin{equation}\label{eq:DichroicBoost}
+                M_D = t_1t_2\begin{bmatrix}
+                    \cosh\zeta & \sinh\zeta & 0 & 0\\
+                    \sinh\zeta & \cosh\zeta & 0 & 0\\
+                    0&0&1&0\\
+                    0&0&0&1
+                \end{bmatrix}, \qquad \tanh\zeta = \frac{t_1^2-t_2^2}{t_1^2+t_2^2} \equiv D ,
+            \end{equation}
+            an overall attenuation multiplying a \textbf{Lorentz boost} along the $S_1$ axis, with rapidity $\zeta$ and with the quantity $D$, called the diattenuation, playing the part of the velocity $\beta$.
+
+            This is the promise made at the end of the discussion of why the Stokes vector is not a vector, now delivered. There we found that the physical states fill the forward light cone of an abstract Minkowski space, with the interval $S_0^2-S_1^2-S_2^2-S_3^2$ measuring the departure from full polarisation. We can now name the transformations: \textbf{retarders are the rotations of that Minkowski space and dichroics are its boosts}, and together they generate the proper orthochronous Lorentz group. The geometry is faithful in every detail. A boost along $\hat n$ drags points of the sphere toward $\hat n$, crowding them ever closer as the rapidity grows, and this is exactly what a partial polariser does: it does not turn a state, it pulls it toward its own transmission axis. The ideal polariser \ref{eq:MuellerPolariser} is the limit $t_2\to0$, that is $D\to1$ and $\zeta\to\infty$, the infinite boost that carries every point to the same destination, which is why the sphere collapses.
+
+        \subsubsection{What no Jones matrix can do: depolarisation}
+
+            We can now prove the claim made at the very beginning. Suppose the incoming light is fully polarised, so that by the discussion of the Stokes identity its polarisation matrix has $\det\Phi=0$, equivalently $\Phi=\vec{e}\,\vec{e}^{\,\dagger}$ has rank one. Then by \ref{eq:CoherenceTransform} and the multiplicative property of the determinant,
+            \begin{equation}\label{eq:DetTransform}
+                \det\Phi' = \det\left(J\Phi J^{\dagger}\right) = \left|\det J\right|^2\det\Phi = 0 ,
+            \end{equation}
+            so the outgoing light is fully polarised as well. \textbf{A Jones element maps pure states to pure states and can never reduce the degree of polarisation.} The Poincaré sphere may be rotated, boosted or crushed, but a point on its surface never moves into its interior.
+
+            Yet the interior is where most of the light in the universe lives. The resolution is that a depolarising sample is not one Jones matrix but a \textit{statistical ensemble} of them, fluctuating faster than the detector can follow or varying from point to point across the illuminated spot: the rough surface presents a different microfacet to each part of the beam, the tissue offers a different scattering history to each photon, the turbulent atmosphere a different birefringence at each instant. Averaging \ref{eq:CoherenceTransform} over that ensemble and using the linearity of \ref{eq:MuellerFromJones} in the pair $(J,J^{\dagger})$,
+            \begin{equation}\label{eq:MuellerEnsemble}
+                M = \left\langle M\left(J\right)\right\rangle = \sum_k p_k\,M\left(J_k\right), \qquad p_k\geq0, \quad \sum_kp_k=1 ,
+            \end{equation}
+            a convex combination of non depolarising matrices. Convex sums of rotations are not rotations, and this is where the degree of polarisation is lost, in exactly the way that averaging unit vectors pointing in different directions was found to shorten the Stokes vector. The archetype is the ideal depolariser
+            \begin{equation}\label{eq:MuellerDepolariser}
+                M_\Delta = \text{diag}\left(1,d_1,d_2,d_3\right), \qquad \left|d_j\right|\leq1 ,
+            \end{equation}
+            which shrinks the sphere into an ellipsoid with semiaxes $d_1,d_2,d_3$ centred on the origin, and which for $d_1=d_2=d_3=0$ collapses everything onto the centre, that is, onto completely unpolarised light of unchanged intensity.
+
+            A parameter count makes the size of the gap plain. A general Mueller matrix carries $16$ real numbers. A Jones matrix carries $8$, of which one is the unmeasurable global phase, so the non depolarising Mueller matrices form a family of only $7$ parameters sitting inside a $16$ dimensional space. The overwhelming majority of physically admissible Mueller matrices therefore have got no Jones counterpart whatsoever, and this is the precise sense in which the Mueller calculus is not a reformulation of the Jones calculus but a genuine enlargement of it.
+
+            However, we'll see in the chapter of they of coherence that our work in the GOTS can use the Jones matrices to explain with great precission the depolarisation phenomena. 
+
+        \subsubsection{Why this matters}
+
+            It is worth closing with the reason this formalism is used far outside the optics laboratory. A Mueller matrix is $16$ real numbers, and every one of them is measurable: illuminate the sample with four known input states, analyse each output with four known projections, and the resulting $16$ intensities invert to give $M$. The technique is called Mueller polarimetry, and what it delivers is a complete linear optical fingerprint of the sample, containing its birefringence, its dichroism and, crucially, its depolarising power, all of them separable from one another by decomposing $M$ into a product of a retarder, a dichroic and a depolariser.
+
+            The depolarising part is often the most informative, precisely because it is the part Jones could not describe. Healthy and cancerous tissue differ markedly in how strongly they depolarise, since the difference in the arrangement of collagen fibres changes the statistics of the ensemble in \ref{eq:MuellerEnsemble}, and polarimetric imaging is being developed as a label free diagnostic on exactly this basis. In remote sensing the depolarisation of scattered sunlight distinguishes spherical droplets from irregular ice crystals in a cloud, which is why the Stokes formalism entered atmospheric physics through the radiative transfer of Chandrasekhar \citep{chandrasekhar1950radiative}. In semiconductor metrology, ellipsometry measures the Mueller matrix of a wafer to determine film thicknesses to sub nanometre precision \citep{azzam1977ellipsometry}. And in astronomy the polarisation of starlight, scrambled by interstellar dust, maps the galactic magnetic field.
+
+            There is finally a structural lesson that reaches well beyond optics. The polarisation matrix $\Phi$ is a $2\times2$ Hermitian, positive semidefinite matrix of unit trace once normalised, which is precisely the definition of the density matrix of a two level quantum system; the Poincaré sphere is its Bloch sphere; a Jones matrix is a unitary evolution; and a general Mueller matrix is the classical counterpart of a quantum channel, a completely positive map, with \ref{eq:MuellerEnsemble} playing the role of the ensemble decomposition of that channel. Depolarisation is decoherence. Everything we have built in this subsection, the rotations, the boosts, the convex mixing that destroys purity, reappears unchanged in the theory of open quantum systems, and a bench with a laser and two waveplates is one of the cheapest and most transparent laboratories in which those ideas can be watched happening.
+
+    \subsection{The Jones theorems}
+
+        Jones did not merely propose a convenient notation. In the series of papers that runs through the \textit{Journal of the Optical Society of America} between 1941 and 1956, and above all in the second of them, written jointly with Henry Hurwitz \citep{hurwitz1941equivalence}, he proved a handful of structural theorems that answer a question no amount of matrix multiplication answers by itself: given that an optical bench may contain an arbitrary number of waveplates, polarisers and rotators arranged in any order, \textbf{what is the most general thing such a bench can possibly do to a beam of light, and how few elements are needed to do it?}
+
+        The answers are remarkably restrictive, and that is exactly what makes them useful. They tell the instrument designer that certain constructions are impossible, that certain others are redundant, and that any device whatsoever, however baroque, is equivalent to a short standard chain. Before stating them we need to fix what equivalence means and to classify the primitive elements by the kind of matrix they possess.
+
+        \begin{myDef}
+            \textit{(Optical equivalence)}: Two optical systems are \textbf{optically equivalent} if their Jones matrices differ at most by a global phase factor, that is, if $J_2=e^{i\gamma}J_1$ for some real $\gamma$. Equivalently, by \ref{eq:MuellerFromJones}, they possess the same Mueller matrix, and therefore no measurement of any kind performed on the outgoing light can distinguish them.
+        \end{myDef}
+
+        The three primitive devices built in the previous subsections fall into sharply distinct algebraic classes, and the whole of what follows is a consequence of that classification. A retarder \ref{eq:RetarderSpectral} is \textbf{unitary} and, once the irrelevant global phase is removed, \textbf{unimodular}, $\det W=1$; the reader may check this directly on the linear retarder \ref{eq:LinRetarderMatrix}, whose determinant is $\cos^2\tfrac{\delta}{2}+\sin^2\tfrac{\delta}{2}\left(\cos^22\alpha+\sin^22\alpha\right)=1$. A rotator \ref{eq:RotatorMatrix} is \textbf{real orthogonal} with unit determinant, hence a particular case of a retarder, as we already proved. A linear dichroic \ref{eq:LinDichroicMatrix}, and its limiting case the ideal polariser \ref{eq:LinPolariserMatrix}, is \textbf{real symmetric and positive semidefinite}, while a general elliptical dichroic \ref{eq:DichroicSpectral} is \textbf{Hermitian and positive semidefinite}. Finally, a cascade is the ordered product of the matrices of its elements. Every theorem below is a statement about what such products can look like.
+
+        \subsubsection{Theorem I: every system has an eigenpolarisation}
+
+            \begin{myteo}
+                \textit{(Existence of eigenpolarisations)}: Every optical system with Jones matrix $J$ possesses at least one polarisation state that it leaves unchanged in form, altering it at most in amplitude and phase. Generically there are exactly two such states, and they are mutually orthogonal if and only if $J$ is a normal matrix, $JJ^{\dagger}=J^{\dagger}J$.
+            \end{myteo}
+
+            \textit{Proof.} The eigenvalue equation $J\vec{e}=\lambda\vec{e}$ has a non trivial solution precisely when $\det\left(J-\lambda I\right)=0$. Writing $J=\left[\begin{smallmatrix}j_{11}&j_{12}\\j_{21}&j_{22}\end{smallmatrix}\right]$, this determinant is the quadratic
+            \begin{equation}\label{eq:JonesCharPoly}
+                \lambda^2-\left(j_{11}+j_{22}\right)\lambda+\left(j_{11}j_{22}-j_{12}j_{21}\right) = \lambda^2-\left(\text{tr}\,J\right)\lambda+\det J = 0 ,
+            \end{equation}
+            a polynomial of degree two with complex coefficients. By the fundamental theorem of algebra it possesses at least one root $\lambda_1\in\mathbb{C}$, and for that root the matrix $J-\lambda_1I$ is singular, so its kernel contains a non zero vector $\vec{e}_1$. That vector is a Jones spinor \ref{eq:JonesVec} and therefore a genuine polarisation state, and by construction $J\vec{e}_1=\lambda_1\vec{e}_1$: the outgoing spinor is the incoming one multiplied by a single complex number, whose modulus is an amplitude change and whose argument is a phase change, neither of which alters the shape or the orientation of the ellipse. When the discriminant of \ref{eq:JonesCharPoly} does not vanish the two roots are distinct and the two eigenvectors are linearly independent, giving two eigenpolarisations.
+
+            For the second part, recall the spectral theorem: a complex square matrix admits an \textit{orthonormal} basis of eigenvectors if and only if it is normal. Since orthogonality of the two eigenspinors in the Hermitian product is precisely orthogonality of the two polarisation states, the equivalence follows at once. $\blacksquare$
+
+            The theorem has got more content than it first appears. All three primitive elements are normal: a retarder is unitary and a dichroic is Hermitian, and both classes satisfy $JJ^{\dagger}=J^{\dagger}J$ trivially. Their eigenstates are therefore always orthogonal, which is why we were able to build every one of them in the previous subsections from a pair of orthogonal states $\ket{\psi_1},\ket{\psi_2}$ using a spectral decomposition. \textbf{A cascade, however, need not be normal.} Take a linear retarder of retardance $\delta=1.2$ with its axis at $\alpha=0.4$, followed by a linear dichroic with transmittances $t_1=0.9$ and $t_2=0.3$ along the coordinate axes. The commutator $[J,J^{\dagger}]$ of the product does not vanish, and the two eigenpolarisations turn out to satisfy $\left|\braket{e_1|e_2}\right|\approx0.46$, which is very far from zero.
+
+            Elements whose eigenpolarisations are orthogonal are called \textbf{homogeneous}, and the others \textbf{inhomogeneous}. The lesson is worth stating plainly, because it is a common source of confusion: a waveplate followed by a polariser is not, in general, describable as some other waveplate followed by some other polariser with the same axes, and the reason is that the composite object has stopped being normal. The eigenstates it does possess are no longer a pair of orthogonal ellipses but a skew pair, and this is one of the ways in which real optical systems misbehave.
+
+        \subsubsection{Theorem II: retarders and rotators}
+
+            \begin{myteo}
+                \textit{(First equivalence theorem)}: An optical system containing any number of retarders and rotators, in any order, is optically equivalent to a system containing only two elements: one linear retarder followed by one rotator.
+            \end{myteo}
+
+            \textit{Proof.} Every retarder and every rotator has got a unitary, unimodular Jones matrix, that is, an element of the group $SU(2)$. Since $SU(2)$ is a group it is closed under multiplication, so the whole cascade, whatever its length and order, is again a single element $U\in SU(2)$. The theorem therefore reduces to a purely algebraic claim: every $U\in SU(2)$ can be written as $U=R(\theta)\,W(\alpha,0;\delta)$ for suitable $\theta,\alpha,\delta$.
+
+            The cleanest way to see this is to move to the Poincaré sphere, where we already know what these objects do. By the theorem on retarders as rotations, the linear retarder $W(\alpha,0;\delta)$ acts on the sphere as a rotation by $\delta$ about the equatorial axis \ref{eq:RetarderAxis} sitting at azimuth $2\alpha$, since $\chi=0$ places $\hat n$ on the equator; and the rotator $R(\theta)$, being a circular retarder, acts as a rotation about the polar axis. So the claim becomes: \textit{every rotation of the sphere is a rotation about an equatorial axis followed by a rotation about the polar axis}.
+
+            This is the Euler angle decomposition in disguise. Write the general rotation in the $ZYZ$ convention as $\mathcal{R}=Z(\phi)\,Y(\vartheta)\,Z(\psi)$, which is possible for any element of $SO(3)$. Now insert the identity $Z(\psi)Z(-\psi)$ and regroup,
+            \begin{equation*}
+                \mathcal{R} = Z(\phi)Y(\vartheta)Z(\psi) = \underbrace{Z\left(\phi+\psi\right)}_{\text{polar}}\;\underbrace{\left[Z(-\psi)\,Y(\vartheta)\,Z(\psi)\right]}_{\text{equatorial}} ,
+            \end{equation*}
+            and observe that the bracket is a rotation by the angle $\vartheta$ about the axis $Z(-\psi)\hat{y}$, which lies in the equatorial plane because $\hat y$ does and $Z$ preserves that plane. The first factor is a rotation about the polar axis. Since $\phi,\vartheta,\psi$ range over all of $SO(3)$, so do the three parameters $\theta,\alpha,\delta$ of our two element chain. Finally, the Mueller map \ref{eq:MuellerFromJones} restricted to $SU(2)$ is onto $SO(3)$, and its only ambiguity is the sign of $U$, which is a global phase and hence optically invisible. The two systems are therefore optically equivalent. $\blacksquare$
+
+            The physical reading is the one that matters. \textbf{No matter how many waveplates you stack, at whatever angles, the result is a single elliptical retarder.} It can absorb nothing, because unitarity is preserved under multiplication, and it can depolarise nothing, by \ref{eq:DetTransform}. Everything a pile of birefringent crystal can do is to rotate the Poincaré sphere once, and three numbers suffice to say how. This is why the elliptical retarder we constructed by a change of basis is not an academic curiosity but a piece of hardware: any $(\alpha,\chi,\delta)$ you like can be realised with one ordinary waveplate and one rotator, and in the laboratory the combination of two quarter wave plates and a half wave plate is the standard universal polarisation controller built on exactly this theorem.
+
+        \subsubsection{Theorem III: partial polarisers and rotators}
+
+            \begin{myteo}
+                \textit{(Second equivalence theorem)}: An optical system containing any number of linear partial polarisers and rotators, in any order, is optically equivalent to a system containing only two elements: one linear partial polariser followed by one rotator.
+            \end{myteo}
+
+            \textit{Proof.} A linear partial polariser \ref{eq:LinDichroicMatrix} has a \textit{real symmetric} matrix, and a rotator \ref{eq:RotatorMatrix} has a \textit{real orthogonal} one. Products of real matrices are real, so the entire cascade is described by some real matrix $A$, non singular as long as no element is an ideal polariser. Furthermore $\det A>0$, because every factor has positive determinant, namely $t_1t_2>0$ for a partial polariser and $+1$ for a rotator.
+
+            We now invoke the real polar decomposition, and since it is the engine of both this theorem and the next, let us prove it rather than quote it. Consider the matrix $AA^{\mathsf{T}}$. It is symmetric, since $\left(AA^{\mathsf T}\right)^{\mathsf T}=AA^{\mathsf T}$, and it is positive definite, because for any non zero real vector $\vec{v}$ we have $\vec{v}^{\mathsf T}AA^{\mathsf T}\vec{v}=\left\|A^{\mathsf T}\vec{v}\right\|^2>0$, the strict inequality holding because $A^{\mathsf T}$ is invertible. A real symmetric positive definite matrix can be diagonalised by an orthogonal matrix, $AA^{\mathsf T}=V\,\text{diag}\left(\mu_1,\mu_2\right)V^{\mathsf T}$ with $\mu_1,\mu_2>0$, so we may define
+            \begin{equation}\label{eq:RealSqrt}
+                S \equiv V\,\text{diag}\left(\sqrt{\mu_1},\sqrt{\mu_2}\right)V^{\mathsf T} ,
+            \end{equation}
+            which is again real, symmetric, positive definite, invertible, and satisfies $S^2=AA^{\mathsf T}$. Setting $R\equiv S^{-1}A$ we verify directly that
+            \begin{equation*}
+                RR^{\mathsf T} = S^{-1}A\,A^{\mathsf T}S^{-1} = S^{-1}S^2S^{-1} = I ,
+            \end{equation*}
+            where we used that $S^{-1}$ is symmetric. So $R$ is real orthogonal, and $\det R=\det A/\det S>0$ forces $\det R=+1$, making $R$ a proper rotation, that is, a rotator $R(\theta)$. We have obtained $A=SR$ with $S$ a real symmetric positive definite matrix, which is exactly a linear partial polariser with some axis and some pair of transmittances, followed by a rotator. $\blacksquare$
+
+            Note where each hypothesis was used, because the theorem is sharp. Reality of the matrices is what forced the unitary factor to be a mere rotation instead of a general retarder; had we allowed elliptical partial polarisers, the argument would have produced a retarder in its place and the statement would fail. Physically this says something clean: \textbf{a stack of absorbing but non birefringent elements can never manufacture birefringence}, it can only attenuate anisotropically and turn the plane of polarisation. Dichroism and birefringence do not generate each other.
+
+        \subsubsection{Theorem IV: the general equivalence theorem}
+
+            \begin{myteo}
+                \textit{(Third equivalence theorem)}: Every non singular Jones matrix $J$ factorises uniquely as
+                \begin{equation}\label{eq:PolarDecomposition}
+                    J = H\,U ,
+                \end{equation}
+                with $H$ Hermitian positive definite and $U$ unitary. Consequently any optical system whatsoever, containing any number of retarders, partial polarisers and rotators in any order, is optically equivalent to one elliptical partial polariser followed by one elliptical retarder, and therefore, expanding each of these through Theorem II, to a chain of four primitive elements: two retarders, one partial polariser and one rotator.
+            \end{myteo}
+
+            \textit{Proof.} The construction copies the real case with daggers in place of transposes. Consider $JJ^{\dagger}$. It is Hermitian, since $\left(JJ^{\dagger}\right)^{\dagger}=JJ^{\dagger}$, and positive definite, because for any non zero $\vec{v}\in\mathbb{C}^2$,
+            \begin{equation*}
+                \vec{v}^{\,\dagger}JJ^{\dagger}\vec{v} = \left(J^{\dagger}\vec{v}\right)^{\dagger}\left(J^{\dagger}\vec{v}\right) = \left\|J^{\dagger}\vec{v}\right\|^2 > 0 ,
+            \end{equation*}
+            strictly, because $J^{\dagger}$ is invertible and so cannot annihilate $\vec v$. By the spectral theorem a Hermitian matrix is diagonalisable by a unitary one, $JJ^{\dagger}=V\,\text{diag}\left(\mu_1,\mu_2\right)V^{\dagger}$ with $\mu_1,\mu_2>0$ real, and we define its positive square root
+            \begin{equation}\label{eq:HermitianSqrt}
+                H \equiv V\,\text{diag}\left(\sqrt{\mu_1},\sqrt{\mu_2}\right)V^{\dagger} ,
+            \end{equation}
+            which is Hermitian, positive definite, invertible and satisfies $H^2=JJ^{\dagger}$. Put $U\equiv H^{-1}J$. Then, using $H^{\dagger}=H$ and hence $\left(H^{-1}\right)^{\dagger}=H^{-1}$,
+            \begin{equation*}
+                UU^{\dagger} = H^{-1}J\,J^{\dagger}H^{-1} = H^{-1}H^2H^{-1} = I ,
+            \end{equation*}
+            so $U$ is unitary and $J=HU$ as claimed. For uniqueness, suppose $J=H'U'$ with $H'$ Hermitian positive definite and $U'$ unitary. Then $JJ^{\dagger}=H'U'U'^{\dagger}H'=H'^2$, and since a positive definite Hermitian matrix has got exactly one positive definite Hermitian square root, $H'=H$, whence $U'=H^{-1}J=U$. $\blacksquare$
+
+            The dictionary back to hardware is immediate. The factor $H$, being Hermitian and positive definite, is by \ref{eq:DichroicSpectral} an elliptical partial polariser, with its two eigenstates and its two real transmittances $\sqrt{\mu_1},\sqrt{\mu_2}$. The factor $U$, being unitary, is by \ref{eq:RetarderSpectral} an elliptical retarder, which Theorem II lets us build from one linear retarder and one rotator. And $H$ itself, an elliptical partial polariser, is a linear partial polariser conjugated by a retarder that carries the linear eigenstates onto the elliptical ones. Counting the free parameters confirms that nothing has been lost or invented: a general $J\in GL(2,\mathbb{C})$ has got eight real parameters, matched exactly by four for $H$ plus four for $U$ in \ref{eq:PolarDecomposition}, and equally by the hardware chain of two retarders at two parameters each, one partial polariser at three, and one rotator at one, totalling eight.
+
+            This is the deepest of the three theorems and it deserves a sentence of its own. \textbf{Every linear, non depolarising optical system in existence, however many elements it contains, does exactly two things and in this order: it attenuates the two components of the field unequally, and then it retards one relative to the other.} Diattenuation followed by birefringence, and nothing else is possible. In the language of the previous subsection the statement is even more striking, because a Hermitian positive $H$ maps to a Lorentz boost and a unitary $U$ to a rotation: \ref{eq:PolarDecomposition} is nothing but the familiar decomposition of a Lorentz transformation into a boost times a rotation, transplanted to the Poincaré sphere. The result is not a historical curiosity either. Its descendant at the level of Mueller matrices, in which a measured $M$ is factorised into a depolariser, a retarder and a diattenuator, is the standard tool by which a modern polarimeter turns sixteen raw numbers into three physically interpretable objects.
+
+        \subsubsection{Theorem V: reversibility}
+
+            The last theorem concerns what happens when the light is sent back through the system, and it is the one with the most conspicuous practical consequence.
+
+            \begin{myteo}
+                \textit{(Reversibility)}: If a reciprocal optical system has Jones matrix $J$ for propagation in one direction, then for propagation in the opposite direction its Jones matrix is the transpose $J^{\mathsf{T}}$, the transverse axes being referred to the direction of travel.
+            \end{myteo}
+
+            \textit{Proof.} Reversing the beam does two things: it traverses the elements in the opposite order, and it traverses each individual element backwards. The first is automatic in the calculus, since if the forward system is $J=J_n\cdots J_2J_1$ then the reversed one is $\tilde{J}_1\tilde{J}_2\cdots\tilde{J}_n$, where $\tilde{J}_k$ denotes the $k$th element traversed backwards. The identity $\left(J_n\cdots J_1\right)^{\mathsf T}=J_1^{\mathsf T}\cdots J_n^{\mathsf T}$ reverses the order automatically, so the theorem holds for the whole system as soon as it holds for each element, $\tilde{J}_k=J_k^{\mathsf T}$. It therefore suffices to check the primitives.
+
+            A linear retarder \ref{eq:LinRetarderMatrix} is a \textbf{symmetric} matrix, its two off diagonal entries being equal to $i\sin\tfrac{\delta}{2}\sin2\alpha$, so $W^{\mathsf T}=W$: a waveplate looks the same from either side, which is exactly what a slab of birefringent crystal must do, since its fast and slow axes are properties of the crystal and not of the direction of travel. A linear dichroic \ref{eq:LinDichroicMatrix} is likewise symmetric, and for the same reason. A rotator \ref{eq:RotatorMatrix} is orthogonal, so $R(\theta)^{\mathsf T}=R(\theta)^{-1}=R(-\theta)$: run backwards, an optically active medium rotates the plane of polarisation by the opposite angle. This is the correct physics, because in a sugar solution the sense of rotation is tied to the handedness of the molecules and to the direction of propagation together, so reversing the beam reverses the apparent sense. Every primitive obeys the rule, and therefore so does every system built from them. $\blacksquare$
+
+            The consequences are best seen in a double pass, the situation of a beam that goes through a system, reflects off a mirror and returns. Ignoring the mirror itself, the round trip matrix is $J^{\mathsf T}J$. For a quarter wave plate with its axis along $x$ this gives, since $W$ is symmetric,
+            \begin{equation}\label{eq:DoublePassQWP}
+                W\left(0,0;\tfrac{\pi}{2}\right)^{\mathsf T}W\left(0,0;\tfrac{\pi}{2}\right) = W\left(0,0;\tfrac{\pi}{2}\right)^2 = \begin{bmatrix}i&0\\0&-i\end{bmatrix} = W\left(0,0;\pi\right) ,
+            \end{equation}
+            precisely a half wave plate: \textbf{double passing a retarder doubles its retardance}, which is the everyday trick by which a quarter wave plate placed in front of a mirror rotates linear polarisation by ninety degrees and lets a polarising beam splitter separate the outgoing beam from the returning one. For a rotator, by contrast,
+            \begin{equation}\label{eq:DoublePassRotator}
+                R(\theta)^{\mathsf T}R(\theta) = R(-\theta)R(\theta) = I ,
+            \end{equation}
+            so \textbf{double passing an optically active medium undoes the rotation exactly}. Send polarised light through a tube of sugar solution, reflect it and send it back, and it emerges with its original azimuth.
+
+            And here is the payoff. A Faraday rotator, mentioned when we introduced the rotators, looks identical to an optically active medium on a single pass, yet its sense of rotation is fixed by the external magnetic field alone and not by the direction of propagation. On the return pass it therefore contributes $R(\theta)$ again rather than $R(-\theta)$, so the round trip gives $R(\theta)R(\theta)=R(2\theta)$ instead of the identity. The Faraday rotator \textbf{violates the reversibility theorem}, and it is allowed to do so precisely because a magnetic field breaks the time reversal symmetry on which reciprocity rests. This single fact is the entire working principle of the optical isolator, the device that lets light out of a laser but not back into it, without which no high power laser or fibre optic communication link would be stable. A theorem about transposes, proved in three lines, is what tells us that such a device cannot be built from waveplates and sugar and must be built from magnetised glass.
+
+        \subsubsection{What the theorems say together}
+
+            Standing back, the five results form a single picture. Theorem I says every system has a state it preserves, but warns that cascades of well behaved elements need not be well behaved themselves. Theorems II and III say that the two families of devices are closed and do not generate each other: birefringence stacks into birefringence and dichroism into dichroism. Theorem IV says that when the two families are mixed, the outcome is still astonishingly restricted, one diattenuator and one retarder and nothing more, eight real numbers in total. Theorem V says that this whole structure is blind to the direction of travel unless a magnetic field is present to break the symmetry.
+
+            The unifying statement is group theoretic, and it is worth making explicit because it will reappear whenever linear systems are studied. The non depolarising optical elements form the group $GL(2,\mathbb{C})$, of which the retarders form the unitary subgroup and the dichroics the positive Hermitian cone, and \ref{eq:PolarDecomposition} is the statement that the group is the product of the two. Everything a bench can do to fully polarised light is an element of that group, and everything it can do to partially polarised light is, by the ensemble argument \ref{eq:MuellerEnsemble}, a convex mixture of such elements. The Jones theorems are, in the end, the complete answer to the question of what polarisation optics is capable of.
+
 
     \subsection{The elliptic general Malus law}
 
