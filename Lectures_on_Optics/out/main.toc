@@ -9,43 +9,83 @@
 \contentsline {chapter}{\numberline {2}Geometrical Optics}{15}{chapter.2}%
 \contentsline {section}{\numberline {2.1}The postulates of geometrical optics and the dark Room}{16}{section.2.1}%
 \contentsline {section}{\numberline {2.2}The Snell-Descartes law and the Fermat's principle }{23}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}The critical angle, and the refraction by a prism}{25}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}The critical angle, and the refraction by a prism}{26}{subsection.2.2.1}%
 \contentsline {section}{\numberline {2.3}The Descartes's ovoid and diopters}{28}{section.2.3}%
-\contentsline {section}{\numberline {2.4}The spherical diopter}{34}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}The Young-Weirstrass points}{35}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.4}The spherical diopter}{35}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}The Young-Weirstrass points}{36}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}The second spherical diopter}{37}{subsection.2.4.2}%
-\contentsline {section}{\numberline {2.5}Objects and images to the infinity}{37}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Revolution Ellipsoid}{38}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.5}Objects and images to the infinity}{38}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Revolution Ellipsoid}{39}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Revolution Hyperboloid}{41}{subsection.2.5.2}%
-\contentsline {section}{\numberline {2.6}Rigurously stigmatic surfaces by reflection}{43}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Electromagnetic Optics and Polarisation}{45}{chapter.3}%
-\contentsline {section}{\numberline {3.1}A historical context of electromagnetic optics and polarisation}{46}{section.3.1}%
-\contentsline {section}{\numberline {3.2}The vector behavior of the electromagnetic radiation}{47}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Maxwell equations are the Schrödinger equation for photons}{49}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Properties of the electromagnetic waves}{52}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Principal solutions of the electric wave equation}{52}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}From 3D wavefronts to 2D wavefronts}{52}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Light's polarisation}{52}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Monochromatic and deterministic formulation: Jones spinors and the polarization ellipse}{52}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Time evolution of the polarisations: Stokes paramters and the Poincaré sphere}{52}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Transformations of Polarisation}{52}{subsection.3.5.3}%
-\contentsline {chapter}{\numberline {4}Interference and Interferometers}{53}{chapter.4}%
-\contentsline {section}{\numberline {4.1}A historical context of interference and interferometers}{54}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Theory of Diffraction}{57}{chapter.5}%
-\contentsline {section}{\numberline {5.1}A historical context of diffraction theory: from shadows to the vector world}{58}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Scalar theory of diffraction}{59}{section.5.2}%
-\contentsline {section}{\numberline {5.3}The scalar wave equation (Helmholtz equation)}{60}{section.5.3}%
-\contentsline {section}{\numberline {5.4}The Kirchhoff scalar boundary-value problem}{61}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Green's theorem}{62}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}The HelmholtzKirchhoff integral theorem}{62}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}The RayleighSommerfeld formulation}{66}{subsection.5.4.3}%
-\contentsline {section}{\numberline {5.5}The Fresnel approximation}{67}{section.5.5}%
-\contentsline {section}{\numberline {5.6}The Fraunhofer approximation}{68}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Theory of Coherence}{71}{chapter.6}%
-\contentsline {section}{\numberline {6.1}A historical context of coherence theory}{72}{section.6.1}%
-\contentsline {section}{\numberline {6.2}How is statistical similarity quantified?}{74}{section.6.2}%
-\contentsline {section}{\numberline {6.3}The coherence function}{75}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Manifestations of coherence: the Wiener--Khinchin theorem}{79}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}The wave equation of coherence}{80}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Propagation of coherence and the direction of time: the van Cittert--Zernike theorem}{83}{subsection.6.3.3}%
+\contentsline {section}{\numberline {2.6}Rigurously stigmatic surfaces by reflection}{44}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}The ellipsoidal mirror}{46}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}The hyperboloidal mirror}{47}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Special cases: the spherical and the plane mirror}{48}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}The parabolic mirror and objects at infinity}{49}{subsection.2.6.4}%
+\contentsline {chapter}{\numberline {3}Electromagnetic Optics and Polarisation}{51}{chapter.3}%
+\contentsline {section}{\numberline {3.1}A historical context of electromagnetic optics and polarisation}{52}{section.3.1}%
+\contentsline {section}{\numberline {3.2}The vector behavior of the electromagnetic radiation}{53}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Maxwell equations are the Schrödinger equation for photons}{55}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Properties of the electromagnetic waves}{58}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Principal solutions of the electric wave equation}{59}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Beams with a particular phase and structured light}{62}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}From 3D wavefronts to 2D wavefronts}{65}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Light's polarisation}{66}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Monochromatic and deterministic formulation: Jones spinors and the polarization ellipse}{67}{subsection.3.5.1}%
+\contentsline {subsubsection}{How to build the polarisation ellipse: Phasors}{68}{subsubsection*.27}%
+\contentsline {subsubsection}{How to build the polarisation ellipse: Ellipse angles}{70}{subsubsection*.29}%
+\contentsline {subsubsection}{The canonical polarisation states: horizontal, vertical, diagonal and circular}{72}{subsubsection*.32}%
+\contentsline {subsection}{\numberline {3.5.2}Time evolution of the polarisations: Stokes parameters and the Poincaré sphere}{75}{subsection.3.5.2}%
+\contentsline {subsubsection}{Why the Stokes vector is not a vector}{81}{subsubsection*.34}%
+\contentsline {subsection}{\numberline {3.5.3}The bridge between Jones and Stokes: the stereographic projection}{83}{subsection.3.5.3}%
+\contentsline {subsubsection}{What the stereographic projection is}{84}{subsubsection*.35}%
+\contentsline {subsubsection}{Why a polarisation state is a single complex number}{85}{subsubsection*.37}%
+\contentsline {subsubsection}{The Poincaré sphere is that sphere}{85}{subsubsection*.38}%
+\contentsline {subsubsection}{A flat atlas of every polarisation state}{87}{subsubsection*.40}%
+\contentsline {subsection}{\numberline {3.5.4}Transformations of Polarisation: Jones matrices}{88}{subsection.3.5.4}%
+\contentsline {subsubsection}{Retarders}{89}{subsubsection*.42}%
+\contentsline {subsubsection}{Rotators}{92}{subsubsection*.44}%
+\contentsline {subsubsection}{Dichroics and polarisers}{92}{subsubsection*.45}%
+\contentsline {subsection}{\numberline {3.5.5}Transformations of Polarisation: Mueller matrices}{95}{subsection.3.5.5}%
+\contentsline {subsubsection}{From the Jones matrix to the coherence matrix}{95}{subsubsection*.47}%
+\contentsline {subsubsection}{The Mueller matrix}{96}{subsubsection*.48}%
+\contentsline {subsubsection}{Retarders are rotations of the Poincaré sphere}{97}{subsubsection*.49}%
+\contentsline {subsubsection}{Polarisers, dichroics and the Malus law}{99}{subsubsection*.51}%
+\contentsline {subsubsection}{What no Jones matrix can do: depolarisation}{101}{subsubsection*.52}%
+\contentsline {subsubsection}{Why this matters}{102}{subsubsection*.53}%
+\contentsline {subsection}{\numberline {3.5.6}The Jones theorems}{102}{subsection.3.5.6}%
+\contentsline {subsubsection}{Theorem I: every system has an eigenpolarisation}{103}{subsubsection*.54}%
+\contentsline {subsubsection}{Theorem II: retarders and rotators}{104}{subsubsection*.55}%
+\contentsline {subsubsection}{Theorem III: partial polarisers and rotators}{105}{subsubsection*.56}%
+\contentsline {subsubsection}{Theorem IV: the general equivalence theorem}{106}{subsubsection*.57}%
+\contentsline {subsubsection}{Theorem V: reversibility}{107}{subsubsection*.58}%
+\contentsline {subsubsection}{What the theorems say together}{108}{subsubsection*.59}%
+\contentsline {subsection}{\numberline {3.5.7}The elliptic general Malus law}{109}{subsection.3.5.7}%
+\contentsline {subsection}{\numberline {3.5.8}The law of elliptic birrefringents}{109}{subsection.3.5.8}%
+\contentsline {chapter}{\numberline {4}Interference and Interferometers}{111}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A historical context of interference and interferometers}{112}{section.4.1}%
+\contentsline {section}{\numberline {4.2}How does interference occur?}{113}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Interference of plane waves}{115}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Interference of spherical waves}{116}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Interferometers}{121}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Young interferometer}{121}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Fresnel biprism}{125}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Michelson and Morley interferometer}{131}{subsection.4.3.3}%
+\contentsline {chapter}{\numberline {5}Theory of Diffraction}{133}{chapter.5}%
+\contentsline {section}{\numberline {5.1}A historical context of diffraction theory: from shadows to the vector world}{134}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Scalar theory of diffraction}{136}{section.5.2}%
+\contentsline {section}{\numberline {5.3}The scalar wave equation (Helmholtz equation)}{137}{section.5.3}%
+\contentsline {section}{\numberline {5.4}The Kirchhoff scalar boundary-value problem}{137}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Green's theorem}{138}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}The HelmholtzKirchhoff integral theorem}{139}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}The RayleighSommerfeld formulation}{143}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}The Fresnel approximation}{144}{section.5.5}%
+\contentsline {section}{\numberline {5.6}The Fraunhofer approximation}{145}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Theory of Coherence}{149}{chapter.6}%
+\contentsline {section}{\numberline {6.1}A historical context of coherence theory}{150}{section.6.1}%
+\contentsline {section}{\numberline {6.2}How is statistical similarity quantified?}{152}{section.6.2}%
+\contentsline {section}{\numberline {6.3}The coherence function}{153}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Manifestations of coherence: the Wiener--Khinchin theorem}{157}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}The wave equation of coherence}{160}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Propagation of coherence and the direction of time: the van Cittert--Zernike theorem}{161}{subsection.6.3.3}%
 \contentsfinish 

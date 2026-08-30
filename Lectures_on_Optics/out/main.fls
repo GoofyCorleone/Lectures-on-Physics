@@ -1,9 +1,9 @@
-PWD /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics
+PWD /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_on_Optics
 INPUT /usr/local/texlive/2026/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
 INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/main.tex
-OUTPUT out/main.log
+OUTPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.log
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/bk11.clo
@@ -35,10 +35,20 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf
 INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyphenat/hyphenat.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyphenat/hyphenat.sty
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
@@ -119,8 +129,6 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/lineno/lineno.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/lineno/lineno.sty
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/epigraph/epigraph.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/epigraph/epigraph.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/nextpage/nextpage.sty
@@ -193,10 +201,13 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/cite/chapterbib.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/cite/chapterbib.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT out/main.aux
-INPUT out/main.aux
-INPUT out/main.aux
-OUTPUT out/main.aux
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.aux
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.aux
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.aux
+OUTPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.aux
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -208,14 +219,14 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx
-INPUT out/main.out
-INPUT out/main.out
-INPUT out/main.out
-INPUT out/main.out
-OUTPUT out/main.pdf
-INPUT out/main.out
-INPUT out/main.out
-OUTPUT out/main.out
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out
+OUTPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.pdf
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out
+OUTPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecti1095.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecti2488.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
@@ -245,12 +256,18 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -286,14 +303,16 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm2488.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx2488.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
-INPUT out/main.toc
-INPUT out/main.toc
-INPUT out/main.toc
-OUTPUT out/main.toc
-INPUT out/main.lof
-INPUT out/main.lof
-INPUT out/main.lof
-OUTPUT out/main.lof
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.toc
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.toc
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.toc
+OUTPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.toc
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.lof
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.lof
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.lof
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+OUTPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.lof
 INPUT ./Abstract/abstract.tex
 INPUT ./Abstract/abstract.tex
 INPUT Abstract/abstract.tex
@@ -301,8 +320,6 @@ INPUT ./Chapter 1/chap1.tex
 INPUT ./Chapter 1/chap1.tex
 INPUT Chapter 1/chap1.tex
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./Chapter 2/chap2.tex
 INPUT ./Chapter 2/chap2.tex
 INPUT Chapter 2/chap2.tex
@@ -434,14 +451,127 @@ INPUT ./Chapter 2/Figures/Hyperboloid3.pdf
 INPUT ./Chapter 2/Figures/Hyperboloid3.pdf
 INPUT ./Chapter 2/Figures/Hyperboloid3.pdf
 INPUT ./Chapter 2/Figures/Hyperboloid3.pdf
+INPUT ./Chapter 2/Figures/EllipsoidalMirror.pdf
+INPUT ./Chapter 2/Figures/EllipsoidalMirror.pdf
+INPUT ./Chapter 2/Figures/EllipsoidalMirror.pdf
+INPUT ./Chapter 2/Figures/EllipsoidalMirror.pdf
+INPUT ./Chapter 2/Figures/EllipsoidalMirror.pdf
+INPUT ./Chapter 2/Figures/HyperboloidMirror.pdf
+INPUT ./Chapter 2/Figures/HyperboloidMirror.pdf
+INPUT ./Chapter 2/Figures/HyperboloidMirror.pdf
+INPUT ./Chapter 2/Figures/HyperboloidMirror.pdf
+INPUT ./Chapter 2/Figures/HyperboloidMirror.pdf
+INPUT ./Chapter 2/Figures/ParaboloidMirror.pdf
+INPUT ./Chapter 2/Figures/ParaboloidMirror.pdf
+INPUT ./Chapter 2/Figures/ParaboloidMirror.pdf
+INPUT ./Chapter 2/Figures/ParaboloidMirror.pdf
+INPUT ./Chapter 2/Figures/ParaboloidMirror.pdf
 INPUT ./Chapter 3/chap3.tex
 INPUT ./Chapter 3/chap3.tex
 INPUT Chapter 3/chap3.tex
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecti0800.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecti0600.tfm
+INPUT ./Chapter 3/Figures/3Dto2D.pdf
+INPUT ./Chapter 3/Figures/3Dto2D.pdf
+INPUT ./Chapter 3/Figures/3Dto2D.pdf
+INPUT ./Chapter 3/Figures/3Dto2D.pdf
+INPUT ./Chapter 3/Figures/3Dto2D.pdf
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm0900.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/tcrm0900.tfm
+INPUT ./Chapter 3/Figures/Phasors.pdf
+INPUT ./Chapter 3/Figures/Phasors.pdf
+INPUT ./Chapter 3/Figures/Phasors.pdf
+INPUT ./Chapter 3/Figures/Phasors.pdf
+INPUT ./Chapter 3/Figures/Phasors.pdf
+INPUT ./Chapter 3/Figures/PolarisationEllipseGen.pdf
+INPUT ./Chapter 3/Figures/PolarisationEllipseGen.pdf
+INPUT ./Chapter 3/Figures/PolarisationEllipseGen.pdf
+INPUT ./Chapter 3/Figures/PolarisationEllipseGen.pdf
+INPUT ./Chapter 3/Figures/PolarisationEllipseGen.pdf
+INPUT ./Chapter 3/Figures/PolarisationEllipseBase.pdf
+INPUT ./Chapter 3/Figures/PolarisationEllipseBase.pdf
+INPUT ./Chapter 3/Figures/PolarisationEllipseBase.pdf
+INPUT ./Chapter 3/Figures/PolarisationEllipseBase.pdf
+INPUT ./Chapter 3/Figures/PolarisationEllipseBase.pdf
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
+INPUT ./Chapter 3/Figures/PoincareSphere.pdf
+INPUT ./Chapter 3/Figures/PoincareSphere.pdf
+INPUT ./Chapter 3/Figures/PoincareSphere.pdf
+INPUT ./Chapter 3/Figures/PoincareSphere.pdf
+INPUT ./Chapter 3/Figures/PoincareSphere.pdf
+INPUT ./Chapter 3/Figures/ProyStereo1.pdf
+INPUT ./Chapter 3/Figures/ProyStereo1.pdf
+INPUT ./Chapter 3/Figures/ProyStereo1.pdf
+INPUT ./Chapter 3/Figures/ProyStereo1.pdf
+INPUT ./Chapter 3/Figures/ProyStereo1.pdf
+INPUT ./Chapter 3/Figures/ProyStereo2.pdf
+INPUT ./Chapter 3/Figures/ProyStereo2.pdf
+INPUT ./Chapter 3/Figures/ProyStereo2.pdf
+INPUT ./Chapter 3/Figures/ProyStereo2.pdf
+INPUT ./Chapter 3/Figures/ProyStereo2.pdf
+INPUT ./Chapter 3/Figures/ProyStereo3.pdf
+INPUT ./Chapter 3/Figures/ProyStereo3.pdf
+INPUT ./Chapter 3/Figures/ProyStereo3.pdf
+INPUT ./Chapter 3/Figures/ProyStereo3.pdf
+INPUT ./Chapter 3/Figures/ProyStereo3.pdf
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmss9.tfm
+INPUT ./Chapter 3/Figures/QuarterWavePlate.pdf
+INPUT ./Chapter 3/Figures/QuarterWavePlate.pdf
+INPUT ./Chapter 3/Figures/QuarterWavePlate.pdf
+INPUT ./Chapter 3/Figures/QuarterWavePlate.pdf
+INPUT ./Chapter 3/Figures/QuarterWavePlate.pdf
+INPUT ./Chapter 3/Figures/LinearPolarizer.pdf
+INPUT ./Chapter 3/Figures/LinearPolarizer.pdf
+INPUT ./Chapter 3/Figures/LinearPolarizer.pdf
+INPUT ./Chapter 3/Figures/LinearPolarizer.pdf
+INPUT ./Chapter 3/Figures/LinearPolarizer.pdf
+INPUT ./Chapter 3/Figures/RetarderOnPoincare.pdf
+INPUT ./Chapter 3/Figures/RetarderOnPoincare.pdf
+INPUT ./Chapter 3/Figures/RetarderOnPoincare.pdf
+INPUT ./Chapter 3/Figures/RetarderOnPoincare.pdf
+INPUT ./Chapter 3/Figures/RetarderOnPoincare.pdf
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
 INPUT ./Chapter 4/chap4.tex
 INPUT ./Chapter 4/chap4.tex
 INPUT Chapter 4/chap4.tex
+INPUT ./Chapter 4/Figures/PlaneWavesInterferences.pdf
+INPUT ./Chapter 4/Figures/PlaneWavesInterferences.pdf
+INPUT ./Chapter 4/Figures/PlaneWavesInterferences.pdf
+INPUT ./Chapter 4/Figures/PlaneWavesInterferences.pdf
+INPUT ./Chapter 4/Figures/PlaneWavesInterferences.pdf
+INPUT ./Chapter 4/Figures/SphericalWavesInterferences.pdf
+INPUT ./Chapter 4/Figures/SphericalWavesInterferences.pdf
+INPUT ./Chapter 4/Figures/SphericalWavesInterferences.pdf
+INPUT ./Chapter 4/Figures/SphericalWavesInterferences.pdf
+INPUT ./Chapter 4/Figures/SphericalWavesInterferences.pdf
+INPUT ./Chapter 4/Figures/YoungSphericalWave.pdf
+INPUT ./Chapter 4/Figures/YoungSphericalWave.pdf
+INPUT ./Chapter 4/Figures/YoungSphericalWave.pdf
+INPUT ./Chapter 4/Figures/YoungSphericalWave.pdf
+INPUT ./Chapter 4/Figures/YoungSphericalWave.pdf
+INPUT ./Chapter 4/Figures/FresnelBiprism.pdf
+INPUT ./Chapter 4/Figures/FresnelBiprism.pdf
+INPUT ./Chapter 4/Figures/FresnelBiprism.pdf
+INPUT ./Chapter 4/Figures/FresnelBiprism.pdf
+INPUT ./Chapter 4/Figures/FresnelBiprism.pdf
+INPUT ./Chapter 4/Figures/MichelsonInterferometer.pdf
+INPUT ./Chapter 4/Figures/MichelsonInterferometer.pdf
+INPUT ./Chapter 4/Figures/MichelsonInterferometer.pdf
+INPUT ./Chapter 4/Figures/MichelsonInterferometer.pdf
+INPUT ./Chapter 4/Figures/MichelsonInterferometer.pdf
 INPUT ./Chapter 5/chap5.tex
 INPUT ./Chapter 5/chap5.tex
 INPUT Chapter 5/chap5.tex
@@ -464,17 +594,6 @@ INPUT ./Chapter 5/Figures/Cardinales.pdf
 INPUT ./Chapter 6/chap6.tex
 INPUT ./Chapter 6/chap6.tex
 INPUT Chapter 6/chap6.tex
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm0900.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib9.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy9.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT ./Chapter 6/Figures/RandomVar.pdf
 INPUT ./Chapter 6/Figures/RandomVar.pdf
 INPUT ./Chapter 6/Figures/RandomVar.pdf
@@ -499,14 +618,15 @@ INPUT ./Chapter 6/Figures/FourierGamma.pdf
 INPUT ./Chapter 6/Figures/FourierGamma.pdf
 INPUT ./Chapter 6/Figures/FourierGamma.pdf
 INPUT ./Chapter 6/Figures/FourierGamma.pdf
-INPUT out/main.bbl
-INPUT out/main.bbl
-INPUT out/main.bbl
-INPUT out/main.aux
-INPUT out/main.out
-INPUT out/main.out
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.bbl
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.bbl
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.bbl
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.aux
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -519,6 +639,7 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb

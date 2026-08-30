@@ -110,8 +110,8 @@
 
     The equation \ref{eq:GenInterferenceTerm} is the our most general expression for the interference. Lets notice that the intereference terms is composed in two parts: the first one is a relation between the two intensities $I_1,I_2$ and the second one only depends of the phase-difference of the two sources by a cosine, then, \textbf{the real interference becomes in the phases not in the intensities}, the first terms only \textbf{modulates the visibility} of the interference, and we then can call it $\mathcal{V}$ and write it as
     \begin{align}
-        & \mathcal{V} = 2 \frac{\left(I_1 I_2\right)^{1/2}}{I_1+ I_2} = \frac{I_{max} - I_{min}}{I_{max} - I_{min}},\\
-        & I_{min} = \left(I_1^{1/2} - I_2^{1/2} \right), \quad I_{max} = \left(I_1^{1/2} + I_2^{1/2} \right),
+        & \mathcal{V} = 2 \frac{\left(I_1 I_2\right)^{1/2}}{I_1+ I_2} = \frac{I_{max} - I_{min}}{I_{max} + I_{min}},\\
+        & I_{min} = \left(I_1^{1/2} - I_2^{1/2} \right)^2, \quad I_{max} = \left(I_1^{1/2} + I_2^{1/2} \right)^2,
     \end{align}
     this term $\mathcal{V}$ is called the \textbf{visibility factor} which module the constrast on the interference fringes. 
     
@@ -169,7 +169,7 @@
 
         We can see that the interfringe distance $\Lambda$ behaves in a very logique way. In $\alpha \to 0$ then $\Lambda \to \infty$ this means, when the two wave number vector $\hat{k}_1,\hat{k}_2$ gets each time more parallel, the interfringe distance tends to infinity, this means, there won't be any interference pattern. 
 
-        In the other way, if $\alpha \to \pi/4$ then $\Lambda \to min$ this means, when the two wave number vectors tend to be $45$° separeted the interfrence distance is the minimum, being clrear for us to see the interference pattern. 
+        In the other way, if $\alpha \to \pi$ then $\Lambda \to min$ this means, when the two wave number vectors tend to be $180$° separeted the interfrence distance is the minimum, being clrear for us to see the interference pattern. 
 
     \subsection{Interference of spherical waves}
 
@@ -207,7 +207,7 @@
         In a plane parallel to $\overline{\mathcal{S}_1\mathcal{S}_2}$ at a distance $z=D$ two hyperbolids are produced. For $r_1 \approx r_2$ and $D \gg a$ this hiperboloids are practically planes. Therefore
 
         \begin{align}\label{eq:TaylorR1}
-            & r_1 = \left[D^2 + \left(x - \frac{a}{2}\right)^2 + y^2\right]^{1/2} = D \left[1 + \frac{x^2}{D^2} + \frac{y^2}{D^2} + \frac{a^2}{4} - ax\right]^{1/2},
+            & r_1 = \left[D^2 + \left(x - \frac{a}{2}\right)^2 + y^2\right]^{1/2} = D \left[1 + \frac{x^2}{D^2} + \frac{y^2}{D^2} + \frac{a^2}{4D^2} - \frac{ax}{D^2}\right]^{1/2},
         \end{align}
         applying taylor series  to first order of $\sqrt{1+x} \approx 1 + x/2 $ we've got
         \begin{equation}
@@ -215,7 +215,7 @@
         \end{equation}
         and in the same way for $r_2$
         \begin{equation}\label{eq:TaylorR2}
-            r_1 \approx D\left[1 + \frac{x^2+y^2}{2D^2} + \frac{a^2}{2D^2} + \frac{ax}{2D^2}\right].
+            r_2 \approx D\left[1 + \frac{x^2+y^2}{2D^2} + \frac{a^2}{2D^2} + \frac{ax}{2D^2}\right].
         \end{equation}
 
         Substracting \ref{eq:TaylorR2} from \ref{eq:TaylorR1} we then we will have that the phase difference is then
@@ -237,8 +237,285 @@
 
         With this result, we can see that when the two sources get closer $a \to 0$ the interfringe $\Lambda \to \infty$ this means, the interference is going to disappear when the two point sources get together.
 
+        For example, lets consider two monocrhomatic plane waves, which have got complex amplitudes
+        \begin{equation}
+            \vec{E}_1 = \mathcal{E}e^{i\varphi_1}\hat{e}_1, \qquad \vec{E}_2 = \mathcal{E}e^{i\varphi_2}\hat{e}_2,
+        \end{equation}
+        where $\hat{e}_1,\hat{e}_2$ are thei polarisation vectors and their wave number vectors are given by
+        \begin{equation}
+            \vec{k}_1 = \left[k_{1x}, k_{1y}, k_{1z} \right]^T \qquad \vec{k}_2 = \left[k_{2x}, k_{2y}, k_{2z} \right]^T.
+        \end{equation}
+
+        Now, lets answer the following questions:
+
+        \begin{enumerate}
+            \item What relation should be between $\vec{k}_1,\vec{k}_2$ to realize the interference?
+            \item What's the expression for the visibility?
+            \item What's the plane where the interference fringes have the least distance? What is the orientation of the plane and the interference fringes distances on that plane?
+        \end{enumerate}
+
+        Lets answer each part following the methodology we have already built. The observable quantity is never the instantaneous field but the time average of the irradiance, which for our two waves reads
+        \begin{equation}
+            \left\langle \left|\left|\vec{E}\right|\right|^2 \right\rangle = I_1 + I_2 + 2\,\text{Re}\left\{ \vec{E}_1^*\cdot\vec{E}_2\, \left\langle e^{-i(\omega_1-\omega_2)t} \right\rangle \right\}.
+        \end{equation}
+        The average $\left\langle e^{-i(\omega_1-\omega_2)t} \right\rangle$ vanishes for any detector whose integration time $T$ satisfies $|\omega_1-\omega_2|T \gg 1$, so the interference term survives only when $\omega_1 = \omega_2 = \omega$. This first condition is \textbf{temporal, not geometric}, and the statement grants it by declaring both waves monochromatic and of the same nature. Its immediate translation to the space of wave number vectors, in a homogeneous and isotropic medium of index $n$, is
+        \begin{equation}\label{eq:P1modules}
+            \left|\left|\vec{k}_1\right|\right| = \left|\left|\vec{k}_2\right|\right| = \kappa = \frac{n\omega}{c} = \frac{2\pi}{\lambda}.
+        \end{equation}
+        This equality of the magnitudes is the only relation that the interference truly requires, and it does not constrain the directions at all. It is worth saying this out loud, because the wording of the question tempts us to answer that the vectors must be parallel, and it is exactly the opposite. If $\vec{k}_1 = \vec{k}_2$ the interference term does exist but no longer depends on the position, the illumination becomes uniform and there are no fringes. For an observable pattern we need the interference vector
+        \begin{equation}
+            \vec{K} \equiv \vec{k}_2 - \vec{k}_1 \neq \vec{0},
+        \end{equation}
+        whose magnitude follows at once from the equality of the moduli \ref{eq:P1modules},
+        \begin{equation}
+            \left|\left|\vec{K}\right|\right|^2 = 2\kappa^2(1-\cos\alpha) = 4\kappa^2\sin^2\frac{\alpha}{2} \quad\Longrightarrow\quad K = 2\kappa\sin\frac{\alpha}{2},
+        \end{equation}
+        with $\alpha$ the angle between $\vec{k}_1$ and $\vec{k}_2$. A third condition, this time genuinely geometric, comes from the interference term carrying the factor $\hat{e}_1^*\cdot\hat{e}_2$, which vanishes for orthogonal polarisations. If we want the maximum contrast we need $\hat{e}_1 = \hat{e}_2 = \hat{e}$, and since both waves are transverse, so that $\hat{e}\perp\vec{k}_1$ and $\hat{e}\perp\vec{k}_2$, this common direction is fixed up to a sign,
+        \begin{equation}
+            \hat{e} = \frac{\vec{k}_1\times\vec{k}_2}{\left|\left|\vec{k}_1\times\vec{k}_2\right|\right|}.
+        \end{equation}
+        In words, two non collinear plane waves reach unit visibility only when they are polarised perpendicular to the plane that contains $\vec{k}_1$ and $\vec{k}_2$, which is the quantitative form of the Arago and Fresnel statement we met before.
+
+        For the second part, with $\omega_1 = \omega_2$ the interference term survives the average and the total irradiance is
+        \begin{equation}
+            I(\vec{r}) = I_1 + I_2 + 2\sqrt{I_1 I_2}\,\left|\hat{e}_1^*\cdot\hat{e}_2\right|\cos\left[\triangle\phi(\vec{r})+\delta\right], \qquad \triangle\phi(\vec{r}) = \vec{K}\cdot\vec{r} + \varphi_2 - \varphi_1,
+        \end{equation}
+        where $I_j = |\mathcal{E}_j|^2$ and $\delta = \arg(\hat{e}_1^*\cdot\hat{e}_2)$. As the cosine sweeps the whole interval $[-1,1]$ when $\vec{r}$ runs over the space, the extremes of the irradiance are read directly,
+        \begin{equation}
+            I_{\max} = I_1 + I_2 + 2\sqrt{I_1 I_2}\left|\hat{e}_1^*\cdot\hat{e}_2\right|, \qquad I_{\min} = I_1 + I_2 - 2\sqrt{I_1 I_2}\left|\hat{e}_1^*\cdot\hat{e}_2\right|,
+        \end{equation}
+        and the Michelson visibility, the same one we use as the contrast modulator, follows without any approximation
+        \begin{equation}\label{eq:P1visibility}
+            \mathcal{V} = \frac{I_{\max}-I_{\min}}{I_{\max}+I_{\min}} = \frac{2\sqrt{I_1 I_2}}{I_1 + I_2}\left|\hat{e}_1^*\cdot\hat{e}_2\right|.
+        \end{equation}
+        With it the irradiance takes the canonical form
+        \begin{equation}\label{eq:P1canonical}
+            I(\vec{r}) = (I_1 + I_2)\left[1 + \mathcal{V}\cos\triangle\phi(\vec{r})\right],
+        \end{equation}
+        which cleanly separates the three roles, since $I_1 + I_2$ fixes the mean level, $\mathcal{V}$ fixes the contrast and $\triangle\phi$ carries all the physics of the interference. Notice that $\mathcal{V} = 1$ demands both equal intensities and parallel polarisations, but also that $\mathcal{V}$ is remarkably robust against an imbalance of the intensities, since a ratio as large as $I_1/I_2 = 2$ still leaves $\mathcal{V} = 0.943$. We will make use of this insensitivity in the next example.
+
+        For the third part, the surfaces of constant phase, and therefore the fringes seen as objects living in the three dimensional space, are the planes $\vec{K}\cdot\vec{r} = \text{cte}$, perpendicular to $\vec{K}$ and separated by
+        \begin{equation}\label{eq:P1Lambda0}
+            \Lambda_0 = \frac{2\pi}{K} = \frac{\lambda}{2\sin(\alpha/2)}.
+        \end{equation}
+        What the question asks is on which observation plane $P$ the cut of this family produces the closest fringes. Let $\hat{n}$ be the normal of $P$ and decompose $\vec{K}$ into a part along $\hat{n}$ and a part $\vec{K}_\parallel$ lying inside the plane. Only $\vec{K}_\parallel$ modulates the field over $P$, so the observed fringes are straight lines perpendicular to $\vec{K}_\parallel$ with a separation
+        \begin{equation}
+            \Lambda(\hat{n}) = \frac{2\pi}{\left|\left|\vec{K}_\parallel\right|\right|} = \frac{\Lambda_0}{\sin\gamma}, \qquad \gamma = \angle(\vec{K},\hat{n}).
+        \end{equation}
+        Since $\Lambda(\hat{n}) \geq \Lambda_0$ for every orientation, with equality only when $\sin\gamma = 1$, the fringes are closest exactly when the observation plane contains the direction of $\vec{K}$,
+        \begin{equation}\label{eq:P1Pmin}
+            P:\quad \hat{n}\cdot\vec{K} = 0, \qquad \Lambda_{\min} = \frac{2\pi}{\left|\left|\vec{k}_2-\vec{k}_1\right|\right|} = \frac{\lambda}{2\sin(\alpha/2)},
+        \end{equation}
+        while any other tilt dilates the fringes by the factor $1/\sin\gamma$. This is a whole one parameter family of planes rather than a single one, and two of its members deserve a name. The first is the plane spanned by $\vec{k}_1$ and $\vec{k}_2$, whose normal is $\hat{n} = (\vec{k}_1\times\vec{k}_2)/||\vec{k}_1\times\vec{k}_2||$, and it contains $\vec{K}$ because $\vec{K}$ is a linear combination of $\vec{k}_1$ and $\vec{k}_2$, being moreover the same plane to which the polarisation had to be perpendicular in the first part. The second is the plane perpendicular to the bisector of the two beams, which is the one used as a screen in the laboratory, and it belongs to the optimal family thanks to the identity
+        \begin{equation}
+            \vec{K}\cdot(\vec{k}_1+\vec{k}_2) = \left|\left|\vec{k}_2\right|\right|^2 - \left|\left|\vec{k}_1\right|\right|^2 = 0.
+        \end{equation}
+        So the interference vector is always perpendicular to the bisector, the natural screen is already the optimal one and there is no need to tilt it. On it the fringes are straight lines parallel to $\vec{k}_1+\vec{k}_2$ with the separation $\lambda/[2\sin(\alpha/2)]$.
+
 \section{Interferometers}
 
     \subsection{Young interferometer}
 
+        For most of the eighteenth century the nature of light seemed a settled matter. The authority of Newton, whose \textit{Opticks} \cite{newton1704opticks} accounted for reflection, refraction and the colours of thin films in terms of tiny corpuscles, had pushed into the background the wave picture that Huygens had proposed in his \textit{Trait\'e de la Lumi\`ere} \cite{huygens1690traite}. A corpuscle travels in a straight line and carries momentum, so the rectilinear propagation of light and the sharpness of shadows looked like immediate consequences of the theory, and the enormous prestige of Newton did the rest. The wave idea survived only as a minority opinion, lacking the one thing that would have made it irresistible, a phenomenon that particles simply cannot imitate.
+
+        That phenomenon was interference, and it was Thomas Young who brought it to light. In his Bakerian lecture of 1801, published as \textit{On the Theory of Light and Colours} \cite{young1802theory}, Young stated what he called the principle of the superposition of undulations, the plain but revolutionary idea that where two portions of light meet their disturbances add, so that two bright beams can combine to give darkness. A few years later, in a second Bakerian lecture \cite{young1804bakerian}, he turned the principle into an experiment, letting light pass through a small opening and then splitting the emerging beam so that its two halves overlapped on a screen, where they painted a regular pattern of bright and dark bands. In his \textit{Course of Lectures on Natural Philosophy} \cite{young1807course} the arrangement acquired the form we still teach, two closely spaced apertures illuminated by a common source, and from the spacing of the fringes Young was able to do something no one had done before, to measure the wavelength of light and to find it astonishingly small, a fraction of a thousandth of a millimetre.
+
+        The importance of this result is difficult to overstate. The dark bands were the direct proof that light added to light can produce less light, something no theory of independent particles can explain, and they gave the wave theory the empirical victory it had lacked for a century. The reception, however, was hostile, since to attack Newton in the England of 1804 was close to heresy, and Young's papers were ridiculed in the reviews of the day. Vindication came from the continent a decade later, when Fresnel and Arago placed the wave theory on a rigorous mathematical footing and extended it to diffraction and polarisation. The experiment itself never left the stage. It is the archetype of every wavefront division interferometer, the simplest device in which the phase difference between two coherent beams is turned into a visible intensity pattern, and its complete modern treatment belongs to any serious optics text \cite{born1999principles}. More than that, when the same experiment is repeated with electrons, atoms or single photons sent one at a time, the fringes still build up, and the two slit arrangement becomes the cleanest illustration of quantum superposition, the phenomenon that Feynman called the only mystery of quantum mechanics \cite{feynman1965lectures}. The precision descendants of Young's screen reach today the kilometre sized interferometers that detect gravitational waves \cite{abbott2016observation}.
+
+        To see the whole machinery of the previous section at work on this instrument, lets analyse the Young interferometer quantitatively, with its two slits illuminated by a spherical wave coming from a point source, arranged as in the figure \ref{fig:YoungSpherical}. We place the two slits $\mathcal{S}_1$ and $\mathcal{S}_2$ symmetrically at $x = \pm d/2$ on the plane $z=0$, separated by a distance $d$, and the observation screen at $z=D$. The point source $\mathcal{S}$ sits at $(x,z) = (-a,-b)$, so that $b$ is its distance to the slit plane and $a$ its transverse displacement from the symmetry axis, with $a=0$ meaning the source on the axis, and we measure the coordinate $x$ on the screen from that axis.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.85\textwidth]{Chapter 4/Figures/YoungSphericalWave.pdf}
+            \caption{Young interferometer illuminated by a spherical wave from a point source $\mathcal{S}$ placed off axis. The source to slit stage sets the amplitude and the phase reaching each slit $\mathcal{S}_1,\mathcal{S}_2$, and the slit to screen stage is the interference of two secondary spherical waves.}
+            \label{fig:YoungSpherical}
+        \end{figure}
+
+        The methodology of the chapter applies in two chained stages, and this is really the only structural idea of the problem. The first stage goes from the source to the slits and decides two things, namely with what amplitude and with what phase the field reaches each slit. The second stage goes from the slits to the screen and is always the interference of two secondary spherical waves, exactly the one we treated in the spherical wave section, with the slits acting as the sources $\mathcal{S}_1,\mathcal{S}_2$ separated by $d$ and the screen at a distance $D$. Writing the field that leaves the slit $j$ as $\mathcal{E}_j e^{i\psi_j}$ and the path from that slit to the point $P$ on the screen as $s_j$, the total relative phase at $P$ is
+        \begin{equation}\label{eq:YoungPhase}
+            \triangle\phi(x) = \kappa(s_2 - s_1) + (\psi_2 - \psi_1),
+        \end{equation}
+        and the irradiance obeys the canonical expression \ref{eq:P1canonical} with the visibility \ref{eq:P1visibility} evaluated on the amplitudes that reach each slit.
+
+        The second stage is common to any illumination, so we dispatch it once. With $s_j = [D^2 + (x\mp d/2)^2]^{1/2}$ and the same Taylor expansion of the chapter,
+        \begin{equation}
+            s_2 - s_1 \approx \frac{(x+d/2)^2 - (x-d/2)^2}{2D} = \frac{xd}{D},
+        \end{equation}
+        valid in the paraxial regime $D \gg d,|x|$, from which
+        \begin{equation}\label{eq:YoungStage2}
+            \kappa(s_2 - s_1) \approx \frac{2\pi}{\lambda}\frac{xd}{D} = \frac{2\pi}{\Lambda}x, \qquad \Lambda = \frac{\lambda D}{d}.
+        \end{equation}
+        This is precisely the interfringe of the spherical wave section with $a\to d$. Everything that distinguishes one illumination from another sits, then, in the term $\psi_2 - \psi_1$.
+
+        For the spherical illumination of this example the source at $(-a,-b)$ emits the wave $E = (E_0/r)e^{i\kappa r}$ of the chapter, and now the two slits are no longer equivalent, because their distances to the source
+        \begin{equation}\label{eq:Youngr1r2}
+            r_1 = \left[b^2 + \left(a+\frac{d}{2}\right)^2\right]^{1/2}, \qquad r_2 = \left[b^2 + \left(a-\frac{d}{2}\right)^2\right]^{1/2}
+        \end{equation}
+        differ as soon as $a\neq 0$, and this affects both the phase and the amplitude. In phase, expanding as in the chapter with $b\gg d,a$,
+        \begin{equation}
+            r_1 - r_2 \approx \frac{(a+d/2)^2 - (a-d/2)^2}{2b} = \frac{ad}{b} \quad\Longrightarrow\quad \psi_2 - \psi_1 = \kappa(r_2 - r_1) = -\frac{\kappa a d}{b}.
+        \end{equation}
+        In amplitude, the slit $j$ receives $E_0/r_j$, so $I_j \propto 1/r_j^2$ and the visibility \ref{eq:P1visibility} becomes
+        \begin{equation}\label{eq:YoungVisibility}
+            \mathcal{V} = \frac{2\sqrt{I_1 I_2}}{I_1 + I_2} = \frac{2/(r_1 r_2)}{1/r_1^2 + 1/r_2^2} = \frac{2 r_1 r_2}{r_1^2 + r_2^2}.
+        \end{equation}
+        Putting the two stages together in \ref{eq:YoungPhase}, the total phase is
+        \begin{equation}\label{eq:YoungTotalPhase}
+            \triangle\phi(x) = \frac{\kappa d}{D}x - \frac{\kappa a d}{b} = \frac{2\pi d}{\lambda}\left(\frac{x}{D} - \frac{a}{b}\right),
+        \end{equation}
+        and the irradiance on the screen reads
+        \begin{equation}\label{eq:YoungIrradiance}
+            I(x) = (I_1 + I_2)\left\{ 1 + \mathcal{V}\cos\left[\frac{2\pi d}{\lambda}\left(\frac{x}{D} - \frac{a}{b}\right)\right] \right\}, \qquad \mathcal{V} = \frac{2 r_1 r_2}{r_1^2 + r_2^2}.
+        \end{equation}
+        The qualitative difference with a plane illumination, for which $\mathcal{V} = 1$ always, is not in the position of the fringes but in the contrast, because an off axis spherical source gives $\mathcal{V} < 1$.
+
+        The first part asks for the value of $a$ that reduces the contrast by $10\%$ with respect to $a=0$. At $a=0$ we have $r_1 = r_2$ and $\mathcal{V} = 1$, and we ask for $\mathcal{V}(a) = 0.9$. Writing $t = r_1/r_2 \geq 1$, the condition $2t/(1+t^2) = 9/10$ is the quadratic $9t^2 - 20t + 9 = 0$, whose larger root is
+        \begin{equation}
+            t = \frac{10+\sqrt{19}}{9} = 1.5954 \quad\Longrightarrow\quad \frac{r_1^2}{r_2^2} = 2.5454.
+        \end{equation}
+        A contrast drop of only $10\%$ already requires one slit to be some $60\%$ farther from the source than the other, which shows how insensitive the visibility is to an amplitude imbalance, exactly as we anticipated in the second part of the first example. Substituting the distances \ref{eq:Youngr1r2},
+        \begin{equation}
+            \frac{b^2 + (a+d/2)^2}{b^2 + (a-d/2)^2} = t^2 \quad\Longleftrightarrow\quad a^2 - \frac{10}{\sqrt{19}}\,d\,a + b^2 + \frac{d^2}{4} = 0,
+        \end{equation}
+        a quadratic in $a$ whose formal solution is
+        \begin{equation}\label{eq:YoungA}
+            a = \frac{5d}{\sqrt{19}} \pm \sqrt{\frac{81 d^2}{76} - b^2}.
+        \end{equation}
+        Here the physics jumps out of the discriminant, since real solutions exist only if $b \leq \frac{9d}{2\sqrt{19}} = 1.0324\,d$. In a real Young interferometer one always has $b\gg d$, typically $d\sim 10^{-4}\,\text{m}$ and $b\sim 10^{-1}\,\text{m}$, so the discriminant is negative and no displacement of a point source can degrade the contrast by $10\%$. The paraxial estimate confirms it, since with $t = 1+\eta$ and $\eta \approx (r_1-r_2)/b \approx ad/b^2$ the visibility is $\mathcal{V} \approx 1 - \eta^2/2 = 1 - \frac{1}{2}(ad/b^2)^2$, so $\mathcal{V} = 0.9$ would need $ad/b^2 = \sqrt{0.2} \approx 0.447$, that is $a \approx 0.45\,b^2/d$, a gigantic displacement that destroys the paraxial approximation long before it touches the contrast. The physical conclusion is that a strictly point source always produces fringes of essentially unit visibility, wherever it is placed, because moving it translates the pattern but does not erase it. The version of the question that does have a solution is the one where $a$ is the width of an incoherent thermal source instead of the displacement of a point source, which belongs to the study of spatial coherence and gives a visibility $\mathcal{V}(a) = |\text{sinc}(\pi a d/\lambda b)|$ that falls to its first zero at $a = \lambda b/d$. The lesson to keep is the contrast between the two readings, since displacing a point source acts on the phase and slides the fringes, while broadening an incoherent source acts on the coherence and washes them out.
+
+        The second part asks for the position $x_m$ of the $m$-th maximum. The maxima of the irradiance \ref{eq:YoungIrradiance} are the zeros modulo $2\pi$ of the phase \ref{eq:YoungTotalPhase},
+        \begin{equation}
+            \frac{2\pi d}{\lambda}\left(\frac{x_m}{D} - \frac{a}{b}\right) = 2\pi m, \qquad m\in\mathbb{Z},
+        \end{equation}
+        from where
+        \begin{equation}\label{eq:YoungXm}
+            x_m = m\frac{\lambda D}{d} + \frac{aD}{b} = m\Lambda + \frac{aD}{b}.
+        \end{equation}
+        The pattern keeps its full periodicity $\Lambda = \lambda D/d$ and is shifted as a rigid block by $aD/b$ toward the side opposite to the displacement of the source, consistent with the figure, where the source lies below the axis while $x_m$ is measured above. Geometrically, the zero order maximum sits where the total path difference vanishes, that is on the straight line that joins the source with the midpoint of the slits and continues to the screen, a line that leaves $(-a,-b)$, passes through the origin and reaches the screen at $x = aD/b$.
+
+        The third part asks for a condition between $a$ and $b$ so that the origin is a minimum. A minimum at $x=0$ requires the total phase there to be an odd multiple of $\pi$. Evaluating \ref{eq:YoungTotalPhase} at $x=0$,
+        \begin{equation}
+            \triangle\phi(0) = -\frac{2\pi d}{\lambda}\frac{a}{b} = -(2m+1)\pi, \qquad m = 0,1,2,\dots
+        \end{equation}
+        which is the same as demanding that the path difference introduced by the source to slits stage be an odd number of half wavelengths, $ad/b = (2m+1)\lambda/2$, that is
+        \begin{equation}\label{eq:YoungMinCondition}
+            \frac{a}{b} = \frac{(2m+1)\lambda}{2d}, \qquad m = 0,1,2,\dots
+        \end{equation}
+        The condition depends on $a$ and $b$ only through their ratio, as it must, since the only thing a point source communicates to the system is the direction from which it illuminates it. The smallest case $m=0$ gives $a/b = \lambda/2d$, which for typical numbers, $\lambda = 633\,\text{nm}$ and $d = 0.2\,\text{mm}$, is $a/b \approx 1.6\times 10^{-3}$, so a displacement of about $1.6\,\text{mm}$ for every metre of $b$ is already enough to turn the central maximum into a minimum.
+
+    \subsection{Fresnel biprism}
+
+        The double mirror that Fresnel used to prove the wave nature of light \cite{fresnel1819memoire} has one practical drawback, namely that two separate flat mirrors have to be tilted and held at an almost invisible angle between them, which makes the alignment tedious and unstable. Fresnel's own answer to this difficulty was to replace the two mirrors by a single piece of glass ground into two thin prisms joined base to base, with the shared edge running along the optical axis. This is the \textit{Fresnel biprism}, and it produces exactly the same effect, two coherent virtual images of a single point source, but out of one rigid element instead of two separately adjustable ones.
+
+        Before setting up the biprism itself, it is worth pausing on the principle that makes this whole family of instruments work, since it is the same principle that will let us handle every wavefront division interferometer to come. When a wave leaves a real point source and passes through an optical element, be it a lens, a mirror or a prism, its wavefront is in general reshaped into something far too complicated to describe by hand. There is, however, a special situation in which nothing of interest is lost, namely when the element is \textit{stigmatic} for the pair of points involved, in the sense already introduced in the previous chapter (see figure \ref{fig:Stigmatism}), a spherical wavefront leaving the object point is transformed into another spherical wavefront, indistinguishable in its geometry from the one that a genuine point source sitting at the image point would radiate. Whenever this holds, Fermat's principle guarantees that every ray reaching the image has travelled the same optical path, so the phase downstream of the element is exactly the phase of a fictitious spherical wave centred on that image, whether the image is real or virtual. This is the \textit{method of images}: rather than propagating the true, complicated wavefront through the optical element, we replace the element by the point sources it images and let the machinery of two point source interference, already built in the previous section, take care of everything past that plane.
+
+        This single observation is what turns an ordinary mirror or prism into an interferometer. If one primary source is imaged twice, once through each of two branches of the same optical element, the observer downstream no longer sees one wave but two, radiated by two virtual sources $\mathcal{S}_1$ and $\mathcal{S}_2$. These two sources are coherent by construction rather than by assumption, since both wavefronts are literally two halves of the same original wave, carrying the same frequency and a phase relationship fixed once and for all by the geometry of the element; the condition $\omega_1=\omega_2$ that opened this chapter is here automatically satisfied and never has to be imposed by hand, unlike the case of two genuinely independent sources. Once the positions of $\mathcal{S}_1$ and $\mathcal{S}_2$ are known, the problem stops being about mirrors or prisms altogether and becomes, exactly, the interference of two spherical waves solved earlier in this chapter, with the separation $a$ and the source to screen distance $D$ read directly off the geometry of the particular device. In this sense every wavefront division interferometer, the double mirror, the biprism, and the others we will meet, differs from the next only in how it manufactures its pair of virtual sources; the fringes that follow are always the same fringes.
+
+        The method is only as trustworthy as the stigmatism of the imaging step, and that has to be checked separately for every device, since it is never automatic. A plane mirror is rigorously and unconditionally stigmatic for every object point whatsoever, as we saw when it appeared as the degenerate conic $z_o=-z_i$ of the reflective surfaces \ref{eq:ReflectionConic}, which is why Fresnel's original double mirror needs no further justification beyond the law of reflection. A prism is a different matter, because among refracting interfaces only the very special Cartesian ovoids are rigorously stigmatic, and an ordinary prism face is not one of them; it can only be stigmatic approximately, for a narrow paraxial bundle of rays clustered near a fixed angle of incidence. Showing that this approximate stigmatism holds well enough for a thin prism, and pinning down exactly how well, is therefore the first task in developing the biprism, and it is where we begin.
+
+        Let a point source $\mathcal{S}$ sit at a distance $z_1$ from the biprism, and let the screen of observation stand a further distance $z_2$ beyond it, so that $D = z_1 + z_2$ is the total distance from the source to the screen (see figure \ref{fig:FresnelBiprism}). Each half of the biprism is a thin prism of apex angle $\alpha$ and refractive index $n$, and the whole instrument is symmetric about the optical axis. The method of images consists of replacing the biprism entirely by the two virtual sources it creates, which turns the problem back into the two point source interference we already solved.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.7\textwidth]{Chapter 4/Figures/FresnelBiprism.pdf}
+            \caption{Method of images applied to the Fresnel biprism. Each half of the biprism produces a virtual point image of the source, $\mathcal{S}_1$ from the upper half and $\mathcal{S}_2$ from the lower half, separated by $a$ and located in the same transverse plane as $\mathcal{S}$. Beyond the biprism the two beams overlap only inside the shaded strip of width $W$ on the screen.}
+            \label{fig:FresnelBiprism}
+        \end{figure}
+
+        A thin prism deviates a ray by an angle that, to first order in the angle of incidence and near the condition of minimum deviation, does not depend on exactly where the ray crosses the prism nor, to that same order, on its precise angle of incidence,
+        \begin{equation}\label{eq:PrismDeviation}
+            \delta = (n-1)\alpha.
+        \end{equation}
+        This independence is the whole reason the method of images works here, because if the deviation changed from ray to ray the upper half of the biprism would not produce a point image but an aberrated smear. It is worth checking how good \ref{eq:PrismDeviation} really is, since later we will be pushed toward angles that are not so small. Comparing it with the exact deviation at symmetric incidence, $\delta_{\text{exact}} = 2\arcsin\left[n\sin(\alpha/2)\right] - \alpha$, for $n=1.5$ the relative error is only $0.04\%$ at $\alpha = 0.05\,\text{rad}$, $0.16\%$ at $\alpha = 0.10\,\text{rad}$, $0.35\%$ at $\alpha=0.15\,\text{rad}$ and $0.63\%$ at $\alpha = 0.20\,\text{rad}$, so the thin prism approximation survives well into the range we will need, though it stops being free.
+
+        Consider a ray leaving $\mathcal{S}$ with paraxial slope $m$ and crossing the upper half of the biprism. It strikes the prism plane at a height $y_p = z_1 m$ and leaves with the new slope $m-\delta$, deviated toward the axis. Extending this outgoing ray backward by the same distance $z_1$ to the plane of the source, its apparent point of origin is at a height
+        \begin{equation}
+            y_v = y_p - z_1(m-\delta) = z_1 m - z_1 m + z_1 \delta = z_1 \delta,
+        \end{equation}
+        which does not depend on $m$. Every ray that the upper half deviates, whatever its original slope, appears to come from the same point, so the upper half of the biprism produces a rigorously stigmatic virtual image $\mathcal{S}_1$ at a height $z_1\delta$ above the axis, in the very same transverse plane as the source. By the mirror symmetry of the instrument the lower half produces $\mathcal{S}_2$ at $-z_1\delta$. The biprism has disappeared from the problem, replaced by two mutually coherent point sources separated by
+        \begin{equation}\label{eq:BiprismSeparation}
+            a = 2z_1\delta = 2z_1(n-1)\alpha,
+        \end{equation}
+        sitting at a distance $D = z_1+z_2$ from the screen. From here on the problem is precisely the interference of two spherical waves that we already solved, so the irradiance on the screen, with $y$ the transverse coordinate, takes the canonical form
+        \begin{equation}\label{eq:BiprismIrradiance}
+            I(y) = (I_1+I_2)\left[1 + \mathcal{V}\cos\left(\kappa\frac{a}{D}y\right)\right],
+        \end{equation}
+        with a fringe spacing given directly by the two point source result
+        \begin{equation}\label{eq:BiprismLambda}
+            \Lambda = \frac{\lambda D}{a} = \frac{\lambda(z_1+z_2)}{2z_1(n-1)\alpha}.
+        \end{equation}
+
+        It helps to read \ref{eq:BiprismLambda} in the form that makes the underlying physics transparent, writing $\Lambda = \lambda/\beta$ with
+        \begin{equation}\label{eq:BiprismBeta}
+            \beta = \frac{a}{D} = 2(n-1)\alpha\,\frac{z_1}{z_1+z_2},
+        \end{equation}
+        the local angle at which the two beams cross on the screen. This is exactly the same quantity that appeared in the interference of two plane waves, where $\Lambda = \lambda/[2\sin(\beta/2)]$, and the two expressions differ by only $0.12\%$ at $\beta = 0.1\,\text{rad}$, so identifying $\Lambda\approx\lambda/\beta$ here is entirely legitimate. What \ref{eq:BiprismBeta} makes plain is that
+        \begin{equation}
+            \beta \leq 2(n-1)\alpha,
+        \end{equation}
+        with equality only in the limits $z_2 \to 0$, the screen pressed against the biprism, or $z_1\to\infty$, a collimated beam. The crossing angle can never exceed the full deviation the biprism is able to imprint on a beam, and the divergence of the spherical wave leaving a finite $z_1$ can only make it smaller. A biprism illuminated by a point source is, in this sense, always a weaker interferometer than the same biprism illuminated by a plane wave.
+
+        As a concrete example, take a biprism of index $n=1.5$ illuminated by light of wavelength $\lambda = 632\,\text{nm}$, and ask for the geometry that produces a fringe spacing $\Lambda = 10\lambda$. Setting $\Lambda = 10\lambda$ in \ref{eq:BiprismLambda} means $\beta = 1/10$, and since $n=1.5$ gives $2(n-1)=1$ exactly, the condition collapses to something remarkably clean,
+        \begin{equation}\label{eq:BiprismCondition}
+            \alpha\,\frac{z_1}{z_1+z_2} = \frac{1}{10}\,\text{rad} \quad\Longleftrightarrow\quad \alpha = \frac{1}{10}\left(1+\frac{z_2}{z_1}\right)\,\text{rad}.
+        \end{equation}
+        This is not a single value of $\alpha$ but a whole one parameter family, since fixing the ratio $z_2/z_1$ fixes $\alpha$ and vice versa, and every member of the family shares the same image separation $a = D/10$, a tenth of the total source to screen distance, which is a strikingly large separation for two virtual images meant to interfere. There is a bound hiding in \ref{eq:BiprismCondition} that is easy to miss, because $z_2/z_1 \geq 0$ forces
+        \begin{equation}\label{eq:BiprismBound}
+            \alpha \geq \frac{1}{10}\,\text{rad} = 5.73^\circ,
+        \end{equation}
+        with the minimum reached only in the collimated limit. A prism angle of nearly six degrees is not what one usually pictures under the instruction to keep $\alpha$ small, and this is worth stating openly rather than hiding it, because the two requirements pull in opposite directions. A fringe spacing of $10\lambda = 6.32\,\mu\text{m}$ is an extraordinarily fine spacing to demand, comparable to the period of a diffraction grating, and producing it requires the two beams to cross at $\beta = 0.1\,\text{rad}$, a full tenth of a radian, while a biprism can only ever supply a crossing angle of $2(n-1)\alpha$. The solution exists and is entirely consistent, but it sits at the edge of the thin prism regime rather than deep inside it, and the error check performed above shows that the approximation \ref{eq:PrismDeviation} still holds at $\alpha = 0.1\,\text{rad}$, but by a margin of only $0.16\%$ rather than by a comfortable one. It is also worth noticing that $\lambda$ never appears in the condition on $\alpha$ alone, which makes sense once we remember that $\Lambda$ was specified in units of $\lambda$ and the pure geometry of the biprism carries no memory of colour.
+
+        A condition on $\alpha$ is not yet the whole answer, because it says nothing about whether a useful pattern is actually observable. The two beams emerging from the biprism only overlap inside a finite strip of the screen, since the ray that grazes the shared edge from above is deviated downward by $\delta$ and reaches the screen at a height $-z_2\delta$, while the ray grazing the edge from below is deviated upward and reaches $+z_2\delta$. Outside this interval only one of the two beams arrives and there is no interference at all, so the field of overlap has a width
+        \begin{equation}\label{eq:BiprismWidth}
+            W = 2z_2\delta = 2z_2(n-1)\alpha,
+        \end{equation}
+        and the number of fringes that fit inside it follows at once,
+        \begin{equation}\label{eq:BiprismNumber}
+            N = \frac{W}{\Lambda} = \frac{z_2(n-1)\alpha}{5\lambda}.
+        \end{equation}
+        Evaluated on the design condition \ref{eq:BiprismCondition}, with $2(n-1)=1$ for $n=1.5$, this becomes $N = z_2(z_1+z_2)/(100\,z_1\lambda)$, and it is instructive to see it on real numbers.
+
+        \begin{center}
+        \begin{tabular}{ccccc}
+            $z_1$ & $z_2$ & $\alpha$ & $a$ & $N$ \\
+            \hline
+            $1\,\text{m}$ & $1\,\text{cm}$ & $0.101\,\text{rad} = 5.79^\circ$ & $10.1\,\text{cm}$ & $160$ \\
+            $0.5\,\text{m}$ & $5\,\text{mm}$ & $0.101\,\text{rad} = 5.79^\circ$ & $5.05\,\text{cm}$ & $80$ \\
+            $\infty$ (collimated) & $1\,\text{cm}$ & $0.100\,\text{rad} = 5.73^\circ$ & $-$ & $158$
+        \end{tabular}
+        \end{center}
+
+        With the screen a centimetre from the biprism and the source a metre away, the design delivers $160$ fringes of $6.32\,\mu\text{m}$ inside a field of overlap only about a millimetre wide, so resolving them in practice needs a microscope objective or a detector with sub micron pixels, a condition that deserves to be stated explicitly rather than left implicit in the numbers. The visibility over this whole field stays extremely close to unity, since on the axis of symmetry the two virtual sources are exactly equidistant from the observation point and $\mathcal{V}=1$ exactly, and even away from the axis the two distances remain equal up to second order corrections, so the same robustness of the contrast against small imbalances that we established for the Young interferometer is at work here, only now it holds by the exact symmetry of the construction rather than by an accident of the numbers.
+
+        It remains to see what happens when the point source is displaced off the optical axis, since a real source is never perfectly centred. Repeat the same construction with the source at $\mathcal{S} = (-z_1,s)$, a small transverse offset $s$ away from the axis. A ray leaving $\mathcal{S}$ with slope $m$ strikes the upper half of the biprism at height $y_p = s+z_1 m$ and leaves with slope $m-\delta$, so its virtual origin is now at
+        \begin{equation}
+            y_v = s + z_1 m - z_1(m-\delta) = s + z_1\delta,
+        \end{equation}
+        once again independent of $m$, so the images remain perfectly stigmatic under decentring. The two virtual sources simply follow the displacement,
+        \begin{equation}\label{eq:BiprismOffAxis}
+            \mathcal{S}_1 = s+z_1\delta, \qquad \mathcal{S}_2 = s-z_1\delta,
+        \end{equation}
+        and three consequences follow from \ref{eq:BiprismOffAxis} at once.
+
+        The fringe spacing does not change. The separation is still $a = 2z_1\delta$ and the distance to the screen is still $D=z_1+z_2$, both untouched by $s$, so $\Lambda = \lambda D/a$ is invariant to first order in the displacement. It is invariant to second order as well, and for a reason worth stating rather than taking for granted, since the deviation of a prism is stationary at the condition of minimum deviation, $d\delta/di = 0$ there, so tilting the incident beam slightly changes $\delta$ only at order $(\Delta i)^2$. The biprism is therefore intrinsically robust against a decentred source, more so than the Young interferometer with its fixed slits, where no such stationarity protects the spacing.
+
+        The whole fringe system translates rigidly by exactly $s$. Both virtual images move together with the source, so the plane of zero path difference, the perpendicular bisector of $\mathcal{S}_1\mathcal{S}_2$, is simply the plane $y=s$, and the zero order fringe sits there regardless of $z_2$. There is no geometric amplification of the kind we found for the Young interferometer with fixed slits, where the shift on the screen was $sD/b$ rather than $s$ itself, and the difference is that there the source and its two images move independently of the fixed slits, while here the source and both of its images move together as a rigid unit.
+
+        The field of overlap translates too, but in the opposite direction and by a different amount, $-z_2 s/z_1$. The ray grazing the shared edge from above now leaves $\mathcal{S}$ with slope $-s/z_1$ and acquires the extra deviation $\mp\delta$, reaching the screen at $y = -z_2 s/z_1 \mp z_2\delta$, so the window keeps its width $W=2z_2\delta$ but is now centred at $-z_2 s/z_1$. Since the fringes and the window move in opposite directions, the central fringe eventually walks out of the observable field once
+        \begin{equation}\label{eq:BiprismDrift}
+            |s| > \frac{z_1 z_2 \delta}{z_1+z_2} = \frac{z_2\beta}{2}.
+        \end{equation}
+        With the numbers of the table above, $z_1=1\,\text{m}$, $z_2=1\,\text{cm}$ and $\beta=0.1$, this bound is $|s| < 0.5\,\text{mm}$, a generous tolerance for the alignment of the source, yet a displacement of only $s = 6.3\,\mu\text{m}$ is already enough to slide the whole pattern by one complete fringe. The Fresnel biprism is therefore, at the same time, an interferometer remarkably tolerant of a coarse misalignment of the source, since the fringe spacing survives it exactly, and an extremely sensitive detector of a fine transverse displacement, since the fringe position tracks that displacement one to one, a duality that turns out to be useful whenever the instrument is repurposed as a position sensor rather than as a simple demonstration of interference.
+
     \subsection{Michelson and Morley interferometer}
+        
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.7\textwidth]{Chapter 4/Figures/MichelsonInterferometer.pdf}
+            \caption{General configuration of the Michelson interferometer. A source placed a distance $a$ from the beamsplitting cube illuminates it, and the beam is divided along two perpendicular arms. In arm 1 the light travels a total distance $d+\ell_1$ before striking mirror 1, tilted an angle $\theta$ away from the orientation that would send the beam straight back along itself; in arm 2 it travels a total distance $d+\ell_2$ before striking mirror 2, tilted an angle $\phi$ in the same sense. The two reflected beams return to the beamsplitter and recombine there, ready to interfere.}
+            \label{fig:MichelsonInterferometer}
+        \end{figure}
+
+        The configuration sketched above did not spring fully formed from the 1887 experiment already described at the opening of this chapter. Michelson built and tested a first, considerably simpler version of it in 1881, while on leave from the United States Naval Academy and working in Hermann von Helmholtz's laboratory in Berlin \cite{michelson1881relative}. That prototype was mounted directly on a stone pier in the basement of the Astrophysical Observatory in Potsdam, in an attempt to damp out the ordinary tremors of the building, and it already embodied the essential idea sketched in figure \ref{fig:MichelsonInterferometer}, a beam split and sent along two perpendicular paths before being brought back together. Its single, short arm and its residual sensitivity to vibration, however, produced a fringe shift far too small and unsteady to draw any firm conclusion, and Alfred Potier and Lord Rayleigh soon pointed out besides that Michelson's original analysis had understated the expected shift by a factor of two, an error traceable to treating the motion of the Earth as though it affected both arms in the same way. Correcting the theory raised the predicted shift, but what the measurement truly needed was a much longer optical path and a mounting immune to vibration, and supplying both is exactly what occupied Michelson once he moved to the Case School of Applied Science and joined forces with Edward Morley.
+
+        The apparatus that resulted rested on a massive sandstone slab floated on a pool of mercury, so that it could be rotated smoothly about a vertical axis without flexing, and each arm was folded by a set of auxiliary mirrors to stretch its effective length to roughly eleven metres, some ten times longer than in the Potsdam attempt, which is what finally brought the sensitivity of the instrument within reach of the aether drift the theory predicted, only for none to appear \cite{michelson1887relative}. The same principle, two beams recombined after independent and adjustable paths, proved useful well beyond that null result. Four decades later Michelson, together with Francis Pease, mounted a twenty foot version of essentially the same interferometer across the aperture of the 100 inch Hooker telescope at Mount Wilson, and used the visibility of the fringes it produced, precisely the visibility introduced earlier in this chapter, to measure for the first time the angular diameter of a star other than the Sun, Betelgeuse, from nothing more than the separation between the two outer mirrors at which the fringes first washed out \cite{michelson1921diameter}. The same architecture went on to become the working principle of Fourier transform spectroscopy, where a single continuously scanned mirror encodes an entire spectrum into one interferogram, and later still of optical coherence tomography, which uses exactly this idea to image tissue a few micrometres beneath the surface.

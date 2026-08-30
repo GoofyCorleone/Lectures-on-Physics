@@ -114,11 +114,11 @@
         \bm{\nabla}\left(\frac{\rho}{\epsilon_0} \right) - \nabla^2 \vec{E} = -\frac{\partial}{\partial t}\left(\mu_0\epsilon_0 \frac{\partial}{\partial t}\vec{E} + \mu_0 \vec{J}  \right),
     \end{align*}
     \begin{equation}\label{eq:WaveEqESources}
-        \nabla^2\vec{E} - \frac{1}{C^2}\frac{\partial^2}{\partial t^2}\vec{E} = \frac{1}{\epsilon_0}\bm{\nabla}\rho - \mu_0 \frac{\partial}{\partial t}\vec{J},
+        \nabla^2\vec{E} - \frac{1}{C^2}\frac{\partial^2}{\partial t^2}\vec{E} = \frac{1}{\epsilon_0}\bm{\nabla}\rho + \mu_0 \frac{\partial}{\partial t}\vec{J},
     \end{equation}
-    where $C^2 = \frac{1}{\epsilon_0 \mu_0}$. 
+    where $C^2 = \frac{1}{\epsilon_0 \mu_0}$.
 
-    The \ref{eq:WaveEqESources} is the formal wave equation for the electric field. In the left hand side we find the traditional well known wave equation but on the right hand side we can see some physical information about how can those waves be generated. We can see that any gradient of electric charg densities produces electric waves and also time variations of the current density, and the minus sign isn't there just to be beauty, the minus sign comes from the Lenz-law, therefore that minus sign guarantees the energy conservation on the electric field waves. Now, we've shown that there are electric waves so we're going to proof that there are also magnetic waves.
+    The \ref{eq:WaveEqESources} is the formal wave equation for the electric field. In the left hand side we find the traditional well known wave equation but on the right hand side we can see some physical information about how can those waves be generated. We can see that any gradient of electric charge densities produces electric waves and that time variations of the current density source them too, with a plus sign, because the derivation used the minus sign of the Lenz law twice: once when $\partial_t\vec{B}$ was replaced by $-\bm{\nabla}\times\vec{E}$ in going from \ref{eq:AmpereMaxwell} to the line above, and a second time when the whole equation was rearranged to bring $\nabla^2\vec{E} - \frac{1}{C^2}\partial_t^2\vec{E}$ to the left, and the two minus signs cancel each other. Now, we've shown that there are electric waves so we're going to proof that there are also magnetic waves.
 
     From the Ampére-Maxwell law \ref{eq:AmpereMaxwell} we've got applying the curl on both sides
     \begin{equation*}
@@ -144,7 +144,7 @@
 
     The sentence \textit{photons are in the electromagnetic radiation} is easy to beliave but hard to proof from a classical point of view. We could be tempted by the devil and add both equation \ref{eq:WaveEqESources} and \ref{eq:WaveEqBSources} and get something like
     \begin{equation}\label{eq:WaveEqDevil}
-        \nabla^2\left(\vec{E}+\vec{B}\right)- \frac{1}{C^2}\frac{\partial^2}{\partial t^2} \left(\vec{E}+\vec{B}\right) = \frac{1}{\epsilon_0}\bm{\nabla}\rho - \mu_0 \left(\frac{\partial}{\partial t} + \bm{\nabla}\times \right)\vec{J},
+        \nabla^2\left(\vec{E}+\vec{B}\right)- \frac{1}{C^2}\frac{\partial^2}{\partial t^2} \left(\vec{E}+\vec{B}\right) = \frac{1}{\epsilon_0}\bm{\nabla}\rho + \mu_0 \left(\frac{\partial}{\partial t} - \bm{\nabla}\times \right)\vec{J},
     \end{equation}
     which is correct, completely correct \textbf{in a world where does not exist physics and analysis}.
 
@@ -182,20 +182,25 @@
     \begin{equation*}
         \bm{\nabla}\left(\bm{\nabla}\cdot\vec{F}\right) - \nabla^2\vec{F} = \frac{i}{C}\frac{\partial}{\partial t}\left(\bm{\nabla}\times \vec{F}\right) + iC\mu_0 \bm{\nabla}\times\vec{J},
     \end{equation*}
-    using the Gauss law \ref{eq:GaussF} and the FRAM law \ref{eq:FLAMF} we'll have 
+    using the Gauss law \ref{eq:GaussF} and the FLAM law \ref{eq:FLAMF} we'll have
     \begin{equation*}
         \frac{1}{\epsilon_0}\bm{\nabla}\rho - \nabla^2 \vec{F} = \frac{i}{C}\frac{\partial}{\partial t}\left(\frac{i}{C}\frac{\partial}{\partial t}\vec{F} + iC\mu_0 \vec{J} \right)+iC\mu_0 \bm{\nabla}\times \vec{J},
     \end{equation*}
-    and ordergin the terms we are going to have the \textit{classical wave equation for the photon field}
+    carrying out the time derivative on the right hand side, and using $\frac{i}{C}\cdot\frac{i}{C} = -\frac{1}{C^2}$ and $\frac{i}{C}\cdot iC\mu_0 = -\mu_0$, we've got
+    \begin{equation*}
+        \frac{1}{\epsilon_0}\bm{\nabla}\rho - \nabla^2 \vec{F} = -\frac{1}{C^2}\frac{\partial^2}{\partial t^2}\vec{F} - \mu_0\frac{\partial}{\partial t}\vec{J} + iC\mu_0 \bm{\nabla}\times \vec{J},
+    \end{equation*}
+    and moving $\nabla^2\vec{F}$ and $\frac{1}{C^2}\partial_t^2\vec{F}$ to the same side, that is multiplying the whole equation by $-1$ and swapping it around, we arrive at the \textit{classical wave equation for the photon field}
     \begin{equation}\label{eq:WaveEqF}
-        \nabla^2\vec{F} - \frac{1}{C^2}\frac{\partial^2}{\partial t^2}\vec{F} = \frac{1}{\epsilon_0}\bm{\nabla}\rho - \mu_0 \left(\frac{\partial}{\partial t} + \bm{\nabla}\times \right)\vec{J}.
+        \nabla^2\vec{F} - \frac{1}{C^2}\frac{\partial^2}{\partial t^2}\vec{F} = \frac{1}{\epsilon_0}\bm{\nabla}\rho + \mu_0 \left(\frac{\partial}{\partial t} - iC\bm{\nabla}\times \right)\vec{J}.
     \end{equation}
+    As a check, notice that $\nabla^2 - \frac{1}{C^2}\partial_t^2$ is a linear operator and $\vec{F}=\vec{E}+iC\vec{B}$ is a linear combination, so \ref{eq:WaveEqF} must equal \ref{eq:WaveEqESources} plus $iC$ times \ref{eq:WaveEqBSources}, and indeed $\left[\frac{1}{\epsilon_0}\bm{\nabla}\rho+\mu_0\partial_t\vec{J}\right] + iC\left[-\mu_0\bm{\nabla}\times\vec{J}\right] = \frac{1}{\epsilon_0}\bm{\nabla}\rho + \mu_0\left(\partial_t\vec{J} - iC\bm{\nabla}\times\vec{J}\right)$, exactly the right hand side above.
 
     We can see that looks very similar to the sinister equation \ref{eq:WaveEqDevil} but that was a really forced one insted of our beauty \ref{eq:WaveEqF} which was calculated from the Maxwell's equations, and we see the origin of this electromagnetic or photon fields, these waves are originated as from charge density gradientes, and time variations and circulations of the density current, now the behavior of the photons, from a classical perspective can be seen in the presence of charges and currents.
 
     Now, to find out the quantum wave equation from the classical equation \ref{eq:FLAMF} we are going to use, the following algebraic identity:
     \begin{align}
-        & \vec{A}\times\vec{B} = i \left(\vec{A}\cdot\vec{S}\right)\vec{B},\qquad \vec{S}= S_x \hat{i} + S_y\hat{j} + S_z\hat{k} \label{eq:IdentityS}\\
+        & \vec{A}\times\vec{B} = -i \left(\vec{A}\cdot\vec{S}\right)\vec{B},\qquad \vec{S}= S_x \hat{i} + S_y\hat{j} + S_z\hat{k} \label{eq:IdentityS}\\
         & S_x =
         \begin{bmatrix}
             0 & 0 & 0 \\

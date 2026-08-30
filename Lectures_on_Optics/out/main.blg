@@ -3,10 +3,21 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
 Database file #1: references.bib
+Warning--I didn't find a database entry for "poincare1892theorie"
+Warning--I didn't find a database entry for "perrin1942polarization"
+Warning--I didn't find a database entry for "mcmaster1954polarization"
+Warning--I didn't find a database entry for "chandrasekhar1950radiative"
+Warning--I didn't find a database entry for "azzam1977ellipsometry"
+Warning--I didn't find a database entry for "hurwitz1941equivalence"
+Warning--I didn't find a database entry for "young1802theory"
+Warning--I didn't find a database entry for "young1807course"
+Warning--I didn't find a database entry for "feynman1965lectures"
+Warning--I didn't find a database entry for "michelson1881relative"
+Warning--I didn't find a database entry for "michelson1921diameter"
 Warning--empty publisher in fresnel1819memoire
 You've used 36 entries,
             1935 wiz_defined-function locations,
-            704 strings with 8895 characters,
+            715 strings with 9120 characters,
 and the built_in function-call counts, 12703 in all, are:
 = -- 1272
 > -- 335
@@ -45,4 +56,4 @@ warning$ -- 1
 while$ -- 120
 width$ -- 0
 write$ -- 462
-(There was 1 warning)
+(There were 12 warnings)
