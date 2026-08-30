@@ -84,8 +84,8 @@
 \contentsline {chapter}{\numberline {6}Theory of Coherence}{151}{chapter.6}%
 \contentsline {section}{\numberline {6.1}A historical context of coherence theory}{152}{section.6.1}%
 \contentsline {section}{\numberline {6.2}How is statistical similarity quantified?}{155}{section.6.2}%
-\contentsline {section}{\numberline {6.3}The coherence function}{157}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Manifestations of coherence: the Wiener--Khinchin theorem}{161}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.3}The coherence function}{158}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Manifestations of coherence: the WienerKhinchin theorem}{162}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}The wave equation of coherence}{164}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Propagation of coherence and the direction of time: the van Cittert--Zernike theorem}{165}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.3}Propagation of coherence and the direction of time: the van CittertZernike theorem}{167}{subsection.6.3.3}%
 \contentsfinish 

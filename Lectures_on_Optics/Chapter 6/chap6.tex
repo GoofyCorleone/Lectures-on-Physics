@@ -193,7 +193,7 @@
 
 \section{How is statistical similarity quantified?}
 
-Suppose we have a completely random phenomenon --- such as the electromagnetic radiation
+Suppose we have a completely random phenomenon, such as the electromagnetic radiation
 emitted by an incandescent bulb that is not in thermodynamic equilibrium, the number of
 cars in some capital city throughout the day, the motion of an ion in a plasma, or
 something as simple as throwing a ball into the air under non-ideal conditions.
@@ -210,29 +210,58 @@ algebra.
 If we have two vectors $\vec{A},\vec{B} \in \mathbb{R}^n$, the dot product
 $\vec{A}\cdot\vec{B}$ is interpreted as the magnitude of the projection of $\vec{A}$ onto
 $\vec{B}$ and vice versa; it can also be read as \textit{how much of $\vec{A}$ lies along
-$\vec{B}$}. This behaviour can be extrapolated to continuous vector spaces, where one
-usually employs the notion of inner product: if $f_A , f_B$ are two elements of a Hilbert
-space $L^2$ of dimension $1$, one can define an inner product as
+$\vec{B}$}.
+
+It is worth pausing on what that operation actually does mechanically, because the whole
+of coherence theory is built on this single gesture. Written out component by component,
+the dot product is
+\begin{equation}\label{eq:DotComponents}
+	\vec{A}\cdot\vec{B} = \sum_{i=1}^{n} A_i B_i,
+\end{equation}
+that is, \textit{multiply the two lists entry by entry and add up the results}. Nothing
+more. And yet the sign of each individual term already carries exactly the information we
+are after: whenever $A_i$ and $B_i$ lean the same way, their product is positive and pushes
+the sum upwards; whenever they lean opposite ways, the product is negative and drags it
+down. If the two vectors tend to agree along most of their components, the positive terms
+dominate and the total comes out large; if they systematically disagree, the total comes
+out large but negative; and if they agree just as often as they disagree, the terms cancel
+one another in the sum and the total collapses to nearly zero. So ``multiply the pairs and
+add'' is already, all by itself, a similarity meter, and everything that follows in this
+chapter is that same gesture applied to progressively richer objects.
+
+This behaviour can be extrapolated to continuous vector spaces, where one
+usually employs the notion of inner product. The step is smaller than it looks: a function
+is simply a vector with a continuum of components, since instead of the finite list
+$A_1,A_2,\dots,A_n$ we now carry the values $f_A(x)$, one for every $x$. The index $i$
+becomes the label $x$, the sum over a discrete index becomes an integral over a continuous
+one, and the dot product becomes the inner product. If $f_A , f_B$ are two elements of the
+Hilbert space $L^2(\mathbb{R})$ of square integrable functions of one real variable, one
+can define an inner product as
 
 \begin{equation}\label{eq:ProdIn}
-	\braket{f_A,f_B} = \int_\mathbb{R} f_A(x)f_B(x) W(x)\,dx,
+	\braket{f_A,f_B} = \int_\mathbb{R} f_A^*(x)f_B(x) W(x)\,dx,
 \end{equation}
 
-where $W(x)$ is some weight function.\footnote{$W(x)$ receives this name because, as it
+where the complex conjugate on the first factor is what keeps
+$\braket{f_A,f_A}$ real and non negative even when the functions are complex, as the
+optical fields of this chapter will be, and where $W(x)$ is some weight
+function.\footnote{$W(x)$ receives this name because, as it
 says, it gives a weight to each value the integrand may take; there are no uniform
 contributions, but rather each possible value of the integrand within the domain
 contributes weighted by the value of $W$ at that point.} The interpretation is still
 valid: this can be read as how much the function $f_A$ over all the reals coincides with
 the function $f_B$ over all the reals.
 
-To reach the notion of correlation from linear algebra we use a bit of bra--ket notation,
+To reach the notion of correlation from linear algebra we use a bit of braket notation,
 where the ket $\ket{f_A}$ represents a vector of an arbitrary Hilbert space $L^2$ and the
 bra $\bra{f_A}$ represents an element of the dual of the same Hilbert space,\footnote{The
 Hilbert space is a particular case of the $L^p$ spaces, the space of $p$-norm
 Lebesgue-integrable functionals; for Hilbert $p=2$, and it has the property that the dual
 of $L^2$ is also $L^2$, which lets quantum mechanics arise naturally in this space.} and
-the inner product between them $\braket{f_A,f_A}= \braket{f_A|f_A}$ equals the probability
-density of finding $f_A$ in a state $q \pm \triangle q$, where $q$ represents some
+the inner product of a state with itself, $\braket{f_A,f_A}= \braket{f_A|f_A}$, accumulates
+the probability of finding the system anywhere at all; it is the integrand $|f_A(q)|^2$,
+rather than the completed integral, that plays the role of the probability density of
+finding $f_A$ in a state $q \pm \triangle q$, where $q$ represents some
 generalised coordinate. Suppose that $f_A,f_B \in L^2$ have the form
 
 \begin{equation}
@@ -242,27 +271,77 @@ generalised coordinate. Suppose that $f_A,f_B \in L^2$ have the form
 where $\hat{A},\hat{B}$ are the operators of the physical quantities of
 $\ket{\Psi_A},\ket{\Psi_B}$, so that we may interpret $\ket{f_A},\ket{f_B}$ as the wave
 functions steered by their expected value. Using the inner product \eqref{eq:ProdIn} with
-negligible weight function, the inner product reads
+unit weight function, $W=1$, the inner product reads
 
 \begin{equation}
-	\braket{f_A | f_B} = \int_{\mathbb{R^n}} \hat{A}\hat{B} \braket{\Psi_A|\Psi_B} d^nq = \int_{\mathbb{R^n}} \hat{A}\hat{B} P(A;B) d^nq,
+	\braket{f_A | f_B} = \int_{\mathbb{R}^n} \hat{A}\hat{B} \braket{\Psi_A|\Psi_B}\, d^nq = \int_{\mathbb{R}^n} \hat{A}\hat{B}\, P(A;B)\, d^nq,
 \end{equation}
 
 where we see that the similarity between $\ket{f_A}$ and $\ket{f_B}$ can be viewed as the
 product of $\hat{A}$ with $\hat{B}$ times the probability density of having states $A$ and
-$B$; that is, the similarity, or how \textit{correlated} two variables are, can be seen as
+$B$.\footnote{This last step is deliberately heuristic: we are treating the operators as
+though they could simply be pulled out of the inner product and replaced by the values they
+measure, which is only legitimate when acting on their own eigenstates. The aim here is not
+a derivation but a bridge, to make plausible where the definition that follows comes from;
+the rigorous treatment belongs to \cite{mandel1995optical}.} That is, the similarity, or how
+\textit{correlated} two variables are, can be seen as
 the integral of the product of the variables times their joint probability density.
 
 With this analogy in mind we can understand correlation as a first measure of the
 similarity between one or more variables across space and time. If $x_1(\vec{r},t_1),
-x_2(\vec{r}',t_2)$ are two random variables and $p_2(x_2,t';x_1,t)$ is the joint
+x_2(\vec{r}',t_2)$ are two random variables and $p_2(x_1,t_1;x_2,t_2)$ is the joint
 probability density, then the correlation between $x_1,x_2$ is defined as
 
 \begin{equation}\label{eq:CorrFunc}
-	\Gamma(\vec{r},\vec{r}';t_1,t_2) = E\left\{ x_1(\vec{r},t_1) x_2(\vec{r}',t_2)\right\},
+	\Gamma(\vec{r},\vec{r}';t_1,t_2) = E\left\{ x_1(\vec{r},t_1) x_2^*(\vec{r}',t_2)\right\}
+	= \int\!\!\int x_1 x_2^* \; p_2(x_1,t_1;x_2,t_2)\, dx_1 dx_2,
 \end{equation}
 
-that is, as the ensemble average of $x_1\cdot x_2$.
+that is, as the ensemble average of $x_1\cdot x_2^*$, weighted by how likely each pair of
+values is to occur together. The conjugation is placed on the second factor here to agree
+with the convention used for the coherence function in the next section; for real valued
+variables it does nothing at all, and for complex ones it merely conjugates $\Gamma$ as a
+whole, leaving every magnitude we shall care about untouched.
+
+Structurally this is the same object we have been building all along. The sum over
+components in \eqref{eq:DotComponents} has simply become an average over the ensemble, and
+the role of the weight function $W$ in \eqref{eq:ProdIn} is now played by the joint
+probability density $p_2$, which is the natural weight to use when the ``components'' being
+paired up are the possible outcomes of a random experiment rather than the entries of a
+list. Correlation, in other words, is the dot product of two random variables, taken in the
+only sense available when the quantities involved refuse to hold still.
+
+The same sign argument that made the dot product a similarity meter now tells us how to read
+$\Gamma$, and it is worth spelling out the three cases explicitly. If the two variables rise
+and fall together, so that they are large at the same instants and small at the same
+instants, then the product $x_1 x_2^*$ is predominantly positive, every realisation of the
+experiment contributes with the same sign, and the average survives as a large positive
+number. If they move in strict opposition, one peaking whenever the other troughs, the
+product is predominantly negative and the average survives as a large negative number, which
+is just as informative: perfect anticorrelation is a form of perfect similarity, merely with
+a sign attached. But if the two variables know nothing about each other, then for every
+realisation in which the product happens to come out positive there is, somewhere in the
+ensemble, an equally likely realisation in which it comes out negative, the contributions
+annihilate one another, and the average collapses to zero. \textbf{The averaging is
+therefore not an incidental technicality but the entire mechanism}: it is precisely what
+destroys the terms that carry no shared information while allowing the terms that do to
+accumulate.
+
+Two features of the definition \eqref{eq:CorrFunc} deserve a comment, because both differ
+from the Pearson coefficient met in the historical introduction. The first is that we have
+not subtracted the mean values before multiplying. Subtracting them would produce the
+covariance, which asks how the \textit{fluctuations} about the average conspire; keeping
+them, as we do here, asks about the total quantity, and for the optical fields of this
+chapter the distinction happily evaporates, since a thermal field oscillates symmetrically
+about zero and its mean vanishes on its own. The second is that we have not divided by
+anything, so $\Gamma$ still carries the physical units of the fields it was built from and
+its size depends on how intense the light happens to be, not only on how similar it is. A
+correlation of $10^{-6}$ between two feeble beams may represent far tighter agreement than a
+correlation of unity between two powerful ones. Repairing this, by dividing $\Gamma$ by its
+own value at zero separation, which is precisely the intensity, so that the result is a pure
+number confined between zero and one that measures similarity and similarity alone, is
+exactly the step that turns the correlation function into the \textit{complex degree of
+coherence}, and it is the point the next section works towards.
 
 \section{The coherence function}
 
@@ -289,7 +368,7 @@ across the realisations over the interval $t'-t$, or in other words, how
 \textit{coherent} the oscillations are across the realisations.
 
 We speak of coherence when we want to analyse the correlation of electromagnetic radiation
-between space--time points. If we have two sources emitting an electric field (for the
+between spacetime points. If we have two sources emitting an electric field (for the
 moment understood as scalar), their coherence function is given by
 
 \begin{equation}
@@ -330,7 +409,7 @@ time translations. This condition manifests in different degrees:
 			\text{Cov}(X_t, X_{t+h}) = \gamma(h) \quad (\text{depends only on } h, \text{ not on } t)
 		\end{cases}
 	\end{equation}
-	This is the definition used in most econometric models (ARIMA, GARCH) and in the Wiener--Khinchin spectral analysis (which we shall use later).
+	This is the definition used in most econometric models (ARIMA, GARCH) and in the WienerKhinchin spectral analysis (which we shall use later).
 
 	\item \textbf{Trend stationarity (deterministic stationarity)}: a non-stationary process that can be made stationary by removing deterministic components:
 	\begin{equation}
@@ -375,13 +454,13 @@ The mutual coherence function has several properties, some of which are:
 		& \Gamma(\vec{r}',\tau) = \braket{\mathcal{E}(\vec{r}')\mathcal{E}^*(\vec{r}',t + \tau)} = \braket{\mathcal{E}(\vec{r}',t-\tau)\mathcal{E}^*(\vec{r}')} = \Gamma^*(\vec{r}',-\tau).
 	\end{align}
 
-	\item[c)] $|\Gamma(\vec{r}',\tau)| \leq \Gamma(\vec{r}',0)$. This property follows from the \textit{Cauchy--Schwarz inequality}
+	\item[c)] $|\Gamma(\vec{r}',\tau)| \leq \Gamma(\vec{r}',0)$. This property follows from the \textit{CauchySchwarz inequality}
 
 	\begin{equation}
 		|\Gamma(\vec{r}',\tau)|^2 = | \braket{\mathcal{E}(\vec{r}')\mathcal{E}^*(\vec{r}',t+\tau)} |^2 \leq  \braket{\mathcal{E}(\vec{r}',t)\mathcal{E}^*(\vec{r}',t)} \braket{\mathcal{E}(\vec{r}',t+\tau)\mathcal{E}^*(\vec{r}',t+\tau)} = \Gamma^2(\vec{r}',0),
 	\end{equation}
 
-	which implies that $|\Gamma(\vec{r}',\tau)|$ can never exceed its initial value $\Gamma(\vec{r}',0)$. (This property is, let us recall, exclusive to the mutual coherence function; when we consider the coherence between two sources we will see that it is not satisfied --- on the contrary, it will increase.)
+	which implies that $|\Gamma(\vec{r}',\tau)|$ can never exceed its initial value $\Gamma(\vec{r}',0)$. (This property is, let us recall, exclusive to the mutual coherence function; when we consider the coherence between two sources we will see that it is not satisfied - on the contrary, it will increase.)
 
 	\item[d)] $\Gamma(\vec{r}',\tau)$ is non-negative. We can see this from the definition through the following, rather obvious, inequality
 
@@ -410,26 +489,26 @@ coherence, given by
 	\gamma (\vec{r}',\tau) = \frac{\Gamma(\vec{r}',\tau)}{\Gamma(\vec{r}',0)},
 \end{equation}
 
-and from the Cauchy--Schwarz inequality we have $0 \leq |\gamma(\vec{r}',\tau)| \leq 1$.
+and from the CauchySchwarz inequality we have $0 \leq |\gamma(\vec{r}',\tau)| \leq 1$.
 
-\subsection{Manifestations of coherence: the Wiener--Khinchin theorem}
+\subsection{Manifestations of coherence: the WienerKhinchin theorem}
 
 The mutual coherence function and the power spectral density are two sides of the same coin
 in the study of light and wave signals. Mutual coherence describes how the fluctuations of
 a luminous field are correlated in space and time, acting as a map that reveals to what
 extent the variations at one point of space are synchronised with those at another, even
 with a certain temporal delay. The power spectral density, in turn, decomposes the energy
-of the signal into its frequency components, showing which tones or colours --- in the case
-of light --- dominate its behaviour. The intimate relation between the two concepts lies in
+of the signal into its frequency components, showing which tones or colours - in the case
+of light - dominate its behaviour. The intimate relation between the two concepts lies in
 the fact that, through mathematical transformations, it is possible to convert the detailed
-information on the space--time correlations captured by mutual coherence into a precise
+information on the spacetime correlations captured by mutual coherence into a precise
 description of how the energy is distributed in the frequency domain, and vice versa. This
 link allows researchers to jump between complementary perspectives: analysing interference
 patterns in an interferometer or identifying spectral signatures in a material, all from
 the same fundamental principles.
 
 We are going to find one of the most important theorems in coherence theory, the
-\textit{Wiener--Khinchin theorem}. Note that stationary random signals do not have a
+\textit{WienerKhinchin theorem}. Note that stationary random signals do not have a
 Fourier transform; hence we may define the following truncated random signals of the
 electric field
 
@@ -474,14 +553,14 @@ introducing equations \eqref{eq:SpecWT} and \eqref{eq:SpecW} we then have
 \end{equation}
 
 Result \eqref{eq:WienerKhinchin} reads: the Fourier transform of the coherence function
-corresponds to the power spectral density, and is known as the Wiener--Khinchin theorem.
+corresponds to the power spectral density, and is known as the WienerKhinchin theorem.
 Its use is fundamental, since it tells us that by methods such as spectrometry we can find
 the coherence function of any phenomenon; we can even go further, since this result really
-stems from something more general --- the correlation function --- meaning that every
+stems from something more general - the correlation function - meaning that every
 stochastic phenomenon has an associated spectrum, and from the measurements or estimates of
 that spectrum we can compute the correlations in the system.
 
-If we make a simple observation, the optical range of radiation --- the visible --- is a
+If we make a simple observation, the optical range of radiation - the visible - is a
 band of very low frequencies relative to the whole spectrum; the visible runs roughly from
 $400$~nm to $700$~nm, and we may say that all of optics is \textit{narrowband}. This obeys
 the inequality
@@ -574,12 +653,12 @@ we have another wave equation given by
 \end{equation}
 
 Equations \eqref{eq:coherenceWave1} and \eqref{eq:coherenceWave2} tell us directly that the
-coherence functions between two space--time points evolve in time following a wave-type
-equation, separately, with respect to each pair of space--time coordinates --- a result
+coherence functions between two spacetime points evolve in time following a wave-type
+equation, separately, with respect to each pair of spacetime coordinates - a result
 that is, without doubt, remarkable. We can take this result even further and study this
 propagation in the next section.
 
-\subsection{Propagation of coherence and the direction of time: the van Cittert--Zernike theorem}
+\subsection{Propagation of coherence and the direction of time: the van CittertZernike theorem}
 
 \begin{figure}[htbp]
 	\centering
@@ -676,7 +755,7 @@ $\vec{r}'$. Imposing this on equation \eqref{eq:IntGamma} we have
 
 In nature we will not always have narrowband sources; however, we can resort to another
 argument, namely that most instruments do not have an infinite or broad range but a short
-one --- or, in other words, measurement instruments measure a narrow part of the spectrum.
+one - or, in other words, measurement instruments measure a narrow part of the spectrum.
 Therefore, including the narrowband condition we have
 
 \begin{equation}
@@ -725,8 +804,8 @@ If we set $\vec{S}_2 = \vec{0}$ we arrive at the Fourier integral
 \end{equation}
 
 which, basically, means that the correlations, under all the approximations we have made,
-propagate by means of a Fourier integral; or, what is the same, the van Cittert--Zernike
-theorem tells us that coherence diffracts --- it propagates naturally as a diffraction
+propagate by means of a Fourier integral; or, what is the same, the van CittertZernike
+theorem tells us that coherence diffracts - it propagates naturally as a diffraction
 integral (see Figure~\ref{fig:fouriergamma}).
 
 \begin{figure}[htbp]
@@ -740,7 +819,7 @@ How can we tell in which direction time flows? This may sound like a question ra
 context for these notes, but if we could travel back to the golden age of Boltzmann, we
 would find a heated debate of the time on how statistical physics gives a direction to
 time, an \textit{arrow}. Paraphrasing Boltzmann, it is said that \textit{time advances in
-the direction in which correlations increase}. If we look at the van Cittert--Zernike
+the direction in which correlations increase}. If we look at the van CittertZernike
 theorem, we can start from two completely uncorrelated sources but, as they propagate, they
 gradually become correlated; time grows and so does coherence, until a point is reached at
 which the radiation of those sources is coherent. This is, without doubt, one of the
