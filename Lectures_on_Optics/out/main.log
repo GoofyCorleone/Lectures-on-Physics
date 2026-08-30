@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  30 AUG 2026 15:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  30 AUG 2026 17:05
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/main.tex
-(/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/main.tex
+**main.tex
+(./main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
@@ -24,28 +23,44 @@ File: bk11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2026/03/08 v26.4 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2026/03/08 v26.4 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
 \babel@savecnt=\count284
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2083.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2086.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2111.
 \U@D=\dimen149
 \l@unhyphenated=\language91
- (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/txtbabel.def)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count285
- (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.tex)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/es/babel-spanish.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
 Package babel Info: Importing font and identification data for spanish
 (babel)             from babel-es.ini. Reported on input line 4330.
  (/usr/local/texlive/2026/texmf-dist/tex/generic/babel-spanish/spanish.ldf
@@ -59,7 +74,8 @@ Package babel Info: Making > an active character on input line 722.
 )
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 4330.
- (/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
@@ -67,16 +83,20 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language22). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language22). Reported on input line 108.
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyphenat/hyphenat.sty
 Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
 \langwohyphens=\language92
 LaTeX Info: Redefining \_ on input line 43.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count287
 )
@@ -92,22 +112,28 @@ LaTeX Info: Redefining \textls on input line 1449.
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 \MT@listname@count=\count289
- (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2026/03/01 v3.2d Definitions specific to pdftex (RS)
+
 LaTeX Info: Redefining \lsstyle on input line 944.
 LaTeX Info: Redefining \lslig on input line 944.
 \MT@outer@space=\skip51
 )
 Package microtype Info: Loading configuration file microtype.cfg.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
- (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count290
@@ -122,29 +148,34 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen157
 \Gm@layoutvoffset=\dimen158
 \Gm@dimlist=\toks23
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/bm.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2025/10/21 v1.2g Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup4
 \symboldletters=\mathgroup5
 \symboldsymbols=\mathgroup6
 Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
 \ex@=\dimen159
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 LaTeX Info: Redefining \boldsymbol on input line 28.
 \pmbraise@=\dimen160
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count293
@@ -194,65 +225,89 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup7
 \symAMSb=\mathgroup8
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup9
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen168
 \Gin@req@width=\dimen169
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
 Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/grfext/grfext.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )) (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))) (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen170
 \captionmargin=\dimen171
@@ -271,7 +326,8 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count307
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count308
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count309
 \lst@gtempboxa=\box56
 \lst@token=\toks29
@@ -284,14 +340,17 @@ Package caption Info: New subtype `subtable' on input line 238.
 \lst@newlines=\count313
 \lst@lineno=\count314
 \lst@maxwidth=\dimen181
- (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 \c@lstnumber=\count315
 \lst@skipnumbers=\count316
 \lst@framebox=\box57
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
 ))
 Package: listings 2025/11/14 1.11b (Carsten Heinz)
@@ -313,11 +372,14 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidth=\dimen184
 \titlewidthlast=\dimen185
 \titlewidthfirst=\dimen186
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2025/01/04 v2.17 TOC entries
 \ttl@leftsep=\dimen187
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
 \f@nch@headwidth=\skip57
 \f@nch@offset@elh=\skip58
 \f@nch@offset@erh=\skip59
@@ -333,7 +395,8 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip69
 \f@nch@widthR=\skip70
 \@temptokenb=\toks31
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/lineno/lineno.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2026/03/08 line numbers on paragraphs v5.9
 \linenopenalty=\count317
 \output=\toks32
@@ -350,44 +413,57 @@ Package: lineno 2026/03/08 line numbers on paragraphs v5.9
 \bframesep=\dimen192
 \bframebox=\box59
 \@LN@amsmath@ams@eqpen=\count324
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/epigraph/epigraph.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/epigraph/epigraph.sty
 Package: epigraph 2020/01/02 v1.5e typesetting epigraphs
- (/usr/local/texlive/2026/texmf-dist/tex/latex/nextpage/nextpage.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/nextpage/nextpage.sty
 Package: nextpage 2009/09/03 v1.1a additional page commands
 )
 \beforeepigraphskip=\skip71
 \afterepigraphskip=\skip72
 \epigraphwidth=\skip73
 \epigraphrule=\skip74
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
- (/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count325
 ) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
 )
 \@linkdim=\dimen193
 \Hy@linkcounter=\count326
 \Hy@pagecounter=\count327
- (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count328
- (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -401,16 +477,20 @@ Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count329
- (/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4807.
 \XeTeXLinkMargin=\dimen194
- (/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
 \Fld@menulength=\count330
 \Field@Width=\dimen195
@@ -427,16 +507,20 @@ Package hyperref Info: PDF/A mode OFF on input line 6114.
 \c@Hfootnote=\count333
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
 \Fld@listcount=\count334
 \c@bookmark@seq@number=\count335
- (/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
 )
 \Hy@SectionHShift=\skip75
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty
@@ -445,32 +529,44 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibsep=\skip77
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count336
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/braket/braket.sty) (/usr/local/texlive/2026/texmf-dist/tex/latex/datetime/datetime.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/braket/braket.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
- (/usr/local/texlive/2026/texmf-dist/tex/latex/fmtcount/fmtcount.sty
-Package: fmtcount 2025/12/02 v3.12 Displaying the values of LaTeX counters (NT,VB,NE)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+Package: fmtcount 2025/12/02 v3.12 Displaying the values of LaTeX counters (NT,
+VB,NE)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks33
 \XKV@tempa@toks=\toks34
 \XKV@tempb@toks=\toks35
 )
 \XKV@depth=\count337
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fmtcount/fcprefix.sty
 Package: fcprefix 2012/09/28
- (/usr/local/texlive/2026/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2017/06/15
 \fc@digit@counter=\count338
 ))
 \c@padzeroesN=\count339
 \fc@tmpcatcode=\count340
- (/usr/local/texlive/2026/texmf-dist/tex/latex/fmtcount/fc-english.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/fmtcount/fc-spanish.def
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fmtcount/fc-spanish.def
 File: fc-spanish.def 2016/01/12
 )
 \@DT@modctr=\count341
@@ -480,7 +576,8 @@ File: fc-spanish.def 2016/01/12
 \@tmpstrctr=\count345
 \@DT@loopN=\count346
 \@DT@X=\count347
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/datetime/datetime-defaults.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
 \@day=\count348
@@ -495,8 +592,10 @@ Package: datetime-defaults 2013/09/10
 \currenthour=\count357
 \currentminute=\count358
 \currentsecond=\count359
-Package datetime Info: No datetime.cfg file found, using default settings on input line 308.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/datetime/dt-spanish.def
+Package datetime Info: No datetime.cfg file found, using default settings on in
+put line 308.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/datetime/dt-spanish.def
 File: dt-spanish.def 2013/09/10
 LaTeX Info: Redefining \datespanish on input line 85.
 )
@@ -506,7 +605,8 @@ LaTeX Info: Redefining \datespanish on input line 85.
 LaTeX Info: Redefining \today on input line 736.
 \dt@a=\toks36
 \dt@b=\toks37
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/cite/chapterbib.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/cite/chapterbib.sty
 \c@inputfile=\count363
 Package: chapterbib 2010/09/18  v 1.17
 )
@@ -514,10 +614,12 @@ Package: chapterbib 2010/09/18  v 1.17
 \c@myDef=\count365
 \c@myPrinciple=\count366
 \c@Assumption=\count367
- (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count368
-) (/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.aux)
+)
+(out/main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
@@ -554,8 +656,10 @@ Package microtype Info: Patching command `\showhyphens'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -612,45 +716,57 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count375
  (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
 Package hyperref Info: Link coloring ON on input line 82.
- (/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out) (/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out)
+
+(out/main.out) (out/main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 Package hyperref Info: Option `pageanchor' set `false' on input line 85.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 95.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/jknapltx/ursfs.fd
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 95
+.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 
 
-{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2
+{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
+al/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2
 
 ]
-<Figures/LoGOTS.png, id=463, 668.4975pt x 376.40625pt>
+<Figures/LoGOTS.png, id=559, 668.4975pt x 376.40625pt>
 File: Figures/LoGOTS.png Graphic file (type png)
 <use Figures/LoGOTS.png>
 Package pdftex.def Info: Figures/LoGOTS.png  used on input line 105.
 (pdftex.def)             Requested size: 187.89912pt x 105.80081pt.
-<Figures/logouis.png, id=465, 1196.47pt x 596.2275pt>
+<Figures/logouis.png, id=561, 1196.47pt x 596.2275pt>
 File: Figures/logouis.png Graphic file (type png)
 <use Figures/logouis.png>
 Package pdftex.def Info: Figures/logouis.png  used on input line 109.
@@ -659,26 +775,29 @@ Package pdftex.def Info: Figures/logouis.png  used on input line 109.
 
  <./Figures/LoGOTS.png> <./Figures/logouis.png>] [2]
 Package hyperref Info: Option `pageanchor' set `true' on input line 137.
- (/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.toc [3
+ (out/main.toc [3
 
 ]
 Overfull \hbox (8.51596pt too wide) in paragraph at lines 56--56
- [][] [][][]\T1/cmr/m/n/10.95 (-20) Monochromatic and de-ter-min-is-tic for-mu-la-tion: Jones spinors and the po-lar-iza-tion 
+ [][] [][][]\T1/cmr/m/n/10.95 (-20) Monochromatic and de-ter-min-is-tic for-mu-
+la-tion: Jones spinors and the po-lar-iza-tion 
  []
 
-[4] [5])
+[4] [5] [6])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [6] (/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.lof [7
+ [7] [8
 
-] [8] [9] [10{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}])
+] (out/main.lof [9] [10] [11] [12{/usr/local/texlive/2026/texmf-dist/fonts/enc/
+dvips/cm-super/cm-super-ts1.enc}] [13])
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [11] [12
+ [14]
+(./Abstract/abstract.tex) [1
 
-] (./Abstract/abstract.tex) [1] [2
+] [2
 
 ]
 Chapter 1.
@@ -940,7 +1059,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-<Chapter 2/Figures/Fizeau.pdf, id=968, 2347.61295pt x 1330.83134pt>
+<Chapter 2/Figures/Fizeau.pdf, id=1116, 2347.61295pt x 1330.83134pt>
 File: Chapter 2/Figures/Fizeau.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Fizeau.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Fizeau.pdf  used on input line 44.
@@ -966,10 +1085,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--81
  []
 
 [19]
-<Chapter 2/Figures/DarkRoom.pdf, id=1012, 2357.66833pt x 1008.77567pt>
+<Chapter 2/Figures/DarkRoom.pdf, id=1159, 2357.66833pt x 1008.77567pt>
 File: Chapter 2/Figures/DarkRoom.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/DarkRoom.pdf>
 Package pdftex.def Info: Chapter 2/Figures/DarkRoom.pdf  used on input line 86.
+
 (pdftex.def)             Requested size: 422.77661pt x 180.8791pt.
  [20 <./Chapter 2/Figures/DarkRoom.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 152--153
@@ -977,10 +1097,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--153
  []
 
 [21]
-<Chapter 2/Figures/indicerefracciongeo.pdf, id=1048, 493.29323pt x 292.3054pt>
+<Chapter 2/Figures/indicerefracciongeo.pdf, id=1196, 493.29323pt x 292.3054pt>
 File: Chapter 2/Figures/indicerefracciongeo.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/indicerefracciongeo.pdf>
-Package pdftex.def Info: Chapter 2/Figures/indicerefracciongeo.pdf  used on input line 158.
+Package pdftex.def Info: Chapter 2/Figures/indicerefracciongeo.pdf  used on inp
+ut line 158.
 (pdftex.def)             Requested size: 375.80542pt x 222.68964pt.
  [22 <./Chapter 2/Figures/indicerefracciongeo.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 213--214
@@ -988,10 +1109,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--214
  []
 
 [23]
-<Chapter 2/Figures/SnellDescartes.pdf, id=1071, 2119.01894pt x 1421.57564pt>
+<Chapter 2/Figures/SnellDescartes.pdf, id=1217, 2119.01894pt x 1421.57564pt>
 File: Chapter 2/Figures/SnellDescartes.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/SnellDescartes.pdf>
-Package pdftex.def Info: Chapter 2/Figures/SnellDescartes.pdf  used on input line 221.
+Package pdftex.def Info: Chapter 2/Figures/SnellDescartes.pdf  used on input li
+ne 221.
 (pdftex.def)             Requested size: 422.77661pt x 283.61597pt.
  [24 <./Chapter 2/Figures/SnellDescartes.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 276--277
@@ -1003,15 +1125,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 278--279
 
  []
 
-<Chapter 2/Figures/Mirror.pdf, id=1107, 347.28732pt x 316.06752pt>
+<Chapter 2/Figures/Mirror.pdf, id=1254, 347.28732pt x 316.06752pt>
 File: Chapter 2/Figures/Mirror.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Mirror.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Mirror.pdf  used on input line 284.
 (pdftex.def)             Requested size: 234.87749pt x 213.7656pt.
-<Chapter 2/Figures/NonRefract.pdf, id=1108, 337.82414pt x 198.44939pt>
+<Chapter 2/Figures/NonRefract.pdf, id=1255, 337.82414pt x 198.44939pt>
 File: Chapter 2/Figures/NonRefract.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/NonRefract.pdf>
-Package pdftex.def Info: Chapter 2/Figures/NonRefract.pdf  used on input line 292.
+Package pdftex.def Info: Chapter 2/Figures/NonRefract.pdf  used on input line 2
+92.
 (pdftex.def)             Requested size: 328.82706pt x 193.1679pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 297--298
@@ -1024,12 +1147,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 299--300
  []
 
 [27 <./Chapter 2/Figures/NonRefract.pdf>]
-<Chapter 2/Figures/n1>n2.pdf, id=1148, 553.24557pt x 401.88844pt>
+<Chapter 2/Figures/n1>n2.pdf, id=1296, 553.24557pt x 401.88844pt>
 File: Chapter 2/Figures/n1>n2.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/n1>n2.pdf>
 Package pdftex.def Info: Chapter 2/Figures/n1>n2.pdf  used on input line 329.
 (pdftex.def)             Requested size: 216.09044pt x 156.975pt.
-<Chapter 2/Figures/n1<n2.pdf, id=1151, 557.70143pt x 401.70021pt>
+<Chapter 2/Figures/n1<n2.pdf, id=1299, 557.70143pt x 401.70021pt>
 File: Chapter 2/Figures/n1<n2.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/n1<n2.pdf>
 Package pdftex.def Info: Chapter 2/Figures/n1<n2.pdf  used on input line 338.
@@ -1040,25 +1163,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 345--346
  []
 
 [28 <./Chapter 2/Figures/n1>n2.pdf>]
-<Chapter 2/Figures/OpticalSystem_1.pdf, id=1159, 642.39154pt x 364.00249pt>
+<Chapter 2/Figures/OpticalSystem_1.pdf, id=1307, 642.39154pt x 364.00249pt>
 File: Chapter 2/Figures/OpticalSystem_1.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/OpticalSystem_1.pdf>
-Package pdftex.def Info: Chapter 2/Figures/OpticalSystem_1.pdf  used on input line 363.
+Package pdftex.def Info: Chapter 2/Figures/OpticalSystem_1.pdf  used on input l
+ine 363.
 (pdftex.def)             Requested size: 211.3883pt x 119.78238pt.
-<Chapter 2/Figures/OpticalSystem_2.pdf, id=1160, 642.3916pt x 364.00249pt>
+<Chapter 2/Figures/OpticalSystem_2.pdf, id=1308, 642.3916pt x 364.00249pt>
 File: Chapter 2/Figures/OpticalSystem_2.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/OpticalSystem_2.pdf>
-Package pdftex.def Info: Chapter 2/Figures/OpticalSystem_2.pdf  used on input line 365.
+Package pdftex.def Info: Chapter 2/Figures/OpticalSystem_2.pdf  used on input l
+ine 365.
 (pdftex.def)             Requested size: 211.3883pt x 119.78238pt.
-<Chapter 2/Figures/OpticalSystem_3.pdf, id=1161, 599.51382pt x 339.70648pt>
+<Chapter 2/Figures/OpticalSystem_3.pdf, id=1309, 599.51382pt x 339.70648pt>
 File: Chapter 2/Figures/OpticalSystem_3.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/OpticalSystem_3.pdf>
-Package pdftex.def Info: Chapter 2/Figures/OpticalSystem_3.pdf  used on input line 372.
+Package pdftex.def Info: Chapter 2/Figures/OpticalSystem_3.pdf  used on input l
+ine 372.
 (pdftex.def)             Requested size: 234.87749pt x 133.09146pt.
-<Chapter 2/Figures/OpticalSystem_4.pdf, id=1162, 1366.51398pt x 386.75014pt>
+<Chapter 2/Figures/OpticalSystem_4.pdf, id=1310, 1366.51398pt x 386.75014pt>
 File: Chapter 2/Figures/OpticalSystem_4.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/OpticalSystem_4.pdf>
-Package pdftex.def Info: Chapter 2/Figures/OpticalSystem_4.pdf  used on input line 379.
+Package pdftex.def Info: Chapter 2/Figures/OpticalSystem_4.pdf  used on input l
+ine 379.
 (pdftex.def)             Requested size: 422.77661pt x 119.64934pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 384--385
@@ -1075,11 +1202,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
-[30 <./Chapter 2/Figures/OpticalSystem_1.pdf> <./Chapter 2/Figures/OpticalSystem_2.pdf> <./Chapter 2/Figures/OpticalSystem_3.pdf>]
-<Chapter 2/Figures/Stigmatism.pdf, id=1269, 743.41724pt x 457.23386pt>
+[30 <./Chapter 2/Figures/OpticalSystem_1.pdf> <./Chapter 2/Figures/OpticalSyste
+m_2.pdf> <./Chapter 2/Figures/OpticalSystem_3.pdf>]
+<Chapter 2/Figures/Stigmatism.pdf, id=1416, 743.41724pt x 457.23386pt>
 File: Chapter 2/Figures/Stigmatism.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Stigmatism.pdf>
-Package pdftex.def Info: Chapter 2/Figures/Stigmatism.pdf  used on input line 392.
+Package pdftex.def Info: Chapter 2/Figures/Stigmatism.pdf  used on input line 3
+92.
 (pdftex.def)             Requested size: 375.80542pt x 231.135pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 398--399
@@ -1092,19 +1221,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 409--410
  []
 
 [31 <./Chapter 2/Figures/OpticalSystem_4.pdf>]
-<Chapter 2/Figures/AlmostOvoid.pdf, id=1335, 1878.9232pt x 664.22311pt>
+<Chapter 2/Figures/AlmostOvoid.pdf, id=1481, 1878.9232pt x 664.22311pt>
 File: Chapter 2/Figures/AlmostOvoid.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/AlmostOvoid.pdf>
-Package pdftex.def Info: Chapter 2/Figures/AlmostOvoid.pdf  used on input line 419.
+Package pdftex.def Info: Chapter 2/Figures/AlmostOvoid.pdf  used on input line 
+419.
 (pdftex.def)             Requested size: 469.75499pt x 166.05537pt.
  [32 <./Chapter 2/Figures/Stigmatism.pdf>]
 Overfull \hbox (17.526pt too wide) detected at line 454
-\OML/cmm/m/it/10.95 n[] [] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 n[] [] \OMS/cmsy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 n[]n[] [][] [][] \OT1/cmr/m/n/10.95 = [][]
+\OML/cmm/m/it/10.95 n[] [] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 n[] [] \OMS
+/cmsy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 n[]n[] [][] [][] \O
+T1/cmr/m/n/10.95 = [][]
  []
 
 
 Overfull \hbox (22.39264pt too wide) detected at line 460
-\OML/cmm/m/it/10.95 n[] [] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 n[] [] \OMS/cmsy/m/n/10.95 ^^@ [][] \OT1/cmr/m/n/10.95 = 2\OML/cmm/m/it/10.95 n[]n[] [][] [][] ;
+\OML/cmm/m/it/10.95 n[] [] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 n[] [] \OMS
+/cmsy/m/n/10.95 ^^@ [][] \OT1/cmr/m/n/10.95 = 2\OML/cmm/m/it/10.95 n[]n[] [][] 
+[][] ;
  []
 
 [33 <./Chapter 2/Figures/AlmostOvoid.pdf>]
@@ -1123,22 +1257,25 @@ Overfull \hbox (11.77934pt too wide) detected at line 572
  []
 
 [36]
-<Chapter 2/Figures/YoungWeirstrass.pdf, id=1415, 572.28307pt x 379.68492pt>
+<Chapter 2/Figures/YoungWeirstrass.pdf, id=1562, 572.28307pt x 379.68492pt>
 File: Chapter 2/Figures/YoungWeirstrass.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/YoungWeirstrass.pdf>
-Package pdftex.def Info: Chapter 2/Figures/YoungWeirstrass.pdf  used on input line 612.
+Package pdftex.def Info: Chapter 2/Figures/YoungWeirstrass.pdf  used on input l
+ine 612.
 (pdftex.def)             Requested size: 375.80542pt x 249.32983pt.
  [37] [38 <./Chapter 2/Figures/YoungWeirstrass.pdf>]
-<Chapter 2/Figures/Ellipsoid.pdf, id=1440, 343.81865pt x 250.42145pt>
+<Chapter 2/Figures/Ellipsoid.pdf, id=1587, 343.81865pt x 250.42145pt>
 File: Chapter 2/Figures/Ellipsoid.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Ellipsoid.pdf>
-Package pdftex.def Info: Chapter 2/Figures/Ellipsoid.pdf  used on input line 683.
+Package pdftex.def Info: Chapter 2/Figures/Ellipsoid.pdf  used on input line 68
+3.
 (pdftex.def)             Requested size: 281.85585pt x 205.29341pt.
  [39]
-<Chapter 2/Figures/Ellipsoid2.pdf, id=1449, 386.51491pt x 286.18974pt>
+<Chapter 2/Figures/Ellipsoid2.pdf, id=1596, 386.51491pt x 286.18974pt>
 File: Chapter 2/Figures/Ellipsoid2.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Ellipsoid2.pdf>
-Package pdftex.def Info: Chapter 2/Figures/Ellipsoid2.pdf  used on input line 706.
+Package pdftex.def Info: Chapter 2/Figures/Ellipsoid2.pdf  used on input line 7
+06.
 (pdftex.def)             Requested size: 375.80542pt x 278.26749pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 711--712
@@ -1146,120 +1283,150 @@ Underfull \hbox (badness 10000) in paragraph at lines 711--712
  []
 
 [40 <./Chapter 2/Figures/Ellipsoid.pdf>]
-<Chapter 2/Figures/Ellipsoid3.pdf, id=1462, 428.49129pt x 286.5618pt>
+<Chapter 2/Figures/Ellipsoid3.pdf, id=1610, 428.49129pt x 286.5618pt>
 File: Chapter 2/Figures/Ellipsoid3.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Ellipsoid3.pdf>
-Package pdftex.def Info: Chapter 2/Figures/Ellipsoid3.pdf  used on input line 740.
+Package pdftex.def Info: Chapter 2/Figures/Ellipsoid3.pdf  used on input line 7
+40.
 (pdftex.def)             Requested size: 422.77661pt x 282.75258pt.
  [41 <./Chapter 2/Figures/Ellipsoid2.pdf>]
-<Chapter 2/Figures/Hyperboloid.pdf, id=1484, 275.63766pt x 275.63766pt>
+<Chapter 2/Figures/Hyperboloid.pdf, id=1631, 275.63766pt x 275.63766pt>
 File: Chapter 2/Figures/Hyperboloid.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Hyperboloid.pdf>
-Package pdftex.def Info: Chapter 2/Figures/Hyperboloid.pdf  used on input line 767.
+Package pdftex.def Info: Chapter 2/Figures/Hyperboloid.pdf  used on input line 
+767.
 (pdftex.def)             Requested size: 234.87749pt x 234.88614pt.
  [42 <./Chapter 2/Figures/Ellipsoid3.pdf>]
-<Chapter 2/Figures/Hyperboloid2.pdf, id=1502, 387.23828pt x 275.63766pt>
+<Chapter 2/Figures/Hyperboloid2.pdf, id=1649, 387.23828pt x 275.63766pt>
 File: Chapter 2/Figures/Hyperboloid2.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Hyperboloid2.pdf>
-Package pdftex.def Info: Chapter 2/Figures/Hyperboloid2.pdf  used on input line 786.
+Package pdftex.def Info: Chapter 2/Figures/Hyperboloid2.pdf  used on input line
+ 786.
 (pdftex.def)             Requested size: 375.80542pt x 267.5112pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 791--792
 
  []
 
-<Chapter 2/Figures/Hyperboloid3.pdf, id=1504, 400.65042pt x 275.63763pt>
+<Chapter 2/Figures/Hyperboloid3.pdf, id=1651, 400.65042pt x 275.63763pt>
 File: Chapter 2/Figures/Hyperboloid3.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Hyperboloid3.pdf>
-Package pdftex.def Info: Chapter 2/Figures/Hyperboloid3.pdf  used on input line 809.
+Package pdftex.def Info: Chapter 2/Figures/Hyperboloid3.pdf  used on input line
+ 809.
 (pdftex.def)             Requested size: 375.80542pt x 258.55684pt.
-[43 <./Chapter 2/Figures/Hyperboloid.pdf>] [44 <./Chapter 2/Figures/Hyperboloid2.pdf>] [45 <./Chapter 2/Figures/Hyperboloid3.pdf>]
-<Chapter 2/Figures/EllipsoidalMirror.pdf, id=1536, 2371.3606pt x 1312.77892pt>
+[43 <./Chapter 2/Figures/Hyperboloid.pdf>] [44 <./Chapter 2/Figures/Hyperboloid
+2.pdf>] [45 <./Chapter 2/Figures/Hyperboloid3.pdf>]
+<Chapter 2/Figures/EllipsoidalMirror.pdf, id=1684, 2371.3606pt x 1312.77892pt>
 File: Chapter 2/Figures/EllipsoidalMirror.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/EllipsoidalMirror.pdf>
-Package pdftex.def Info: Chapter 2/Figures/EllipsoidalMirror.pdf  used on input line 845.
+Package pdftex.def Info: Chapter 2/Figures/EllipsoidalMirror.pdf  used on input
+ line 845.
 (pdftex.def)             Requested size: 375.80542pt x 208.04578pt.
  [46 <./Chapter 2/Figures/EllipsoidalMirror.pdf>]
-<Chapter 2/Figures/HyperboloidMirror.pdf, id=1551, 3146.48032pt x 2195.26178pt>
+<Chapter 2/Figures/HyperboloidMirror.pdf, id=1699, 3146.48032pt x 2195.26178pt>
+
 File: Chapter 2/Figures/HyperboloidMirror.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/HyperboloidMirror.pdf>
-Package pdftex.def Info: Chapter 2/Figures/HyperboloidMirror.pdf  used on input line 885.
+Package pdftex.def Info: Chapter 2/Figures/HyperboloidMirror.pdf  used on input
+ line 885.
 (pdftex.def)             Requested size: 375.80542pt x 262.18066pt.
  [47] [48 <./Chapter 2/Figures/HyperboloidMirror.pdf>]
-<Chapter 2/Figures/ParaboloidMirror.pdf, id=1584, 2165.88788pt x 1978.16507pt>
+<Chapter 2/Figures/ParaboloidMirror.pdf, id=1731, 2165.88788pt x 1978.16507pt>
 File: Chapter 2/Figures/ParaboloidMirror.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/ParaboloidMirror.pdf>
-Package pdftex.def Info: Chapter 2/Figures/ParaboloidMirror.pdf  used on input line 916.
+Package pdftex.def Info: Chapter 2/Figures/ParaboloidMirror.pdf  used on input 
+line 916.
 (pdftex.def)             Requested size: 375.80542pt x 343.22601pt.
- [49] [50 <./Chapter 2/Figures/ParaboloidMirror.pdf>] [51]
-<Chapter 2/Figures/SuperconicGeometry.pdf, id=1627, 1801.45924pt x 967.15883pt>
+
+[49] [50 <./Chapter 2/Figures/ParaboloidMirror.pdf>] [51]
+<Chapter 2/Figures/SuperconicGeometry.pdf, id=1775, 1801.45924pt x 967.15883pt>
+
 File: Chapter 2/Figures/SuperconicGeometry.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/SuperconicGeometry.pdf>
-Package pdftex.def Info: Chapter 2/Figures/SuperconicGeometry.pdf  used on input line 1011.
+Package pdftex.def Info: Chapter 2/Figures/SuperconicGeometry.pdf  used on inpu
+t line 1011.
 (pdftex.def)             Requested size: 399.2946pt x 214.36943pt.
  [52] [53 <./Chapter 2/Figures/SuperconicGeometry.pdf>] [54]
-<Chapter 2/Figures/CartesianSurfaces.pdf, id=1657, 794.97pt x 216.81pt>
+<Chapter 2/Figures/CartesianSurfaces.pdf, id=1804, 794.97pt x 216.81pt>
 File: Chapter 2/Figures/CartesianSurfaces.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/CartesianSurfaces.pdf>
-Package pdftex.def Info: Chapter 2/Figures/CartesianSurfaces.pdf  used on input line 1078.
+Package pdftex.def Info: Chapter 2/Figures/CartesianSurfaces.pdf  used on input
+ line 1078.
 (pdftex.def)             Requested size: 469.75499pt x 128.11859pt.
-<Chapter 2/Figures/OvoidTable.png, id=1661, 1239.63126pt x 707.64375pt>
+<Chapter 2/Figures/OvoidTable.png, id=1808, 1239.63126pt x 707.64375pt>
 File: Chapter 2/Figures/OvoidTable.png Graphic file (type png)
 <use Chapter 2/Figures/OvoidTable.png>
-Package pdftex.def Info: Chapter 2/Figures/OvoidTable.png  used on input line 1087.
+Package pdftex.def Info: Chapter 2/Figures/OvoidTable.png  used on input line 1
+087.
 (pdftex.def)             Requested size: 469.75499pt x 268.15158pt.
- [55 <./Chapter 2/Figures/CartesianSurfaces.pdf>] [56 <./Chapter 2/Figures/OvoidTable.png (PNG copy)>] [57] [58] [59]
-<Chapter 2/Figures/SphericalDiopterFermat.pdf, id=1735, 1862.59094pt x 1519.76425pt>
+ [55 <./Chapter 2/Figures/CartesianSurfaces.pdf>] [56 <./Chapter 2/Figures/Ovoi
+dTable.png (PNG copy)>] [57] [58]
+[59]
+<Chapter 2/Figures/SphericalDiopterFermat.pdf, id=1882, 1862.59094pt x 1519.764
+25pt>
 File: Chapter 2/Figures/SphericalDiopterFermat.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/SphericalDiopterFermat.pdf>
-Package pdftex.def Info: Chapter 2/Figures/SphericalDiopterFermat.pdf  used on input line 1206.
+Package pdftex.def Info: Chapter 2/Figures/SphericalDiopterFermat.pdf  used on 
+input line 1206.
 (pdftex.def)             Requested size: 399.2946pt x 325.79216pt.
- [60] [61 <./Chapter 2/Figures/SphericalDiopterFermat.pdf>] [62] [63] [64] [65]
-<Chapter 2/Figures/QuarticWavefront.pdf, id=1800, 2799.6624pt x 2397.88132pt>
+ [60] [61 <./Chapter 2/Figures/SphericalDiopterFermat.pdf>] [62] [63]
+[64] [65]
+<Chapter 2/Figures/QuarticWavefront.pdf, id=1946, 2799.6624pt x 2397.88132pt>
 File: Chapter 2/Figures/QuarticWavefront.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/QuarticWavefront.pdf>
-Package pdftex.def Info: Chapter 2/Figures/QuarticWavefront.pdf  used on input line 1366.
+Package pdftex.def Info: Chapter 2/Figures/QuarticWavefront.pdf  used on input 
+line 1366.
 (pdftex.def)             Requested size: 375.80542pt x 321.87057pt.
- [66] [67 <./Chapter 2/Figures/QuarticWavefront.pdf>] [68] [69] [70]
-<Chapter 2/Figures/LSA.pdf, id=1863, 3278.41953pt x 1918.13048pt>
+ [66] [67 <./Chapter 2/Figures/QuarticWavefront.pdf>] [68] [69]
+[70]
+<Chapter 2/Figures/LSA.pdf, id=2011, 3278.41953pt x 1918.13048pt>
 File: Chapter 2/Figures/LSA.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/LSA.pdf>
 Package pdftex.def Info: Chapter 2/Figures/LSA.pdf  used on input line 1480.
 (pdftex.def)             Requested size: 375.80542pt x 219.8633pt.
  [71]
-<Chapter 2/Figures/ObjectDefocus.pdf, id=1877, 3278.41904pt x 1918.13048pt>
+<Chapter 2/Figures/ObjectDefocus.pdf, id=2024, 3278.41904pt x 1918.13048pt>
 File: Chapter 2/Figures/ObjectDefocus.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/ObjectDefocus.pdf>
-Package pdftex.def Info: Chapter 2/Figures/ObjectDefocus.pdf  used on input line 1511.
+Package pdftex.def Info: Chapter 2/Figures/ObjectDefocus.pdf  used on input lin
+e 1511.
 (pdftex.def)             Requested size: 375.80542pt x 219.8633pt.
  [72 <./Chapter 2/Figures/LSA.pdf>]
-<Chapter 2/Figures/MarginalImagingA.pdf, id=1891, 4099.58603pt x 1942.50682pt>
+<Chapter 2/Figures/MarginalImagingA.pdf, id=2038, 4099.58603pt x 1942.50682pt>
 File: Chapter 2/Figures/MarginalImagingA.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/MarginalImagingA.pdf>
-Package pdftex.def Info: Chapter 2/Figures/MarginalImagingA.pdf  used on input line 1524.
+Package pdftex.def Info: Chapter 2/Figures/MarginalImagingA.pdf  used on input 
+line 1524.
 (pdftex.def)             Requested size: 281.85585pt x 133.52922pt.
-<Chapter 2/Figures/MarginalImagingB.pdf, id=1892, 4087.39792pt x 2230.65549pt>
+<Chapter 2/Figures/MarginalImagingB.pdf, id=2039, 4087.39792pt x 2230.65549pt>
 File: Chapter 2/Figures/MarginalImagingB.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/MarginalImagingB.pdf>
-Package pdftex.def Info: Chapter 2/Figures/MarginalImagingB.pdf  used on input line 1525.
+Package pdftex.def Info: Chapter 2/Figures/MarginalImagingB.pdf  used on input 
+line 1525.
 (pdftex.def)             Requested size: 281.85585pt x 153.81328pt.
  [73 <./Chapter 2/Figures/ObjectDefocus.pdf>]
-<Chapter 2/Figures/ThinLensAberrated.pdf, id=1907, 3300.32462pt x 2312.3653pt>
+<Chapter 2/Figures/ThinLensAberrated.pdf, id=2053, 3300.32462pt x 2312.3653pt>
 File: Chapter 2/Figures/ThinLensAberrated.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/ThinLensAberrated.pdf>
-Package pdftex.def Info: Chapter 2/Figures/ThinLensAberrated.pdf  used on input line 1544.
+Package pdftex.def Info: Chapter 2/Figures/ThinLensAberrated.pdf  used on input
+ line 1544.
 (pdftex.def)             Requested size: 328.82706pt x 230.36798pt.
- [74 <./Chapter 2/Figures/MarginalImagingA.pdf> <./Chapter 2/Figures/MarginalImagingB.pdf>] [75 <./Chapter 2/Figures/ThinLensAberrated.pdf>] [76]
-<Chapter 2/Figures/AplanatismCondition.pdf, id=1991, 2842.57222pt x 1607.85226pt>
+ [74 <./Chapter 2/Figures/MarginalImagingA.pdf> <./Chapter 2/Figures/MarginalIm
+agingB.pdf>] [75 <./Chapter 2/Figures/ThinLensAberrated.pdf>]
+[76]
+<Chapter 2/Figures/AplanatismCondition.pdf, id=2139, 2842.57222pt x 1607.85226p
+t>
 File: Chapter 2/Figures/AplanatismCondition.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/AplanatismCondition.pdf>
-Package pdftex.def Info: Chapter 2/Figures/AplanatismCondition.pdf  used on input line 1599.
+Package pdftex.def Info: Chapter 2/Figures/AplanatismCondition.pdf  used on inp
+ut line 1599.
 (pdftex.def)             Requested size: 399.2946pt x 225.8338pt.
  [77 <./Chapter 2/Figures/AplanatismCondition.pdf>]
-<Chapter 2/Figures/AbbeSine.pdf, id=2013, 2876.22063pt x 2278.74995pt>
+<Chapter 2/Figures/AbbeSine.pdf, id=2160, 2876.22063pt x 2278.74995pt>
 File: Chapter 2/Figures/AbbeSine.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/AbbeSine.pdf>
-Package pdftex.def Info: Chapter 2/Figures/AbbeSine.pdf  used on input line 1630.
+Package pdftex.def Info: Chapter 2/Figures/AbbeSine.pdf  used on input line 163
+0.
 (pdftex.def)             Requested size: 328.82706pt x 260.50343pt.
  [78] [79 <./Chapter 2/Figures/AbbeSine.pdf>]) [80]
 Chapter 3.
@@ -1267,114 +1434,148 @@ Chapter 3.
 
 ] (./Chapter 3/chap3.tex [82
 
-] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94]
-<Chapter 3/Figures/3Dto2D.pdf, id=2229, 2405.64027pt x 1568.6766pt>
+] [83] [84] [85] [86] [87] [88] [89] [90]
+[91] [92] [93] [94]
+<Chapter 3/Figures/3Dto2D.pdf, id=2377, 2405.64027pt x 1568.6766pt>
 File: Chapter 3/Figures/3Dto2D.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/3Dto2D.pdf>
 Package pdftex.def Info: Chapter 3/Figures/3Dto2D.pdf  used on input line 409.
 (pdftex.def)             Requested size: 375.80542pt x 245.03331pt.
  [95] [96 <./Chapter 3/Figures/3Dto2D.pdf>] [97]
-<Chapter 3/Figures/Phasors.pdf, id=2532, 2393.59479pt x 2151.25581pt>
+<Chapter 3/Figures/Phasors.pdf, id=2679, 2393.59479pt x 2151.25581pt>
 File: Chapter 3/Figures/Phasors.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/Phasors.pdf>
 Package pdftex.def Info: Chapter 3/Figures/Phasors.pdf  used on input line 493.
+
 (pdftex.def)             Requested size: 375.80542pt x 337.74135pt.
  [98]
-<Chapter 3/Figures/PolarisationEllipseGen.pdf, id=2542, 1271.04904pt x 1059.18489pt>
+<Chapter 3/Figures/PolarisationEllipseGen.pdf, id=2689, 1271.04904pt x 1059.184
+89pt>
 File: Chapter 3/Figures/PolarisationEllipseGen.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/PolarisationEllipseGen.pdf>
-Package pdftex.def Info: Chapter 3/Figures/PolarisationEllipseGen.pdf  used on input line 506.
+Package pdftex.def Info: Chapter 3/Figures/PolarisationEllipseGen.pdf  used on 
+input line 506.
 (pdftex.def)             Requested size: 328.82706pt x 274.00781pt.
- [99 <./Chapter 3/Figures/Phasors.pdf>]
-<Chapter 3/Figures/PolarisationEllipseBase.pdf, id=2663, 1645.08768pt x 1370.8772pt>
+
+[99 <./Chapter 3/Figures/Phasors.pdf>]
+<Chapter 3/Figures/PolarisationEllipseBase.pdf, id=2811, 1645.08768pt x 1370.87
+72pt>
 File: Chapter 3/Figures/PolarisationEllipseBase.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/PolarisationEllipseBase.pdf>
-Package pdftex.def Info: Chapter 3/Figures/PolarisationEllipseBase.pdf  used on input line 523.
+Package pdftex.def Info: Chapter 3/Figures/PolarisationEllipseBase.pdf  used on
+ input line 523.
 (pdftex.def)             Requested size: 328.82706pt x 274.00323pt.
- [100 <./Chapter 3/Figures/PolarisationEllipseGen.pdf>] [101 <./Chapter 3/Figures/PolarisationEllipseBase.pdf>]
+ [100 <./Chapter 3/Figures/PolarisationEllipseGen.pdf>] [101 <./Chapter 3/Figur
+es/PolarisationEllipseBase.pdf>]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [102] [103] [104] [105] [106] [107] [108] [109]
-<Chapter 3/Figures/PoincareSphere.pdf, id=2810, 2193.86569pt x 2188.14952pt>
+ [102]
+[103] [104] [105] [106] [107] [108] [109]
+<Chapter 3/Figures/PoincareSphere.pdf, id=2957, 2193.86569pt x 2188.14952pt>
 File: Chapter 3/Figures/PoincareSphere.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/PoincareSphere.pdf>
-Package pdftex.def Info: Chapter 3/Figures/PoincareSphere.pdf  used on input line 758.
+Package pdftex.def Info: Chapter 3/Figures/PoincareSphere.pdf  used on input li
+ne 758.
 (pdftex.def)             Requested size: 281.85585pt x 281.0972pt.
  [110] [111 <./Chapter 3/Figures/PoincareSphere.pdf>] [112] [113]
-<Chapter 3/Figures/ProyStereo1.pdf, id=2918, 1643.8923pt x 843.0807pt>
+<Chapter 3/Figures/ProyStereo1.pdf, id=3065, 1643.8923pt x 843.0807pt>
 File: Chapter 3/Figures/ProyStereo1.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/ProyStereo1.pdf>
-Package pdftex.def Info: Chapter 3/Figures/ProyStereo1.pdf  used on input line 824.
+Package pdftex.def Info: Chapter 3/Figures/ProyStereo1.pdf  used on input line 
+824.
 (pdftex.def)             Requested size: 352.31624pt x 180.67992pt.
  [114 <./Chapter 3/Figures/ProyStereo1.pdf>]
-<Chapter 3/Figures/ProyStereo2.pdf, id=2953, 1540.67538pt x 1284.70137pt>
+<Chapter 3/Figures/ProyStereo2.pdf, id=3100, 1540.67538pt x 1284.70137pt>
 File: Chapter 3/Figures/ProyStereo2.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/ProyStereo2.pdf>
-Package pdftex.def Info: Chapter 3/Figures/ProyStereo2.pdf  used on input line 855.
+Package pdftex.def Info: Chapter 3/Figures/ProyStereo2.pdf  used on input line 
+855.
 (pdftex.def)             Requested size: 375.80542pt x 313.35298pt.
- [115] [116 <./Chapter 3/Figures/ProyStereo2.pdf>]
-<Chapter 3/Figures/ProyStereo3.pdf, id=3055, 1158.43692pt x 1285.1699pt>
+
+[115] [116 <./Chapter 3/Figures/ProyStereo2.pdf>]
+<Chapter 3/Figures/ProyStereo3.pdf, id=3202, 1158.43692pt x 1285.1699pt>
 File: Chapter 3/Figures/ProyStereo3.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/ProyStereo3.pdf>
-Package pdftex.def Info: Chapter 3/Figures/ProyStereo3.pdf  used on input line 880.
+Package pdftex.def Info: Chapter 3/Figures/ProyStereo3.pdf  used on input line 
+880.
 (pdftex.def)             Requested size: 281.85585pt x 312.68286pt.
  [117] [118 <./Chapter 3/Figures/ProyStereo3.pdf>] [119]
-<Chapter 3/Figures/QuarterWavePlate.pdf, id=3203, 3197.56644pt x 1162.86864pt>
+<Chapter 3/Figures/QuarterWavePlate.pdf, id=3350, 3197.56644pt x 1162.86864pt>
 File: Chapter 3/Figures/QuarterWavePlate.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/QuarterWavePlate.pdf>
-Package pdftex.def Info: Chapter 3/Figures/QuarterWavePlate.pdf  used on input line 935.
+Package pdftex.def Info: Chapter 3/Figures/QuarterWavePlate.pdf  used on input 
+line 935.
 (pdftex.def)             Requested size: 375.80542pt x 136.6637pt.
- [120 <./Chapter 3/Figures/QuarterWavePlate.pdf>] [121] [122]
-<Chapter 3/Figures/LinearPolarizer.pdf, id=3265, 3300.7733pt x 1083.75986pt>
+ [120 <./Chapter 3/Figures/QuarterWavePlate.pdf>]
+[121] [122]
+<Chapter 3/Figures/LinearPolarizer.pdf, id=3412, 3300.7733pt x 1083.75986pt>
 File: Chapter 3/Figures/LinearPolarizer.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/LinearPolarizer.pdf>
-Package pdftex.def Info: Chapter 3/Figures/LinearPolarizer.pdf  used on input line 1035.
+Package pdftex.def Info: Chapter 3/Figures/LinearPolarizer.pdf  used on input l
+ine 1035.
 (pdftex.def)             Requested size: 375.80542pt x 123.38123pt.
- [123] [124 <./Chapter 3/Figures/LinearPolarizer.pdf>] [125] [126] [127]
-<Chapter 3/Figures/RetarderOnPoincare.pdf, id=3349, 2145.8614pt x 2151.40482pt>
+ [123] [124 <./Chapter 3/Figures/LinearPolarizer.pdf>] [125]
+[126] [127]
+<Chapter 3/Figures/RetarderOnPoincare.pdf, id=3496, 2145.8614pt x 2151.40482pt>
+
 File: Chapter 3/Figures/RetarderOnPoincare.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/RetarderOnPoincare.pdf>
-Package pdftex.def Info: Chapter 3/Figures/RetarderOnPoincare.pdf  used on input line 1156.
+Package pdftex.def Info: Chapter 3/Figures/RetarderOnPoincare.pdf  used on inpu
+t line 1156.
 (pdftex.def)             Requested size: 281.85585pt x 282.58128pt.
- [128] [129 <./Chapter 3/Figures/RetarderOnPoincare.pdf>] [130] [131] [132] [133] [134] [135] [136] [137] [138]) [139] [140
+ [128] [129 <./Chapter 3/Figures/RetarderOnPoincare.pdf>] [130]
+[131] [132] [133] [134] [135] [136] [137] [138]) [139] [140
 
 ]
 Chapter 4.
 [141] (./Chapter 4/chap4.tex [142
 
 ] [143] [144]
-<Chapter 4/Figures/PlaneWavesInterferences.pdf, id=3577, 1560.86984pt x 870.18178pt>
+<Chapter 4/Figures/PlaneWavesInterferences.pdf, id=3724, 1560.86984pt x 870.181
+78pt>
 File: Chapter 4/Figures/PlaneWavesInterferences.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/PlaneWavesInterferences.pdf>
-Package pdftex.def Info: Chapter 4/Figures/PlaneWavesInterferences.pdf  used on input line 140.
+Package pdftex.def Info: Chapter 4/Figures/PlaneWavesInterferences.pdf  used on
+ input line 140.
 (pdftex.def)             Requested size: 422.77661pt x 235.69579pt.
  [145]
-<Chapter 4/Figures/SphericalWavesInterferences.pdf, id=3592, 1672.48373pt x 1849.84227pt>
+<Chapter 4/Figures/SphericalWavesInterferences.pdf, id=3739, 1672.48373pt x 184
+9.84227pt>
 File: Chapter 4/Figures/SphericalWavesInterferences.pdf Graphic file (type pdf)
+
 <use Chapter 4/Figures/SphericalWavesInterferences.pdf>
-Package pdftex.def Info: Chapter 4/Figures/SphericalWavesInterferences.pdf  used on input line 178.
+Package pdftex.def Info: Chapter 4/Figures/SphericalWavesInterferences.pdf  use
+d on input line 178.
 (pdftex.def)             Requested size: 281.85585pt x 311.73108pt.
- [146 <./Chapter 4/Figures/PlaneWavesInterferences.pdf>] [147 <./Chapter 4/Figures/SphericalWavesInterferences.pdf>] [148] [149] [150] [151]
-<Chapter 4/Figures/YoungSphericalWave.pdf, id=3741, 2287.8587pt x 1350.09778pt>
+ [146 <./Chapter 4/Figures/PlaneWavesInterferences.pdf>] [147 <./Chapter 4/Figu
+res/SphericalWavesInterferences.pdf>] [148] [149] [150] [151]
+<Chapter 4/Figures/YoungSphericalWave.pdf, id=3888, 2287.8587pt x 1350.09778pt>
+
 File: Chapter 4/Figures/YoungSphericalWave.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/YoungSphericalWave.pdf>
-Package pdftex.def Info: Chapter 4/Figures/YoungSphericalWave.pdf  used on input line 329.
+Package pdftex.def Info: Chapter 4/Figures/YoungSphericalWave.pdf  used on inpu
+t line 329.
 (pdftex.def)             Requested size: 399.2946pt x 235.61142pt.
  [152] [153 <./Chapter 4/Figures/YoungSphericalWave.pdf>] [154] [155] [156]
-<Chapter 4/Figures/FresnelBiprism.pdf, id=3797, 2223.0656pt x 2075.35703pt>
+<Chapter 4/Figures/FresnelBiprism.pdf, id=3944, 2223.0656pt x 2075.35703pt>
 File: Chapter 4/Figures/FresnelBiprism.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/FresnelBiprism.pdf>
-Package pdftex.def Info: Chapter 4/Figures/FresnelBiprism.pdf  used on input line 420.
+Package pdftex.def Info: Chapter 4/Figures/FresnelBiprism.pdf  used on input li
+ne 420.
 (pdftex.def)             Requested size: 328.82706pt x 306.95169pt.
- [157 <./Chapter 4/Figures/FresnelBiprism.pdf>] [158] [159] [160]
-<Chapter 4/Figures/MichelsonInterferometer.pdf, id=3850, 2949.96072pt x 1892.91296pt>
+ [157 <./Chapter 4/Figures/FresnelBiprism.pdf>]
+[158] [159] [160]
+<Chapter 4/Figures/MichelsonInterferometer.pdf, id=3998, 2949.96072pt x 1892.91
+296pt>
 File: Chapter 4/Figures/MichelsonInterferometer.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/MichelsonInterferometer.pdf>
-Package pdftex.def Info: Chapter 4/Figures/MichelsonInterferometer.pdf  used on input line 514.
+Package pdftex.def Info: Chapter 4/Figures/MichelsonInterferometer.pdf  used on
+ input line 514.
 (pdftex.def)             Requested size: 328.82706pt x 210.99388pt.
- [161 <./Chapter 4/Figures/MichelsonInterferometer.pdf>]) [162]
+ [161 <./Chapter 4/Figures/MichelsonInterferometer.pdf>])
+[162]
 Chapter 5.
 [163
 
@@ -1382,108 +1583,187 @@ Chapter 5.
 
 ] [165] [166] [167] [168] [169] [170]
 Overfull \hbox (12.5958pt too wide) in paragraph at lines 214--217
-\T1/cmr/m/n/10.95 (-20) The HelmholtzKirch-hoff in-te-gral the-o-rem adapts Green's for-mal-ism to the prop-a-ga-tion of elec-tro-mag-netic
+\T1/cmr/m/n/10.95 (-20) The HelmholtzKirch-hoff in-te-gral the-o-rem adapts Gre
+en's for-mal-ism to the prop-a-ga-tion of elec-tro-mag-netic
  []
 
-<Chapter 5/Figures/GreenImagenes.pdf, id=3977, 587.62173pt x 607.19585pt>
+<Chapter 5/Figures/GreenImagenes.pdf, id=4124, 587.62173pt x 607.19585pt>
 File: Chapter 5/Figures/GreenImagenes.pdf Graphic file (type pdf)
 <use Chapter 5/Figures/GreenImagenes.pdf>
-Package pdftex.def Info: Chapter 5/Figures/GreenImagenes.pdf  used on input line 242.
+Package pdftex.def Info: Chapter 5/Figures/GreenImagenes.pdf  used on input lin
+e 242.
 (pdftex.def)             Requested size: 328.82706pt x 339.79573pt.
 [171] [172 <./Chapter 5/Figures/GreenImagenes.pdf>]
-<Chapter 5/Figures/GreenPuntual.pdf, id=3996, 561.81592pt x 498.02902pt>
+<Chapter 5/Figures/GreenPuntual.pdf, id=4144, 561.81592pt x 498.02902pt>
 File: Chapter 5/Figures/GreenPuntual.pdf Graphic file (type pdf)
 <use Chapter 5/Figures/GreenPuntual.pdf>
-Package pdftex.def Info: Chapter 5/Figures/GreenPuntual.pdf  used on input line 274.
+Package pdftex.def Info: Chapter 5/Figures/GreenPuntual.pdf  used on input line
+ 274.
 (pdftex.def)             Requested size: 328.82706pt x 291.49399pt.
-<Chapter 5/Figures/GreenNoPuntual.pdf, id=3999, 543.80663pt x 502.00859pt>
+<Chapter 5/Figures/GreenNoPuntual.pdf, id=4147, 543.80663pt x 502.00859pt>
 File: Chapter 5/Figures/GreenNoPuntual.pdf Graphic file (type pdf)
 <use Chapter 5/Figures/GreenNoPuntual.pdf>
-Package pdftex.def Info: Chapter 5/Figures/GreenNoPuntual.pdf  used on input line 292.
+Package pdftex.def Info: Chapter 5/Figures/GreenNoPuntual.pdf  used on input li
+ne 292.
 (pdftex.def)             Requested size: 328.82706pt x 303.5591pt.
- [173 <./Chapter 5/Figures/GreenPuntual.pdf>] [174 <./Chapter 5/Figures/GreenNoPuntual.pdf>] [175] [176]
-Overfull \hbox (0.99422pt too wide) detected at line 432
+ [173 <./Chapter 5/Figures/GreenPuntual.pdf>] [174 <./Chapter 5/Figures/GreenNo
+Puntual.pdf>] [175] [176]
+[177]
+<Chapter 5/Figures/ConfocalSpheres.pdf, id=4271, 273.14847pt x 315.46556pt>
+File: Chapter 5/Figures/ConfocalSpheres.pdf Graphic file (type pdf)
+<use Chapter 5/Figures/ConfocalSpheres.pdf>
+Package pdftex.def Info: Chapter 5/Figures/ConfocalSpheres.pdf  used on input l
+ine 487.
+(pdftex.def)             Requested size: 225.48038pt x 260.4163pt.
+ [178] [179 <./Chapter 5/Figures/ConfocalSpheres.pdf>]
+Overfull \hbox (0.99422pt too wide) detected at line 578
 []
  []
 
-<Chapter 5/Figures/Cardinales.pdf, id=4113, 456.5832pt x 491.9958pt>
+<Chapter 5/Figures/Cardinales.pdf, id=4332, 456.5832pt x 491.9958pt>
 File: Chapter 5/Figures/Cardinales.pdf Graphic file (type pdf)
 <use Chapter 5/Figures/Cardinales.pdf>
-Package pdftex.def Info: Chapter 5/Figures/Cardinales.pdf  used on input line 452.
+Package pdftex.def Info: Chapter 5/Figures/Cardinales.pdf  used on input line 5
+98.
 (pdftex.def)             Requested size: 234.87749pt x 253.09163pt.
-[177] [178 <./Chapter 5/Figures/Cardinales.pdf>]) [179] [180
+[180] [181 <./Chapter 5/Figures/Cardinales.pdf>] [182] [183] [184] [185]
+[186] [187] [188] [189] [190] [191] [192] [193] [194] [195] [196]
+<Chapter 5/Figures/CardinalSpheres.pdf, id=4699, 301.60077pt x 269.94151pt>
+File: Chapter 5/Figures/CardinalSpheres.pdf Graphic file (type pdf)
+<use Chapter 5/Figures/CardinalSpheres.pdf>
+Package pdftex.def Info: Chapter 5/Figures/CardinalSpheres.pdf  used on input l
+ine 1437.
+(pdftex.def)             Requested size: 291.24579pt x 260.67728pt.
+ [197]
+[198 <./Chapter 5/Figures/CardinalSpheres.pdf>] [199] [200] [201] [202])
+[203] [204
 
 ]
 Chapter 6.
-[181] (./Chapter 6/chap6.tex [182
+[205] (./Chapter 6/chap6.tex [206
 
-] [183] [184] [185] [186] [187]
-<Chapter 6/Figures/RandomVar.pdf, id=4238, 472.44035pt x 866.30989pt>
+] [207] [208] [209] [210] [211] [212] [213]
+[214] [215] [216] [217] [218] [219] [220]
+<Chapter 6/Figures/RandomVar.pdf, id=5037, 472.44035pt x 866.30989pt>
 File: Chapter 6/Figures/RandomVar.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/RandomVar.pdf>
-Package pdftex.def Info: Chapter 6/Figures/RandomVar.pdf  used on input line 355.
+Package pdftex.def Info: Chapter 6/Figures/RandomVar.pdf  used on input line 85
+6.
 (pdftex.def)             Requested size: 187.89912pt x 344.54822pt.
- [188] [189 <./Chapter 6/Figures/RandomVar.pdf>] [190] [191] [192] [193]
-<Chapter 6/Figures/Estrecho.pdf, id=4304, 549.38483pt x 459.57813pt>
+ [221] [222 <./Chapter 6/Figures/RandomVar.pdf>] [223] [224] [225] [226]
+<Chapter 6/Figures/Estrecho.pdf, id=5107, 549.38483pt x 459.57813pt>
 File: Chapter 6/Figures/Estrecho.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/Estrecho.pdf>
-Package pdftex.def Info: Chapter 6/Figures/Estrecho.pdf  used on input line 589.
+Package pdftex.def Info: Chapter 6/Figures/Estrecho.pdf  used on input line 109
+0.
 (pdftex.def)             Requested size: 328.82706pt x 275.07579pt.
- [194] [195 <./Chapter 6/Figures/Estrecho.pdf>]
-<Chapter 6/Figures/Propagation.pdf, id=4326, 586.54031pt x 380.42159pt>
+ [227] [228 <./Chapter 6/Figures/Estrecho.pdf>]
+<Chapter 6/Figures/Propagation.pdf, id=5130, 586.54031pt x 380.42159pt>
 File: Chapter 6/Figures/Propagation.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/Propagation.pdf>
-Package pdftex.def Info: Chapter 6/Figures/Propagation.pdf  used on input line 665.
+Package pdftex.def Info: Chapter 6/Figures/Propagation.pdf  used on input line 
+1166.
 (pdftex.def)             Requested size: 375.80542pt x 243.74179pt.
- [196] [197 <./Chapter 6/Figures/Propagation.pdf>]
-<Chapter 6/Figures/Propagation2.pdf, id=4364, 592.28485pt x 567.3423pt>
+ [229] [230 <./Chapter 6/Figures/Propagation.pdf>]
+<Chapter 6/Figures/Propagation2.pdf, id=5167, 592.28485pt x 567.3423pt>
 File: Chapter 6/Figures/Propagation2.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/Propagation2.pdf>
-Package pdftex.def Info: Chapter 6/Figures/Propagation2.pdf  used on input line 707.
+Package pdftex.def Info: Chapter 6/Figures/Propagation2.pdf  used on input line
+ 1208.
 (pdftex.def)             Requested size: 375.80542pt x 359.97267pt.
- [198 <./Chapter 6/Figures/Propagation2.pdf>]
-Overfull \hbox (66.00877pt too wide) detected at line 726
+ [231 <./Chapter 6/Figures/Propagation2.pdf>]
+Overfull \hbox (66.00877pt too wide) detected at line 1227
 []
  []
 
-<Chapter 6/Figures/Random2.pdf, id=4377, 639.8206pt x 825.70494pt>
+<Chapter 6/Figures/Random2.pdf, id=5181, 639.8206pt x 825.70494pt>
 File: Chapter 6/Figures/Random2.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/Random2.pdf>
-Package pdftex.def Info: Chapter 6/Figures/Random2.pdf  used on input line 734.
+Package pdftex.def Info: Chapter 6/Figures/Random2.pdf  used on input line 1235
+.
 (pdftex.def)             Requested size: 281.85585pt x 363.73967pt.
-[199] [200 <./Chapter 6/Figures/Random2.pdf>]
-Overfull \hbox (42.22426pt too wide) detected at line 785
+[232] [233 <./Chapter 6/Figures/Random2.pdf>]
+Overfull \hbox (42.22426pt too wide) detected at line 1286
 []
  []
 
-<Chapter 6/Figures/FourierGamma.pdf, id=4407, 440.77277pt x 770.00833pt>
+<Chapter 6/Figures/FourierGamma.pdf, id=5210, 440.77277pt x 770.00833pt>
 File: Chapter 6/Figures/FourierGamma.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/FourierGamma.pdf>
-Package pdftex.def Info: Chapter 6/Figures/FourierGamma.pdf  used on input line 813.
+Package pdftex.def Info: Chapter 6/Figures/FourierGamma.pdf  used on input line
+ 1314.
 (pdftex.def)             Requested size: 305.33788pt x 533.43295pt.
-) (/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.bbl [201] [202 <./Chapter 6/Figures/FourierGamma.pdf>] [203
+) (out/main.bbl [234] [235 <./Chapter 6/Figures/FourierGamma.pdf>] [236
 
-] [204] [205]) [206] (/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.aux)
+]
+[237] [238] [239] [240]
+Underfull \hbox (badness 2213) in paragraph at lines 471--474
+[]\T1/cmr/m/n/10.95 (+20) Shih, C.-C. (1995a).  Frac-tion-al-iza-tion of fourie
+r trans-form.  \T1/cmr/m/it/10.95 (+20) Op-tics Com-mu-ni-ca-tions\T1/cmr/m/n/1
+0.95 (+20) ,
+ []
+
+[241] [242]) [243] (out/main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 217A65445B3F6957E2E3F1D75137DEEC;27702.
+(rerunfilecheck)             Checksum: 4EBC5FF61302B41B4ACCEBD205C028DF;35236.
  ) 
 Here is how much of TeX's memory you used:
- 22233 strings out of 467525
- 367333 string characters out of 5418982
- 864070 words of memory out of 5000000
- 49319 multiletter control sequences out of 15000+600000
- 680477 words of font info for 388 fonts, out of 8000000 for 9000
+ 22770 strings out of 467525
+ 376716 string characters out of 5418982
+ 874940 words of memory out of 5000000
+ 49600 multiletter control sequences out of 15000+600000
+ 681736 words of font info for 400 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,16n,79p,2062b,733s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti2488.pfb>
-Output written on /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.pdf (220 pages, 7196088 bytes).
+ 72i,16n,79p,1992b,835s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
+b></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
+ocal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
+al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
+exlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
+ive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
+/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
+26/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2026/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2026/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/texmf-di
+st/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2026/texmf-dist
+/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2026/texmf-dist/f
+onts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf-dist/fon
+ts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-dist/fonts
+/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2026/texmf-dist/fonts/t
+ype1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
+/public/cm-super/sfrm0900.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/p
+ublic/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
+cm-super/sfti1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm
+-super/sfti1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-s
+uper/sfti2488.pfb>
+Output written on out/main.pdf (259 pages, 7382602 bytes).
 PDF statistics:
- 4841 PDF objects out of 5155 (max. 8388607)
- 3996 compressed objects within 40 object streams
- 955 named destinations out of 1000 (max. 500000)
- 87225 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 5708 PDF objects out of 6186 (max. 8388607)
+ 4801 compressed objects within 49 object streams
+ 1188 named destinations out of 1200 (max. 500000)
+ 87427 words of extra memory for PDF output out of 89155 (max. 10000000)
 

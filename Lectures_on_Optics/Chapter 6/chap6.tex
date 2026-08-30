@@ -343,6 +343,507 @@
 	exactly the step that turns the correlation function into the \textit{complex degree of
 	coherence}, and it is the point the next section works towards.
 
+\section{Random variables}\label{sec:RandomVariables}
+
+	In the previous section we spoke freely of random variables, of joint probability
+	densities and of ensemble averages, and we did so on purpose, because the aim there was to
+	make the definition of the correlation function plausible rather than to justify it. That
+	debt must now be paid. Coherence theory is, from beginning to end, a theory \textit{about}
+	averages, and an average that is not defined precisely defines nothing precisely. Worse,
+	the objects we shall manipulate are not averages of numbers but averages over an infinite
+	collection of entire field histories, and for such objects naive intuition is not merely
+	imprecise, it is occasionally wrong.
+
+	The purpose of this section is therefore to build the notion of a random variable from the
+	ground up, in the measure theoretic language in which it was cast by Kolmogorov
+	\citep{kolmogorov1933grundbegriffe}, and then to apply it to the vector electromagnetic
+	field, constructing explicitly the probability space on which the whole of the following
+	theory lives. Every ingredient will be given its physical reading as it appears, because
+	each one of them corresponds to something an optician does in a laboratory.
+
+	\subsection{The sample space and the physical meaning of an event}
+
+		\begin{myDef}
+			\textit{(Sample space)} A \textbf{sample space} is a nonempty set $\Omega$. Its
+			elements $\omega\in\Omega$ are called \textbf{elementary outcomes} or
+			\textbf{sample points}.
+		\end{myDef}
+
+		The temptation is to read $\omega$ as a number, and it is essential to resist it. In
+		optics an elementary outcome is not a field value and not a measurement; it is one
+		complete \textbf{realisation} of the source, that is, one entire spacetime history that
+		the field could have had. A thermal lamp contains of the order of $10^{20}$ atoms
+		radiating independently, each with an emission instant and an initial phase that we
+		neither control nor know. One particular assignment of all those microscopic details,
+		together with everything that follows from it by Maxwell's equations, is one $\omega$.
+		The set of all such assignments is $\Omega$.
+
+		This is precisely the picture that Figure~\ref{fig:randomvar} will show in the next
+		section, where several curves $^{(i)}E(\vec{r},t)$ are drawn one above the other: each
+		curve is one $\omega$, and the label $i$ is only a bookkeeping device, since in general
+		$\Omega$ is uncountable. What the laboratory delivers on any given afternoon is a single
+		$\omega$, chosen by nature and not revealed to us. The whole of statistical optics
+		consists in extracting statements about $\Omega$ from access to one of its points.
+
+		\begin{myDef}
+			\textit{(Event)} An \textbf{event} is a subset $A\subseteq\Omega$.
+		\end{myDef}
+
+		The physical content of this definition is that an event is a \textbf{statement about
+		the realisation that can be declared true or false}. The statement ``the field at
+		$\vec{r}_{0}$ at the instant $t_{0}$ exceeded the value $E_{0}$'' is not a number; it is
+		the set of all realisations for which that happens to be the case. To say that the event
+		occurred is to say that the $\omega$ nature selected belongs to that subset. Events and
+		statements are the same thing seen from two sides, and this identification is what
+		allows probability to be built out of set theory.
+
+	\subsection{The sigma algebra, or which questions may be asked}
+
+		\begin{myDef}
+			\textit{(Sigma algebra)} A \textbf{sigma algebra} on $\Omega$ is a collection
+			$\mathcal{F}$ of subsets of $\Omega$ such that
+			\begin{enumerate}
+				\item $\Omega\in\mathcal{F}$,
+				\item if $A\in\mathcal{F}$ then $A^{c} = \Omega\setminus A\in\mathcal{F}$,
+				\item if $A_{1},A_{2},A_{3},\dots\in\mathcal{F}$ then
+				$\bigcup_{n=1}^{\infty}A_{n}\in\mathcal{F}$.
+			\end{enumerate}
+			The pair $(\Omega,\mathcal{F})$ is called a \textbf{measurable space}.
+		\end{myDef}
+
+		A sigma algebra looks like a piece of bookkeeping and is in fact a physical statement.
+		It is the \textbf{catalogue of admissible questions}, the list of statements to which
+		the theory is prepared to attach a probability, and the three axioms are exactly the
+		three properties that any honest catalogue of questions must have.
+
+		The first says that the question ``did anything at all happen?'' is admissible. The
+		second says that if we can ask whether an event occurred, we can ask whether it did not,
+		which is the formal expression of the fact that an apparatus capable of detecting
+		something is by that very fact capable of detecting its absence. The third says that if
+		each of a sequence of questions is admissible, so is the question of whether at least
+		one of them holds.
+
+		The word \textit{countable} in the third axiom is not a technical convenience but a
+		genuine physical restriction, and it deserves to be pointed out. Any real experimental
+		protocol is a \textit{sequence} of operations: one records a reading, then another, then
+		another. No laboratory has ever performed an uncountable number of operations, and the
+		theory is built so as to promise nothing about what would happen if one could.
+
+		One might ask why we do not simply take $\mathcal{F}$ to be the collection of
+		\textit{all} subsets of $\Omega$ and be done with it. The answer is that we are not
+		allowed to. Vitali showed in 1905 \citep{vitali1905problema} that on the real line there
+		exist sets so pathological that no translation invariant notion of size can be assigned
+		to them without contradiction. If we insisted on measuring everything we would be forced
+		into inconsistency, and the sigma algebra is precisely the device that keeps such
+		monsters outside the theory while retaining every set that a physicist would ever have
+		occasion to ask about.
+
+		The example we shall need constantly is the following.
+
+		\begin{myDef}
+			\textit{(Borel sigma algebra)} The \textbf{Borel sigma algebra}
+			$\mathcal{B}(\mathbb{R}^{n})$ is the smallest sigma algebra on $\mathbb{R}^{n}$
+			containing all the open sets.
+		\end{myDef}
+
+		Physically, $\mathcal{B}(\mathbb{R})$ is generated by the questions ``does the reading
+		lie between $a$ and $b$?'', together with everything that can be built from countably
+		many such questions by negation and union. This is exactly the class of questions that a
+		real detector, which has a finite resolution and reports an interval rather than a
+		point, is able to answer. The Borel sigma algebra is not an abstraction imposed on
+		physics; it is the mathematical transcription of what a graduated instrument does.
+
+	\subsection{Measure, the Lebesgue measure and the probability measure}
+
+		\begin{myDef}
+			\textit{(Measure)} A \textbf{measure} on a measurable space $(\Omega,\mathcal{F})$
+			is a function $\mu:\mathcal{F}\to[0,\infty]$ such that $\mu(\emptyset)=0$ and such
+			that, for every sequence $A_{1},A_{2},\dots$ of pairwise disjoint elements of
+			$\mathcal{F}$,
+			\begin{equation}\label{eq:CountableAdditivity}
+				\mu\left(\bigcup_{n=1}^{\infty}A_{n}\right) = \sum_{n=1}^{\infty}\mu(A_{n}).
+			\end{equation}
+			The triple $(\Omega,\mathcal{F},\mu)$ is a \textbf{measure space}.
+		\end{myDef}
+
+		A measure is a consistent way of assigning a \textit{size}. Condition
+		\eqref{eq:CountableAdditivity} is countable additivity, and it states nothing more
+		exotic than that the size of a whole assembled out of separate pieces is the sum of the
+		sizes of the pieces. That is what the word size means operationally, and a function
+		which violated it would not deserve the name.
+
+		Among all measures one is singled out by the geometry of space itself.
+
+		\begin{myDef}
+			\textit{(Lebesgue measure)} The \textbf{Lebesgue measure} $\lambda$ is the unique
+			translation invariant measure on $\mathcal{B}(\mathbb{R}^{n})$ satisfying
+			$\lambda\left(\prod_{j=1}^{n}[a_{j},b_{j}]\right) = \prod_{j=1}^{n}(b_{j}-a_{j})$.
+		\end{myDef}
+
+		The Lebesgue measure \citep{lebesgue1902integrale} is the mathematical form of the words
+		\textit{length}, \textit{area}, \textit{volume} and \textit{duration}. Every integral we
+		have written so far in these notes has been an integral against $\lambda$: when we
+		integrated over an aperture in the theory of diffraction we were measuring \textit{how
+		much aperture}, and when we integrate over the response time of a detector we are
+		measuring \textit{how long we looked}. The Lebesgue measure knows about the extent of
+		the domain and it knows nothing whatever about probability.
+
+		It is worth insisting on this separation, because in coherence theory both measures
+		appear at once and they do entirely different jobs. \textbf{The Lebesgue measure records
+		how long the detector integrated and how large the aperture was; the probability measure
+		records how likely each realisation of the source was.} The time average of a single
+		beam is an integral against $\lambda$ on the time axis; the ensemble average over
+		realisations is an integral against $P$ on $\Omega$. These are different operations on
+		different spaces, and the fact that they so often agree is not a triviality but a
+		theorem with hypotheses, to which we return at the end of this section.
+
+		The Lebesgue measure also supplies the missing justification for the densities of the
+		previous section. When in \eqref{eq:CorrFunc} we wrote
+		$p_{2}(x_{1},t_{1};x_{2},t_{2})\,dx_{1}dx_{2}$ we were tacitly assuming that the
+		probability measure on the space of values is absolutely continuous with respect to
+		$\lambda$, so that by the theorem of Radon and Nikodym
+		\citep{nikodym1930generalisation} it possesses a density. That is a physical hypothesis
+		and not a formality: it asserts that no field value occurs with strictly positive
+		probability, that is, that the source has no infinitely sharp features. A perfectly
+		monochromatic and perfectly stabilised laser would violate it, since its distribution
+		would be concentrated on a circle in the complex plane, a set of zero Lebesgue measure,
+		and no density with respect to the plane would exist.
+
+		\begin{myDef}
+			\textit{(Probability space)} A \textbf{probability measure} is a measure $P$ with
+			$P(\Omega)=1$. The triple $(\Omega,\mathcal{F},P)$ is called a \textbf{probability
+			space}.
+		\end{myDef}
+
+		The normalisation $P(\Omega)=1$ is the statement that the source does \textit{something}:
+		some realisation occurs, and the alternatives listed in $\Omega$ are exhaustive.
+		Countable additivity, read now in $P$, is the statement that mutually exclusive
+		alternatives have probabilities that add.
+
+		Here lies the crucial physical remark of this subsection. \textbf{The probability
+		measure is where the physics of the source resides.} A thermal lamp, a laser and a
+		single photon emitter may perfectly well share the same $\Omega$ and the same
+		$\mathcal{F}$, since all three could in principle produce any of the same field
+		histories; what distinguishes them is that they weight those histories differently. To
+		specify a source is to specify $P$, and every statement that coherence theory will make
+		about light is, in the last analysis, a statement about $P$.
+
+	\subsection{Random variables and the meaning of measurability}
+
+		\begin{myDef}
+			\textit{(Random variable)} Let $(\Omega,\mathcal{F},P)$ be a probability space and
+			$(S,\mathcal{S})$ a measurable space. A map $X:\Omega\to S$ is a
+			\textbf{random variable} if it is \textbf{measurable}, that is, if
+			\begin{equation}\label{eq:Measurability}
+				X^{-1}(B) = \left\{\omega\in\Omega : X(\omega)\in B\right\}\in\mathcal{F}
+				\qquad\text{for every } B\in\mathcal{S}.
+			\end{equation}
+		\end{myDef}
+
+		Two things must be said about this definition, and both are usually said too quickly.
+
+		The first is that \textbf{a random variable is not a variable that is random}. It is a
+		perfectly deterministic function. Once the realisation $\omega$ has been fixed,
+		$X(\omega)$ is a definite element of $S$, with nothing capricious about it. All the
+		randomness lives in the selection of $\omega$, which is to say in our ignorance of which
+		realisation nature has produced. The field at a point of spacetime is not fluctuating
+		because it is undecided; it is definite in each realisation and we simply do not know
+		which realisation we are in.
+
+		The second is that the measurability condition \eqref{eq:Measurability} is the
+		mathematical statement that \textbf{the instrument is a legitimate instrument}. It
+		demands that the question ``did the reading fall inside $B$?'' be one of the admissible
+		questions of $\mathcal{F}$. A non measurable map would be an apparatus that reports an
+		answer to a question the theory refuses to assign a probability to, which is a polite
+		way of saying that it reports numbers that mean nothing. Measurability is the licence to
+		exist.
+
+		Since the outcome $\omega$ is inaccessible, what an experiment actually reconstructs is
+		not $P$ but its image.
+
+		\begin{myDef}
+			\textit{(Law of a random variable)} The \textbf{law} or \textbf{distribution} of $X$
+			is the probability measure $P_{X}$ on $(S,\mathcal{S})$ defined by the push forward
+			\begin{equation}\label{eq:PushForward}
+				P_{X}(B) = P\left(X^{-1}(B)\right), \qquad B\in\mathcal{S}.
+			\end{equation}
+			If $P_{X}$ is absolutely continuous with respect to the Lebesgue measure, its
+			Radon-Nikodym derivative $p = \mathrm{d}P_{X}/\mathrm{d}\lambda$ is the
+			\textbf{probability density} of $X$.
+		\end{myDef}
+
+		The law is what a histogram estimates. Two sources built on completely different sample
+		spaces may possess identical laws for a given observable, and are then indistinguishable
+		by that observable no matter how long one measures. The density $p$ appearing here is
+		exactly the $p_{2}$ that was used without apology in \eqref{eq:CorrFunc}.
+
+		\begin{myDef}
+			\textit{(Expectation)} The \textbf{expectation} of an integrable random variable
+			$X$ is the Lebesgue integral of $X$ over the probability space,
+			\begin{equation}\label{eq:Expectation}
+				E\{X\} = \int_{\Omega}X(\omega)\,\mathrm{d}P(\omega)
+				= \int_{S}x\,\mathrm{d}P_{X}(x) = \int_{S}x\,p(x)\,\mathrm{d}\lambda(x),
+			\end{equation}
+			the second equality being the change of variables induced by \eqref{eq:PushForward}.
+		\end{myDef}
+
+		Equation \eqref{eq:Expectation} retroactively legitimises the definition
+		\eqref{eq:CorrFunc} of the correlation function. What was written there as an ensemble
+		average and what was written as an integral against a joint density are not two
+		definitions that happen to agree; they are one definition, given on $\Omega$, and its
+		image on the space of values under the push forward. The first form is conceptually
+		primary and the second is the one we can compute with.
+
+		There is now a payoff which is worth stating explicitly, because it converts the central
+		analogy of the previous section from a metaphor into a theorem. Consider the set of
+		random variables of finite second moment,
+
+		\begin{equation}\label{eq:L2Omega}
+			L^{2}(\Omega,\mathcal{F},P) = \left\{X : \Omega\to\mathbb{C} \;\middle|\; E\left\{|X|^{2}\right\}<\infty\right\},
+		\end{equation}
+		equipped with the inner product
+
+		\begin{equation}\label{eq:L2InnerProduct}
+			\braket{X,Y} = E\left\{XY^{*}\right\}.
+		\end{equation}
+
+		This is a Hilbert space, and comparing \eqref{eq:L2InnerProduct} with the definition
+		\eqref{eq:CorrFunc} of the correlation function we see that \textbf{the correlation
+		function is an inner product}, not by analogy but literally, in the space of random
+		variables of finite energy. The dot product with which the previous section began was
+		not an illustrative parallel; it was the same object, waiting for the space to be named.
+		The weight function $W$ of \eqref{eq:ProdIn} has become the measure $P$, and the sum
+		over components of \eqref{eq:DotComponents} has become the integral over $\Omega$.
+
+		From this identification one inequality follows immediately, and it is the one that
+		makes the normalised degree of coherence meaningful. The Cauchy-Schwarz inequality in
+		$L^{2}(\Omega,\mathcal{F},P)$ reads
+
+		\begin{equation}\label{eq:CauchySchwarzProb}
+			\left|E\left\{XY^{*}\right\}\right|^{2} \leq E\left\{|X|^{2}\right\}\,E\left\{|Y|^{2}\right\},
+		\end{equation}
+		so that the correlation of two random variables can never exceed the geometric mean of
+		their intensities. When we divide by that geometric mean, as anticipated at the end of
+		the previous section, the result is a pure number lying between zero and one. It is,
+		quite literally, the cosine of the angle between two vectors in a Hilbert space, and
+		this is why a degree of coherence larger than unity is not merely unobserved but
+		impossible.
+
+	\subsection{Stochastic processes}
+
+		A single random variable describes the field at one point of spacetime. To describe it
+		everywhere at once we need a family.
+
+		\begin{myDef}
+			\textit{(Stochastic process)} Let $T$ be an index set. A \textbf{stochastic
+			process} is a family $\{X_{\tau}\}_{\tau\in T}$ of random variables defined on a
+			common probability space $(\Omega,\mathcal{F},P)$, equivalently a map
+			$X:T\times\Omega\to S$ such that $X(\tau,\cdot)$ is measurable for every $\tau\in T$.
+		\end{myDef}
+
+		A stochastic process admits two readings, and the whole intuition of the subject lies in
+		holding both at once \citep{doob1953stochastic}. If we fix the index $\tau$ and let
+		$\omega$ vary, we obtain a random variable: a \textit{vertical} slice through
+		Figure~\ref{fig:randomvar}, comparing all realisations at one instant. If instead we fix
+		$\omega$ and let $\tau$ vary, we obtain a single function of the index, called a
+		\textbf{sample path} or \textbf{realisation}: a \textit{horizontal} slice, that is, one
+		of the individual curves of the figure. The experimentalist observes horizontal slices
+		and the theory speaks about vertical ones, and reconciling the two is the central
+		practical problem of statistical optics.
+
+	\subsection{The probability space of the electromagnetic field}
+
+		We can now carry out the construction that this whole section was preparing, and build
+		explicitly the probability space on which coherence theory operates. Let
+		$D\subseteq\mathbb{R}^{3}\times\mathbb{R}$ be the region of spacetime in which we intend
+		to describe the field, and recall from the chapter on electromagnetic optics that the
+		field is a complex, three component object, the analytic signal
+		$\vec{\mathcal{E}} = (\mathcal{E}_{x},\mathcal{E}_{y},\mathcal{E}_{z})$.
+
+		\textbf{The sample space.} We take
+
+		\begin{equation}\label{eq:FieldSampleSpace}
+			\Omega = \left\{\omega : D\to\mathbb{C}^{3} \;\middle|\; \omega \text{ satisfies Maxwell's equations in } D\right\},
+		\end{equation}
+		that is, the set of admissible field histories. The restriction is essential and it is
+		physical: nature does not select arbitrary functions of spacetime but only those
+		compatible with the dynamics. \textbf{Randomness enters through the sources and never
+		through the propagation}, which remains exactly as deterministic as it was in the
+		previous chapters. A probability measure on an optical field is a measure on the
+		solution space of Maxwell's equations, and this is why, as we shall see in a later
+		subsection, coherence itself obeys a wave equation.
+
+		With this choice the field becomes the simplest map imaginable, namely the evaluation of
+		a function at a point,
+
+		\begin{equation}\label{eq:EvaluationMap}
+			\mathcal{E}_{j}(\vec{r},t) : \Omega\to\mathbb{C}, \qquad \omega\mapsto\omega_{j}(\vec{r},t),
+			\qquad j\in\{x,y,z\},
+		\end{equation}
+		so that for each spacetime point and each Cartesian component the field is a complex
+		random variable, and the vector $\vec{\mathcal{E}}(\vec{r},t):\Omega\to\mathbb{C}^{3}$
+		is a $\mathbb{C}^{3}$ valued random variable. The whole field is the stochastic process
+		indexed by $T = D\times\{x,y,z\}$.
+
+		\textbf{The sigma algebra.} We equip $\Omega$ with the \textbf{cylinder sigma algebra}
+		$\mathcal{F}$, generated by the sets
+
+		\begin{equation}\label{eq:CylinderSets}
+			C = \left\{\omega\in\Omega \;\middle|\; \left(\omega(\vec{r}_{1},t_{1}),\dots,\omega(\vec{r}_{n},t_{n})\right)\in B\right\},
+			\qquad B\in\mathcal{B}(\mathbb{C}^{3n}),
+		\end{equation}
+		for every finite collection of spacetime points and every Borel set $B$.
+
+		The physical reading of \eqref{eq:CylinderSets} is the most important remark of this
+		section. \textbf{A cylinder set is exactly a statement that can be checked by placing a
+		finite number of detectors at a finite number of spacetime points and looking at their
+		readings.} No experiment has ever measured a field everywhere; every experiment samples
+		it at finitely many places and finitely many instants. The sigma algebra generated by
+		the cylinder sets is therefore the collection of all statements decidable by countable
+		sequences of finite measurements, which is to say, the collection of all statements an
+		optical experiment can ever settle. The cylinder construction is not a mathematical
+		convenience, it is the transcription of experimental practice.
+
+		\textbf{The probability measure.} It remains to place a measure on this enormous space,
+		and it would be hopeless to attempt it directly. Kolmogorov's extension theorem
+		\citep{kolmogorov1933grundbegriffe} shows that it is unnecessary.
+
+		\begin{myteo}
+			\textit{(Kolmogorov extension theorem)} Given a family of finite dimensional
+			distributions $P_{(\vec{r}_{1},t_{1}),\dots,(\vec{r}_{n},t_{n})}$ on
+			$\mathbb{C}^{3n}$, one for every finite collection of spacetime points, which is
+			consistent under permutation of the points and under marginalisation over any of
+			them, there exists a unique probability measure $P$ on the cylinder sigma algebra
+			$\mathcal{F}$ whose finite dimensional marginals are the given ones.
+		\end{myteo}
+
+		The physical content is emancipating. \textbf{To specify a source it is enough to
+		specify the joint statistics of any finite set of detector readings}, and this is
+		precisely the data that an experiment can access. We never have to say what $P$ does to
+		the monstrous space of all field histories; we say what the joint distribution of two
+		detectors is, and of three, and so on, taking care only that these prescriptions do not
+		contradict one another, and Kolmogorov guarantees that they knit together into one
+		consistent object. The probability space of an optical field is built out of exactly the
+		information a laboratory can supply.
+
+		\textbf{The finite energy hypothesis.} We assume finally that
+
+		\begin{equation}\label{eq:FiniteEnergy}
+			E\left\{\left|\mathcal{E}_{j}(\vec{r},t)\right|^{2}\right\}<\infty
+			\qquad \text{for every } j \text{ and every } (\vec{r},t)\in D,
+		\end{equation}
+		which is the statement that the mean energy density is finite, that is, that the source
+		does not radiate infinite power. Physically it is unobjectionable, and mathematically it
+		is exactly the hypothesis that places every field component inside the Hilbert space
+		\eqref{eq:L2Omega}. From this point on, every component of the field at every point of
+		spacetime is a vector in one and the same Hilbert space, and the geometry of that space
+		is the geometry of coherence.
+
+		\textbf{The coherence tensor.} We may now define, with every symbol having been given a
+		meaning, the object that the rest of this chapter studies. For two spacetime points and
+		two Cartesian components,
+
+		\begin{equation}\label{eq:CoherenceTensor}
+			\Gamma_{jk}(\vec{r},t;\vec{r}\,',t') = E\left\{\mathcal{E}_{j}(\vec{r},t)\,\mathcal{E}_{k}^{*}(\vec{r}\,',t')\right\}
+			= \braket{\mathcal{E}_{j}(\vec{r},t),\mathcal{E}_{k}(\vec{r}\,',t')},
+		\end{equation}
+		a $3\times3$ matrix attached to every pair of spacetime points, the inner product being
+		the one of \eqref{eq:L2InnerProduct}. This is the vector generalisation of the
+		correlation function \eqref{eq:CorrFunc}, and three of its properties follow at once
+		from the construction.
+
+		\begin{enumerate}
+			\item \textbf{Hermitian symmetry.} Exchanging the two points and the two indices and
+			conjugating,
+			\begin{equation}\label{eq:GammaHermitian}
+				\Gamma_{kj}^{*}(\vec{r}\,',t';\vec{r},t) = E\left\{\mathcal{E}_{k}^{*}(\vec{r}\,',t')\,\mathcal{E}_{j}(\vec{r},t)\right\} = \Gamma_{jk}(\vec{r},t;\vec{r}\,',t'),
+			\end{equation}
+			since conjugation may be taken inside the expectation, which is an integral of a
+			complex function.
+			\item \textbf{Non negative definiteness.} For any finite set of spacetime points
+			labelled by $m$ and any complex coefficients $a_{j}^{(m)}$,
+			\begin{equation}\label{eq:GammaPositive}
+				\sum_{m,n}\sum_{j,k}a_{j}^{(m)}a_{k}^{(n)*}\,\Gamma_{jk}(m;n)
+				= E\left\{\left|\sum_{m}\sum_{j}a_{j}^{(m)}\mathcal{E}_{j}(m)\right|^{2}\right\}\geq 0,
+			\end{equation}
+			because the expectation of a non negative quantity is non negative. Physically this
+			says that no superposition of field components, at whatever points, can carry
+			negative intensity.
+			\item \textbf{Bounded correlation.} By \eqref{eq:CauchySchwarzProb},
+			\begin{equation}\label{eq:GammaBound}
+				\left|\Gamma_{jk}(\vec{r},t;\vec{r}\,',t')\right|^{2} \leq \Gamma_{jj}(\vec{r},t;\vec{r},t)\;\Gamma_{kk}(\vec{r}\,',t';\vec{r}\,',t'),
+			\end{equation}
+			which is what allows the normalised degree of coherence to be confined to the
+			interval $[0,1]$.
+		\end{enumerate}
+
+		It is worth noticing where polarisation fits into this. Evaluating \eqref{eq:CoherenceTensor} at a single spacetime point,
+		$\vec{r}=\vec{r}\,'$ and $t=t'$, the diagonal entries $\Gamma_{jj}$ give the mean
+		intensity carried by each Cartesian component while the off diagonal entries measure the
+		correlation between components, and the resulting matrix is exactly the polarisation
+		matrix \eqref{eq:CoherenceMatrix} introduced in the chapter on polarisation.
+		\textbf{Polarisation is coherence between the components of the field at one point;
+		coherence proper is correlation between the field at different points.} They are the
+		same tensor read in two different regimes, which is the reason a unified treatment of
+		coherence and polarisation is possible at all \citep{wolf2007introduction}.
+
+	\subsection{Stationarity, ergodicity and the right to measure}
+
+		One question remains, and it is the question on which the experimental relevance of
+		everything above depends. The expectation \eqref{eq:Expectation} is an average over
+		$\Omega$, and $\Omega$ is not accessible: nature hands us one realisation. What we can
+		average over is time, along that single realisation. Under what conditions do the two
+		agree?
+
+		The first condition concerns the invariance of the source.
+
+		\begin{myDef}
+			\textit{(Stationarity)} Let $\theta_{\tau}:\Omega\to\Omega$ be the time shift
+			defined by $(\theta_{\tau}\omega)(\vec{r},t) = \omega(\vec{r},t+\tau)$. The field is
+			\textbf{stationary} if $P$ is invariant under every such shift,
+			\begin{equation}\label{eq:StationarityMeasure}
+				P\left(\theta_{\tau}^{-1}A\right) = P(A) \qquad \text{for all } A\in\mathcal{F} \text{ and all } \tau\in\mathbb{R}.
+			\end{equation}
+		\end{myDef}
+
+		This is the measure theoretic form of the statement, given in a more elementary way in
+		the next section, that the statistical properties of the light do not depend on when we
+		choose to start the clock. A lamp switched on an hour ago and left alone is stationary; a
+		pulsed source is not. Its immediate consequence is that the coherence tensor
+		\eqref{eq:CoherenceTensor} can depend on the two instants only through their difference,
+		$\Gamma_{jk}(\vec{r},\vec{r}\,';t,t') = \Gamma_{jk}(\vec{r},\vec{r}\,';\tau)$ with
+		$\tau=t'-t$, which is what makes the Wiener-Khinchin theorem of the following section
+		possible at all.
+
+		The second condition is stronger and concerns the indecomposability of the source.
+
+		\begin{myDef}
+			\textit{(Ergodicity)} A stationary field is \textbf{ergodic} if every shift
+			invariant event is trivial, that is, if $\theta_{\tau}^{-1}A = A$ for all $\tau$
+			implies $P(A)=0$ or $P(A)=1$.
+		\end{myDef}
+
+		Physically, ergodicity says that the source cannot be split into two sub ensembles that
+		never communicate. If it could, a single realisation would remain trapped in one of them
+		forever and could never report on the other. When it holds, Birkhoff's ergodic theorem
+		\citep{birkhoff1931proof} applies and gives the result we need,
+
+		\begin{equation}\label{eq:Ergodic}
+			\lim_{T\to\infty}\frac{1}{2T}\int_{-T}^{T}\mathcal{E}_{j}(\vec{r},t)\,\mathcal{E}_{k}^{*}(\vec{r}\,',t+\tau)\,\mathrm{d}t
+			= E\left\{\mathcal{E}_{j}(\vec{r},t)\,\mathcal{E}_{k}^{*}(\vec{r}\,',t+\tau)\right\}
+		\end{equation}
+		for almost every realisation $\omega$.
+
+		Equation \eqref{eq:Ergodic} is the licence, and the only licence, to replace the
+		inaccessible ensemble average by the accessible time average of a single beam, and it
+		is the reason the whole theory is experimentally meaningful rather than merely elegant.
+		Notice, finally, what the two sides of \eqref{eq:Ergodic} are: on the left an integral
+		against the Lebesgue measure on the time axis, on the right an integral against the
+		probability measure on $\Omega$. The two measures we were at pains to keep apart at the
+		beginning of this section meet here, in a single identity, and ergodicity is precisely
+		the hypothesis under which they may be exchanged. With that hypothesis in hand we may
+		return to physics and define the coherence function itself.
+
 \section{The coherence function}
 
 	The concept of the coherence function is, at the mathematical level, identical to that of
