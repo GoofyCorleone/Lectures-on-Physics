@@ -1,9 +1,10 @@
 \documentclass[spanish,11pt,twoside,openright]{book}
+\pdfsuppresswarningpagegroup=1 % benign: several Inkscape-exported figures share a transparency page group
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage[none]{hyphenat}
-\usepackage{microtype}
+\usepackage[patch={item,eqnum,footnote,verbatim}]{microtype} % `toc' patch disabled: titletoc (below) already owns the ToC macros
 \usepackage{geometry}
 \usepackage{bm} % to use bold on greek words
 \geometry{letterpaper,textheight=8.0in,textwidth=6.5in,headheight=20pt}
@@ -74,7 +75,10 @@
 \newtheorem{myPrinciple}{Principle}
 
 \begin{document}
-	
+
+	\frontmatter
+	\hypersetup{pageanchor=false} % the two cover pages below are unnumbered and never linked to; skip named destinations for them
+
 	% Portada título minimalista
 	\begin{titlepage}
 		\vspace*{5cm}
@@ -124,8 +128,9 @@
 		\vfill
 		{\large\today\par}
 	\end{titlepage}
-	
-	\frontmatter
+
+	\hypersetup{pageanchor=true}
+
 	\tableofcontents
 	\listoffigures
 	

@@ -1,103 +1,195 @@
 \section{A historical context of coherence theory}
 
-The history of coherence theory is an intricate and fascinating tale rooted in
-mathematics, statistics and physics, branching in classical and quantum directions with
-profound implications for our understanding of the world. To tell it, we must go back to
-the dawn of probability theory, where the idea of measuring relations between events and
-variables first took shape --- a concept that, over the centuries, would evolve into the
-refined notions of correlation and, eventually, coherence as we understand it today.
+	At its heart, coherence asks a single, almost childlike question: how much does one
+	thing resemble another, and does that resemblance survive as time goes by? It sounds too
+	simple to matter, and yet the search for a rigorous answer to that question grew, over
+	three centuries, into one of the great unifying ideas of physics: a language that
+	explains why some light sources cast crisp interference fringes while others cast none
+	at all, why a laser beam behaves so differently from a candle flame, how radio
+	astronomers photograph the shadow of a black hole without ever building a telescope the
+	size of the Earth, and why the delicate superpositions inside a quantum computer are so
+	maddeningly hard to keep alive. The story of coherence is really two stories that grew up
+	separately and only later discovered they were talking about the same thing: one begins
+	at a gambling table in seventeenth century France, and the other begins in a darkened
+	optics laboratory. It is worth following both threads from the start.
 
-It all began in the seventeenth century, when thinkers such as Blaise Pascal and Pierre
-de Fermat, in their correspondence on games of chance, laid the foundations of
-probability theory. Their reflections on expected value and combinatorics opened the way
-to Jacob Bernoulli, who in 1713, in his posthumous \textit{Ars Conjectandi}
-\cite{bernoulli1713}, formulated the law of large numbers, linking theoretical
-probability with observed frequency. These advances were consolidated by Pierre-Simon
-Laplace in 1812 with his \textit{Théorie Analytique des Probabilités}
-\cite{laplace1812theorie}, where he unified scattered ideas and developed Bayesian
-inference, essential for understanding how variables relate in complex systems. Yet a
-mathematical language was still missing to quantify the interdependence between phenomena.
+	The first thread is the story of correlation, and it begins, fittingly, with a bet.
+	In 1654 the nobleman and gambler Antoine Gombaud, better known as the Chevalier de
+	Méré, wrote to Blaise Pascal asking how the stakes of an interrupted game of dice should
+	fairly be divided between two players. The resulting correspondence between Pascal and
+	Pierre de Fermat, working out the mathematics of expectation and combinatorics needed to
+	answer such questions, is generally credited as the birth of probability theory. Their
+	ideas matured slowly. In 1713, sixty years later, Jacob Bernoulli's posthumous book
+	\textit{Ars Conjectandi} \cite{bernoulli1713} proved the law of large numbers, the
+	remarkable fact that if you repeat a random experiment often enough, the observed
+	frequency of an outcome settles down, ever more reliably, around its true theoretical
+	probability. A century later still, in 1812, Pierre Simon Laplace gathered these
+	scattered results, together with his own theory of how new evidence should update our
+	beliefs (what we now call Bayesian inference), into the monumental
+	\textit{Théorie Analytique des Probabilités} \cite{laplace1812theorie}. What was still
+	missing from this whole tradition was a number, a single figure that could say not just
+	how uncertain one quantity is, but how strongly two different quantities move together.
 
-That language began to take form in the nineteenth century. Carl Friedrich Gauss, in his
-1809 study of errors in astronomical observations (\textit{Theoria Motus})
-\cite{gauss1809theoria}, introduced the method of least squares, a tool that not only
-optimised measurements but also revealed hidden patterns in correlated data. But it was
-Francis Galton, in the 1880s, who coined the term ``correlation'' as we know it.
-Motivated by his studies of biological inheritance, Galton sought to measure how
-characteristics such as the height of parents and children varied together
-\cite{galton1888correlations}. His work inspired Karl Pearson, who in 1896 formalised the
-Pearson correlation coefficient \cite{pearson1896regression}, a number between $-1$ and
-$1$ quantifying the linear relationship between variables. This was a conceptual leap: no
-longer merely intuiting connections, but assigning them a rigorous numerical value.
+	That missing number arrived through an unexpected route: the very practical business
+	of dealing with noisy measurements. In 1809, working out how to fit the imperfect,
+	scatter riddled observations of planetary orbits, Carl Friedrich Gauss introduced the
+	method of least squares in his \textit{Theoria Motus} \cite{gauss1809theoria}, a
+	technique built entirely on the idea that errors cluster statistically around the truth.
+	Decades later, in the 1880s, the polymath Francis Galton, fascinated by how strongly a
+	child's height tends to track its parents', coined the very word ``correlation'' to
+	describe exactly this kind of joint tendency \cite{galton1888correlations}. It fell to
+	his student Karl Pearson, in 1896, to turn Galton's intuition into a precise formula: the
+	Pearson correlation coefficient \cite{pearson1896regression}, a single number, always
+	between minus one and plus one, that tells you at a glance whether two quantities march
+	together, drift apart, or ignore each other completely. For the first time, resemblance
+	between two things could be measured rather than merely felt.
 
-In parallel, in the realm of physics, another kind of correlation --- coherence --- began
-to reveal itself through the study of light. In 1801 Thomas Young performed his celebrated
-double-slit experiment, showing that light interferes with itself, creating patterns of
-bright and dark fringes. This phenomenon, inexplicable under Newton's corpuscular theory,
-suggested that light was a wave whose phases could be correlated in space and time.
-Augustin-Jean Fresnel, between 1815 and 1820, developed a mathematical theory of light as
-a transverse wave, explaining not only interference but also polarisation. Coherence ---
-the ability of waves to maintain a constant phase relationship --- was, however, not yet
-understood in statistical terms.
+	The second thread, meanwhile, was unfolding almost entirely without reference to the
+	first, in the study of light itself. In 1801, Thomas Young let sunlight fall through two
+	narrow slits and watched it paint a row of bright and dark bands on a screen behind
+	them \cite{young1804bakerian}, the unmistakable signature of two waves sometimes
+	reinforcing and sometimes cancelling one another. For those fringes to appear at all, the
+	light leaving the two slits had to keep a steady, dependable phase relationship with
+	itself, a property nobody yet had a name for, though everybody could see its footprint on
+	the screen. Between 1815 and 1820, Augustin Jean Fresnel built the full mathematical
+	theory of light as a transverse wave, and with it interference and polarisation stopped
+	being curiosities and became consequences of a single physical picture. And yet a puzzle
+	quietly remained. Young's beam, freshly split from a single narrow slit, produced fringes
+	beautifully. But ordinary daylight, or the light of a candle, or of the Sun itself, never
+	produced anything of the sort when simply allowed to interfere with a delayed copy of
+	itself beyond a certain separation. Something about real, everyday light was different
+	from the idealised, perfectly regular wave that Fresnel's mathematics described, and for
+	a hundred years nobody could quite say what.
 
-The crucial step came in the first decades of the twentieth century, when optics met the
-need to describe realistic light sources, such as the Sun or incandescent lamps, whose
-emissions are partly random. In 1934 the Dutch physicist Pieter Hendrik van Cittert
-published a seminal work on the propagation of coherence from an incoherent source
-\cite{vancittert1934}, followed in 1938 by Frits Zernike \cite{zernike1938}, who
-formulated the theorem that bears both their names: the \textbf{van Cittert--Zernike
-theorem}. This result established that the light from an extended, incoherent source
-develops measurable spatial correlations as it propagates to a distant plane. It was the
-first time coherence had been quantified mathematically as a statistical property of
-optical fields.
+	The answer, when it finally came in the twentieth century, is that ordinary light
+	sources are not single, orderly waves at all. A hot filament, a flame, or the surface of
+	the Sun is an enormous crowd of independent atoms, each one emitting its own short burst
+	of light and then falling silent, entirely out of step with its neighbours, so that the
+	overall wave forms and reforms its phase billions of times each second in a way that is,
+	for all practical purposes, random. Describing such light properly meant marrying the two
+	separate traditions that had grown up in isolation: the statistical machinery of Pascal,
+	Gauss, Galton and Pearson had to be grafted onto the wave optics of Young and Fresnel.
+	That graft is exactly what the word ``coherence'' now names: not whether a wave has a
+	phase, every wave does, but whether that phase remains predictable enough, for long
+	enough and over a wide enough region, to leave a visible trace when the wave is made to
+	interfere with a copy of itself.
 
-Classical coherence theory reached maturity in the 1950s through Max Born and Emil Wolf,
-whose treatise \textit{Principles of Optics} (1959) \cite{born1999principles} became the
-bible of theoretical optics. In it they defined the \textbf{mutual coherence function}
+	The decisive mathematical step was taken in the 1930s. In 1934 the Dutch physicist
+	Pieter Hendrik van Cittert worked out how the statistical correlations in the light from
+	an incoherent, extended source, a distant star, for instance, change as that light
+	travels away from the source \cite{vancittert1934}, and in 1938 Frits Zernike
+	sharpened and generalised the result into the theorem that today carries both their
+	names \cite{zernike1938}. The van Cittert Zernike theorem makes a beautifully
+	counterintuitive claim: light that starts out utterly incoherent, with every point on the
+	source flickering independently of every other, becomes measurably, predictably more
+	coherent purely by virtue of travelling a long distance. This is not a minor footnote. It
+	is the physical principle that allows astronomers to measure the angular size of stars
+	far too small for any telescope to resolve directly, by comparing the light collected at
+	two separated points and watching how the fringes fade as the separation grows, exactly
+	the trick Albert Michelson and Francis Pease used in 1920 to measure the diameter of the
+	red giant Betelgeuse \cite{michelson1921diameter}. Decades later, the very same theorem,
+	scaled up from a handful of metres to a network of radio dishes spanning the whole planet,
+	is what let the Event Horizon Telescope collaboration reconstruct, in 2019, the first
+	direct image of a black hole.
 
-\begin{equation}
-	\Gamma(\mathbf{r}_1, \mathbf{r}_2, \tau),
-\end{equation}
+	Classical coherence theory found its definitive, mature form in the work of Max Born and
+	Emil Wolf, whose treatise \textit{Principles of Optics} \cite{born1999principles} gathered
+	every strand into a single object, the mutual coherence function, which simply measures
+	how correlated the light wave is between two points in space and two moments in time.
+	Squeezed inside that one function are both of the qualities an experimenter actually
+	cares about: the temporal coherence, essentially how pure a colour the light is and for
+	how long it keeps a steady rhythm with itself, and the spatial coherence, how faithfully
+	the wave stays in step across an extended region rather than just at a single point.
+	Leonard Mandel and Wolf later expanded this picture into the full treatise
+	\textit{Optical Coherence and Quantum Optics} \cite{mandel1995optical}, sharpening the
+	practical notions of coherence time and coherence length that every laboratory now takes
+	for granted. None of this stayed confined to the blackboard. The Michelson interferometer
+	of the 1890s already exploited temporal coherence to measure wavelengths with a precision
+	no ruler could match, and the invention of the laser in 1960, whose light is coherent to
+	a degree no natural source ever achieves, turned coherence from a subject of theoretical
+	fascination into the working principle behind fibre optic communication, precision
+	metrology, holography and modern medicine.
 
-which measures the correlation between the electric field at two points in space
-($\mathbf{r}_1$ and $\mathbf{r}_2$) at two instants separated by a delay $\tau$. This
-function encapsulates both the temporal coherence (how long the light maintains a stable
-phase, related to its monochromaticity) and the spatial coherence (how correlated the
-vibrations are at different positions). Leonard Mandel and Emil Wolf, in the following
-decades, deepened these ideas in their treatise \textit{Optical Coherence and Quantum
-Optics} \cite{mandel1995optical}, introducing concepts such as the coherence time and the
-coherence length, key for practical applications.
+	Nor does coherence belong to optics alone. Wherever many independent parts of a system
+	can be made to oscillate in step, something with exactly the same mathematical anatomy
+	appears. In condensed matter physics, superconductivity is, at bottom, a coherence
+	phenomenon: below a critical temperature, an enormous population of paired electrons
+	locks into a single, shared quantum phase across an entire macroscopic sample, which is
+	why a supercurrent flows without any resistance at all. Nuclear magnetic resonance and
+	the magnetic resonance imaging built upon it work by tipping billions of nuclear spins
+	into a common, coherent precession and then watching, with exquisite sensitivity, how
+	quickly that shared rhythm decays. Every atomic clock, and with it the entire Global
+	Positioning System, depends on an oscillator whose phase stays coherent for as long as
+	humanly achievable. Coherence, in short, is not a peculiarity of light; it is what allows
+	countless independent actors, electrons, spins, atoms or photons, to behave, briefly and
+	fragilely, as one.
 
-Coherence was not a mere abstraction: the Michelson interferometer, developed in the
-1890s, exploited temporal coherence to measure wavelengths with unprecedented precision.
-But the technological milestone arrived in 1960 with the invention of the laser, whose
-light --- highly coherent in time and space --- is the product of stimulated emission, a
-phenomenon predicted by Einstein in 1917. Lasers not only confirmed the theories of
-coherence but opened new frontiers in communications, medicine and industry.
+	While all of this classical machinery was being consolidated, an entirely separate and
+	stranger story was unfolding in the quantum world. Its opening scene took place in 1956,
+	when Robert Hanbury Brown and Richard Twiss, trying to measure the angular sizes of
+	stars with radio and then optical detectors, found that photons arriving from a thermal
+	source at two separated detectors were not independent: they tended to arrive in
+	correlated little bunches \cite{hanburybrown1956correlation}. The result seemed to many
+	physicists at the time to be flatly impossible. Photons, everyone assumed, should behave
+	like classical, independent particles once detected, and no such correlation should
+	survive the act of measurement; a real and lively controversy followed before the effect
+	was accepted. Untangling it properly required a fully quantum theory of coherence, and
+	that theory was supplied in 1963, almost simultaneously and independently, by Roy Glauber
+	\cite{glauber1963quantum} and George Sudarshan \cite{sudarshan1963equivalence}. Glauber
+	introduced the coherent states, the quantum states of light that behave as closely as
+	quantum mechanics permits to Fresnel's classical waves, and defined a whole hierarchy of
+	quantum correlation functions capable of explaining Hanbury Brown and Twiss's bunching
+	rigorously, and of predicting its mirror image, photon antibunching, a behaviour so
+	stubbornly non classical that no wave theory of light could ever reproduce it, later
+	confirmed in the laboratory. Sudarshan, working from a different direction, found the
+	precise mathematical boundary, now called the Glauber Sudarshan representation, that
+	separates light whose quantum nature can safely be ignored from light for which it
+	cannot. For this quantum theory of optical coherence, Glauber received the Nobel Prize in
+	2005, and the field he founded is what we now call quantum optics.
 
-While classical coherence was being consolidated, a parallel revolution was beginning in
-the quantum world. In the 1960s quantum coherence found its theoretical framework. Roy J.
-Glauber, in a series of articles published in \textit{Physical Review} (1963)
-\cite{glauber1963quantum}, reformulated optics from a quantum perspective. He introduced
-the \textbf{coherent states}, quantum analogues of classical waves with well-defined
-phase, and defined the quantum correlation functions $g^{(n)}$, which measure the
-probability of detecting several correlated photons. His work, awarded the Nobel Prize in
-2005, not only explained phenomena such as photon antibunching but also laid the
-foundations of modern quantum optics. The mathematical backbone connecting the statistical
-description of fluctuations with their spectral content --- the
-Wiener--Khinchin theorem \cite{wiener1930generalized,khinchin1934korrelationstheorie} ---
-remains, as we shall see, one of the central pillars of the whole edifice.
+	Quantum coherence turned out to matter for reasons that reach far beyond photon
+	counting. It is quantum coherence, the delicate, phase locked superposition of many
+	possible states at once, that makes a quantum bit fundamentally different from an
+	ordinary one, and it is the loss of that coherence through unavoidable contact with the
+	environment, a process physicists call decoherence, that explains why the everyday world
+	around us looks so stubbornly classical even though it is built from quantum parts.
+	Keeping coherence alive for long enough to be useful is, to this day, the single greatest
+	engineering obstacle standing between today's quantum computers and tomorrow's. The same
+	idea reappears in the coldest matter physicists know how to make: in 1995 Eric Cornell,
+	Carl Wieman and Wolfgang Ketterle cooled clouds of atoms to nanokelvin temperatures and
+	watched millions of them collapse into a single, shared quantum state, a Bose Einstein
+	condensate, in effect one enormous coherent matter wave, an achievement recognised with
+	the Nobel Prize in 2001. It even reaches into biology: careful experiments on the
+	light harvesting complexes that plants and certain bacteria use to capture sunlight have
+	found that quantum coherence in the transfer of that energy survives, astonishingly, for
+	measurable fractions of a second at room temperature, hinting that evolution may have
+	stumbled upon and exploited quantum coherence long before physicists gave it a name.
 
-In the twenty-first century, coherence has acquired a new flavour: the idea that it is a
-quantifiable and exploitable \textbf{resource}, akin to energy or information
-\cite{baumgratz2014quantifying}, integrated into the broader scheme of quantum computation.
-In summary, the history of coherence is a journey from the abstract mathematics of
-statistical correlations to the engineering of fragile quantum states. In its classical
-guise it explains why stars twinkle, how lasers work and why holograms capture
-three-dimensional images; in its quantum facet it challenges our intuition. And although
-decoherence reminds us that these phenomena are ephemeral, it also underlines their value:
-in a world where noise and chance seem to reign, coherence --- classical or quantum --- is
-the thread that weaves order out of chaos.
+	Binding the statistical and the wave pictures of coherence together, classical and
+	quantum alike, is a single piece of mathematics: the Wiener Khinchin theorem, developed
+	independently by Norbert Wiener in 1930 \cite{wiener1930generalized} and Aleksandr
+	Khinchin in 1934 \cite{khinchin1934korrelationstheorie}, which states that the
+	correlation of a fluctuating signal with itself and the way that signal's energy is
+	spread across frequency are simply two faces of the same object, translated into one
+	another by a Fourier transform. It is, as later chapters will show, the quiet
+	mathematical hinge on which the whole subject turns.
+
+	In the twenty first century coherence has acquired one further identity: it is now
+	understood, and formally quantified, as a genuine physical resource, something that can
+	be created, spent and depleted much like energy or entanglement, with its own rigorous
+	accounting rules inside the broader theory of quantum information
+	\cite{baumgratz2014quantifying}. Seen end to end, the history of coherence runs from a
+	seventeenth century argument about dice, through the statistics of inherited height and
+	the interference of sunlight, to the imaging of a black hole and the fragile inner
+	workings of a quantum processor. In its classical guise it explains why stars twinkle
+	the way they do, why a laser can cut steel while a torch cannot, and why an interferometer
+	the size of a planet can photograph something no single telescope ever could. In its
+	quantum guise it explains why the world of atoms feels so unlike the world of tables and
+	chairs, and it now sits at the very centre of the effort to build technologies that think
+	and communicate in ways no classical machine ever could. Coherence, whether counted in
+	correlated dice throws, interfering light waves or entangled qubits, is ultimately always
+	the same thing: order, briefly and remarkably, surviving in a world that constantly
+	conspires to erase it.
 
 \section{How is statistical similarity quantified?}
 
