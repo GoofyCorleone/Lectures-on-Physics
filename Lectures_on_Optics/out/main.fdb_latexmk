@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex out/main"] 1788061962.35237 "out/main.aux" "out/main.bbl" "out/main" 1788061964.03593 0
+["bibtex out/main"] 1788062423.42313 "out/main.aux" "out/main.bbl" "out/main" 1788062425.05492 0
   "./references.bib" 1788061315.63087 12501 5627b9b96a7f81970c1c050fdba8a3aa ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "out/main.aux" 1788061963.78019 68863 5b67ae4645ffd3a9102970ec92222cae "pdflatex"
+  "out/main.aux" 1788062424.81027 68863 5b67ae4645ffd3a9102970ec92222cae "pdflatex"
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1788061962.42068 "main.tex" "out/main.pdf" "main" 1788061964.0361 0
+["pdflatex"] 1788062423.50005 "main.tex" "out/main.pdf" "main" 1788062425.05508 0
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -277,15 +277,15 @@
   "Chapter 6/Figures/Propagation2.pdf" 1788059544.28771 22476 c66512ec23898ab6763a5ee947c880f7 ""
   "Chapter 6/Figures/Random2.pdf" 1788059544.28813 25569 4cfc8b4378a401590155428b9e7cc468 ""
   "Chapter 6/Figures/RandomVar.pdf" 1788059544.28832 14567 2ee5e89219d1458896545cd7882c3f39 ""
-  "Chapter 6/chap6.tex" 1788061950.89898 52677 790210d7881fd46bbb27fcd5cdfed09f ""
+  "Chapter 6/chap6.tex" 1788062159.26702 53430 c499551635d93e3953a4920b2d0cf057 ""
   "Figures/LoGOTS.png" 1788059544.30232 58761 d30b2db1e9efaf752cebe7551c894d9d ""
   "Figures/logouis.png" 1788059544.30252 62450 f09c4e4b788c95739ca2931443f6d84e ""
   "main.tex" 1788060954.01314 6521 95ce45918a0992cbbb01887a87aa040a ""
-  "out/main.aux" 1788061963.78019 68863 5b67ae4645ffd3a9102970ec92222cae "pdflatex"
-  "out/main.bbl" 1788061962.41673 10356 79e61ecdb6bb5cc93f5f1e77d841e251 "bibtex out/main"
-  "out/main.lof" 1788061963.7842 14163 fb599cb9fb788af10ec4dd84feed4c81 "pdflatex"
-  "out/main.out" 1788061963.78394 16544 344a61faa32f6f537bae90622397ae66 "pdflatex"
-  "out/main.toc" 1788061963.78411 8967 fc3fc405b5e23afbd6c5c337749d4e7f "pdflatex"
+  "out/main.aux" 1788062424.81027 68863 5b67ae4645ffd3a9102970ec92222cae "pdflatex"
+  "out/main.bbl" 1788062423.49583 10356 79e61ecdb6bb5cc93f5f1e77d841e251 "bibtex out/main"
+  "out/main.lof" 1788062424.81422 14163 fb599cb9fb788af10ec4dd84feed4c81 "pdflatex"
+  "out/main.out" 1788062424.81393 16544 344a61faa32f6f537bae90622397ae66 "pdflatex"
+  "out/main.toc" 1788062424.81412 8967 fc3fc405b5e23afbd6c5c337749d4e7f "pdflatex"
   (generated)
   "out/main.aux"
   "out/main.lof"
