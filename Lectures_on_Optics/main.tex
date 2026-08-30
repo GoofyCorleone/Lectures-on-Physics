@@ -60,6 +60,10 @@
 {\normalfont\Huge\itshape\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
 \titlespacing*{\chapter}{0pt}{0pt}{0pt}
 
+% Numerar también las subsubsecciones (y que aparezcan enumeradas en el índice)
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
 % Estilo para epígrafes de capítulos
 \setlength{\epigraphrule}{0pt}
 \renewcommand{\epigraphsize}{\large}
@@ -73,6 +77,7 @@
 \newtheorem{myteo}{Theorem}
 \newtheorem{myDef}{Definition}
 \newtheorem{myPrinciple}{Principle}
+\newtheorem{Assumption}{Assumption}
 
 \begin{document}
 

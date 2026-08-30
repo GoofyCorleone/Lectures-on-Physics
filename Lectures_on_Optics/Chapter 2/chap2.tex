@@ -518,7 +518,7 @@
         so, the last things we have to do are is re organize in the following way
 
         \begin{equation}\label{eq:DescartesOvoid}
-            \left[ \left(n_i^2-n_o^2\right)\rho^2 - 2z\left( n_o^2z_o - n_i^2z_i  \right) \right]^2 - 4n_in_o \left[ n_iz_i - n_oz_o \right]\left[ \left( n_oz_i - n_iz_o \right)\rho^2 + 2zz_oz_i\left(n_i - n_o\right) \right]=0.
+            \left[ \left(n_i^2-n_o^2\right)\rho^2 - 2z\left( n_i^2z_i - n_o^2z_o  \right) \right]^2 - 4n_in_o \left[ n_iz_i - n_oz_o \right]\left[ \left( n_oz_i - n_iz_o \right)\rho^2 + 2zz_oz_i\left(n_i - n_o\right) \right]=0.
         \end{equation}
 
         \textbf{\textit{The equation \ref{eq:DescartesOvoid} is the algebraic expression for the Descartes Ovoid the rigorously stigmatic surface we wanted.}} 
@@ -528,7 +528,7 @@
         Now, we are going to see that the Descartes Ovoid \ref{eq:DescartesOvoid} contains the information of all the other diopters known. So, the first one we are going to deduce is the spherical diopter this is obtained in a vicinity of the vertex shown in the figure \ref{fig:AlmostOvoid}. Therefore, to deduce this particular case, we are going to take the equation \ref{eq:DescartesOvoid} and rewrite in the following convenient way
 
         \begin{equation}\label{eq:DescartesOvoid2}
-            \left[ \left(n_o^2-n_i^2\right)\rho^2 + 2zz_oz_i\left( \frac{n_i^2}{z_o} - \frac{n_o^2}{z_i}\right) \right]^2 - 4n_in_o \left[ n_iz_i - n_oz_o \right]\left[ \left( n_oz_i - z_iz_o \right)\rho^2 + 2zz_oz_i\left(n_i - n_o\right) \right]=0.
+            \left[ \left(n_o^2-n_i^2\right)\rho^2 + 2zz_oz_i\left( \frac{n_i^2}{z_o} - \frac{n_o^2}{z_i}\right) \right]^2 - 4n_in_o \left[ n_iz_i - n_oz_o \right]\left[ \left( n_oz_i - n_iz_o \right)\rho^2 + 2zz_oz_i\left(n_i - n_o\right) \right]=0.
         \end{equation}
 
         So, the main idea is to construct the sphere that is located in the vertex $v$. To do this, we must see that the squared term in \ref{eq:DescartesOvoid2} looks very similar to the right factor term in the second term, so, we want to equate them and then simplify, which leads us to the following equations
@@ -936,3 +936,727 @@
 
                 
                 
+
+        \section{Explicit formulation of the Descartes ovoids}
+
+                Everything we have built so far has left us with the Descartes ovoid written in the implicit form \ref{eq:DescartesOvoid}, that is, as the zero set of a quartic polynomial $F(x,y,z)=0$. That form is beautiful for proving things, because every degenerate case we studied, the sphere, the ellipsoid, the hyperboloid, the paraboloid and the plane, was obtained simply by looking at what the polynomial does under a particular choice of $n_o,n_i,z_o,z_i$. But the implicit form is nearly useless for the person who has to actually build the surface. An optical designer, a lens grinder or a diamond turning machine does not want to know the set of points that annihilate a quartic, they want a height, they want to be told how much material to remove at a distance $\rho$ from the axis. In other words, they want the \textit{sag} of the surface, the explicit function $z(\rho)$.
+
+                So the goal of this section is purely practical, we want to solve \ref{eq:DescartesOvoid} for $z$. The obstacle is that the equation is quartic in $z$, and a brute force attack on a quartic is a nightmare. The trick, which is the whole content of this section, is to notice that the ovoid is secretly a much simpler object, a \textit{superconic}, and that when written in superconic form the equation becomes quadratic in $z$, which we can solve with the formula we learned as children.
+
+            \subsection{The Descartes ovoid as a superconic}
+
+                A superconic is a surface of revolution around the optical axis defined by
+                \begin{equation}\label{eq:SuperconicGeneral}
+                    c_0Gz^2 - 2\left( 1 + b_1\rho^2 + b_2\rho^4 + \cdots \right)z + \left( c_0 + c_1\rho^2 + c_2\rho^4 + \cdots \right)\rho^2 = 0,
+                \end{equation}
+                where $G$ is the conic constant, also called the Schwarzschild constant \citep{schwarzschild1905untersuchungen}, and $c_0$ is the paraxial curvature, that is, the curvature the surface has right at the vertex. If we kill every deformation coefficient, $b_j = c_j = 0$ for $j\geq 1$, the surface collapses to
+                \begin{equation}\label{eq:StandardConic}
+                    c_0Gz^2 - 2z + c_0\rho^2 = 0,
+                \end{equation}
+                which is the standard conic of revolution. So a superconic is nothing but a conic that has been allowed to deform, term by term, in even powers of $\rho$.
+
+                Now comes the claim that makes everything work, \textit{the Descartes ovoid is a superconic truncated at the very first deformation order}. To see it, take the ovoid \ref{eq:DescartesOvoid}
+                \begin{equation*}
+                    \left[ \left(n_i^2-n_o^2\right)\rho^2 - 2z\left( n_i^2z_i - n_o^2z_o \right) \right]^2 - 4n_in_o \left( n_iz_i - n_oz_o \right)\left[ \left( n_oz_i - n_iz_o \right)\rho^2 + 2zz_oz_i\left(n_i - n_o\right) \right]=0,
+                \end{equation*}
+                and divide the whole equation by the constant
+                \begin{equation}\label{eq:OvoidNormaliser}
+                    \mathcal{N} = 4n_in_oz_iz_o\left( n_i-n_o \right)\left( n_iz_i - n_oz_o \right).
+                \end{equation}
+
+                Let us do it piece by piece, because this is where the four shape parameters are born. The second term of the ovoid divided by $\mathcal{N}$ gives
+                \begin{align*}
+                    & -\frac{ {\color{red} 4n_in_o \left( n_iz_i - n_oz_o \right)} \left[ \left( n_oz_i - n_iz_o \right)\rho^2 + 2zz_oz_i\left(n_i - n_o\right) \right]}{ {\color{red} 4n_in_o\left( n_iz_i - n_oz_o \right)}z_iz_o\left( n_i-n_o \right)} = \\
+                    & -\frac{\left( n_oz_i - n_iz_o \right)\rho^2}{z_iz_o\left( n_i-n_o \right)} - \frac{2z {\color{red} z_oz_i\left(n_i-n_o\right)}}{ {\color{red} z_iz_o\left( n_i-n_o \right)}} = \frac{n_iz_o - n_oz_i}{z_iz_o\left(n_i - n_o\right)}\rho^2 - 2z,
+                \end{align*}
+                which already has the shape $O\rho^2 - 2z$ of the superconic \ref{eq:StandardConic} if we baptise
+                \begin{equation}\label{eq:ShapeO}
+                    O = \frac{n_iz_o - n_oz_i}{z_iz_o\left(n_i-n_o\right)}.
+                \end{equation}
+
+                The first term of the ovoid is a perfect square, so we expand it before dividing,
+                \begin{align*}
+                    & \left[ \left(n_i^2-n_o^2\right)\rho^2 - 2z\left( n_i^2z_i - n_o^2z_o \right) \right]^2 = \\
+                    & \left(n_i^2-n_o^2\right)^2\rho^4 - 4z\left(n_i^2-n_o^2\right)\left( n_i^2z_i - n_o^2z_o \right)\rho^2 + 4z^2\left( n_i^2z_i-n_o^2z_o \right)^2,
+                \end{align*}
+                and now we divide each of these three pieces by $\mathcal{N}$. The coefficient of $z^2$ becomes
+                \begin{equation*}
+                    \frac{ {\color{red} 4}\left( n_i^2z_i-n_o^2z_o \right)^2}{ {\color{red} 4}n_in_oz_iz_o\left( n_i-n_o \right)\left( n_iz_i-n_oz_o \right)} = \underbrace{\frac{\left( n_i^2z_i-n_o^2z_o \right)^2}{n_in_o\left( n_iz_i-n_oz_o \right)\left( n_iz_o-n_oz_i \right)}}_{G}\;\underbrace{\frac{n_iz_o-n_oz_i}{z_iz_o\left(n_i-n_o\right)}}_{O} = OG,
+                \end{equation*}
+                where we have simply multiplied and divided by $\left( n_iz_o - n_oz_i \right)$ in order to make the factor $O$ appear. The coefficient of $z\rho^2$ becomes
+                \begin{align*}
+                    & -\frac{4\left(n_i^2-n_o^2\right)\left( n_i^2z_i-n_o^2z_o \right)}{4n_in_oz_iz_o\left( n_i-n_o \right)\left( n_iz_i-n_oz_o \right)} = -\frac{\left(n_i+n_o\right) {\color{red} \left(n_i-n_o\right)}\left( n_i^2z_i-n_o^2z_o \right)}{n_in_oz_iz_o {\color{red} \left( n_i-n_o \right)}\left( n_iz_i-n_oz_o \right)} = \\
+                    & -2\underbrace{\frac{\left(n_i+n_o\right)\left( n_i^2z_i - n_o^2z_o \right)}{2n_in_oz_iz_o\left( n_iz_i-n_oz_o \right)}}_{S},
+                \end{align*}
+                and finally the coefficient of $\rho^4$ becomes
+                \begin{equation*}
+                    \frac{\left(n_i^2-n_o^2\right)^2}{4n_in_oz_iz_o\left( n_i-n_o \right)\left( n_iz_i-n_oz_o \right)} = \frac{\left(n_i+n_o\right)^2 {\color{red} \left(n_i-n_o\right)^2}}{4n_in_oz_iz_o {\color{red} \left( n_i-n_o \right)}\left( n_iz_i-n_oz_o \right)} = \underbrace{\frac{\left(n_i-n_o\right)\left(n_i+n_o\right)^2}{4n_in_oz_iz_o\left( n_iz_i-n_oz_o \right)}}_{T}.
+                \end{equation*}
+
+                Collecting the four pieces, the Descartes ovoid has been transformed into
+                \begin{equation}\label{eq:OvoidSuperconic}
+                    f(z,\rho) = OGz^2 - 2\left( 1 + S\rho^2 \right)z + \left( O + T\rho^2 \right)\rho^2 = 0,
+                \end{equation}
+                which is exactly the superconic \ref{eq:SuperconicGeneral} truncated at $b_1$ and $c_1$, with $b_1 = S$ and $c_1 = T$. The four quantities we found along the way,
+                \begin{align}
+                    & G = \frac{\left( n_i^2z_i - n_o^2z_o \right)^2}{n_in_o\left( n_iz_i - n_oz_o \right)\left( n_iz_o - n_oz_i \right)},\label{eq:ShapeG}\\
+                    & O = \frac{n_iz_o - n_oz_i}{z_iz_o\left( n_i - n_o \right)},\label{eq:ShapeO2}\\
+                    & T = \frac{\left( n_i-n_o \right)\left( n_i+n_o \right)^2}{4n_in_oz_iz_o\left( n_iz_i - n_oz_o \right)},\label{eq:ShapeT}\\
+                    & S = \frac{\left( n_i+n_o \right)\left( n_i^2z_i - n_o^2z_o \right)}{2n_in_oz_iz_o\left( n_iz_i - n_oz_o \right)},\label{eq:ShapeS}
+                \end{align}
+                are called the \textbf{shape parameters} $GOTS$ of the ovoid, and they carry the whole physics of the surface, because the two refraction indices and the two conjugate positions enter the geometry only through these four numbers.
+
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.85\textwidth]{Chapter 2/Figures/SuperconicGeometry.pdf}
+                    \caption{Rigorously stigmatic quartic surface described in the meridional plane by the polar parameters $\rho$ and $\varphi$ measured from the vertex $\mathcal{O}$. The object point $A_o$ at $z_o$ and the image point $A_i$ at $z_i$ are the strictly stigmatic pair, and at the incidence point $I$ the vectorial Snell-Descartes law $n_o\hat{u} - n_i\hat{u}' = \kappa\hat{N}$ is satisfied.}
+                    \label{fig:SuperconicGeometry}
+                \end{figure}
+
+                These four parameters are not independent. If we compute the product $GOT$ we find
+                \begin{align*}
+                    & GOT = \left[ \frac{\left( n_i^2z_i - n_o^2z_o \right)^2}{n_in_oz_iz_o\left(n_i-n_o\right)\left( n_iz_i - n_oz_o \right)} \right]\left[ \frac{\left( n_i-n_o \right)\left( n_i+n_o \right)^2}{4n_in_oz_iz_o\left( n_iz_i-n_oz_o \right)} \right] = \\
+                    & \frac{\left( n_i+n_o \right)^2\left( n_i^2z_i - n_o^2z_o \right)^2}{4n_i^2n_o^2z_i^2z_o^2\left( n_iz_i - n_oz_o \right)^2} = \left[ \frac{\left( n_i+n_o \right)\left( n_i^2z_i - n_o^2z_o \right)}{2n_in_oz_iz_o\left( n_iz_i-n_oz_o \right)} \right]^2 = S^2,
+                \end{align*}
+                where in the first line we already wrote $OG$ as the single fraction we obtained above. Therefore the shape parameters obey the constraint
+                \begin{equation}\label{eq:ShapeConstraint}
+                    S^2 = GOT,
+                \end{equation}
+                and this ligature is precisely what distinguishes a Descartes ovoid from a generic superconic. A superconic with four freely chosen parameters is just a deformed conic with no particular optical virtue, while a superconic whose parameters satisfy \ref{eq:ShapeConstraint} is rigorously stigmatic. The constraint is therefore the algebraic fingerprint of perfect imaging.
+
+                It is worth pausing on what the constraint costs us. We have four parameters and one equation between them, so only three are free, and this matches the physical counting, because the surface is determined by the ratio of the indices and by the two conjugate distances, that is, by three independent numbers. Notice also that if we send either conjugate point to infinity, $z_o\to\infty$ or $z_i\to\infty$, both $S$ and $T$ carry a $z_iz_o$ in the denominator and therefore vanish, and \ref{eq:OvoidSuperconic} degenerates into the standard conic \ref{eq:StandardConic}. This is the algebraic version of everything we found in the previous sections, the conics are the ovoids with one conjugate point at infinity.
+
+            \subsection{The explicit formulation}
+
+                Now that the ovoid is quadratic in $z$, the rest is elementary. Reading \ref{eq:OvoidSuperconic} as $az^2+bz+c=0$ with $a = OG$, $b = -2(1+S\rho^2)$ and $c = (O+T\rho^2)\rho^2$, the quadratic formula gives
+                \begin{align*}
+                    & z = \frac{2\left( 1+S\rho^2 \right) \pm \sqrt{4\left( 1+S\rho^2 \right)^2 - 4OG\left( O+T\rho^2 \right)\rho^2}}{2OG} = \\
+                    & \frac{\left( 1+S\rho^2 \right)\pm\sqrt{\left( 1+S\rho^2 \right)^2 - OG\left( O+T\rho^2 \right)\rho^2}}{OG},
+                \end{align*}
+                and expanding the discriminant
+                \begin{align*}
+                    & \left( 1+S\rho^2 \right)^2 - OG\left( O+T\rho^2 \right)\rho^2 = 1 + 2S\rho^2 + S^2\rho^4 - O^2G\rho^2 - OGT\rho^4 = \\
+                    & 1 + \left( 2S - O^2G \right)\rho^2 + \left( S^2 - GOT \right)\rho^4,
+                \end{align*}
+                so that the sag of the surface is
+                \begin{equation}\label{eq:SagBothSigns}
+                    z = \frac{1 + S\rho^2 \pm \sqrt{1 + \left(2S - O^2G\right)\rho^2 + \left(S^2 - GOT\right)\rho^4}}{OG}.
+                \end{equation}
+
+                Two things must be settled now. The first one is which of the two signs is the physical branch. The surface has to pass through the vertex $\mathcal{O}$, which is the origin of our coordinates, therefore we must demand $z\to0$ when $\rho\to0$. Putting $\rho=0$ in \ref{eq:SagBothSigns} gives $z = (1\pm1)/OG$, which is $2/OG$ for the plus sign and $0$ for the minus sign. Hence \textit{the Descartes ovoid is the branch with the minus sign}, and the branch with the plus sign is the outer sheet of the quartic, the second surface hidden inside the same polynomial.
+
+                The second thing is the ligature \ref{eq:ShapeConstraint}. Because $S^2 - GOT = 0$, the quartic term inside the radical dies and the expression collapses to
+                \begin{equation}\label{eq:SagMinus}
+                    z = \frac{1}{OG}\left( 1 + S\rho^2 - \sqrt{1 + \left( 2S - O^2G \right)\rho^2} \right).
+                \end{equation}
+
+                This is already explicit, but it is numerically ugly, because for small $\rho$ it is the difference of two numbers that are both close to one, divided by $OG$, which can itself be small. The cure is to rationalise, multiplying and dividing by the conjugate,
+                \begin{align*}
+                    & z = \frac{1}{OG}\frac{\left( 1 + S\rho^2 - \sqrt{1+\left(2S-O^2G\right)\rho^2} \right)\left( 1 + S\rho^2 + \sqrt{1+\left(2S-O^2G\right)\rho^2} \right)}{1+S\rho^2 + \sqrt{1+\left(2S-O^2G\right)\rho^2}} = \\
+                    & \frac{1}{OG}\frac{\left( 1+S\rho^2 \right)^2 - \left[ 1 + \left( 2S-O^2G \right)\rho^2 \right]}{1+S\rho^2+\sqrt{1+\left(2S-O^2G\right)\rho^2}},
+                \end{align*}
+                and the numerator simplifies beautifully,
+                \begin{align*}
+                    & {\color{red} 1} + {\color{blue} 2S\rho^2} + S^2\rho^4 - {\color{red} 1} - {\color{blue} 2S\rho^2} + O^2G\rho^2 = S^2\rho^4 + O^2G\rho^2 = \\
+                    & \rho^2\left( O^2G + S^2\rho^2 \right) = \rho^2\left( O^2G + GOT\rho^2 \right) = OG\rho^2\left( O + T\rho^2 \right),
+                \end{align*}
+                where in the second line we used the ligature $S^2 = GOT$ once more. The factor $OG$ cancels against the one sitting outside, and we arrive at the result we were after,
+                \begin{equation}\label{eq:OvoidExplicit}
+                    z(\rho) = \frac{\left( O + T\rho^2 \right)\rho^2}{1 + S\rho^2 + \sqrt{1 + \left( 2S - O^2G \right)\rho^2}}.
+                \end{equation}
+
+                \textbf{\textit{Equation \ref{eq:OvoidExplicit} is the explicit formulation of the Descartes ovoids.}} It is worth appreciating how much has happened here. We started from a quartic implicit surface and we ended with a closed formula that gives the height of the surface directly in terms of the radial coordinate and four numbers built out of $n_o,n_i,z_o$ and $z_i$. There is no series, no iteration and no numerical root finding, the expression is exact.
+
+                Since our radial variable was defined as $\rho^2 = x^2+y^2+z^2$, that is, the distance from the vertex to the point on the surface and not the transverse height, we recover the transverse coordinate from
+                \begin{equation}\label{eq:TransverseFromSag}
+                    r(\rho) = \pm\sqrt{\rho^2 - z^2(\rho)}, \qquad r^2 = x^2+y^2,
+                \end{equation}
+                so the pair $\left( z(\rho), r(\rho) \right)$ traces the meridional profile of the ovoid, and the full surface is obtained by revolving that profile around the optical axis.
+
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=\textwidth]{Chapter 2/Figures/CartesianSurfaces.pdf}
+                    \caption{Meridional sections of Cartesian surfaces with the refraction indices fixed at $n_o=1$ and $n_i=1.7$ while the object and image positions are varied. The solid curves are the solutions with the minus sign in \ref{eq:SagBothSigns}, which pass through the origin and are the Descartes ovoids, and the dashed curves are the solutions with the plus sign, the outer sheet of the same quartic. (a) $z_o=-10$ and $z_i=20$. (b) $z_o=-10$ and $z_i=-20$. (c) $z_o=10$ and $z_i=20$. (d) $z_o=10$ and $z_i=-20$.}
+                    \label{fig:CartesianSurfaces}
+                \end{figure}
+
+                In the figure \ref{fig:CartesianSurfaces} we can see how the two branches behave. The solid curves, which are the ones we selected, always start at the origin, while the dashed ones close the quartic from outside, and together they show how the surface makes a transition from the inner to the outer sheet. The four panels also show that the formulation handles without any modification the cases where the object or the image is virtual, that is, the cases where $z_o>0$ or $z_i<0$, which is exactly the situation that the older explicit formulations in the literature were unable to treat in a unified way. Depending on the signs, the surface opens to the right or to the left, and both are legitimate optical surfaces.
+
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=\textwidth]{Chapter 2/Figures/OvoidTable.png}
+                    \caption{Degenerate cases of refractive and reflective rigorously stigmatic surfaces according to the refraction indices and the object and image positions. For each combination of these parameters the values of the shape parameters $GOTS$ of the corresponding conic of revolution are obtained. Note that $T=S=0$ in every conic case, and that the reflective surfaces are recovered by the substitution $n_i\to-n_o$.}
+                    \label{fig:OvoidTable}
+                \end{figure}
+
+                The table \ref{fig:OvoidTable} closes the circle with everything we did in the previous sections. Every single surface we deduced by hand, the ellipsoid, the hyperboloid, the sphere, the paraboloid and their reflective versions, appears there as a particular choice of the shape parameters. Notice that in all the conic rows we have $T=S=0$, which is the algebraic statement that one of the conjugate points has been sent to infinity, and notice that the only row where $T$ and $S$ survive is the spherical refractive one, where $z_o=z_i$, that is, the second spherical diopter \ref{eq:SphericalDiopter2} where object and image sit together at the centre of the sphere.
+
+                \subsubsection{The Schwarzschild equation}
+
+                    There is one more limit worth writing down explicitly, because it connects our formula with the equation that every optical design program in the world uses. When $T = S = 0$, that is, for the conic surfaces, the expression \ref{eq:OvoidExplicit} reduces to
+                    \begin{equation}\label{eq:SagConic}
+                        z(\rho) = \frac{O\rho^2}{1+\sqrt{1-O^2G\rho^2}},
+                    \end{equation}
+                    which is still written in terms of the distance $\rho$ from the vertex, and not in terms of the transverse height $r$. To change variables we use $\rho^2 = z^2 + r^2$ in the conic \ref{eq:StandardConic},
+                    \begin{align*}
+                        & OGz^2 - 2z + O\left(z^2+r^2\right) = 0,\\
+                        & O\left( G+1 \right)z^2 - 2z + Or^2 = 0,
+                    \end{align*}
+                    which is again quadratic in $z$, and solving it and choosing once more the branch through the vertex,
+                    \begin{equation*}
+                        z = \frac{1 - \sqrt{1 - \left(G+1\right)O^2r^2}}{O\left(G+1\right)},
+                    \end{equation*}
+                    and rationalising exactly as before, the numerator becomes ${\color{red}1} - {\color{red}1} + (G+1)O^2r^2$, so that
+                    \begin{equation}\label{eq:Schwarzschild}
+                        z(r) = \frac{Or^2}{1+\sqrt{1 - \left( K+1 \right)O^2r^2}}, \qquad K = G,
+                    \end{equation}
+                    which is the Schwarzschild formula for the standard conic surfaces \citep{schwarzschild1905untersuchungen}, where $K=-e^2$ is the conic constant written in terms of the eccentricity and $O$ is the curvature at the vertex.
+
+                    This tells us how to read our own result. The equation \ref{eq:OvoidExplicit} is a \textit{generalisation of the Schwarzschild equation} for the Cartesian surfaces, where $G$ generalises the Schwarzschild constant and we may call it the Descartes ovoid constant, $O$ is the paraxial curvature of the ovoid at the vertex, and $T$ is the parameter that labels the different families of ovoids. The parameter $S$ adds nothing new, since the ligature \ref{eq:ShapeConstraint} fixes it once the other three are given.
+
+        \section{Special Descartes ovoids}
+
+                With the shape parameters at hand we can now classify the ovoids in the same spirit in which one classifies the conics by their eccentricity. The classification is governed by $G$, and the reason is immediate from \ref{eq:ShapeG}, since the numerator is a perfect square and $n_in_o>0$, the sign of $G$ is nothing but the sign of the product
+                \begin{equation}\label{eq:SignOfG}
+                    \left( n_iz_i - n_oz_o \right)\left( n_iz_o - n_oz_i \right),
+                \end{equation}
+                so the whole taxonomy is decided by the relative position of the two conjugate points weighted by the indices.
+
+            \subsection{Spherovoids, \texorpdfstring{$G=0$}{G = 0}}
+
+                From \ref{eq:ShapeG} the constant $G$ vanishes if and only if the numerator vanishes,
+                \begin{equation}\label{eq:SpherovoidCondition}
+                    \left( n_i^2z_i - n_o^2z_o \right)^2 = 0 \quad\Longleftrightarrow\quad n_i^2z_i = n_o^2z_o,
+                \end{equation}
+                and the very same factor sits in the numerator of $S$, so this condition forces $G=S=0$ simultaneously. The surface is then characterised by $O$ and $T$ alone, and \ref{eq:OvoidExplicit} becomes
+                \begin{equation}\label{eq:Spherovoid}
+                    z(\rho) = \frac{\left( O+T\rho^2 \right)\rho^2}{1+\sqrt{1}} = \frac{1}{2}\left( O + T\rho^2 \right)\rho^2.
+                \end{equation}
+
+                These are the \textbf{spherovoids}, and the name is justified by what happens if we additionally switch off $T$. With $T=0$ we get $z = O\rho^2/2$, and substituting $\rho^2 = z^2+r^2$,
+                \begin{align*}
+                    & 2z = O\left( z^2+r^2 \right) \Longrightarrow z^2 - \frac{2z}{O} + r^2 = 0,\\
+                    & z^2 - \frac{2z}{O} + {\color{red}\frac{1}{O^2}} + r^2 = {\color{red}\frac{1}{O^2}} \Longrightarrow \left( z - \frac{1}{O} \right)^2 + x^2 + y^2 = \frac{1}{O^2},
+                \end{align*}
+                which is a sphere of radius $1/O$ centred at $z=1/O$, in perfect agreement with the interpretation of $O$ as the curvature at the vertex. So the sphere is the spherovoid with no deformation, and $T$ is precisely the parameter that deforms the sphere into the rest of the family.
+
+            \subsection{Parovoids, \texorpdfstring{$G=-1$}{G = -1}}
+
+                Setting $G=-1$ in \ref{eq:ShapeG} gives the condition
+                \begin{equation}\label{eq:ParovoidCondition}
+                    \left( n_i^2z_i - n_o^2z_o \right)^2 = -n_in_o\left( n_iz_i - n_oz_o \right)\left( n_iz_o - n_oz_i \right),
+                \end{equation}
+                and since $G=-1$ makes $-O^2G = +O^2$, the sag reads
+                \begin{equation}\label{eq:Parovoid}
+                    z(\rho) = \frac{\left( O+T\rho^2 \right)\rho^2}{1 + S\rho^2 + \sqrt{1 + \left( 2S + O^2 \right)\rho^2}}.
+                \end{equation}
+
+                These are the \textbf{parovoids}, the ovoidal relatives of the paraboloid, which is recovered when $T=S=0$ and $K=G=-1$ in \ref{eq:Schwarzschild}, since then the radical becomes $\sqrt{1}$ and $z = Or^2/2$, the parabola of curvature $O$.
+
+            \subsection{Hyperovoids, \texorpdfstring{$G<-1$}{G < -1}}
+
+                When
+                \begin{equation}\label{eq:HyperovoidCondition}
+                    \left( n_i^2z_i - n_o^2z_o \right)^2 < -n_in_o\left( n_iz_i - n_oz_o \right)\left( n_iz_o - n_oz_i \right),
+                \end{equation}
+                the constant satisfies $G<-1$ and the sag keeps the general form
+                \begin{equation}\label{eq:Hyperovoid}
+                    z(\rho) = \frac{\left( O+T\rho^2 \right)\rho^2}{1 + S\rho^2 + \sqrt{1 + \left( 2S - O^2G \right)\rho^2}},
+                \end{equation}
+                with $-O^2G>O^2$. These are the \textbf{hyperovoids}, the deformed versions of the two sheet hyperboloid we obtained in the section of objects at infinity, and they are the surfaces one uses when the conjugate pair demands an eccentricity larger than one.
+
+            \subsection{Prolate and oblate ellipsovoids}
+
+                Finally, if the product \ref{eq:SignOfG} is positive,
+                \begin{equation}\label{eq:EllipsovoidCondition}
+                    \left( n_iz_i - n_oz_o \right)\left( n_iz_o - n_oz_i \right) > 0,
+                \end{equation}
+                then $G>0$ and the surface is a \textbf{prolate ellipsovoid}, stretched along the optical axis, while in the intermediate window
+                \begin{equation}\label{eq:OblateCondition}
+                    0 > G > -1,
+                \end{equation}
+                the surface is an \textbf{oblate ellipsovoid}, flattened along the axis. In both cases the sag is given by \ref{eq:Hyperovoid}, only the sign and the magnitude of $G$ change.
+
+                It is illuminating to line up the whole family with the conic constant of the standard surfaces, because the parallel is exact. A conic with $K>0$ is an oblate ellipsoid, $K=0$ is a sphere, $-1<K<0$ is a prolate ellipsoid, $K=-1$ is a paraboloid and $K<-1$ is a hyperboloid. The ovoids repeat the same ladder with $G$ in the role of $K$, with the difference that the ovoid carries in addition the deformation $T$, which is what allows it to be rigorously stigmatic for a \textit{pair of finite points} instead of only for a point and infinity. That extra parameter is exactly the price of bringing the second conjugate point from infinity to a finite distance.
+
+        \section{Descartes ovoids and aspheric surfaces}
+
+                We have now two different ways of writing surfaces that are better than the sphere, and it is important to understand how they relate to each other, because they answer two different questions.
+
+                The rigorously stigmatic surfaces we have built are perfect, but their perfection is extremely local, it holds for one pair of points and for nothing else, with the single exception of the sphere at its aplanatic points, which we will meet again in a moment. If the object is moved away from that privileged position, the image immediately stops being a point, because each ray leaving the object is refracted towards a slightly different place. In practice the position of the object is arbitrary, so a theory that only knows how to be perfect at one point is not enough, and the study of aberrations becomes mandatory.
+
+                The standard engineering answer is to give up rigorous stigmatism and instead deform a conic until the residual distortion is small over a whole range of positions. This is done by adding higher order terms in $r$ to the Schwarzschild equation \ref{eq:Schwarzschild}, called deformation terms,
+                \begin{equation}\label{eq:AsphericSurface}
+                    z(r) = \frac{c_0'r^2}{1+\sqrt{1-\left(1+K'\right)c_0'^{\,2}r^2}} + \sum_{j=2}^{\infty}A_{2j}r^{2j},
+                \end{equation}
+                where the numbers $A_{2j}$ are the \textbf{asphericity coefficients} and $K' = -e^2$ is the Schwarzschild constant of the base conic. The conic surfaces are then the degenerate case of the aspheric surfaces in which every $A_{2j}$ vanishes.
+
+                Here lies the essential difference. The aspheric surfaces \ref{eq:AsphericSurface} are \textit{open} surfaces, they are a conic plus a polynomial correction that grows without bound, whereas the Descartes ovoids are \textit{closed} quartic surfaces. They are therefore not equivalent, and an aspheric surface with $A_{2j}\neq0$ is in general not rigorously stigmatic for any pair of points at all. What it is good at is something else, it is good at flattening the residual wavefront error over an extended field, which is why aspheres are used to correct aberrated wavefronts and to design isoplanatic systems. The Descartes ovoids, on the contrary, are particular cases of the superconics, and they buy exactness at one pair of points at the cost of losing it everywhere else.
+
+                Both languages are needed. The ovoid tells us what perfect imaging looks like and gives us the reference against which everything else is measured, and the asphere tells us how to distribute the imperfection when perfection is impossible. The rest of this chapter is devoted to the second question, and we shall attack it in the place where it matters most, the spherical diopter, which is by far the most used surface in optics for the simple historical reason that it is the easiest one to grind by hand.
+
+        \section{Approximate stigmatism in the spherical diopter}
+
+                Rigorous stigmatism and the aplanatism conditions give us the principles that govern distortion free image formation, but their usefulness is limited, because they can only be applied when the object sits at one very specific position with respect to the diopter. In practice the position of the object is arbitrary, and what we want is to describe what an instrument does under those conditions, where distortions appear that are, in principle, the consequence of the stigmatism being only approximate.
+
+                Among all the diopters the spherical one is the one with the largest number of applications, partly for historical reasons, since it is the surface that was easiest to obtain by hand or by artisanal methods, and that is precisely what pushed the study of its distortions.
+
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.85\textwidth]{Chapter 2/Figures/SphericalDiopterFermat.pdf}
+                    \caption{Image formation by a spherical diopter $\mathcal{D}$ of radius $R$, vertex $V$ and centre of curvature $C$. The object $O$ is at a distance $d=z_o$ from the vertex and the image $O'$ at $d'=z_i$, and the ray reaches the surface at the point $I$, which is located by the angle $\varphi$ measured at the centre of curvature. The chord $\rho = \overline{VI}$, the transverse height $h$ and the sagitta $\eta$ are the three geometrical quantities that will organise the whole calculation.}
+                    \label{fig:SphericalDiopterFermat}
+                \end{figure}
+
+                Let us take a pair of conjugate points $O$ and $O'$ such that the optical path $L(O,O')$ does not depend on the point $I$ where the ray crosses the spherical diopter, see figure \ref{fig:SphericalDiopterFermat}, where we write $d=z_o$ and $d'=z_i$ for the object and image distances measured from the vertex. Putting the vertex at the origin, the centre of curvature sits at $z=R$ and the incidence point is
+                \begin{equation}\label{eq:IncidencePoint}
+                    I = \left( R\sin\varphi,\,0,\,R\left(1-\cos\varphi\right) \right),
+                \end{equation}
+                so that the two segments are
+                \begin{align*}
+                    & l_o^2 = \left[ R\left(1-\cos\varphi\right) - z_o \right]^2 + R^2\sin^2\varphi = \\
+                    & R^2\left( 1 - 2\cos\varphi + {\color{blue}\cos^2\varphi + \sin^2\varphi} \right) - 2Rz_o\left( 1-\cos\varphi \right) + z_o^2,
+                \end{align*}
+                where the two terms in blue add up to one, and therefore
+                \begin{align}
+                    & l_o = \left[ R^2 + \left( z_o - R \right)^2 + 2R\left( z_o-R \right)\cos\varphi \right]^{1/2},\label{eq:lo}\\
+                    & l_i = \left[ R^2 + \left( z_i - R \right)^2 + 2R\left( z_i-R \right)\cos\varphi \right]^{1/2},\label{eq:li}
+                \end{align}
+                the second one being obtained in exactly the same way on the image side. Both expressions can be written more compactly as $l_o^2 = z_o^2 + 2R(R-z_o)(1-\cos\varphi)$ and $l_i^2 = z_i^2 + 2R(R-z_i)(1-\cos\varphi)$, and in this form it is evident that the whole dependence on the incidence point enters only through $1-\cos\varphi$.
+
+                The optical path is $L(OO') = n_ol_o + n_il_i$, and if we demand the Fermat's principle for the ray that passes through $I$, that is, if we demand that small variations of $\varphi$ produce no first order change in $L$, we must impose $dL/d\varphi = 0$. Differentiating \ref{eq:lo} and \ref{eq:li},
+                \begin{equation*}
+                    2l_o\frac{dl_o}{d\varphi} = -2R\left( z_o-R \right)\sin\varphi \Longrightarrow \frac{dl_o}{d\varphi} = \frac{R\left( R-z_o \right)}{l_o}\sin\varphi,
+                \end{equation*}
+                and identically for $l_i$, so the stationarity condition reads
+                \begin{equation}\label{eq:FermatSphere}
+                    n_o\frac{R\left( z_o-R \right)}{l_o}\sin\varphi + n_i\frac{R\left( z_i-R \right)}{l_i}\sin\varphi = 0,
+                \end{equation}
+                where we have changed the global sign, which is harmless since the right hand side is zero. Dividing by ${\color{red}R\sin\varphi}$, which is legitimate for any ray that is not the axial one, and separating the terms,
+                \begin{align*}
+                    & \frac{n_o\left(z_o-R\right)}{l_o} + \frac{n_i\left(z_i-R\right)}{l_i} = 0,\\
+                    & \frac{n_oz_o}{l_o} - \frac{n_oR}{l_o} + \frac{n_iz_i}{l_i} - \frac{n_iR}{l_i} = 0,
+                \end{align*}
+                so that we finally obtain the exact conjugation relation of the spherical diopter,
+                \begin{equation}\label{eq:ExactSphereConjugation}
+                    \frac{n_i}{l_i} + \frac{n_o}{l_o} = \frac{1}{R}\left[ n_i\frac{z_i}{l_i} + n_o\frac{z_o}{l_o} \right].
+                \end{equation}
+
+                It is very important to be clear about what \ref{eq:ExactSphereConjugation} does and does not say. We have not demanded $L(O,O') = cte$ for every ray, which is what rigorous stigmatism would require, we have only demanded that the Fermat's principle hold for the ray that goes through the particular point $I$, that is, that for a given angle $\varphi$ small variations $\Delta\varphi$ produce negligible variations of $L(O,O')$. Therefore $O$ and $O'$ are not necessarily the Young-Weierstrass points. From here on we shall no longer speak of rigorous stigmatism but of approximate stigmatism, aplanatism will be replaced by the weaker notion of isoplanatism, and in general no perfect image is formed at all.
+
+            \subsection{Gauss optics, the paraxial approximation}
+
+                An enormous simplification is obtained if we restrict the rays that are allowed through the system so that $\sin\varphi\approx\varphi$ and $\cos\varphi\approx1$. This is the paraxial or Gaussian approximation, and geometrically it means that we keep only the rays that hug the optical axis, so that the diopter is replaced by its tangent plane as far as the distances are concerned. In this regime $l_o\approx-z_o$, the minus sign coming from our convention since $z_o<0$ while $l_o$ is a positive length, and $l_i\approx z_i$. Substituting into \ref{eq:ExactSphereConjugation},
+                \begin{align*}
+                    & \frac{n_i}{z_i} + \frac{n_o}{-z_o} = \frac{1}{R}\left[ n_i\frac{ {\color{red}z_i}}{ {\color{red}z_i}} + n_o\frac{ {\color{red}z_o}}{-{\color{red}z_o}} \right] = \frac{n_i-n_o}{R},
+                \end{align*}
+                that is,
+                \begin{equation}\label{eq:ParaxialConjugation}
+                    \frac{n_i}{z_i} - \frac{n_o}{z_o} = \frac{n_i-n_o}{R},
+                \end{equation}
+                which is the conjugation formula of the spherical diopter in the paraxial approximation, and we say that $O$ and $O'$ are conjugate points, $O'$ being the paraxial image of $O$. The right hand side depends only on the surface and the media, never on the position of the object, so it deserves a name of its own, the \textbf{vergence}
+                \begin{equation}\label{eq:Vergence}
+                    V = \frac{n_i-n_o}{R}.
+                \end{equation}
+
+                The focal distances are defined by sending either the object or the image to infinity. Taking $z_i\to\infty$ in \ref{eq:ParaxialConjugation} the left hand side keeps only the object term and we obtain the object focus, and taking $z_o\to\infty$ we obtain the image focus,
+                \begin{align}
+                    & f_o = \frac{n_oR}{n_o-n_i},\label{eq:ObjectFocus}\\
+                    & f_i = \frac{n_iR}{n_i-n_o}.\label{eq:ImageFocus}
+                \end{align}
+
+                Notice that $f_o$ and $f_i$ are not equal unless $n_o=n_i$, and that their ratio is $f_i/f_o = -n_i/n_o$. This asymmetry, which does not exist for a mirror, is the geometrical signature of the fact that the light travels at different speeds on the two sides of the surface.
+
+                Under these conditions the optical path is approximately independent of the point $I$, and this is why we speak of approximate stigmatism. The image is formed with distortions which on one hand are minimal, and on the other hand are invariant under a translation in a transverse plane, and this last property deserves its own name.
+
+                \begin{myDef}
+                    \textit{(Isoplanatism)} An approximately stigmatic system whose distortions remain invariant under a transverse translation of the object is called \textbf{isoplanatic}.
+                \end{myDef}
+
+                The physical content of isoplanatism is worth spelling out, because it is the bridge between geometrical optics and the Fourier optics we will need much later. If the defects of the instrument are the same at every point of the field, then the instrument acts on the object as a linear and space invariant filter, and the image is the convolution of the object with a single impulse response. If the defects change from point to point the system stops being a convolution and the whole machinery of transfer functions collapses. So isoplanatism is exactly the condition under which an optical instrument can be treated as a linear filter.
+
+                By restricting the rays that are allowed through the system, then, we have managed to impose conditions under which the spherical diopter is approximately stigmatic even away from its Young-Weierstrass points. The same approximations can be taken for the hyperboloidal and ellipsoidal diopters, and for the reflective surfaces, with no change in the reasoning.
+
+            \subsection{Spherical aberration}
+
+                Paraxial optics is a beautiful lie. It is exact only in the limit of a vanishingly thin pencil of rays around the axis, and any real instrument has a finite aperture. So let us now allow the rays that depart moderately from the paraxial condition to also pass through the system, which means we must increase the precision of the approximations and keep the first correction to the paraxial result.
+
+                The first step is purely geometrical. From the figure \ref{fig:SphericalDiopterFermat} we read $\cos\varphi = (R-\eta)/R = 1-\eta/R$, where $\eta$ is the sagitta, the axial distance from the vertex to the foot of the incidence point. Since $\rho^2 = \eta^2+h^2$ and $R^2 = (R-\eta)^2+h^2$, subtracting the second from the first,
+                \begin{align*}
+                    & \rho^2 - R^2 = \eta^2 - \left(R-\eta\right)^2 = \eta^2 - R^2 + 2R\eta - \eta^2 = 2R\eta - R^2,\\
+                    & \rho^2 = 2R\eta \Longrightarrow \frac{\eta}{R} = \frac{\rho^2}{2R^2},
+                \end{align*}
+                and therefore
+                \begin{equation}\label{eq:SagittaRelation}
+                    \frac{\rho^2}{2R^2} = 1-\cos\varphi.
+                \end{equation}
+
+                This little relation is the key of the entire section, because it converts the angular variable $\varphi$, which is how the geometry is naturally written, into the aperture variable $\rho$, which is how the aberrations are naturally measured. Substituting \ref{eq:SagittaRelation} into the compact form of \ref{eq:lo},
+                \begin{align*}
+                    & l_o^2 = z_o^2 + 2R^2\left(1-\cos\varphi\right) - 2Rz_o\left(1-\cos\varphi\right) = z_o^2 + {\color{red}2R^2}\frac{\rho^2}{{\color{red}2R^2}} - {\color{red}2R}z_o\frac{\rho^2}{{\color{red}2R}R},\\
+                    & l_o^2 = z_o^2 + \rho^2 - \frac{z_o\rho^2}{R} = z_o^2\left[ 1 + \frac{\rho^2}{z_o}\left( \frac{1}{z_o} - \frac{1}{R} \right) \right],
+                \end{align*}
+                so that, remembering $\sqrt{z_o^2}=-z_o$,
+                \begin{align}
+                    & l_o = -z_o\left[ 1 + \frac{\rho^2}{z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right) \right]^{1/2},\label{eq:loExpanded}\\
+                    & l_i = z_i\left[ 1 + \frac{\rho^2}{z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right) \right]^{1/2}.\label{eq:liExpanded}
+                \end{align}
+
+                These two expressions are still exact, no approximation has been made yet, we have merely traded $\varphi$ for $\rho$. Substituting them into the exact conjugation \ref{eq:ExactSphereConjugation} and using $n_o/l_o = -\left(n_o/z_o\right)\left[\cdots\right]^{-1/2}$,
+                \begin{align}
+                    & \frac{n_i}{z_i}\left[ 1+\frac{\rho^2}{z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right) \right]^{-1/2} - \frac{n_o}{z_o}\left[ 1+\frac{\rho^2}{z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right) \right]^{-1/2} = \nonumber\\
+                    & \frac{1}{R}\left\{ n_i\left[ 1+\frac{\rho^2}{z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right) \right]^{-1/2} - n_o\left[ 1+\frac{\rho^2}{z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right) \right]^{-1/2} \right\}.\label{eq:ExactInRho}
+                \end{align}
+
+                Now, and only now, we approximate. For $\rho\ll|z_o|$, $\rho\ll z_i$ and $\rho\ll|R|$ the quantity inside the brackets is close to one, and the binomial expansion $(1+x)^{-1/2}\approx1-x/2$ gives
+                \begin{align}
+                    & \frac{1}{l_o} = -\frac{1}{z_o}\left[ 1+\frac{\rho^2}{z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right) \right]^{-1/2} \approx -\frac{1}{z_o}\left[ 1 - \frac{\rho^2}{2z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right) \right],\label{eq:BinomialO}\\
+                    & \frac{1}{l_i} = \frac{1}{z_i}\left[ 1+\frac{\rho^2}{z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right) \right]^{-1/2} \approx \frac{1}{z_i}\left[ 1 - \frac{\rho^2}{2z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right) \right],\label{eq:BinomialI}
+                \end{align}
+                where the improvement over the Gauss optics is transparent, in the paraxial case we simply put $1/l_o = -1/z_o$ and here we keep the first correction in $\rho^2$. Substituting into \ref{eq:ExactInRho},
+                \begin{align}
+                    & \frac{n_i}{z_i}\left[ 1-\frac{\rho^2}{2z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right) \right] - \frac{n_o}{z_o}\left[ 1-\frac{\rho^2}{2z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right) \right] = \nonumber\\
+                    & \frac{1}{R}\left\{ n_i\left[ 1-\frac{\rho^2}{2z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right) \right] - n_o\left[ 1-\frac{\rho^2}{2z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right) \right] \right\},\label{eq:AberrationStep1}
+                \end{align}
+                and expanding both sides and moving everything that does not contain $\rho^2$ to the left,
+                \begin{align}
+                    & \frac{n_i}{z_i} - \frac{n_o}{z_o} = \frac{n_i-n_o}{R} - \frac{1}{R}\frac{n_i\rho^2}{2z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right) + \frac{1}{R}\frac{n_o\rho^2}{2z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right) \nonumber\\
+                    & + \frac{n_i}{z_i}\frac{\rho^2}{2z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right) - \frac{n_o}{z_o}\frac{\rho^2}{2z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right).\label{eq:AberrationStep2}
+                \end{align}
+
+                The four terms in $\rho^2$ pair up two by two, the first with the third and the second with the fourth, and each pair produces the same binomial squared,
+                \begin{align*}
+                    & \frac{n_i\rho^2}{2z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right)\left[ \frac{1}{z_i} - \frac{1}{R} \right] = \frac{n_i\rho^2}{2z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right)^2,\\
+                    & -\frac{n_o\rho^2}{2z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right)\left[ \frac{1}{z_o} - \frac{1}{R} \right] = -\frac{n_o\rho^2}{2z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right)^2,
+                \end{align*}
+                so that the whole calculation collapses into
+                \begin{equation}\label{eq:SphericalAberration}
+                    \frac{n_i}{z_i} - \frac{n_o}{z_o} = \frac{n_i-n_o}{R} + \rho^2\left[ \frac{n_i}{2z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right)^2 - \frac{n_o}{2z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right)^2 \right].
+                \end{equation}
+
+                \textbf{\textit{Equation \ref{eq:SphericalAberration} is the conjugation formula of the spherical diopter corrected to first order in the aperture.}} It is the paraxial formula \ref{eq:ParaxialConjugation} plus one extra term proportional to $\rho^2$, and that extra term is the \textbf{spherical aberration}. Its meaning is direct, since the right hand side now depends on $\rho$, the position $z_i$ where the ray crosses the axis depends on how far from the vertex the ray struck the surface. Rays through different zones of the aperture cross the axis at different points, and there is no single image point at all.
+
+                The same relation can be rearranged by putting each medium on its own side,
+                \begin{equation}\label{eq:MarginalInvariantEq}
+                    n_i\left[ \frac{1}{z_i} - \frac{1}{R} - \frac{\rho^2}{2z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right)^2 \right] = n_o\left[ \frac{1}{z_o} - \frac{1}{R} - \frac{\rho^2}{2z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right)^2 \right],
+                \end{equation}
+                which says that a certain quantity has the same value on both sides of the diopter, and this is what we call a metaxial invariant in the presence of aberrations.
+
+                \begin{myDef}
+                    \textit{(Marginal invariant)} For a spherical refracting surface we define
+                    \begin{equation}\label{eq:MarginalInvariant}
+                        \mathcal{M} = n\left[ \frac{1}{z} - \frac{1}{R} - \frac{\rho^2}{2z}\left( \frac{1}{z}-\frac{1}{R} \right)^2 \right],
+                    \end{equation}
+                    which takes the primary aberrations into account, and which for $\rho\ll|z|$ and $\rho\ll|R|$ reduces to the Abbe invariant of the paraxial optics
+                    \begin{equation}\label{eq:AbbeInvariant}
+                        \mathcal{A} = n\left( \frac{1}{z} - \frac{1}{R} \right).
+                    \end{equation}
+                \end{myDef}
+
+                \subsubsection{The wavefront aberration and the quartic wavefront}
+
+                    So far we have described the aberration as a defect in the ray positions. There is a second and much more powerful description, in terms of the shape of the wavefront that leaves the surface, and it is the one that will connect this chapter with the physical optics of the following ones. Following Hopkins \citep{hopkins1950wave}, we define the \textbf{wave front aberration} as the residual phase
+                    \begin{equation}\label{eq:WavefrontAberration}
+                        W(\vec{\rho}) = \frac{1}{2}\left[ \frac{n_i}{2z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right)^2 - \frac{n_o}{2z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right)^2 \right]\rho^4 = C_{40}\rho^4,
+                    \end{equation}
+                    where $C_{40}$ is the quartic aberration coefficient for a spherical wavefront passing through a spherical refracting surface. The bracket is exactly one half of the aberration bracket of \ref{eq:SphericalAberration}, which is the usual statement that the transverse ray aberration is the gradient of the wavefront aberration.
+
+                    \begin{figure}[ht]
+                        \centering
+                        \includegraphics[width=0.8\textwidth]{Chapter 2/Figures/QuarticWavefront.pdf}
+                        \caption{Quartic surface $Q$ of the wavefront emerging from a spherical refracting surface. The marginal rays converge at $A'$ instead of the paraxial point $A_p$, because the quartic wavefront $Q$ departs from the Gaussian spherical reference $\mathcal{A}'$ by the amount $\Delta l = W(\vec{\rho})$, and the envelope of the refracted rays forms the caustic.}
+                        \label{fig:QuarticWavefront}
+                    \end{figure}
+
+                    The geometry behind \ref{eq:WavefrontAberration} is shown in the figure \ref{fig:QuarticWavefront}, and it is worth reading carefully. \textit{A spherical refracting surface converts a spherical wavefront into a quartic wavefront}, and that is the whole origin of the geometric aberrations. The marginal rays converge at a point $A'$ instead of the point $A_p$ where the paraxial rays arrive, because the quartic surface $Q$ that emerges from the diopter moves away from the Gaussian spherical surface of reference $\mathcal{A}'$ by the amount $W(\vec{\rho})$. The rays, being normal to the wavefront, no longer meet at a single point but are tangent to an envelope, the \textbf{caustic}, which is the bright cusped curve one sees at the bottom of a cup of coffee.
+
+                    This gives us a very clean way of restating everything we did in the first half of the chapter. When a point source is placed at a strictly stigmatic point of a refracting quartic surface, that is, of a Descartes ovoid, the emerging wavefront is a perfect spherical wave converging to the conjugate point. Those points are in general unique for a given quartic surface, and if the object is removed from them the emerging wavefront ceases to be spherical and becomes a quartic phase wavefront. The sphere is a particular case of the Descartes ovoids where the strictly stigmatic pair are the Young-Weierstrass points, and therefore any object placed anywhere else gives rise to a wavefront with quartic geometry and, by the above, to the spherical geometric aberrations.
+
+                \subsubsection{The Seidel aberrations}
+
+                    Up to now the object has been on the axis. If we let it move off axis the aberration function acquires a much richer structure, and this is where the classical five aberrations appear. Let $\vec{A}$ be the vector from the vertex $V$ to the reference point $V_0$ on the axis, let $\vec{r}$ be the position on the surface measured from $V_0$, and let $\vec{\rho} = \vec{r}+\vec{A}$ as before. Calling $a = |\vec{A}|$ and $\theta$ the angle between $\vec{A}$ and $\vec{r}$, the cosine rule gives $\rho^2 = a^2+r^2+2ar\cos\theta$, and the aberration function measured relative to the axial point is
+                    \begin{align}
+                        W &= -C_{40}\left( \rho^4 - a^4 \right) \nonumber\\
+                        &= -C_{40}\left( r^4 + 4ar^3\cos\theta + 4a^2r^2\cos^2\theta + 2a^2r^2 + 4a^3r\cos\theta \right),\label{eq:SeidelExpansion}
+                    \end{align}
+                    where the ${\color{red}a^4}$ generated by squaring the cosine rule has cancelled against the ${\color{red}a^4}$ we subtracted. Since the triangles $V_0VC$ and $A'B'C$ are similar, $a$ is proportional to the transverse image size $\sigma' = \overline{A'B'}$, that is $a = g\sigma'$ with $g = R/(z_i-R)$, and substituting we may write
+                    \begin{equation}\label{eq:SeidelPolynomial}
+                        W\left(r,\theta,\sigma'\right) = {}_{0}C_{40}r^4 + {}_{1}C_{31}\sigma'r^3\cos\theta + {}_{2}C_{22}\sigma'^2r^2\cos^2\theta + {}_{2}C_{20}\sigma'^2r^2 + {}_{3}C_{11}\sigma'^3r\cos\theta,
+                    \end{equation}
+                    where the coefficient ${}_{a}C_{bc}$ carries the powers of $\sigma'^a$, $r^b$ and $\cos^c\theta$ respectively. These five terms are the monochromatic or \textbf{Seidel aberrations} \citep{welford1986aberrations}, and each one deserves a word on what it actually looks like and where an instrument builder runs into it,
+
+                    \begin{enumerate}
+                        \item \textbf{Spherical aberration}, $r^4$. This is the only term with no power of $\sigma'$ at all, so it survives even for a point on the axis, exactly the effect we derived earlier in this section, rays through different zones of the aperture come to a focus at different points along the axis. It blurs a point into a small disc surrounded by a soft halo, and it is why fast lenses, telescopes and camera objectives with a large aperture need aspheric surfaces or multi-element corrections to stay sharp.
+                        \item \textbf{Coma}, $\sigma'r^3\cos\theta$. One power of the field and three of the aperture means it grows quickly as we move off axis, and it is the aberration that turns a point image into the comet-shaped smear that gives it its name, because rays passing through different annular zones of the aperture land at different transverse positions and with different magnifications. It is the dominant defect of fast, wide field instruments such as Schmidt cameras, and it is precisely what the Abbe sine condition of section \ref{subsec:AbbeSine} is designed to eliminate.
+                        \item \textbf{Astigmatism}, $\sigma'^2r^2\cos^2\theta$. Here an off-axis point does not focus to a point at all, but to two separate, mutually perpendicular line images at two different distances along the axis, the tangential and the sagittal foci, because a tilted pencil of rays sees an effectively different curvature of the surface in the two perpendicular planes. It is the same astigmatism that a badly shaped cornea produces in the human eye.
+                        \item \textbf{Petzval field curvature}, $\sigma'^2r^2$. This term carries no dependence on $\theta$, so it does not blur the image at all, it simply relocates where the sharpest focus falls. The consequence is that even a system free of every other aberration forms its image on a curved surface, the Petzval surface, rather than on a plane, so a flat detector such as film or a sensor can only be in focus over a small region of the field while the edges turn soft. This is why photographic objectives use dedicated field-flattening elements.
+                        \item \textbf{Distortion}, $\sigma'^3r\cos\theta$. Being linear in $r$, this term displaces the image point transversally without spreading it out at all, the image stays perfectly sharp but the magnification changes with field position. This is the origin of the familiar barrel and pincushion warping of straight lines seen near the edges of wide angle photographs, an effect with no blur, only geometric displacement.
+                    \end{enumerate}
+
+                    The structure of \ref{eq:SeidelPolynomial} is very instructive. The first term does not contain $\sigma'$ at all, which is why spherical aberration survives even for an object on the axis, and it is the only one of the five that does. The last term is linear in $r$, which means that it displaces the image without blurring it, and this is why distortion changes the shape of a picture but keeps it sharp. The three terms in between mix aperture and field, and they are the ones that make an instrument that is perfect at the centre of the field become useless at its edge.
+
+                \subsubsection{Aberrations close to the paraxial condition}
+
+                    In practice it is convenient to have the aberration term of \ref{eq:SphericalAberration} written in terms of only one of the two conjugate distances, and this will be essential when we compose two surfaces into a lens. Since our solution is close to the paraxial condition, we may use the paraxial formula \ref{eq:ParaxialConjugation} inside the aberration term, which is already a small correction, so that the error we commit is of higher order.
+
+                    The key identity is the following. From \ref{eq:ParaxialConjugation} we have $1/z_i = (1/n_i)\left[ n_o/z_o + (n_i-n_o)/R \right]$, and therefore
+                    \begin{align*}
+                        & \frac{1}{z_i} - \frac{1}{R} = \frac{1}{n_i}\left[ \frac{n_o}{z_o} + \frac{n_i-n_o}{R} \right] - \frac{1}{R} = \frac{1}{n_i}\left[ \frac{n_o}{z_o} + \frac{ {\color{red}n_i} - n_o}{R} - \frac{ {\color{red}n_i}}{R} \right] = \frac{n_o}{n_i}\left( \frac{1}{z_o} - \frac{1}{R} \right),
+                    \end{align*}
+                    a remarkably clean relation which says that the Abbe invariants on the two sides are proportional. Writing $u = 1/z_o-1/R$ for brevity, the aberration bracket becomes
+                    \begin{align*}
+                        & \frac{n_i}{2z_i}\left( \frac{n_o}{n_i} \right)^2u^2 - \frac{n_o}{2z_o}u^2 = \frac{u^2}{2}\left[ \frac{n_o^2}{n_iz_i} - \frac{n_o}{z_o} \right] = \frac{u^2}{2}\frac{n_o^2}{n_i^2}\left[ \frac{n_o}{z_o} + \frac{n_i-n_o}{R} \right] - \frac{u^2}{2}\frac{n_o}{z_o},
+                    \end{align*}
+                    where in the last step we used the paraxial formula once more to eliminate $1/z_i$. Factoring $n_o/n_i^2$,
+                    \begin{align*}
+                        & \frac{u^2}{2}\frac{n_o}{n_i^2}\left[ \frac{n_o^2}{z_o} + \frac{n_o\left(n_i-n_o\right)}{R} - \frac{n_i^2}{z_o} \right] = \frac{u^2}{2}\frac{n_o}{n_i^2}\left[ \frac{n_o^2-n_i^2}{z_o} + \frac{n_o\left(n_i-n_o\right)}{R} \right] = \\
+                        & \frac{u^2}{2}\frac{n_o}{n_i^2}\left( n_i-n_o \right)\left[ \frac{n_o}{R} - \frac{n_i+n_o}{z_o} \right],
+                    \end{align*}
+                    and rewriting the prefactor as $n_o/n_i^2 = \left(n_o/n_i\right)^2/n_o$ we obtain the identity we wanted,
+                    \begin{equation}\label{eq:AirySubstitution}
+                        \frac{n_i}{2z_i}\left( \frac{1}{z_i}-\frac{1}{R} \right)^2 - \frac{n_o}{2z_o}\left( \frac{1}{z_o}-\frac{1}{R} \right)^2 \approx \frac{1}{2}\left( \frac{n_o}{n_i} \right)^2\left( \frac{1}{z_o}-\frac{1}{R} \right)^2\left( \frac{n_i-n_o}{n_o} \right)\left( \frac{n_o}{R} - \frac{n_i+n_o}{z_o} \right),
+                    \end{equation}
+                    which is the Airy formula for the aberration at refraction by a single surface. Therefore the conjugation formula written in terms of the object distance alone is
+                    \begin{equation}\label{eq:ConjugationPlus}
+                        \frac{n_i}{z_i} - \frac{n_o}{z_o} = \frac{n_i-n_o}{R} + \rho^2\frac{1}{2}\left( \frac{n_o}{n_i} \right)^2\left( \frac{1}{z_o}-\frac{1}{R} \right)^2\left( \frac{n_i-n_o}{n_o} \right)\left( \frac{n_o}{R}-\frac{n_i+n_o}{z_o} \right) = V + \Delta V_+,
+                    \end{equation}
+                    and repeating the whole argument with the roles of the two media exchanged, that is, using $1/z_o - 1/R = \left(n_i/n_o\right)\left( 1/z_i-1/R \right)$, the same expression written in terms of the image distance alone is
+                    \begin{equation}\label{eq:ConjugationMinus}
+                        \frac{n_i}{z_i} - \frac{n_o}{z_o} = \frac{n_i-n_o}{R} - \rho^2\frac{1}{2}\left( \frac{n_i}{n_o} \right)^2\left( \frac{1}{z_i}-\frac{1}{R} \right)^2\left( \frac{n_o-n_i}{n_i} \right)\left( \frac{n_i}{R}-\frac{n_i+n_o}{z_i} \right) = V - \Delta V_-,
+                    \end{equation}
+                    where $V$ is the vergence \ref{eq:Vergence} and $\Delta V_\pm$ is the change in the vergence produced by the marginal rays.
+
+                    It is very convenient to absorb these corrections into an effective radius. Defining
+                    \begin{align}
+                        & \frac{1}{R_+} = \frac{\rho^2}{2n_o}\left( \frac{n_o}{n_i} \right)^2\left( \frac{1}{z_o} - \frac{1}{R} \right)^2\left( \frac{n_o}{R} - \frac{n_i+n_o}{z_o} \right),\label{eq:Rplus}\\
+                        & \frac{1}{R_-} = \frac{\rho^2}{2n_i}\left( \frac{n_i}{n_o} \right)^2\left( \frac{1}{z_i} - \frac{1}{R} \right)^2\left( \frac{n_i}{R} - \frac{n_i+n_o}{z_i} \right),\label{eq:Rminus}
+                    \end{align}
+                    both \ref{eq:ConjugationPlus} and \ref{eq:ConjugationMinus} collapse into the single compact statement
+                    \begin{equation}\label{eq:MarginalConjugation}
+                        \frac{n_i}{z_i} - \frac{n_o}{z_o} = \left( n_i-n_o \right)\left( \frac{1}{R} + \frac{1}{R_\pm} \right),
+                    \end{equation}
+                    and we define the \textbf{marginal rays vergence} as $V_\pm = \left(n_i-n_o\right)\left( 1/R + 1/R_\pm \right)$.
+
+                    This is the cleanest way of understanding what the marginal rays do. \textit{To include the marginal rays in the study of the spherical refracting surface, all we have to do is to add to the inverse of the radius the term $1/R_\pm$}, according to whether we are working in object or in image coordinates. The surface behaves, for those rays, as if it had a different radius of curvature, and since $R_\pm$ depends on $\rho^2$, each zone of the aperture sees a different sphere. That is spherical aberration in one sentence.
+
+            \subsection{Focal length for marginal rays}
+
+                Since the aberration term depends on the distance $\rho$ at which the rays cross the surface, different rays are deviated differently and consequently the system does not have a single focal length, but a value that depends on $\rho$ for each ray. Let us compute it.
+
+                We take \ref{eq:ConjugationPlus} in the form $1/z_i = n_o/(n_iz_o) + (n_i-n_o)/(n_iR) + \rho^2\Delta V_+/n_i$ and send the object to infinity, $z_o\to\infty$, which is the situation of a telescope pointed at a star. In that limit the first term vanishes, ${\color{red}1/z_o}\to0$ inside the squared bracket so that it becomes $1/R^2$, and the last parenthesis becomes $n_o/R$, hence
+                \begin{align*}
+                    & \frac{1}{f_{M_+}} = \frac{n_i-n_o}{n_iR} + \frac{\rho^2}{n_i}\frac{1}{2}\left( \frac{n_o}{n_i} \right)^2\frac{1}{R^2}\left( \frac{n_i-n_o}{n_o} \right)\frac{n_o}{R} = \frac{n_i-n_o}{n_iR} + \frac{\rho^2n_o^2\left(n_i-n_o\right)}{2n_i^3R^3},
+                \end{align*}
+                and factoring the paraxial piece,
+                \begin{equation}\label{eq:MarginalFocalPlus}
+                    \frac{1}{f_{M_+}} = \frac{n_i-n_o}{n_iR}\left[ 1 + \frac{\rho^2}{2R^2}\left( \frac{n_o}{n_i} \right)^2 \right],
+                \end{equation}
+                or, using \ref{eq:SagittaRelation} to go back to the angular variable,
+                \begin{equation}\label{eq:MarginalFocalPhi}
+                    \frac{1}{f_{+}} = \frac{n_i-n_o}{n_iR}\left[ 1 + \left( \frac{n_o}{n_i} \right)^2 - \left( \frac{n_o}{n_i} \right)^2\cos\varphi \right].
+                \end{equation}
+
+                We can now read off the two limits. The focus depends on $\varphi$, so we write $f_+(\varphi)$, and the paraxial focus is recovered as $f_{P_+} = \lim_{\varphi\to0}f_+(\varphi)$,
+                \begin{equation}\label{eq:ParaxialFocalPlus}
+                    f_{P_+} = \frac{n_iR}{n_i-n_o},
+                \end{equation}
+                in agreement with \ref{eq:ImageFocus}, as it must be. For the marginal rays we adopt the reasonable working condition $\varphi\leq\pi/3$, which corresponds to $\rho\leq|R|$, and taking $f_{M_+} = \lim_{\varphi\to\pi/3}f_+(\varphi)$, where $\cos\varphi=1/2$ and therefore $1-\cos\varphi=1/2$,
+                \begin{align*}
+                    & \frac{1}{f_{M_+}} = \frac{1}{f_{P_+}}\left[ 1 + \frac{1}{2}\left( \frac{n_o}{n_i} \right)^2 \right] = \frac{1}{f_{P_+}}\frac{2n_i^2+n_o^2}{2n_i^2},
+                \end{align*}
+                that is,
+                \begin{equation}\label{eq:MarginalFocalValue}
+                    f_{M_+} = \frac{2n_i^2}{2n_i^2+n_o^2}f_{P_+}.
+                \end{equation}
+
+                Since the fraction is smaller than one, the marginal focus always falls \textit{short} of the paraxial focus, which is the well known fact that the outer zones of a positive spherical surface focus too soon. The gap between the two is called the \textbf{longitudinal spherical aberration}, $\Delta f_+ = f_{P_+} - f_{M_+}$, and it is given by
+                \begin{equation}\label{eq:LSA}
+                    \Delta f_+ = f_{P_+}\left[ 1 - \frac{2n_i^2}{2n_i^2+n_o^2} \right] = \frac{n_o^2}{2n_i^2+n_o^2}f_{P_+},
+                \end{equation}
+                which is an explicit closed expression for the longitudinal spherical aberration of a spherical refracting surface, see figure \ref{fig:LSA}.
+
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.8\textwidth]{Chapter 2/Figures/LSA.pdf}
+                    \caption{Illustration of the longitudinal spherical aberration. The rays arriving parallel to the axis from an object at infinity are focused at $f_{M_+}$ if they are marginal and at $f_{P_+}$ if they are paraxial, and the separation between the two is $\Delta f_+$. The envelope of the refracted rays is the caustic.}
+                    \label{fig:LSA}
+                \end{figure}
+
+                It is worth noticing how much physics is packed into \ref{eq:LSA}. The aberration is proportional to the paraxial focal length, so a fast surface with a short focal length is not automatically better, and it depends only on the ratio of the two indices, so the only way to reduce it while keeping the surface spherical is to increase $n_i$ with respect to $n_o$. For a glass of $n_i=1.5$ in air the ratio $n_o^2/(2n_i^2+n_o^2)$ is about $0.18$, which means that the marginal focus sits almost a fifth of the focal length in front of the paraxial one, a completely unacceptable amount for any serious instrument. This single number explains why the whole history of optical design is the history of fighting spherical aberration.
+
+                \subsubsection{Longitudinal object defocus}
+
+                    The same calculation can be run on the object side. Taking \ref{eq:ConjugationMinus} and sending the image to infinity, $z_i\to\infty$, the squared bracket becomes $1/R^2$ and the last parenthesis becomes $n_i/R$, so that
+                    \begin{equation}\label{eq:ObjectDefocusEq}
+                        \frac{1}{f_-} = \frac{n_o-n_i}{n_oR}\left[ 1 + \frac{\rho^2}{2R^2}\left( \frac{n_i}{n_o} \right)^2 \right],
+                    \end{equation}
+                    or in terms of the angle,
+                    \begin{equation}\label{eq:ObjectDefocusPhi}
+                        \frac{1}{f_-} = \frac{n_o-n_i}{n_oR}\left[ 1 + \left( \frac{n_i}{n_o} \right)^2 - \left( \frac{n_i}{n_o} \right)^2\cos\varphi \right].
+                    \end{equation}
+
+                    Exactly as before, the paraxial object focus is $f_{P_-} = \lim_{\varphi\to0}f_-(\varphi)$ and the marginal one is $f_{M_-} = \lim_{\varphi\to\pi/3}f_-(\varphi)$,
+                    \begin{align}
+                        & f_{P_-} = \frac{n_oR}{n_o-n_i},\label{eq:ParaxialFocalMinus}\\
+                        & f_{M_-} = \frac{2n_o^2}{2n_o^2+n_i^2}f_{P_-},\label{eq:MarginalFocalMinus}
+                    \end{align}
+                    and we define the \textbf{longitudinal object defocus} by $\Delta f_- = f_{M_-} - f_{P_-}$, so that
+                    \begin{equation}\label{eq:ObjectDefocusValue}
+                        \Delta f_- = -\frac{n_i^2}{2n_o^2+n_i^2}f_{P_-},
+                    \end{equation}
+                    see figure \ref{fig:ObjectDefocus}.
+
+                    \begin{figure}[ht]
+                        \centering
+                        \includegraphics[width=0.8\textwidth]{Chapter 2/Figures/ObjectDefocus.pdf}
+                        \caption{Illustration of the defocus in the object space. The rays that emerge parallel to the axis in the image space come, for the marginal zone, from $f_{M_-}$ and, for the paraxial zone, from $f_{P_-}$, and the separation between the two is $\Delta f_-$.}
+                        \label{fig:ObjectDefocus}
+                    \end{figure}
+
+                    The interest of this second definition is justified when we consider compound optical systems, as in the case of a lens, because there the object space of one subsystem is the image space of the previous one, so that speaking of the aberrations in the object takes on a very concrete meaning.
+
+                \subsubsection{Image formation in the marginal ray regime}
+
+                    Consequently the marginal and the paraxial rays have different focal lengths, so their images are formed at different distances and with different magnifications, and the superposition of the two is precisely what deteriorates the final composite image.
+
+                    \begin{figure}[ht]
+                        \centering
+                        \subfloat[With paraxial rays, selected by a central pupil, the object is imaged through the foci $f_{P_-}$ and $f_{P_+}$.]{{\includegraphics[width=0.6\textwidth]{Chapter 2/Figures/MarginalImagingA.pdf}}}\\
+                        \subfloat[With marginal rays, selected by an annular pupil, the same object is imaged through $f_{M_-}$ and $f_{M_+}$.]{{\includegraphics[width=0.6\textwidth]{Chapter 2/Figures/MarginalImagingB.pdf}}}
+                        \caption{Image formation systems. Each family of rays alone forms a sharp image, and it is only their superposition that produces the aberrated one.}
+                        \label{fig:MarginalImaging}
+                    \end{figure}
+
+                    This suggests a way out which is as simple as it is elegant, shown in the figure \ref{fig:MarginalImaging}. The optical system could form an image of the same quality with the marginal rays as with the paraxial ones if the two sets of rays were \textit{separated} instead of superposed, which is done by putting a pupil that selects only one annular zone of the aperture. For this we take $\Delta\varphi$ as small as necessary so that the Fermat's principle \ref{eq:ExactSphereConjugation} is fulfilled separately in each pupil, around some angle $\varphi$, and in this way each zone has a well defined focal length, both in the object and in the image space.
+
+                    The physical lesson is that spherical aberration is not a defect of any individual ray, every ray obeys the Snell-Descartes law perfectly, it is a defect of the \textit{superposition} of rays coming from zones with different focal lengths. Break the superposition and the blur disappears, at the price of throwing away most of the light. This is exactly the trade off that a photographer makes when stopping down a lens, and it is also the reason why the resolution of an instrument cannot be improved indefinitely by closing the aperture, because at some point the diffraction we shall study in a later chapter takes over.
+
+            \subsection{The thin lens with aberrations}
+
+                A lens is two spherical diopters back to back, so everything we have done can be composed. Let the first surface have radius $R_1$ and form, from the object at $z_o$ in the medium $n_o$, an intermediate image at $d_1$ inside the glass of index $n_i$, and let the second surface of radius $R_2$ take that intermediate image, now sitting at $d_2$, and form the final image at $z_i$ back in the medium $n_o$. Using \ref{eq:ConjugationPlus} for the first surface and \ref{eq:ConjugationMinus} for the second,
+                \begin{align}
+                    & \frac{n_i}{d_1} - \frac{n_o}{z_o} = \frac{n_i-n_o}{R_1} + \rho_1^2\frac{1}{2}\left( \frac{n_o}{n_i} \right)^2\left( \frac{1}{z_o}-\frac{1}{R_1} \right)^2\left( \frac{n_i-n_o}{n_o} \right)\left( \frac{n_o}{R_1}-\frac{n_i+n_o}{z_o} \right),\label{eq:Lens1}\\
+                    & \frac{n_o}{z_i} - \frac{n_i}{d_2} = \frac{n_o-n_i}{R_2} - \rho_2^2\frac{1}{2}\left( \frac{n_o}{n_i} \right)^2\left( \frac{1}{z_i}-\frac{1}{R_2} \right)^2\left( \frac{n_i-n_o}{n_o} \right)\left( \frac{n_o}{R_2}-\frac{n_i+n_o}{z_i} \right).\label{eq:Lens2}
+                \end{align}
+
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.7\textwidth]{Chapter 2/Figures/ThinLensAberrated.pdf}
+                    \caption{Thin lens with aberrations, formed by two spherical diopters of radii $R_1$ and $R_2$ separating the medium $n$ from the glass $n'$. The thickness $\Delta$ between the two vertices is taken to zero at the end of the calculation.}
+                    \label{fig:ThinLensAberrated}
+                \end{figure}
+
+                Calling $\Delta = d_1-d_2$ the thickness of the lens, see figure \ref{fig:ThinLensAberrated}, and adding \ref{eq:Lens1} and \ref{eq:Lens2}, the intermediate distances combine as
+                \begin{equation*}
+                    n_i\left( \frac{1}{d_1} - \frac{1}{d_2} \right) = n_i\frac{d_2-d_1}{d_1d_2} = -\frac{n_i\Delta}{d_2\left(\Delta+d_2\right)},
+                \end{equation*}
+                so that
+                \begin{align}
+                    & \frac{n_o}{z_i} - \frac{n_o}{z_o} = \left( n_i-n_o \right)\left( \frac{1}{R_1}-\frac{1}{R_2} \right) + \frac{n_i\Delta}{d_2\left(\Delta+d_2\right)} \nonumber\\
+                    & - \rho_2^2\frac{1}{2}\left( \frac{n_o}{n_i} \right)^2\left( \frac{1}{z_i}-\frac{1}{R_2} \right)^2\left( \frac{n_i-n_o}{n_o} \right)\left( \frac{n_o}{R_2}-\frac{n_i+n_o}{z_i} \right) \nonumber\\
+                    & + \rho_1^2\frac{1}{2}\left( \frac{n_o}{n_i} \right)^2\left( \frac{1}{z_o}-\frac{1}{R_1} \right)^2\left( \frac{n_i-n_o}{n_o} \right)\left( \frac{n_o}{R_1}-\frac{n_i+n_o}{z_o} \right).\label{eq:ThickLens}
+                \end{align}
+
+                For a thin lens we take the limit ${\color{red}\Delta\to0}$, which kills the second term and makes $\rho_1=\rho_2=\rho$, and we define the paraxial focal distance by
+                \begin{equation}\label{eq:ThinLensFocal}
+                    \frac{1}{f_p} = \frac{n_i-n_o}{n_o}\left( \frac{1}{R_1} - \frac{1}{R_2} \right),
+                \end{equation}
+                which is the lens maker's formula. With this,
+                \begin{align}
+                    & \frac{n_o}{z_i} - \frac{n_o}{z_o} = \frac{n_o}{f_p} + \rho^2\frac{1}{2}\left( \frac{n_o}{n_i} \right)^2\left( \frac{n_i-n_o}{n_o} \right)\left[ \left( \frac{1}{z_o}-\frac{1}{R_1} \right)^2\left( \frac{n_o}{R_1}-\frac{n_i+n_o}{z_o} \right) \right. \nonumber\\
+                    & \left. - \left( \frac{1}{z_i}-\frac{1}{R_2} \right)^2\left( \frac{n_o}{R_2}-\frac{n_i+n_o}{z_i} \right) \right].\label{eq:ThinLensAberrated}
+                \end{align}
+
+                For moderate diameters we may replace, on the right hand side only, the paraxial relation $1/z_i = 1/z_o - 1/f_p$, and then send the object to infinity, $z_o\to\infty$. In that limit ${\color{red}1/z_o}\to0$, so the first bracket becomes $\left(1/R_1\right)^2\left(n_o/R_1\right) = n_o/R_1^3$ and the second becomes $\left( 1/f_p+1/R_2 \right)^2\left( n_o/R_2 + (n_i+n_o)/f_p \right)$, therefore the focal distance for marginal rays in a thin lens is
+                \begin{equation}\label{eq:ThinLensMarginalFocal}
+                    \frac{1}{f_m'} = \frac{1}{f_p} + \rho^2\frac{1}{2}\left( \frac{n_o}{n_i} \right)^2\left( \frac{n_i-n_o}{n_o} \right)\left[ \frac{1}{R_1^3} - \left( \frac{1}{f_p}+\frac{1}{R_2} \right)^2\left( \frac{1}{R_2}+\frac{n_i+n_o}{n_o}\frac{1}{f_p} \right) \right].
+                \end{equation}
+
+                Defining the aberration of the thin lens as the whole $\rho^2$ term,
+                \begin{equation}\label{eq:ThinLensAberrationFocal}
+                    \frac{1}{f_a} = \rho^2\frac{1}{2}\left( \frac{n_o}{n_i} \right)^2\left( \frac{n_i-n_o}{n_o} \right)\left[ \frac{1}{R_1^3} - \left( \frac{1}{f_p}+\frac{1}{R_2} \right)^2\left( \frac{1}{R_2}+\frac{n_i+n_o}{n_o}\frac{1}{f_p} \right) \right] = \frac{n_i-n_o}{n_oR_{1+}} - \frac{n_i-n_o}{n_oR_{2-}},
+                \end{equation}
+                where the two effective radii are
+                \begin{align}
+                    & \frac{1}{R_{1+}} = \frac{\rho^2}{2}\left( \frac{n_o}{n_i} \right)^2\frac{1}{R_1^3},\label{eq:R1plus}\\
+                    & \frac{1}{R_{2-}} = \frac{\rho^2}{2}\left( \frac{n_o}{n_i} \right)^2\left( \frac{1}{f_p}+\frac{1}{R_2} \right)^2\left( \frac{1}{R_2}+\frac{n_i+n_o}{n_of_p} \right),\label{eq:R2minus}
+                \end{align}
+                the whole result takes the memorable form
+                \begin{equation}\label{eq:ThinLensFocalSum}
+                    \frac{1}{f_m'} = \frac{1}{f_p} + \frac{1}{f_a}.
+                \end{equation}
+
+                The aberrated lens behaves, for the marginal rays, as a thin lens of focal length $f_p$ in parallel with a second, purely aberrational lens of focal length $f_a$. And here appears something the single surface could not offer, the bracket in \ref{eq:ThinLensAberrationFocal} contains $R_1$ and $R_2$ separately, not only through the combination $1/R_1-1/R_2$ that fixes $f_p$. Two lenses with the same focal length but different \textit{bending}, that is, with the same difference of curvatures but different individual curvatures, therefore have different spherical aberration. This is the origin of the classical technique of lens bending, and it is why a simple magnifier is always ground as a meniscus with its convex face towards the object rather than as a symmetric biconvex lens \citep{kingslake2010lens}.
+
+        \section{Aplanatism}
+
+                Everything up to this point has been about a single pair of points on the axis. Rigorous stigmatism gives us a perfect image of one point, and approximate stigmatism gives us a slightly imperfect image of one point. But no one photographs a point. What we actually want to image is an \textit{extended} object, and so the question that closes this chapter is the following, under what conditions does the good behaviour of a stigmatic pair survive when we move the object off the axis?
+
+                Consider a centred optical system $\mathcal{S}$ and an object $AB$ normal to the axis, with image $A'B'$. The system $\mathcal{S}$ is said to be \textbf{aplanatic} if for every point $M$ of $AB$ a ray emerging from $M$ and crossing $\mathcal{S}$ passes through $M'$, the image of $M$, so that $M$ and $M'$ are a stigmatic pair. The word comes from the Greek \textit{stigma}, point, and the requirement is that the whole segment, not just its centre, be imaged point by point.
+
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.85\textwidth]{Chapter 2/Figures/AplanatismCondition.pdf}
+                    \caption{The aplanatism condition. Two pairs of rigorously stigmatic points $(A_1,A_1')$ and $(A_2,A_2')$ are considered, with $A_1'$ in a neighbourhood of $A_1$ and $A_2'$ in a neighbourhood of $A_2$, the diopter $D$ separating the media $n_1$ and $n_2$, and $\Delta\vec{I}$ being the displacement of the incidence point on the surface. The Spanish label \textit{vecindad} in the figure means neighbourhood.}
+                    \label{fig:AplanatismCondition}
+                \end{figure}
+
+                Let us suppose two pairs of points $(A_1,A_1')$ and $(A_2,A_2')$ that are rigorously stigmatic, see figure \ref{fig:AplanatismCondition}, in such a way that $L(A_1,A_2) = cte$ and $L(A_1',A_2') = cte$, where $A_1'$ is close to $A_1$ and $A_2'$ is close to $A_2$. In the language of topology, $A_1'$ lies in a neighbourhood of $A_1$ and $A_2'$ lies in a neighbourhood of $A_2$.
+
+                Using exactly the same variational argument that gave us the vectorial Snell-Descartes law \ref{eq:SnellDescartes}, we write the difference of the two optical paths as
+                \begin{equation}\label{eq:AplanatismVariation}
+                    \Delta L\left(A_1,A_2\right) = L\left(A_1',A_2'\right) - L\left(A_1,A_2\right) = \left( n_1\vec{u}_1 - n_2\vec{u}_2 \right)\cdot d\vec{I} + n_2\vec{u}_2\cdot\Delta\vec{A}_2 - n_1\vec{u}_1\cdot\Delta\vec{A}_1 = cte,
+                \end{equation}
+                where $\Delta\vec{A}_1 = \vec{A}_1'-\vec{A}_1$ and $\Delta\vec{A}_2 = \vec{A}_2'-\vec{A}_2$. The first term is the one that gave us the law of refraction, and it vanishes identically,
+                \begin{equation*}
+                    {\color{red}\left( n_1\vec{u}_1 - n_2\vec{u}_2 \right)\cdot d\vec{I} = 0},
+                \end{equation*}
+                because by the Snell-Descartes law \ref{eq:SnellDescartes} the vector $n_1\vec{u}_1-n_2\vec{u}_2$ is parallel to the normal $\hat{N}$, while $d\vec{I}$ is tangent to the diopter. We are therefore left with the \textbf{aplanatism condition}
+                \begin{equation}\label{eq:AplanatismCondition}
+                    \Delta L\left( A_1,A_2 \right) = n_2\vec{u}_2\cdot\Delta\vec{A}_2 - n_1\vec{u}_1\cdot\Delta\vec{A}_1 = cte.
+                \end{equation}
+
+                This deserves a comment before we specialise it. Equation \ref{eq:AplanatismCondition} is a statement about \textit{derivatives} of the optical path with respect to the position of the object, not about the optical path itself. Rigorous stigmatism says that $L$ does not change when we move the incidence point $I$ over the surface. Aplanatism says something much stronger, that the first variation of $L$ with respect to a displacement of the object is also independent of $I$. The first condition makes one point sharp, the second makes the whole neighbourhood of that point sharp.
+
+            \subsection{The Abbe sine condition}\label{subsec:AbbeSine}
+
+                Let us now specialise \ref{eq:AplanatismCondition} to the case that matters for an object normal to the axis, that is, the case where the displacement is \textit{transverse}. Then $\Delta\vec{A}_1$ and $\Delta\vec{A}_2$ are perpendicular to the axis, and the scalar products pick up the sines of the angles that the rays make with the axis,
+                \begin{equation}\label{eq:AbbeTransverse}
+                    n_2\overline{A_2A_2'}\sin\theta_2 - n_1\overline{A_1A_1'}\sin\theta_1 = cte.
+                \end{equation}
+
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.7\textwidth]{Chapter 2/Figures/AbbeSine.pdf}
+                    \caption{Geometry of the Abbe sine condition. The transverse object $\overline{A_1A_1'}$ in the medium $n_1$ is imaged as $\overline{A_2A_2'}$ in the medium $n_2$, and $\theta_1$ and $\theta_2$ are the angles that a given ray makes with the axis in the object and image spaces.}
+                    \label{fig:AbbeSine}
+                \end{figure}
+
+                The constant is fixed by the cheapest possible ray, the one that travels along the axis. For that ray $\theta_1=\theta_2=0$, both sines vanish, and therefore the constant is zero. Since the constant must be the same for every ray, we obtain
+                \begin{equation}\label{eq:AbbeSine}
+                    \frac{\sin\theta_1}{\sin\theta_2} = \frac{n_2}{n_1}\frac{\overline{A_2A_2'}}{\overline{A_1A_1'}},
+                \end{equation}
+                or, writing the \textbf{transverse magnification} as
+                \begin{equation}\label{eq:TransverseMagnification}
+                    g_t = \frac{\overline{A_2A_2'}}{\overline{A_1A_1'}},
+                \end{equation}
+                the condition takes the form in which Abbe stated it in 1873 \citep{abbe1873beitrage},
+                \begin{equation}\label{eq:AbbeSineCondition}
+                    n_1\overline{A_1A_1'}\sin\theta_1 = n_2\overline{A_2A_2'}\sin\theta_2 \qquad\Longleftrightarrow\qquad g_t = \frac{n_1\sin\theta_1}{n_2\sin\theta_2}.
+                \end{equation}
+
+                \begin{myDef}
+                    \textit{(Aplanatism)} A rigorously stigmatic system whose stigmatism is maintained for extended objects, with a magnification that is invariant under a transverse translation, is called \textbf{aplanatic}.
+                \end{myDef}
+
+                The Abbe sine condition is one of those results whose statement is far shorter than its consequences, so it is worth unpacking what it actually demands. The quantity $g_t$ on the left of \ref{eq:AbbeSineCondition} is a single number, fixed once the conjugate planes are chosen. The quantity on the right involves $\theta_1$ and $\theta_2$, which change from ray to ray as we move over the aperture. So the condition says that \textit{the ratio $\sin\theta_1/\sin\theta_2$ must be the same for every ray in the pencil}, from the one that grazes the axis to the one that grazes the rim. If it is not, then rays coming from different zones of the aperture image the off axis point at different transverse positions, and the point spreads into the comet shaped blur that gives coma its name. The sine condition is therefore, in practice, the condition for the absence of coma.
+
+                It is very illuminating to compare it with the paraxial result. In the paraxial regime $\sin\theta\approx\theta$ and \ref{eq:AbbeSineCondition} degenerates into $n_1y_1\theta_1 = n_2y_2\theta_2$, which is the Lagrange-Helmholtz invariant of Gauss optics. So the sine condition is not a new law, it is the exact version of a relation we already knew in its linearised form, and the whole difficulty of optical design lies in the gap between $\theta$ and $\sin\theta$.
+
+                There is one more consequence which is worth stating because it closes a circle we opened many pages ago. We proved, when we studied the spherical diopter, that a sphere is rigorously stigmatic for the pair of Young-Weierstrass points
+                \begin{equation*}
+                    z_o = R\left( 1 + \frac{n_i}{n_o} \right), \qquad z_i = R\left( 1 + \frac{n_o}{n_i} \right),
+                \end{equation*}
+                and one can check that at those two points the sphere also satisfies the sine condition exactly, which is precisely why they are called the \textit{aplanatic points} of the sphere. This is the only situation in which a spherical surface is simultaneously free of spherical aberration and of coma, and it is not a curiosity of the textbooks, it is the working principle of every high numerical aperture microscope objective. The front element of an oil immersion objective is a hemisphere used exactly at its aplanatic points, and the immersion oil is there to make $n_o$ match the glass so that the geometry is preserved. In this sense the whole of modern microscopy rests on a pair of points that Young and Weierstrass found in a sphere.
+
+                Finally, the sine condition also explains why resolution and aperture are the same problem. If we write $\mathrm{NA} = n\sin\theta$ for the numerical aperture, then \ref{eq:AbbeSineCondition} says that the product of the object size by the object side numerical aperture is invariant, $y_1\mathrm{NA}_1 = y_2\mathrm{NA}_2$. To resolve smaller details we must shrink $y_1$, and the invariant then forces $\mathrm{NA}_1$ to grow. Abbe understood this in the same years, and it led him to the diffraction limit that will occupy us in the chapter on diffraction. Geometrical optics, pushed to its own boundary, ends up pointing at the wave theory that must replace it.
