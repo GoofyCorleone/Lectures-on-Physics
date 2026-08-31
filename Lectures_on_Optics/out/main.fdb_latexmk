@@ -1,19 +1,13 @@
 # Fdb version 4
-["bibtex /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main"] 1788193683.29365 "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.aux" "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.bbl" "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main" 1788193685.24895 0
+["bibtex out/main"] 1788208640.9164 "out/main.aux" "out/main.bbl" "out/main" 1788208642.81565 0
   "./references.bib" 1788127372.79869 28610 9d6963823011e0b815ab1aa9f7b0f5e9 ""
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.aux" 1788193685.01457 120415 dd01b2784e575d161573e69e745b4c6a "pdflatex"
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
+  "out/main.aux" 1788208642.56167 120375 3672dc349584cfc25f7274e712130856 "pdflatex"
   (generated)
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.bbl"
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.blg"
+  "out/main.bbl"
+  "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1788193683.37034 "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/main.tex" "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.pdf" "main" 1788193685.24919 0
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/main.tex" 1788126349.76268 6693 29408fc8fce4a38d5ed6ea20ee65840c ""
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.aux" 1788193685.01457 120415 dd01b2784e575d161573e69e745b4c6a "pdflatex"
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.bbl" 1788193683.36596 22502 a236ab4e490020e838da57718bb92627 "bibtex /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main"
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.lof" 1788193685.02102 22024 938b753f94beb55a87447da8fa6992eb "pdflatex"
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out" 1788193685.02076 35236 4ebc5ff61302b41b4accebd205c028df "pdflatex"
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.toc" 1788193685.02096 14734 4389d4442efb840a0efc8bbd06ebd400 "pdflatex"
+["pdflatex"] 1788208640.98618 "main.tex" "out/main.pdf" "main" 1788208642.81589 0
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -298,7 +292,7 @@
   "Chapter 5/Figures/GreenImagenes.pdf" 1788059544.28583 18859 31fd6d56d8ca4a927466971deedf8a06 ""
   "Chapter 5/Figures/GreenNoPuntual.pdf" 1788059544.28623 27035 acff4151beca5b9445e69637c7a2c7e9 ""
   "Chapter 5/Figures/GreenPuntual.pdf" 1788059544.28673 25660 e27a3ffce723cfd3d964127af1c38b22 ""
-  "Chapter 5/chap5.tex" 1788126675.12858 112969 b35e5072d98a40550a25d55db856b3e7 ""
+  "Chapter 5/chap5.tex" 1788208620.87021 113093 43cd4a8192011fb2ddbf70b798107e10 ""
   "Chapter 6/Figures/Estrecho.pdf" 1788059544.28706 35389 6a9becda114279712867b0decc2eb085 ""
   "Chapter 6/Figures/FourierGamma.pdf" 1788059544.28718 15760 f18c41c818418794d85cbff65ae8f04f ""
   "Chapter 6/Figures/Propagation.pdf" 1788059544.28753 20593 8f27724c06423aaab94caba0915cd05d ""
@@ -308,11 +302,17 @@
   "Chapter 6/chap6.tex" 1788127536.68214 83008 dcd0255a81a83fcde6d5c136588a5a2e ""
   "Figures/LoGOTS.png" 1788059544.30232 58761 d30b2db1e9efaf752cebe7551c894d9d ""
   "Figures/logouis.png" 1788059544.30252 62450 f09c4e4b788c95739ca2931443f6d84e ""
+  "main.tex" 1788126349.76268 6693 29408fc8fce4a38d5ed6ea20ee65840c ""
+  "out/main.aux" 1788208642.56167 120375 3672dc349584cfc25f7274e712130856 "pdflatex"
+  "out/main.bbl" 1788208640.98208 22620 7e8a4a07c327733d712eedf036651767 "bibtex out/main"
+  "out/main.lof" 1788208642.56797 22024 e522e44a3e9b4baa2f9942e7e8e2a26e "pdflatex"
+  "out/main.out" 1788208642.56774 35236 d7ba5031264167ae648bcb3246d37262 "pdflatex"
+  "out/main.toc" 1788208642.56793 14734 c8b552df67a645f7a0497dfdaac9e0d6 "pdflatex"
   (generated)
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.aux"
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.lof"
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.log"
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.out"
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.pdf"
-  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Optics/out/main.toc"
+  "out/main.aux"
+  "out/main.lof"
+  "out/main.log"
+  "out/main.out"
+  "out/main.pdf"
+  "out/main.toc"
   (rewritten before read)

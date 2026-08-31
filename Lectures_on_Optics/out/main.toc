@@ -97,41 +97,41 @@
 \contentsline {section}{\numberline {5.1}A historical context of diffraction theory: from shadows to the vector world}{174}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Scalar theory of diffraction}{177}{section.5.2}%
 \contentsline {section}{\numberline {5.3}The scalar wave equation (Helmholtz equation)}{179}{section.5.3}%
-\contentsline {section}{\numberline {5.4}The Kirchhoff scalar boundary-value problem}{179}{section.5.4}%
+\contentsline {section}{\numberline {5.4}The Kirchoff scalar boundary-value problem}{180}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Green's theorem}{180}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}The HelmholtzKirchhoff integral theorem}{181}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}The RayleighSommerfeld formulation}{185}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.2}The Helmholtz-Kirchoff integral theorem}{181}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}The Rayleigh-Sommerfeld formulation}{185}{subsection.5.4.3}%
 \contentsline {section}{\numberline {5.5}The Fresnel approximation}{186}{section.5.5}%
 \contentsline {subsection}{\numberline {5.5.1}Example: Fraunhofer diffraction between two confocal spheres}{187}{subsection.5.5.1}%
 \contentsline {section}{\numberline {5.6}The Fraunhofer approximation}{190}{section.5.6}%
 \contentsline {section}{\numberline {5.7}The fractional Fourier transformation}{192}{section.5.7}%
 \contentsline {subsection}{\numberline {5.7.1}A historical context of Fourier analysis and of its fractional powers}{192}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}The fractional Fourier transformation as a differential and as an integral operator}{196}{subsection.5.7.2}%
-\contentsline {subsubsection}{\numberline {5.7.2.1}The eigenfunctions of the Fourier transformation}{197}{subsubsection.5.7.2.1}%
+\contentsline {subsection}{\numberline {5.7.2}The fractional Fourier transformation as a differential and as an integral operator}{195}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}The eigenfunctions of the Fourier transformation}{196}{subsubsection.5.7.2.1}%
 \contentsline {subsubsection}{\numberline {5.7.2.2}Namias' definition and the differential operator}{198}{subsubsection.5.7.2.2}%
-\contentsline {subsubsection}{\numberline {5.7.2.3}The integral form of the transformation}{200}{subsubsection.5.7.2.3}%
-\contentsline {subsubsection}{\numberline {5.7.2.4}The inverse transformation and the index law}{202}{subsubsection.5.7.2.4}%
-\contentsline {subsubsection}{\numberline {5.7.2.5}The regularisation of McBride and Kerr}{203}{subsubsection.5.7.2.5}%
-\contentsline {subsubsection}{\numberline {5.7.2.6}Why the construction is useful}{204}{subsubsection.5.7.2.6}%
-\contentsline {subsection}{\numberline {5.7.3}The role of Fourier analysis in the theory of diffraction}{205}{subsection.5.7.3}%
-\contentsline {subsubsection}{\numberline {5.7.3.1}Why a plane cannot be the right reference surface}{206}{subsubsection.5.7.3.1}%
-\contentsline {subsubsection}{\numberline {5.7.3.2}Reference spheres and the fractional order}{207}{subsubsection.5.7.3.2}%
-\contentsline {subsubsection}{\numberline {5.7.3.3}The normalising constant and the final result}{209}{subsubsection.5.7.3.3}%
-\contentsline {subsubsection}{\numberline {5.7.3.4}Physical meaning of a real order}{211}{subsubsection.5.7.3.4}%
-\contentsline {subsubsection}{\numberline {5.7.3.5}Physical meaning of a complex order}{212}{subsubsection.5.7.3.5}%
-\contentsline {chapter}{\numberline {6}Theory of Coherence}{215}{chapter.6}%
-\contentsline {section}{\numberline {6.1}A historical context of coherence theory}{216}{section.6.1}%
-\contentsline {section}{\numberline {6.2}How is statistical similarity quantified?}{219}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Random variables}{222}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}The sample space and the physical meaning of an event}{223}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}The sigma algebra, or which questions may be asked}{223}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Measure, the Lebesgue measure and the probability measure}{225}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Random variables and the meaning of measurability}{226}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Stochastic processes}{228}{subsection.6.3.5}%
-\contentsline {subsection}{\numberline {6.3.6}The probability space of the electromagnetic field}{228}{subsection.6.3.6}%
-\contentsline {subsection}{\numberline {6.3.7}Stationarity, ergodicity and the right to measure}{230}{subsection.6.3.7}%
-\contentsline {section}{\numberline {6.4}The coherence function}{231}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Manifestations of coherence: the WienerKhinchin theorem}{235}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}The wave equation of coherence}{237}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Propagation of coherence and the direction of time: the van CittertZernike theorem}{240}{subsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {5.7.2.3}The integral form of the transformation}{199}{subsubsection.5.7.2.3}%
+\contentsline {subsubsection}{\numberline {5.7.2.4}The inverse transformation and the index law}{201}{subsubsection.5.7.2.4}%
+\contentsline {subsubsection}{\numberline {5.7.2.5}The regularisation of McBride and Kerr}{202}{subsubsection.5.7.2.5}%
+\contentsline {subsubsection}{\numberline {5.7.2.6}Why the construction is useful}{203}{subsubsection.5.7.2.6}%
+\contentsline {subsection}{\numberline {5.7.3}The role of Fourier analysis in the theory of diffraction}{204}{subsection.5.7.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.1}Why a plane cannot be the right reference surface}{204}{subsubsection.5.7.3.1}%
+\contentsline {subsubsection}{\numberline {5.7.3.2}Reference spheres and the fractional order}{205}{subsubsection.5.7.3.2}%
+\contentsline {subsubsection}{\numberline {5.7.3.3}The normalising constant and the final result}{208}{subsubsection.5.7.3.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.4}Physical meaning of a real order}{209}{subsubsection.5.7.3.4}%
+\contentsline {subsubsection}{\numberline {5.7.3.5}Physical meaning of a complex order}{210}{subsubsection.5.7.3.5}%
+\contentsline {chapter}{\numberline {6}Theory of Coherence}{213}{chapter.6}%
+\contentsline {section}{\numberline {6.1}A historical context of coherence theory}{214}{section.6.1}%
+\contentsline {section}{\numberline {6.2}How is statistical similarity quantified?}{217}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Random variables}{220}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}The sample space and the physical meaning of an event}{221}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}The sigma algebra, or which questions may be asked}{221}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Measure, the Lebesgue measure and the probability measure}{223}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Random variables and the meaning of measurability}{224}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Stochastic processes}{226}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}The probability space of the electromagnetic field}{226}{subsection.6.3.6}%
+\contentsline {subsection}{\numberline {6.3.7}Stationarity, ergodicity and the right to measure}{228}{subsection.6.3.7}%
+\contentsline {section}{\numberline {6.4}The coherence function}{229}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Manifestations of coherence: the WienerKhinchin theorem}{233}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}The wave equation of coherence}{235}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Propagation of coherence and the direction of time: the van CittertZernike theorem}{238}{subsection.6.4.3}%
 \contentsfinish 
