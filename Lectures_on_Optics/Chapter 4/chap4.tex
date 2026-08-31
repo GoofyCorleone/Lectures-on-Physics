@@ -519,3 +519,269 @@
         The configuration sketched above did not spring fully formed from the 1887 experiment already described at the opening of this chapter. Michelson built and tested a first, considerably simpler version of it in 1881, while on leave from the United States Naval Academy and working in Hermann von Helmholtz's laboratory in Berlin \cite{michelson1881relative}. That prototype was mounted directly on a stone pier in the basement of the Astrophysical Observatory in Potsdam, in an attempt to damp out the ordinary tremors of the building, and it already embodied the essential idea sketched in figure \ref{fig:MichelsonInterferometer}, a beam split and sent along two perpendicular paths before being brought back together. Its single, short arm and its residual sensitivity to vibration, however, produced a fringe shift far too small and unsteady to draw any firm conclusion, and Alfred Potier and Lord Rayleigh soon pointed out besides that Michelson's original analysis had understated the expected shift by a factor of two, an error traceable to treating the motion of the Earth as though it affected both arms in the same way. Correcting the theory raised the predicted shift, but what the measurement truly needed was a much longer optical path and a mounting immune to vibration, and supplying both is exactly what occupied Michelson once he moved to the Case School of Applied Science and joined forces with Edward Morley.
 
         The apparatus that resulted rested on a massive sandstone slab floated on a pool of mercury, so that it could be rotated smoothly about a vertical axis without flexing, and each arm was folded by a set of auxiliary mirrors to stretch its effective length to roughly eleven metres, some ten times longer than in the Potsdam attempt, which is what finally brought the sensitivity of the instrument within reach of the aether drift the theory predicted, only for none to appear \cite{michelson1887relative}. The same principle, two beams recombined after independent and adjustable paths, proved useful well beyond that null result. Four decades later Michelson, together with Francis Pease, mounted a twenty foot version of essentially the same interferometer across the aperture of the 100 inch Hooker telescope at Mount Wilson, and used the visibility of the fringes it produced, precisely the visibility introduced earlier in this chapter, to measure for the first time the angular diameter of a star other than the Sun, Betelgeuse, from nothing more than the separation between the two outer mirrors at which the fringes first washed out \cite{michelson1921diameter}. The same architecture went on to become the working principle of Fourier transform spectroscopy, where a single continuously scanned mirror encodes an entire spectrum into one interferogram, and later still of optical coherence tomography, which uses exactly this idea to image tissue a few micrometres beneath the surface.
+        Let us now solve the instrument. The difficulty of the Michelson interferometer is not conceptual but bookkeeping, because the light is folded twice in each arm and a direct ray tracing forces us to carry two reflection points, four propagation legs and the two tilts all at the same time. The method of images removes the folding entirely. The idea is that a plane mirror does nothing to a wave except to make it appear to come from somewhere else, so that instead of following the light around the corner we may replace the mirror by the image of the source in it and let the light travel in a straight line. Applying this once for every reflection the beam actually suffers, each arm collapses into a single point source radiating freely into the output space, and the whole interferometer is reduced to the problem of two point sources that we already solved in the section on the interference of spherical waves. Everything that follows is the systematic execution of that idea.
+
+        The tool we need is the reflection of a point in a plane. Let the plane pass through a point $\vec{P}$ and have unit normal $\hat{n}$, and let $\vec{X}$ be the point to be reflected. The quantity $\left(\vec{X}-\vec{P}\right)\cdot\hat{n}$ is the signed distance from $\vec{X}$ to the plane, positive on the side towards which $\hat{n}$ points, so that subtracting twice that distance along $\hat{n}$ carries the point across the plane and leaves it at the same distance on the other side. The image is therefore
+
+        \begin{equation}\label{eq:MichReflectOp}
+            \mathcal{R}\left(\vec{X}\right) = \vec{X} - 2\left[\left(\vec{X}-\vec{P}\right)\cdot\hat{n}\right]\hat{n},
+        \end{equation}
+        and it is worth pausing on why this simple operation is legitimate optics rather than a drawing trick. The map \ref{eq:MichReflectOp} is an isometry, since it preserves the distance between any two points, and it is an involution, since applying it twice returns the original point. The first property is the important one, because the optical path from the source to any point of the output space, measured along the true folded trajectory, is exactly equal to the straight line distance from the image to that same point. The image is not an approximation of the source, it is the source as far as every optical path length is concerned, and since interference depends on nothing but optical path lengths, the two descriptions are rigorously equivalent.
+
+        We place the origin $O$ at the centre of the beamsplitting cube, take the $x$ axis along the first arm and the $y$ axis along the second, and read off the data of figure \ref{fig:MichelsonInterferometer}. The source sits at
+
+        \begin{equation}\label{eq:MichSource}
+            \mathcal{S} = \left(-a,\,0\right),
+        \end{equation}
+        the first mirror has its vertex on the $x$ axis at a distance $d+\ell_1$ from the origin and is tilted by $\theta$ away from the orientation perpendicular to its arm, so that its normal has turned by the same angle away from $\hat{x}$,
+
+        \begin{equation}\label{eq:MichM1}
+            \vec{P}_1 = \left(d+\ell_1,\,0\right), \qquad \hat{n}_1 = \left(\cos\theta,\,\sin\theta\right),
+        \end{equation}
+        while the second mirror has its vertex on the $y$ axis at a distance $d+\ell_2$ and is tilted by $\phi$ in the same sense, so that its normal has turned away from $\hat{y}$,
+
+        \begin{equation}\label{eq:MichM2}
+            \vec{P}_2 = \left(0,\,d+\ell_2\right), \qquad \hat{n}_2 = \left(-\sin\phi,\,\cos\phi\right).
+        \end{equation}
+        The splitting surface is the diagonal of the cube, a plane through the origin inclined at $45$ degrees, whose unit normal we may take as
+
+        \begin{equation}\label{eq:MichBS}
+            \vec{P}_B = \left(0,\,0\right), \qquad \hat{n}_B = \frac{1}{\sqrt{2}}\left(1,\,-1\right).
+        \end{equation}
+        To keep the expressions readable we abbreviate the two total arm lengths measured from the origin,
+
+        \begin{equation}\label{eq:MichLengths}
+            L_1 = d+\ell_1, \qquad L_2 = d+\ell_2,
+        \end{equation}
+        and we note once and for all that transmission through the beamsplitter produces no image at all, since a beam that goes straight through a compensated plate emerges travelling along the same line it came in on, so only the genuine reflections have to be accounted for.
+
+        We begin with the first arm, in which the light crosses the splitter, travels to the first mirror, is reflected there, comes back and is reflected a second time at the splitter on its way out. Two reflections occur, first in $M_1$ and then in the beamsplitter, and the images must be taken in that same order, because the second mirror sees not the original source but the image already produced by the first.
+
+        The first reflection is in $M_1$. We need the signed distance from the source to the plane of that mirror, and using \ref{eq:MichSource} and \ref{eq:MichM1},
+
+        \begin{equation*}
+            \mathcal{S}-\vec{P}_1 = \left(-a-L_1,\,0\right), \qquad
+            \left(\mathcal{S}-\vec{P}_1\right)\cdot\hat{n}_1 = -\left(a+L_1\right)\cos\theta ,
+        \end{equation*}
+        a quantity that is negative, as it must be, since the source lies on the side opposite to the one the normal points to. Feeding this into \ref{eq:MichReflectOp},
+
+        \begin{align*}
+            & \mathcal{S}_1' = \left(-a,\,0\right) + 2\left(a+L_1\right)\cos\theta\,\left(\cos\theta,\,\sin\theta\right) = \\
+            & \left(-a + 2\left(a+L_1\right)\cos^{2}\theta,\;\; 2\left(a+L_1\right)\sin\theta\cos\theta\right),
+        \end{align*}
+        and the two double angle identities $2\cos^{2}\theta = 1+\cos 2\theta$ and $2\sin\theta\cos\theta = \sin 2\theta$ turn this into
+
+        \begin{align*}
+            & \mathcal{S}_1' = \left({\color{red}-a} + \left(a+L_1\right) + \left(a+L_1\right)\cos 2\theta,\;\; \left(a+L_1\right)\sin 2\theta\right) = \\
+            & \left(L_1 + \left(a+L_1\right)\cos 2\theta,\;\; \left(a+L_1\right)\sin 2\theta\right),
+        \end{align*}
+        where the two terms in red have cancelled, since $-a+(a+L_1) = L_1$. We therefore have the image of the source in the first mirror,
+
+        \begin{equation}\label{eq:MichS1prime}
+            \mathcal{S}_1' = \left(L_1 + \left(a+L_1\right)\cos 2\theta,\;\; \left(a+L_1\right)\sin 2\theta\right).
+        \end{equation}
+
+        It is worth stopping to read \ref{eq:MichS1prime} physically, because the tilt has entered doubled. This is the elementary and often forgotten fact that turning a mirror by an angle turns the reflected beam by twice that angle, and it appears here automatically, without our having invoked it, simply because the reflection operator acts twice on the component along the normal. Notice also that the distance from the origin to this image satisfies
+
+        \begin{equation*}
+            \left|\left|\mathcal{S}_1'\right|\right|^{2} = L_1^{2} + \left(a+L_1\right)^{2} + 2L_1\left(a+L_1\right)\cos 2\theta ,
+        \end{equation*}
+        which is the law of cosines for a triangle of sides $L_1$ and $a+L_1$ enclosing the angle $\pi - 2\theta$. The law of cosines does govern this construction, but with the angle $2\theta$ and not $\theta$, and it emerges by itself rather than having to be guessed. As a check, setting $\theta = 0$ leaves $\mathcal{S}_1' = (a+2L_1,\,0)$, the image sitting on the axis of the arm at a distance $a+2L_1$ from the origin, which is precisely the source retreated by twice the distance it stands from the mirror, as a mirror facing the beam squarely must do.
+
+        The second reflection is in the beamsplitter, and here the algebra becomes remarkably simple. For an arbitrary point $\vec{X} = \left(X_1,\,X_2\right)$ the signed distance to the splitting plane is $\vec{X}\cdot\hat{n}_B = \left(X_1-X_2\right)/\sqrt{2}$, so that \ref{eq:MichReflectOp} gives
+
+        \begin{align*}
+            & \mathcal{R}_B\left(\vec{X}\right) = \left(X_1,\,X_2\right) - \frac{2\left(X_1-X_2\right)}{\sqrt{2}}\cdot\frac{1}{\sqrt{2}}\left(1,\,-1\right) = \left(X_1,\,X_2\right) - \left(X_1-X_2\right)\left(1,\,-1\right) = \\
+            & \left({\color{red}X_1} - {\color{red}X_1} + X_2,\;\; {\color{red}X_2} + X_1 - {\color{red}X_2}\right) = \left(X_2,\,X_1\right),
+        \end{align*}
+        the terms in red cancelling in each component, so that
+
+        \begin{equation}\label{eq:MichBSswap}
+            \mathcal{R}_B\left(X_1,\,X_2\right) = \left(X_2,\,X_1\right),
+        \end{equation}
+        that is, \textit{reflection in the beamsplitter is nothing but the interchange of the two coordinates}. This is the analytic expression of the fact that a mirror at $45$ degrees exchanges the two arms of the instrument, sending the axis of the first onto the axis of the second, and it is the single feature that makes the Michelson interferometer so symmetric. Applying \ref{eq:MichBSswap} to \ref{eq:MichS1prime} we obtain the virtual source of the first arm,
+
+        \begin{equation}\label{eq:MichS1}
+            \mathcal{S}_1 = \left(\left(a+L_1\right)\sin 2\theta,\;\; L_1 + \left(a+L_1\right)\cos 2\theta\right),
+        \end{equation}
+        and the construction that leads to it is drawn in figure \ref{fig:MichelsonImages1}, where the perpendicular dropped from each point to the corresponding plane and the equality of the two distances on either side of it are marked explicitly.
+
+        \begin{figure}[!ht]
+            \centering
+            \includegraphics[width=0.78\textwidth]{Chapter 4/Figures/MichelsonImages1.pdf}
+            \caption{Construction of the virtual source of the first arm. The source $\mathcal{S}$ is first reflected in the plane of the mirror $M_1$, giving $\mathcal{S}_1'$, and this image is then reflected in the plane of the beamsplitter, giving $\mathcal{S}_1$. In each step the segment joining a point to its image is perpendicular to the corresponding plane and is bisected by it, which is what the right angles and the equal marks record. The interferometer of figure \ref{fig:MichelsonInterferometer} is kept faded in the background so that the construction may be followed against the real geometry of the instrument.}
+            \label{fig:MichelsonImages1}
+        \end{figure}
+
+        We now turn to the second arm, and the first thing to notice is that the order of the operations is reversed. Here the light is reflected at the splitter on its way in, travels up to the second mirror, is reflected there, and finally crosses the splitter on its way out without being reflected again. The two reflections are therefore first in the beamsplitter and then in $M_2$, exactly the opposite of what happened in the first arm, and since reflections in different planes do not commute the order matters and must be respected.
+
+        The first reflection is in the beamsplitter, and \ref{eq:MichBSswap} disposes of it immediately,
+
+        \begin{equation}\label{eq:MichS2prime}
+            \mathcal{S}_2' = \mathcal{R}_B\left(-a,\,0\right) = \left(0,\,-a\right).
+        \end{equation}
+        This deserves a comment, because the result is more eloquent than the calculation. The image of the source in the splitter sits on the axis of the second arm, at a distance $a$ on the far side of the origin, which is to say that the light climbing towards the second mirror behaves in every respect as though it had been emitted by a source placed a distance $a$ below the beamsplitter. That is the whole content of the folding, expressed in one line, and it is the reason the two arms of a Michelson interferometer can be compared at all.
+
+        The second reflection is in $M_2$. Using \ref{eq:MichM2} and \ref{eq:MichS2prime},
+
+        \begin{equation*}
+            \mathcal{S}_2'-\vec{P}_2 = \left(0,\,-a-L_2\right), \qquad
+            \left(\mathcal{S}_2'-\vec{P}_2\right)\cdot\hat{n}_2 = -\left(a+L_2\right)\cos\phi ,
+        \end{equation*}
+        and substituting into \ref{eq:MichReflectOp},
+
+        \begin{align*}
+            & \mathcal{S}_2 = \left(0,\,-a\right) + 2\left(a+L_2\right)\cos\phi\,\left(-\sin\phi,\,\cos\phi\right) = \\
+            & \left(-2\left(a+L_2\right)\sin\phi\cos\phi,\;\; -a + 2\left(a+L_2\right)\cos^{2}\phi\right),
+        \end{align*}
+        so that the same two double angle identities used before, together with the same cancellation $-a+(a+L_2) = L_2$, give the virtual source of the second arm,
+
+        \begin{equation}\label{eq:MichS2}
+            \mathcal{S}_2 = \left(-\left(a+L_2\right)\sin 2\phi,\;\; L_2 + \left(a+L_2\right)\cos 2\phi\right),
+        \end{equation}
+        whose construction is drawn in figure \ref{fig:MichelsonImages2}.
+
+        \begin{figure}[!ht]
+            \centering
+            \includegraphics[width=0.60\textwidth]{Chapter 4/Figures/MichelsonImages2.pdf}
+            \caption{Construction of the virtual source of the second arm. Here the order is reversed with respect to the first arm, since the light meets the beamsplitter before the mirror. The source is first reflected in the plane of the splitter, giving $\mathcal{S}_2'$ on the axis of the second arm at a distance $a$ below the origin, and this image is then reflected in the plane of the mirror $M_2$, giving $\mathcal{S}_2$.}
+            \label{fig:MichelsonImages2}
+        \end{figure}
+
+        The two results \ref{eq:MichS1} and \ref{eq:MichS2} are the complete solution of the interferometer, and writing them together and restoring the lengths \ref{eq:MichLengths},
+
+        \begin{align}
+            & \mathcal{S}_1 = \left(\left(a+d+\ell_1\right)\sin 2\theta,\;\;\; \left(d+\ell_1\right) + \left(a+d+\ell_1\right)\cos 2\theta\right),\label{eq:MichFinal1}\\
+            & \mathcal{S}_2 = \left(-\left(a+d+\ell_2\right)\sin 2\phi,\;\; \left(d+\ell_2\right) + \left(a+d+\ell_2\right)\cos 2\phi\right).\label{eq:MichFinal2}
+        \end{align}
+
+        Two checks confirm that these expressions are right. The first is a symmetry. The interchange $x \leftrightarrow y$ together with $\theta \leftrightarrow \phi$ and $\ell_1 \leftrightarrow \ell_2$ carries \ref{eq:MichFinal1} into \ref{eq:MichFinal2} up to the sign of the first component, and that is exactly as it should be, because by \ref{eq:MichBSswap} the interchange of the coordinates \textit{is} the reflection in the beamsplitter, which is precisely the operation that exchanges the two arms of the instrument. A formula that failed this test would be describing an asymmetric interferometer. The second check is the aligned instrument. Setting $\theta = \phi = 0$ both cosines become unity and both sines vanish, leaving
+
+        \begin{equation}\label{eq:MichAligned}
+            \mathcal{S}_1 = \left(0,\;a+2\left(d+\ell_1\right)\right), \qquad \mathcal{S}_2 = \left(0,\;a+2\left(d+\ell_2\right)\right),
+        \end{equation}
+        so that both virtual sources fall on the axis of the output arm, one behind the other, separated by
+
+        \begin{equation*}
+            \left|\left|\mathcal{S}_1-\mathcal{S}_2\right|\right| = 2\left(\ell_1-\ell_2\right),
+        \end{equation*}
+        which is the classical statement that a Michelson interferometer with aligned mirrors is equivalent to two point sources separated by twice the difference of the arm lengths. The factor of two, which every treatment of the instrument quotes, has come out of the algebra rather than having been asserted.
+
+        In the general case the two sources are neither coincident nor aligned with the output axis, and what governs the interference is their separation,
+
+        \begin{equation}\label{eq:MichDelta}
+            \vec{\Delta} = \mathcal{S}_1 - \mathcal{S}_2 = \left(\Delta_\perp,\;\Delta_\parallel\right),
+        \end{equation}
+        whose two components, transverse and longitudinal with respect to the direction in which the light leaves the instrument, are
+
+        \begin{align}
+            & \Delta_\perp = \left(a+d+\ell_1\right)\sin 2\theta + \left(a+d+\ell_2\right)\sin 2\phi,\label{eq:MichDeltaPerp}\\
+            & \Delta_\parallel = \left(\ell_1-\ell_2\right) + \left(a+d+\ell_1\right)\cos 2\theta - \left(a+d+\ell_2\right)\cos 2\phi.\label{eq:MichDeltaPar}
+        \end{align}
+        This separation of $\vec{\Delta}$ into two pieces is not a formality, because the two components produce interference patterns of entirely different appearance, as we are about to see. The complete construction, with both arms solved and the two equivalent virtual sources shown together with their separation, is collected in figure \ref{fig:MichelsonImages3}.
+
+        \begin{figure}[!ht]
+            \centering
+            \includegraphics[width=0.76\textwidth]{Chapter 4/Figures/MichelsonImages3.pdf}
+            \caption{The interferometer completely solved by the method of images. The construction of both arms is superposed on the faded instrument, and the two resulting virtual sources $\mathcal{S}_1$ and $\mathcal{S}_2$ are shown with their position vectors measured from the origin $O$ at the centre of the beamsplitter, together with the separation $\vec{\Delta}$ that governs the interference. From the point of view of the output, the whole interferometer has been replaced by these two mutually coherent point sources.}
+            \label{fig:MichelsonImages3}
+        \end{figure}
+
+        Everything that remains is to let the two equivalent sources interfere, and since the machinery for that was built in the first half of this chapter the work is short. We treat the two cases in turn.
+
+        Consider first the case in which the instrument is illuminated by \textbf{plane waves}, which is what happens when the source is placed at the focus of a collimating lens or, equivalently, when it is pushed to infinity. There are then no point sources to speak of, but the method of images applies just as well to the direction of propagation as to the position of the source, because the reflection of a wave vector in a plane obeys the very same operator \ref{eq:MichReflectOp} with the point $\vec{P}$ removed, that is $\vec{k} \to \vec{k} - 2\left(\vec{k}\cdot\hat{n}\right)\hat{n}$. Let the wave arrive along the first arm, $\vec{k} = \kappa\hat{x}$. In the first arm it is reflected in $M_1$, for which $\vec{k}\cdot\hat{n}_1 = \kappa\cos\theta$ and therefore
+
+        \begin{equation*}
+            \vec{k} \longrightarrow \kappa\left(1-2\cos^{2}\theta,\;-2\sin\theta\cos\theta\right) = -\kappa\left(\cos 2\theta,\;\sin 2\theta\right),
+        \end{equation*}
+        and it is then reflected in the splitter, which by \ref{eq:MichBSswap} merely interchanges the components, so that the wave leaving the first arm has
+
+        \begin{equation}\label{eq:MichK1}
+            \vec{k}_1 = -\kappa\left(\sin 2\theta,\;\cos 2\theta\right).
+        \end{equation}
+        In the second arm the order is again reversed. The splitter turns $\kappa\hat{x}$ into $\kappa\hat{y}$, the wave climbs to $M_2$, for which $\vec{k}\cdot\hat{n}_2 = \kappa\cos\phi$ and therefore
+
+        \begin{equation*}
+            \kappa\left(0,\,1\right) \longrightarrow \kappa\left(2\sin\phi\cos\phi,\;1-2\cos^{2}\phi\right) = \kappa\left(\sin 2\phi,\;-\cos 2\phi\right),
+        \end{equation*}
+        and the final transmission leaves it untouched, so that
+
+        \begin{equation}\label{eq:MichK2}
+            \vec{k}_2 = \kappa\left(\sin 2\phi,\;-\cos 2\phi\right).
+        \end{equation}
+        Both \ref{eq:MichK1} and \ref{eq:MichK2} reduce to $-\kappa\hat{y}$ when the mirrors are aligned, confirming that the two waves then leave the instrument along the same downward axis. The angle $\alpha$ between them follows from their scalar product,
+
+        \begin{equation*}
+            \frac{\vec{k}_1\cdot\vec{k}_2}{\kappa^{2}} = -\sin 2\theta\sin 2\phi + \cos 2\theta\cos 2\phi = \cos\left(2\theta+2\phi\right),
+        \end{equation*}
+        so that, remarkably,
+
+        \begin{equation}\label{eq:MichAlpha}
+            \alpha = 2\left(\theta+\phi\right),
+        \end{equation}
+        the two tilts adding rather than subtracting, each one contributing twice its own value. Since the two waves have equal moduli, we are exactly in the situation studied at the beginning of this chapter, and the interference vector has the magnitude $K = 2\kappa\sin(\alpha/2)$ found there. The fringes are therefore straight, parallel to $\vec{k}_1+\vec{k}_2$, and separated by
+
+        \begin{equation}\label{eq:MichLambdaPlane}
+            \Lambda = \frac{2\pi}{K} = \frac{\lambda}{2\sin\left(\theta+\phi\right)},
+        \end{equation}
+        with the irradiance
+
+        \begin{equation}\label{eq:MichIPlane}
+            I = 2I_0\left[1+\cos\left(\frac{2\pi}{\Lambda}X + \frac{4\pi}{\lambda}\left(\ell_1-\ell_2\right) + \delta_B\right)\right],
+        \end{equation}
+        where $X$ is measured on the observation plane along the direction of $\vec{K}$, the term $4\pi(\ell_1-\ell_2)/\lambda$ is the phase accumulated by the difference $2(\ell_1-\ell_2)$ of the two optical paths on the axis, and $\delta_B$ is the phase introduced by the splitter itself, equal to $\pi$ for a symmetric beamsplitter, which is what makes the two output ports of the instrument complementary and conserves the energy between them. The behaviour of \ref{eq:MichLambdaPlane} is the expected one, since aligning the mirrors sends $\theta+\phi \to 0$ and therefore $\Lambda \to \infty$, the fringes widening without limit until the whole field is uniformly bright or uniformly dark according to the value of the arm difference, which is exactly what one observes when a Michelson interferometer is well aligned under collimated illumination.
+
+        Consider now the case of \textbf{spherical waves}, that is, of a genuine point source at a finite distance, which is the case the whole image construction was built for. The instrument has been replaced by the two mutually coherent point sources $\mathcal{S}_1$ and $\mathcal{S}_2$ of \ref{eq:MichFinal1} and \ref{eq:MichFinal2}, and we observe the light on a screen placed perpendicular to the output axis at a distance $D$ below the beamsplitter, with coordinates $X$ in the plane of the figure and $Z$ perpendicular to it. Writing $\mathcal{S}_j = (X_j, Y_j)$ the distances from each source to a point of the screen are
+
+        \begin{equation*}
+            r_j = \left[\left(X-X_j\right)^{2} + Z^{2} + \left(D+Y_j\right)^{2}\right]^{1/2},
+        \end{equation*}
+        and since both sources lie close to the axis compared with $D$ we expand exactly as we did for two spherical waves earlier in this chapter,
+
+        \begin{equation*}
+            r_j \approx \left(D+Y_j\right) + \frac{\left(X-X_j\right)^{2}+Z^{2}}{2\left(D+Y_j\right)} .
+        \end{equation*}
+        Subtracting the two, and replacing $D+Y_j$ by the mean distance $\bar{D} = D + (Y_1+Y_2)/2$ inside the quadratic terms, which is legitimate because the difference of the two denominators only affects the result at the next order,
+
+        \begin{align*}
+            & r_1 - r_2 \approx \left(Y_1-Y_2\right) + \frac{\left(X-X_1\right)^{2} + {\color{red}Z^{2}} - \left(X-X_2\right)^{2} - {\color{red}Z^{2}}}{2\bar{D}} = \\
+            & \Delta_\parallel + \frac{{\color{red}X^{2}} - 2XX_1 + X_1^{2} - {\color{red}X^{2}} + 2XX_2 - X_2^{2}}{2\bar{D}} = \Delta_\parallel - \frac{\Delta_\perp}{\bar{D}}X + \frac{X_1^{2}-X_2^{2}}{2\bar{D}},
+        \end{align*}
+        where the terms in red have cancelled, the transverse coordinate $Z$ dropping out entirely because both sources lie in the plane $Z=0$. The last term is a constant and merely displaces the pattern as a whole, and it disappears if the origin of $X$ on the screen is taken at the midpoint of the projections of the two sources, which we do from here on. The phase difference is then
+
+        \begin{equation}\label{eq:MichPhaseSph}
+            \triangle\phi = \kappa\left(r_2-r_1\right) + \delta_B = \frac{2\pi}{\lambda}\frac{\Delta_\perp}{\bar{D}}X - \frac{2\pi}{\lambda}\Delta_\parallel + \delta_B,
+        \end{equation}
+        and the irradiance on the screen is
+
+        \begin{equation}\label{eq:MichISph}
+            I = 2I_0\left[1+\cos\left(\frac{2\pi}{\lambda}\frac{\Delta_\perp}{\bar{D}}X - \frac{2\pi}{\lambda}\Delta_\parallel + \delta_B\right)\right].
+        \end{equation}
+
+        Equation \ref{eq:MichISph} shows at once the different roles of the two components of the separation. The transverse component $\Delta_\perp$ is the only one that depends on the position on the screen, and it produces straight fringes perpendicular to $X$, that is, parallel to the direction $Z$, with the spacing
+
+        \begin{equation}\label{eq:MichLambdaSph}
+            \Lambda = \frac{\lambda\bar{D}}{\Delta_\perp} = \frac{\lambda\bar{D}}{\left(a+d+\ell_1\right)\sin 2\theta + \left(a+d+\ell_2\right)\sin 2\phi},
+        \end{equation}
+        which is the result $\Lambda = \lambda D/a$ obtained for two point sources earlier in this chapter, with the separation of the sources now supplied by the geometry of the interferometer. These are the fringes of equal thickness, and they are what one sees when the arms are nearly equal but the mirrors are tilted. The longitudinal component $\Delta_\parallel$, on the contrary, does not depend on $X$ at all and therefore does not create fringes in this approximation, it only adds the constant phase $-2\pi\Delta_\parallel/\lambda$ which decides whether the centre of the pattern is bright or dark.
+
+        That last statement is true only within the paraxial expansion, and abandoning it recovers the most familiar pattern of the instrument. When the mirrors are aligned we have $\Delta_\perp = 0$ and \ref{eq:MichLambdaSph} gives an infinite spacing, meaning that no straight fringes exist, so the pattern must be sought at angles large enough for the expansion to fail. Two point sources separated by $\Delta_\parallel$ along the line of sight, observed in the direction making an angle $\psi$ with that line, deliver a path difference equal to the projection $\Delta_\parallel\cos\psi$, and the condition for a bright fringe is therefore
+
+        \begin{equation}\label{eq:MichRings}
+            \Delta_\parallel\cos\psi = m\lambda, \qquad m \in \mathbb{Z},
+        \end{equation}
+        which describes circles centred on the output axis, since all the directions sharing one value of $\psi$ form a cone. These are the fringes of equal inclination, the celebrated circular fringes of the Michelson interferometer, and with the aligned value $\Delta_\parallel = 2(\ell_1-\ell_2)$ the condition \ref{eq:MichRings} becomes
+
+        \begin{equation}\label{eq:MichRingsAligned}
+            2\left(\ell_1-\ell_2\right)\cos\psi = m\lambda,
+        \end{equation}
+        the textbook expression, here derived rather than quoted. As the arm difference is reduced the rings swell and are swallowed one by one at the centre, and at $\ell_1 = \ell_2$ the whole field becomes uniform, which is how the instrument is brought to zero path difference in practice.
+
+        The general case interpolates between the two, since both components of $\vec{\Delta}$ are usually present, and the pattern is then a family of curves which are neither straight lines nor circles but the intersections with the screen of the hyperboloids of revolution of foci $\mathcal{S}_1$ and $\mathcal{S}_2$ that we identified as the surfaces of equal intensity when we first studied two spherical sources. Straight fringes and circular fringes are simply the two limits in which one of the two components dominates, and this is why the practical alignment of a Michelson interferometer consists of watching the fringes straighten as the tilts are removed and then watching them widen as the arms are equalised.
+
+        It is worth closing with a consistency check between the two cases, which also shows that nothing has been lost along the way. Push the source to infinity, that is let $a$ grow without bound, and take the tilts small. Then $\Delta_\perp \approx 2a(\theta+\phi)$ from \ref{eq:MichDeltaPerp}, while the mean distance to the screen $\bar{D} \approx D + a$ is itself dominated by $a$, so that \ref{eq:MichLambdaSph} gives
+
+        \begin{equation*}
+            \Lambda \approx \frac{\lambda\left(D+a\right)}{2a\left(\theta+\phi\right)} \xrightarrow[\;a\to\infty\;]{} \frac{\lambda}{2\left(\theta+\phi\right)},
+        \end{equation*}
+        which is exactly the small angle limit of the result \ref{eq:MichLambdaPlane} obtained for plane waves. The two descriptions agree where they must, and the point source solution contains the collimated one as the particular case in which the source has been removed to infinity.
