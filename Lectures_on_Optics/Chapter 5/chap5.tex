@@ -135,7 +135,13 @@
 
 	\subsection{Green's theorem}
 
-		Green's theorem, a direct corollary of Gauss's theorem, establishes fundamental relations between volume and surface integrals for scalar fields. Let $f(\vec{r})$ and $g(\vec{r})$ be scalar functions with continuous second derivatives in a domain $V$. We start from the differential identity
+		Green's theorem, a direct corollary of Gauss's theorem, establishes fundamental relations between volume and surface integrals for scalar fields. Its derivation rests on the divergence theorem, and the divergence theorem is not valid for arbitrary functions: it demands that the vector field whose divergence is being integrated be differentiable at every interior point and continuous up to the boundary. Since the two functions we shall eventually insert are the optical field and a Green's function, that requirement is a physical statement about the light and about the screen, and it deserves to be recorded rather than assumed silently.
+
+		\begin{Assumption}
+			The field and the auxiliary function have continuous first and second derivatives throughout the volume $V$ and on its boundary $\Sigma(V)$, so that no source, no discontinuity and no singularity lies on the surface of integration.
+		\end{Assumption}
+
+		Let $f(\vec{r})$ and $g(\vec{r})$ be two scalar functions meeting this requirement in a domain $V$. We start from the differential identity
 		\begin{equation}
 			\nabla \cdot \left[ f(\vec{r})\nabla g(\vec{r}) \right] = f(\vec{r})\nabla^{2}g(\vec{r}) + \nabla f(\vec{r}) \cdot \nabla g(\vec{r}).
 		\end{equation}
@@ -166,14 +172,51 @@
 		\begin{equation}
 			\oint_{\Sigma(V)} \left[ f(\vec{r})\nabla g(\vec{r}) - g(\vec{r})\nabla f(\vec{r}) \right] \cdot d\vec{\sigma} = \int_{V} f(\vec{r})\left(\nabla^2 + k^2\right)g(\vec{r})\, dV - \int_{V} g(\vec{r})\left(\nabla^2 + k^2\right)f(\vec{r})\, dV,
 		\end{equation}
-		where $f$ and $g$ are scalar functions. Choosing $f = U(\vec{r}, \nu)$, a solution of the Helmholtz equation, and $g$ as an arbitrary smooth function, the expression simplifies to
+		where $f$ and $g$ are scalar functions. We now place the optical field in the slot of $f$, and in doing so we assert that the field obeys the homogeneous Helmholtz equation at every point of $V$, which is to say that the region in which we observe the light contains none of the matter that produced it. This is not a property of the equation but a description of the experiment, and it is the reason why the boundary data can determine the interior at all: if light were being created inside $V$ no amount of information on $\Sigma(V)$ could account for it.
+
+		\begin{Assumption}
+			Every source of the field lies outside the volume $V$, so that inside it the amplitude satisfies the homogeneous equation $\left(\nabla^{2}+k^{2}\right)U = 0$ and all the light observed within has entered through the boundary.
+		\end{Assumption}
+
+		Choosing then $f = U(\vec{r}, \nu)$ and $g$ as an arbitrary smooth function, the expression simplifies to
 		\begin{equation}
 			\oint_{\Sigma(V)} \left[ U(\vec{r}, \nu)\nabla g(\vec{r}) - g(\vec{r})\nabla U(\vec{r}, \nu) \right] \cdot d\vec{\sigma} = \int_{V} U(\vec{r}, \nu)\left(\nabla^2 + k^2\right)g(\vec{r})\, dV.
 		\end{equation}
+		Everything now depends on what is put in the place of $g$, and the choice is not a matter of taste. It is worth stating plainly what we are trying to achieve, because the whole of the Kirchhoff theory is contained in that statement. We know, or we are willing to prescribe, the field on a closed surface, and we want the field at an arbitrary point of the region that the surface encloses. A partial differential equation does not answer such a question directly, since it only relates the field at a point to the field at the neighbouring points; to travel from the boundary to the interior one has to propagate that local relation across the whole region. What we want instead is a formula, an integral in which the boundary data enter as they stand and the field at the chosen interior point comes out.
+
+		The systematic way of manufacturing such a formula was invented by George Green in 1828, in a privately printed essay on electricity and magnetism that almost nobody read at the time \citep{green1828essay}, and the idea is best appreciated through an algebraic analogy. A linear system $A\vec{x} = \vec{b}$ is solved once and for all as soon as the inverse matrix is known, and the inverse is characterised column by column by $A\vec{g}_{j} = \hat{e}_{j}$: the $j$th column of $A^{-1}$ is the response of the system to a unit excitation concentrated in the $j$th slot, and the solution of the original problem is then the superposition $\vec{x} = \sum_{j} b_{j}\vec{g}_{j}$. A linear differential operator is the continuous limit of such a matrix. The discrete index becomes a point of space, the Kronecker delta $\hat{e}_{j}$ becomes the Dirac delta $\delta(\vec{r}-\vec{r}')$, the column $\vec{g}_{j}$ becomes a function $G(\vec{r},\vec{r}')$ of two points, and the sum over $j$ becomes an integral over the source point.
+
+		\begin{myDef}
+			Let $\mathcal{L}$ be a linear differential operator acting on the variable $\vec{r}$. A Green's function of $\mathcal{L}$ is a solution, in the sense of distributions, of $\mathcal{L}\,G(\vec{r},\vec{r}') = \delta(\vec{r}-\vec{r}')$, up to a constant normalising the strength of the excitation; equivalently, it is the integral kernel of the inverse operator $\mathcal{L}^{-1}$, so that the solution of $\mathcal{L}u = f$ is $u(\vec{r}') = \int G(\vec{r},\vec{r}')f(\vec{r})\,dV$.
+		\end{myDef}
+
+		Three features of that definition deserve emphasis. The first is that $G$ is not a function in the ordinary sense but a distribution, and a singular one: it diverges where the excitation sits, and it acquires a meaning only under an integral sign, a notion that Dirac introduced in quantum mechanics \citep{dirac1930principles} and that Schwartz later placed on a rigorous footing \citep{schwartz1950theorie}. The second is that a Green's function is never unique, because any solution of the homogeneous equation $\mathcal{L}h = 0$ may be added to it without spoiling the defining property; that freedom is not a defect but the resource which boundary conditions are there to consume, and we shall spend it deliberately in a moment. The third is that to know $G$ is to have inverted the operator once and for all: the labour of solving the equation has been performed in advance for the most elementary excitation conceivable, and every other problem governed by the same operator is thereby reduced to a quadrature.
+
+		The reason why this is exactly what our problem asks for lies in the structure of Green's identity, which is a bilinear pairing: it couples the unknown $U$ with a second function that we are entirely free to invent. If we feed into it a function whose image under $(\nabla^{2}+k^{2})$ is concentrated at a single point, the volume integral on the right ceases to be an integral at all and collapses into the value of $U$ at that point, while the left-hand side retains the form of an integral over the boundary. In one stroke the differential problem becomes the representation formula we were after. Moreover, the non-uniqueness just mentioned is precisely what will allow us to suppress one of the two boundary terms, and with it the over-determination that Poincaré objected to in Kirchhoff's formulation.
+
 		The key lies in selecting $g$ as the Green's function $G(\vec{r}, \vec{r}')$, defined by
 		\begin{equation}\label{eq:GreenHomogeneous}
-			\left(\nabla^2 + k^2\right)G(\vec{r}, \vec{r}') = 4\pi \delta(\vec{r} - \vec{r}').
+			\left(\nabla^2 + k^2\right)G(\vec{r}, \vec{r}') = -4\pi \delta(\vec{r} - \vec{r}').
 		\end{equation}
+
+		The constant $-4\pi$ on the right is only a normalisation, chosen so that the factors of the spherical geometry come out tidily and so that the elementary solution turns out to be the outgoing spherical wave with a positive amplitude; what carries the physics is the delta itself, and it is worth explaining why it is there, because the usual answer, that it is mathematically convenient, misses the point entirely.
+
+		Recall where a source term belongs in a wave equation. The homogeneous Helmholtz equation asserts that at the point considered no light is being created: whatever amplitude is found there has arrived from somewhere else. A non-vanishing right-hand side asserts the opposite, that light is being poured into the medium at that place, and the number multiplying it measures how much. This is a quantitative statement and not a figure of speech, as one sees by integrating \eqref{eq:GreenHomogeneous} over a small ball $B_{\varepsilon}$ centred on $\vec{r}'$ and applying the divergence theorem to the first term,
+		\begin{equation}\label{eq:GreenFlux}
+			\oint_{\partial B_{\varepsilon}} \nabla G \cdot d\vec{\sigma} \;+\; k^{2}\int_{B_{\varepsilon}} G\, dV \;=\; -4\pi .
+		\end{equation}
+		The volume term will be seen to vanish with $\varepsilon$, so that the flux of $\nabla G$ through any sphere surrounding the point equals $-4\pi$ however small the sphere is made. A quantity whose flux across a closed surface does not depend on how tightly that surface is drawn around the point is exactly what one means by a source of fixed strength, and the delta is its mathematical name. Equation \eqref{eq:GreenHomogeneous} therefore reads, in words: \textit{the medium is empty everywhere except at the single point $\vec{r}'$, where a monochromatic emitter of prescribed strength is radiating}.
+
+		Such an emitter is a physical idealisation and not a mathematical fiction. Light is emitted by atoms, and an atom is smaller than the wavelength of the light it radiates by some three orders of magnitude; on the scale at which a diffraction pattern is formed, a real elementary emitter is a point to an accuracy far beyond what any experiment can resolve. The delta is the honest description of an object whose size is irrelevant to the phenomenon being described, in the same way that a planet is a point for the purposes of celestial mechanics. And because the medium is linear, so that fields superpose, the point emitter is the atom of the whole theory: a source of any shape is a sum of point emitters weighted by its density, and the field it radiates is the corresponding sum of elementary fields. To solve the problem for a delta is therefore to solve it for every source at once, which is why one solves it first, and it is also why the generalisation to extended sources sketched in Figure~\ref{fig:greennonpoint} costs nothing conceptually.
+
+		\begin{Assumption}
+			The elementary emitter is a point, its linear dimensions being negligible beside the wavelength of the light it radiates, so that its excitation may be represented by a Dirac delta.
+		\end{Assumption}
+
+
+		In our context the Green's function admits an immediate optical reading. $G(\vec{r},\vec{r}')$ is the complex amplitude that a point emitter sitting at $\vec{r}'$ produces at the point $\vec{r}$ of the same medium, and the spherical wave \eqref{sol_Green} that we shall obtain below is nothing other than that amplitude. But this is precisely the object that Huygens postulated in 1690, the secondary wavelet emitted by every element of a wavefront \citep{huygens1690traite}. Huygens had to assume the wavelets, and Fresnel had to assume in addition that they interfere and to supply their amplitudes and phases by hand; here the wavelet is not postulated but derived, as the solution of the field equation for an elementary source, and the weight with which each element of the surface contributes is not guessed but delivered by Green's identity. The Helmholtz-Kirchhoff formula \eqref{green} is, in this sense, the Huygens-Fresnel principle written as a theorem instead of as a hypothesis.
+
+		One last remark on the delta will dispose of what is otherwise a genuine perplexity. The source in \eqref{eq:GreenHomogeneous} is not placed where the light actually comes from; it is placed at $\vec{r}'$, which is the point at which we wish to know the field. This looks strange until one recalls that the Green's function of the Helmholtz operator is symmetric in its two arguments, $G(\vec{r},\vec{r}') = G(\vec{r}',\vec{r})$, a statement which is nothing but the optical reciprocity theorem: the amplitude that a source at $\vec{r}'$ sends to $\vec{r}$ equals the amplitude that a source at $\vec{r}$ sends to $\vec{r}'$. The delta at the observation point is therefore a probe. We interrogate the region by placing a unit emitter at the point of interest and asking how strongly it illuminates the boundary; reciprocity converts that answer into the statement of how strongly each element of the boundary illuminates the point, and this is the Huygens sum. Without the delta the volume integral in the Helmholtz-Kirchhoff identity would vanish identically and the identity would degenerate into a relation among the boundary data alone, saying nothing whatever about the interior. It is the delta that singles out the observation point and turns an identity into a solution.
 
 		Remarkably, we may add an arbitrary number of Green's functions while keeping the solution invariant. What we can do is add an infinity of image charges, but \emph{outside} the integration volume bounded by the surface $\Sigma(V)$, as shown in Figure~\ref{fig:greenimages}.
 
@@ -186,17 +229,17 @@
 
 		In this spirit, equation \eqref{eq:GreenHomogeneous} becomes
 		\begin{equation}
-			(\nabla^2 + k^2)G(\vec{r},\vec{r}') = 4\pi \delta(\vec{r}-\vec{r}') + 4\pi \sum_{i=1}^{\infty} \delta(\vec{r}-\vec{r}''_i).
+			(\nabla^2 + k^2)G(\vec{r},\vec{r}') = -4\pi \delta(\vec{r}-\vec{r}') - 4\pi \sum_{i=1}^{\infty} \delta(\vec{r}-\vec{r}''_i).
 		\end{equation}
 		The explicit solution for a homogeneous medium of equation \eqref{eq:GreenHomogeneous} is
 		\begin{equation}
 			\label{sol_Green}
 			G(\vec{r}, \vec{r}') = \frac{e^{ik\|\vec{r} - \vec{r}'\|}}{\|\vec{r} - \vec{r}'\|},
 		\end{equation}
-		corresponding to an outgoing spherical wave centred at $\vec{r}'$. Substituting $G$ into Green's identity, one derives
+		corresponding to an outgoing spherical wave centred at $\vec{r}'$, as will be proved in \eqref{eq:GreenSpherical}. Substituting $G$ into Green's identity, and using that the volume integral picks up the value $-4\pi U(\vec{r}',\nu)$ on account of the delta, one derives
 		\begin{equation}
 			\label{green}
-			U(\vec{r}', \nu) = \frac{1}{4\pi} \oint_{\Sigma(V)} \left[ U(\vec{r}, \nu)\nabla G(\vec{r}, \vec{r}')- G(\vec{r}, \vec{r}')\nabla U(\vec{r}, \nu)  \right ] \cdot d\vec{\sigma},
+			U(\vec{r}', \nu) = -\frac{1}{4\pi} \oint_{\Sigma(V)} \left[ U(\vec{r}, \nu)\nabla G(\vec{r}, \vec{r}')- G(\vec{r}, \vec{r}')\nabla U(\vec{r}, \nu)  \right ] \cdot d\vec{\sigma},
 		\end{equation}
 		known as the Helmholtz-Kirchhoff integral formula. This equation allows $U(\vec{r}', \nu)$ to be computed at any point of the volume $V$ by means of an integral over its boundary $\Sigma(V)$.
 
@@ -209,7 +252,7 @@
 
 		Before continuing, it is worth noting that the point-charge nature of the Green's functions $G(\vec{r},\vec{r}')$ is an assumption taken for granted; there is, however, no restriction on their physical nature. As is well known in electromagnetic theory, radiation sources may have any volume and shape, so our problem (Figure~\ref{fig:greenpoint}) can be made more general, as shown in Figure~\ref{fig:greennonpoint}, and the differential equation for Green's functions with volume would read
 		\begin{equation}
-			\left( \nabla^2 + k^2 \right)G(\vec{r},\vec{r}') = 4\pi \rho(\vec{r}-\vec{r}'_+) - 4\pi\rho(\vec{r}-\vec{r}'_-).
+			\left( \nabla^2 + k^2 \right)G(\vec{r},\vec{r}') = -4\pi \rho(\vec{r}-\vec{r}'_+) + 4\pi\rho(\vec{r}-\vec{r}'_-).
 		\end{equation}
 
 		\begin{figure}[htbp]
@@ -219,9 +262,15 @@
 			\label{fig:greennonpoint}
 		\end{figure}
 
-		Let us continue with the development for point Green's functions. To simplify the evaluation of the integral, we consider a volume $V$ bounded by an infinite plane $\Sigma_1$ ($z=0$) and a hemisphere $\Sigma_2$ of radius $R$ (see Figure~\ref{fig:greenpoint}). The contribution of $\Sigma_2$ vanishes as $R \to \infty$ (owing to the Sommerfeld radiation condition), reducing the expression to
+		Let us continue with the development for point Green's functions. To simplify the evaluation of the integral, we consider a volume $V$ bounded by an infinite plane $\Sigma_1$ ($z=0$) and a hemisphere $\Sigma_2$ of radius $R$ (see Figure~\ref{fig:greenpoint}). Closing the surface at infinity is legitimate only if nothing arrives from there, and once again that is a decision about the experiment rather than a consequence of the mathematics: it excludes any wave converging on the aperture from the far side, which is precisely what one arranges in the laboratory by putting every source of light behind the screen and by working in a darkened room.
+
+		\begin{Assumption}
+			No radiation reaches the observation region from infinity, the field on the hemisphere $\Sigma_{2}$ being purely outgoing and obeying the Sommerfeld radiation condition \eqref{eq:SommerfeldRadiation}, so that the contribution of $\Sigma_{2}$ vanishes as $R\to\infty$.
+		\end{Assumption}
+
+		The Helmholtz-Kirchhoff formula is thereby reduced to
 		\begin{equation}
-			U(\vec{r}', \nu) = \frac{1}{4\pi} \int_{\Sigma_1} \left[U(\vec{r}, \nu)\frac{\partial G}{\partial n} -   G(\vec{r}, \vec{r}')\frac{\partial U}{\partial n} \right] d\sigma,
+			U(\vec{r}', \nu) = -\frac{1}{4\pi} \int_{\Sigma_1} \left[U(\vec{r}, \nu)\frac{\partial G}{\partial n} -   G(\vec{r}, \vec{r}')\frac{\partial U}{\partial n} \right] d\sigma,
 		\end{equation}
 		where $\frac{\partial}{\partial n} = \hat{n} \cdot \nabla$ denotes the normal derivative. However, this formulation requires specifying simultaneously $U$ and $\partial U/\partial n$ on $\Sigma_1$, which over-determines the problem. This difficulty motivates the introduction of physically realistic boundary conditions, such as those of Kirchhoff, in order to resolve the ambiguity.
 
@@ -241,12 +290,73 @@
 
 	thus eliminating the redundancy in the boundary conditions and preserving the self-consistency of the formalism.
 
+	Sommerfeld's device removes one of the two boundary terms, but it does not remove the need to know the one that survives. The Rayleigh-Sommerfeld formula still requires the value of $U$ at every point of the plane $\Sigma_{1}$, and no theory of diffraction can supply it, because obtaining it would mean solving exactly the electromagnetic problem of the screen that we set out to avoid. What is done instead is to guess it, and the guess is Kirchhoff's. It rests on two separate idealisations, one about the obstacle and one about the field on it, and both are worth stating as what they are.
+
+	\begin{Assumption}
+		The screen is a plane obstacle of vanishing thickness, perfectly opaque and perfectly absorbing, whose material properties play no part in the problem and whose edges do not perturb the field in their neighbourhood.
+	\end{Assumption}
+
+	\begin{Assumption}
+		Over the aperture the field coincides with the field that would be present had the screen never been introduced, and over the opaque part of the screen it vanishes identically.
+	\end{Assumption}
+
+	The second of these is the weakest link of the whole construction, and it is instructive to see why. A field that vanishes on part of a plane and equals a smooth incident wave on the rest is discontinuous at the rim of the aperture, so it cannot be an exact solution of the Helmholtz equation; the boundary values we prescribe are, strictly speaking, incompatible with the equation we are solving. The error is confined to a border a few wavelengths wide around the rim, which is why the theory works so well for apertures many wavelengths across and fails for apertures comparable with the wavelength.
+
+
 	\subsection{The Rayleigh-Sommerfeld formulation}
 
-		Returning to equation \eqref{green} and choosing the Dirichlet condition for the function $G$, we have
+		Twice already we have used the explicit form \eqref{sol_Green} of the Green's function without justifying it, and since the whole of the Rayleigh-Sommerfeld construction rests both on the shape of that function and on the freedom to add a second one to it, this is the place to show where it comes from.
+
+		\begin{myteo}
+			Let $R = \|\vec{r}-\vec{r}'\|$. In a homogeneous, isotropic and unbounded medium the only solution of the Green's equation \eqref{eq:GreenHomogeneous} that carries energy away from the source is the outgoing spherical wave
+			\begin{equation}\label{eq:GreenSpherical}
+				G(\vec{r},\vec{r}') = \frac{e^{ikR}}{R},
+			\end{equation}
+			its amplitude being fixed by the strength assigned to the point emitter and the converging solution being excluded by the radiation condition.
+		\end{myteo}
+
+		The proof has four steps, and each of them is a physical statement before it is a mathematical one. The first is a matter of symmetry. The medium is homogeneous and isotropic and the source is a single point, so that once the origin has been placed at $\vec{r}'$ nothing in the problem distinguishes one direction of space from another; the solution can depend only on the distance $R$ to the source, and we may write $G = G(R)$.
+
+		The second step is to solve the equation away from the source, where it is homogeneous. For a function of $R$ alone the Laplacian reduces to
+		\begin{equation}\label{eq:GreenRadialLaplacian}
+			\nabla^{2}G = \frac{1}{R^{2}}\frac{d}{dR}\left(R^{2}\frac{dG}{dR}\right) = \frac{1}{R}\frac{d^{2}}{dR^{2}}\left(R\,G\right),
+		\end{equation}
+		where the second form is the identity \eqref{eq:RadialLaplacian} already established in the third chapter, and which suggests at once the substitution $\chi(R) = R\,G(R)$. With it the homogeneous Helmholtz equation becomes
+		\begin{equation}\label{eq:RadialOscillator}
+			\frac{d^{2}\chi}{dR^{2}} + k^{2}\chi = 0 ,
+		\end{equation}
+		which is the equation of a harmonic oscillator in the variable $R$ and whose general solution is $\chi = A\,e^{ikR} + B\,e^{-ikR}$. Undoing the substitution,
+		\begin{equation}\label{eq:GreenGeneralRadial}
+			G(R) = A\,\frac{e^{ikR}}{R} + B\,\frac{e^{-ikR}}{R},
+		\end{equation}
+		so that the amplitude of a spherically symmetric monochromatic field falls necessarily as the inverse of the distance. This is not an accident of the algebra. The energy crossing a sphere of radius $R$ is proportional to $|G|^{2}R^{2}$, and it is only with the $1/R$ dependence that this quantity is independent of $R$, as the conservation of energy demands in a transparent medium.
+
+		The third step selects between the two terms of \eqref{eq:GreenGeneralRadial}. Restoring the temporal factor of the Fourier convention adopted in \eqref{eq.FT}, the two solutions read $e^{i(kR-\omega t)}/R$ and $e^{-i(kR+\omega t)}/R$, and their surfaces of constant phase obey respectively $R = ct + \text{const}$ and $R = -ct + \text{const}$. The first expands and the second contracts. Our point is an emitter and not a sink, and the light must leave it and never come back, which is the physical content of the Sommerfeld radiation condition already invoked when the hemisphere $\Sigma_{2}$ was discarded,
+		\begin{equation}\label{eq:SommerfeldRadiation}
+			\lim_{R\to\infty} R\left(\frac{\partial G}{\partial R} - ikG\right) = 0 .
+		\end{equation}
+		The converging wave violates it, since for it the bracket behaves as $-2ikB\,e^{-ikR}/R$ and the product with $R$ does not tend to zero. Hence $B = 0$.
+
+		The fourth step is the only one in which the delta intervenes, and it fixes the amplitude $A$. Integrate \eqref{eq:GreenHomogeneous} over the ball $B_{\varepsilon}$ of radius $\varepsilon$ centred on the source, which is what produced \eqref{eq:GreenFlux}. With $G = A\,e^{ikR}/R$ the volume term is bounded by
+		\begin{equation*}
+			\left|k^{2}\int_{B_{\varepsilon}} G\, dV\right| = \left|4\pi A k^{2}\int_{0}^{\varepsilon} \frac{e^{ikR}}{R}\,R^{2}\,dR\right| \leq 2\pi |A|\,k^{2}\varepsilon^{2} \xrightarrow[\varepsilon\to 0]{} 0,
+		\end{equation*}
+		so that the singularity of $G$ is mild enough to be integrable and the entire source strength has to come from the flux term. Since $\partial G/\partial R = A\,e^{ikR}\left(ik/R - 1/R^{2}\right)$, and the sphere $\partial B_{\varepsilon}$ has area $4\pi\varepsilon^{2}$ with outward normal $\hat{R}$,
+		\begin{equation*}
+			\oint_{\partial B_{\varepsilon}} \nabla G\cdot d\vec{\sigma} = 4\pi\varepsilon^{2}\,A\,e^{ik\varepsilon}\left(\frac{ik}{\varepsilon}-\frac{1}{\varepsilon^{2}}\right) = 4\pi A\,e^{ik\varepsilon}\left(ik\varepsilon - 1\right) \xrightarrow[\varepsilon\to 0]{} -4\pi A ,
+		\end{equation*}
+		and \eqref{eq:GreenFlux} then gives $-4\pi A = -4\pi$, that is $A = 1$, which proves \eqref{eq:GreenSpherical} and completes the argument.
+
+		The sign of the source deserves a word, because it is the reason why \eqref{eq:GreenHomogeneous} carries $-4\pi$ and not $+4\pi$ on the right. The last step of the proof shows that the flux of $\nabla G$ out of a small sphere is $-4\pi A$, so that a positive amplitude $A$ demands a negative constant in the equation; had we written $+4\pi\delta(\vec{r}-\vec{r}')$ we should have been forced to accept $A = -1$, that is $G = -e^{ikR}/R$, and every formula written from \eqref{sol_Green} onwards would have changed sign. The convention adopted here is the one used by Sommerfeld, Born and Wolf and Goodman \citep{sommerfeld1954optics, born1999principles, goodman2005introduction}, and it is the convention for which the diffraction integral comes out with the familiar constant $1/(i\lambda)$. What the computation establishes, beyond the bookkeeping of signs, is that the elementary solution is an outgoing spherical wave centred on the source point whose amplitude is inversely proportional to the distance. This is the Huygens wavelet, now obtained rather than assumed.
+
+		Returning to equation \eqref{green} and choosing the Dirichlet condition for the function $G$, the second term of the integrand disappears and we are left with
 		\begin{equation}
 			\label{psi_expr}
-			U(\vec{r}', \nu) = \frac{1}{4\pi} \int_{\Sigma_1} \left[U(\vec{r}, \nu) \nabla G \cdot\hat{n}\right] d\sigma .
+			U(\vec{r}', \nu) = -\frac{1}{4\pi} \int_{\Sigma_1} \left[U(\vec{r}, \nu) \nabla G \cdot\hat{n}\right] d\sigma .
+		\end{equation}
+		Here $\hat{n}$ is the normal that points \textit{out} of $V$, and since $V$ is the half space $z>0$, on the plane $\Sigma_{1}$ that normal points downwards, $\hat{n} = -\hat{z}$. It is worth writing this out explicitly, because it is the sign most easily lost in the whole construction,
+		\begin{equation}\label{eq:RSnormal}
+			U(\vec{r}', \nu) = \frac{1}{4\pi} \int_{\Sigma_1} U(\vec{r}, \nu)\,\nabla G \cdot\hat{z}\; d\sigma .
 		\end{equation}
 		Given the integration surface under consideration, we may express \eqref{sol_Green} as
 		\begin{equation}
@@ -257,41 +367,114 @@
 		\begin{align}
 			\|\vec{r} - \vec{r}''\| &= \|\vec{r} - \vec{r}'\|, \qquad x'' = x', \quad y'' = y', \quad z'' = -z',
 		\end{align}
-		since $\vec{r}''$ is the mirror image of $\vec{r}'$ across the plane $\Sigma_1$. It follows that
-		\begin{equation}
-			\nabla G \cdot \hat{z}  = 2 \left[ik - \dfrac{1}{\|\vec{r}-\vec{r}'\|} \right]\dfrac{e^{ik\|\vec{r}-\vec{r}'\|}}{\|\vec{r}-\vec{r}'\|} \cos(\vec{r} - \vec{r}',\hat{z}),
+		since $\vec{r}''$ is the mirror image of $\vec{r}'$ across the plane $\Sigma_1$.
+
+		That \eqref{sol_Green_RS} is a legitimate Green's function is verified at once with the theorem just proved. The observation point $\vec{r}'$ lies in the half space $z>0$, so its image $\vec{r}''$ lies in $z<0$, outside the volume $V$; within $V$ the second term is therefore a perfectly regular solution of the homogeneous Helmholtz equation, and adding it alters neither the source at $\vec{r}'$ nor the value of the volume integral, in accordance with the freedom discussed after \eqref{eq:GreenHomogeneous}. On the plane $\Sigma_{1}$, on the other hand, every point is equidistant from $\vec{r}'$ and from $\vec{r}''$, so that the two spherical waves arrive there with the same amplitude and the same phase and cancel identically, giving $G = 0$ over the whole of $\Sigma_{1}$. This is the Dirichlet condition we were looking for, obtained by the same method of images that solved the Michelson interferometer in the previous chapter, and it is what removes the term in $\partial U/\partial n$ from \eqref{green} and with it the over-determination of Kirchhoff's boundary conditions.
+
+		All that \eqref{eq:RSnormal} still requires is the axial derivative of $G$ on the plane. This is the only computation of the section, and since a sign lost here changes the sign of every diffraction formula in the rest of the chapter, we shall carry it out without omitting a single step. To lighten the notation write
+		\begin{equation}\label{eq:RSDistances}
+			r_{1} = \|\vec{r}-\vec{r}'\|, \qquad r_{2} = \|\vec{r}-\vec{r}''\|, \qquad f(\rho) = \dfrac{e^{ik\rho}}{\rho},
 		\end{equation}
-		and with this, \eqref{psi_expr} becomes
-		\begin{equation}
-			U(\vec{r}',\nu) = \dfrac{1}{2\pi} \int_{\Sigma} U(\vec{r},\nu) \left[ik - \dfrac{1}{\|\vec{r} - \vec{r}'\|} \right] \dfrac{e^{ik\|\vec{r}-\vec{r}'\|}}{\|\vec{r}-\vec{r}'\|} \cos(\vec{r} - \vec{r}',\hat{z})\,d\sigma .
+		so that \eqref{sol_Green_RS} reads simply $G = f(r_{1}) - f(r_{2})$.
+
+		\textit{First step: the derivative of $f$.} Differentiating the quotient,
+		\begin{equation}\label{eq:RSderivf}
+			\dfrac{df}{d\rho} = \dfrac{\left(ik\,e^{ik\rho}\right)\rho - e^{ik\rho}}{\rho^{2}} = \dfrac{e^{ik\rho}}{\rho}\left(ik - \dfrac{1}{\rho}\right) = \left(ik-\dfrac{1}{\rho}\right)f(\rho).
 		\end{equation}
-		We may now make the approximation appropriate to the Rayleigh-Sommerfeld regime, in which $\|\vec{r}-\vec{r}'\| \gg \lambda$, obtaining
-		\begin{equation}
-			U(\vec{r}',\nu) = \dfrac{ik}{2\pi} \int_{\Sigma} U(\vec{r},\nu)\dfrac{e^{ik\|\vec{r}-\vec{r}'\|}}{\|\vec{r}-\vec{r}'\|} \cos(\vec{r} - \vec{r}',\hat{z})\,d\sigma,
+
+		\textit{Second step: the gradient of a distance.} With $\vec{r} = (x,y,z)$ the point of integration and $\vec{r}' = (x',y',z')$ held fixed,
+		\begin{equation}\label{eq:RSr1}
+			r_{1} = \left[(x-x')^{2}+(y-y')^{2}+(z-z')^{2}\right]^{1/2},
 		\end{equation}
-		a mathematical expression that embodies the Huygens-Fresnel principle: as can be appreciated, there is one spherical wave per point of the integration surface.
+		and differentiating with respect to $z$, which is the only component we shall need,
+		\begin{equation}\label{eq:RSdr1dz}
+			\dfrac{\partial r_{1}}{\partial z} = \dfrac{1}{2}\,\dfrac{2\left(z-z'\right)}{\left[(x-x')^{2}+(y-y')^{2}+(z-z')^{2}\right]^{1/2}} = \dfrac{z-z'}{r_{1}} ,
+		\end{equation}
+		the same computation with $\vec{r}''$ in place of $\vec{r}'$ giving $\partial r_{2}/\partial z = (z-z'')/r_{2}$. Carried out for the three components at once these two results read $\nabla r_{1} = (\vec{r}-\vec{r}')/r_{1}$ and $\nabla r_{2} = (\vec{r}-\vec{r}'')/r_{2}$: the gradient of a distance is the unit vector that points away from the centre from which the distance is measured.
+
+		\textit{Third step: the gradient of $G$.} Applying the chain rule to each term and using \eqref{eq:RSderivf},
+		\begin{equation}\label{eq:RSgradG}
+			\nabla G = \left(ik-\dfrac{1}{r_{1}}\right)\dfrac{e^{ikr_{1}}}{r_{1}}\,\dfrac{\vec{r}-\vec{r}'}{r_{1}} \;-\; \left(ik-\dfrac{1}{r_{2}}\right)\dfrac{e^{ikr_{2}}}{r_{2}}\,\dfrac{\vec{r}-\vec{r}''}{r_{2}} .
+		\end{equation}
+
+		\textit{Fourth step: the projection on the axis.} Taking the scalar product of \eqref{eq:RSgradG} with $\hat{z}$, which amounts to keeping the third component of each of the two vectors,
+		\begin{equation}\label{eq:RSgradGz}
+			\nabla G\cdot\hat{z} = \left(ik-\dfrac{1}{r_{1}}\right)\dfrac{e^{ikr_{1}}}{r_{1}}\,\dfrac{z-z'}{r_{1}} \;-\; \left(ik-\dfrac{1}{r_{2}}\right)\dfrac{e^{ikr_{2}}}{r_{2}}\,\dfrac{z-z''}{r_{2}} .
+		\end{equation}
+
+		\textit{Fifth step: evaluation on the plane.} The integral of \eqref{eq:RSnormal} runs over $\Sigma_{1}$, so \eqref{eq:RSgradGz} is needed only at $z=0$. There the two distances coincide, $r_{1} = r_{2} \equiv r$, which is the mirror relation already used, and the two axial displacements are
+		\begin{equation}\label{eq:RSopposite}
+			\left.\left(z-z'\right)\right|_{z=0} = -z', \qquad \left.\left(z-z''\right)\right|_{z=0} = -z'' = z' ,
+		\end{equation}
+		because $z'' = -z'$. This is the crux of the whole calculation: the source and its image lie on opposite sides of the plane, so their axial direction cosines are equal in magnitude and opposite in sign. Substituting \eqref{eq:RSopposite} into \eqref{eq:RSgradGz}, the common factor $\left(ik-1/r\right)e^{ikr}/r$ may be taken out and what remains is a difference of two opposite numbers,
+		\begin{equation}\label{eq:RSgradGplane}
+			\left.\nabla G\cdot\hat{z}\right|_{\Sigma_{1}} = \left(ik-\dfrac{1}{r}\right)\dfrac{e^{ikr}}{r}\left[\dfrac{-z'}{r} - \dfrac{z'}{r}\right] = -\,\dfrac{2z'}{r}\left(ik-\dfrac{1}{r}\right)\dfrac{e^{ikr}}{r} .
+		\end{equation}
+		The factor of two is worth a comment. The minus sign that separates the two terms of \eqref{sol_Green_RS} is what makes the two spherical waves cancel on the plane; the very same minus sign, combined with the opposite direction cosines of \eqref{eq:RSopposite}, makes their axial derivatives add. The Dirichlet Green's function vanishes on $\Sigma_{1}$ and has there exactly twice the normal derivative of a single wavelet, which is the analytical trace of the fact that the screen behaves as a perfect mirror.
+
+		\textit{Sixth step: the obliquity factor.} It only remains to name the geometrical quantity $z'/r$. Let $\theta$ be the angle between the axis $\hat{z}$ and the vector $\vec{r}\,'-\vec{r}$ that goes from the point of the aperture to the point of observation, so that
+		\begin{equation}\label{eq:RSobliquity}
+			\cos\theta = \hat{z}\cdot\dfrac{\vec{r}\,'-\vec{r}}{\|\vec{r}\,'-\vec{r}\|} = \dfrac{z'}{r} ,
+		\end{equation}
+		a quantity that is positive because the observation point lies in $z>0$, and that equals unity for a point of the aperture lying on the axis of observation. With this notation \eqref{eq:RSgradGplane} takes its final form,
+		\begin{equation}\label{eq:RSnormalDerivative}
+			\left.\nabla G\cdot\hat{z}\right|_{\Sigma_{1}} = -2\left[ik-\dfrac{1}{r}\right]\dfrac{e^{ikr}}{r}\,\cos\theta .
+		\end{equation}
+		It is essential to keep in mind which of the two vectors the angle is measured from. Had we written the direction cosine of $\vec{r}-\vec{r}'$, which points from the observation point back to the aperture, we should have obtained the opposite number, and the diffraction integral would have come out with the wrong sign.
+
+		Substituting \eqref{eq:RSnormalDerivative} into \eqref{eq:RSnormal}, the two factors of two combine with the $4\pi$ and we obtain
+		\begin{equation}\label{eq:RSexact}
+			U(\vec{r}',\nu) = -\dfrac{1}{2\pi} \int_{\Sigma} U(\vec{r},\nu) \left[ik - \dfrac{1}{\|\vec{r} - \vec{r}'\|} \right] \dfrac{e^{ik\|\vec{r}-\vec{r}'\|}}{\|\vec{r}-\vec{r}'\|} \cos\theta\,d\sigma .
+		\end{equation}
+		Equation \eqref{eq:RSexact} is exact within the scalar theory, and it is the last expression in this chapter of which that can be said. To bring it to the form in which it is actually used one discards the term $1/\|\vec{r}-\vec{r}'\|$ against $k$, which is permissible only when the observation point stands many wavelengths from the aperture. For visible light and laboratory distances the discarded ratio $\lambda/(2\pi\|\vec{r}-\vec{r}'\|)$ is of the order of $10^{-7}$, so that the approximation is superb, but it is an approximation and not an identity.
+
+		\begin{Assumption}
+			The observation point lies many wavelengths away from every point of the aperture, $\|\vec{r}-\vec{r}'\| \gg \lambda$, so that the near field term $1/\|\vec{r}-\vec{r}'\|$ is negligible beside the wavenumber $k$.
+		\end{Assumption}
+
+		With it we obtain
+		\begin{equation}\label{eq:RSfinal}
+			U(\vec{r}',\nu) = -\dfrac{ik}{2\pi} \int_{\Sigma} U(\vec{r},\nu)\dfrac{e^{ik\|\vec{r}-\vec{r}'\|}}{\|\vec{r}-\vec{r}'\|} \cos\theta\,d\sigma = \dfrac{1}{i\lambda} \int_{\Sigma} U(\vec{r},\nu)\dfrac{e^{ik\|\vec{r}-\vec{r}'\|}}{\|\vec{r}-\vec{r}'\|} \cos\theta\,d\sigma,
+		\end{equation}
+		where the last equality is nothing but $-ik/2\pi = -i/\lambda = 1/(i\lambda)$. This is a mathematical expression that embodies the Huygens-Fresnel principle: as can be appreciated, there is one spherical wave per point of the integration surface, weighted by the obliquity factor $\cos\theta$ and by the constant $1/(i\lambda)$, which is the constant Fresnel had to postulate and which the derivation now delivers, quarter-wave advance and $1/\lambda$ included.
 
 \section{The Fresnel approximation}
 
 Starting from the field
 \begin{align}
-	U(\vec{r}') = \frac{ik}{2\pi}\int_{\Sigma} U(\vec{r}) \frac{e^{ik \left\| \vec{r} - \vec{r}' \right\|}}{\left\| \vec{r} - \vec{r}' \right\|} \cos(\vec{r} - \vec{r}', \hat{z}) \, \mathrm{d}\sigma,
+	U(\vec{r}') = -\frac{ik}{2\pi}\int_{\Sigma} U(\vec{r}) \frac{e^{ik \left\| \vec{r} - \vec{r}' \right\|}}{\left\| \vec{r} - \vec{r}' \right\|} \cos\theta \, \mathrm{d}\sigma,
 \end{align}
-it is possible to carry out the so-called mid-field or Fresnel approximation. To this end we take
+it is possible to carry out the so-called mid-field or Fresnel approximation. The expansion on which it rests is a binomial one, and a binomial series may be truncated only when the quantity expanded is small; here that quantity is the ratio of the transverse separation to the propagation distance, so that truncating amounts to confining the entire problem to a narrow cone about the optical axis.
+
+\begin{Assumption}
+	The transverse dimensions of the aperture and of the observation region are small compared with the propagation distance $z$, and the quartic term omitted from the expansion contributes a phase far below one radian, $k\left[(x-x')^{2}+(y-y')^{2}\right]^{2}/8z^{3} \ll 1$.
+\end{Assumption}
+
+To this end we take
 \begin{align}
 	\label{aprox_r}
 	\|\vec{r}-\vec{r}'\| &= \left[(x-x')^2 + (y-y')^2 + (z-z')^2\right]^{1/2} \notag \\
 	&= z\left(1 + \dfrac{(x-x')^2 + (y-y')^2}{z^2} \right)^{1/2} \notag \\
 	&\approx z + \dfrac{(x-x')^2+(y-y')^2}{2z}.
 \end{align}
-It is clear that, for the factor $\dfrac{1}{\|\vec{r}- \vec{r}'\|}$, an expansion up to the first term of \eqref{aprox_r} suffices; this is not enough for the factor $e^{ik \left\| \vec{r} - \vec{r}' \right\|}$, however, since the latter has oscillatory behaviour over its domain, so both terms are required. We additionally take $\cos (\vec{r}-\vec{r}', \hat{z}) = \dfrac{z}{\|\vec{r} - \vec{r} '\|} \approx 1$.
+It is clear that, for the factor $\dfrac{1}{\|\vec{r}- \vec{r}'\|}$, an expansion up to the first term of \eqref{aprox_r} suffices; this is not enough for the factor $e^{ik \left\| \vec{r} - \vec{r}' \right\|}$, however, since the latter has oscillatory behaviour over its domain, so both terms are required. The two factors are therefore treated with different degrees of accuracy, and that asymmetry is itself a hypothesis: it presumes that an error of a fraction of a wavelength, harmless in a slowly varying amplitude, is fatal in a phase, which is true precisely because $k$ is enormous on the scale of the aperture.
+
+\begin{Assumption}
+	In the amplitude the distance may be replaced by the axial separation, $\|\vec{r}-\vec{r}'\| \approx z$, while in the phase the quadratic term of \eqref{aprox_r} must be retained.
+\end{Assumption}
+
+We additionally take, for the obliquity factor \eqref{eq:RSobliquity}, $\cos\theta = \dfrac{z}{\|\vec{r} - \vec{r} '\|} \approx 1$, which is legitimate in the paraxial regime because the observation point is then close to the axis.
+
+\begin{Assumption}
+	The obliquity factor is unity, $\cos\theta \approx 1$, every direction of interest making a small angle with the optical axis.
+\end{Assumption}
 
 In this spirit, we obtain an expression for the field of the form
 \begin{equation}
 	\label{Fresnel}
-	U(\vec{r}') = \dfrac{i e^{ikz}}{\lambda z} \int U(\vec{r}) \exp \left(\dfrac{ik}{2z} ((x-x')^2 + (y-y')^2) \right) d\sigma,
+	U(\vec{r}') = \dfrac{e^{ikz}}{i\lambda z} \int U(\vec{r}) \exp \left(\dfrac{ik}{2z} ((x-x')^2 + (y-y')^2) \right) d\sigma,
 \end{equation}
-which describes the propagation or diffraction of the electromagnetic field in the Fresnel regime. It is worth stressing that equation \eqref{Fresnel} describes a parabolic wave, and although, at least conceptually, such propagation is valid for a mid-field, in practice it has proved more than sufficient for sufficiently short distances.
+which describes the propagation or diffraction of the electromagnetic field in the Fresnel regime. The constant $1/(i\lambda z)$, inherited from \eqref{eq:RSfinal}, is the one for which the kernel of \eqref{Fresnel} tends to $\delta(\vec{r}-\vec{r}\,')$ as $z\to 0$, so that a propagation over no distance at all leaves the field unchanged; this is the check that fixes the sign beyond any doubt. It is worth stressing that equation \eqref{Fresnel} describes a parabolic wave, and although, at least conceptually, such propagation is valid for a mid-field, in practice it has proved more than sufficient for sufficiently short distances.
 
 	\subsection{Example: Fraunhofer diffraction between two confocal spheres}
 
@@ -303,7 +486,7 @@ which describes the propagation or diffraction of the electromagnetic field in t
 		\end{equation}
 		so that the Fresnel integral separates into three factors,
 		\begin{equation}\label{eq:FresnelThreeFactors}
-			U(\vec{r}\,') = \dfrac{i e^{ikz}}{\lambda z}\int U(\vec{r})\,
+			U(\vec{r}\,') = \dfrac{e^{ikz}}{i\lambda z}\int U(\vec{r})\,
 			e^{\frac{ik}{2z}r^{2}}\;
 			e^{\frac{ik}{2z}r'^{2}}\;
 			e^{-\frac{ik}{z}\left(xx'+yy'\right)}\,d\sigma .
@@ -349,7 +532,7 @@ which describes the propagation or diffraction of the electromagnetic field in t
 		\end{equation}
 		and substituting both relations into \eqref{eq:FresnelThreeFactors},
 		\begin{align*}
-			& u_{\mathcal{F}}(\vec{r}\,') = \dfrac{i e^{ikz}}{\lambda z}\;
+			& u_{\mathcal{F}}(\vec{r}\,') = \dfrac{e^{ikz}}{i\lambda z}\;
 			{\color{red}e^{-\frac{ik}{2z}r'^{2}}}\;{\color{red}e^{\frac{ik}{2z}r'^{2}}}
 			\int u_{\mathcal{A}}(\vec{r})\;
 			{\color{red}e^{-\frac{ik}{2z}r^{2}}}\;{\color{red}e^{\frac{ik}{2z}r^{2}}}\;
@@ -357,7 +540,7 @@ which describes the propagation or diffraction of the electromagnetic field in t
 		\end{align*}
 		where the four exponentials in red cancel in pairs, since in each pair the two exponents are opposite. We are left with
 		\begin{equation}\label{eq:ConfocalResult}
-			\boxed{\;u_{\mathcal{F}}(\vec{r}\,') = \dfrac{i e^{ikz}}{\lambda z}\int u_{\mathcal{A}}(\vec{r})\,
+			\boxed{\;u_{\mathcal{F}}(\vec{r}\,') = \dfrac{e^{ikz}}{i\lambda z}\int u_{\mathcal{A}}(\vec{r})\,
 			\exp\left[-\dfrac{ik}{z}\left(xx'+yy'\right)\right]d\sigma ,\;}
 		\end{equation}
 		which is exactly the Fraunhofer expression \eqref{Fraunhofer} \textit{without the curvature factor}. This proves the assertion.
@@ -372,7 +555,7 @@ which describes the propagation or diffraction of the electromagnetic field in t
 		\end{equation}
 		equation \eqref{eq:ConfocalResult} becomes
 		\begin{equation}\label{eq:ConfocalFourier}
-			u_{\mathcal{F}}(\lambda z\,\vec{\nu}) = \dfrac{i e^{ikz}}{\lambda z}\,\widehat{u_{\mathcal{A}}}(\vec{\nu}), \qquad \widehat{u_{\mathcal{A}}}(\vec{\nu}) = \int u_{\mathcal{A}}(\vec{r})\,e^{-2\pi i\,\vec{r}\cdot\vec{\nu}}\,d\sigma ,
+			u_{\mathcal{F}}(\lambda z\,\vec{\nu}) = \dfrac{e^{ikz}}{i\lambda z}\,\widehat{u_{\mathcal{A}}}(\vec{\nu}), \qquad \widehat{u_{\mathcal{A}}}(\vec{\nu}) = \int u_{\mathcal{A}}(\vec{r})\,e^{-2\pi i\,\vec{r}\cdot\vec{\nu}}\,d\sigma ,
 		\end{equation}
 		so that the observation coordinate on the sphere $\mathcal{F}$ is, up to the scale factor $\lambda z$, the spatial frequency of the field on the sphere $\mathcal{A}$. This is the precise sense in which a diffracting system performs a Fourier analysis of the object, the statement that Abbe had reached qualitatively in 1873 \citep{abbe1873beitrage}.
 
@@ -389,10 +572,16 @@ Finally, from expression \eqref{Fresnel} a second approximation may be carried o
 	\exp\left( \frac{ik}{2z} (x'^2 + y'^2) \right) \notag \\
 	&\quad \times \exp\left( -\frac{ik}{z} (xx' + yy') \right),
 \end{align}
-where we may make the far-field assumption $\exp\left( \frac{ik}{2z} (x^2 + y^2) \right) \approx 1$, so that we obtain
+where the first of the three exponentials is the quadratic phase accumulated across the aperture itself. Setting it to unity is the defining step of the far field, and the condition for doing so is that the largest phase it can produce over the illuminated region be small.
+
+\begin{Assumption}
+	The quadratic phase acquired across the aperture is negligible, $k\,r_{\max}^{2}/2z \ll 1$, that is $z \gg \pi r_{\max}^{2}/\lambda$, so that the Fresnel number of the aperture is small compared with unity.
+\end{Assumption}
+
+With $\exp\left( \frac{ik}{2z} (x^2 + y^2) \right) \approx 1$ we obtain
 \begin{equation}
 	\label{Fraunhofer}
-	U(\vec{r}') = \dfrac{e^{ikz}}{\lambda z} \exp \left(\dfrac{ik}{2z} (x'^2 + y'^2)\right) \int U(\vec{r}) \exp\left( -\frac{ik}{z} (xx' + yy') \right) d\sigma .
+	U(\vec{r}') = \dfrac{e^{ikz}}{i\lambda z} \exp \left(\dfrac{ik}{2z} (x'^2 + y'^2)\right) \int U(\vec{r}) \exp\left( -\frac{ik}{z} (xx' + yy') \right) d\sigma .
 \end{equation}
 There we can still appreciate a quadratic phase term outside the integral, usually called the curvature factor, which shows precisely the dephasing induced by the difference of optical path between a plane called the observation screen and a spherical surface of radius $z$ (the propagation distance of the field along the optical axis) known as the cardinal sphere. The introduction of this spherical surface is rather useful when one wishes to describe Fraunhofer diffraction on a screen as a Fresnel propagation through two confocal cardinal spheres, as shown in Figure~\ref{fig:cardinals}.
 
@@ -405,16 +594,21 @@ There we can still appreciate a quadratic phase term outside the integral, usual
 
 This makes more sense once we analyse the effect of each propagation step. It is clear that, without imposing far-field approximations from the outset, propagating the field at $\mathcal{A}$ towards $\mathcal{F}$ with the Fresnel approximation, we would obtain
 \begin{equation}
-	U_{\mathcal{F}}(\vec{r}) = \dfrac{ie^{ikz}}{\lambda z} \exp\left( \frac{ik}{2z} (x^2 + y^2) \right)  \int u_{\mathcal{A}}
+	U_{\mathcal{F}}(\vec{r}) = \dfrac{e^{ikz}}{i\lambda z} \exp\left( \frac{ik}{2z} (x^2 + y^2) \right)  \int u_{\mathcal{A}}
 	\exp\left( \frac{ik}{2z} (x'^2 + y'^2) \right)
 	\exp\left( -\frac{ik}{z} (xx' + yy') \right)d\sigma' ,
 \end{equation}
 where we may associate $u_{\mathcal{A}}$, i.e.\ the field on the sphere $\mathcal{A}$, with the field on $\mathcal{P}$ multiplied by its corresponding quadratic factor $u_{\mathcal{P}} = u_{\mathcal{A}} (\vec{r}') \exp{\left( \dfrac{ik}{2z}(x'^2+y'^2) \right)}$, while the term $\exp{\left( \frac{ik}{2z} (x^2 + y^2) \right)}$ may be understood as the factor resulting from passing the field from the sphere $\mathcal{F}$ to the screen $\mathcal{Q}$, so that the field on $\mathcal{F}$ would correspond to
 \begin{equation}
-	u_{\mathcal{Q}}(\vec{r}) = \dfrac{ie^{ikz}}{\lambda z} \int u_{\mathcal{P}}
+	u_{\mathcal{Q}}(\vec{r}) = \dfrac{e^{ikz}}{i\lambda z} \int u_{\mathcal{P}}
 	\exp\left( -\frac{ik}{z} (xx' + yy') \right)d\sigma' ,
 \end{equation}
 thus recovering a Fraunhofer expression for diffraction on $\mathcal{Q}$. It should be noted that one must check whether the study of the propagated field is valid within a paraxial regime, where the field is confined to the neighbourhood of the optical axis and hence the curvature of the cardinal sphere does not differ much from the plane (the screen). In cases where the curvature factor ceases to be negligible, the paraxial regime loses validity and the problem must be addressed from a meta-axial standpoint.
+
+It is worth pausing here to count, because this is the place at which the promise made at the beginning of the chapter falls due. Seventeen assumptions separate Maxwell's equations from the Fraunhofer integral \eqref{Fraunhofer}, and they fall into six families. Five were needed merely to replace the electromagnetic field by a single scalar quantity: the magnetic interaction was discarded, the medium was emptied of charges and currents, the polarisation was frozen first in time and then in space, and the field was declared transverse. A sixth reduced polychromatic light to one spectral component at a time. Four more were spent in building the integral apparatus, by requiring smoothness of the field, by emptying the region of observation of its sources, by shrinking the elementary emitter to a point and by forbidding any radiation to arrive from infinity. Two were spent on the screen, whose material was idealised out of existence and on which the field was then prescribed by hand. One placed the observer many wavelengths from the aperture. Three built the paraxial regime, by truncating the binomial expansion, by treating amplitude and phase with different degrees of accuracy and by straightening the obliquity factor to unity. The seventeenth and last pushed the observer into the far field.
+
+Two lessons follow from the tally. The first is that the elegance of \eqref{Fraunhofer}, a bare Fourier transform of the aperture, is bought rather than given: every one of the seventeen steps has narrowed the class of experiments the formula can describe, and each of them can be violated in a laboratory. The scalar theory fails when the aperture becomes comparable with the wavelength, when the numerical aperture is large, when the screen is a good conductor and the polarisation of the illumination is seen to matter, or when the observation distance is not large enough for the Fresnel number to be small; in every one of those cases the culprit can be traced to a definite item on the list above. The second lesson is the more remarkable, and it is the reason why the theory is taught at all: the formula works anyway, and it works over a range of situations far wider than the assumptions have any right to guarantee. Understanding which of the seventeen is about to break is, in practice, the whole art of applying diffraction theory.
+
 
 Studying the propagation of the field through Fresnel diffraction is of great importance because, as will be discussed later, it bears a close relationship with what is known as the fractional Fourier transform, a tool that arises naturally when one chains paraxial propagation steps.
 
@@ -697,7 +891,7 @@ Studying the propagation of the field through Fresnel diffraction is of great im
 
 			It is instructive to begin by showing that the naive attempt fails, because the failure tells us exactly what to repair. Expanding the square in the Fresnel integral \eqref{Fresnel},
 			\begin{equation}\label{eq:FrFT:FresnelExpanded}
-				U(\vec{r}\,') = \frac{i\,e^{ikz}}{\lambda z}\int_{\mathbb{R}^{2}} U(\vec{r})\exp\left[\frac{ik}{2z}\left(r^{2}+r'^{2}\right)\right]\exp\left[-\frac{ik}{z}\,\vec{r}\cdot\vec{r}\,'\right]\mathrm{d}^{2}r,
+				U(\vec{r}\,') = \frac{e^{ikz}}{i\lambda z}\int_{\mathbb{R}^{2}} U(\vec{r})\exp\left[\frac{ik}{2z}\left(r^{2}+r'^{2}\right)\right]\exp\left[-\frac{ik}{z}\,\vec{r}\cdot\vec{r}\,'\right]\mathrm{d}^{2}r,
 			\end{equation}
 			where we used $\|\vec{r}-\vec{r}\,'\|^{2} = r^{2}+r'^{2}-2\vec{r}\cdot\vec{r}\,'$, we see that \eqref{eq:FrFT:FresnelExpanded} has exactly the algebraic shape of \eqref{eq:FrFT:Kernel2D}: two quadratic terms with a common coefficient and one crossed term. Introduce therefore the reduced, dimensionless variables
 			\begin{equation}\label{eq:FrFT:Reduced}
@@ -737,8 +931,8 @@ Studying the propagation of the field through Fresnel diffraction is of great im
 			\end{equation}
 			and substituting both relations into \eqref{eq:FrFT:FresnelExpanded},
 			\begin{align*}
-				& u_{\mathcal{B}}(\vec{r}\,') = \frac{i\,e^{ikz}}{\lambda z}\,e^{\frac{ikr'^{2}}{2c_{2}}}\int u_{\mathcal{A}}(\vec{r})\,e^{-\frac{ikr^{2}}{2c_{1}}}\exp\left[\frac{ik}{2z}\left(r^{2}+r'^{2}\right)\right]e^{-\frac{ik}{z}\vec{r}\cdot\vec{r}\,'}\,\mathrm{d}^{2}r = \\
-				& \frac{i\,e^{ikz}}{\lambda z}\exp\left[\frac{ikr'^{2}}{2}\left(\frac{1}{z}+\frac{1}{c_{2}}\right)\right]\int u_{\mathcal{A}}(\vec{r})\exp\left[\frac{ikr^{2}}{2}\left(\frac{1}{z}-\frac{1}{c_{1}}\right)\right]e^{-\frac{ik}{z}\vec{r}\cdot\vec{r}\,'}\,\mathrm{d}^{2}r,
+				& u_{\mathcal{B}}(\vec{r}\,') = \frac{e^{ikz}}{i\lambda z}\,e^{\frac{ikr'^{2}}{2c_{2}}}\int u_{\mathcal{A}}(\vec{r})\,e^{-\frac{ikr^{2}}{2c_{1}}}\exp\left[\frac{ik}{2z}\left(r^{2}+r'^{2}\right)\right]e^{-\frac{ik}{z}\vec{r}\cdot\vec{r}\,'}\,\mathrm{d}^{2}r = \\
+				& \frac{e^{ikz}}{i\lambda z}\exp\left[\frac{ikr'^{2}}{2}\left(\frac{1}{z}+\frac{1}{c_{2}}\right)\right]\int u_{\mathcal{A}}(\vec{r})\exp\left[\frac{ikr^{2}}{2}\left(\frac{1}{z}-\frac{1}{c_{1}}\right)\right]e^{-\frac{ik}{z}\vec{r}\cdot\vec{r}\,'}\,\mathrm{d}^{2}r,
 			\end{align*}
 			where we have merely collected the coefficients of $r^{2}$ and of $r'^{2}$. The kernel \eqref{eq:FrFT:Kernel2D} requires the two quadratic coefficients to be equal, which imposes
 			\begin{equation}\label{eq:FrFT:CardinalCondition}
@@ -772,7 +966,7 @@ Studying the propagation of the field through Fresnel diffraction is of great im
 			\end{equation}
 			and the propagation reads
 			\begin{equation}\label{eq:FrFT:SphereToSphere}
-				u_{\mathcal{B}}(\vec{r}\,') = \frac{i\,e^{ikz}}{\lambda z}\int_{\mathbb{R}^{2}} u_{\mathcal{A}}(\vec{r})\exp\left[iQ\left(r^{2}+r'^{2}\right)\right]\exp\left[-\frac{ik}{z}\,\vec{r}\cdot\vec{r}\,'\right]\mathrm{d}^{2}r,
+				u_{\mathcal{B}}(\vec{r}\,') = \frac{e^{ikz}}{i\lambda z}\int_{\mathbb{R}^{2}} u_{\mathcal{A}}(\vec{r})\exp\left[iQ\left(r^{2}+r'^{2}\right)\right]\exp\left[-\frac{ik}{z}\,\vec{r}\cdot\vec{r}\,'\right]\mathrm{d}^{2}r,
 			\end{equation}
 			which now has exactly the structure of \eqref{eq:FrFT:Kernel2D} with independent quadratic and crossed coefficients. Repeating the identification of the previous subsubsection with the reduced variables \eqref{eq:FrFT:Reduced},
 			\begin{align}
@@ -805,11 +999,11 @@ Studying the propagation of the field through Fresnel diffraction is of great im
 
 			It remains to compare the constants. Changing variables in \eqref{eq:FrFT:SphereToSphere} according to \eqref{eq:FrFT:Reduced}, so that $\mathrm{d}^{2}r = \omega^{2}\,\mathrm{d}^{2}u$,
 			\begin{equation}\label{eq:FrFT:Reduced2}
-				u_{\mathcal{B}}(\omega\vec{v}) = \frac{i\,e^{ikz}\,\omega^{2}}{\lambda z}\int_{\mathbb{R}^{2}} u_{\mathcal{A}}(\omega\vec{u})\exp\left[\frac{i}{2}\left(u^{2}+v^{2}\right)\cot\alpha - i\,\vec{u}\cdot\vec{v}\csc\alpha\right]\mathrm{d}^{2}u,
+				u_{\mathcal{B}}(\omega\vec{v}) = \frac{e^{ikz}\,\omega^{2}}{i\lambda z}\int_{\mathbb{R}^{2}} u_{\mathcal{A}}(\omega\vec{u})\exp\left[\frac{i}{2}\left(u^{2}+v^{2}\right)\cot\alpha - i\,\vec{u}\cdot\vec{v}\csc\alpha\right]\mathrm{d}^{2}u,
 			\end{equation}
 			and using \eqref{eq:FrFT:Scale} the prefactor simplifies to
 			\begin{equation}\label{eq:FrFT:PrefactorOptics}
-				\frac{i\,\omega^{2}}{\lambda z} = \frac{i}{{\color{red}\lambda z}}\cdot\frac{{\color{red}\lambda z}}{2\pi\sin\alpha} = \frac{i}{2\pi\sin\alpha}.
+				\frac{\omega^{2}}{i\lambda z} = \frac{1}{i\,{\color{red}\lambda z}}\cdot\frac{{\color{red}\lambda z}}{2\pi\sin\alpha} = \frac{1}{2\pi i\sin\alpha} = \frac{-i}{2\pi\sin\alpha}.
 			\end{equation}
 			On the other hand the constant of \eqref{eq:FrFT:Kernel2D}, rewritten by means of the identity \eqref{eq:FrFT:ConstantEquiv}, is
 			\begin{equation}\label{eq:FrFT:PrefactorFrFT}
@@ -817,19 +1011,19 @@ Studying the propagation of the field through Fresnel diffraction is of great im
 			\end{equation}
 			Dividing \eqref{eq:FrFT:PrefactorOptics} by \eqref{eq:FrFT:PrefactorFrFT},
 			\begin{equation*}
-				\frac{\;\dfrac{i}{{\color{red}2\pi\sin\alpha}}\;}{\dfrac{-i\,e^{i\alpha}}{{\color{red}2\pi\sin\alpha}}} = \frac{i}{-i}\,e^{-i\alpha} = -\,e^{-i\alpha},
+				\frac{\;\dfrac{-i}{{\color{red}2\pi\sin\alpha}}\;}{\dfrac{-i\,e^{i\alpha}}{{\color{red}2\pi\sin\alpha}}} = \frac{-i}{-i}\,e^{-i\alpha} = e^{-i\alpha},
 			\end{equation*}
 			and therefore, collecting everything, we have proved the theorem.
 
 			\begin{myteo}
 				\textit{(Fresnel diffraction as a fractional Fourier transformation)} Let the field be referred to two cardinal spherical caps of radius $R$ separated by the distance $z$ along the axis, in the sense of \eqref{eq:FrFT:Cardinals}, and let the transverse coordinates be reduced by the scale $\omega$ of \eqref{eq:FrFT:ScaleExplicit}. Then the Fresnel propagation \eqref{Fresnel} is the fractional Fourier transformation
 				\begin{equation}\label{eq:FrFT:MainResult}
-					u_{\mathcal{B}}(\omega\vec{v}) = e^{i\left(kz + \pi - \alpha\right)}\left(\mathcal{F}_{\alpha}\,u_{\mathcal{A}}\right)(\vec{v}),
+					u_{\mathcal{B}}(\omega\vec{v}) = e^{i\left(kz - \alpha\right)}\left(\mathcal{F}_{\alpha}\,u_{\mathcal{A}}\right)(\vec{v}),
 				\end{equation}
 				whose order is given by $\cos\alpha = 1 - z/R$.
 			\end{myteo}
 
-			A remark on the residual phase is in order. The additive $\pi$ in \eqref{eq:FrFT:MainResult} is inherited from the sign of the constant written in front of the Fresnel integral \eqref{Fresnel}. With the normalisation $1/(i\lambda z)$, which is the one for which the Fresnel kernel tends to $\delta(\vec{r}-\vec{r}\,')$ as $z\to0$, the very same computation gives the residual factor $e^{-i\alpha}$ with no additive constant, and the order $\alpha$ is then exactly the accumulated Gouy phase, a point to which we shall return.
+			A remark on the residual phase is in order. Apart from the trivial factor $e^{ikz}$, which merely counts the optical path along the axis, the propagation leaves behind the factor $e^{-i\alpha}$ and nothing else. This is a direct consequence of the normalisation $1/(i\lambda z)$ of the Fresnel integral \eqref{Fresnel}, the one for which the kernel tends to $\delta(\vec{r}-\vec{r}\,')$ as $z\to0$; had the constant been written with the opposite sign, an additive $\pi$ would have appeared in the exponent of \eqref{eq:FrFT:MainResult} with no physical content whatever. With the correct normalisation the order $\alpha$ is exactly the accumulated Gouy phase, a point to which we shall return.
 
 			Let us test \eqref{eq:FrFT:MainResult} on the three cases we can check independently.
 
@@ -857,7 +1051,7 @@ Studying the propagation of the field through Fresnel diffraction is of great im
 
 			\textit{As a rotation of phase space.} By the theorem of Lohmann \citeyearpar{lohmann1993image}, later established rigorously by Mustard \citeyearpar{mustard1996fractional}, the transformation $\mathcal{F}_{\alpha}$ acts on the Wigner distribution of the field simply by rotating the plane of the transverse position and the transverse spatial frequency by the angle $\alpha$. Free propagation between cardinal spheres is therefore a rigid rotation of phase space, which is why the orders add: rotations compose by adding angles. This also explains geometrically why plane to plane propagation is not a fractional transformation, since in the plane description propagation is a shear of phase space rather than a rotation.
 
-			\textit{As a Gouy phase.} The residual factor $e^{-i\alpha}$ of the footnote to \eqref{eq:FrFT:MainResult} is not an accident. If instead of arbitrary caps one chooses as reference surfaces the wavefronts of a Gaussian beam of Rayleigh range $z_{R}$, the order that comes out of the same computation is
+			\textit{As a Gouy phase.} The residual factor $e^{-i\alpha}$ of \eqref{eq:FrFT:MainResult} is not an accident. If instead of arbitrary caps one chooses as reference surfaces the wavefronts of a Gaussian beam of Rayleigh range $z_{R}$, the order that comes out of the same computation is
 			\begin{equation}\label{eq:FrFT:Gouy}
 				\alpha = \arctan\!\left(\frac{z}{z_{R}}\right),
 			\end{equation}
