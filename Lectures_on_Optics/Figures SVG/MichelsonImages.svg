@@ -176,18 +176,18 @@
       <path d="M 0,0 L 10,5 L 0,10 z" fill="#7b2d8e"/>
     </marker>
   </defs>
-  <g inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1">
+  <g inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1" transform="translate(65.000,0)">
     <rect style="fill:#00bed7;fill-opacity:0.326203;stroke:#005e6a;stroke-width:1.43375;stroke-dasharray:none;stroke-opacity:1;opacity:0.30597015" id="rect1" width="74.388031" height="74.388031" x="165.5262" y="416.91321" />
     <path style="opacity:0.30597015;fill:#00bed7;fill-opacity:0.326203;stroke:#005e6a;stroke-width:1.43375;stroke-dasharray:none;stroke-opacity:1" d="M 165.35305,490.67141 238.77426,417.2502" id="path1" />
     <path style="fill:#00bed7;fill-opacity:0.326203;stroke:#000000;stroke-width:1.43375;stroke-dasharray:4.30122, 4.30122;stroke-dashoffset:0;stroke-opacity:0.486631;opacity:0.30597015" d="M 87.087983,454.1072 H 344.52238" id="path2" />
     <path style="fill:#00bed7;fill-opacity:0.326203;stroke:#000000;stroke-width:1.43375;stroke-dasharray:4.30122, 4.30122;stroke-dashoffset:0;stroke-opacity:0.486631;opacity:0.30597015" d="M 201.45246,325.49682 V 455.60026" id="path3" />
-    <path style="fill:#00bed7;fill-opacity:0.326203;stroke:#009991;stroke-width:1.43375;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;opacity:0.30597015" d="m 166.05021,338.26651 67.97117,-25.08077" id="path4" />
-    <path style="fill:#00bed7;fill-opacity:0.326203;stroke:#009991;stroke-width:1.321;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5);opacity:0.30597015" d="m 478.4672,288.43559 62.62619,-23.10852" id="path5" transform="matrix(1.0853472,0,0,1.0853472,-353.25284,25.213724)" />
+    <path style="fill:#00bed7;fill-opacity:0.326203;stroke:#009991;stroke-width:1.43375;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;opacity:0.30597015" d="m 166.05021,338.26651 67.97117,-25.08077" id="path4" transform="rotate(-13.7464,201.917,325.034)" />
+    <path style="fill:#00bed7;fill-opacity:0.326203;stroke:#009991;stroke-width:1.321;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5);opacity:0.30597015" d="m 478.4672,288.43559 62.62619,-23.10852" id="path5" transform="rotate(-13.7464,201.917,325.034) matrix(1.0853472,0,0,1.0853472,-353.25284,25.213724)" />
     <path style="fill:#00bed7;fill-opacity:0.326203;stroke:#009991;stroke-width:1.43375;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;opacity:0.30597015" d="m 327.89213,420.37378 27.84748,66.88528" id="path6" />
     <path style="fill:#00bed7;fill-opacity:0.326203;stroke:#009991;stroke-width:1.321;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5);opacity:0.30597015" d="m 478.4672,288.43559 62.62619,-23.10852" id="path7" transform="matrix(0.0445145,1.084434,-1.084434,0.0445145,619.38279,-111.33188)" />
     <path style="fill:#00bed7;fill-opacity:0.326203;stroke:#000000;stroke-width:1.58145;stroke-dasharray:1.58145, 3.16291;stroke-dashoffset:0;stroke-opacity:0.34492;opacity:0.30597015" d="m 341.55088,419.03096 v 69.99671" id="path8" />
     <path style="fill:#00bed7;fill-opacity:0.326203;stroke:#000000;stroke-width:1.43375;stroke-dasharray:1.43375, 2.86748;stroke-dashoffset:0;stroke-opacity:0.34492;opacity:0.30597015" d="m 162.75044,325.74764 h 76.98271" id="path9" />
-    <path style="fill:none;fill-opacity:0.326203;stroke:#000000;stroke-width:0.521;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#DartArrow);opacity:0.30597015" d="m 531.61929,276.65264 c 0.83751,-0.12489 1.62086,-0.58185 2.14183,-1.24939 0.5775,-0.73998 0.82141,-1.73062 0.6535,-2.65413 -0.16791,-0.92351 -0.74493,-1.76489 -1.54594,-2.25423" id="path10" inkscape:path-effect="#path-effect10" inkscape:original-d="m 531.61929,276.65264 c 0.71393,-0.32723 1.33864,-0.83293 2.14183,-1.24939 0.80317,-0.41648 -0.53546,-3.24249 -0.89244,-4.90836" transform="matrix(1.0853472,0,0,1.0853472,-349.76591,25.213724)" />
+    <path style="fill:none;fill-opacity:0.326203;stroke:#000000;stroke-width:0.5654;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#DartArrow);opacity:0.30597015" d="M 228.917,325.034 A 27.000,27.000 0 0 0 224.301,309.936" id="path10" />
     <path style="fill:none;fill-opacity:0.326203;stroke:#000000;stroke-width:0.520999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker13);opacity:0.30597015" d="m 685.69003,375.91161 c -0.19857,-0.45849 -0.5314,-0.85789 -0.94657,-1.13588 -0.68225,-0.45683 -1.58516,-0.56569 -2.35643,-0.28411 -0.77128,0.28157 -1.39167,0.94656 -1.61912,1.7355" id="path12" inkscape:path-effect="#path-effect12" inkscape:original-d="m 685.69003,375.91161 c -0.27345,-0.33655 -0.61002,-0.67313 -0.94657,-1.13588 -0.33655,-0.46276 -2.65039,0.92553 -3.97555,1.45139" transform="matrix(1.0853472,0,0,1.0853472,-403.61974,21.994702)" />
     <circle style="fill:#003baa;fill-opacity:1;stroke:#000000;stroke-width:0.565466;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;opacity:0.30597015" id="path14" cx="83.098854" cy="454.20407" r="3.5837984" />
     <path style="fill:#003baa;fill-opacity:1;stroke:#000000;stroke-width:0.565466;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;opacity:0.30597015" d="m 82.617184,460.53586 v 6.84899" id="path15" />
@@ -260,7 +260,7 @@
         </g>
       </g>
     </g>
-    <g inkscape:label="" transform="matrix(1.0853472,0,0,1.0853472,234.29673,315.59816)" id="g37" style="opacity:0.30597015">
+    <g inkscape:label="" transform="matrix(1.0853472,0,0,1.0853472,237.911,312.851)" id="g37" style="opacity:0.30597015">
       <g fill="#000000" fill-opacity="1" id="g2-1-1-1" transform="matrix(0.352778,0,0,0.352778,-1.1165,-0.70657)">
         <g id="use1-1-1-1" transform="translate(1.993,19.205999)">
           <path d="m 10.65625,-16.96875 c 0,-0.234375 -0.171875,-0.234375 -0.25,-0.234375 -0.21875,0 -0.25,0.04687 -0.34375,0.46875 l -1.34375,5.328125 c -0.0625,0.328125 -0.09375,0.359375 -0.125,0.375 -0.015625,0.04687 -0.1875,0.07813 -0.25,0.07813 -4.0625,0.34375 -7.171875,3.6875 -7.171875,6.796875 0,2.671875 2.046875,4.3125 4.625,4.453125 C 5.59375,1.0625 5.421875,1.859375 5.234375,2.625 4.875,3.9375 4.6875,4.765625 4.6875,4.859375 c 0,0.046875 0,0.203125 0.25,0.203125 0.0625,0 0.171875,0 0.21875,-0.109375 C 5.203125,4.90625 5.359375,4.3125 5.453125,3.984375 L 6.375,0.296875 c 4.234375,-0.21875 7.453125,-3.6875 7.453125,-6.8125 0,-2.5 -1.890625,-4.28125 -4.640625,-4.46875 z m -1.609375,6.484375 c 1.640625,0.09375 3.265625,1.015625 3.265625,3.453125 0,2.796875 -1.953125,6.515625 -5.8125,6.8125 z m -3.125,10.28125 c -1.21875,-0.0625 -3.25,-0.71875 -3.25,-3.4375 0,-3.125 2.265625,-6.59375 5.828125,-6.8125 z m 0,0" id="path2-1-1-1-1" />
@@ -275,7 +275,7 @@
       </g>
     </g>
   </g>
-  <g inkscape:groupmode="layer" id="layer-fv1" inkscape:label="Fuente virtual 1 (brazo M1)">
+  <g inkscape:groupmode="layer" id="layer-fv1" inkscape:label="Fuente virtual 1 (brazo M1)" transform="translate(65.000,0)">
     <path d="M 291.969,334.093 L 368.841,518.730" fill="none" stroke="#004b9a" stroke-width="1.1" stroke-opacity="0.85" stroke-dasharray="9,5"/>
     <text x="372.841" y="528.730" font-family="serif" font-size="9" font-style="normal" font-weight="normal" fill="#004b9a" text-anchor="start">plano de M₁</text>
     <path d="M 117.064,538.960 L 484.760,171.264" fill="none" stroke="#009a84" stroke-width="1.1" stroke-opacity="0.85" stroke-dasharray="9,5"/>
@@ -299,10 +299,10 @@
     <text x="532.294" y="280.417" font-family="serif" font-size="9" font-style="normal" font-weight="normal" fill="#004b9a" text-anchor="start">imagen de S en M₁</text>
     <text x="393.607" y="153.730" font-family="serif" font-size="9" font-style="normal" font-weight="normal" fill="#004b9a" text-anchor="start">imagen de S₁′ en el divisor</text>
   </g>
-  <g inkscape:groupmode="layer" id="layer-fv2" inkscape:label="Fuente virtual 2 (brazo M2)">
+  <g inkscape:groupmode="layer" id="layer-fv2" inkscape:label="Fuente virtual 2 (brazo M2)" transform="translate(65.000,0)">
     <path d="M 117.064,538.960 L 484.760,171.264" fill="none" stroke="#009a84" stroke-width="1.1" stroke-opacity="0.85" stroke-dasharray="9,5"/>
-    <path d="M 91.213,365.883 L 248.825,307.725" fill="none" stroke="#c1440e" stroke-width="1.1" stroke-opacity="0.85" stroke-dasharray="9,5"/>
-    <text x="67.213" y="377.883" font-family="serif" font-size="9" font-style="normal" font-weight="normal" fill="#c1440e" text-anchor="start">plano de M₂</text>
+    <path d="M 60.981,420.097 L 243.369,297.075" fill="none" stroke="#c1440e" stroke-width="1.1" stroke-opacity="0.85" stroke-dasharray="9,5"/>
+    <text x="30.981" y="433.097" font-family="serif" font-size="9" font-style="normal" font-weight="normal" fill="#c1440e" text-anchor="start">plano de M₂</text>
     <path d="M 83.099,454.107 L 201.917,572.925" fill="none" stroke="#c1440e" stroke-width="1.0" stroke-opacity="1.0" stroke-dasharray="3,3"/>
     <path d="M 147.458,508.566 L 152.407,513.516 L 147.458,518.466" fill="none" stroke="#c1440e" stroke-width="0.8"/>
     <path d="M 115.632,480.983 L 109.975,486.640" fill="none" stroke="#c1440e" stroke-width="1.0" stroke-opacity="1.0"/>
@@ -310,31 +310,36 @@
     <circle cx="142.508" cy="513.516" r="1.9" fill="#c1440e"/>
     <circle cx="201.917" cy="572.925" r="3.4" fill="#c1440e" stroke="#000000" stroke-width="0.5"/>
     <text x="210.917" y="578.925" font-family="serif" font-size="11" font-style="italic" font-weight="bold" fill="#c1440e" text-anchor="start">S₂′</text>
-    <path d="M 201.917,572.925 L 40.901,136.557" fill="none" stroke="#c1440e" stroke-width="1.0" stroke-opacity="1.0" stroke-dasharray="3,3"/>
-    <path d="M 127.976,352.318 L 125.553,345.750 L 118.986,348.174" fill="none" stroke="#c1440e" stroke-width="0.8"/>
-    <path d="M 158.464,466.719 L 165.970,463.949" fill="none" stroke="#c1440e" stroke-width="1.0" stroke-opacity="1.0"/>
-    <path d="M 157.356,463.717 L 164.862,460.947" fill="none" stroke="#c1440e" stroke-width="1.0" stroke-opacity="1.0"/>
-    <path d="M 77.956,248.534 L 85.461,245.765" fill="none" stroke="#c1440e" stroke-width="1.0" stroke-opacity="1.0"/>
-    <path d="M 76.848,245.532 L 84.354,242.763" fill="none" stroke="#c1440e" stroke-width="1.0" stroke-opacity="1.0"/>
-    <circle cx="121.409" cy="354.741" r="1.9" fill="#c1440e"/>
-    <circle cx="40.901" cy="136.557" r="3.4" fill="#c1440e" stroke="#000000" stroke-width="0.5"/>
-    <text x="49.901" y="128.557" font-family="serif" font-size="11" font-style="italic" font-weight="bold" fill="#c1440e" text-anchor="start">S₂</text>
+    <path d="M 201.917,572.925 L -27.923,232.173" fill="none" stroke="#c1440e" stroke-width="1.0" stroke-opacity="1.0" stroke-dasharray="3,3"/>
+    <path d="M 81.194,406.463 L 85.108,412.266 L 90.911,408.352" fill="none" stroke="#c1440e" stroke-width="0.8"/>
+    <path d="M 142.035,491.300 L 148.668,486.827" fill="none" stroke="#c1440e" stroke-width="1.0" stroke-opacity="1.0"/>
+    <path d="M 140.246,488.647 L 146.878,484.174" fill="none" stroke="#c1440e" stroke-width="1.0" stroke-opacity="1.0"/>
+    <path d="M 27.115,320.924 L 33.748,316.450" fill="none" stroke="#c1440e" stroke-width="1.0" stroke-opacity="1.0"/>
+    <path d="M 25.326,318.271 L 31.958,313.798" fill="none" stroke="#c1440e" stroke-width="1.0" stroke-opacity="1.0"/>
+    <circle cx="86.997" cy="402.549" r="1.9" fill="#c1440e"/>
+    <circle cx="-27.923" cy="232.173" r="3.4" fill="#c1440e" stroke="#000000" stroke-width="0.5"/>
+    <text x="-18.923" y="224.173" font-family="serif" font-size="11" font-style="italic" font-weight="bold" fill="#c1440e" text-anchor="start">S₂</text>
     <text x="210.917" y="591.925" font-family="serif" font-size="9" font-style="normal" font-weight="normal" fill="#c1440e" text-anchor="start">imagen de S en el divisor</text>
-    <text x="49.901" y="141.557" font-family="serif" font-size="9" font-style="normal" font-weight="normal" fill="#c1440e" text-anchor="start">imagen de S₂′ en M₂</text>
+    <text x="-18.923" y="249.173" font-family="serif" font-size="9" font-style="normal" font-weight="normal" fill="#c1440e" text-anchor="start">imagen de S₂′ en M₂</text>
   </g>
-  <g inkscape:groupmode="layer" id="layer-eq" inkscape:label="Fuentes virtuales equivalentes">
+  <g inkscape:groupmode="layer" id="layer-eq" inkscape:label="Fuentes virtuales equivalentes" transform="translate(65.000,0)">
     <path d="M 201.917,454.107 L 385.607,131.730" fill="none" stroke="#004b9a" stroke-width="1.2" stroke-opacity="1.0" marker-end="url(#arrow-blue)"/>
-    <path d="M 201.917,454.107 L 40.901,136.557" fill="none" stroke="#c1440e" stroke-width="1.2" stroke-opacity="1.0" marker-end="url(#arrow-orange)"/>
-    <path d="M 40.901,136.557 L 385.607,131.730" fill="none" stroke="#7b2d8e" stroke-width="1.4" stroke-opacity="1.0" marker-end="url(#arrow-purple)"/>
+    <path d="M 201.917,454.107 L -27.923,232.173" fill="none" stroke="#c1440e" stroke-width="1.2" stroke-opacity="1.0" marker-end="url(#arrow-orange)"/>
+    <path d="M -27.923,232.173 L 385.607,131.730" fill="none" stroke="#7b2d8e" stroke-width="1.4" stroke-opacity="1.0" marker-end="url(#arrow-purple)"/>
     <circle cx="385.607" cy="131.730" r="3.4" fill="#004b9a" stroke="#000000" stroke-width="0.5"/>
     <text x="393.607" y="141.730" font-family="serif" font-size="11" font-style="italic" font-weight="bold" fill="#004b9a" text-anchor="start">S₁</text>
-    <circle cx="40.901" cy="136.557" r="3.4" fill="#c1440e" stroke="#000000" stroke-width="0.5"/>
-    <text x="49.901" y="128.557" font-family="serif" font-size="11" font-style="italic" font-weight="bold" fill="#c1440e" text-anchor="start">S₂</text>
+    <circle cx="-27.923" cy="232.173" r="3.4" fill="#c1440e" stroke="#000000" stroke-width="0.5"/>
+    <text x="-18.923" y="224.173" font-family="serif" font-size="11" font-style="italic" font-weight="bold" fill="#c1440e" text-anchor="start">S₂</text>
     <circle cx="201.917" cy="454.107" r="2.6" fill="#000000"/>
     <text x="188.917" y="466.107" font-family="serif" font-size="11" font-style="italic" font-weight="bold" fill="#000000" text-anchor="start">O</text>
-    <text x="213.254" y="128.143" font-family="serif" font-size="10" font-style="italic" font-weight="normal" fill="#7b2d8e" text-anchor="middle">Δ = S₁ − S₂</text>
-    <path d="M 385.607,131.730 L 385.607,454.107" fill="none" stroke="#004b9a" stroke-width="0.6" stroke-opacity="0.5" stroke-dasharray="2,3"/>
-    <path d="M 40.901,136.557 L 40.901,454.107" fill="none" stroke="#c1440e" stroke-width="0.6" stroke-opacity="0.5" stroke-dasharray="2,3"/>
+    <text x="175.773" y="169.319" font-family="serif" font-size="10" font-style="italic" font-weight="normal" fill="#7b2d8e" text-anchor="middle">Δ = S₁ − S₂</text>
+    <path d="M 385.607,232.173 L 385.607,454.107" fill="none" stroke="#004b9a" stroke-width="0.6" stroke-opacity="0.5" stroke-dasharray="2,3"/>
+    <path d="M -27.923,232.173 L -27.923,454.107" fill="none" stroke="#c1440e" stroke-width="0.6" stroke-opacity="0.5" stroke-dasharray="2,3"/>
+    <path d="M -27.923,232.173 L 385.607,232.173" fill="none" stroke="#7b2d8e" stroke-width="0.8" stroke-opacity="0.75" stroke-dasharray="4,3"/>
+    <path d="M 385.607,232.173 L 385.607,131.730" fill="none" stroke="#7b2d8e" stroke-width="0.8" stroke-opacity="0.75" stroke-dasharray="4,3"/>
+    <path d="M 378.607,232.173 L 378.607,225.173 L 385.607,225.173" fill="none" stroke="#7b2d8e" stroke-width="0.7" stroke-opacity="0.75"/>
+    <text x="178.842" y="244.173" font-family="serif" font-size="9.5" font-style="italic" font-weight="normal" fill="#7b2d8e" text-anchor="middle">Δ⊥</text>
+    <text x="390.607" y="184.951" font-family="serif" font-size="9.5" font-style="italic" font-weight="normal" fill="#7b2d8e" text-anchor="start">Δ‖</text>
   </g>
   <g inkscape:groupmode="layer" id="layer-box" inkscape:label="Formulario">
     <text x="600.000" y="300.000" font-family="serif" font-size="13" font-style="normal" font-weight="bold" fill="#000000" text-anchor="start">Fuentes virtuales equivalentes</text>
