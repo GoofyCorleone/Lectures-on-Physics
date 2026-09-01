@@ -447,23 +447,25 @@ Starting from the field
 it is possible to carry out the so-called mid-field or Fresnel approximation. The expansion on which it rests is a binomial one, and a binomial series may be truncated only when the quantity expanded is small; here that quantity is the ratio of the transverse separation to the propagation distance, so that truncating amounts to confining the entire problem to a narrow cone about the optical axis.
 
 \begin{Assumption}
-	The transverse dimensions of the aperture and of the observation region are small compared with the propagation distance $z$, and the quartic term omitted from the expansion contributes a phase far below one radian, $k\left[(x-x')^{2}+(y-y')^{2}\right]^{2}/8z^{3} \ll 1$.
+	The transverse dimensions of the aperture and of the observation region are small compared with the propagation distance $z'$, and the quartic term omitted from the expansion contributes a phase far below one radian, $k\left[(x-x')^{2}+(y-y')^{2}\right]^{2}/8z'^{3} \ll 1$.
 \end{Assumption}
 
-To this end we take
+To this end we recall that the integration runs over the plane $\Sigma_{1}$, on which $z=0$, so that the axial separation between the two points is the coordinate $z'$ of the observation point alone,
 \begin{align}
 	\label{aprox_r}
-	\|\vec{r}-\vec{r}'\| &= \left[(x-x')^2 + (y-y')^2 + (z-z')^2\right]^{1/2} \notag \\
-	&= z\left(1 + \dfrac{(x-x')^2 + (y-y')^2}{z^2} \right)^{1/2} \notag \\
-	&\approx z + \dfrac{(x-x')^2+(y-y')^2}{2z}.
+	\|\vec{r}-\vec{r}'\| &= \left.\left[(x-x')^2 + (y-y')^2 + (z-z')^2\right]^{1/2}\right|_{z=0} \notag \\
+	&= \left[(x-x')^2 + (y-y')^2 + z'^2\right]^{1/2} \notag \\
+	&= z'\left(1 + \dfrac{(x-x')^2 + (y-y')^2}{z'^2} \right)^{1/2} \notag \\
+	&\approx z' + \dfrac{(x-x')^2+(y-y')^2}{2z'}.
 \end{align}
+It is $z'$, and not $z$, that measures the propagation distance. The aperture lies at the origin of the axis and it is the observation point that travels, which is the same convention that produced the obliquity factor $\cos\theta = z'/r$ of \eqref{eq:RSobliquity} and the evaluation at $z=0$ of \eqref{eq:RSopposite}. Setting $z'=0$ and factoring $z$ instead would place the observation point on the screen and make the propagation distance vanish identically.
 It is clear that, for the factor $\dfrac{1}{\|\vec{r}- \vec{r}'\|}$, an expansion up to the first term of \eqref{aprox_r} suffices; this is not enough for the factor $e^{ik \left\| \vec{r} - \vec{r}' \right\|}$, however, since the latter has oscillatory behaviour over its domain, so both terms are required. The two factors are therefore treated with different degrees of accuracy, and that asymmetry is itself a hypothesis: it presumes that an error of a fraction of a wavelength, harmless in a slowly varying amplitude, is fatal in a phase, which is true precisely because $k$ is enormous on the scale of the aperture.
 
 \begin{Assumption}
-	In the amplitude the distance may be replaced by the axial separation, $\|\vec{r}-\vec{r}'\| \approx z$, while in the phase the quadratic term of \eqref{aprox_r} must be retained.
+	In the amplitude the distance may be replaced by the axial separation, $\|\vec{r}-\vec{r}'\| \approx z'$, while in the phase the quadratic term of \eqref{aprox_r} must be retained.
 \end{Assumption}
 
-We additionally take, for the obliquity factor \eqref{eq:RSobliquity}, $\cos\theta = \dfrac{z}{\|\vec{r} - \vec{r} '\|} \approx 1$, which is legitimate in the paraxial regime because the observation point is then close to the axis.
+We additionally take, for the obliquity factor \eqref{eq:RSobliquity}, $\cos\theta = \dfrac{z'}{\|\vec{r} - \vec{r} '\|} \approx 1$, which is legitimate in the paraxial regime because the observation point is then close to the axis.
 
 \begin{Assumption}
 	The obliquity factor is unity, $\cos\theta \approx 1$, every direction of interest making a small angle with the optical axis.
@@ -472,9 +474,9 @@ We additionally take, for the obliquity factor \eqref{eq:RSobliquity}, $\cos\the
 In this spirit, we obtain an expression for the field of the form
 \begin{equation}
 	\label{Fresnel}
-	U(\vec{r}') = \dfrac{e^{ikz}}{i\lambda z} \int U(\vec{r}) \exp \left(\dfrac{ik}{2z} ((x-x')^2 + (y-y')^2) \right) d\sigma,
+	U(\vec{r}') = \dfrac{e^{ikz'}}{i\lambda z'} \int U(\vec{r}) \exp \left(\dfrac{ik}{2z'} ((x-x')^2 + (y-y')^2) \right) d\sigma,
 \end{equation}
-which describes the propagation or diffraction of the electromagnetic field in the Fresnel regime. The constant $1/(i\lambda z)$, inherited from \eqref{eq:RSfinal}, is the one for which the kernel of \eqref{Fresnel} tends to $\delta(\vec{r}-\vec{r}\,')$ as $z\to 0$, so that a propagation over no distance at all leaves the field unchanged; this is the check that fixes the sign beyond any doubt. It is worth stressing that equation \eqref{Fresnel} describes a parabolic wave, and although, at least conceptually, such propagation is valid for a mid-field, in practice it has proved more than sufficient for sufficiently short distances.
+which describes the propagation or diffraction of the electromagnetic field in the Fresnel regime. The constant $1/(i\lambda z')$, inherited from \eqref{eq:RSfinal}, is the one for which the kernel of \eqref{Fresnel} tends to $\delta(\vec{r}-\vec{r}\,')$ as $z'\to 0$, so that a propagation over no distance at all leaves the field unchanged; this is the check that fixes the sign beyond any doubt. It is worth stressing that equation \eqref{Fresnel} describes a parabolic wave, and although, at least conceptually, such propagation is valid for a mid-field, in practice it has proved more than sufficient for sufficiently short distances.
 
 	\subsection{Example: Fraunhofer diffraction between two confocal spheres}
 
@@ -486,10 +488,10 @@ which describes the propagation or diffraction of the electromagnetic field in t
 		\end{equation}
 		so that the Fresnel integral separates into three factors,
 		\begin{equation}\label{eq:FresnelThreeFactors}
-			U(\vec{r}\,') = \dfrac{e^{ikz}}{i\lambda z}\int U(\vec{r})\,
-			e^{\frac{ik}{2z}r^{2}}\;
-			e^{\frac{ik}{2z}r'^{2}}\;
-			e^{-\frac{ik}{z}\left(xx'+yy'\right)}\,d\sigma .
+			U(\vec{r}\,') = \dfrac{e^{ikz'}}{i\lambda z'}\int U(\vec{r})\,
+			e^{\frac{ik}{2z'}r^{2}}\;
+			e^{\frac{ik}{2z'}r'^{2}}\;
+			e^{-\frac{ik}{z'}\left(xx'+yy'\right)}\,d\sigma .
 		\end{equation}
 		The last factor is already the kernel of a Fourier transformation. The obstacle is the pair of quadratic factors, and the whole point of the exercise is that they are not an obstacle at all if one agrees to read the field on a curved surface instead of on a plane.
 
@@ -508,7 +510,7 @@ which describes the propagation or diffraction of the electromagnetic field in t
 
 		Two spheres are said to be \textbf{confocal} when each one has its centre of curvature at the vertex of the other. Let therefore $\mathcal{A}$ be the cap tangent to the emitting plane $\mathcal{P}$ at the vertex $O$ and centred at $O'$, and let $\mathcal{F}$ be the cap tangent to the receiving plane $\mathcal{Q}$ at the vertex $O'$ and centred at $O$, as shown in Figure~\ref{fig:ConfocalSpheres}. Both radii are then equal to the propagation distance, and with the sign convention of \eqref{eq:ConfocalRule} the two signed distances are
 		\begin{equation}\label{eq:ConfocalRadii}
-			c_{\mathcal{A}} = +z, \qquad c_{\mathcal{F}} = -z,
+			c_{\mathcal{A}} = +z', \qquad c_{\mathcal{F}} = -z',
 		\end{equation}
 		the second one being negative because the centre of $\mathcal{F}$ lies upstream of its own vertex.
 
@@ -519,7 +521,7 @@ which describes the propagation or diffraction of the electromagnetic field in t
 			the emitting plane $\mathcal{P}$ at the vertex $O$ and has its centre of curvature at
 			$O'$, while the cap $\mathcal{F}$ is tangent to the receiving plane $\mathcal{Q}$ at
 			$O'$ and has its centre of curvature at $O$, so that both radii equal the propagation
-			distance $z$. Read on these two surfaces, the Fresnel propagation reduces to an exact
+			distance $z'$. Read on these two surfaces, the Fresnel propagation reduces to an exact
 			Fourier transformation, which in the language of the fractional Fourier
 			transformation of Section~\ref{sec:FrFT} is the order $\alpha = \pi/2$.}
 			\label{fig:ConfocalSpheres}
@@ -527,81 +529,81 @@ which describes the propagation or diffraction of the electromagnetic field in t
 
 		Applying \eqref{eq:ConfocalRule} on each side with the radii \eqref{eq:ConfocalRadii},
 		\begin{equation}\label{eq:ConfocalReferring}
-			U(\vec{r}) = u_{\mathcal{A}}(\vec{r})\,e^{-\frac{ik}{2z}r^{2}}, \qquad
-			u_{\mathcal{F}}(\vec{r}\,') = U(\vec{r}\,')\,e^{-\frac{ik}{2z}r'^{2}} ,
+			U(\vec{r}) = u_{\mathcal{A}}(\vec{r})\,e^{-\frac{ik}{2z'}r^{2}}, \qquad
+			u_{\mathcal{F}}(\vec{r}\,') = U(\vec{r}\,')\,e^{-\frac{ik}{2z'}r'^{2}} ,
 		\end{equation}
 		and substituting both relations into \eqref{eq:FresnelThreeFactors},
 		\begin{align*}
-			& u_{\mathcal{F}}(\vec{r}\,') = \dfrac{e^{ikz}}{i\lambda z}\;
-			{\color{red}e^{-\frac{ik}{2z}r'^{2}}}\;{\color{red}e^{\frac{ik}{2z}r'^{2}}}
+			& u_{\mathcal{F}}(\vec{r}\,') = \dfrac{e^{ikz'}}{i\lambda z'}\;
+			{\color{red}e^{-\frac{ik}{2z'}r'^{2}}}\;{\color{red}e^{\frac{ik}{2z'}r'^{2}}}
 			\int u_{\mathcal{A}}(\vec{r})\;
-			{\color{red}e^{-\frac{ik}{2z}r^{2}}}\;{\color{red}e^{\frac{ik}{2z}r^{2}}}\;
-			e^{-\frac{ik}{z}\left(xx'+yy'\right)}\,d\sigma ,
+			{\color{red}e^{-\frac{ik}{2z'}r^{2}}}\;{\color{red}e^{\frac{ik}{2z'}r^{2}}}\;
+			e^{-\frac{ik}{z'}\left(xx'+yy'\right)}\,d\sigma ,
 		\end{align*}
 		where the four exponentials in red cancel in pairs, since in each pair the two exponents are opposite. We are left with
 		\begin{equation}\label{eq:ConfocalResult}
-			\boxed{\;u_{\mathcal{F}}(\vec{r}\,') = \dfrac{e^{ikz}}{i\lambda z}\int u_{\mathcal{A}}(\vec{r})\,
-			\exp\left[-\dfrac{ik}{z}\left(xx'+yy'\right)\right]d\sigma ,\;}
+			\boxed{\;u_{\mathcal{F}}(\vec{r}\,') = \dfrac{e^{ikz'}}{i\lambda z'}\int u_{\mathcal{A}}(\vec{r})\,
+			\exp\left[-\dfrac{ik}{z'}\left(xx'+yy'\right)\right]d\sigma ,\;}
 		\end{equation}
 		which is exactly the Fraunhofer expression \eqref{Fraunhofer} \textit{without the curvature factor}. This proves the assertion.
 
 		Three comments are in order, because the result is stronger than it looks.
 
-		In the derivation of \eqref{Fraunhofer} the factor $e^{ikr^{2}/2z}$ was \textit{neglected} by appealing to the far field. Here it has not been neglected, it has been \textit{absorbed} by the choice of reference surface, and \eqref{eq:ConfocalResult} is therefore exact within the Fresnel approximation, for any propagation distance $z$. The lesson is that Fraunhofer diffraction is not really a regime of distances but a statement about geometry: it is what Fresnel propagation looks like when the field is read on two confocal spheres. The curvature factor that survives outside the integral in \eqref{Fraunhofer} is nothing but the price of insisting on reading the field on a plane, and this is precisely the interpretation anticipated in Figure~\ref{fig:cardinals}.
+		In the derivation of \eqref{Fraunhofer} the factor $e^{ikr^{2}/2z'}$ was \textit{neglected} by appealing to the far field. Here it has not been neglected, it has been \textit{absorbed} by the choice of reference surface, and \eqref{eq:ConfocalResult} is therefore exact within the Fresnel approximation, for any propagation distance $z'$. The lesson is that Fraunhofer diffraction is not really a regime of distances but a statement about geometry: it is what Fresnel propagation looks like when the field is read on two confocal spheres. The curvature factor that survives outside the integral in \eqref{Fraunhofer} is nothing but the price of insisting on reading the field on a plane, and this is precisely the interpretation anticipated in Figure~\ref{fig:cardinals}.
 
 		Introducing the spatial frequency associated with the observation point,
 		\begin{equation}\label{eq:ConfocalFrequency}
-			\vec{\nu} = \dfrac{\vec{r}\,'}{\lambda z}, \qquad \dfrac{k}{z}\left(xx'+yy'\right) = \dfrac{2\pi}{\lambda z}\,\vec{r}\cdot\vec{r}\,' = 2\pi\,\vec{r}\cdot\vec{\nu},
+			\vec{\nu} = \dfrac{\vec{r}\,'}{\lambda z'}, \qquad \dfrac{k}{z'}\left(xx'+yy'\right) = \dfrac{2\pi}{\lambda z'}\,\vec{r}\cdot\vec{r}\,' = 2\pi\,\vec{r}\cdot\vec{\nu},
 		\end{equation}
 		equation \eqref{eq:ConfocalResult} becomes
 		\begin{equation}\label{eq:ConfocalFourier}
-			u_{\mathcal{F}}(\lambda z\,\vec{\nu}) = \dfrac{e^{ikz}}{i\lambda z}\,\widehat{u_{\mathcal{A}}}(\vec{\nu}), \qquad \widehat{u_{\mathcal{A}}}(\vec{\nu}) = \int u_{\mathcal{A}}(\vec{r})\,e^{-2\pi i\,\vec{r}\cdot\vec{\nu}}\,d\sigma ,
+			u_{\mathcal{F}}(\lambda z'\,\vec{\nu}) = \dfrac{e^{ikz'}}{i\lambda z'}\,\widehat{u_{\mathcal{A}}}(\vec{\nu}), \qquad \widehat{u_{\mathcal{A}}}(\vec{\nu}) = \int u_{\mathcal{A}}(\vec{r})\,e^{-2\pi i\,\vec{r}\cdot\vec{\nu}}\,d\sigma ,
 		\end{equation}
-		so that the observation coordinate on the sphere $\mathcal{F}$ is, up to the scale factor $\lambda z$, the spatial frequency of the field on the sphere $\mathcal{A}$. This is the precise sense in which a diffracting system performs a Fourier analysis of the object, the statement that Abbe had reached qualitatively in 1873 \citep{abbe1873beitrage}.
+		so that the observation coordinate on the sphere $\mathcal{F}$ is, up to the scale factor $\lambda z'$, the spatial frequency of the field on the sphere $\mathcal{A}$. This is the precise sense in which a diffracting system performs a Fourier analysis of the object, the statement that Abbe had reached qualitatively in 1873 \citep{abbe1873beitrage}.
 
-		The only approximations used are those already contained in \eqref{Fresnel} together with the first order expansion \eqref{eq:ConfocalSagitta} of the sagitta, so the result holds as long as the illuminated region satisfies $r_{\max}\ll z$, which is the condition for the caps not to depart appreciably from their tangent planes. When this ceases to hold one must abandon the paraxial description, exactly as noted at the end of the following section.
+		The only approximations used are those already contained in \eqref{Fresnel} together with the first order expansion \eqref{eq:ConfocalSagitta} of the sagitta, so the result holds as long as the illuminated region satisfies $r_{\max}\ll z'$, which is the condition for the caps not to depart appreciably from their tangent planes. When this ceases to hold one must abandon the paraxial description, exactly as noted at the end of the following section.
 
-		Finally, it is worth recording that this example is the first instance of a much more general fact. Nothing forces the two reference spheres to be confocal, and if they are given a common radius $R$ different from $z$ the two quadratic factors no longer cancel but combine into a chirp, and the propagation becomes a fractional Fourier transformation of an order fixed by the ratio $z/R$. The confocal case treated here is the particular order $\alpha = \pi/2$. This is the subject of Section~\ref{sec:FrFT}.
+		Finally, it is worth recording that this example is the first instance of a much more general fact. Nothing forces the two reference spheres to be confocal, and if they are given a common radius $R$ different from $z'$ the two quadratic factors no longer cancel but combine into a chirp, and the propagation becomes a fractional Fourier transformation of an order fixed by the ratio $z'/R$. The confocal case treated here is the particular order $\alpha = \pi/2$. This is the subject of Section~\ref{sec:FrFT}.
 
 \section{The Fraunhofer approximation}
 
 Finally, from expression \eqref{Fresnel} a second approximation may be carried out, corresponding to the far field or Fraunhofer regime, in which the observation distances are considerably larger than the area over which one wishes to study the propagated field (whether through a slit or another object). We focus on the factor
 \begin{align}
-	\exp\left( \frac{ik}{2z} ((x-x')^2 + (y-y')^2) \right)
-	&= \exp\left( \frac{ik}{2z} (x^2 + y^2) \right)
-	\exp\left( \frac{ik}{2z} (x'^2 + y'^2) \right) \notag \\
-	&\quad \times \exp\left( -\frac{ik}{z} (xx' + yy') \right),
+	\exp\left( \frac{ik}{2z'} ((x-x')^2 + (y-y')^2) \right)
+	&= \exp\left( \frac{ik}{2z'} (x^2 + y^2) \right)
+	\exp\left( \frac{ik}{2z'} (x'^2 + y'^2) \right) \notag \\
+	&\quad \times \exp\left( -\frac{ik}{z'} (xx' + yy') \right),
 \end{align}
 where the first of the three exponentials is the quadratic phase accumulated across the aperture itself. Setting it to unity is the defining step of the far field, and the condition for doing so is that the largest phase it can produce over the illuminated region be small.
 
 \begin{Assumption}
-	The quadratic phase acquired across the aperture is negligible, $k\,r_{\max}^{2}/2z \ll 1$, that is $z \gg \pi r_{\max}^{2}/\lambda$, so that the Fresnel number of the aperture is small compared with unity.
+	The quadratic phase acquired across the aperture is negligible, $k\,r_{\max}^{2}/2z' \ll 1$, that is $z' \gg \pi r_{\max}^{2}/\lambda$, so that the Fresnel number of the aperture is small compared with unity.
 \end{Assumption}
 
-With $\exp\left( \frac{ik}{2z} (x^2 + y^2) \right) \approx 1$ we obtain
+With $\exp\left( \frac{ik}{2z'} (x^2 + y^2) \right) \approx 1$ we obtain
 \begin{equation}
 	\label{Fraunhofer}
-	U(\vec{r}') = \dfrac{e^{ikz}}{i\lambda z} \exp \left(\dfrac{ik}{2z} (x'^2 + y'^2)\right) \int U(\vec{r}) \exp\left( -\frac{ik}{z} (xx' + yy') \right) d\sigma .
+	U(\vec{r}') = \dfrac{e^{ikz'}}{i\lambda z'} \exp \left(\dfrac{ik}{2z'} (x'^2 + y'^2)\right) \int U(\vec{r}) \exp\left( -\frac{ik}{z'} (xx' + yy') \right) d\sigma .
 \end{equation}
-There we can still appreciate a quadratic phase term outside the integral, usually called the curvature factor, which shows precisely the dephasing induced by the difference of optical path between a plane called the observation screen and a spherical surface of radius $z$ (the propagation distance of the field along the optical axis) known as the cardinal sphere. The introduction of this spherical surface is rather useful when one wishes to describe Fraunhofer diffraction on a screen as a Fresnel propagation through two confocal cardinal spheres, as shown in Figure~\ref{fig:cardinals}.
+There we can still appreciate a quadratic phase term outside the integral, usually called the curvature factor, which shows precisely the dephasing induced by the difference of optical path between a plane called the observation screen and a spherical surface of radius $z'$ (the propagation distance of the field along the optical axis) known as the cardinal sphere. The introduction of this spherical surface is rather useful when one wishes to describe Fraunhofer diffraction on a screen as a Fresnel propagation through two confocal cardinal spheres, as shown in Figure~\ref{fig:cardinals}.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\linewidth]{Chapter 5/Figures/Cardinales}
-	\caption{Scheme of the confocal cardinal spheres, with radii equal to the propagation distance $z$ of the field.}
+	\caption{Scheme of the confocal cardinal spheres, with radii equal to the propagation distance $z'$ of the field.}
 	\label{fig:cardinals}
 \end{figure}
 
 This makes more sense once we analyse the effect of each propagation step. It is clear that, without imposing far-field approximations from the outset, propagating the field at $\mathcal{A}$ towards $\mathcal{F}$ with the Fresnel approximation, we would obtain
 \begin{equation}
-	U_{\mathcal{F}}(\vec{r}) = \dfrac{e^{ikz}}{i\lambda z} \exp\left( \frac{ik}{2z} (x^2 + y^2) \right)  \int u_{\mathcal{A}}
-	\exp\left( \frac{ik}{2z} (x'^2 + y'^2) \right)
-	\exp\left( -\frac{ik}{z} (xx' + yy') \right)d\sigma' ,
+	U_{\mathcal{F}}(\vec{r}\,') = \dfrac{e^{ikz'}}{i\lambda z'} \exp\left( \frac{ik}{2z'} (x'^2 + y'^2) \right)  \int u_{\mathcal{A}}
+	\exp\left( \frac{ik}{2z'} (x^2 + y^2) \right)
+	\exp\left( -\frac{ik}{z'} (xx' + yy') \right)d\sigma ,
 \end{equation}
-where we may associate $u_{\mathcal{A}}$, i.e.\ the field on the sphere $\mathcal{A}$, with the field on $\mathcal{P}$ multiplied by its corresponding quadratic factor $u_{\mathcal{P}} = u_{\mathcal{A}} (\vec{r}') \exp{\left( \dfrac{ik}{2z}(x'^2+y'^2) \right)}$, while the term $\exp{\left( \frac{ik}{2z} (x^2 + y^2) \right)}$ may be understood as the factor resulting from passing the field from the sphere $\mathcal{F}$ to the screen $\mathcal{Q}$, so that the field on $\mathcal{F}$ would correspond to
+where we may associate $u_{\mathcal{A}}$, i.e.\ the field on the sphere $\mathcal{A}$, with the field on $\mathcal{P}$ multiplied by its corresponding quadratic factor $u_{\mathcal{P}} = u_{\mathcal{A}} (\vec{r}) \exp{\left( \dfrac{ik}{2z'}(x^2+y^2) \right)}$, while the term $\exp{\left( \frac{ik}{2z'} (x'^2 + y'^2) \right)}$ may be understood as the factor resulting from passing the field from the sphere $\mathcal{F}$ to the screen $\mathcal{Q}$, so that the field on $\mathcal{F}$ would correspond to
 \begin{equation}
-	u_{\mathcal{Q}}(\vec{r}) = \dfrac{e^{ikz}}{i\lambda z} \int u_{\mathcal{P}}
-	\exp\left( -\frac{ik}{z} (xx' + yy') \right)d\sigma' ,
+	u_{\mathcal{Q}}(\vec{r}\,') = \dfrac{e^{ikz'}}{i\lambda z'} \int u_{\mathcal{P}}
+	\exp\left( -\frac{ik}{z'} (xx' + yy') \right)d\sigma ,
 \end{equation}
 thus recovering a Fraunhofer expression for diffraction on $\mathcal{Q}$. It should be noted that one must check whether the study of the propagated field is valid within a paraxial regime, where the field is confined to the neighbourhood of the optical axis and hence the curvature of the cardinal sphere does not differ much from the plane (the screen). In cases where the curvature factor ceases to be negligible, the paraxial regime loses validity and the problem must be addressed from a meta-axial standpoint.
 
@@ -615,6 +617,9 @@ Studying the propagation of the field through Fresnel diffraction is of great im
 \section{The fractional Fourier transformation}\label{sec:FrFT}
 
 	The last section closed with the remark that Fresnel propagation bears a close relationship with the fractional Fourier transformation. That remark is the subject of the present section, and it deserves a careful treatment for two reasons. The first is that the fractional Fourier transformation is not a formal curiosity but the natural language in which paraxial propagation should be written, in the same sense in which the ordinary Fourier transformation is the natural language of the far field. The second is that the object itself, a continuous family of operators interpolating between the identity and the Fourier transformation, has a long and instructive history, one in which the same idea was rediscovered independently in pure analysis, in quantum mechanics, in signal processing and in optics before anybody realised that all four communities were talking about the same one parameter group.
+
+	A word on notation before we begin. In \eqref{Fresnel} the propagation distance appeared as $z'$, the axial coordinate of the observation point, the aperture being fixed at the origin of the axis. In the present section the two reference surfaces are treated on the same footing and neither of them is privileged, so we place the emitting surface at the origin and write simply $z$ for the distance to the receiving one. The $z$ of this section is therefore the $z'$ of \eqref{Fresnel}, and no axial coordinate of the integration variable appears anywhere in what follows.
+
 
 	\subsection{A historical context of Fourier analysis and of its fractional powers}
 

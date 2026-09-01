@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex out/main"] 1788300264.56044 "out/main.aux" "out/main.bbl" "out/main" 1788300266.54961 0
+["bibtex out/main"] 1788301907.40181 "out/main.aux" "out/main.bbl" "out/main" 1788301909.3942 0
   "./references.bib" 1788270589.32416 29162 7adfffcd59c5a899332b558a65f4e12d ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "out/main.aux" 1788300266.29253 123464 ff09ebbae950373ccc1f1025ac512adb "pdflatex"
+  "out/main.aux" 1788301909.11911 123506 e0240bb02853bc5e5f31e78c38c51d81 "pdflatex"
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1788300264.64844 "main.tex" "out/main.pdf" "main" 1788300266.54984 0
+["pdflatex"] 1788301907.47883 "main.tex" "out/main.pdf" "main" 1788301909.39442 0
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -292,7 +292,7 @@
   "Chapter 5/Figures/GreenImagenes.pdf" 1788059544.28583 18859 31fd6d56d8ca4a927466971deedf8a06 ""
   "Chapter 5/Figures/GreenNoPuntual.pdf" 1788059544.28623 27035 acff4151beca5b9445e69637c7a2c7e9 ""
   "Chapter 5/Figures/GreenPuntual.pdf" 1788059544.28673 25660 e27a3ffce723cfd3d964127af1c38b22 ""
-  "Chapter 5/chap5.tex" 1788300255.44267 145267 55793f17e6c18f35ae16cf18713ce1e4 ""
+  "Chapter 5/chap5.tex" 1788301896.65758 146635 20fcdc7364d568f54decc9216c4f86bb ""
   "Chapter 6/Figures/Estrecho.pdf" 1788059544.28706 35389 6a9becda114279712867b0decc2eb085 ""
   "Chapter 6/Figures/FourierGamma.pdf" 1788059544.28718 15760 f18c41c818418794d85cbff65ae8f04f ""
   "Chapter 6/Figures/Propagation.pdf" 1788059544.28753 20593 8f27724c06423aaab94caba0915cd05d ""
@@ -303,11 +303,11 @@
   "Figures/LoGOTS.png" 1788059544.30232 58761 d30b2db1e9efaf752cebe7551c894d9d ""
   "Figures/logouis.png" 1788059544.30252 62450 f09c4e4b788c95739ca2931443f6d84e ""
   "main.tex" 1788126349.76268 6693 29408fc8fce4a38d5ed6ea20ee65840c ""
-  "out/main.aux" 1788300266.29253 123464 ff09ebbae950373ccc1f1025ac512adb "pdflatex"
-  "out/main.bbl" 1788300264.64419 23154 ea4f379bede4568276ea6a518e6f6815 "bibtex out/main"
-  "out/main.lof" 1788300266.29871 22409 f0f22e41a90bf2a9f05b3009cd6b622a "pdflatex"
-  "out/main.out" 1788300266.2985 35236 d7ba5031264167ae648bcb3246d37262 "pdflatex"
-  "out/main.toc" 1788300266.29868 14734 4b86fc9d88ebe0a70b70fa49dcf6f02e "pdflatex"
+  "out/main.aux" 1788301909.11911 123506 e0240bb02853bc5e5f31e78c38c51d81 "pdflatex"
+  "out/main.bbl" 1788301907.47459 23154 ea4f379bede4568276ea6a518e6f6815 "bibtex out/main"
+  "out/main.lof" 1788301909.12543 22411 07cbd9a90f6f72f89563b3e814b44cb7 "pdflatex"
+  "out/main.out" 1788301909.12521 35236 d7ba5031264167ae648bcb3246d37262 "pdflatex"
+  "out/main.toc" 1788301909.12539 14734 bc95a8ad2e656205046c687699e2d34f "pdflatex"
   (generated)
   "out/main.aux"
   "out/main.lof"
