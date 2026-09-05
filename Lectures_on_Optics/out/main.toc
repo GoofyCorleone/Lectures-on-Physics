@@ -82,56 +82,62 @@
 \contentsline {subsubsection}{\numberline {3.5.6.4}Theorem IV: the general equivalence theorem}{136}{subsubsection.3.5.6.4}%
 \contentsline {subsubsection}{\numberline {3.5.6.5}Theorem V: reversibility}{137}{subsubsection.3.5.6.5}%
 \contentsline {subsubsection}{\numberline {3.5.6.6}What the theorems say together}{138}{subsubsection.3.5.6.6}%
-\contentsline {subsection}{\numberline {3.5.7}The elliptic general Malus law}{139}{subsection.3.5.7}%
-\contentsline {subsection}{\numberline {3.5.8}The law of elliptic birrefringents}{139}{subsection.3.5.8}%
-\contentsline {chapter}{\numberline {4}Interference and Interferometers}{141}{chapter.4}%
-\contentsline {section}{\numberline {4.1}A historical context of interference and interferometers}{142}{section.4.1}%
-\contentsline {section}{\numberline {4.2}How does interference occur?}{143}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Interference of plane waves}{145}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Interference of spherical waves}{146}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Interferometers}{151}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Young interferometer}{151}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Fresnel biprism}{155}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Michelson and Morley interferometer}{161}{subsection.4.3.3}%
-\contentsline {chapter}{\numberline {5}Theory of Diffraction}{173}{chapter.5}%
-\contentsline {section}{\numberline {5.1}A historical context of diffraction theory: from shadows to the vector world}{174}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Scalar theory of diffraction}{177}{section.5.2}%
-\contentsline {section}{\numberline {5.3}The scalar wave equation (Helmholtz equation)}{179}{section.5.3}%
-\contentsline {section}{\numberline {5.4}The Kirchoff scalar boundary-value problem}{180}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Green's theorem}{180}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}The Helmholtz-Kirchoff integral theorem}{181}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}The Rayleigh-Sommerfeld formulation}{189}{subsection.5.4.3}%
-\contentsline {section}{\numberline {5.5}The Fresnel approximation}{194}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Example: Fraunhofer diffraction between two confocal spheres}{195}{subsection.5.5.1}%
-\contentsline {section}{\numberline {5.6}The Fraunhofer approximation}{198}{section.5.6}%
-\contentsline {section}{\numberline {5.7}The fractional Fourier transformation}{201}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}A historical context of Fourier analysis and of its fractional powers}{201}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}The fractional Fourier transformation as a differential and as an integral operator}{205}{subsection.5.7.2}%
-\contentsline {subsubsection}{\numberline {5.7.2.1}The eigenfunctions of the Fourier transformation}{205}{subsubsection.5.7.2.1}%
-\contentsline {subsubsection}{\numberline {5.7.2.2}Namias' definition and the differential operator}{207}{subsubsection.5.7.2.2}%
-\contentsline {subsubsection}{\numberline {5.7.2.3}The integral form of the transformation}{209}{subsubsection.5.7.2.3}%
-\contentsline {subsubsection}{\numberline {5.7.2.4}The inverse transformation and the index law}{211}{subsubsection.5.7.2.4}%
-\contentsline {subsubsection}{\numberline {5.7.2.5}The regularisation of McBride and Kerr}{211}{subsubsection.5.7.2.5}%
-\contentsline {subsubsection}{\numberline {5.7.2.6}Why the construction is useful}{213}{subsubsection.5.7.2.6}%
-\contentsline {subsection}{\numberline {5.7.3}The role of Fourier analysis in the theory of diffraction}{213}{subsection.5.7.3}%
-\contentsline {subsubsection}{\numberline {5.7.3.1}Why a plane cannot be the right reference surface}{214}{subsubsection.5.7.3.1}%
-\contentsline {subsubsection}{\numberline {5.7.3.2}Reference spheres and the fractional order}{215}{subsubsection.5.7.3.2}%
-\contentsline {subsubsection}{\numberline {5.7.3.3}The normalising constant and the final result}{217}{subsubsection.5.7.3.3}%
-\contentsline {subsubsection}{\numberline {5.7.3.4}Physical meaning of a real order}{219}{subsubsection.5.7.3.4}%
-\contentsline {subsubsection}{\numberline {5.7.3.5}Physical meaning of a complex order}{220}{subsubsection.5.7.3.5}%
-\contentsline {chapter}{\numberline {6}Theory of Coherence}{223}{chapter.6}%
-\contentsline {section}{\numberline {6.1}A historical context of coherence theory}{224}{section.6.1}%
-\contentsline {section}{\numberline {6.2}How is statistical similarity quantified?}{227}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Random variables}{230}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}The sample space and the physical meaning of an event}{231}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}The sigma algebra, or which questions may be asked}{231}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Measure, the Lebesgue measure and the probability measure}{233}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Random variables and the meaning of measurability}{234}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Stochastic processes}{236}{subsection.6.3.5}%
-\contentsline {subsection}{\numberline {6.3.6}The probability space of the electromagnetic field}{236}{subsection.6.3.6}%
-\contentsline {subsection}{\numberline {6.3.7}Stationarity, ergodicity and the right to measure}{238}{subsection.6.3.7}%
-\contentsline {section}{\numberline {6.4}The coherence function}{239}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Manifestations of coherence: the WienerKhinchin theorem}{243}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}The wave equation of coherence}{245}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Propagation of coherence and the direction of time: the van CittertZernike theorem}{248}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {3.5.7}Generation of elliptic states: Composition of Waveplates}{139}{subsection.3.5.7}%
+\contentsline {subsubsection}{\numberline {3.5.7.1}The linear birrefringents law}{139}{subsubsection.3.5.7.1}%
+\contentsline {subsubsection}{\numberline {3.5.7.2}The full tunable birrefringent}{145}{subsubsection.3.5.7.2}%
+\contentsline {subsubsection}{\numberline {3.5.7.3}The elliptic birrefringents law}{152}{subsubsection.3.5.7.3}%
+\contentsline {subsection}{\numberline {3.5.8}Generation of elliptic states: Polarizers as projection operators }{157}{subsection.3.5.8}%
+\contentsline {subsubsection}{\numberline {3.5.8.1}The Malus law}{158}{subsubsection.3.5.8.1}%
+\contentsline {subsubsection}{\numberline {3.5.8.2}The elliptic polariser}{163}{subsubsection.3.5.8.2}%
+\contentsline {subsubsection}{\numberline {3.5.8.3}The elliptic Malus law}{169}{subsubsection.3.5.8.3}%
+\contentsline {chapter}{\numberline {4}Interference and Interferometers}{175}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A historical context of interference and interferometers}{176}{section.4.1}%
+\contentsline {section}{\numberline {4.2}How does interference occur?}{177}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Interference of plane waves}{179}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Interference of spherical waves}{180}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Interferometers}{185}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Young interferometer}{185}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Fresnel biprism}{189}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Michelson and Morley interferometer}{195}{subsection.4.3.3}%
+\contentsline {chapter}{\numberline {5}Theory of Diffraction}{207}{chapter.5}%
+\contentsline {section}{\numberline {5.1}A historical context of diffraction theory: from shadows to the vector world}{208}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Scalar theory of diffraction}{211}{section.5.2}%
+\contentsline {section}{\numberline {5.3}The scalar wave equation (Helmholtz equation)}{213}{section.5.3}%
+\contentsline {section}{\numberline {5.4}The Kirchoff scalar boundary-value problem}{214}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Green's theorem}{214}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}The Helmholtz-Kirchoff integral theorem}{215}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}The Rayleigh-Sommerfeld formulation}{223}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}The Fresnel approximation}{228}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Example: Fraunhofer diffraction between two confocal spheres}{229}{subsection.5.5.1}%
+\contentsline {section}{\numberline {5.6}The Fraunhofer approximation}{232}{section.5.6}%
+\contentsline {section}{\numberline {5.7}The fractional Fourier transformation}{234}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}A historical context of Fourier analysis and of its fractional powers}{235}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}The fractional Fourier transformation as a differential and as an integral operator}{238}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}The eigenfunctions of the Fourier transformation}{239}{subsubsection.5.7.2.1}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}Namias' definition and the differential operator}{241}{subsubsection.5.7.2.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.3}The integral form of the transformation}{242}{subsubsection.5.7.2.3}%
+\contentsline {subsubsection}{\numberline {5.7.2.4}The inverse transformation and the index law}{244}{subsubsection.5.7.2.4}%
+\contentsline {subsubsection}{\numberline {5.7.2.5}The regularisation of McBride and Kerr}{245}{subsubsection.5.7.2.5}%
+\contentsline {subsubsection}{\numberline {5.7.2.6}Why the construction is useful}{246}{subsubsection.5.7.2.6}%
+\contentsline {subsection}{\numberline {5.7.3}The role of Fourier analysis in the theory of diffraction}{247}{subsection.5.7.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.1}Why a plane cannot be the right reference surface}{247}{subsubsection.5.7.3.1}%
+\contentsline {subsubsection}{\numberline {5.7.3.2}Reference spheres and the fractional order}{248}{subsubsection.5.7.3.2}%
+\contentsline {subsubsection}{\numberline {5.7.3.3}The normalising constant and the final result}{251}{subsubsection.5.7.3.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.4}Physical meaning of a real order}{252}{subsubsection.5.7.3.4}%
+\contentsline {subsubsection}{\numberline {5.7.3.5}Physical meaning of a complex order}{253}{subsubsection.5.7.3.5}%
+\contentsline {chapter}{\numberline {6}Theory of Coherence}{255}{chapter.6}%
+\contentsline {section}{\numberline {6.1}A historical context of coherence theory}{256}{section.6.1}%
+\contentsline {section}{\numberline {6.2}How is statistical similarity quantified?}{259}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Random variables}{262}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}The sample space and the physical meaning of an event}{263}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}The sigma algebra, or which questions may be asked}{263}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Measure, the Lebesgue measure and the probability measure}{265}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Random variables and the meaning of measurability}{266}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Stochastic processes}{268}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}The probability space of the electromagnetic field}{268}{subsection.6.3.6}%
+\contentsline {subsection}{\numberline {6.3.7}Stationarity, ergodicity and the right to measure}{270}{subsection.6.3.7}%
+\contentsline {section}{\numberline {6.4}The coherence function}{271}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Manifestations of coherence: the WienerKhinchin theorem}{275}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}The wave equation of coherence}{277}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Propagation of coherence and the direction of time: the van CittertZernike theorem}{280}{subsection.6.4.3}%
 \contentsfinish 

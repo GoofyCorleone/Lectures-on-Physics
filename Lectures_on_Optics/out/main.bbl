@@ -16,6 +16,12 @@ Almeida, L.~B. (1994).
 \newblock The fractional fourier transform and time-frequency representations.
 \newblock {\em IEEE Transactions on Signal Processing}, 42(11):3084--3091.
 
+\bibitem[Azzam, 2000]{azzam2000poincare}
+Azzam, R. M.~A. (2000).
+\newblock Poincar\'e sphere representation of the fixed-polarizer
+  rotating-retarder optical system.
+\newblock {\em Journal of the Optical Society of America A}, 17(11):2105--2107.
+
 \bibitem[Azzam and Bashara, 1977]{azzam1977ellipsometry}
 Azzam, R. M.~A. and Bashara, N.~M. (1977).
 \newblock {\em Ellipsometry and Polarized Light}.
@@ -416,12 +422,24 @@ Ozaktas, H.~M., Zalevsky, Z., and Kutay, M.~A. (2001).
   Signal Processing}.
 \newblock John Wiley and Sons, Chichester.
 
+\bibitem[Pab\'on et~al., 2023]{pabon2023tunable}
+Pab\'on, J., Hernandez, C., and Torres, R. (2023).
+\newblock Tunable birefringence and elliptical polarization eigenmodes in a
+  biplate of two quarter-wave plates.
+\newblock {\em Journal of the Optical Society of America A}, 40(10):1959--1968.
+
 \bibitem[Pearson, 1896]{pearson1896regression}
 Pearson, K. (1896).
 \newblock Mathematical contributions to the theory of evolution. iii.
   regression, heredity, and panmixia.
 \newblock {\em Philosophical Transactions of the Royal Society of London.
   Series A}, 187:253--318.
+
+\bibitem[Pellat-Finet, 1984]{pellatfinet1984representation}
+Pellat-Finet, P. (1984).
+\newblock Repr\'esentation des \'etats et des op\'erateurs de la lumi\`ere par
+  des quaternions.
+\newblock {\em Optica Acta: International Journal of Optics}, 31:415--434.
 
 \bibitem[Pellat-Finet, 1994]{pellatfinet1994fresnel}
 Pellat-Finet, P. (1994).
@@ -460,6 +478,14 @@ Riemann, B. (1867).
   reihe.
 \newblock {\em Abhandlungen der K{\"o}niglichen Gesellschaft der Wissenschaften
   zu G{\"o}ttingen}, 13:87--132.
+
+\bibitem[Salazar~Ariza, 2021]{salazar2021dinamica}
+Salazar~Ariza, K.~V. (2021).
+\newblock {\em Din\'amica de la polarizaci\'on y la coherencia de fuentes de
+  luz parcialmente polarizadas sobre la esfera de Poincar\'e}.
+\newblock PhD thesis, Universidad Industrial de Santander, Escuela de F\'isica,
+  Bucaramanga, Colombia.
+\newblock Doctoral thesis, advisor: Rafael \'Angel Torres Amar\'is.
 
 \bibitem[Santos et~al., 2018]{santos2018huygens}
 Santos, E.~A., Castro, F., and Torres, R. (2018).

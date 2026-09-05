@@ -3,3 +3,7 @@ CLAUDE.md
 
 # macOS
 .DS_Store
+
+# Third-party source PDFs (copyrighted, kept local for reference only)
+Lectures_on_Optics/TesisKarolDoc.pdf
+Lectures_on_Optics/TuneableBirrefringent.pdf

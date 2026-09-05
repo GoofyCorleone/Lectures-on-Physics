@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  1 SEP 2026 17:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  5 SEP 2026 12:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -241,6 +241,31 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup9
 )
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
 (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -254,10 +279,7 @@ Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
-))
+)
 \Gin@req@height=\dimen168
 \Gin@req@width=\dimen169
 )
@@ -622,30 +644,30 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 (out/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Info: Redefining \microtypecontext on input line 82.
-Package microtype Info: Applying patch `item' on input line 82.
-Package microtype Info: Applying patch `eqnum' on input line 82.
-Package microtype Info: Applying patch `footnote' on input line 82.
-Package microtype Info: Applying patch `verbatim' on input line 82.
-LaTeX Info: Redefining \microtypesetup on input line 82.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Info: Redefining \microtypecontext on input line 85.
+Package microtype Info: Applying patch `item' on input line 85.
+Package microtype Info: Applying patch `eqnum' on input line 85.
+Package microtype Info: Applying patch `footnote' on input line 85.
+Package microtype Info: Applying patch `verbatim' on input line 85.
+LaTeX Info: Redefining \microtypesetup on input line 85.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -714,23 +736,13 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count375
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 149.
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 82.
-
-(out/main.out) (out/main.out)
+Package hyperref Info: Link coloring ON on input line 85.
+ (out/main.out) (out/main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 85.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
+Package hyperref Info: Option `pageanchor' set `false' on input line 88.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
 
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -739,7 +751,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
 
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -748,7 +760,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 95
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 98
 .
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -761,20 +773,20 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 al/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2
 
 ]
-<Figures/LoGOTS.png, id=559, 668.4975pt x 376.40625pt>
+<Figures/LoGOTS.png, id=583, 668.4975pt x 376.40625pt>
 File: Figures/LoGOTS.png Graphic file (type png)
 <use Figures/LoGOTS.png>
-Package pdftex.def Info: Figures/LoGOTS.png  used on input line 105.
+Package pdftex.def Info: Figures/LoGOTS.png  used on input line 108.
 (pdftex.def)             Requested size: 187.89912pt x 105.80081pt.
-<Figures/logouis.png, id=561, 1196.47pt x 596.2275pt>
+<Figures/logouis.png, id=585, 1196.47pt x 596.2275pt>
 File: Figures/logouis.png Graphic file (type png)
 <use Figures/logouis.png>
-Package pdftex.def Info: Figures/logouis.png  used on input line 109.
+Package pdftex.def Info: Figures/logouis.png  used on input line 112.
 (pdftex.def)             Requested size: 187.89912pt x 93.63339pt.
  [1
 
  <./Figures/LoGOTS.png> <./Figures/logouis.png>] [2]
-Package hyperref Info: Option `pageanchor' set `true' on input line 137.
+Package hyperref Info: Option `pageanchor' set `true' on input line 140.
  (out/main.toc [3
 
 ]
@@ -790,14 +802,14 @@ la-tion: Jones spinors and the po-lar-iza-tion
  [7] [8
 
 ] (out/main.lof [9] [10] [11] [12{/usr/local/texlive/2026/texmf-dist/fonts/enc/
-dvips/cm-super/cm-super-ts1.enc}] [13])
+dvips/cm-super/cm-super-ts1.enc}] [13] [14])
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [14]
-(./Abstract/abstract.tex) [1
+ [15] [16
 
-] [2
+]
+(./Abstract/abstract.tex) [1] [2
 
 ]
 Chapter 1.
@@ -1059,7 +1071,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-<Chapter 2/Figures/Fizeau.pdf, id=1146, 2347.61295pt x 1330.83134pt>
+<Chapter 2/Figures/Fizeau.pdf, id=1232, 2347.61295pt x 1330.83134pt>
 File: Chapter 2/Figures/Fizeau.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Fizeau.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Fizeau.pdf  used on input line 44.
@@ -1085,7 +1097,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--81
  []
 
 [19]
-<Chapter 2/Figures/DarkRoom.pdf, id=1189, 2357.66833pt x 1008.77567pt>
+<Chapter 2/Figures/DarkRoom.pdf, id=1276, 2357.66833pt x 1008.77567pt>
 File: Chapter 2/Figures/DarkRoom.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/DarkRoom.pdf>
 Package pdftex.def Info: Chapter 2/Figures/DarkRoom.pdf  used on input line 86.
@@ -1097,7 +1109,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--153
  []
 
 [21]
-<Chapter 2/Figures/indicerefracciongeo.pdf, id=1226, 493.29323pt x 292.3054pt>
+<Chapter 2/Figures/indicerefracciongeo.pdf, id=1312, 493.29323pt x 292.3054pt>
 File: Chapter 2/Figures/indicerefracciongeo.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/indicerefracciongeo.pdf>
 Package pdftex.def Info: Chapter 2/Figures/indicerefracciongeo.pdf  used on inp
@@ -1109,7 +1121,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--214
  []
 
 [23]
-<Chapter 2/Figures/SnellDescartes.pdf, id=1248, 2119.01894pt x 1421.57564pt>
+<Chapter 2/Figures/SnellDescartes.pdf, id=1333, 2119.01894pt x 1421.57564pt>
 File: Chapter 2/Figures/SnellDescartes.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/SnellDescartes.pdf>
 Package pdftex.def Info: Chapter 2/Figures/SnellDescartes.pdf  used on input li
@@ -1125,12 +1137,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 278--279
 
  []
 
-<Chapter 2/Figures/Mirror.pdf, id=1284, 347.28732pt x 316.06752pt>
+<Chapter 2/Figures/Mirror.pdf, id=1371, 347.28732pt x 316.06752pt>
 File: Chapter 2/Figures/Mirror.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Mirror.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Mirror.pdf  used on input line 284.
 (pdftex.def)             Requested size: 234.87749pt x 213.7656pt.
-<Chapter 2/Figures/NonRefract.pdf, id=1285, 337.82414pt x 198.44939pt>
+<Chapter 2/Figures/NonRefract.pdf, id=1372, 337.82414pt x 198.44939pt>
 File: Chapter 2/Figures/NonRefract.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/NonRefract.pdf>
 Package pdftex.def Info: Chapter 2/Figures/NonRefract.pdf  used on input line 2
@@ -1147,12 +1159,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 299--300
  []
 
 [27 <./Chapter 2/Figures/NonRefract.pdf>]
-<Chapter 2/Figures/n1>n2.pdf, id=1326, 553.24557pt x 401.88844pt>
+<Chapter 2/Figures/n1>n2.pdf, id=1412, 553.24557pt x 401.88844pt>
 File: Chapter 2/Figures/n1>n2.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/n1>n2.pdf>
 Package pdftex.def Info: Chapter 2/Figures/n1>n2.pdf  used on input line 329.
 (pdftex.def)             Requested size: 216.09044pt x 156.975pt.
-<Chapter 2/Figures/n1<n2.pdf, id=1329, 557.70143pt x 401.70021pt>
+<Chapter 2/Figures/n1<n2.pdf, id=1415, 557.70143pt x 401.70021pt>
 File: Chapter 2/Figures/n1<n2.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/n1<n2.pdf>
 Package pdftex.def Info: Chapter 2/Figures/n1<n2.pdf  used on input line 338.
@@ -1163,25 +1175,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 345--346
  []
 
 [28 <./Chapter 2/Figures/n1>n2.pdf>]
-<Chapter 2/Figures/OpticalSystem_1.pdf, id=1337, 642.39154pt x 364.00249pt>
+<Chapter 2/Figures/OpticalSystem_1.pdf, id=1423, 642.39154pt x 364.00249pt>
 File: Chapter 2/Figures/OpticalSystem_1.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/OpticalSystem_1.pdf>
 Package pdftex.def Info: Chapter 2/Figures/OpticalSystem_1.pdf  used on input l
 ine 363.
 (pdftex.def)             Requested size: 211.3883pt x 119.78238pt.
-<Chapter 2/Figures/OpticalSystem_2.pdf, id=1338, 642.3916pt x 364.00249pt>
+<Chapter 2/Figures/OpticalSystem_2.pdf, id=1424, 642.3916pt x 364.00249pt>
 File: Chapter 2/Figures/OpticalSystem_2.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/OpticalSystem_2.pdf>
 Package pdftex.def Info: Chapter 2/Figures/OpticalSystem_2.pdf  used on input l
 ine 365.
 (pdftex.def)             Requested size: 211.3883pt x 119.78238pt.
-<Chapter 2/Figures/OpticalSystem_3.pdf, id=1339, 599.51382pt x 339.70648pt>
+<Chapter 2/Figures/OpticalSystem_3.pdf, id=1425, 599.51382pt x 339.70648pt>
 File: Chapter 2/Figures/OpticalSystem_3.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/OpticalSystem_3.pdf>
 Package pdftex.def Info: Chapter 2/Figures/OpticalSystem_3.pdf  used on input l
 ine 372.
 (pdftex.def)             Requested size: 234.87749pt x 133.09146pt.
-<Chapter 2/Figures/OpticalSystem_4.pdf, id=1340, 1366.51398pt x 386.75014pt>
+<Chapter 2/Figures/OpticalSystem_4.pdf, id=1426, 1366.51398pt x 386.75014pt>
 File: Chapter 2/Figures/OpticalSystem_4.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/OpticalSystem_4.pdf>
 Package pdftex.def Info: Chapter 2/Figures/OpticalSystem_4.pdf  used on input l
@@ -1204,7 +1216,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
 [30 <./Chapter 2/Figures/OpticalSystem_1.pdf> <./Chapter 2/Figures/OpticalSyste
 m_2.pdf> <./Chapter 2/Figures/OpticalSystem_3.pdf>]
-<Chapter 2/Figures/Stigmatism.pdf, id=1446, 743.41724pt x 457.23386pt>
+<Chapter 2/Figures/Stigmatism.pdf, id=1532, 743.41724pt x 457.23386pt>
 File: Chapter 2/Figures/Stigmatism.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Stigmatism.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Stigmatism.pdf  used on input line 3
@@ -1221,7 +1233,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 409--410
  []
 
 [31 <./Chapter 2/Figures/OpticalSystem_4.pdf>]
-<Chapter 2/Figures/AlmostOvoid.pdf, id=1512, 1878.9232pt x 664.22311pt>
+<Chapter 2/Figures/AlmostOvoid.pdf, id=1598, 1878.9232pt x 664.22311pt>
 File: Chapter 2/Figures/AlmostOvoid.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/AlmostOvoid.pdf>
 Package pdftex.def Info: Chapter 2/Figures/AlmostOvoid.pdf  used on input line 
@@ -1257,21 +1269,21 @@ Overfull \hbox (11.77934pt too wide) detected at line 572
  []
 
 [36]
-<Chapter 2/Figures/YoungWeirstrass.pdf, id=1592, 572.28307pt x 379.68492pt>
+<Chapter 2/Figures/YoungWeirstrass.pdf, id=1678, 572.28307pt x 379.68492pt>
 File: Chapter 2/Figures/YoungWeirstrass.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/YoungWeirstrass.pdf>
 Package pdftex.def Info: Chapter 2/Figures/YoungWeirstrass.pdf  used on input l
 ine 612.
 (pdftex.def)             Requested size: 375.80542pt x 249.32983pt.
  [37] [38 <./Chapter 2/Figures/YoungWeirstrass.pdf>]
-<Chapter 2/Figures/Ellipsoid.pdf, id=1618, 343.81865pt x 250.42145pt>
+<Chapter 2/Figures/Ellipsoid.pdf, id=1704, 343.81865pt x 250.42145pt>
 File: Chapter 2/Figures/Ellipsoid.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Ellipsoid.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Ellipsoid.pdf  used on input line 68
 3.
 (pdftex.def)             Requested size: 281.85585pt x 205.29341pt.
  [39]
-<Chapter 2/Figures/Ellipsoid2.pdf, id=1627, 386.51491pt x 286.18974pt>
+<Chapter 2/Figures/Ellipsoid2.pdf, id=1712, 386.51491pt x 286.18974pt>
 File: Chapter 2/Figures/Ellipsoid2.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Ellipsoid2.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Ellipsoid2.pdf  used on input line 7
@@ -1283,21 +1295,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 711--712
  []
 
 [40 <./Chapter 2/Figures/Ellipsoid.pdf>]
-<Chapter 2/Figures/Ellipsoid3.pdf, id=1640, 428.49129pt x 286.5618pt>
+<Chapter 2/Figures/Ellipsoid3.pdf, id=1725, 428.49129pt x 286.5618pt>
 File: Chapter 2/Figures/Ellipsoid3.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Ellipsoid3.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Ellipsoid3.pdf  used on input line 7
 40.
 (pdftex.def)             Requested size: 422.77661pt x 282.75258pt.
  [41 <./Chapter 2/Figures/Ellipsoid2.pdf>]
-<Chapter 2/Figures/Hyperboloid.pdf, id=1661, 275.63766pt x 275.63766pt>
+<Chapter 2/Figures/Hyperboloid.pdf, id=1747, 275.63766pt x 275.63766pt>
 File: Chapter 2/Figures/Hyperboloid.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Hyperboloid.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Hyperboloid.pdf  used on input line 
 767.
 (pdftex.def)             Requested size: 234.87749pt x 234.88614pt.
  [42 <./Chapter 2/Figures/Ellipsoid3.pdf>]
-<Chapter 2/Figures/Hyperboloid2.pdf, id=1679, 387.23828pt x 275.63766pt>
+<Chapter 2/Figures/Hyperboloid2.pdf, id=1765, 387.23828pt x 275.63766pt>
 File: Chapter 2/Figures/Hyperboloid2.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Hyperboloid2.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Hyperboloid2.pdf  used on input line
@@ -1308,7 +1320,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 791--792
 
  []
 
-<Chapter 2/Figures/Hyperboloid3.pdf, id=1681, 400.65042pt x 275.63763pt>
+<Chapter 2/Figures/Hyperboloid3.pdf, id=1767, 400.65042pt x 275.63763pt>
 File: Chapter 2/Figures/Hyperboloid3.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Hyperboloid3.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Hyperboloid3.pdf  used on input line
@@ -1316,14 +1328,14 @@ Package pdftex.def Info: Chapter 2/Figures/Hyperboloid3.pdf  used on input line
 (pdftex.def)             Requested size: 375.80542pt x 258.55684pt.
 [43 <./Chapter 2/Figures/Hyperboloid.pdf>] [44 <./Chapter 2/Figures/Hyperboloid
 2.pdf>] [45 <./Chapter 2/Figures/Hyperboloid3.pdf>]
-<Chapter 2/Figures/EllipsoidalMirror.pdf, id=1714, 2371.3606pt x 1312.77892pt>
+<Chapter 2/Figures/EllipsoidalMirror.pdf, id=1800, 2371.3606pt x 1312.77892pt>
 File: Chapter 2/Figures/EllipsoidalMirror.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/EllipsoidalMirror.pdf>
 Package pdftex.def Info: Chapter 2/Figures/EllipsoidalMirror.pdf  used on input
  line 845.
 (pdftex.def)             Requested size: 375.80542pt x 208.04578pt.
  [46 <./Chapter 2/Figures/EllipsoidalMirror.pdf>]
-<Chapter 2/Figures/HyperboloidMirror.pdf, id=1730, 3146.48032pt x 2195.26178pt>
+<Chapter 2/Figures/HyperboloidMirror.pdf, id=1815, 3146.48032pt x 2195.26178pt>
 
 File: Chapter 2/Figures/HyperboloidMirror.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/HyperboloidMirror.pdf>
@@ -1331,7 +1343,7 @@ Package pdftex.def Info: Chapter 2/Figures/HyperboloidMirror.pdf  used on input
  line 885.
 (pdftex.def)             Requested size: 375.80542pt x 262.18066pt.
  [47] [48 <./Chapter 2/Figures/HyperboloidMirror.pdf>]
-<Chapter 2/Figures/ParaboloidMirror.pdf, id=1761, 2165.88788pt x 1978.16507pt>
+<Chapter 2/Figures/ParaboloidMirror.pdf, id=1846, 2165.88788pt x 1978.16507pt>
 File: Chapter 2/Figures/ParaboloidMirror.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/ParaboloidMirror.pdf>
 Package pdftex.def Info: Chapter 2/Figures/ParaboloidMirror.pdf  used on input 
@@ -1339,7 +1351,7 @@ line 916.
 (pdftex.def)             Requested size: 375.80542pt x 343.22601pt.
 
 [49] [50 <./Chapter 2/Figures/ParaboloidMirror.pdf>] [51]
-<Chapter 2/Figures/SuperconicGeometry.pdf, id=1805, 1801.45924pt x 967.15883pt>
+<Chapter 2/Figures/SuperconicGeometry.pdf, id=1891, 1801.45924pt x 967.15883pt>
 
 File: Chapter 2/Figures/SuperconicGeometry.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/SuperconicGeometry.pdf>
@@ -1347,13 +1359,13 @@ Package pdftex.def Info: Chapter 2/Figures/SuperconicGeometry.pdf  used on inpu
 t line 1011.
 (pdftex.def)             Requested size: 399.2946pt x 214.36943pt.
  [52] [53 <./Chapter 2/Figures/SuperconicGeometry.pdf>] [54]
-<Chapter 2/Figures/CartesianSurfaces.pdf, id=1834, 794.97pt x 216.81pt>
+<Chapter 2/Figures/CartesianSurfaces.pdf, id=1920, 794.97pt x 216.81pt>
 File: Chapter 2/Figures/CartesianSurfaces.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/CartesianSurfaces.pdf>
 Package pdftex.def Info: Chapter 2/Figures/CartesianSurfaces.pdf  used on input
  line 1078.
 (pdftex.def)             Requested size: 469.75499pt x 128.11859pt.
-<Chapter 2/Figures/OvoidTable.png, id=1838, 1239.63126pt x 707.64375pt>
+<Chapter 2/Figures/OvoidTable.png, id=1924, 1239.63126pt x 707.64375pt>
 File: Chapter 2/Figures/OvoidTable.png Graphic file (type png)
 <use Chapter 2/Figures/OvoidTable.png>
 Package pdftex.def Info: Chapter 2/Figures/OvoidTable.png  used on input line 1
@@ -1362,7 +1374,7 @@ Package pdftex.def Info: Chapter 2/Figures/OvoidTable.png  used on input line 1
  [55 <./Chapter 2/Figures/CartesianSurfaces.pdf>] [56 <./Chapter 2/Figures/Ovoi
 dTable.png (PNG copy)>] [57] [58]
 [59]
-<Chapter 2/Figures/SphericalDiopterFermat.pdf, id=1912, 1862.59094pt x 1519.764
+<Chapter 2/Figures/SphericalDiopterFermat.pdf, id=1998, 1862.59094pt x 1519.764
 25pt>
 File: Chapter 2/Figures/SphericalDiopterFermat.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/SphericalDiopterFermat.pdf>
@@ -1371,7 +1383,7 @@ input line 1206.
 (pdftex.def)             Requested size: 399.2946pt x 325.79216pt.
  [60] [61 <./Chapter 2/Figures/SphericalDiopterFermat.pdf>] [62] [63]
 [64] [65]
-<Chapter 2/Figures/QuarticWavefront.pdf, id=1977, 2799.6624pt x 2397.88132pt>
+<Chapter 2/Figures/QuarticWavefront.pdf, id=2062, 2799.6624pt x 2397.88132pt>
 File: Chapter 2/Figures/QuarticWavefront.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/QuarticWavefront.pdf>
 Package pdftex.def Info: Chapter 2/Figures/QuarticWavefront.pdf  used on input 
@@ -1379,33 +1391,33 @@ line 1366.
 (pdftex.def)             Requested size: 375.80542pt x 321.87057pt.
  [66] [67 <./Chapter 2/Figures/QuarticWavefront.pdf>] [68] [69]
 [70]
-<Chapter 2/Figures/LSA.pdf, id=2041, 3278.41953pt x 1918.13048pt>
+<Chapter 2/Figures/LSA.pdf, id=2127, 3278.41953pt x 1918.13048pt>
 File: Chapter 2/Figures/LSA.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/LSA.pdf>
 Package pdftex.def Info: Chapter 2/Figures/LSA.pdf  used on input line 1480.
 (pdftex.def)             Requested size: 375.80542pt x 219.8633pt.
  [71]
-<Chapter 2/Figures/ObjectDefocus.pdf, id=2054, 3278.41904pt x 1918.13048pt>
+<Chapter 2/Figures/ObjectDefocus.pdf, id=2140, 3278.41904pt x 1918.13048pt>
 File: Chapter 2/Figures/ObjectDefocus.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/ObjectDefocus.pdf>
 Package pdftex.def Info: Chapter 2/Figures/ObjectDefocus.pdf  used on input lin
 e 1511.
 (pdftex.def)             Requested size: 375.80542pt x 219.8633pt.
  [72 <./Chapter 2/Figures/LSA.pdf>]
-<Chapter 2/Figures/MarginalImagingA.pdf, id=2069, 4099.58603pt x 1942.50682pt>
+<Chapter 2/Figures/MarginalImagingA.pdf, id=2154, 4099.58603pt x 1942.50682pt>
 File: Chapter 2/Figures/MarginalImagingA.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/MarginalImagingA.pdf>
 Package pdftex.def Info: Chapter 2/Figures/MarginalImagingA.pdf  used on input 
 line 1524.
 (pdftex.def)             Requested size: 281.85585pt x 133.52922pt.
-<Chapter 2/Figures/MarginalImagingB.pdf, id=2070, 4087.39792pt x 2230.65549pt>
+<Chapter 2/Figures/MarginalImagingB.pdf, id=2155, 4087.39792pt x 2230.65549pt>
 File: Chapter 2/Figures/MarginalImagingB.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/MarginalImagingB.pdf>
 Package pdftex.def Info: Chapter 2/Figures/MarginalImagingB.pdf  used on input 
 line 1525.
 (pdftex.def)             Requested size: 281.85585pt x 153.81328pt.
  [73 <./Chapter 2/Figures/ObjectDefocus.pdf>]
-<Chapter 2/Figures/ThinLensAberrated.pdf, id=2084, 3300.32462pt x 2312.3653pt>
+<Chapter 2/Figures/ThinLensAberrated.pdf, id=2170, 3300.32462pt x 2312.3653pt>
 File: Chapter 2/Figures/ThinLensAberrated.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/ThinLensAberrated.pdf>
 Package pdftex.def Info: Chapter 2/Figures/ThinLensAberrated.pdf  used on input
@@ -1414,7 +1426,7 @@ Package pdftex.def Info: Chapter 2/Figures/ThinLensAberrated.pdf  used on input
  [74 <./Chapter 2/Figures/MarginalImagingA.pdf> <./Chapter 2/Figures/MarginalIm
 agingB.pdf>] [75 <./Chapter 2/Figures/ThinLensAberrated.pdf>]
 [76]
-<Chapter 2/Figures/AplanatismCondition.pdf, id=2169, 2842.57222pt x 1607.85226p
+<Chapter 2/Figures/AplanatismCondition.pdf, id=2255, 2842.57222pt x 1607.85226p
 t>
 File: Chapter 2/Figures/AplanatismCondition.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/AplanatismCondition.pdf>
@@ -1422,7 +1434,7 @@ Package pdftex.def Info: Chapter 2/Figures/AplanatismCondition.pdf  used on inp
 ut line 1599.
 (pdftex.def)             Requested size: 399.2946pt x 225.8338pt.
  [77 <./Chapter 2/Figures/AplanatismCondition.pdf>]
-<Chapter 2/Figures/AbbeSine.pdf, id=2190, 2876.22063pt x 2278.74995pt>
+<Chapter 2/Figures/AbbeSine.pdf, id=2276, 2876.22063pt x 2278.74995pt>
 File: Chapter 2/Figures/AbbeSine.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/AbbeSine.pdf>
 Package pdftex.def Info: Chapter 2/Figures/AbbeSine.pdf  used on input line 163
@@ -1436,20 +1448,20 @@ Chapter 3.
 
 ] [83] [84] [85] [86] [87] [88] [89] [90]
 [91] [92] [93] [94]
-<Chapter 3/Figures/3Dto2D.pdf, id=2407, 2405.64027pt x 1568.6766pt>
+<Chapter 3/Figures/3Dto2D.pdf, id=2493, 2405.64027pt x 1568.6766pt>
 File: Chapter 3/Figures/3Dto2D.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/3Dto2D.pdf>
 Package pdftex.def Info: Chapter 3/Figures/3Dto2D.pdf  used on input line 409.
 (pdftex.def)             Requested size: 375.80542pt x 245.03331pt.
  [95] [96 <./Chapter 3/Figures/3Dto2D.pdf>] [97]
-<Chapter 3/Figures/Phasors.pdf, id=2710, 2393.59479pt x 2151.25581pt>
+<Chapter 3/Figures/Phasors.pdf, id=2796, 2393.59479pt x 2151.25581pt>
 File: Chapter 3/Figures/Phasors.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/Phasors.pdf>
 Package pdftex.def Info: Chapter 3/Figures/Phasors.pdf  used on input line 493.
 
 (pdftex.def)             Requested size: 375.80542pt x 337.74135pt.
  [98]
-<Chapter 3/Figures/PolarisationEllipseGen.pdf, id=2720, 1271.04904pt x 1059.184
+<Chapter 3/Figures/PolarisationEllipseGen.pdf, id=2806, 1271.04904pt x 1059.184
 89pt>
 File: Chapter 3/Figures/PolarisationEllipseGen.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/PolarisationEllipseGen.pdf>
@@ -1458,7 +1470,7 @@ input line 506.
 (pdftex.def)             Requested size: 328.82706pt x 274.00781pt.
 
 [99 <./Chapter 3/Figures/Phasors.pdf>]
-<Chapter 3/Figures/PolarisationEllipseBase.pdf, id=2841, 1645.08768pt x 1370.87
+<Chapter 3/Figures/PolarisationEllipseBase.pdf, id=2927, 1645.08768pt x 1370.87
 72pt>
 File: Chapter 3/Figures/PolarisationEllipseBase.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/PolarisationEllipseBase.pdf>
@@ -1473,21 +1485,21 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [102]
 [103] [104] [105] [106] [107] [108] [109]
-<Chapter 3/Figures/PoincareSphere.pdf, id=2988, 2193.86569pt x 2188.14952pt>
+<Chapter 3/Figures/PoincareSphere.pdf, id=3074, 2193.86569pt x 2188.14952pt>
 File: Chapter 3/Figures/PoincareSphere.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/PoincareSphere.pdf>
 Package pdftex.def Info: Chapter 3/Figures/PoincareSphere.pdf  used on input li
 ne 758.
 (pdftex.def)             Requested size: 281.85585pt x 281.0972pt.
  [110] [111 <./Chapter 3/Figures/PoincareSphere.pdf>] [112] [113]
-<Chapter 3/Figures/ProyStereo1.pdf, id=3096, 1643.8923pt x 843.0807pt>
+<Chapter 3/Figures/ProyStereo1.pdf, id=3181, 1643.8923pt x 843.0807pt>
 File: Chapter 3/Figures/ProyStereo1.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/ProyStereo1.pdf>
 Package pdftex.def Info: Chapter 3/Figures/ProyStereo1.pdf  used on input line 
 824.
 (pdftex.def)             Requested size: 352.31624pt x 180.67992pt.
  [114 <./Chapter 3/Figures/ProyStereo1.pdf>]
-<Chapter 3/Figures/ProyStereo2.pdf, id=3130, 1540.67538pt x 1284.70137pt>
+<Chapter 3/Figures/ProyStereo2.pdf, id=3215, 1540.67538pt x 1284.70137pt>
 File: Chapter 3/Figures/ProyStereo2.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/ProyStereo2.pdf>
 Package pdftex.def Info: Chapter 3/Figures/ProyStereo2.pdf  used on input line 
@@ -1495,14 +1507,14 @@ Package pdftex.def Info: Chapter 3/Figures/ProyStereo2.pdf  used on input line
 (pdftex.def)             Requested size: 375.80542pt x 313.35298pt.
 
 [115] [116 <./Chapter 3/Figures/ProyStereo2.pdf>]
-<Chapter 3/Figures/ProyStereo3.pdf, id=3233, 1158.43692pt x 1285.1699pt>
+<Chapter 3/Figures/ProyStereo3.pdf, id=3319, 1158.43692pt x 1285.1699pt>
 File: Chapter 3/Figures/ProyStereo3.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/ProyStereo3.pdf>
 Package pdftex.def Info: Chapter 3/Figures/ProyStereo3.pdf  used on input line 
 880.
 (pdftex.def)             Requested size: 281.85585pt x 312.68286pt.
  [117] [118 <./Chapter 3/Figures/ProyStereo3.pdf>] [119]
-<Chapter 3/Figures/QuarterWavePlate.pdf, id=3380, 3197.56644pt x 1162.86864pt>
+<Chapter 3/Figures/QuarterWavePlate.pdf, id=3465, 3197.56644pt x 1162.86864pt>
 File: Chapter 3/Figures/QuarterWavePlate.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/QuarterWavePlate.pdf>
 Package pdftex.def Info: Chapter 3/Figures/QuarterWavePlate.pdf  used on input 
@@ -1510,7 +1522,7 @@ line 935.
 (pdftex.def)             Requested size: 375.80542pt x 136.6637pt.
  [120 <./Chapter 3/Figures/QuarterWavePlate.pdf>]
 [121] [122]
-<Chapter 3/Figures/LinearPolarizer.pdf, id=3442, 3300.7733pt x 1083.75986pt>
+<Chapter 3/Figures/LinearPolarizer.pdf, id=3529, 3300.7733pt x 1083.75986pt>
 File: Chapter 3/Figures/LinearPolarizer.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/LinearPolarizer.pdf>
 Package pdftex.def Info: Chapter 3/Figures/LinearPolarizer.pdf  used on input l
@@ -1518,7 +1530,7 @@ ine 1035.
 (pdftex.def)             Requested size: 375.80542pt x 123.38123pt.
  [123] [124 <./Chapter 3/Figures/LinearPolarizer.pdf>] [125]
 [126] [127]
-<Chapter 3/Figures/RetarderOnPoincare.pdf, id=3526, 2145.8614pt x 2151.40482pt>
+<Chapter 3/Figures/RetarderOnPoincare.pdf, id=3613, 2145.8614pt x 2151.40482pt>
 
 File: Chapter 3/Figures/RetarderOnPoincare.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/RetarderOnPoincare.pdf>
@@ -1526,22 +1538,55 @@ Package pdftex.def Info: Chapter 3/Figures/RetarderOnPoincare.pdf  used on inpu
 t line 1156.
 (pdftex.def)             Requested size: 281.85585pt x 282.58128pt.
  [128] [129 <./Chapter 3/Figures/RetarderOnPoincare.pdf>] [130]
-[131] [132] [133] [134] [135] [136] [137] [138]) [139] [140
+[131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142]
+<Chapter 3/Figures/RotatingRetarderCone.pdf, id=3840, 208.78pt x 168.63pt>
+File: Chapter 3/Figures/RotatingRetarderCone.pdf Graphic file (type pdf)
+<use Chapter 3/Figures/RotatingRetarderCone.pdf>
+Package pdftex.def Info: Chapter 3/Figures/RotatingRetarderCone.pdf  used on in
+put line 1478.
+(pdftex.def)             Requested size: 258.36667pt x 208.70792pt.
+
+[143] [144 <./Chapter 3/Figures/RotatingRetarderCone.pdf>] [145] [146] [147]
+[148] [149] [150]
+<Chapter 3/Figures/BiplateSetup.pdf, id=4035, 288.07625pt x 155.58125pt>
+File: Chapter 3/Figures/BiplateSetup.pdf Graphic file (type pdf)
+<use Chapter 3/Figures/BiplateSetup.pdf>
+Package pdftex.def Info: Chapter 3/Figures/BiplateSetup.pdf  used on input line
+ 1646.
+(pdftex.def)             Requested size: 399.2946pt x 215.6543pt.
+ [151 <./Chapter 3/Figures/BiplateSetup.pdf>] [152] [153]
+<Chapter 3/Figures/EllipticDecomposition.pdf, id=4191, 254.9525pt x 84.315pt>
+File: Chapter 3/Figures/EllipticDecomposition.pdf Graphic file (type pdf)
+<use Chapter 3/Figures/EllipticDecomposition.pdf>
+Package pdftex.def Info: Chapter 3/Figures/EllipticDecomposition.pdf  used on i
+nput line 1704.
+(pdftex.def)             Requested size: 422.77661pt x 139.82259pt.
+
+[154 <./Chapter 3/Figures/EllipticDecomposition.pdf>]
+<Chapter 3/Figures/EllipticBirefringentCone.pdf, id=4297, 281.05pt x 120.45pt>
+File: Chapter 3/Figures/EllipticBirefringentCone.pdf Graphic file (type pdf)
+<use Chapter 3/Figures/EllipticBirefringentCone.pdf>
+Package pdftex.def Info: Chapter 3/Figures/EllipticBirefringentCone.pdf  used o
+n input line 1738.
+(pdftex.def)             Requested size: 422.77661pt x 181.20018pt.
+ [155] [156 <./Chapter 3/Figures/EllipticBirefringentCone.pdf>] [157] [158] [15
+9] [160] [161] [162]
+[163] [164] [165] [166] [167] [168] [169] [170] [171] [172]) [173] [174
 
 ]
 Chapter 4.
-[141] (./Chapter 4/chap4.tex [142
+[175] (./Chapter 4/chap4.tex [176
 
-] [143] [144]
-<Chapter 4/Figures/PlaneWavesInterferences.pdf, id=3754, 1560.86984pt x 870.181
+] [177] [178]
+<Chapter 4/Figures/PlaneWavesInterferences.pdf, id=4716, 1560.86984pt x 870.181
 78pt>
 File: Chapter 4/Figures/PlaneWavesInterferences.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/PlaneWavesInterferences.pdf>
 Package pdftex.def Info: Chapter 4/Figures/PlaneWavesInterferences.pdf  used on
  input line 140.
 (pdftex.def)             Requested size: 422.77661pt x 235.69579pt.
- [145]
-<Chapter 4/Figures/SphericalWavesInterferences.pdf, id=3769, 1672.48373pt x 184
+ [179]
+<Chapter 4/Figures/SphericalWavesInterferences.pdf, id=4731, 1672.48373pt x 184
 9.84227pt>
 File: Chapter 4/Figures/SphericalWavesInterferences.pdf Graphic file (type pdf)
 
@@ -1549,76 +1594,76 @@ File: Chapter 4/Figures/SphericalWavesInterferences.pdf Graphic file (type pdf)
 Package pdftex.def Info: Chapter 4/Figures/SphericalWavesInterferences.pdf  use
 d on input line 178.
 (pdftex.def)             Requested size: 281.85585pt x 311.73108pt.
- [146 <./Chapter 4/Figures/PlaneWavesInterferences.pdf>] [147 <./Chapter 4/Figu
-res/SphericalWavesInterferences.pdf>] [148] [149] [150] [151]
-<Chapter 4/Figures/YoungSphericalWave.pdf, id=3918, 2287.8587pt x 1350.09778pt>
+ [180 <./Chapter 4/Figures/PlaneWavesInterferences.pdf>] [181 <./Chapter 4/Figu
+res/SphericalWavesInterferences.pdf>] [182] [183] [184] [185]
+<Chapter 4/Figures/YoungSphericalWave.pdf, id=4879, 2287.8587pt x 1350.09778pt>
 
 File: Chapter 4/Figures/YoungSphericalWave.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/YoungSphericalWave.pdf>
 Package pdftex.def Info: Chapter 4/Figures/YoungSphericalWave.pdf  used on inpu
 t line 329.
 (pdftex.def)             Requested size: 399.2946pt x 235.61142pt.
- [152] [153 <./Chapter 4/Figures/YoungSphericalWave.pdf>] [154] [155] [156]
-<Chapter 4/Figures/FresnelBiprism.pdf, id=3974, 2223.0656pt x 2075.35703pt>
+ [186] [187 <./Chapter 4/Figures/YoungSphericalWave.pdf>] [188] [189] [190]
+<Chapter 4/Figures/FresnelBiprism.pdf, id=4934, 2223.0656pt x 2075.35703pt>
 File: Chapter 4/Figures/FresnelBiprism.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/FresnelBiprism.pdf>
 Package pdftex.def Info: Chapter 4/Figures/FresnelBiprism.pdf  used on input li
 ne 420.
 (pdftex.def)             Requested size: 328.82706pt x 306.95169pt.
- [157 <./Chapter 4/Figures/FresnelBiprism.pdf>]
-[158] [159] [160]
-<Chapter 4/Figures/MichelsonInterferometer.pdf, id=4028, 2949.96072pt x 1892.91
+ [191 <./Chapter 4/Figures/FresnelBiprism.pdf>]
+[192] [193] [194]
+<Chapter 4/Figures/MichelsonInterferometer.pdf, id=4989, 2949.96072pt x 1892.91
 296pt>
 File: Chapter 4/Figures/MichelsonInterferometer.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/MichelsonInterferometer.pdf>
 Package pdftex.def Info: Chapter 4/Figures/MichelsonInterferometer.pdf  used on
  input line 514.
 (pdftex.def)             Requested size: 328.82706pt x 210.99388pt.
- [161 <./Chapter 4/Figures/MichelsonInterferometer.pdf>]
-[162] [163] [164]
-<Chapter 4/Figures/MichelsonImages1.pdf, id=4085, 1517.67pt x 1170.3725pt>
+ [195 <./Chapter 4/Figures/MichelsonInterferometer.pdf>]
+[196] [197] [198]
+<Chapter 4/Figures/MichelsonImages1.pdf, id=5045, 1517.67pt x 1170.3725pt>
 File: Chapter 4/Figures/MichelsonImages1.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/MichelsonImages1.pdf>
 Package pdftex.def Info: Chapter 4/Figures/MichelsonImages1.pdf  used on input 
 line 611.
 (pdftex.def)             Requested size: 366.40831pt x 282.55597pt.
- [165]
-<Chapter 4/Figures/MichelsonImages2.pdf, id=4101, 1470.49374pt x 1204.5pt>
+ [199]
+<Chapter 4/Figures/MichelsonImages2.pdf, id=5061, 1470.49374pt x 1204.5pt>
 File: Chapter 4/Figures/MichelsonImages2.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/MichelsonImages2.pdf>
 Package pdftex.def Info: Chapter 4/Figures/MichelsonImages2.pdf  used on input 
 line 646.
 (pdftex.def)             Requested size: 281.85585pt x 230.8607pt.
- [166 <./Chapter 4/Figures/MichelsonImages1.pdf>]
-[167 <./Chapter 4/Figures/MichelsonImages2.pdf>]
-<Chapter 4/Figures/MichelsonImages3.pdf, id=4384, 1797.71625pt x 1325.95375pt>
+ [200 <./Chapter 4/Figures/MichelsonImages1.pdf>]
+[201 <./Chapter 4/Figures/MichelsonImages2.pdf>]
+<Chapter 4/Figures/MichelsonImages3.pdf, id=5344, 1797.71625pt x 1325.95375pt>
 File: Chapter 4/Figures/MichelsonImages3.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/MichelsonImages3.pdf>
 Package pdftex.def Info: Chapter 4/Figures/MichelsonImages3.pdf  used on input 
 line 685.
 (pdftex.def)             Requested size: 357.0112pt x 263.32468pt.
- [168] [169 <./Chapter 4/Figures/MichelsonImages3.pdf>] [170] [171]) [172]
+ [202] [203 <./Chapter 4/Figures/MichelsonImages3.pdf>] [204] [205]) [206]
 Chapter 5.
-[173
+[207
 
-] (./Chapter 5/chap5.tex [174
+] (./Chapter 5/chap5.tex [208
 
-] [175] [176] [177] [178] [179] [180] [181]
-[182] [183]
-<Chapter 5/Figures/GreenImagenes.pdf, id=4698, 587.62173pt x 607.19585pt>
+] [209] [210] [211] [212] [213] [214] [215]
+[216] [217]
+<Chapter 5/Figures/GreenImagenes.pdf, id=5659, 587.62173pt x 607.19585pt>
 File: Chapter 5/Figures/GreenImagenes.pdf Graphic file (type pdf)
 <use Chapter 5/Figures/GreenImagenes.pdf>
 Package pdftex.def Info: Chapter 5/Figures/GreenImagenes.pdf  used on input lin
 e 225.
 (pdftex.def)             Requested size: 328.82706pt x 339.79573pt.
- [184] [185 <./Chapter 5/Figures/GreenImagenes.pdf>]
-<Chapter 5/Figures/GreenPuntual.pdf, id=4719, 561.81592pt x 498.02902pt>
+ [218] [219 <./Chapter 5/Figures/GreenImagenes.pdf>]
+<Chapter 5/Figures/GreenPuntual.pdf, id=5680, 561.81592pt x 498.02902pt>
 File: Chapter 5/Figures/GreenPuntual.pdf Graphic file (type pdf)
 <use Chapter 5/Figures/GreenPuntual.pdf>
 Package pdftex.def Info: Chapter 5/Figures/GreenPuntual.pdf  used on input line
  248.
 (pdftex.def)             Requested size: 328.82706pt x 291.49399pt.
-<Chapter 5/Figures/GreenNoPuntual.pdf, id=4722, 543.80663pt x 502.00859pt>
+<Chapter 5/Figures/GreenNoPuntual.pdf, id=5683, 543.80663pt x 502.00859pt>
 File: Chapter 5/Figures/GreenNoPuntual.pdf Graphic file (type pdf)
 <use Chapter 5/Figures/GreenNoPuntual.pdf>
 Package pdftex.def Info: Chapter 5/Figures/GreenNoPuntual.pdf  used on input li
@@ -1630,114 +1675,114 @@ Overfull \hbox (0.65611pt too wide) in paragraph at lines 268--269
 rom in-fin-ity, the field on the hemi-sphere
  []
 
-[186 <./Chapter 5/Figures/GreenPuntual.pdf>] [187 <./Chapter 5/Figures/GreenNoP
-untual.pdf>] [188] [189] [190] [191] [192] [193] [194] [195]
-<Chapter 5/Figures/ConfocalSpheres.pdf, id=4929, 273.14847pt x 315.46556pt>
+[220 <./Chapter 5/Figures/GreenPuntual.pdf>] [221 <./Chapter 5/Figures/GreenNoP
+untual.pdf>] [222] [223] [224] [225] [226] [227] [228] [229]
+<Chapter 5/Figures/ConfocalSpheres.pdf, id=5890, 3122.66919pt x 2064.53168pt>
 File: Chapter 5/Figures/ConfocalSpheres.pdf Graphic file (type pdf)
 <use Chapter 5/Figures/ConfocalSpheres.pdf>
 Package pdftex.def Info: Chapter 5/Figures/ConfocalSpheres.pdf  used on input l
 ine 519.
-(pdftex.def)             Requested size: 225.48038pt x 260.4163pt.
- [196] [197 <./Chapter 5/Figures/ConfocalSpheres.pdf>]
-<Chapter 5/Figures/Cardinales.pdf, id=4990, 456.5832pt x 491.9958pt>
+(pdftex.def)             Requested size: 328.82706pt x 217.39651pt.
+ [230 <./Chapter 5/Figures/ConfocalSpheres.pdf>] [231]
+<Chapter 5/Figures/Cardinales.pdf, id=5942, 456.5832pt x 491.9958pt>
 File: Chapter 5/Figures/Cardinales.pdf Graphic file (type pdf)
 <use Chapter 5/Figures/Cardinales.pdf>
 Package pdftex.def Info: Chapter 5/Figures/Cardinales.pdf  used on input line 5
 92.
 (pdftex.def)             Requested size: 234.87749pt x 253.09163pt.
- [198] [199 <./Chapter 5/Figures/Cardinales.pdf>] [200] [201] [202] [203] [204]
- [205] [206] [207] [208] [209] [210]
-[211] [212] [213] [214]
-<Chapter 5/Figures/CardinalSpheres.pdf, id=5362, 301.60077pt x 269.94151pt>
+ [232] [233 <./Chapter 5/Figures/Cardinales.pdf>] [234] [235] [236] [237] [238]
+ [239] [240] [241] [242] [243] [244]
+[245] [246] [247] [248]
+<Chapter 5/Figures/CardinalSpheres.pdf, id=6315, 3087.09904pt x 2058.78731pt>
 File: Chapter 5/Figures/CardinalSpheres.pdf Graphic file (type pdf)
 <use Chapter 5/Figures/CardinalSpheres.pdf>
 Package pdftex.def Info: Chapter 5/Figures/CardinalSpheres.pdf  used on input l
 ine 954.
-(pdftex.def)             Requested size: 291.24579pt x 260.67728pt.
- [215] [216 <./Chapter 5/Figures/CardinalSpheres.pdf>]
-[217] [218] [219] [220]) [221] [222
-
-]
+(pdftex.def)             Requested size: 375.80542pt x 250.62508pt.
+ [249] [250 <./Chapter 5/Figures/CardinalSpheres.pdf>]
+[251] [252] [253]) [254]
 Chapter 6.
-[223] (./Chapter 6/chap6.tex [224
+[255
 
-] [225] [226] [227] [228] [229] [230] [231]
-[232] [233] [234] [235] [236] [237] [238]
-<Chapter 6/Figures/RandomVar.pdf, id=5700, 472.44035pt x 866.30989pt>
+] (./Chapter 6/chap6.tex [256
+
+] [257] [258] [259] [260] [261] [262] [263]
+[264] [265] [266] [267] [268] [269] [270]
+<Chapter 6/Figures/RandomVar.pdf, id=6644, 472.44035pt x 866.30989pt>
 File: Chapter 6/Figures/RandomVar.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/RandomVar.pdf>
 Package pdftex.def Info: Chapter 6/Figures/RandomVar.pdf  used on input line 85
 6.
 (pdftex.def)             Requested size: 187.89912pt x 344.54822pt.
- [239] [240 <./Chapter 6/Figures/RandomVar.pdf>] [241] [242] [243] [244]
-<Chapter 6/Figures/Estrecho.pdf, id=5770, 549.38483pt x 459.57813pt>
+ [271] [272 <./Chapter 6/Figures/RandomVar.pdf>] [273] [274] [275] [276]
+<Chapter 6/Figures/Estrecho.pdf, id=6715, 549.38483pt x 459.57813pt>
 File: Chapter 6/Figures/Estrecho.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/Estrecho.pdf>
 Package pdftex.def Info: Chapter 6/Figures/Estrecho.pdf  used on input line 109
 0.
 (pdftex.def)             Requested size: 328.82706pt x 275.07579pt.
- [245] [246 <./Chapter 6/Figures/Estrecho.pdf>]
-<Chapter 6/Figures/Propagation.pdf, id=5793, 586.54031pt x 380.42159pt>
+ [277] [278 <./Chapter 6/Figures/Estrecho.pdf>]
+<Chapter 6/Figures/Propagation.pdf, id=6738, 586.54031pt x 380.42159pt>
 File: Chapter 6/Figures/Propagation.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/Propagation.pdf>
 Package pdftex.def Info: Chapter 6/Figures/Propagation.pdf  used on input line 
 1166.
 (pdftex.def)             Requested size: 375.80542pt x 243.74179pt.
- [247] [248 <./Chapter 6/Figures/Propagation.pdf>]
-<Chapter 6/Figures/Propagation2.pdf, id=5830, 592.28485pt x 567.3423pt>
+ [279] [280 <./Chapter 6/Figures/Propagation.pdf>]
+<Chapter 6/Figures/Propagation2.pdf, id=6775, 592.28485pt x 567.3423pt>
 File: Chapter 6/Figures/Propagation2.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/Propagation2.pdf>
 Package pdftex.def Info: Chapter 6/Figures/Propagation2.pdf  used on input line
  1208.
 (pdftex.def)             Requested size: 375.80542pt x 359.97267pt.
- [249 <./Chapter 6/Figures/Propagation2.pdf>]
+ [281 <./Chapter 6/Figures/Propagation2.pdf>]
 Overfull \hbox (66.00877pt too wide) detected at line 1227
 []
  []
 
-<Chapter 6/Figures/Random2.pdf, id=5844, 639.8206pt x 825.70494pt>
+<Chapter 6/Figures/Random2.pdf, id=6789, 639.8206pt x 825.70494pt>
 File: Chapter 6/Figures/Random2.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/Random2.pdf>
 Package pdftex.def Info: Chapter 6/Figures/Random2.pdf  used on input line 1235
 .
 (pdftex.def)             Requested size: 281.85585pt x 363.73967pt.
-[250] [251 <./Chapter 6/Figures/Random2.pdf>]
+[282] [283 <./Chapter 6/Figures/Random2.pdf>]
 Overfull \hbox (42.22426pt too wide) detected at line 1286
 []
  []
 
-<Chapter 6/Figures/FourierGamma.pdf, id=5873, 440.77277pt x 770.00833pt>
+<Chapter 6/Figures/FourierGamma.pdf, id=6819, 440.77277pt x 770.00833pt>
 File: Chapter 6/Figures/FourierGamma.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/FourierGamma.pdf>
 Package pdftex.def Info: Chapter 6/Figures/FourierGamma.pdf  used on input line
  1314.
 (pdftex.def)             Requested size: 305.33788pt x 533.43295pt.
-) (out/main.bbl [252] [253 <./Chapter 6/Figures/FourierGamma.pdf>] [254
+) (out/main.bbl [284] [285 <./Chapter 6/Figures/FourierGamma.pdf>] [286
 
 ]
-[255] [256] [257] [258] [259]
-Underfull \hbox (badness 2213) in paragraph at lines 487--490
+[287] [288] [289] [290] [291]
+Underfull \hbox (badness 2213) in paragraph at lines 513--516
 []\T1/cmr/m/n/10.95 (+20) Shih, C.-C. (1995a).  Frac-tion-al-iza-tion of fourie
 r trans-form.  \T1/cmr/m/it/10.95 (+20) Op-tics Com-mu-ni-ca-tions\T1/cmr/m/n/1
 0.95 (+20) ,
  []
 
-[260]) [261] (out/main.aux)
+[292]) [293] (out/main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D7BA5031264167AE648BCB3246D37262;35236.
+(rerunfilecheck)             Checksum: 1F96694C85C52E9ADE6B725CF635CE7D;36765.
  ) 
 Here is how much of TeX's memory you used:
- 22933 strings out of 467525
- 379763 string characters out of 5418982
- 883469 words of memory out of 5000000
- 49679 multiletter control sequences out of 15000+600000
- 681786 words of font info for 401 fonts, out of 8000000 for 9000
+ 23652 strings out of 467525
+ 391233 string characters out of 5418982
+ 906641 words of memory out of 5000000
+ 50232 multiletter control sequences out of 15000+600000
+ 682915 words of font info for 415 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,16n,79p,2442b,835s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,19n,79p,2442b,831s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
@@ -1760,29 +1805,30 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2026/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2026/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts
-/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/texmf-di
-st/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2026/texmf-dist
-/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2026/texmf-dist/f
-onts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf-dist/fon
-ts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-dist/fonts
-/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2026/texmf-dist/fonts/t
-ype1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
-e1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
-/public/cm-super/sfrm0900.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/p
-ublic/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publi
-c/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
-cm-super/sfti1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm
--super/sfti1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-s
-uper/sfti2488.pfb>
-Output written on out/main.pdf (277 pages, 7728006 bytes).
+/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fon
+ts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2026/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/t
+exmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2026/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2026/texmf
+-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-dis
+t/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2026/texmf-dist/
+fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2026/texmf-dist/fo
+nts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/font
+s/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2026/texmf-dist/fonts/
+type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type
+1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/
+public/cm-super/sfti0800.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pu
+blic/cm-super/sfti1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
+ic/cm-super/sfti1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public
+/cm-super/sfti2488.pfb>
+Output written on out/main.pdf (311 pages, 9393760 bytes).
 PDF statistics:
- 6388 PDF objects out of 7423 (max. 8388607)
- 5320 compressed objects within 54 object streams
- 1270 named destinations out of 1440 (max. 500000)
- 87442 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 7372 PDF objects out of 7423 (max. 8388607)
+ 6123 compressed objects within 62 object streams
+ 1402 named destinations out of 1440 (max. 500000)
+ 87510 words of extra memory for PDF output out of 89155 (max. 10000000)
 

@@ -1363,7 +1363,740 @@
 
             The unifying statement is group theoretic, and it is worth making explicit because it will reappear whenever linear systems are studied. The non depolarising optical elements form the group $GL(2,\mathbb{C})$, of which the retarders form the unitary subgroup and the dichroics the positive Hermitian cone, and \ref{eq:PolarDecomposition} is the statement that the group is the product of the two. Everything a bench can do to fully polarised light is an element of that group, and everything it can do to partially polarised light is, by the ensemble argument \ref{eq:MuellerEnsemble}, a convex mixture of such elements. The Jones theorems are, in the end, the complete answer to the question of what polarisation optics is capable of.
 
+    \subsection{Generation of elliptic states: Composition of Waveplates}
 
-    \subsection{The elliptic general Malus law}
+        Every theorem proved in the previous subsection took an optical bench as already built and asked what such a bench does to an arbitrary beam. It is time to turn the question the other way around. Suppose the source on the table delivers a fixed, fully polarised beam, most often plain linear light straight out of a laser or through a first polariser, and the task set is to deliver at the far end an elliptical state $\ket{\alpha;\chi}$ chosen in advance, whatever $\alpha$ and $\chi$ happen to be. Theorem II already contains the answer in embryo: a cascade of retarders and rotators, however long and in whatever order, is optically equivalent to a single elliptical retarder, so the sphere can always be carried from the starting point to the chosen one by a fixed, short chain of birefringent plates. What that theorem left unsaid is how, given the two points, the axis and the retardance of such a chain are actually to be dialled in, and that is the question this subsection answers.
 
-    \subsection{The law of elliptic birrefringents}
+        The decision to build the whole apparatus out of waveplates alone, and out of nothing else, is not a matter of taste but the entire point of the exercise. A retarder is unitary, so by \ref{eq:DetTransform} it cannot depolarise the beam, and by \ref{eq:MuellerRetarderGeneral} its Mueller matrix leaves $S_0$ fixed, so it cannot absorb from it either: whatever power is measured at the entrance of the first plate is exactly the power measured at the exit of the last one, merely redistributed between the two field components rather than thrown away. Composing waveplates is therefore \textbf{the one method of preparing an arbitrary ellipse that costs nothing in intensity}, a pure rotation of the Poincaré sphere rather than the boost toward a fixed point that a polariser, as the next subsection will show, cannot avoid performing. This is precisely why the pair of quarter wave plates flanking a half wave plate, already singled out at the end of Theorem II as the standard universal polarisation controller, is the instrument reached for whenever the prepared state must carry as much of the source's power as possible, from the routine calibration of a polarimeter to the encoding of a qubit in the polarisation of a single photon, a setting in which every photon lost on the way to the desired ellipse is a photon that no later stage of the experiment can recover.
+
+        \subsubsection{The linear birrefringents law}
+
+            Every element built in the previous subsections was described by numbers fixed once and for all, the pair of eigenstates and the retardance, and the algebra never asked what happens when the experimenter walks up to the bench and \textit{turns} one of them. Turning a waveplate is, however, the commonest gesture in a polarisation laboratory and by far the cheapest degree of freedom available, since a plate in a rotation stage costs nothing beyond the plate itself, so it is the natural place to begin. The question we settle here is therefore the following: \textbf{if one single plate is turned bodily through a complete revolution, which polarisation states come out?} The answer is a theorem with a very clean geometrical content, formulated in this form by Salazar Ariza in her doctoral thesis \citep{salazar2021dinamica}, whose statement and proof we follow here, adapted to the conventions of these notes.
+
+            Before stating it we must write down properly a naming convention that has been used implicitly ever since the retarder was built, because it is a permanent source of confusion for the beginner.
+
+            \begin{myDef}
+                \textit{(Linear, elliptical and circular birefringents)}: A birefringent element, or retarder \ref{eq:RetarderSpectral}, is named after the polarisation of \textit{its own eigenstates} $\ket{\psi_1}=\ket{\alpha;\chi}$ and $\ket{\psi_2}=\ket{\alpha+\pi/2;-\chi}$, and never after the light it happens to be fed with. It is a \textbf{linear birefringent} when $\chi=0$, so that both eigenstates are linear and the element is \ref{eq:LinRetarderMatrix}; a \textbf{circular birefringent} when $\chi=\pm\pi/4$, so that both eigenstates are the circular states \ref{eq:CircAngles} and the element is the rotator \ref{eq:RotatorMatrix}; and an \textbf{elliptical birefringent} for every intermediate value $0<\left|\chi\right|<\pi/4$, the general case \ref{eq:EllipticalRetarderMatrix}.
+            \end{myDef}
+
+            On the Poincaré sphere the three names have got an immediate reading through \ref{eq:RetarderAxis}, since the rotation axis of a retarder is the point representing its own eigenstate: a linear birefringent turns the sphere about an \textit{equatorial} axis, a circular one about the \textit{polar} axis, and an elliptical one about an axis of intermediate latitude. An ordinary waveplate cut from quartz or mica is a linear birefringent, and it is the only one of the three that can be bought off the shelf and screwed into a rotation mount, which is why it is the one whose rotation we study.
+
+            Let the plate be turned in its own plane so that its fast axis makes an angle $\theta$ with the horizontal, and let it act on a fixed, fully polarised input $\ket{\alpha;\chi}$ whose Stokes vector \ref{eq:StokesFromAlphaChi}, normalised to $S_0=1$, we write as
+            \begin{equation}\label{eq:InputStokesRotating}
+                \vec{S} = \left(S_1,S_2,S_3\right) = \left(\cos2\alpha\cos2\chi,\;\sin2\alpha\cos2\chi,\;-\sin2\chi\right).
+            \end{equation}
+            Two remarks about the parameter $\theta$ are in order before anything is computed. First, the angle enters the Jones matrix \ref{eq:LinRetarderMatrix} only through $2\theta$, so the plate at $\theta$ and the plate at $\theta+\pi$ are the same object, as they must be: the fast axis is an unoriented line drawn on a piece of crystal and not an arrow, and half a turn of the mount puts the very same crystal back in the beam. Consequently \textbf{a physical rotation from $0^{\circ}$ to $360^{\circ}$ traverses the whole family of accessible states exactly twice}, and half a revolution already exhausts it. Second, the retardance $\delta$ does not change while the plate turns, since \ref{eq:Retardance} depends only on the thickness and on the two refractive indices, both of them properties of the crystal and not of its orientation.
+
+            \begin{myDef}
+                \textit{(Enantiogyre states)}: Two fully polarised states are \textbf{enantiogyres} if their ellipses have got the same orientation and the same shape but are traced in opposite senses, that is, if they are the pair $\ket{\alpha;\chi}$ and $\ket{\alpha;-\chi}$. By \ref{eq:StokesFromAlphaChi} the operation relating them is the reflection of the Poincaré sphere in its equatorial plane,
+                \begin{equation}\label{eq:Enantiogyre}
+                    \vec{S}=\left(S_1,S_2,S_3\right) \longmapsto \vec{S}^{\,\text{e}}=\left(S_1,S_2,-S_3\right),
+                \end{equation}
+                the name being coined in \citep{salazar2021dinamica} from the ancient Greek \textit{enantios}, opposite, and \textit{gyros}, turn.
+            \end{myDef}
+
+            The enantiogyre must not be confused with the orthogonal state, which we proved to be the \textit{antipode} $\left(-S_1,-S_2,-S_3\right)$ of the sphere: the enantiogyre is only a mirror image in the equator, it keeps the azimuth $\alpha$ untouched and flips nothing but the handedness. The two coincide only for the circular states, and a linear state is its own enantiogyre, since $\chi=0$ gives $S_3=0$ and the reflection \ref{eq:Enantiogyre} leaves it where it was.
+
+            \begin{myteo}
+                \textit{(Law of the rotating linear birefringent)}: Let a fully polarised beam of Stokes vector \ref{eq:InputStokesRotating} cross a linear birefringent of fixed retardance $\delta$ whose fast axis lies at an angle $\theta$ with the horizontal, and let $\vec{S}\,'(\theta)$ be the Stokes vector of the emerging beam. As the plate is rotated bodily through a complete revolution, $0\leq\theta\leq2\pi$, the locus of $\vec{S}\,'(\theta)$ is the closed curve in which the Poincaré sphere is cut by the circular cone
+                \begin{equation}\label{eq:RotatingRetarderCone}
+                    \boxed{\;\left(S'_1-S_1\right)^2+\left(S'_2-S_2\right)^2 = \tan^2\frac{\delta}{2}\left(S'_3+S_3\right)^2\;}
+                \end{equation}
+                whose vertex is the enantiogyre \ref{eq:Enantiogyre} of the input state, whose axis is parallel to the $S_3$ axis, and whose half opening angle is half the retardance, $\delta/2$. The curve is traversed twice in a full turn of the plate.
+            \end{myteo}
+
+            \textit{Proof.} Nothing has to be multiplied out to see that the plate moves the beam by rotating the sphere, because that work was already done when we proved that every retarder is a rigid rotation \ref{eq:MuellerRetarderGeneral} by its retardance about the axis \ref{eq:RetarderAxis} representing its own eigenstate. Our plate is linear, $\chi=0$, and its fast axis sits at azimuth $\theta$, so putting $\alpha=\theta$ and $\chi=0$ in \ref{eq:RetarderAxis}, where $\cos2\chi=1$ and \textcolor{red}{$\sin2\chi=0$} kills the third component, its axis is the equatorial unit vector
+            \begin{equation}\label{eq:PlateAxis}
+                \hat{n}(\theta) = \left(\cos2\theta,\;\sin2\theta,\;0\right),
+            \end{equation}
+            which sweeps the entire equator once while $\theta$ runs over half a turn. The emerging state is therefore $\vec{S}\,'(\theta)=R\left(\hat{n}(\theta),\delta\right)\vec{S}$, and since a rotation preserves lengths, $\vec{S}\,'$ never leaves the unit sphere.
+
+            Expanding that rotation in laboratory coordinates is what would make the computation long, so let us instead carry a frame along with the plate. Take
+            \begin{equation}\label{eq:MovingFrame}
+                \hat{u} = \hat{n}(\theta) = \left(\cos2\theta,\sin2\theta,0\right), \qquad
+                \hat{v} = \hat{z}\times\hat{u} = \left(-\sin2\theta,\cos2\theta,0\right), \qquad
+                \hat{z} = \left(0,0,1\right),
+            \end{equation}
+            three mutually orthogonal unit vectors with $\hat{u}\times\hat{v}=\hat{z}$, so the frame is right handed. It is the natural frame here because $\hat{u}$ is the rotation axis, which stays put, and the pair $\left(\hat{v},\hat{z}\right)$ spans the plane in which the turning actually happens. Notice at once the asymmetry that will produce the whole theorem: \textbf{$\hat{u}$ and $\hat{v}$ turn with the plate, but $\hat{z}$ is nailed to the laboratory}.
+
+            Decomposing $\vec{S}=p\,\hat{u}+q\,\hat{v}+S_3\hat{z}$ in that frame, the three coefficients are the projections $p=\vec{S}\cdot\hat{u}$, $q=\vec{S}\cdot\hat{v}$ and $\vec{S}\cdot\hat{z}=S_3$, that is
+            \begin{align*}
+                p &= S_1\cos2\theta+S_2\sin2\theta = \cos2\chi\left[\cos2\alpha\cos2\theta+\sin2\alpha\sin2\theta\right] = \cos2\chi\cos\left(2\alpha-2\theta\right), \\
+                q &= -S_1\sin2\theta+S_2\cos2\theta = \cos2\chi\left[\sin2\alpha\cos2\theta-\cos2\alpha\sin2\theta\right] = \cos2\chi\sin\left(2\alpha-2\theta\right),
+            \end{align*}
+            where we substituted \ref{eq:InputStokesRotating}, took the common factor $\cos2\chi$ out of both brackets and recognised in them the cosine and the sine of the difference $2\alpha-2\theta$. Only $q$ will survive to the end.
+
+            A right handed rotation by $\delta$ about $\hat{u}$ leaves $\hat{u}$ untouched and turns the other two basis vectors into $\hat{v}\to\cos\delta\,\hat{v}+\sin\delta\,\hat{z}$ and $\hat{z}\to-\sin\delta\,\hat{v}+\cos\delta\,\hat{z}$, so acting on $\vec{S}$ term by term,
+            \begin{align}
+                \vec{S}\,' &= p\,\hat{u} + q\left(\cos\delta\,\hat{v}+\sin\delta\,\hat{z}\right) + S_3\left(-\sin\delta\,\hat{v}+\cos\delta\,\hat{z}\right) \nonumber \\
+                &= p\,\hat{u} + \left(q\cos\delta-S_3\sin\delta\right)\hat{v} + \left(q\sin\delta+S_3\cos\delta\right)\hat{z}. \label{eq:OutputInFrame}
+            \end{align}
+            This is the whole of the physics of the problem; everything that follows is trigonometry, and it starts with the one idea the proof needs: measure the output from the enantiogyre, not from the origin. The enantiogyre \ref{eq:Enantiogyre} of the input, $\vec{S}^{\,\text{e}}=\left(S_1,S_2,-S_3\right)$, has got exactly the same equatorial part as $\vec{S}$, and therefore in the moving frame \ref{eq:MovingFrame} \textcolor{blue}{the same two coefficients $p$ and $q$ just found}, because the reflection touches nothing but the third component,
+            \begin{equation*}
+                \vec{S}^{\,\text{e}} = \textcolor{blue}{p\,\hat{u}+q\,\hat{v}-S_3\hat{z}} .
+            \end{equation*}
+            Subtracting this from \ref{eq:OutputInFrame} component by component,
+            \begin{align*}
+                \vec{S}\,'-\vec{S}^{\,\text{e}} &= \left(\cancel{p-p}\right)\hat{u} + \left(q\cos\delta-S_3\sin\delta-q\right)\hat{v} + \left(q\sin\delta+S_3\cos\delta\textcolor{blue}{{}+S_3}\right)\hat{z} \\
+                &= \left[q\left(\cos\delta-1\right)-S_3\sin\delta\right]\hat{v} + \left[q\sin\delta+S_3\left(\cos\delta+1\right)\right]\hat{z},
+            \end{align*}
+            and the very first thing to notice is that \textcolor{red}{the component along the rotation axis $\hat{u}$ has cancelled identically}, for every $\theta$ and every $\delta$. The segment joining the fixed point $\vec{S}^{\,\text{e}}$ to the moving point $\vec{S}\,'$ is perpendicular to the axis of the plate, and half of the theorem is already proved.
+
+            Insert now the three identities \textcolor{blue}{$\cos\delta-1=-2\sin^2\frac{\delta}{2}$}, \textcolor{blue}{$\cos\delta+1=2\cos^2\frac{\delta}{2}$} and \textcolor{blue}{$\sin\delta=2\sin\frac{\delta}{2}\cos\frac{\delta}{2}$}, which turn each bracket into a product,
+            \begin{align*}
+                \left[q\left(\cos\delta-1\right)-S_3\sin\delta\right] &= -2q\sin^2\frac{\delta}{2}-2S_3\sin\frac{\delta}{2}\cos\frac{\delta}{2} = -2\sin\frac{\delta}{2}\left(q\sin\frac{\delta}{2}+S_3\cos\frac{\delta}{2}\right), \\
+                \left[q\sin\delta+S_3\left(\cos\delta+1\right)\right] &= 2q\sin\frac{\delta}{2}\cos\frac{\delta}{2}+2S_3\cos^2\frac{\delta}{2} = \phantom{-}2\cos\frac{\delta}{2}\left(q\sin\frac{\delta}{2}+S_3\cos\frac{\delta}{2}\right),
+            \end{align*}
+            where in each line we simply took out the common factor, $-2\sin\frac\delta2$ in the first and $2\cos\frac\delta2$ in the second. \textbf{The very same bracket has appeared twice}, so it deserves a name,
+            \begin{equation}\label{eq:KFactor}
+                K(\theta) \equiv q\sin\frac{\delta}{2}+S_3\cos\frac{\delta}{2} = \cos2\chi\sin\left(2\alpha-2\theta\right)\sin\frac{\delta}{2}-\sin2\chi\cos\frac{\delta}{2},
+            \end{equation}
+            the last expression following from the value of $q$ found above and from $S_3=-\sin2\chi$. With it, the whole displacement collapses into a single vector,
+            \begin{equation}\label{eq:ConeGeneratrix}
+                \vec{S}\,'-\vec{S}^{\,\text{e}} = 2K(\theta)\underbrace{\left[-\sin\frac{\delta}{2}\,\hat{v}+\cos\frac{\delta}{2}\,\hat{z}\right]}_{\displaystyle \hat{w}(\theta)},
+            \end{equation}
+            and $\hat{w}$ is a unit vector, since $\hat{v}$ and $\hat{z}$ are orthogonal and $\sin^2\frac\delta2+\cos^2\frac\delta2=1$.
+
+            It only remains to read off the geometry that \ref{eq:ConeGeneratrix} is describing. Project $\hat{w}$ on the fixed vertical direction,
+            \begin{equation*}
+                \hat{w}\cdot\hat{z} = -\sin\frac{\delta}{2}\,\cancel{\left(\hat{v}\cdot\hat{z}\right)}+\cos\frac{\delta}{2}\,\underbrace{\left(\hat{z}\cdot\hat{z}\right)}_{=1} = \cos\frac{\delta}{2},
+            \end{equation*}
+            where \textcolor{red}{the first term vanished because $\hat{v}$ is equatorial and $\hat{z}$ is polar}. This number does not depend on $\theta$, even though $\hat{w}$ itself does, and that is the crux of the matter: the direction in which the output sits, \textit{as seen from the enantiogyre}, may turn about the vertical as the plate turns, but it never changes its inclination. The angle between $\vec{S}\,'-\vec{S}^{\,\text{e}}$ and the $S_3$ axis is $\delta/2$ whenever $K>0$ and $\pi-\delta/2$ whenever $K<0$, which is precisely the description of the two nappes of a right circular cone of vertex $\vec{S}^{\,\text{e}}$, axis $\hat{z}$ and half opening $\delta/2$. Writing it in coordinates, the equatorial part of \ref{eq:ConeGeneratrix} is $-2K\sin\frac{\delta}{2}\hat{v}$, of length $2\left|K\right|\sin\frac{\delta}{2}$, and its vertical part is $2K\cos\frac{\delta}{2}$, so dividing one by the other,
+            \begin{equation*}
+                \frac{\sqrt{\left(S'_1-S_1\right)^2+\left(S'_2-S_2\right)^2}}{\left|S'_3+S_3\right|} = \frac{\cancel{2\left|K\right|}\sin\frac{\delta}{2}}{\cancel{2\left|K\right|}\cos\frac{\delta}{2}} = \tan\frac{\delta}{2},
+            \end{equation*}
+            since \textcolor{red}{the common factor $2\left|K\right|$, the only $\theta$ dependent quantity left, cancels between numerator and denominator}. Squaring both sides gives \ref{eq:RotatingRetarderCone}, and as the output also lies on the unit sphere, $\vec{S}\,'(\theta)$ belongs to the intersection of the two surfaces.
+
+            One thing is still owed: that the plate reaches every point of that intersection, and nothing outside it. Cut the picture at a fixed height $S'_3=z$. The cone meets that horizontal plane in a circle of radius $\tan\frac{\delta}{2}\left|z+S_3\right|$ centred at $\left(S_1,S_2\right)$ and the sphere meets it in a circle of radius $\sqrt{1-z^2}$ centred at the origin, and two distinct circles of a plane cross at most twice, so the intersection offers at most two points at each height. On the other hand the height actually reached by the beam is, by the third component of \ref{eq:OutputInFrame},
+            \begin{equation}\label{eq:HeightReached}
+                S'_3(\theta) = q\sin\delta+S_3\cos\delta = \cos2\chi\sin\left(2\alpha-2\theta\right)\sin\delta+S_3\cos\delta,
+            \end{equation}
+            a sinusoid of $2\theta$, so every height strictly between its two extremes is attained at exactly two orientations of the plate within half a revolution. The two points the plate supplies are the two points the geometry allows, the locus closes on itself, and by the earlier remark on the periodicity of $\theta$ a full turn runs over it twice. $\blacksquare$
+
+            \begin{figure}[ht]
+                \centering
+                \includegraphics[width=0.55\textwidth]{Chapter 3/Figures/RotatingRetarderCone.pdf}
+                \caption{The law of the rotating linear birefringent on the Poincaré sphere. The input state $p$ and its enantiogyre $p'$ share the azimuth and the shape of the ellipse and differ only in the handedness, so the segment joining them is parallel to the $S_3$ axis and fixes the axis of the cone, whose vertex sits at $p'$ and whose opening angle is the retardance $\delta$. Every state that emerges while the plate is turned lies on the curve where this double cone cuts the sphere. In the particular case $p=p'$ the input state must be linear. Figure taken from \citep{salazar2021dinamica}.}
+                \label{fig:RotatingRetarderCone}
+            \end{figure}
+
+            The theorem is worth testing against the two plates we already know. For a \textbf{half wave plate}, $\delta=\pi$, the half opening becomes $\pi/2$ and $\tan\frac{\delta}{2}$ diverges, so \ref{eq:RotatingRetarderCone} must be read after dividing by $\tan^2\frac{\delta}{2}$, which leaves $\left(S'_3+S_3\right)^2=0$: the cone has opened out into the horizontal plane through its own vertex, and the trajectory is the full circle of constant latitude $S'_3=-S_3$. Whatever the orientation of a half wave plate, the emerging ellipse has got the same shape as the incoming one and the opposite handedness, $\chi'=-\chi$, while the plate angle controls its azimuth and nothing else. This contains, as the particular case $\chi=\pm\pi/4$, the fact already extracted from \ref{eq:HalfWaveMatrix}, that a half wave plate always exchanges the two circular states.
+
+            For a \textbf{quarter wave plate}, $\delta=\pi/2$, the cone has a half opening of $45^{\circ}$. If the input is linear, $\chi=0$ makes $S_3=0$ and the vertex $\vec{S}^{\,\text{e}}=\vec{S}$ is the input state itself, sitting on the equator; the trajectory passes through it at $\theta=\alpha$ and $\theta=\alpha+\pi/2$, which is no surprise, since a plate aligned with, or crossed to, the input polarisation has that polarisation as an eigenstate and returns it untouched. Its shadow on the equatorial plane is then a circle of radius $1/2$ through the origin and through $\vec{S}$, so the trajectory lies on a circular cylinder as well as on the cone, and this is exactly the characterisation Azzam gave of the rotating quarter wave plate \citep{azzam2000poincare}. The cylinder, however, is an accident of linear input: as soon as the incoming light is elliptical the vertex leaves the equator, the shadow acquires an inner loop and becomes a genuine limaçon of Pascal, and the cylinder description collapses while \ref{eq:RotatingRetarderCone} survives untouched. Closing that gap was precisely the motivation of \citep{salazar2021dinamica}.
+
+            Two further readings of \ref{eq:KFactor} are worth recording. The trajectory reaches the vertex itself, that is, the plate delivers the enantiogyre of the input, exactly when $K(\theta)=0$, which by \ref{eq:KFactor} means
+            \begin{equation}\label{eq:VertexCondition}
+                \sin\left(2\alpha-2\theta\right) = \tan2\chi\cot\frac{\delta}{2},
+            \end{equation}
+            an equation that has got a solution only when $\left|\tan2\chi\right|\leq\left|\tan\frac{\delta}{2}\right|$, and then it has got two of them in half a revolution, so that the closed curve crosses itself at the vertex. A linear input satisfies this for any retardance, since $\tan2\chi=0$, and this is why the cone of figure \ref{fig:RotatingRetarderCone} is drawn with its vertex on the trajectory; a strongly elliptical input crossing a weak retarder does not, and its trajectory is then a small closed loop that never reaches the vertex at all.
+
+            And here is the answer to the question that opened this subsection, the one that matters for generating elliptical states. \textbf{One plate, however patiently it is turned, does not give access to the whole Poincaré sphere.} From a given input only a single closed curve is reachable, and the two numbers that fix that curve are both out of the experimenter's hands once the plate has been bought and the source switched on: the input state fixes the vertex of the cone and the retardance fixes its opening. Turning the plate moves the state along the curve and does absolutely nothing else. To reach a target that does not happen to lie on it there are exactly two ways out, and they are the subjects of what follows: make $\delta$ itself adjustable, which is the tunable birefringent of the next subsubsection, or add a second plate and use the freedom that Theorem II guarantees to any pair of retarders.
+
+        \subsubsection{The full tunable birrefringent}
+
+            The law just proved closed one door and opened two, and this subsubsection walks through both of them with the same pair of plates. The first question is about \textit{states}: given that one plate is confined to a curve, can two plates reach every point of the Poincaré sphere, and if so with what settings? The second is about \textit{elements}: the retardance \ref{eq:Retardance} of a plate is welded into it by the thickness of the crystal, so can two plates be assembled into a single birefringent whose retardance is not welded into anything and can be dialled by hand? The answers are yes and yes, and they are the two halves of what an optical bench calls a polarisation state generator and a tunable birefringent.
+
+            Take the first question. A polariser at the entrance delivers the horizontal state \ref{eq:HorizAngles}, and the target is an arbitrary $\ket{\alpha;\chi}$. The two plates that will do it are \textbf{one half wave plate and one quarter wave plate}, in that order, and to see why we first need to know exactly what each of them does, which is a matter of two matrix multiplications.
+
+            Start with the quarter wave plate, and let its fast axis sit at an angle $\beta$. Setting $\delta=\pi/2$ in \ref{eq:LinRetarderMatrix}, where $\cos\frac{\pi}{4}=\sin\frac{\pi}{4}=\frac{1}{\sqrt{2}}$ makes both entries share the same factor,
+            \begin{equation}\label{eq:QWPatBeta}
+                W\left(\beta,0;\frac{\pi}{2}\right) = \frac{1}{\sqrt{2}}\begin{bmatrix} 1+i\cos2\beta & i\sin2\beta \\ i\sin2\beta & 1-i\cos2\beta \end{bmatrix},
+            \end{equation}
+            and acting with it on the horizontal ket only the first column survives, \textcolor{red}{since the second column is multiplied by the vanishing second component of $\left[1,0\right]^{\mathsf{T}}$},
+            \begin{equation}\label{eq:QWPonHorizontalSpinor}
+                \vec{e}\,' = W\left(\beta,0;\frac{\pi}{2}\right)\begin{bmatrix}1\\0\end{bmatrix} = \frac{1}{\sqrt{2}}\begin{bmatrix} 1+i\cos2\beta \\ i\sin2\beta \end{bmatrix}.
+            \end{equation}
+            Which ellipse is this? The quickest way to recognise a spinor is to compute its Stokes parameters and read the angles off \ref{eq:StokesFromAlphaChi}. The two moduli are $\left|e'_1\right|^2=\frac{1}{2}\left(1+\cos^22\beta\right)$ and $\left|e'_2\right|^2=\frac{1}{2}\sin^22\beta$, so by \ref{eq:StokesS1}
+            \begin{equation*}
+                S'_1 = \frac{1}{2}\left(1+\cos^22\beta-\sin^22\beta\right) = \frac{1}{2}\left(1+\textcolor{blue}{\cos4\beta}\right) = \cos^22\beta,
+            \end{equation*}
+            where we \textcolor{blue}{recognised $\cos^2 2\beta-\sin^2 2\beta=\cos4\beta$ and then used $1+\cos4\beta=2\cos^22\beta$}. For the other two we need the crossed product
+            \begin{equation*}
+                e'_1e'^{*}_2 = \frac{1}{2}\left(1+i\cos2\beta\right)\left(-i\sin2\beta\right) = \frac{1}{2}\left(\sin2\beta\cos2\beta-i\sin2\beta\right),
+            \end{equation*}
+            whose real part doubled is, by \ref{eq:StokesS2}, and whose imaginary part gives, by \ref{eq:StokesS3},
+            \begin{equation*}
+                S'_2 = 2\,\text{Re}\left(e'_1e'^{*}_2\right) = \sin2\beta\cos2\beta, \qquad S'_3 = -2\,\text{Im}\left(e'^{*}_1e'_2\right) = -\sin2\beta .
+            \end{equation*}
+            Comparing term by term with \ref{eq:StokesFromAlphaChi}, the third one gives $\sin2\chi'=\sin2\beta$ at once, so $\chi'=\beta$, and with $\cos2\chi'=\cos2\beta$ the first two become $\cos2\alpha'\cos2\beta=\cos^22\beta$ and $\sin2\alpha'\cos2\beta=\sin2\beta\cos2\beta$, where \textcolor{red}{the common factor $\cos2\beta$ cancels on both sides} and leaves $\cos2\alpha'=\cos2\beta$ together with $\sin2\alpha'=\sin2\beta$, that is $\alpha'=\beta$. The conclusion is worth boxing, because it is the whole reason the quarter wave plate is the ellipticity knob of every optical bench,
+            \begin{equation}\label{eq:QWPonHorizontal}
+                \boxed{\;W\left(\beta,0;\frac{\pi}{2}\right)\ket{0;0} = \ket{\beta;\beta}\;}
+            \end{equation}
+            up to the usual irrelevant global phase. The emerging ellipse has got its major axis along the plate's own fast axis and an ellipticity angle numerically equal to that same angle. At $\beta=0$ nothing happens, as it must, since the input is then an eigenstate of the plate; at $\beta=\pi/4$ we land on $\ket{\pi/4;\pi/4}$, a circular state, which is the fact drawn in figure \ref{fig:QuarterWavePlate}; and for everything in between we get the one parameter family $\ket{\beta;\beta}$, which is nothing but the cone curve of the previous subsubsection for a linear input, drawn here in the language of kets instead of Stokes vectors.
+
+            Now the half wave plate, whose action we have so far only checked on linear and on circular inputs. Take \ref{eq:HalfWaveMatrix} with its fast axis at $\eta$, drop the \textcolor{red}{global phase $i$}, and let it act on a completely general ket \ref{eq:JonesKet}. The first component of the product is
+            \begin{align*}
+                &\cos2\eta\left(\cos\alpha\cos\chi-i\sin\alpha\sin\chi\right)+\sin2\eta\left(\sin\alpha\cos\chi+i\cos\alpha\sin\chi\right) \\
+                &\qquad = \cos\chi\left[\cos2\eta\cos\alpha+\sin2\eta\sin\alpha\right]+i\sin\chi\left[\sin2\eta\cos\alpha-\cos2\eta\sin\alpha\right] \\
+                &\qquad = \cos\chi\cos\left(2\eta-\alpha\right)+i\sin\chi\sin\left(2\eta-\alpha\right),
+            \end{align*}
+            where we grouped the real and the imaginary parts and \textcolor{blue}{recognised in each bracket the cosine and the sine of the difference $2\eta-\alpha$}, and the second component is, by the same two steps,
+            \begin{align*}
+                &\sin2\eta\left(\cos\alpha\cos\chi-i\sin\alpha\sin\chi\right)-\cos2\eta\left(\sin\alpha\cos\chi+i\cos\alpha\sin\chi\right) \\
+                &\qquad = \cos\chi\sin\left(2\eta-\alpha\right)-i\sin\chi\cos\left(2\eta-\alpha\right).
+            \end{align*}
+            Put the two together and compare with the general ket \ref{eq:JonesKet}: writing $\cos\chi=\cos(-\chi)$ and $\sin\chi=-\sin(-\chi)$, the pair is exactly $\ket{2\eta-\alpha;-\chi}$, so that
+            \begin{equation}\label{eq:HWPaction}
+                \boxed{\;W\left(\eta,0;\pi\right)\ket{\alpha;\chi} = \ket{2\eta-\alpha;\,-\chi}\;}
+            \end{equation}
+            for every input whatsoever. A half wave plate reflects the azimuth about its own fast axis and reverses the handedness, which is the reflection of the Poincaré sphere in the plane containing its axis, and it is the general statement of which the two facts noted under \ref{eq:HalfWaveMatrix} were particular cases.
+
+            The two rules \ref{eq:QWPonHorizontal} and \ref{eq:HWPaction} are all we need. Send the horizontal state first through the half wave plate at $\eta$, which by \ref{eq:HWPaction} with $\alpha=\chi=0$ delivers the linear state $\ket{2\eta;0}$, and then through the quarter wave plate at $\beta$. That second step is not \ref{eq:QWPonHorizontal} as it stands, because the plate now meets a linear state of azimuth $2\eta$ and not the horizontal one, but nothing has to be recomputed: a rotator carries the whole construction with it. Since $R(\psi)\ket{\alpha;\chi}=\ket{\alpha+\psi;\chi}$ by \ref{eq:RotatorMatrix}, and since conjugating a retarder by a rotator merely turns its eigenstates, hence its fast axis,
+            \begin{equation}\label{eq:RetarderCovariance}
+                R(-\psi)\,W\left(\beta,0;\delta\right)R(\psi) = W\left(\beta-\psi,0;\delta\right), \qquad\text{that is}\qquad W\left(\beta,0;\delta\right)R(\psi) = R(\psi)\,W\left(\beta-\psi,0;\delta\right),
+            \end{equation}
+            we may slide the rotator through the plate and use \ref{eq:QWPonHorizontal} untouched,
+            \begin{align*}
+                W\left(\beta,0;\tfrac{\pi}{2}\right)\ket{2\eta;0} &= W\left(\beta,0;\tfrac{\pi}{2}\right)R(2\eta)\ket{0;0} = R(2\eta)\,W\left(\beta-2\eta,0;\tfrac{\pi}{2}\right)\ket{0;0} \\
+                &= R(2\eta)\ket{\beta-2\eta;\,\beta-2\eta},
+            \end{align*}
+            and the last rotator only adds $2\eta$ to the azimuth and leaves the ellipticity alone. The whole chain therefore reads
+            \begin{equation}\label{eq:GeneratorChain}
+                W\left(\beta,0;\frac{\pi}{2}\right)W\left(\eta,0;\pi\right)\ket{0;0} = \ket{\beta;\,\beta-2\eta},
+            \end{equation}
+            and since the two angles $\beta$ and $\beta-2\eta$ can be given any values we please, the construction is complete.
+
+            \begin{myteo}
+                \textit{(Universal polarisation state generator)}: A half wave plate with its fast axis at $\eta$ followed by a quarter wave plate with its fast axis at $\beta$ transforms horizontally polarised light into the state $\ket{\beta;\beta-2\eta}$. Consequently every fully polarised state $\ket{\alpha;\chi}$ whatsoever is produced, without any loss of intensity, by the settings
+                \begin{equation}\label{eq:GeneratorRecipe}
+                    \boxed{\;\beta = \alpha, \qquad \eta = \frac{\alpha-\chi}{2}\;}
+                \end{equation}
+            \end{myteo}
+
+            The recipe is easier to remember than to derive. \textbf{The quarter wave plate is simply set at the azimuth wanted for the target ellipse, and the half wave plate is then turned until the difference between the two plate angles produces the required ellipticity}, since \ref{eq:GeneratorChain} says $\chi=\beta-2\eta$. Geometrically, the half wave plate chooses which meridian of the Poincaré sphere the state will climb and the quarter wave plate decides how far up it climbs, and because both elements are retarders the beam arrives at its destination carrying every photon it started with, which was the whole point of building the generator out of waveplates in the first place. Notice also that the solution \ref{eq:GeneratorRecipe} is not unique, since $\eta$ and $\eta+\pi/2$ describe the same plate up to a sign that the global phase absorbs, and that is a convenience rather than a defect: on a real mount one takes whichever of the equivalent settings the rotation stage can reach.
+
+            We turn now to the second question, which is a different kind of request altogether. The generator we have just built changes the \textit{state} of the light while the elements themselves stay what they are; what we want now is to change the \textit{element}. Looking at \ref{eq:Retardance}, the retardance of a plate is fixed by the thickness of the crystal and by two refractive indices, none of which we can touch once the plate is cut, so a variable retarder normally means either a Babinet or Soleil compensator, in which a pair of wedges is slid to change the effective thickness, or a liquid crystal cell, in which a voltage changes the indices. There is however a purely mechanical alternative, and it is remarkably economical: \textbf{two quarter wave plates whose fast axes are simply turned against each other behave as one single birefringent whose retardance depends only on the angle between them}. This biplate was characterised in detail by Pabón, Hernandez and Torres \citep{pabon2023tunable}, who worked it out with the geometric algebra of Pauli vectors; we shall obtain the same results with nothing but the Jones matrices of this chapter.
+
+            The algebra becomes almost effortless once the retarder is written in vector form, so let us do that first. Take the general elliptical retarder \ref{eq:EllipticalRetarderMatrix}, separate the part proportional to the identity from the rest, and compare what is left with the Pauli matrices \ref{eq:PauliOptics}. Since
+            \begin{equation*}
+                \hat{n}\cdot\vec{\sigma} \equiv n_1\sigma_1+n_2\sigma_2+n_3\sigma_3 = \begin{bmatrix} n_1 & n_2+in_3 \\ n_2-in_3 & -n_1 \end{bmatrix},
+            \end{equation*}
+            the combination $\cos\frac{\delta}{2}\sigma_0+i\sin\frac{\delta}{2}\left(\hat{n}\cdot\vec{\sigma}\right)$ has got $\cos\frac\delta2+i\sin\frac\delta2 n_1$ in the upper left corner and $\sin\frac{\delta}{2}\left(in_2-n_3\right)$ in the upper right one, which reproduce \ref{eq:EllipticalRetarderMatrix} entry by entry as soon as we identify $n_1=\cos2\alpha\cos2\chi$, $n_2=\sin2\alpha\cos2\chi$ and $n_3=-\sin2\chi$. That triple is not a new object: by \ref{eq:StokesFromAlphaChi} it is the Stokes vector of the eigenstate $\ket{\alpha;\chi}$, that is, the very axis \ref{eq:RetarderAxis} about which the element turns the Poincaré sphere. So
+            \begin{equation}\label{eq:RetarderPauli}
+                \boxed{\;W(\alpha,\chi;\delta) = \cos\frac{\delta}{2}\,\sigma_0 + i\sin\frac{\delta}{2}\left(\hat{n}\cdot\vec{\sigma}\right) = \exp\left(i\frac{\delta}{2}\,\hat{n}\cdot\vec{\sigma}\right),\;}
+            \end{equation}
+            the exponential form following because $\left(\hat{n}\cdot\vec{\sigma}\right)^2=\sigma_0$ for a unit vector, so that the exponential series splits into the cosine and sine of $\delta/2$ exactly as it does for a number. Equation \ref{eq:RetarderPauli} is the Jones translation of the exponentials of Pauli vectors that \citep{pabon2023tunable} handles with geometric algebra, and it says something we already knew geometrically, that a retarder is a rotation by $\delta$ about $\hat n$, only now written as a $2\times2$ matrix we can multiply.
+
+            For a linear plate, $\chi=0$ leaves $\hat n=\left(\cos2\theta,\sin2\theta,0\right)$, so it is convenient to abbreviate
+            \begin{equation}\label{eq:SigmaDef}
+                \Sigma(\theta) \equiv \cos2\theta\,\sigma_1+\sin2\theta\,\sigma_2 = \begin{bmatrix}\cos2\theta & \sin2\theta \\ \sin2\theta & -\cos2\theta\end{bmatrix}, \qquad \Sigma(\theta)^2=\sigma_0,
+            \end{equation}
+            and a quarter wave plate, for which $\cos\frac\pi4=\sin\frac\pi4=\frac{1}{\sqrt2}$, becomes the particularly simple
+            \begin{equation}\label{eq:QWPPauli}
+                Q(\theta) \equiv W\left(\theta,0;\frac{\pi}{2}\right) = \frac{1}{\sqrt{2}}\left[\sigma_0+i\,\Sigma(\theta)\right].
+            \end{equation}
+
+            Let the beam meet the plate at $\theta_m$ first and the plate at $\theta_n$ second, and name the two angles that will turn out to matter,
+            \begin{equation}\label{eq:BiplateAngles}
+                \theta' \equiv \theta_n-\theta_m \quad\text{(the angle between the fast axes)}, \qquad \bar{\theta} \equiv \frac{\theta_m+\theta_n}{2} \quad\text{(their bisector)} .
+            \end{equation}
+            The biplate is the ordered product of the two, which by \ref{eq:QWPPauli} expands into four terms,
+            \begin{equation}\label{eq:BiplateExpand}
+                Q(\theta_n)Q(\theta_m) = \frac{1}{2}\left[\sigma_0+i\Sigma_n\right]\left[\sigma_0+i\Sigma_m\right] = \frac{1}{2}\left[\sigma_0+i\left(\Sigma_n+\Sigma_m\right)-\Sigma_n\Sigma_m\right],
+            \end{equation}
+            writing $\Sigma_m$ for $\Sigma(\theta_m)$ and $\Sigma_n$ for $\Sigma(\theta_n)$, and everything now depends on two elementary identities.
+
+            The product first. Multiplying out and using $\sigma_1^2=\sigma_2^2=\sigma_0$ on the two square terms together with the anticommutation $\sigma_2\sigma_1=-\sigma_1\sigma_2$ on the two crossed ones,
+            \begin{align*}
+                \Sigma_n\Sigma_m &= \left(\cos2\theta_n\sigma_1+\sin2\theta_n\sigma_2\right)\left(\cos2\theta_m\sigma_1+\sin2\theta_m\sigma_2\right) \\
+                &= \underbrace{\left(\cos2\theta_n\cos2\theta_m+\sin2\theta_n\sin2\theta_m\right)}_{\textcolor{blue}{\cos\left(2\theta_n-2\theta_m\right)}}\sigma_0 - \underbrace{\left(\sin2\theta_n\cos2\theta_m-\cos2\theta_n\sin2\theta_m\right)}_{\textcolor{blue}{\sin\left(2\theta_n-2\theta_m\right)}}\sigma_1\sigma_2 ,
+            \end{align*}
+            and since $\sigma_1\sigma_2=\left[\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right]=-i\sigma_3$ by direct multiplication of \ref{eq:PauliOptics}, this is
+            \begin{equation}\label{eq:SigmaProduct}
+                \Sigma_n\Sigma_m = \cos2\theta'\,\sigma_0 + i\sin2\theta'\,\sigma_3 .
+            \end{equation}
+            \textbf{The third Pauli matrix has appeared out of two purely linear elements}, and that single fact is the origin of everything peculiar about the biplate. Now the sum, where the textbook formulas $\cos A+\cos B=2\cos\frac{A+B}{2}\cos\frac{A-B}{2}$ and $\sin A+\sin B=2\sin\frac{A+B}{2}\cos\frac{A-B}{2}$ with $A=2\theta_n$ and $B=2\theta_m$ produce the same factor $\cos\theta'$ in both components, \textcolor{blue}{because $\cos\frac{A-B}{2}=\cos\theta'$ is even and therefore common to the two},
+            \begin{equation}\label{eq:SigmaSum}
+                \Sigma_n+\Sigma_m = 2\cos\theta'\left[\cos2\bar{\theta}\,\sigma_1+\sin2\bar{\theta}\,\sigma_2\right] = 2\cos\theta'\,\Sigma\!\left(\bar{\theta}\right).
+            \end{equation}
+            Substituting \ref{eq:SigmaProduct} and \ref{eq:SigmaSum} into \ref{eq:BiplateExpand}, and inserting the two half angle identities \textcolor{blue}{$1-\cos2\theta'=2\sin^2\theta'$} and \textcolor{blue}{$\sin2\theta'=2\sin\theta'\cos\theta'$}, the factors of $2$ cancel against the $\frac12$ in front and the biplate collapses to
+            \begin{equation}\label{eq:BiplateOperator}
+                Q(\theta_n)Q(\theta_m) = \sin^2\theta'\,\sigma_0 + i\left[\cos\theta'\cos2\bar{\theta}\,\sigma_1+\cos\theta'\sin2\bar{\theta}\,\sigma_2-\sin\theta'\cos\theta'\,\sigma_3\right].
+            \end{equation}
+
+            This has exactly the shape of \ref{eq:RetarderPauli}, which is no accident, since a product of unitary matrices is unitary and Theorem II already promised that any stack of retarders is a single elliptical retarder. Calling $\gamma$ its retardance and $\left(\alpha,\chi\right)$ its eigenstate, the coefficient of the identity gives the retardance immediately,
+            \begin{equation}\label{eq:BiplateRetardance}
+                \boxed{\;\cos\frac{\gamma}{2} = \sin^2\theta'\;}
+            \end{equation}
+            while the remaining three coefficients must equal $\sin\frac{\gamma}{2}\,\hat{n}$. Their squares add up to
+            \begin{equation*}
+                \sin^2\frac{\gamma}{2} = \cos^2\theta'\underbrace{\left(\cos^22\bar\theta+\sin^22\bar\theta\right)}_{=1}+\sin^2\theta'\cos^2\theta' = \cos^2\theta'\left(1+\sin^2\theta'\right),
+            \end{equation*}
+            which is the same statement as \ref{eq:BiplateRetardance}, since $1-\sin^4\theta'=\left(1-\sin^2\theta'\right)\left(1+\sin^2\theta'\right)$, and therefore no new information; it is however exactly what we need to normalise. Restricting the angle between the axes to $0\leq\theta'\leq\pi/2$, where $\cos\theta'\geq0$, we have $\sin\frac{\gamma}{2}=\cos\theta'\sqrt{1+\sin^2\theta'}$, and dividing the three coefficients by it \textcolor{red}{cancels the factor $\cos\theta'$ from every one of them},
+            \begin{equation}\label{eq:BiplateAxis}
+                \hat{n} = \frac{1}{\sqrt{1+\sin^2\theta'}}\left(\cos2\bar{\theta},\;\sin2\bar{\theta},\;-\sin\theta'\right).
+            \end{equation}
+            Comparing \ref{eq:BiplateAxis} with the Stokes form $\hat n=\left(\cos2\alpha\cos2\chi,\sin2\alpha\cos2\chi,-\sin2\chi\right)$ finishes the job. The first two components carry the same positive factor, so their ratio fixes the azimuth outright, $2\alpha=2\bar\theta$, and their common factor gives $\cos2\chi=1/\sqrt{1+\sin^2\theta'}$, while the third gives $\sin2\chi=\sin\theta'/\sqrt{1+\sin^2\theta'}$. Dividing the last two, \textcolor{red}{the square root cancels}, and we are left with a result of quite unreasonable simplicity,
+            \begin{equation}\label{eq:BiplateEigenstate}
+                \boxed{\;\alpha = \frac{\theta_m+\theta_n}{2}, \qquad \tan2\chi = \sin\theta' \;}
+            \end{equation}
+
+            Read together, \ref{eq:BiplateRetardance} and \ref{eq:BiplateEigenstate} say everything there is to say about the device, and each of the three parameters is controlled by something different. \textbf{The retardance and the ellipticity depend only on the difference of the two plate angles, and the azimuth only on their sum}, which is precisely what makes the biplate practical: mounting the two plates so that they can be turned both together and against each other gives one knob that tunes the element and another that orients it, and the two do not interfere.
+
+            The retardance runs over the whole useful range. At $\theta'=0$ the two plates are aligned, \ref{eq:BiplateRetardance} gives $\cos\frac\gamma2=0$ and hence $\gamma=\pi$, which is no surprise whatsoever, since two quarter waves stacked on the same axis are a half wave. At $\theta'=\pi/2$ the plates are crossed, $\cos\frac{\gamma}{2}=1$ gives $\gamma=0$, and the biplate is optically invisible, the second plate undoing exactly what the first one did. In between $\gamma$ falls monotonically from a half wave to nothing: at $\theta'=30^\circ$ it is $151^\circ$, at $\theta'=45^\circ$ it is exactly $120^\circ$, at $\theta'=54^\circ$ it is $98^\circ$. \textbf{Any retardance between zero and a half wave is available with a screwdriver}, and this is the tunable birefringent promised at the end of the previous subsubsection.
+
+            The price is written in the second half of \ref{eq:BiplateEigenstate}, and it is the whole point of \citep{pabon2023tunable}. Except when the plates are aligned, the eigenstates of the biplate are \textit{not} linear: the device is an elliptical birefringent in the sense of the definition that opened this subsection, and its ellipticity is dragged along with the retardance, since both are governed by $\theta'$ alone. How elliptical can it get? Since $\left|\sin\theta'\right|\leq1$, equation \ref{eq:BiplateEigenstate} forces $\left|\tan2\chi\right|\leq1$, that is
+            \begin{equation}\label{eq:BiplateEllipticityBound}
+                \left|\chi\right| \leq \frac{\pi}{8} = 22.5^{\circ},
+            \end{equation}
+            and the bound is reached only in the limit $\theta'\to\pi/2$, where by \ref{eq:BiplateRetardance} the retardance has already gone to zero and the eigenstates of a transparent element mean nothing at all. \textbf{Two quarter wave plates can therefore never be assembled into a circular birefringent}: a rotator needs $\chi=\pi/4$ and the biplate cannot pass $\pi/8$, so optical activity is not something this construction can manufacture on its own. For a value in the middle of the range, $\theta'=54^\circ$, equation \ref{eq:BiplateEigenstate} predicts $\tan2\chi=\sin54^\circ=0.809$ and hence $\chi=19.48^\circ$, which is precisely the ellipticity measured on the bench in \citep{pabon2023tunable} with a helium neon laser, two commercial quarter wave plates on a synchronised mount and a commercial polarimeter, the plates being stepped in two degree intervals over a half turn. Their arrangement is the one drawn in figure \ref{fig:BiplateSetup}, and it is worth looking at because it is exactly the apparatus of the previous subsubsection with the single plate replaced by the pair: a laser, a collimating lens, a polariser that prepares the input state, the biplate itself, and a polarimeter that reads out the four Stokes parameters of whatever comes through.
+
+            \begin{figure}[ht]
+                \centering
+                \includegraphics[width=0.85\textwidth]{Chapter 3/Figures/BiplateSetup.pdf}
+                \caption{The bench used to measure the states generated by a biplate of two quarter wave plates, with the collimating lens $C$, the polariser $P$ that prepares the input state, the two plates $Q$ at angles $\theta_m$ and $\theta_n$, and the polarimeter that measures the emerging Stokes vector. Turning the pair as a rigid unit sweeps a curve on the Poincaré sphere, again the intersection with a cone, but the cone is now rotated by the angle $\varphi$ carried by the optical activity of \ref{eq:BiplateTheoremII}, which is the subject of the next subsubsection. Figure taken from \citep{pabon2023tunable}.}
+                \label{fig:BiplateSetup}
+            \end{figure}
+
+            One last reading closes the circle with the Jones theorems. Theorem II guarantees that our biplate, being a cascade of retarders, must also be writable as a single \textit{linear} retarder followed by a rotator, and carrying that decomposition out on \ref{eq:BiplateOperator} gives
+            \begin{equation}\label{eq:BiplateTheoremII}
+                Q(\theta_n)Q(\theta_m) = R\left(\theta'-\frac{\pi}{2}\right)W\left(\theta_m+\frac{\pi}{4},\,0;\,\pi-2\theta'\right),
+            \end{equation}
+            a linear plate of retardance $\pi-2\theta'$ with its fast axis at forty five degrees from the first of the two quarter wave plates, followed by a rotation of the plane of polarisation by $\theta'-\pi/2$. This is the mechanism laid bare: \textbf{the biplate is a linear birefringent with a genuine optical activity hidden inside it}, and it is that rotator, absent from either plate separately and manufactured by the pair, that tilts the eigenstates off the equator of the Poincaré sphere and makes them elliptical. When the plates are crossed both the retardance and the rotation vanish together, as they must, and when they are aligned the rotator becomes a quarter of a turn and \ref{eq:BiplateTheoremII} collapses back to a half wave plate at $\theta_m$, as the reader may check with \ref{eq:HWPaction}.
+
+            We have now got, in one small mount, a birefringent whose retardance, ellipticity and orientation are all under mechanical control. What we have not got is the law that governs it when it is turned: the theorem of the previous subsubsection was proved for a \textit{linear} birefringent, and \ref{eq:BiplateEigenstate} has just told us that the biplate is not one. Its trajectories on the Poincaré sphere therefore fall outside that law, and finding the law that does cover them, for an arbitrary elliptical birefringent, is the subject of what follows.
+
+        \subsubsection{The elliptic birrefringents law}
+
+            The law of the rotating linear birefringent was proved under one hypothesis that we never questioned while we were using it: that the eigenstates of the turning element are linear, $\chi_q=0$, so that its axis on the Poincaré sphere lies on the equator. The biplate of the previous subsubsection has just shown us that this hypothesis is not academic bookkeeping, since \ref{eq:BiplateEigenstate} makes the eigenstates of two crossed quarter wave plates genuinely elliptical for every $\theta'$ except zero. The device we have just built therefore falls outside the only law we possess, and the purpose of this subsubsection is to remove the hypothesis altogether and find what a \textit{general} elliptical birefringent does when it is turned. The answer, obtained in the language of geometric algebra by Pabón, Hernandez and Torres \citep{pabon2023tunable} and reproduced here entirely with Jones matrices, is that almost nothing changes: the trajectory is still the intersection of the sphere with a cone, but the cone has been \textit{rotated}, and the angle it has been rotated through is exactly the optical activity hidden inside the element.
+
+            Before anything else we must be careful about what turning an elliptical element even means. A linear plate has got a fast axis painted on it and rotating it in its mount is unambiguous; a general birefringent has instead a pair of elliptical eigenstates, and rotating the crystal rotates those ellipses rigidly in the laboratory, tilting their azimuth while leaving their shape untouched. In the notation of \ref{eq:RetarderSpectral} the element therefore goes from $W(\alpha_q,\chi_q;\gamma)$ to $W(\alpha_q+\theta,\chi_q;\gamma)$, with $\chi_q$ and $\gamma$ frozen because they belong to the crystal and not to the mount. Since the rotator \ref{eq:RotatorMatrix} does precisely $R(\theta)\ket{\alpha;\chi}=\ket{\alpha+\theta;\chi}$ to every state, an element built on rotated eigenstates is the original one seen from a rotated frame,
+            \begin{equation}\label{eq:BodilyRotation}
+                W\left(\alpha_q+\theta,\chi_q;\gamma\right) = R(\theta)\,W\left(\alpha_q,\chi_q;\gamma\right)R(-\theta),
+            \end{equation}
+            which is the general form of the covariance \ref{eq:RetarderCovariance} already used for linear plates, and which follows from the spectral definition in one line: conjugating $\ket{\psi_1}\bra{\psi_1}$ by $R(\theta)$ turns it into $R(\theta)\ket{\psi_1}\bra{\psi_1}R(\theta)^{\dagger}=\ket{\alpha_q+\theta;\chi_q}\bra{\alpha_q+\theta;\chi_q}$, and the same for $\ket{\psi_2}$, \textcolor{red}{while the two eigenvalues $e^{\pm i\gamma/2}$ are numbers and are not touched by the conjugation at all}.
+
+            The whole proof now rests on splitting the elliptical element into a linear one and a rotator, which Theorem II guarantees is possible and which we shall carry out explicitly, because we need the three parameters and not merely the promise that they exist. The vector form \ref{eq:RetarderPauli} makes this a short computation. Start by writing the rotator itself in that language: it is the circular retarder \ref{eq:RotatorFromRetarder} of retardance $-2\psi$, whose eigenstate $\ket{0;\pi/4}$ has by \ref{eq:StokesFromAlphaChi} the Stokes vector $\hat{n}=\left(0,0,-1\right)$, so \ref{eq:RetarderPauli} gives $\cos\psi\,\sigma_0+i\sin(-\psi)\left(-\sigma_3\right)$, that is
+            \begin{equation}\label{eq:RotatorPauli}
+                R(\psi) = \cos\psi\,\sigma_0+i\sin\psi\,\sigma_3 = \begin{bmatrix}\cos\psi & i\left(i\sin\psi\right)\\ i\left(-i\sin\psi\right) & \cos\psi\end{bmatrix} = \begin{bmatrix}\cos\psi & -\sin\psi\\ \sin\psi & \cos\psi\end{bmatrix},
+            \end{equation}
+            which is \ref{eq:RotatorMatrix} itself, as it had to be. Keeping the abbreviation \ref{eq:SigmaDef} for the equatorial combination, a linear plate is $W(\alpha_l,0;\delta)=\cos\frac{\delta}{2}\sigma_0+i\sin\frac{\delta}{2}\Sigma(\alpha_l)$, and the product of the two is
+            \begin{align}
+                R(\psi)\,W\left(\alpha_l,0;\delta\right) &= \left[\cos\psi\,\sigma_0+i\sin\psi\,\sigma_3\right]\left[\cos\frac{\delta}{2}\sigma_0+i\sin\frac{\delta}{2}\Sigma(\alpha_l)\right] \nonumber \\
+                &= \cos\psi\cos\frac{\delta}{2}\,\sigma_0 + i\cos\psi\sin\frac{\delta}{2}\,\Sigma(\alpha_l) + i\sin\psi\cos\frac{\delta}{2}\,\sigma_3 - \sin\psi\sin\frac{\delta}{2}\,\sigma_3\Sigma(\alpha_l). \label{eq:EllipticProductRaw}
+            \end{align}
+            Only the last term is unfamiliar, and it is disposed of by two products read straight off \ref{eq:PauliOptics},
+            \begin{equation*}
+                \sigma_3\sigma_1 = \begin{bmatrix}0&i\\-i&0\end{bmatrix}\begin{bmatrix}1&0\\0&-1\end{bmatrix} = \begin{bmatrix}0&-i\\-i&0\end{bmatrix} = -i\sigma_2, \qquad
+                \sigma_3\sigma_2 = \begin{bmatrix}0&i\\-i&0\end{bmatrix}\begin{bmatrix}0&1\\1&0\end{bmatrix} = \begin{bmatrix}i&0\\0&-i\end{bmatrix} = i\sigma_1,
+            \end{equation*}
+            so that, substituting them into the definition \ref{eq:SigmaDef} of $\Sigma$,
+            \begin{equation}\label{eq:Sigma3Sigma}
+                \sigma_3\Sigma(\alpha_l) = -i\cos2\alpha_l\,\sigma_2+i\sin2\alpha_l\,\sigma_1 = i\left[\textcolor{blue}{\cos\left(2\alpha_l-\tfrac{\pi}{2}\right)}\sigma_1+\textcolor{blue}{\sin\left(2\alpha_l-\tfrac{\pi}{2}\right)}\sigma_2\right] = i\,\Sigma\!\left(\alpha_l-\frac{\pi}{4}\right),
+            \end{equation}
+            where we \textcolor{blue}{wrote $\sin2\alpha_l=\cos\left(2\alpha_l-\frac\pi2\right)$ and $-\cos2\alpha_l=\sin\left(2\alpha_l-\frac\pi2\right)$} in order to recognise another $\Sigma$. \textbf{Multiplying by $\sigma_3$ therefore rotates an equatorial direction by a quarter of a turn}, which is only to be expected, since $\sigma_3$ is the polar axis and the equator turns about it. Putting \ref{eq:Sigma3Sigma} back into \ref{eq:EllipticProductRaw}, the two equatorial terms combine into
+            \begin{equation*}
+                \sin\frac{\delta}{2}\left[\cos\psi\,\Sigma(\alpha_l)-\sin\psi\,\Sigma\!\left(\alpha_l-\frac{\pi}{4}\right)\right],
+            \end{equation*}
+            and writing both $\Sigma$'s out with \ref{eq:SigmaDef}, the coefficient of $\sigma_1$ is $\cos\psi\cos2\alpha_l-\sin\psi\sin2\alpha_l=\textcolor{blue}{\cos\left(2\alpha_l+\psi\right)}$ and the coefficient of $\sigma_2$ is $\cos\psi\sin2\alpha_l+\sin\psi\cos2\alpha_l=\textcolor{blue}{\sin\left(2\alpha_l+\psi\right)}$, both of them by the addition formulas, so the bracket is one single $\Sigma$ again,
+            \begin{equation}\label{eq:EllipticProduct}
+                R(\psi)\,W\left(\alpha_l,0;\delta\right) = \cos\psi\cos\frac{\delta}{2}\,\sigma_0 + i\left[\sin\frac{\delta}{2}\,\Sigma\!\left(\alpha_l+\frac{\psi}{2}\right)+\sin\psi\cos\frac{\delta}{2}\,\sigma_3\right].
+            \end{equation}
+
+            This has exactly the shape of \ref{eq:RetarderPauli}, so the chain is a single elliptical retarder $W(\alpha_q,\chi_q;\gamma)$, and comparing the four coefficients one by one identifies it. The identity gives $\cos\frac{\gamma}{2}=\cos\psi\cos\frac{\delta}{2}$; the two equatorial ones give $\sin\frac{\gamma}{2}\cos2\chi_q=\sin\frac{\delta}{2}$ together with $2\alpha_q=2\alpha_l+\psi$; and the polar one gives $-\sin\frac{\gamma}{2}\sin2\chi_q=\sin\psi\cos\frac{\delta}{2}$. Since it is the elliptical element that is handed to us and the pair that we must find, it is the inverted form we shall use: dividing the polar relation by the identity relation \textcolor{red}{cancels $\cos\frac{\delta}{2}$}, and the three of them become
+            \begin{equation}\label{eq:EllipticDecomposition}
+                \boxed{\;\sin\frac{\delta}{2} = \sin\frac{\gamma}{2}\cos2\chi_q, \qquad \tan\psi = -\tan\frac{\gamma}{2}\sin2\chi_q, \qquad \alpha_l = \alpha_q-\frac{\psi}{2}\;}
+            \end{equation}
+            taking $0\leq\gamma\leq\pi$, which costs nothing, since exchanging the two eigenstates of any retarder flips the sign of its retardance and brings it into that range. Equation \ref{eq:EllipticDecomposition} is the whole content of figure \ref{fig:EllipticDecomposition}: \textbf{every elliptical birefringent is a linear birefringent of retardance $\delta$ followed by a rotator of angle $\psi$}, and the ellipticity of its eigenstates is precisely the fingerprint of that hidden rotator, since $\chi_q=0$ forces $\psi=0$ and $\delta=\gamma$, returning us to a plain waveplate.
+
+            \begin{figure}[ht]
+                \centering
+                \includegraphics[width=0.9\textwidth]{Chapter 3/Figures/EllipticDecomposition.pdf}
+                \caption{The decomposition \ref{eq:EllipticDecomposition} of a birefringent with elliptical eigenstates, of retardance $\gamma$ and eigenstate angles $(\alpha,\chi)$, into a birefringent with linear eigenstates of retardance $\delta$ and orientation $\alpha'$ and an optical activity of rotation $\varphi=2\psi$. Figure taken from \citep{pabon2023tunable}.}
+                \label{fig:EllipticDecomposition}
+            \end{figure}
+
+            It is worth checking \ref{eq:EllipticDecomposition} against the one elliptical birefringent we have built with our own hands. For the biplate, \ref{eq:BiplateRetardance} and \ref{eq:BiplateEigenstate} give $\cos\frac{\gamma}{2}=\sin^2\theta'$ and $\tan2\chi_q=\sin\theta'$, from which $\sin\frac\gamma2=\cos\theta'\sqrt{1+\sin^2\theta'}$ and $\cos2\chi_q=1/\sqrt{1+\sin^2\theta'}$, so the first of \ref{eq:EllipticDecomposition} gives $\sin\frac{\delta}{2}=\cos\theta'$ after \textcolor{red}{the square roots cancel}, that is $\delta=\pi-2\theta'$, and the second gives $\tan\psi=-\tan\frac{\gamma}{2}\sin2\chi_q=-\cot\theta'$, that is $\psi=\theta'-\frac{\pi}{2}$. Both agree exactly with the decomposition \ref{eq:BiplateTheoremII} obtained there by a different route.
+
+            Now comes the step that makes the theorem, and it is a single line. Rotate the element bodily by $\theta$ and use \ref{eq:BodilyRotation} with the decomposition just found,
+            \begin{align}
+                W\left(\alpha_q+\theta,\chi_q;\gamma\right) &= R(\theta)\,R(\psi)\,W\left(\alpha_l,0;\delta\right)R(-\theta) = R(\psi)\underbrace{\,R(\theta)\,W\left(\alpha_l,0;\delta\right)R(-\theta)}_{\textcolor{blue}{W\left(\alpha_l+\theta,\,0;\,\delta\right)}} \nonumber \\
+                &= R(\psi)\,W\left(\alpha_l+\theta,0;\delta\right), \label{eq:EllipticInvariance}
+            \end{align}
+            where we first \textcolor{blue}{commuted the two rotators}, which is legitimate because rotations of the plane about the same axis commute, $R(\theta)R(\psi)=R(\theta+\psi)=R(\psi)R(\theta)$, and then recognised the conjugation as the covariance \ref{eq:RetarderCovariance}. Read what \ref{eq:EllipticInvariance} says: as the element turns, \textbf{its retardance $\delta$ and its rotator $\psi$ stay exactly where they were and only the fast axis of the linear part travels}. The reason is worth stating out loud, because it is the physical heart of this subsubsection: \textcolor{red}{a rotator has got no orientation to change}. Optical activity treats every direction of the laboratory alike, so turning the crystal that carries it changes nothing whatsoever, while the linear birefringence, which does single out a direction, turns with the mount.
+
+            \begin{myteo}
+                \textit{(Law of the rotating elliptical birefringent)}: Let a fully polarised beam $\ket{\alpha;\chi}$ cross a birefringent of retardance $\gamma$ whose eigenstates are the elliptical pair $\ket{\alpha_q;\chi_q}$, and let the element be turned bodily through a complete revolution, so that its eigenstate azimuth runs over $\alpha_q+\theta$ with $0\leq\theta\leq2\pi$. Then the locus of the emergent Stokes vector is the closed curve in which the Poincaré sphere is cut by the circular cone
+                \begin{equation}\label{eq:EllipticCone}
+                    \boxed{\;\left(S'_1-V_1\right)^2+\left(S'_2-V_2\right)^2 = \tan^2\frac{\delta}{2}\left(S'_3-V_3\right)^2\;}
+                \end{equation}
+                whose axis is parallel to the $S_3$ axis, whose half opening angle is $\delta/2$ with $\delta$ the retardance of the linear part \ref{eq:EllipticDecomposition}, and whose vertex is the Stokes vector
+                \begin{equation}\label{eq:CrossState}
+                    \vec{V} = \vec{S}\left(\ket{\alpha+\psi;-\chi}\right) = \left(\cos\left(2\alpha+2\psi\right)\cos2\chi,\;\sin\left(2\alpha+2\psi\right)\cos2\chi,\;\sin2\chi\right),
+                \end{equation}
+                that is, the enantiogyre of the incident state after its azimuth has been advanced by the optical activity $\psi$ of \ref{eq:EllipticDecomposition}. The curve is traversed twice in a full turn.
+            \end{myteo}
+
+            \textit{Proof.} By \ref{eq:EllipticInvariance} the emerging spinor is $R(\psi)W\left(\alpha_l+\theta,0;\delta\right)\vec{e}$, so the beam meets first a linear birefringent of fixed retardance $\delta$ whose axis is being rotated exactly as in the previous subsubsection, and then one fixed rotator. Call $\vec{S}\,'_{\text{lin}}(\theta)$ the Stokes vector after that first stage. The law of the rotating linear birefringent applies to it word for word, so $\vec{S}\,'_{\text{lin}}(\theta)$ runs over the whole curve where the sphere meets the cone $\mathcal{C}$ of half opening $\delta/2$, axis parallel to $\hat{z}$, and vertex at the enantiogyre $\vec{S}^{\,\text{e}}$ of the incident state.
+
+            It remains to push that curve through the rotator, and for this we need the rotator not as a Jones matrix but as a motion of the sphere. A rotator is the circular retarder of retardance $-2\psi$, and by the theorem on retarders as rotations \ref{eq:MuellerRetarderGeneral} its Mueller matrix is the rotation of the sphere by that retardance about the axis \ref{eq:RetarderAxis} of its own eigenstate, which is the south pole $\hat n=\left(0,0,-1\right)$. A rotation by $-2\psi$ about $-\hat{z}$ is a rotation by $+2\psi$ about $+\hat{z}$, so $R(\psi)$ turns the whole Poincaré sphere rigidly about its polar axis by twice the angle it turns the ellipse through, which is the doubling of angles once more and which we could have read directly off \ref{eq:StokesFromAlphaChi}, since sending $\alpha$ to $\alpha+\psi$ sends the Stokes azimuth $2\alpha$ to $2\alpha+2\psi$ and \textcolor{red}{leaves $S_3=-\sin2\chi$ untouched}.
+
+            A rigid rotation carries cones into cones and preserves every angle and every distance, so the image of $\mathcal{C}$ is again a circular cone of half opening $\delta/2$; \textcolor{red}{its axis is unchanged, because the axis of $\mathcal{C}$ is the very axis about which we are turning}; and its vertex is the image of the old vertex. That image is computed by the rule just established: the enantiogyre $\vec S^{\,\text{e}}$ is the Stokes vector of $\ket{\alpha;-\chi}$, and advancing its azimuth by $\psi$ gives the Stokes vector of $\ket{\alpha+\psi;-\chi}$, which written out with \ref{eq:StokesFromAlphaChi} is precisely \ref{eq:CrossState}. Since the intersection of the sphere with $\mathcal{C}$ is swept entirely, and since $R(\psi)$ is a bijection of the sphere that maps that intersection onto the intersection of the sphere with the rotated cone, the emergent states sweep the latter entirely as well, and the periodicity argument is unchanged because $\ket{\alpha_q+\pi;\chi_q}$ and $\ket{\alpha_q;\chi_q}$ are the same state. $\blacksquare$
+
+            \begin{figure}[ht]
+                \centering
+                \includegraphics[width=0.9\textwidth]{Chapter 3/Figures/EllipticBirefringentCone.pdf}
+                \caption{The law of the rotating elliptical birefringent. The incident state $\mathbf{S}_{\text{input}}$ and its enantiogyre $\mathbf{S}_{\text{enant}}$ are related by the reflection \ref{eq:Enantiogyre}, and turning that enantiogyre in azimuth by the optical activity $\varphi=2\psi$ produces the state $\mathbf{S}_{\text{cross}}$ of \ref{eq:CrossState}, which is the vertex of the cone. The emergent states then fill the curve where that cone cuts the sphere, exactly as in the linear case but with the cone rotated about the polar axis. Figure taken from \citep{pabon2023tunable}.}
+                \label{fig:EllipticBirefringentCone}
+            \end{figure}
+
+            The state \ref{eq:CrossState} is called the \textbf{crossed state} of the incident beam in \citep{pabon2023tunable}, and figure \ref{fig:EllipticBirefringentCone} shows how it is built out of the incident one in two moves, a reflection in the equator and a turn about the pole. The two moves commute, so it makes no difference whether the beam is first reflected and then turned or the other way round, and this is only the statement that the reflection acts on $S_3$ while the rotation acts on the azimuth.
+
+            Everything now falls into place, and the division of labour between the two ingredients of the element could not be cleaner. \textbf{The shape of the cone is fixed by the linear birefringence and its position by the optical activity}: $\delta$ opens or closes it, $\psi$ swings it around the polar axis, and the retardance $\gamma$ of the elliptical element never appears by itself, only through the pair \ref{eq:EllipticDecomposition} into which it is dissolved. Setting $\chi_q=0$ collapses \ref{eq:EllipticCone} back onto \ref{eq:RotatingRetarderCone}, since then $\psi=0$ and $\delta=\gamma$ and the vertex returns to the plain enantiogyre, so the law we proved first was the equatorial special case of the law we have proved now.
+
+            For the biplate the two parameters are not independent, and it is instructive to see why. There we found $\delta=\pi-2\theta'$ and $\psi=\theta'-\frac{\pi}{2}$, so that
+            \begin{equation}\label{eq:BiplateConeLock}
+                2\psi = 2\theta'-\pi = -\left(\pi-2\theta'\right) = -\delta ,
+            \end{equation}
+            and \textbf{the cone of a biplate of two quarter wave plates is always swung by exactly minus its own opening}. Turning the two plates against each other by $\theta'$ therefore opens the cone and rotates it in the same single motion, which is why the drawing in figure \ref{fig:BiplateSetup} labels it a modulated cone: with only two quarter wave plates one cannot dial the opening and the swing separately, and reaching an arbitrary pair $(\delta,\psi)$ needs a third element.
+
+            The practical value of the law is that it can be run backwards. Send a known state into an unknown birefringent, turn the element through half a revolution and record the emerging states with a polarimeter, exactly as in figure \ref{fig:BiplateSetup}: the curve that comes out determines a cone, the opening of that cone hands over the linear retardance $\delta$, the azimuth of its vertex compared with the enantiogyre of the input hands over the optical activity $\psi$, and \ref{eq:EllipticDecomposition} then inverts to give the retardance $\gamma$ and the eigenstate ellipticity $\chi_q$ of the sample. A single mechanical sweep and a single detector are enough to characterise the element completely, without ever having to find its eigenstates by trial and error, and this is how the biplate of the previous subsubsection was validated in \citep{pabon2023tunable}. Together with the linear law, of which it is the generalisation, \ref{eq:EllipticCone} closes the question that opened this subsection: we know now exactly which states a rotating birefringent of any kind can deliver, and exactly which it cannot.
+
+    \subsection{Generation of elliptic states: Polarizers as projection operators  }
+
+        The previous subsection reached every elliptical state through a pure rotation of the Poincaré sphere, at no cost in intensity, and it is fair to ask why one would ever trade so economical a method for an element that the whole of the Mueller matrix subsection went out of its way to characterise as destructive. The answer is that a projector sells something no retarder can offer at any price: \textbf{indifference to the input}. Send a beam whose polarisation has drifted, even slightly, from the state a fixed chain of waveplates was calibrated for, and by \ref{eq:MuellerRetarderGeneral} the output ellipse drifts by exactly the same rotation, since a rotation carries every point of the sphere together and cannot single one out for special treatment. Send the same drifting beam through an elliptical polariser instead, and by \ref{eq:MuellerPolariser} the outgoing state is still crushed onto the single point $\hat n$ fixed by the polariser's own transmission axis, for the simple reason that a projection onto $\ket{\psi}$ retains no memory of the input beyond how much of $\ket{\psi}$ it happened to contain. A polariser is therefore not merely a different route to an ellipse already reachable with waveplates, it is the only one of the two that erases the uncertainty of an imperfectly known or imperfectly polarised source, at the unavoidable price, quantified below by the elliptical Malus law, of transmitting less light than went in.
+
+        There is a second, more mundane reason to keep a stock of polarisers next to the waveplates, and it has got to do with colour rather than with information. The retardance of a waveplate is a phase accumulated over a fixed thickness, $\delta=2\pi\Delta n\,d/\lambda$, so a given plate is exactly a quarter wave or a half wave at one wavelength only, and out of broadband light, an ultrashort laser pulse being the extreme case, it manufactures not one ellipse but a blur of slightly wrong ones, one for every wavelength under the pulse's spectrum. The action of an ideal polariser is instead a projection fixed purely by the geometry of its transmission axis, and to an excellent approximation over a very wide band it does not care what $\lambda$ is. Whenever the state to be generated must be pure and achromatic rather than merely efficient, for instance to serve as the calibration standard of a polarimeter of the kind described by Azzam and Bashara \citep{azzam1977ellipsometry}, the polariser is the one device built in this chapter that can honestly promise it.
+
+        \subsubsection{The Malus law}
+
+            We begin with the oldest quantitative statement in the whole of polarisation optics. When Étienne-Louis Malus, in 1809, wrote down that the intensity transmitted by a crystal analyser falls as the square of the cosine of the angle it makes with the plane of polarisation \citep{malus1809theorie}, he was describing an experiment he could only read with his own eye, on a phenomenon nobody could yet explain, seven years before Fresnel would establish that light is a transverse wave and more than a century before anyone would suspect that the same formula also gives the probability that a single photon survives the crossing. The law has already appeared once in these notes, in the Mueller subsection, where it dropped out of \ref{eq:MuellerPolariser} as a statement about the angle between two vectors of the Poincaré sphere. Here we prove it again, in the Jones language and from the projector itself, and then we do the two things that the Mueller derivation left undone: we extend it to light that has got no Jones spinor at all, and we ask what it means for one photon rather than for a beam.
+
+            Let the analyser be the ideal linear polariser \ref{eq:LinPolariserMatrix} with its transmission axis at $\alpha_p$, and let the incident beam be fully polarised and linear, $\ket{\alpha;0}$. Since the polariser is the projector $P(\alpha_p)=\ket{\alpha_p;0}\bra{\alpha_p;0}$, its action needs no matrix multiplication whatsoever, only the associativity of the outer product,
+            \begin{equation}\label{eq:MalusProjection}
+                \vec{e}\,' = P(\alpha_p)\ket{\alpha;0} = \ket{\alpha_p;0}\underbrace{\braket{\alpha_p;0|\alpha;0}}_{\text{a number}},
+            \end{equation}
+            so that \textbf{the outgoing state is the transmission axis itself}, always and whatever came in, multiplied by one complex number. That number is an ordinary scalar product of two real unit vectors, since a linear ket \ref{eq:JonesKet} with $\chi=0$ reduces to $\left[\cos\alpha,\sin\alpha\right]^{\mathsf{T}}$,
+            \begin{equation}\label{eq:MalusOverlap}
+                \braket{\alpha_p;0|\alpha;0} = \begin{bmatrix}\cos\alpha_p & \sin\alpha_p\end{bmatrix}\begin{bmatrix}\cos\alpha\\ \sin\alpha\end{bmatrix} = \cos\alpha_p\cos\alpha+\sin\alpha_p\sin\alpha = \textcolor{blue}{\cos\left(\alpha-\alpha_p\right)},
+            \end{equation}
+            the last step being nothing but \textcolor{blue}{the cosine of a difference}. The transmitted intensity is now read off \ref{eq:StokesS0}, that is, from the squared norm of the outgoing spinor,
+            \begin{equation*}
+                I = \vec{e}\,'^{\dagger}\vec{e}\,' = \left|\braket{\alpha_p;0|\alpha;0}\right|^2\underbrace{\braket{\alpha_p;0|\alpha_p;0}}_{\textcolor{red}{=1}} = \cos^2\left(\alpha-\alpha_p\right),
+            \end{equation*}
+            where \textcolor{red}{the norm of the transmission ket is one because every Jones ket is a unit vector}, and calling $\theta=\alpha-\alpha_p$ the angle between the incident plane of polarisation and the analyser, and restoring the incident intensity $I_0$ that we had normalised away, this is
+            \begin{equation}\label{eq:MalusLaw}
+                \boxed{\;I = I_0\cos^2\theta\;}
+            \end{equation}
+
+            Three readings of this one line are worth pausing on. The first is that \textbf{Malus's law is the squared modulus of a scalar product}, $I=I_0\left|\braket{\psi|e}\right|^2$, and not really a statement about crystals at all; the cosine is the geometry of two unit vectors in $\mathbb{C}^2$ and nothing else, which is why the same formula will survive every generalisation we throw at it in the rest of this subsection. The second is that the projector is idempotent, $P^2=P$, as \ref{eq:LinPolariserMatrix} shows at once, so a second identical polariser placed behind the first transmits everything the first one passed and Malus's law does not apply twice; the light has already been made to forget where it came from. The third is the case $\theta=\pi/2$, where \ref{eq:MalusLaw} vanishes identically: two crossed polarisers extinguish the beam completely, and it is exactly this null that makes the arrangement such a sensitive instrument, since anything at all placed between them that rotates or reshapes the ellipse, a stressed piece of glass, a sugar solution, a birefringent crystal, a biological tissue, lights up against a black background.
+
+            Nothing forces the incident light to be linear, and the same two lines handle the general fully polarised state. Feeding $\ket{\alpha;\chi}$ of \ref{eq:JonesKet} into \ref{eq:MalusProjection}, the scalar product now has got an imaginary part,
+            \begin{align*}
+                \braket{\alpha_p;0|\alpha;\chi} &= \cos\alpha_p\left(\cos\alpha\cos\chi-i\sin\alpha\sin\chi\right)+\sin\alpha_p\left(\sin\alpha\cos\chi+i\cos\alpha\sin\chi\right) \\
+                &= \cos\chi\underbrace{\left[\cos\alpha_p\cos\alpha+\sin\alpha_p\sin\alpha\right]}_{\textcolor{blue}{\cos\left(\alpha-\alpha_p\right)}}+i\sin\chi\underbrace{\left[\sin\alpha_p\cos\alpha-\cos\alpha_p\sin\alpha\right]}_{\textcolor{blue}{-\sin\left(\alpha-\alpha_p\right)}} \\
+                &= \cos\chi\cos\theta-i\sin\chi\sin\theta ,
+            \end{align*}
+            having grouped the real and the imaginary parts and recognised in each bracket the cosine and the sine of the same difference $\theta=\alpha-\alpha_p$. Its squared modulus is the sum of the squares of the two parts,
+            \begin{equation*}
+                I = \cos^2\chi\cos^2\theta+\sin^2\chi\sin^2\theta = \frac{\left(1+\cos2\chi\right)\left(1+\cos2\theta\right)}{4}+\frac{\left(1-\cos2\chi\right)\left(1-\cos2\theta\right)}{4},
+            \end{equation*}
+            where we \textcolor{blue}{inserted the two half angle identities $\cos^2x=\frac{1+\cos2x}{2}$ and $\sin^2x=\frac{1-\cos2x}{2}$} in all four factors, and expanding the two products \textcolor{red}{the crossed terms $\cos2\chi$ and $\cos2\theta$ cancel in pairs} and only $2+2\cos2\chi\cos2\theta$ survives in the numerator,
+            \begin{equation}\label{eq:MalusElliptical}
+                I = \frac{I_0}{2}\left[1+\cos2\chi\cos2\theta\right].
+            \end{equation}
+            Setting $\chi=0$ recovers \ref{eq:MalusLaw} through $\frac{1}{2}(1+\cos2\theta)=\cos^2\theta$, as it must. But look at what happens at the other extreme. For circular light, $\chi=\pm\pi/4$ makes $\cos2\chi=0$ and \ref{eq:MalusElliptical} collapses to $I=I_0/2$ \textit{for every orientation of the analyser}: \textbf{a rotating linear polariser cannot distinguish circular light from unpolarised light}, because both give a flat, featureless half. This is not a defect of the calculation but a genuine limitation of the instrument, and it is precisely why Stokes' operational recipe, recalled when we introduced his four parameters, needs a quarter wave plate inserted before the analyser: the plate turns the invisible $S_3$ into a visible $S_1$ or $S_2$, and only then does rotating the polariser reveal it.
+
+            We come now to the case Malus himself was actually looking at, because the sunlight reflected from the windows of the Luxembourg Palace was never fully polarised. Here the Jones formalism appears to fail us at the first step, since \ref{eq:MalusProjection} needs a spinor $\vec{e}$ and a partially polarised beam has not got one. The repair is the polarisation matrix \ref{eq:CoherenceMatrix}, which exists for every beam whatsoever, and the calculation is if anything shorter. By \ref{eq:CoherenceTransform} the outgoing polarisation matrix is $\Phi'=P\Phi P^{\dagger}$, and the transmitted intensity is its trace, by the first of \ref{eq:StokesFromCoherence} with $\sigma_0$,
+            \begin{equation}\label{eq:IntensityFromCoherence}
+                I = \text{tr}\,\Phi' = \text{tr}\left(P\,\Phi\,P^{\dagger}\right) = \text{tr}\left(\textcolor{blue}{P^{\dagger}P}\,\Phi\right) = \text{tr}\left(P\,\Phi\right),
+            \end{equation}
+            where we first \textcolor{blue}{used the cyclic property of the trace to bring $P^{\dagger}$ to the front} and then \textcolor{red}{collapsed $P^{\dagger}P=P^2=P$, since a projector is Hermitian and idempotent}. Writing the projector as $P=\ket{\psi}\bra{\psi}$ for whatever state $\ket{\psi}$ it transmits, the trace of a rank one matrix is an expectation value,
+            \begin{equation*}
+                I = \text{tr}\left(\ket{\psi}\bra{\psi}\Phi\right) = \bra{\psi}\Phi\ket{\psi},
+            \end{equation*}
+            and expanding $\Phi$ in the Pauli basis with the second of \ref{eq:StokesFromCoherence},
+            \begin{equation*}
+                I = \frac{1}{2}\sum_{\mu=0}^{3}S_\mu\bra{\psi}\sigma_\mu\ket{\psi} = \frac{1}{2}\left[S_0\underbrace{\bra{\psi}\sigma_0\ket{\psi}}_{\textcolor{red}{=1}}+\sum_{i=1}^{3}S_i\,n_i\right],
+            \end{equation*}
+            because $\bra{\psi}\sigma_\mu\ket{\psi}=\text{tr}\left(\ket{\psi}\bra{\psi}\sigma_\mu\right)$ is by \ref{eq:StokesFromCoherence} the $\mu$th Stokes parameter of the transmitted state itself, that is, $\hat{n}$ for the three spatial ones and \textcolor{red}{unity for $\sigma_0$, since $\ket{\psi}$ is normalised}. We have arrived at the general form of the law.
+
+            \begin{myteo}
+                \textit{(Malus law for light of any degree of polarisation)}: An ideal polariser transmitting the state $\ket{\psi}$, whose Stokes vector is the unit vector $\hat{n}$, illuminated by a beam of arbitrary degree of polarisation and Stokes parameters $\left(S_0,\vec{S}\right)$, transmits the intensity
+                \begin{equation}\label{eq:MalusGeneral}
+                    \boxed{\;I = \frac{1}{2}\left(S_0+\hat{n}\cdot\vec{S}\right)\;}
+                \end{equation}
+            \end{myteo}
+
+            Equation \ref{eq:MalusGeneral} contains everything. It is manifestly the zeroth row of the Mueller matrix \ref{eq:MuellerPolariser}, which is the consistency we expected, but obtained here without ever leaving the Jones calculus. For unpolarised light, $\vec{S}=\vec{0}$, it gives $I=S_0/2$ whatever the analyser does, the familiar fact that a polariser transmits exactly half of natural light. For fully polarised light, $\left|\vec{S}\right|=S_0$, the scalar product is $S_0\cos\Theta$ with $\Theta$ the angle \textit{on the Poincaré sphere} between the incident state and the transmitted one, so that $I=\frac{S_0}{2}(1+\cos\Theta)=S_0\cos^2\frac{\Theta}{2}$, which is Malus's law once again with the doubling of angles doing its usual work: the physical angle $\theta$ appears on the sphere as $\Theta=2\theta$.
+
+            Take now the case that matters in the laboratory, a linear analyser rotated through all its orientations in front of a beam we know nothing about. Putting $\hat{n}=\left(\cos2\alpha_p,\sin2\alpha_p,0\right)$ into \ref{eq:MalusGeneral},
+            \begin{equation}\label{eq:MalusScan}
+                I\left(\alpha_p\right) = \frac{1}{2}\left[S_0+S_1\cos2\alpha_p+S_2\sin2\alpha_p\right] = \frac{S_0}{2}\left[1+\mathcal{P}_L\cos2\left(\alpha_M-\alpha_p\right)\right],
+            \end{equation}
+            the second form following by \textcolor{blue}{writing the pair $(S_1,S_2)$ in polar coordinates}, $S_1=S_0\mathcal{P}_L\cos2\alpha_M$ and $S_2=S_0\mathcal{P}_L\sin2\alpha_M$, and collapsing the two terms with the cosine of a difference. \textbf{The Malus curve of any beam whatsoever is a raised cosine in twice the analyser angle}: its period is $\pi$, as it must be since an analyser at $\alpha_p$ and at $\alpha_p+\pi$ are the same device, its phase $\alpha_M$ marks the azimuth the beam prefers, and its amplitude relative to its mean is the number $\mathcal{P}_L$ we have just been forced to introduce.
+
+            \begin{myDef}
+                \textit{(Degree of polarisation)}: The degree of polarisation of a beam with Stokes parameters $\left(S_0,\vec{S}\right)$, and its linear part, are the two dimensionless numbers
+                \begin{equation}\label{eq:DegreePolarisation}
+                    \mathcal{P} = \frac{\sqrt{S_1^2+S_2^2+S_3^2}}{S_0}, \qquad \mathcal{P}_L = \frac{\sqrt{S_1^2+S_2^2}}{S_0},
+                \end{equation}
+                both lying between zero and one by the inequality $S_1^2+S_2^2+S_3^2\leq S_0^2$ established with \ref{eq:CoherenceMatrix}, with $\mathcal{P}=1$ for fully polarised light, which sits on the surface of the Poincaré sphere, and $\mathcal{P}=0$ for unpolarised light, which sits at its centre.
+            \end{myDef}
+
+            The value of \ref{eq:MalusScan} is that it turns that definition into a measurement. The cosine runs between $+1$ and $-1$ as the analyser is turned, so the brightest and the dimmest readings of the whole sweep are $I_{\max}=\frac{S_0}{2}\left(1+\mathcal{P}_L\right)$ and $I_{\min}=\frac{S_0}{2}\left(1-\mathcal{P}_L\right)$, and forming their normalised difference \textcolor{red}{cancels the factor $S_0/2$, which is exactly the quantity a detector of unknown gain cannot be trusted to give us},
+            \begin{equation}\label{eq:MalusVisibility}
+                \boxed{\;\frac{I_{\max}-I_{\min}}{I_{\max}+I_{\min}} = \frac{\cancel{\frac{S_0}{2}}\left[\left(1+\mathcal{P}_L\right)-\left(1-\mathcal{P}_L\right)\right]}{\cancel{\frac{S_0}{2}}\left[\left(1+\mathcal{P}_L\right)+\left(1-\mathcal{P}_L\right)\right]} = \mathcal{P}_L\;}
+            \end{equation}
+            \textbf{The contrast of the Malus curve is the degree of linear polarisation of the beam.} This is the operational meaning of a quantity we had so far only defined algebraically, and it requires no calibrated detector, no absolute intensities and no knowledge of the source, only one polariser, one rotation stage and the ratio of two readings. It is worth being honest about what it does not give: the sweep is blind to $S_3$, exactly as \ref{eq:MalusElliptical} warned us, so \ref{eq:MalusVisibility} returns $\mathcal{P}_L$ and never $\mathcal{P}$, and a beam that is fully circularly polarised will report a contrast of zero, indistinguishable from natural light. Recovering the missing component is precisely the job of the quarter wave plate, and with it the same rotating analyser becomes the complete Stokes polarimeter of the previous subsections.
+
+            One more variant is worth recording, because no real polariser is the ideal projector \ref{eq:LinPolariserMatrix}. Sending fully polarised linear light at an angle $\theta$ through the honest dichroic \ref{eq:LinDichroicMatrix}, whose two axes transmit the amplitudes $t_1\geq t_2$ rather than one and zero, the two components are attenuated separately and the intensities add,
+            \begin{equation}\label{eq:MalusRealPolariser}
+                I = t_1^2\cos^2\theta+t_2^2\sin^2\theta ,
+            \end{equation}
+            so the curve no longer reaches zero, and repeating the contrast computation \ref{eq:MalusVisibility} with $I_{\max}=t_1^2$ and $I_{\min}=t_2^2$ gives
+            \begin{equation*}
+                \frac{I_{\max}-I_{\min}}{I_{\max}+I_{\min}} = \frac{t_1^2-t_2^2}{t_1^2+t_2^2} = D,
+            \end{equation*}
+            the diattenuation already met in \ref{eq:DichroicBoost}. The same experimental curve therefore reads two different quantities depending on which end of it we trust: \textbf{with a known ideal analyser its contrast measures the polarisation of the beam, and with a known fully polarised beam it measures the quality of the analyser}. The ratio $t_2^2/t_1^2$, quoted by manufacturers as the extinction ratio, is what makes the crossed polariser null of the previous paragraph imperfect in practice, and a good sheet polariser reaches $10^{-3}$ while a Glan-Thompson prism reaches $10^{-6}$.
+
+            It remains to say what all of this means for one photon, and this is where the innocent cosine turns out to have been hiding something. A photodetector does not measure a field, and it does not measure an intensity either: it counts photoelectrons, one at a time, at random instants. The semiclassical theory of photodetection \citep{mandel1995optical}, whose fully quantum version is due to Glauber \citep{glauber1963quantum}, states that the probability of registering one count in a detector element of area $dA$ during a time $dt$ is
+            \begin{equation}\label{eq:PhotonRate}
+                dp = \frac{\eta}{\hbar\omega}\,I\left(\vec{r},t\right)dA\,dt ,
+            \end{equation}
+            with $\eta$ the quantum efficiency of the detector. \textbf{Intensity is therefore not a thing in itself but a detection probability density}, the mean number of photons arriving per unit area and per unit time, multiplied by the energy $\hbar\omega$ each of them carries. Every intensity written anywhere in this chapter, and in particular the $I$ of \ref{eq:MalusLaw}, is a statement about how densely the clicks of a counter fall.
+
+            Read \ref{eq:MalusLaw} through \ref{eq:PhotonRate} and it says something far stronger than Malus could have meant. Since the transmitted rate is $\cos^2\theta$ times the incident rate, and since photons are neither created nor split by a sheet of polymer, the only way the beam can obey the law is for each individual photon to be transmitted with probability $\cos^2\theta$ and absorbed with probability $\sin^2\theta$. \textbf{A single photon never passes fractionally.} It passes or it does not, and the cosine squared is the weight of the coin. If $N$ photons in the state $\ket{\alpha;0}$ are sent one by one into an analyser at $\alpha_p$, the number that emerge is a binomial variable of mean and variance
+            \begin{equation}\label{eq:MalusBinomial}
+                \left\langle n\right\rangle = N\cos^2\theta, \qquad \left\langle \left(\triangle n\right)^2\right\rangle = N\cos^2\theta\sin^2\theta ,
+            \end{equation}
+            so the classical law \ref{eq:MalusLaw} is the first of these two and nothing more, an average recovered in the limit of large $N$ because the relative fluctuation $\triangle n/\left\langle n\right\rangle$ falls as $1/\sqrt{N}$. The second is invisible to Malus's eye and to any ordinary photodiode, but it is measurable with a counting detector, and it carries a signature the classical law cannot: the variance vanishes at $\theta=0$ and at $\theta=\pi/2$, that is, \textcolor{red}{a photon prepared in an eigenstate of the analyser is transmitted, or stopped, with no randomness whatsoever}. Uncertainty appears only for the states in between, and it is maximal at $\theta=\pi/4$, where the photon is in an equal superposition and the analyser is being asked a question the photon has got no definite answer to.
+
+            The formula that governs this is $\left|\braket{\psi|e}\right|^2$, and a physicist trained after 1926 recognises it immediately: it is the Born rule, the postulate that the probability of finding a system in a state is the squared modulus of the amplitude connecting the two. Malus wrote the earliest instance of it down in 1809, one hundred and seventeen years early, for a phenomenon whose carrier had not been identified, in a formalism that did not exist. The rest of the dictionary is just as literal. The projector $P=\ket{\psi}\bra{\psi}$ is the projection postulate, and \ref{eq:MalusProjection} says that a photon which survives the crossing emerges in the state $\ket{\psi}$ having lost every memory of what it was before, which is exactly the indifference to the input that opened this subsection. The polarisation matrix $\Phi$, normalised by its trace, is the density matrix of a two level system, so that \ref{eq:IntensityFromCoherence} is the Born rule for mixed states and the degree of polarisation \ref{eq:DegreePolarisation} is the purity of that state, unity for a pure qubit and zero for the maximally mixed one. And \ref{eq:MalusGeneral} is then the general expression for the probability of a projective measurement on a qubit, with the Poincaré sphere serving as the Bloch sphere, exactly as anticipated at the end of the Mueller subsection.
+
+            This is why the polarisation of light became the workhorse of experimental quantum information rather than any of the other degrees of freedom a photon possesses. Preparing a qubit is turning the two waveplates of \ref{eq:GeneratorRecipe}, measuring it is turning a polariser and counting clicks, and the answer is always \ref{eq:MalusGeneral}. The $\cos^2$ of the Malus curve is the shape that makes the correlations of an entangled pair violate the Bell inequalities, since a classical model in which each photon carries a definite instruction for every analyser angle cannot reproduce a cosine squared of the \textit{relative} angle; and the contrast \ref{eq:MalusVisibility} of that curve, measured exactly as we have described it, is the visibility that every laboratory quotes as the figure of merit of its source. A law read off a calcite crystal by candlelight in Paris turns out to be, without a single symbol changed, the measurement postulate of quantum mechanics applied to the simplest system there is.
+
+        \subsubsection{The elliptic polariser}
+
+            Everything in the previous subsubsection was done with the linear polariser \ref{eq:LinPolariserMatrix}, and that is the only polariser one can buy. A sheet of Polaroid, a wire grid and a Glan-Thompson prism all single out a \textit{direction} in the laboratory, because the microscopic anisotropy that makes them work, a stretched polymer chain, a row of wires, a crystal axis, is itself a direction; not one of them singles out an ellipse, and nothing in the catalogue of materials projects onto a state of definite handedness. Yet the whole argument that opened this subsection, that a projector is indifferent to its input and delivers one fixed state no matter what arrives, is far too valuable to be confined to the equator of the Poincaré sphere. If elliptical projectors are not sold, they must be assembled, and the purpose of this subsubsection is to assemble one and to find out exactly how far it can be pushed.
+
+            Two objects have to be told apart before we start, and since the distinction is the whole point of what follows we make it a definition.
+
+            \begin{myDef}
+                \textit{(Elliptic projector and elliptic polariser)}: An \textbf{elliptic projector} is an optical system, and equally the mathematical object representing it, whose Jones matrix is an orthogonal projector, $\Pi=\Pi^{\dagger}=\Pi^2$, of rank one, and whose transmitted state $\ket{\phi}$ is elliptical. Being a projector, it delivers $\ket{\phi}$ and nothing else, whatever the incident light may have been. An \textbf{elliptic polariser} is an elliptic projector equipped with free parameters such that, as those parameters are varied over their range, the transmitted state $\ket{\phi}$ sweeps \textit{the whole} Poincaré sphere, so that any polarisation state whatsoever, linear, elliptical or circular, of either handedness, can be selected by adjusting the device.
+            \end{myDef}
+
+            The difference is not pedantry. A given elliptic projector transmits one particular ellipse and is useless for any other; an elliptic polariser is a single instrument that can be set to project onto any state at all, which is what one actually wants on a bench. We shall see that a construction can be an elliptic projector for every setting of its retarders and still fail to be an elliptic polariser, and that the condition separating the two cases is remarkably sharp.
+
+            % TODO: add the arXiv entry for Pellat-Finet's recent preprint to references.bib
+            % (key suggestion: pellatfinet20XXelliptic) and cite it in the sentence below,
+            % next to the 1984 quaternion paper.
+            The construction we take as our starting point is due to Pellat-Finet, who has recently shown that three ordinary elements suffice, and whose quaternionic formulation of polarisation \citep{pellatfinet1984representation} we have already met second hand, since it is the language in which \citep{pabon2023tunable} is written. The arrangement is the following: a linear birefringent of retardance $\delta$ with its fast axis at $\theta_1$; behind it a linear polariser with its transmission axis at $\theta_2$; and behind that a second linear birefringent, \textit{identical to the first}, but mounted with its fast axis at $\theta_1+\pi/2$. Ordering the three matrices as the light meets them, the device is
+            \begin{equation}\label{eq:EllipticProjectorChain}
+                \Pi = W\left(\theta_1+\frac{\pi}{2},0;\delta\right)P\left(\theta_2\right)W\left(\theta_1,0;\delta\right).
+            \end{equation}
+
+            The first thing to establish is what the third element actually is, and the answer explains the whole construction. Replacing $\theta_1$ by $\theta_1+\pi/2$ in the linear retarder \ref{eq:LinRetarderMatrix} changes only the two doubled angles, through \textcolor{blue}{$\cos\left(2\theta_1+\pi\right)=-\cos2\theta_1$ and $\sin\left(2\theta_1+\pi\right)=-\sin2\theta_1$}, so every term carrying an $i\sin\frac{\delta}{2}$ reverses its sign,
+            \begin{equation}\label{eq:PlateInverse}
+                W\left(\theta_1+\frac{\pi}{2},0;\delta\right) = \begin{bmatrix}
+                    \cos\dfrac{\delta}{2}-i\sin\dfrac{\delta}{2}\cos2\theta_1 & -i\sin\dfrac{\delta}{2}\sin2\theta_1 \\[8pt]
+                    -i\sin\dfrac{\delta}{2}\sin2\theta_1 & \cos\dfrac{\delta}{2}+i\sin\dfrac{\delta}{2}\cos2\theta_1
+                \end{bmatrix} = \overline{W\left(\theta_1,0;\delta\right)} = W\left(\theta_1,0;\delta\right)^{\dagger},
+            \end{equation}
+            the last equality holding because a linear retarder is a \textbf{symmetric} matrix, as we established when proving the reversibility theorem, so that transposing it does nothing and its adjoint is its plain complex conjugate. Since $W$ is unitary, $W^{\dagger}=W^{-1}$, and we have learnt something worth saying in words: \textbf{turning a waveplate through ninety degrees exchanges its fast and slow axes, which is the same as reversing the sign of its retardance}, $W(\theta+\frac\pi2,0;\delta)=W(\theta,0;-\delta)$, so the third element of \ref{eq:EllipticProjectorChain} is not merely similar to the first, it is the first one \textit{undone}. Writing $W$ for $W(\theta_1,0;\delta)$ from here on, the device is a conjugation,
+            \begin{equation}\label{eq:EllipticProjectorSandwich}
+                \Pi = W^{\dagger}\,P\left(\theta_2\right)\,W .
+            \end{equation}
+
+            That single observation makes the two defining properties immediate. For the Hermiticity, the adjoint of a product reverses the order and $P$ is itself Hermitian, being a projector,
+            \begin{equation*}
+                \Pi^{\dagger} = \left(W^{\dagger}PW\right)^{\dagger} = W^{\dagger}\,\underbrace{P^{\dagger}}_{\textcolor{red}{=P}}\,W = \Pi ,
+            \end{equation*}
+            and for the idempotence the two inner factors annihilate each other,
+            \begin{equation*}
+                \Pi^2 = W^{\dagger}P\underbrace{WW^{\dagger}}_{\textcolor{red}{=\,\sigma_0}}PW = W^{\dagger}\underbrace{P^2}_{\textcolor{red}{=P}}W = \Pi ,
+            \end{equation*}
+            where \textcolor{red}{$WW^{\dagger}$ collapses because the plate is unitary and $P^2$ collapses because the polariser is a projector}. So \ref{eq:EllipticProjectorChain} is an orthogonal projector, and it is worth pausing to see that \textbf{the third plate is what earns this}. Without it the chain would be $P(\theta_2)W$, which is neither Hermitian nor idempotent, and which by Theorem I is an inhomogeneous element whose two eigenpolarisations are not even orthogonal; worse, its output is $\ket{\theta_2;0}$, a \textit{linear} state, for every input. The last plate converts that linear output into an elliptical one and, at the same time, repairs the algebra.
+
+            Since $P(\theta_2)=\ket{\theta_2;0}\bra{\theta_2;0}$ has got rank one, so has the conjugated matrix, and the transmitted state can be read off directly by grouping the factors,
+            \begin{equation}\label{eq:EllipticProjectorRankOne}
+                \Pi = W^{\dagger}\ket{\theta_2;0}\bra{\theta_2;0}W = \left(W^{\dagger}\ket{\theta_2;0}\right)\left(W^{\dagger}\ket{\theta_2;0}\right)^{\dagger} = \ket{\phi}\bra{\phi}, \qquad \ket{\phi}\equiv W^{\dagger}\ket{\theta_2;0},
+            \end{equation}
+            and $\ket{\phi}$ is automatically a unit vector, since $\braket{\phi|\phi}=\bra{\theta_2;0}\underbrace{WW^{\dagger}}_{\textcolor{red}{=\,\sigma_0}}\ket{\theta_2;0}=1$. By the definition of the ideal polariser, \ref{eq:EllipticProjectorChain} is therefore \textbf{a perfect polariser whose transmission state is $\ket{\phi}$}, and everything now hinges on which state that is.
+
+            To compute it, move into the frame of the first plate, where the retarder is diagonal. The covariance \ref{eq:RetarderCovariance} gives $W(\theta_1,0;\delta)=R(\theta_1)W(0,0;\delta)R(-\theta_1)$, so taking adjoints, and using that $R(\theta)^{\dagger}=R(-\theta)$ for the real orthogonal rotator,
+            \begin{equation*}
+                \ket{\phi} = R(\theta_1)\,W\left(0,0;\delta\right)^{\dagger}\underbrace{R(-\theta_1)\ket{\theta_2;0}}_{\textcolor{blue}{\ket{\theta_2-\theta_1;0}}} = R(\theta_1)\,W\left(0,0;-\delta\right)\ket{\beta;0}, \qquad \textcolor{blue}{\beta \equiv \theta_2-\theta_1},
+            \end{equation*}
+            where the rotator only shifted the azimuth of the linear ket. \textbf{Only the angle $\beta$ between the polariser and the first plate can matter}, which was to be expected, since $\theta_1$ merely says where the whole apparatus has been bolted to the table. Setting $\alpha=0$ in \ref{eq:LinRetarderMatrix} makes the plate diagonal, $W(0,0;\delta)=\text{diag}\left(e^{i\delta/2},e^{-i\delta/2}\right)$, so that its inverse acts on $\ket{\beta;0}=\left[\cos\beta,\sin\beta\right]^{\mathsf{T}}$ as
+            \begin{equation}\label{eq:PhiBeforeRotation}
+                W\left(0,0;-\delta\right)\ket{\beta;0} = \begin{bmatrix}e^{-i\delta/2}\cos\beta\\ e^{i\delta/2}\sin\beta\end{bmatrix} = \textcolor{red}{e^{-i\delta/2}}\begin{bmatrix}\cos\beta\\ e^{i\delta}\sin\beta\end{bmatrix},
+            \end{equation}
+            and \textcolor{red}{the overall factor $e^{-i\delta/2}$ is a global phase and may be dropped}. What is left is a spinor of amplitudes $\cos\beta$ and $\sin\beta$ carrying a relative phase $\delta$ between its two components, which is exactly the general form \ref{eq:JonesVec} we started the chapter with: \textbf{the polariser fixes the amplitudes and the plate fixes the phase}, and between them they can build any ellipse. To name it we compute its Stokes parameters with \ref{eq:StokesS1} to \ref{eq:StokesS3}. The moduli are immediate,
+            \begin{equation*}
+                S_1 = \cos^2\beta-\sin^2\beta = \textcolor{blue}{\cos2\beta} ,
+            \end{equation*}
+            and for the other two we need the crossed product $e_1e_2^{*}=\cos\beta\,e^{-i\delta}\sin\beta$, whose real and imaginary parts give
+            \begin{equation*}
+                S_2 = 2\,\text{Re}\left(e_1e_2^{*}\right) = \textcolor{blue}{2\sin\beta\cos\beta}\cos\delta = \sin2\beta\cos\delta, \qquad
+                S_3 = -2\,\text{Im}\left(e_1^{*}e_2\right) = -\sin2\beta\sin\delta ,
+            \end{equation*}
+            using \textcolor{blue}{$2\sin\beta\cos\beta=\sin2\beta$} in both. As a check, squaring and adding the three returns
+            \begin{equation*}
+                S_1^2+S_2^2+S_3^2 = \cos^22\beta+\sin^22\beta\underbrace{\left(\cos^2\delta+\sin^2\delta\right)}_{\textcolor{red}{=\,1}} = 1 ,
+            \end{equation*}
+            so the state is fully polarised, as any output of a projector must be. The final rotator $R(\theta_1)$ then adds $\theta_1$ to the azimuth without touching the ellipticity, and comparing with the dictionary \ref{eq:StokesFromAlphaChi} we can read the two characteristic angles off at once.
+
+            \begin{myteo}
+                \textit{(Pellat-Finet elliptic projector)}: The chain \ref{eq:EllipticProjectorChain}, formed by a linear birefringent of retardance $\delta$ at $\theta_1$, a linear polariser at $\theta_2$ and the same birefringent at $\theta_1+\pi/2$, is for every value of its three angles an orthogonal projector $\Pi=\ket{\phi}\bra{\phi}$ onto the fully polarised state $\ket{\phi}=\ket{\alpha;\chi}$ whose characteristic angles are, writing $\beta=\theta_2-\theta_1$,
+                \begin{equation}\label{eq:EllipticProjectorAngles}
+                    \boxed{\;\sin2\chi = \sin2\beta\,\sin\delta, \qquad \tan2\left(\alpha-\theta_1\right) = \tan2\beta\,\cos\delta\;}
+                \end{equation}
+                It is therefore an elliptic projector whenever $\sin2\beta\sin\delta\neq0$.
+            \end{myteo}
+
+            Before pushing further it is worth checking the two degenerate cases against common sense. If the plates do nothing, $\delta=0$, then \ref{eq:EllipticProjectorAngles} gives $\chi=0$ and $\alpha=\theta_1+\beta=\theta_2$, so the device collapses into the bare linear polariser it contains, as it must. If the polariser is aligned with the plate, $\beta=0$, then again $\chi=0$ and $\alpha=\theta_1$, because the incident light is being projected onto an eigenstate of the plates, which pass it untouched. Everything in between is a genuine ellipse.
+
+            Now the question that separates a projector from a polariser: as the three angles are turned, how much of the Poincaré sphere does $\ket{\phi}$ actually cover? The azimuth is no obstacle, since $\theta_1$ appears in \ref{eq:EllipticProjectorAngles} as a free additive shift and can place $\alpha$ anywhere. The ellipticity is another matter. The first of \ref{eq:EllipticProjectorAngles} is a product of two sines, one of which we control through $\beta$ and one of which is welded into the plates, and since $\sin2\beta$ ranges over the whole of $\left[-1,1\right]$ as $\beta$ is turned, while $\sin\delta$ does not move at all,
+            \begin{equation}\label{eq:EllipticityBand}
+                \left|\sin2\chi\right| = \left|\sin2\beta\right|\left|\sin\delta\right| \leq \left|\sin\delta\right| , \qquad\text{that is}\qquad \left|\chi\right| \leq \frac{1}{2}\arcsin\left|\sin\delta\right| ,
+            \end{equation}
+            with the bound attained at $\beta=\pm\pi/4$, where the polariser bisects the axes of the plate. \textbf{The reachable states fill a band around the equator and nothing more}, a band whose half width is $\delta/2$ for $0\leq\delta\leq\pi/2$ and $\left(\pi-\delta\right)/2$ beyond it, so that a device built with eighth wave plates, $\delta=\pi/4$, can never produce an ellipse more open than $\chi=\pi/8$, however patiently its three mounts are turned. The circular states sit at $\left|\chi\right|=\pi/4$, the extreme value the ellipticity angle can take, and \ref{eq:EllipticityBand} reaches them only when $\arcsin\left|\sin\delta\right|=\pi/2$. This is the condition we were after, and it is exact in both directions.
+
+            \begin{myteo}
+                \textit{(Elliptic polariser)}: The Pellat-Finet chain \ref{eq:EllipticProjectorChain} is an elliptic polariser, that is, its transmitted state covers the entire Poincaré sphere as $\theta_1$ and $\theta_2$ are varied, \textbf{if and only if its two birefringents are quarter wave plates},
+                \begin{equation}\label{eq:QuarterWaveCondition}
+                    \left|\sin\delta\right| = 1 \qquad\Longleftrightarrow\qquad \delta = \frac{\pi}{2} \pmod{\pi} .
+                \end{equation}
+                When that condition holds the device reduces to the projector
+                \begin{equation}\label{eq:EllipticPolariser}
+                    \boxed{\;\Pi = \ket{\theta_1;\,\theta_2-\theta_1}\bra{\theta_1;\,\theta_2-\theta_1}\;}
+                \end{equation}
+                whose transmitted state has got azimuth $\alpha=\theta_1$ and ellipticity $\chi=\theta_2-\theta_1$.
+            \end{myteo}
+
+            \textit{Proof.} Necessity is \ref{eq:EllipticityBand}: covering the sphere requires in particular reaching its two poles, $\left|\chi\right|=\pi/4$, which forces $\arcsin\left|\sin\delta\right|=\pi/2$ and hence $\left|\sin\delta\right|=1$, that is $\delta=\pi/2$ modulo $\pi$, an odd number of quarter waves. \textcolor{red}{No other retardance can reach the circular states, by however much the plates and the polariser are turned}, since the bound \ref{eq:EllipticityBand} does not involve $\theta_1$ or $\theta_2$ at all.
+
+            For sufficiency, set $\delta=\pi/2$ in \ref{eq:PhiBeforeRotation}, where \textcolor{blue}{$e^{i\delta}=e^{i\pi/2}=i$}, and the spinor before the final rotation becomes
+            \begin{equation*}
+                \begin{bmatrix}\cos\beta\\ i\sin\beta\end{bmatrix} ,
+            \end{equation*}
+            which we have met before: it is precisely the unrotated ellipse \ref{eq:JonesChi} of ellipticity angle $\beta$, that is, the ket $\ket{0;\beta}$. Applying the last rotator, which by \ref{eq:RotatorMatrix} only advances the azimuth,
+            \begin{equation*}
+                \ket{\phi} = R(\theta_1)\ket{0;\beta} = \ket{\theta_1;\beta} = \ket{\theta_1;\,\theta_2-\theta_1} ,
+            \end{equation*}
+            and \ref{eq:EllipticPolariser} follows from \ref{eq:EllipticProjectorRankOne}. The same conclusion drops out of \ref{eq:EllipticProjectorAngles} without any new work: \textcolor{red}{$\cos\delta=0$ kills the second relation}, leaving $\alpha=\theta_1$, while $\sin\delta=1$ reduces the first to $\sin2\chi=\sin2\beta$ and hence $\chi=\beta$. Since $\theta_1$ and $\theta_2$ may be given any values independently, the pair $\left(\alpha,\chi\right)=\left(\theta_1,\theta_2-\theta_1\right)$ runs over every azimuth and every ellipticity, which is the whole sphere. $\blacksquare$
+
+            It is worth writing the elliptic polariser out as an explicit matrix, and since the object is a ket times a bra we may as well multiply the two out honestly, for a general pair of angles $\left(\alpha,\chi\right)$, and only afterwards put in the values $\alpha=\theta_1$ and $\chi=\theta_2-\theta_1$ delivered by the theorem. Abbreviate the two components of \ref{eq:JonesKet} as
+            \begin{equation*}
+                \ket{\alpha;\chi} = \begin{bmatrix}a\\ b\end{bmatrix}, \qquad a = \cos\alpha\cos\chi-i\sin\alpha\sin\chi, \qquad b = \sin\alpha\cos\chi+i\cos\alpha\sin\chi ,
+            \end{equation*}
+            so that the outer product is the array of the four products $\ket{\alpha;\chi}\bra{\alpha;\chi}=\left[\begin{smallmatrix}a\bar{a} & a\bar{b}\\ b\bar{a} & b\bar{b}\end{smallmatrix}\right]$, and take them one at a time. The upper left entry is a modulus, so the imaginary parts contribute their squares,
+            \begin{align*}
+                \left|a\right|^2 &= \cos^2\alpha\cos^2\chi+\sin^2\alpha\sin^2\chi
+                = \frac{\left(1+\cos2\alpha\right)\left(1+\cos2\chi\right)}{4}+\frac{\left(1-\cos2\alpha\right)\left(1-\cos2\chi\right)}{4} \\
+                &= \frac{1}{4}\left[1+\cancel{\cos2\alpha}+\cancel{\cos2\chi}+\cos2\alpha\cos2\chi+1-\cancel{\cos2\alpha}-\cancel{\cos2\chi}+\cos2\alpha\cos2\chi\right] \\
+                &= \frac{1}{2}\left(1+\cos2\alpha\cos2\chi\right),
+            \end{align*}
+            where we \textcolor{blue}{inserted the half angle identities $\cos^2x=\frac{1+\cos2x}{2}$ and $\sin^2x=\frac{1-\cos2x}{2}$ in all four factors} and then \textcolor{red}{the single cosines cancelled in pairs between the two products, leaving only the crossed term twice}. The lower right entry costs nothing more, since $\left|a\right|^2+\left|b\right|^2=1$ for a unit ket and therefore $\left|b\right|^2=\frac{1}{2}\left(1-\cos2\alpha\cos2\chi\right)$. For the off diagonal entry we multiply out in full,
+            \begin{align*}
+                b\bar{a} &= \left(\sin\alpha\cos\chi+i\cos\alpha\sin\chi\right)\left(\cos\alpha\cos\chi+i\sin\alpha\sin\chi\right) \\
+                &= \sin\alpha\cos\alpha\cos^2\chi+i\sin^2\alpha\sin\chi\cos\chi+i\cos^2\alpha\sin\chi\cos\chi\underbrace{{}+i^2}_{\textcolor{blue}{=\,-1}}\sin\alpha\cos\alpha\sin^2\chi \\
+                &= \sin\alpha\cos\alpha\left(\cos^2\chi-\sin^2\chi\right)+i\sin\chi\cos\chi\underbrace{\left(\sin^2\alpha+\cos^2\alpha\right)}_{\textcolor{red}{=\,1}} \\
+                &= \frac{1}{2}\sin2\alpha\cos2\chi+\frac{i}{2}\sin2\chi ,
+            \end{align*}
+            having grouped the two real terms and the two imaginary ones and used \textcolor{blue}{$2\sin x\cos x=\sin2x$ twice and $\cos^2\chi-\sin^2\chi=\cos2\chi$ once}, and the remaining entry is its conjugate, $a\bar{b}=\overline{b\bar{a}}$. Collecting the four,
+            \begin{equation}\label{eq:ProjectorFromKet}
+                \ket{\alpha;\chi}\bra{\alpha;\chi} = \frac{1}{2}\begin{bmatrix}
+                    1+\cos2\alpha\cos2\chi & \sin2\alpha\cos2\chi-i\sin2\chi \\
+                    \sin2\alpha\cos2\chi+i\sin2\chi & 1-\cos2\alpha\cos2\chi
+                \end{bmatrix} = \frac{1}{2}\left[\sigma_0+\hat{n}\cdot\vec{\sigma}\right],
+            \end{equation}
+            the last equality being read straight off \ref{eq:PauliOptics} with $\hat{n}=\left(\cos2\alpha\cos2\chi,\sin2\alpha\cos2\chi,-\sin2\chi\right)$, which is by \ref{eq:StokesFromAlphaChi} the Stokes vector of $\ket{\alpha;\chi}$ itself. So the brute force multiplication confirms what the Malus subsubsection told us in one line, that a rank one projector is half the identity plus half the Pauli expansion of the state it projects onto, and it confirms it entry by entry.
+
+            Substituting now the angles of the theorem, $\alpha=\theta_1$ and $\chi=\theta_2-\theta_1$, the elliptic polariser stands written in terms of its two mount angles alone,
+            \begin{equation}\label{eq:EllipticPolariserMatrix}
+                \boxed{\;\Pi = \frac{1}{2}\begin{bmatrix}
+                    1+\cos2\theta_1\cos\left(2\theta_2-2\theta_1\right) & \sin2\theta_1\cos\left(2\theta_2-2\theta_1\right)-i\sin\left(2\theta_2-2\theta_1\right) \\[4pt]
+                    \sin2\theta_1\cos\left(2\theta_2-2\theta_1\right)+i\sin\left(2\theta_2-2\theta_1\right) & 1-\cos2\theta_1\cos\left(2\theta_2-2\theta_1\right)
+                \end{bmatrix}\;}
+            \end{equation}
+            or, in the compact Pauli form,
+            \begin{equation}\label{eq:EllipticPolariserPauli}
+                \Pi = \frac{1}{2}\left[\sigma_0+\hat{n}\cdot\vec{\sigma}\right], \qquad \hat{n} = \begin{pmatrix}\cos2\theta_1\cos\left(2\theta_2-2\theta_1\right)\\ \sin2\theta_1\cos\left(2\theta_2-2\theta_1\right)\\ -\sin\left(2\theta_2-2\theta_1\right)\end{pmatrix} .
+            \end{equation}
+            Setting $\theta_2=\theta_1$ makes the two cosines equal to one and the sine vanish, and \ref{eq:EllipticPolariserMatrix} collapses to $\frac{1}{2}\left[\begin{smallmatrix}1+\cos2\theta_1 & \sin2\theta_1\\ \sin2\theta_1 & 1-\cos2\theta_1\end{smallmatrix}\right]$, which is the ordinary linear polariser \ref{eq:LinPolariserMatrix} at $\theta_1$ once the half angle identities are read backwards.
+
+            Three remarks close the construction. The first is about the knobs, and it repeats a pattern we have now seen three times: \textbf{the plates choose the azimuth and the polariser chooses the ellipticity}, since $\alpha=\theta_1$ and $\chi=\theta_2-\theta_1$ depend on the common angle and on the difference separately. Turning the whole mount rigidly rotates the transmitted ellipse without deforming it; turning the polariser alone inside a fixed pair of plates opens the ellipse from a straight line at $\theta_2=\theta_1$, through every intermediate shape, to a circle at $\theta_2=\theta_1\pm\pi/4$, and back. It is the same separation of controls that made the biplate practical, and it is what makes this a usable instrument rather than a curiosity.
+
+            The second is the comparison that this whole subsection was built to make. The state generator of \ref{eq:GeneratorRecipe} and the elliptic polariser \ref{eq:EllipticPolariser} deliver exactly the same catalogue of states, the entire Poincaré sphere, and they do it with a comparable pile of hardware, two plates against two plates and a polariser. They are not interchangeable. The generator is unitary and loses not one photon, but it must be told what state is coming in, and it transforms that state rather than fixing it; feed it something else and it delivers something else. The polariser \ref{eq:EllipticPolariser} does not care in the slightest what arrives, and returns $\ket{\theta_1;\theta_2-\theta_1}$ whether the input is a laser, a lamp or an unpolarised thermal source, at the cost, quantified by the Malus law of the next subsubsection, of throwing away everything that does not match.
+
+            The third is a caveat about colour that honesty requires, because the argument at the head of this subsection praised the polariser for being achromatic. Equation \ref{eq:QuarterWaveCondition} has just made the whole construction depend on a retardance being exactly $\pi/2$, and by \ref{eq:Retardance} that is true at one wavelength only. The elliptic polariser is therefore achromatic in the element at its heart and chromatic in the two that dress it, and its transmitted ellipticity drifts across a broadband spectrum exactly as the state generator's did. What survives untouched at every wavelength is the projector property itself, since \ref{eq:EllipticProjectorSandwich} is Hermitian and idempotent for any $\delta$ whatsoever: broadband light emerges from the device fully polarised at every wavelength, just not in the same state at each.
+
+        \subsubsection{The elliptic Malus law}
+
+            We can now pay the debt left open twice, once when the subsection was introduced and once at the end of the last one, and write down the most general form the law of Malus can take. The arrangement is the oldest in polarisation optics, a polariser followed by an analyser, with the single change that both of them are now the elliptic polarisers \ref{eq:EllipticPolariser} we have just learnt to build rather than the linear ones Malus had. Two identical devices are set to the same pair of parameters $\left(\alpha_p,\chi_p\right)$; a beam in an arbitrary state $\ket{\alpha;\chi}$ falls on the first; and the second is then turned bodily, mount and all, through a complete revolution, $0\leq\theta\leq2\pi$. What does the detector behind it read?
+
+            The first thing to settle is what a rigid rotation does to an elliptic polariser, and the answer is already contained in \ref{eq:EllipticPolariser}. Turning the whole mount by $\theta$ turns every one of the three elements with it, so the two plate angles and the polariser angle all advance together, $\theta_1\to\theta_1+\theta$ and $\theta_2\to\theta_2+\theta$, and the transmitted state becomes
+            \begin{equation}\label{eq:RotatedEllipticPolariser}
+                \ket{\phi(\theta)} = \ket{\theta_1+\theta;\,\left(\theta_2+\theta\right)-\left(\theta_1+\theta\right)} = \ket{\theta_1+\theta;\,\theta_2-\theta_1} = \ket{\alpha_p+\theta;\,\chi_p} ,
+            \end{equation}
+            where \textcolor{red}{the rotation cancels identically inside the second slot}, since the ellipticity is built out of the \textit{difference} of two angles that have both been shifted by the same amount. Equivalently, and this is the general statement for any element, the device is conjugated by a rotator, $\Pi(\theta)=R(\theta)\Pi R(-\theta)$, exactly as in \ref{eq:BodilyRotation}. \textbf{Turning an elliptic polariser advances the azimuth of the state it transmits and leaves its ellipticity frozen}, so that on the Poincaré sphere the transmitted point does not wander freely but travels along a \textit{circle of constant latitude}, the parallel at height $S_3=-\sin2\chi_p$. Everything peculiar about the law we are about to derive comes from that single geometrical fact.
+
+            Next we need the intensity delivered by two projectors in a row, and it is worth doing in general, for an input of any degree of polarisation, because the calculation is no harder. Let $\Pi_1=\ket{\phi_1}\bra{\phi_1}$ and $\Pi_2=\ket{\phi_2}\bra{\phi_2}$ be the two devices in the order the light meets them, so the cascade has got the Jones matrix $J=\Pi_2\Pi_1$, and let $\Phi$ be the polarisation matrix \ref{eq:CoherenceMatrix} of the incident beam. By \ref{eq:IntensityFromCoherence} the transmitted intensity is the trace of the outgoing polarisation matrix,
+            \begin{align}
+                I &= \text{tr}\left(J\Phi J^{\dagger}\right) = \text{tr}\left(\Pi_2\Pi_1\Phi\Pi_1\Pi_2\right) = \text{tr}\left(\underbrace{\Pi_2^2}_{\textcolor{red}{=\,\Pi_2}}\Pi_1\Phi\Pi_1\right) \nonumber \\
+                &= \text{tr}\left(\ket{\phi_2}\bra{\phi_2}\,\ket{\phi_1}\bra{\phi_1}\,\Phi\,\ket{\phi_1}\bra{\phi_1}\right) = \underbrace{\braket{\phi_1|\phi_2}\braket{\phi_2|\phi_1}}_{\textcolor{blue}{\left|\braket{\phi_2|\phi_1}\right|^2}}\;\bra{\phi_1}\Phi\ket{\phi_1} , \label{eq:CascadeFactorisation}
+            \end{align}
+            where we \textcolor{red}{used the cyclic property to bring the last $\Pi_2$ round to the front and collapsed $\Pi_2^2=\Pi_2$}, then wrote every projector as a ket times a bra and \textcolor{blue}{collected the two scalars that fell out of the middle}. \textbf{The cascade factorises exactly}, into one number that depends on the incident light and on the first device and a second number that depends on the two devices alone. Nothing survives of the input in the second factor, which is the algebraic face of the indifference to the input we have been advertising since the beginning of this subsection.
+
+            The first factor is the general Malus law \ref{eq:MalusGeneral} already proved, $\bra{\phi_1}\Phi\ket{\phi_1}=\frac{1}{2}\left(S_0+\hat{n}_p\cdot\vec{S}\right)$, so for a fully polarised input everything reduces to scalar products of unit vectors on the sphere, and those are worth writing out. With $\hat{n}=\left(\cos2\alpha\cos2\chi,\sin2\alpha\cos2\chi,-\sin2\chi\right)$ for the incident state and $\hat{n}_p$ the same expression in $\left(\alpha_p,\chi_p\right)$, multiplying the two triples term by term,
+            \begin{align}
+                \hat{n}_p\cdot\hat{n} &= \cos2\chi_p\cos2\chi\underbrace{\left[\cos2\alpha_p\cos2\alpha+\sin2\alpha_p\sin2\alpha\right]}_{\textcolor{blue}{\cos2\left(\alpha-\alpha_p\right)}}+\left(-\sin2\chi_p\right)\left(-\sin2\chi\right) \nonumber \\
+                &= \cos2\chi\cos2\chi_p\cos2\left(\alpha-\alpha_p\right)+\sin2\chi\sin2\chi_p , \label{eq:SphericalCosines}
+            \end{align}
+            having taken the common factors out of the first two components and \textcolor{blue}{recognised the cosine of a difference}. Equation \ref{eq:SphericalCosines} deserves to be recognised for what it is: reading $2\chi$ as a latitude and $2\alpha$ as a longitude, it is the \textbf{spherical law of cosines}, $\cos\Theta=\sin\varphi_1\sin\varphi_2+\cos\varphi_1\cos\varphi_2\cos\triangle\lambda$, for the great circle arc $\Theta$ joining two points of the Poincaré sphere. The whole of Malus's law is spherical trigonometry.
+
+            The second factor is the same scalar product taken between the two polariser states, which by \ref{eq:RotatedEllipticPolariser} share their latitude and differ only in longitude, by $2\theta$. Putting $\chi=\chi_p$ and $\alpha-\alpha_p=\theta$ into \ref{eq:SphericalCosines},
+            \begin{equation*}
+                \hat{n}_p(\theta)\cdot\hat{n}_p = \cos^22\chi_p\cos2\theta+\sin^22\chi_p ,
+            \end{equation*}
+            and since for two fully polarised states the squared overlap is $\left|\braket{\phi_2|\phi_1}\right|^2=\frac{1}{2}\left(1+\hat{n}_2\cdot\hat{n}_1\right)$, which is \ref{eq:MalusGeneral} with $S_0=1$,
+            \begin{align}
+                \left|\braket{\phi(\theta)|\phi}\right|^2 &= \frac{1}{2}\left[\textcolor{blue}{1+\sin^22\chi_p}+\cos^22\chi_p\cos2\theta\right] = \frac{1}{2}\left[\textcolor{blue}{2-\cos^22\chi_p}+\cos^22\chi_p\cos2\theta\right] \nonumber \\
+                &= 1-\frac{\cos^22\chi_p}{2}\underbrace{\left(1-\cos2\theta\right)}_{\textcolor{blue}{=\,2\sin^2\theta}} = 1-\cos^22\chi_p\,\sin^2\theta , \label{eq:PolariserOverlap}
+            \end{align}
+            where we \textcolor{blue}{replaced $1+\sin^22\chi_p$ by $2-\cos^22\chi_p$}, collected the two terms carrying $\cos^22\chi_p$, and \textcolor{blue}{used the half angle identity $1-\cos2\theta=2\sin^2\theta$}. Multiplying the two factors together gives the law.
+
+            \begin{myteo}
+                \textit{(Elliptic Malus law)}: Let a beam of intensity $S_0$ and Stokes vector $\vec{S}$ fall on an elliptic polariser of parameters $\left(\alpha_p,\chi_p\right)$, and let a second, identical elliptic polariser behind it be turned bodily through the angle $\theta$. The transmitted intensity is
+                \begin{equation}\label{eq:EllipticMalusGeneral}
+                    \boxed{\;I(\theta) = \frac{1}{2}\left(S_0+\hat{n}_p\cdot\vec{S}\right)\left[1-\cos^22\chi_p\,\sin^2\theta\right]\;}
+                \end{equation}
+                and in particular, for a fully polarised incident state $\ket{\alpha;\chi}$ of intensity $I_0$,
+                \begin{equation}\label{eq:EllipticMalus}
+                    \boxed{\;I(\theta) = \frac{I_0}{2}\Big[1+\cos2\chi\cos2\chi_p\cos2\left(\alpha-\alpha_p\right)+\sin2\chi\sin2\chi_p\Big]\Big[1-\cos^22\chi_p\sin^2\theta\Big]\;}
+                \end{equation}
+            \end{myteo}
+
+            Every Malus law written so far is a corner of this one. Setting $\chi_p=0$ makes both polarisers linear, $\cos^22\chi_p=1$ collapses the second bracket to $1-\sin^2\theta=\cos^2\theta$, and the first bracket becomes $1+\cos2\chi\cos2(\alpha-\alpha_p)$, so that \ref{eq:EllipticMalus} reduces to \ref{eq:MalusElliptical} multiplied by $\cos^2\theta$; setting in addition $\chi=0$, so that the incident light is linear too, leaves
+            \begin{equation*}
+                I(\theta) = \frac{I_0}{2}\left[1+\cos2\left(\alpha-\alpha_p\right)\right]\cos^2\theta = I_0\cos^2\left(\alpha-\alpha_p\right)\cos^2\theta ,
+            \end{equation*}
+            which is Malus's own law applied twice in a row, once at the polariser and once at the analyser, exactly as the textbook cascade demands. And since $\sin^2\theta$ has got period $\pi$, \textbf{a full revolution of the mount traverses the curve twice}, the same periodicity we met in the rotating birefringent laws and for the same reason, that a polarisation state is unchanged by a half turn.
+
+            The interesting part of \ref{eq:EllipticMalus} is what happens when the polarisers are \textit{not} linear, because then something the classical experiment takes for granted stops being true. Turning the analyser to $\theta=\pi/2$, the position we would call crossed, the second bracket does not vanish but leaves
+            \begin{equation}\label{eq:ResidualTransmission}
+                \frac{I_{\min}}{I_{\max}} = 1-\cos^22\chi_p = \sin^22\chi_p ,
+            \end{equation}
+            so that \textbf{two identical elliptic polarisers can never be crossed}. A pair set to an ellipticity of $11.25^{\circ}$ still passes fourteen per cent of the light at their darkest, a pair at $22.5^{\circ}$ passes half of it, and a pair of circular polarisers, $\chi_p=\pi/4$, passes everything at every angle and shows no modulation whatsoever, the curve \ref{eq:PolariserOverlap} flattening to a constant. The geometry says exactly why: extinction requires the two transmitted states to be orthogonal, that is antipodal on the sphere, and by \ref{eq:RotatedEllipticPolariser} the rotated state is confined to its parallel of latitude, which contains the antipode of its starting point only when that parallel is the equator. The contrast of the curve, computed as in \ref{eq:MalusVisibility}, decays accordingly,
+            \begin{equation}\label{eq:EllipticMalusContrast}
+                \frac{I_{\max}-I_{\min}}{I_{\max}+I_{\min}} = \frac{1-\sin^22\chi_p}{1+\sin^22\chi_p} = \frac{\cos^22\chi_p}{1+\sin^22\chi_p} ,
+            \end{equation}
+            falling from one for linear polarisers to zero for circular ones. None of this forbids extinction outright: the orthogonal state $\ket{\alpha_p+\pi/2;-\chi_p}$ is perfectly available to an elliptic polariser, by \ref{eq:EllipticPolariser} one only has to set $\theta_1'=\theta_1+\pi/2$ and $\theta_2'=2\theta_1-\theta_2+\pi/2$. What the law forbids is reaching it \textit{by turning the mount}, because a rigid rotation cannot change an ellipticity; the second device has to be taken apart and rebuilt with its internal angle reversed.
+
+            It remains to read the law at the level of single photons, and here the two factors of \ref{eq:CascadeFactorisation} say something worth dwelling on. Dividing by $S_0$, the law gives the probability that one photon crosses the whole apparatus, and by \ref{eq:PhotonRate} that probability, multiplied by the incident flux, is literally the density of clicks the counter behind the analyser registers as the mount turns. That probability is a product,
+            \begin{equation}\label{eq:PhotonProduct}
+                p(\theta) = \underbrace{\frac{1}{2}\left(1+\hat{n}_p\cdot\hat{n}\right)}_{p_1}\cdot\underbrace{\left[1-\cos^22\chi_p\sin^2\theta\right]}_{p_2} ,
+            \end{equation}
+            and a product of probabilities is the signature of two \textit{independent} trials. The independence is not an assumption but a consequence of the projection postulate, and it is the whole content of the factorisation: a photon that survives the first device does not merely pass through it, \textbf{it is reprepared in the state $\ket{\phi_1}$ and loses every memory of the state it arrived in}, so the odds it faces at the second device cannot possibly depend on where it came from. This is why $p_2$ contains neither $\alpha$ nor $\chi$. Classically one would have no right to expect it; a wave that merely had its unwanted component filtered away would still carry some trace of its history.
+
+            The same reading explains the oldest parlour trick in the subject. Two crossed linear polarisers pass nothing, $p=0$; slide a third polariser at $45^{\circ}$ between them and light reappears, with $p=\cos^2\frac{\pi}{4}\cos^2\frac{\pi}{4}=\frac{1}{4}$. Inserting an absorbing element has \textit{increased} the transmission, which is impossible for a filter that only removes and possible only for a device that reprepares, and \ref{eq:CascadeFactorisation} is the formula that permits it, since each projector resets the state that the next one measures.
+
+            The residual transmission \ref{eq:ResidualTransmission} carries the deepest of these readings. At the crossed position the surviving probability is $\sin^22\chi_p=\left|\braket{\phi_2|\phi_1}\right|^2$, the squared overlap of two states that are \textit{not} orthogonal, and a photon prepared in $\ket{\phi_1}$ has that probability of being counted by a device asking whether it is in $\ket{\phi_2}$. The failure to extinguish is therefore not an imperfection of the hardware, which we have assumed ideal throughout, but the statement that \textbf{two non orthogonal quantum states cannot be told apart with certainty}, with the leaked intensity measuring exactly how far from orthogonal the two ellipses are. Perfect extinction, $\braket{\phi_2|\phi_1}=0$, is available only for the antipodal pairs, and it is the same impossibility of discriminating non orthogonal states, exploited on purpose, that makes an eavesdropper detectable in quantum key distribution.
+
+            Finally, the counting statistics repeat the pattern of the previous subsubsection with the two probabilities compounded. Sending $N$ photons one at a time, the number reaching the detector is binomial in $p(\theta)$,
+            \begin{equation*}
+                \left\langle n\right\rangle = N\,p_1p_2 , \qquad \left\langle\left(\triangle n\right)^2\right\rangle = N\,p_1p_2\left(1-p_1p_2\right) ,
+            \end{equation*}
+            so the elliptic Malus curve \ref{eq:EllipticMalus} is the mean of that distribution and nothing else, recovered in the classical limit of large $N$. Written in the language of states rather than intensities, \ref{eq:CascadeFactorisation} reads $p=\left|\braket{\phi_2|\phi_1}\right|^2\bra{\phi_1}\rho\ket{\phi_1}$ with $\rho=\Phi/S_0$ the density matrix, which is the rule for two projective measurements performed one after the other on a qubit. The most general law of Malus is, once more and now in its final form, the measurement postulate of quantum mechanics applied twice.
