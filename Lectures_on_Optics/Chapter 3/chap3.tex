@@ -1701,7 +1701,7 @@
 
             \begin{figure}[ht]
                 \centering
-                \includegraphics[width=0.9\textwidth]{Chapter 3/Figures/EllipticDecomposition.pdf}
+                \includegraphics[width=\textwidth]{Chapter 3/Figures/EllipticDecomposition.pdf}
                 \caption{The decomposition \ref{eq:EllipticDecomposition} of a birefringent with elliptical eigenstates, of retardance $\gamma$ and eigenstate angles $(\alpha,\chi)$, into a birefringent with linear eigenstates of retardance $\delta$ and orientation $\alpha'$ and an optical activity of rotation $\varphi=2\psi$. Figure taken from \citep{pabon2023tunable}.}
                 \label{fig:EllipticDecomposition}
             \end{figure}
@@ -1954,7 +1954,7 @@
             with the bound attained at $\beta=\pm\pi/4$, where the polariser bisects the axes of the plate. \textbf{The reachable states fill a band around the equator and nothing more}, a band whose half width is $\delta/2$ for $0\leq\delta\leq\pi/2$ and $\left(\pi-\delta\right)/2$ beyond it, so that a device built with eighth wave plates, $\delta=\pi/4$, can never produce an ellipse more open than $\chi=\pi/8$, however patiently its three mounts are turned. The circular states sit at $\left|\chi\right|=\pi/4$, the extreme value the ellipticity angle can take, and \ref{eq:EllipticityBand} reaches them only when $\arcsin\left|\sin\delta\right|=\pi/2$. This is the condition we were after, and it is exact in both directions.
 
             \begin{myteo}
-                \textit{(Elliptic polariser)}: The Pellat-Finet chain \ref{eq:EllipticProjectorChain} is an elliptic polariser, that is, its transmitted state covers the entire Poincaré sphere as $\theta_1$ and $\theta_2$ are varied, \textbf{if and only if its two birefringents are quarter wave plates},
+                \textit{(Elliptic polariser)}: The Pellat-Finet chain \ref{eq:EllipticProjectorChain} is an elliptic polariser, that is, its transmitted state covers the entire Poincaré sphere as $\theta_1$ and $\theta_2$ are varied, \textbf{if and only if its two birefringents are quarter wave plates} (see figure \ref{fig:PolEllip}),
                 \begin{equation}\label{eq:QuarterWaveCondition}
                     \left|\sin\delta\right| = 1 \qquad\Longleftrightarrow\qquad \delta = \frac{\pi}{2} \pmod{\pi} .
                 \end{equation}
@@ -1964,6 +1964,13 @@
                 \end{equation}
                 whose transmitted state has got azimuth $\alpha=\theta_1$ and ellipticity $\chi=\theta_2-\theta_1$.
             \end{myteo}
+
+            \begin{figure}[ht]
+                \centering
+                \includegraphics[width = 0.9\textwidth]{Chapter 3/Figures/PolElip.pdf}
+                \caption{Schematic representation of the elliptic polariser which generates any state on the Poincaré Sphere.}
+                \label{fig:PolEllip}
+            \end{figure}
 
             \textit{Proof.} Necessity is \ref{eq:EllipticityBand}: covering the sphere requires in particular reaching its two poles, $\left|\chi\right|=\pi/4$, which forces $\arcsin\left|\sin\delta\right|=\pi/2$ and hence $\left|\sin\delta\right|=1$, that is $\delta=\pi/2$ modulo $\pi$, an odd number of quarter waves. \textcolor{red}{No other retardance can reach the circular states, by however much the plates and the polariser are turned}, since the bound \ref{eq:EllipticityBand} does not involve $\theta_1$ or $\theta_2$ at all.
 
@@ -2025,9 +2032,16 @@
 
         \subsubsection{The elliptic Malus law}
 
+            \begin{figure}[ht]
+                \centering
+                \includegraphics[width = \textwidth]{Chapter 3/Figures/MalusGen.pdf}
+                \caption{Schematic representation of the Generalized elliptic Malus law. There is a source which emmites a polarisation state $\ket{\alpha;\chi}$ which is then proyected on a state $\ket{\alpha_p;\chi_p}$ using an elliptical polariser, then another exactly equal is being spatilly rotated respect to the first one. }
+                \label{fig:MalusGen}
+            \end{figure}
+
             We can now pay the debt left open twice, once when the subsection was introduced and once at the end of the last one, and write down the most general form the law of Malus can take. The arrangement is the oldest in polarisation optics, a polariser followed by an analyser, with the single change that both of them are now the elliptic polarisers \ref{eq:EllipticPolariser} we have just learnt to build rather than the linear ones Malus had. Two identical devices are set to the same pair of parameters $\left(\alpha_p,\chi_p\right)$; a beam in an arbitrary state $\ket{\alpha;\chi}$ falls on the first; and the second is then turned bodily, mount and all, through a complete revolution, $0\leq\theta\leq2\pi$. What does the detector behind it read?
 
-            The first thing to settle is what a rigid rotation does to an elliptic polariser, and the answer is already contained in \ref{eq:EllipticPolariser}. Turning the whole mount by $\theta$ turns every one of the three elements with it, so the two plate angles and the polariser angle all advance together, $\theta_1\to\theta_1+\theta$ and $\theta_2\to\theta_2+\theta$, and the transmitted state becomes
+            The first thing to settle is what a rigid rotation does to an elliptic polariser (see figure \ref{fig:MalusGen}), and the answer is already contained in \ref{eq:EllipticPolariser}. Turning the whole mount by $\theta$ turns every one of the three elements with it, so the two plate angles and the polariser angle all advance together, $\theta_1\to\theta_1+\theta$ and $\theta_2\to\theta_2+\theta$, and the transmitted state becomes
             \begin{equation}\label{eq:RotatedEllipticPolariser}
                 \ket{\phi(\theta)} = \ket{\theta_1+\theta;\,\left(\theta_2+\theta\right)-\left(\theta_1+\theta\right)} = \ket{\theta_1+\theta;\,\theta_2-\theta_1} = \ket{\alpha_p+\theta;\,\chi_p} ,
             \end{equation}
