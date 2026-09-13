@@ -271,7 +271,7 @@
             n_0sin(\theta_0) = n_1sin(\theta_1).
         \end{equation}
 
-        \subsection{The critical angle, and the refraction by a prism}
+        \subsection{The critical angle}
 
             We had deduced the vectorial Snell-Descartes law, which is a strong law and we are going to apply it to some physical situations, but before doing that we are going to talk briefly about where is the physical regime where this law can work on.\\
 
@@ -335,10 +335,83 @@
 
             \begin{figure}[ht]
                 \centering
-                \includegraphics[width=0.6\textwidth]{Chapter 2/Figures/n1<n2.pdf}
+                \includegraphics[width=0.5\textwidth]{Chapter 2/Figures/n1<n2.pdf}
                 \caption{Representation of all the incident and refracted rays from a media with refraction index $n_1$ to another with refraction index $n_2$ such that $n_1<n_2$. The angle $\theta_c$ here separates the rays that will be refracted , (angles less than $\theta_c$), and the rays that will be totally reflected internally.}
                 \label{fig:n1<n2}
             \end{figure}
+
+        \subsection{Refraction by a prism}
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=0.9\textwidth]{Chapter 2/Figures/Prism.pdf}
+                \caption{A prism characterized by the angle $\alpha$.}
+                \label{fig:Prism}
+            \end{figure}
+
+
+            One of the most interesting applications of the Snell-Descartes law is the prism shown in the figure \ref{fig:Prism} a, mayble innocent and simple configuration at first view, however, this prism configurations is used in refractometry to measure refraction indices of many media.
+
+            Lets begin by a prism of angle $\alpha$ and refraction index $n_2$, a ray from a media with refraction index $n_1$ a rau strikes the prism in the point $I$, with an angle $\theta_1$ respect to the normal vector $\hat{N}_I$, the main question is, what is the angle $\beta$? Which represents the relative angle between the incident ray and the out ray?
+
+            The ray in $I$ refractes with an angle $\theta_{1}'$ respect to the normal vector $\hat{N}_I$ and the same ray makes an angle of $\beta_1$ respect to the orientation of the incident ray. 
+            
+            The ray propagates inside the prism and in the point $I'$ the inner ray makes an angle $\theta_{2}'$ respect to the normal vector to the point $I$ given by $\hat{N}_{I'}$ and this inner ray now makes an angle $\beta_2$ respecto to the orientation of the output ray, from the Snell-Descartes law, the angle of the output ray, respect to $\hat{N}_{I'}$ is $\theta_2$.
+
+            Before going further we must find out how the angles $\beta_{1,2}$,$\theta_{1,2}$,$\theta_{1,2}'$, $\beta$ and $\alpha$ are related to then apply the Snell-Descartes law. From a pure geometrical point of view we can see that
+            \begin{align}
+                & \beta_1 = \theta_1 - \theta_1',\\
+                & \beta_2 = \theta_2 - \theta_2'.
+            \end{align}
+
+            Also, from a geometrical point of view we can see that
+            \begin{align}
+                & \beta = \beta_1 + \beta_2 = \left( \theta_1 - \theta_1' \right) - \left(\theta_2 - \theta_2'\right),\\
+                & \beta = \left(\theta_1 - \theta_2\right) - \left(\theta_1' - \theta_2'\right).
+            \end{align}
+
+            Now, to find out the relation with $\alpha$ first we must notiche that both $\hat{N}_I$ and $\hat{N}_{I'}$ are normal vectors of the same prism and is a well known theorem in Euclidean geometry that given any two rects with angle $\alpha$ between them, the intersection of the two rects orthogonal to the first ones also forms an angle $\alpha$. 
+
+            Having on count that theorem and that, from geometrical point of view we can calculate $\alpha$ from the refracted angles as
+            \begin{equation}
+                \alpha = \theta_1' + \theta_2',
+            \end{equation}
+            therefore
+            \begin{equation}
+                \beta = \theta_1 + \theta_2 - \alpha.
+            \end{equation}
+
+            Which is the relation we're looking for, now using the Snell-Descartes law in $I$ and $I'$ we'll have
+            \begin{align}
+                & n_1\sin\theta_1 = n_2\sin\theta_1',\\
+                & n_2\sin\theta_2' = n_1\sin\theta_2,
+            \end{align}
+            solving for $\theta_1$ and $\theta_2$
+            \begin{align}
+                & \theta_1 = \arcsin \left(\frac{n_2}{n_1}\sin\theta_1'\right),\\
+                & \theta_2 = \arcsin \left(\frac{n_2}{n_1} \sin\theta_2'\right),
+            \end{align}
+            thus the angle $\beta$ in its general form is given by
+            \begin{equation}\label{eq:BetaPrismGen}
+                \beta = \arcsin \left(\frac{n_2}{n_1}\sin\theta_1'\right) + \arcsin \left(\frac{n_2}{n_1} \sin\theta_2'\right) - \alpha.
+            \end{equation}
+
+            The expression for $\beta$ in \ref{eq:BetaPrismGen} is not very comfortable, we would like an expression with a bettwe lecture, we are going to assume that the prism angle is very small, this means we're assuming that $\alpha \ll 1 \; [rad]$ which implies that
+            \begin{equation*}
+                \alpha \ll 1 \implies \theta_1 ' + \theta_2 ' \ll 1 \implies \theta_1 ' \approx - \theta_2',
+            \end{equation*}
+            so both $\theta_1',\theta_2'$ are smaller than $1$ radiant and are appromimadetely the same, thus, $\sin \theta_i' \approx \theta_i'$ with $i=1,2$ and the arcsin can be approximated to first order  and, because the $\alpha$ is the sum of the two angles and both have got almost the same magnitude we can say that
+            \begin{equation*}
+                |\theta_1'| \approx |\theta_2'| = \frac{\alpha}{2}, 
+            \end{equation*}
+            thus the angle $\beta$ is given by
+            \begin{align}
+                & \beta \approx \frac{n_2}{n_1}\frac{\alpha}{2} - \frac{n_2}{n_1}\left(\frac{-\alpha}{2}\right) - \alpha,
+            \end{align}
+            \begin{equation}
+                \beta \approx \frac{n_2-n_1}{n_1}\alpha.
+            \end{equation}
+            
 
     \section{The Descartes's ovoid and diopters}
 
