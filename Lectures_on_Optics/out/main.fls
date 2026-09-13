@@ -2,7 +2,7 @@ PWD /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_on_Optics
 INPUT /usr/local/texlive/2026/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT main.tex
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_on_Optics/main.tex
 OUTPUT out/main.log
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
@@ -367,6 +367,11 @@ INPUT ./Chapter 2/Figures/n1<n2.pdf
 INPUT ./Chapter 2/Figures/n1<n2.pdf
 INPUT ./Chapter 2/Figures/n1<n2.pdf
 INPUT ./Chapter 2/Figures/n1<n2.pdf
+INPUT ./Chapter 2/Figures/Prism.pdf
+INPUT ./Chapter 2/Figures/Prism.pdf
+INPUT ./Chapter 2/Figures/Prism.pdf
+INPUT ./Chapter 2/Figures/Prism.pdf
+INPUT ./Chapter 2/Figures/Prism.pdf
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbi1095.tfm
 INPUT ./Chapter 2/Figures/OpticalSystem_1.pdf
 INPUT ./Chapter 2/Figures/OpticalSystem_1.pdf
@@ -626,6 +631,16 @@ INPUT ./Chapter 3/Figures/EllipticBirefringentCone.pdf
 INPUT ./Chapter 3/Figures/EllipticBirefringentCone.pdf
 INPUT ./Chapter 3/Figures/EllipticBirefringentCone.pdf
 INPUT ./Chapter 3/Figures/EllipticBirefringentCone.pdf
+INPUT ./Chapter 3/Figures/PolElip.pdf
+INPUT ./Chapter 3/Figures/PolElip.pdf
+INPUT ./Chapter 3/Figures/PolElip.pdf
+INPUT ./Chapter 3/Figures/PolElip.pdf
+INPUT ./Chapter 3/Figures/PolElip.pdf
+INPUT ./Chapter 3/Figures/MalusGen.pdf
+INPUT ./Chapter 3/Figures/MalusGen.pdf
+INPUT ./Chapter 3/Figures/MalusGen.pdf
+INPUT ./Chapter 3/Figures/MalusGen.pdf
+INPUT ./Chapter 3/Figures/MalusGen.pdf
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
 INPUT ./Chapter 4/chap4.tex
 INPUT ./Chapter 4/chap4.tex
