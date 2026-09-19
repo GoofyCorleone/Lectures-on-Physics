@@ -1,0 +1,669 @@
+\section{Lorenz Gauge and gravitational waves}
+
+    Lets remember how are the conditions of the gravitational field we're working on which is a \textit{theory of weak field} this means we have a flat (Minkowski) space-time but there is a certain perturbation on a region we represent it as $g_{\alpha\beta} = \eta_{\alpha\beta} + h_{\alpha\beta}\;|h_{\alpha\beta}| \ll 1 $. We can do these perturbations on the coordinate charts as $x'^{\alpha} =x^{\alpha} + \xi^{\alpha} $ where $\xi^{\alpha}=\xi^{\alpha}(x^{\alpha}) $ are infinitesimal transformations such that
+
+    \begin{equation}
+        \left|\frac{\partial \xi^{\alpha}}{\partial x^{\beta}} \right| \approx |h_{\alpha\beta}| \rightarrow \left|\frac{\partial \xi^{\alpha}}{\partial x^{\beta}} \right| \ll 1.
+    \end{equation}
+
+    We are looking for a gauge theory that leaves invariant certain quantity, in our case such quantity is the Riemann's tensor, to do it we gotta see how is the behavior of our space-time
+
+    \begin{equation}
+        g'_{\alpha\beta}=g_{\mu\nu}\frac{\partial x^{\mu}}{\partial x'^{\alpha}}\frac{\partial x^{\nu}}{\partial x'^{\beta}},
+    \end{equation}
+
+    \begin{equation}
+        \frac{\partial x^{\mu}}{\partial x'^{\alpha}} = \delta^{\mu}_{\;\alpha} - \frac{\partial \xi^{\mu}}{\partial x^{\nu}}\frac{\partial x^{\nu}}{\partial x'^{\alpha}} = \delta^{\mu}_{\;\alpha}-\frac{\partial \xi^{\mu}}{\partial x^{\nu}}\left(\delta^{\nu}_{\;\alpha}-\frac{\partial \xi^{\nu}}{\partial x^{\rho}}\frac{\partial x^{\rho}}{\partial x'^{\alpha}} \right),
+    \end{equation}
+
+    \begin{equation}\label{eq:deMuaPrimaAlpha}
+        \frac{\partial x^{\mu}}{\partial x'^{\alpha}} = \delta^{\mu}_{\;\alpha}-\frac{\partial \xi^{\mu}}{\partial x^{\alpha}},
+    \end{equation}
+
+    \begin{equation}
+        g'_{\alpha\beta} = g_{\mu\nu}\left(\delta_{\alpha}^{\;\mu} - \frac{\partial \xi^{\mu}}{\partial x^{\alpha}} \right)\left(\delta^{\nu}_{\;\beta} - \frac{\partial \xi^{\nu}}{\partial x^{\beta}} \right) = g_{\alpha\beta} - g_{\alpha\nu}\frac{\partial \xi^{\nu}}{\partial x^{\beta}} - g_{\beta\mu}\frac{\partial \xi^{\mu}}{\partial x^{\alpha}},
+    \end{equation}
+
+    \begin{equation}
+        g'_{\alpha\beta} = \left(\eta_{\alpha\beta} + h_{\alpha\beta} \right) - \eta_{\alpha\nu}\frac{\partial\xi^{\nu}}{\partial x^{\beta}} - \eta_{\beta\mu}\frac{\partial\xi^{\mu}}{\partial x^{\alpha}},
+    \end{equation}
+
+    \begin{equation}
+        g'_{\alpha\beta} = \eta_{\alpha\beta}+h'_{\alpha\beta}\;\rightarrow\; h'_{\alpha\beta} = h_{\alpha\beta} - \eta_{\alpha\nu}\frac{\partial\xi^{\nu}}{\partial x^{\beta}} - \eta_{\beta\mu}\frac{\partial \xi^{\mu}}{\partial x^{\alpha}}.
+    \end{equation}
+
+    % TODO (nota personal): agregar algo sobre teoría de gauge en el electromagnetismo, como anexo o como sección.
+    % Se deja como comentario para que no salga impreso en el libro.
+
+    In analogy to see how transforms the Riemann's tensor, lets first calculate the following transform of the tensor $R'^{\alpha\beta}_{\quad\mu\nu}$ this because it will be easier mathematically calculate in this form and in the end using the Minkowski metric tensor we can lower one index, therefore
+
+    \begin{equation}\label{eq:TransoformandoAndo}
+        R'^{\alpha\beta}_{\quad\mu\nu} = \frac{\partial x'^{\alpha}}{\partial x^{a}}\frac{\partial x'^{\beta}}{\partial x^{b}}\frac{\partial x^c}{\partial x'^{\mu}}\frac{\partial x^{d}}{\partial x'^{\nu}}R^{ab}_{\quad cd}
+    \end{equation}
+
+    we gotta calculate the derivative of the prime coordinates respect to the non primed one , then
+
+    \begin{equation}\label{eq:DePrimaNoPrima}
+        \frac{\partial x'^{\alpha}}{\partial x^{\mu}} = \delta_{\mu}^{\;\alpha} + \frac{\partial \xi^{\alpha}}{\partial x^{\mu}}.
+    \end{equation}
+
+    Using the equation \ref{eq:deMuaPrimaAlpha} and \ref{eq:DePrimaNoPrima} into the equation \ref{eq:TransoformandoAndo} we then have
+
+    \begin{align*}
+        R'^{\alpha\beta}_{\quad\mu\nu} &= \left[\delta_a^{\;\alpha}+\frac{\partial \xi^{\alpha}}{\partial x^a} \right]\left[\delta_b^{\;\beta}+\frac{\partial \xi^{\beta}}{\partial x^b} \right]\left[\delta_{\mu}^{\;c}-\frac{\partial \xi^{c}}{\partial x^{\mu}} \right]\left[\delta_{\nu}^{\;d}-\frac{\partial \xi^{d}}{\partial x^{\nu}} \right]R^{ab}_{\quad cd}\\
+        &= \left[\delta_a^{\;\alpha}\delta_b^{\;\beta} + \delta_a^{\;\alpha}\frac{\partial \xi^{\beta}}{\partial x^b} + \delta_b^{\;\beta}\frac{\partial\xi^{\alpha}}{\partial x^a} \right]\left[\delta_{\mu}^{\;c}\delta_{\nu}^{\;d} - \delta_{\mu}^{\;c}\frac{\partial\xi^{d}}{\partial x^{\nu}} - \delta_{\nu}^{\;d}\frac{\partial\xi^c}{\partial x^{\mu}} \right]R^{ab}_{\quad cd}\\
+        &= \left[\delta_a^{\;\alpha}\delta_b^{\;\beta}\delta_{\mu}^{\;c}\delta_{\nu}^{\;d} - \delta_a^{\;\alpha}\delta_b^{\;\beta}\delta_{\mu}^{\;c}\frac{\partial\xi^d}{\partial x^{\nu}} - \delta_a^{\;\alpha}\delta_b^{\;\beta}\delta_{\nu}^{\;d}\frac{\partial \xi^c}{\partial x^{\mu}} + \delta_a^{\;\alpha}\delta_{\mu}^{\;c}\delta_{\nu}^{\;d}\frac{\partial \xi^{\beta}}{\partial x^b} + \delta_b^{\;\beta}\delta_{\mu}^{\;c}\delta_{\nu}^{\;d}\frac{\partial\xi^{\alpha}}{\partial x^a} \right]R^{ab}_{\quad cd}\\
+        &= R^{\alpha\beta}_{\quad\mu\nu}+\left\{\delta_b^{\;\beta}\delta_{\mu}^{\;c}\left[\delta_{\nu}^{\;d}\frac{\partial\xi^{\alpha}}{\partial x^a} - \delta_a^{\;\alpha}\frac{\partial\xi^d}{\partial x^{\nu}} \right] + \delta_a^{\;\alpha}\delta_{\nu}^{\;d}\left[\delta_{\mu}^{\;c}\frac{\partial \xi^{\beta}}{\partial x^b}-  \delta_b^{\;\beta}\frac{\partial \xi^c}{\partial x^{\mu}} \right] \right\}R^{ab}_{\quad cd}\\
+        &= R^{\alpha\beta}_{\quad\mu\nu}+\left\{\delta_b^{\;\beta}\delta_{\mu}^{\;c}\left[\delta_{\nu}^{\;d}\delta_{a}^{\;\nu} \frac{\partial\xi^{\alpha}}{\partial x^{\nu}} - \delta_a^{\;\alpha}\delta_{\alpha}^{\;d} \frac{\partial\xi^{\alpha}}{\partial x^{\nu}} \right] + \delta_a^{\;\alpha}\delta_{\nu}^{\;d}\left[\delta_{\mu}^{\;c}\delta^{\mu}_{\;b} \frac{\partial \xi^{\beta}}{\partial x^{\mu}}-  \delta_b^{\;\beta}\delta^c_{\;\beta} \frac{\partial \xi^{\beta}}{\partial x^{\mu}} \right] \right\}R^{ab}_{\quad cd}\\
+        &= R^{\alpha\beta}_{\quad\mu\nu}+\left\{\delta_b^{\;\beta}\delta_{\mu}^{\;c}\delta^d_{\;a} \left[\frac{\partial\xi^{\alpha}}{\partial x^{\nu}} - \frac{\partial\xi^{\alpha}}{\partial x^{\nu}} \right] + \delta_a^{\;\alpha}\delta_{\nu}^{\;d}\delta^c_{\;b} \left[\frac{\partial \xi^{\beta}}{\partial x^{\mu}}  - \frac{\partial \xi^{\beta}}{\partial x^{\mu}} \right] \right\}R^{ab}_{\quad cd},
+    \end{align*}
+
+    \begin{align}
+        R'^{\alpha\beta}_{\quad\mu\nu} &= R^{\alpha\beta}_{\quad\mu\nu}\\
+        \eta_{b\beta} R'^{\alpha\beta}_{\quad\mu\nu} &= R'^{\alpha}_{\;b\mu\nu} = \eta_{b\beta} R^{\alpha\beta}_{\quad\mu\nu} = R^{\alpha}_{\;b\mu\nu}  
+    \end{align}
+    Doing the variable change $b = \beta$ we then arrive that the Riemann's tensor keep invariant under these infinitesimal transformations:
+
+    \begin{equation}
+        R'^{\alpha}_{\;\beta\mu\nu} = R^{\alpha}_{\;\beta\mu\nu},
+    \end{equation}
+    and thus
+
+    \begin{equation}
+        R'_{\alpha\beta} = R_{\alpha\beta}
+    \end{equation}
+
+    and the Lorenz gauge, the one we already know from electromagnetism, is
+
+    \begin{equation}
+        \partial_{\alpha}\left(\eta^{\alpha\beta}A_{\beta} \right) = \partial^{\beta}A_{\beta} = 0
+    \end{equation}
+
+    and then by analogy with the electromagnetism $\overline{h}_{\alpha\beta}$ fulfil a Lorenz Gauge as follows
+
+    \begin{equation}
+        \frac{\partial}{\partial x^{\mu}}\left(\eta^{\mu\nu}\overline{h}_{\alpha\nu} \right)=0.
+    \end{equation}
+
+    Well then, in the Einstein's equation  \ref{eq:EinsteinEqHbar} there is the trace and the trace reversed tensors, so we have to calculate their transformed versions too, in this way lets do it
+
+    \begin{equation}
+        h' = h - 2\partial_{\mu}\xi^{\mu},
+    \end{equation}
+
+    \begin{equation}
+        \overline{h}'_{\alpha\beta} = h'_{\alpha\beta} - \frac{1}{2}\eta_{\alpha\beta}h' = h_{\alpha\beta}-\frac{\partial\xi_{\alpha}}{\partial x^{\beta}} - \frac{\partial \xi_{\beta}}{\partial x^{\alpha}} - \frac{1}{2}\eta_{\alpha\beta}\left(h-2\frac{\partial\xi^{\mu}}{\partial x^{\mu}} \right),
+    \end{equation}
+
+    \begin{equation}
+        \overline{h}'_{\alpha\beta}=\overline{h}_{\alpha\beta} - \frac{\partial \xi_{\alpha}}{\partial x^{\beta}} - \frac{\partial \xi_{\beta}}{\partial x^{\alpha}} + \eta_{\alpha\beta}\frac{\partial \xi^{\mu}}{\partial x^{\mu}},
+    \end{equation}
+
+    \begin{equation}
+        W'_{\alpha} = \frac{\partial}{\partial x^{\mu}}\left(\eta^{\mu\nu}\overline{h}'_{\alpha\nu} \right),
+    \end{equation}
+
+    \begin{equation}
+        W'_{\alpha}=\partial_{\mu}\left[\eta^{\mu\nu}\left(\overline{h}_{\alpha\nu} - \partial_{\nu}\xi_{\alpha}-\partial_{\alpha}\xi_{\nu}+\eta_{\alpha\nu}\partial_{\sigma}\xi^{\sigma} \right)\right],
+    \end{equation}
+
+    \begin{equation}
+        W'_{\alpha} = \partial_{\mu}\left[\eta^{\mu\nu}\overline{h}_{\alpha\nu} - \eta^{\mu\nu}\partial_{\nu}\xi_{\alpha} - {\color{red}\partial_{\alpha}\xi^{\mu}} + {\color{red}\delta_{\alpha}^{\;\mu}\partial_{\sigma}\xi^{\sigma}} \right],
+    \end{equation}
+
+    \begin{equation}
+        W'_{\alpha} = W_{\alpha}-\eta^{\mu\nu}\frac{\partial^2\xi_{\alpha}}{\partial x^{\mu}\partial x^{\nu}} \;\rightarrow\;W'_{\alpha} = W_{\alpha}-\Box \xi_{\alpha},
+    \end{equation}
+
+    \begin{equation}
+        W'_{\alpha}=0 \iff W_{\alpha}=\Box\xi_{\alpha}.
+    \end{equation}
+
+    where the two terms marked in red cancel against each other once the derivative is carried out, because mixed partial derivatives commute. We therefore still have the freedom to choose the four functions $\xi_{\alpha}$, and choosing them so that $\Box\xi_{\alpha}=W_{\alpha}$ makes $W'_{\alpha}$ vanish without disturbing the Riemann tensor, which leaves the field equations in the form
+
+    \begin{equation}
+        \Box\overline{h}_{\alpha\beta} = -16\pi T_{\alpha\beta},
+    \end{equation}
+
+    and restoring the units therefore
+
+    \begin{equation}\label{eq:GravWaveEq}
+        \Box\overline{h}_{\alpha\beta}=-\frac{16\pi G}{C^4}T_{\alpha\beta}.
+    \end{equation}
+
+    The equation \ref{eq:GravWaveEq}  is the wave equation for gravitational waves! Lets see how are their solutions, first we are going to analyze the vacuum case $T_{\alpha\beta}=0$ and the simplest  solution would be a traveling monochromatic plane wave as
+
+    \begin{equation}
+        \overline{h}_{\alpha\beta}(x^{\mu}) = A_{\alpha\beta}e^{ik_{\mu}x^{\mu}},
+    \end{equation}
+
+    using this solution in the equation \ref{eq:GravWaveEq} we find that $k_{\alpha}k^{\alpha}=0$ this means the wave vector $k^{\mu}$ is a null or light-like vector, this implies that \textit{the gravitational waves travels at the speed of light in vacuum} and from the  Lorenz Gauge we find this
+
+    \begin{equation}
+        \frac{\partial}{\partial x^{\mu}}\left(\eta^{\mu\nu}A_{\alpha\nu}e^{ik_{\sigma}x^{\sigma}} \right)=0,
+    \end{equation}
+
+    \begin{equation}
+        \eta^{\mu\nu}A_{\alpha\nu}\frac{\partial}{\partial x^{\mu}}e^{ik_{\sigma}x^{\sigma}}=0,
+    \end{equation}
+
+    \begin{equation}
+        \eta^{\mu\nu}A_{\alpha\nu}e^{ik_{\sigma}x^{\sigma}}ik_{\beta}\frac{\partial x^{\beta}}{\partial x^{\mu}} = 0,
+    \end{equation}
+
+    \begin{equation}\label{eq:GravWaveOrto}
+        \eta^{\mu\nu}A_{\alpha\nu}ik_{\mu}e^{ik_{\sigma}x^{\sigma}}=0.
+    \end{equation}
+
+    The equation \ref{eq:GravWaveOrto} means that the wave vector is orthogonal to the amplitude tensor.
+\section{Gravitational waves}
+
+    Here we are going to keep developing the wave equation for the perturbation $h_{\alpha\beta}$ see how are the equations for the perturbations of the coordinates components and we will work with a new Gauge, the called \textit{traceless transverse gauge} and we will find out the gravitational waves have got polarisation properties. \\
+
+    From our Lorenz gauge we had found that $W'_{\alpha} = 0$ but this also means that the perturbations of the coordinates satisfies a wave equation $W_{\alpha}=\Box \xi_{\alpha}$ so we can suppose the most basic solution to this equation is a plane wave, therefore
+
+    \begin{equation}
+        \xi^{\alpha} = B^{\alpha}e^{ik_{\sigma}x^{\sigma}},
+    \end{equation}
+
+    where $B^{\alpha}$ are four infinitesimal constants, and we gotta find them to have a complete solution for the wave equation to do it lets start from the primed and bar perturbation
+
+    \begin{equation}
+        \overline{h}'_{\alpha\beta} = \overline{h}_{\alpha\beta} - \frac{\partial \xi_{\alpha}}{\partial x^{\beta}} - \frac{\partial \xi_{\beta}}{\partial x^{\alpha}} + \eta_{\alpha\beta  }\frac{\partial \xi_{\mu}}{\partial x^{\mu}},
+    \end{equation}
+
+    \begin{equation}
+        \overline{h}'_{\alpha\beta} = A_{\alpha\beta}e^{ik_{\sigma}x^{\sigma}} - iB_{\alpha}k_{\beta}e^{ik_{\sigma}x^{\sigma}} - iB_{\beta}k_{\alpha}e^{ik_{\sigma}x^{\sigma}} + i \eta_{\alpha\beta}k_{\sigma}B^{\sigma} e^{ik_{\sigma}x^{\sigma}} = A'_{\alpha\beta}e^{ik_{\sigma}x^{\sigma}},
+    \end{equation}
+    thus
+
+    \begin{equation}\label{eq:Aprima}
+        A'_{\alpha\beta} = A_{\alpha\beta}  - iB_{\alpha}k_{\beta} - i B_{\beta}k_{\alpha} + i \eta_{\alpha\beta}k_{\sigma}B^{\sigma}.
+    \end{equation}
+
+    \subsection{Traceless transverse gauge}
+
+        Here we are going to choose a new gauge, the \textit{traceless transverse gauge} which will allow us to work as well with $\overline{h}_{\alpha\beta}$ as $h_{\alpha\beta}$ because, as we shall see in a moment, both satisfy the same wave equations. The traceless transverse gauge is:
+
+        \begin{equation}
+            \eta^{\mu\nu}A'_{\mu\nu}=0,
+        \end{equation}
+
+        \begin{equation}
+            A'_{0i} = 0.
+        \end{equation}
+
+        Calculating the Gauge of the equation \ref{eq:Aprima} we have
+
+        \begin{align}
+            \eta^{\mu\nu}A'_{\mu\nu} &= \eta^{\mu\nu}A_{\mu\nu} - i \eta^{\mu\nu}B_{\mu}k_{\nu} - i\eta^{\mu\nu}B_{\nu}k_{\mu} + i \eta^{\mu\nu}\eta_{\mu\nu}k_{\sigma}B^{\sigma}=0,\\
+            A'_{0i} &= A_{0i} - iB_0k_i - iB_ik_0 + \eta_{0i} ik_{\sigma}B^{\sigma} = 0,
+        \end{align}
+
+        \begin{equation}
+            \eta^{\mu\nu}A'_{\mu\nu} = \eta^{\mu\nu}A_{\mu\nu} + 2ik_{\mu}B^{\mu}=0,
+        \end{equation}
+
+        \begin{equation}
+            A_{0i} - iB_0k_i - iB_ik_0=0.
+        \end{equation}
+
+        Or, written in a more convenient way,
+
+        \begin{equation}
+            \eta^{\mu\nu}A_{\mu\nu}=-2ik_{\mu}B^{\mu},
+        \end{equation}
+
+        \begin{equation}
+            B_0k_i + B_ik_0 = -iA_{0i}.
+        \end{equation}
+
+        Now, from the orthogonality condition \ref{eq:GravWaveOrto} we can calculate how are the components of $A_{\mu\nu}$ therefore
+
+        \begin{equation}
+            A_{0\beta}k^{\beta} = A_{00}k^0 + A_{0i}k^i = A_{00}k^0=0 \;\rightarrow A_{00}=0 \;\rightarrow A_{0\alpha}=0,
+        \end{equation}
+
+        \begin{equation}
+            A_{i\beta}k^{\beta}={\color{red}A_{i0}}k^0 + A_{ij}k^j= A_{ij}k^j = 0,
+        \end{equation}
+
+        where the first term has dropped out because the gauge condition $A_{0i}=0$ has already killed it. It is worth reading the surviving statement carefully, because it does \textit{not} say that the spatial amplitudes vanish, which would leave us with no wave at all: what it says is that the amplitude tensor is \textit{transverse}, that is, orthogonal to the direction in which the wave travels, so that a gravitational wave can only shake the two directions perpendicular to its propagation. This is the origin of the word transverse in the name of the gauge.
+
+        Before going further it will be worth to calculate the trace of the perturbation under these gauge, thus
+
+        \begin{equation}
+            \overline{h}_{0\alpha}=0,\qquad \overline{h}=\eta^{\alpha\beta}\overline{h}_{\alpha\beta} = \eta^{\alpha\beta}A_{\alpha\beta}e^{ik_{\sigma}x^{\sigma}}=0 \;\;\longrightarrow\;\; h = -\overline{h} = 0,
+        \end{equation}
+
+        \begin{equation}
+            \overline{h}_{\alpha\beta}=h_{\alpha\beta}.
+        \end{equation}
+
+        Here we can see that using this gauge the wave equation for $h_{\alpha\beta}$ is the same that for $\overline{h}_{\alpha\beta}$ lets write the perturbation in a matrix form under the assumption that the wave travels along the $z$ axis, so that its contravariant wave vector is $k^{\alpha} = [\omega/C,0,0,\omega/C]$ and, lowering the index with the mostly plus metric, $k_{\alpha} = [-\omega/C,0,0,\omega/C]$, thus
+
+        \begin{equation}
+            A_{\alpha\beta}k^{\beta} = A_{\alpha 0}k^0 + A_{\alpha i}k^i = A_{\alpha 0}\frac{\omega}{C} + A_{\alpha z}\frac{\omega}{C}=0 \;\;\longrightarrow\;\; A_{\alpha z} = -A_{\alpha 0} = 0,
+        \end{equation}
+
+        \begin{equation}
+            \eta^{\mu\nu}A_{\mu\nu}=0 \;\rightarrow A_{xx}+A_{yy}=0.
+        \end{equation}
+
+        We now set $A_{xx}=a_{+}$, which is called the \textit{plus mode}, and $A_{xy}=a_{\times}$, which is called the \textit{cross mode}, and since the trace condition forces $A_{yy}=-A_{xx}$ while transversality has already emptied the whole $z$ row and column, the perturbation written in the traceless transverse gauge is
+
+        \begin{equation}\label{eq:hTT}
+            h_{\alpha\beta}^{\quad TT} =
+            \begin{bmatrix}
+                0&0&0&0\\
+                0&h_+&h_{\times}&0\\
+                0&h_{\times}&-h_+&0\\
+                0&0&0&0
+            \end{bmatrix}
+        \end{equation}
+
+        then we can define now the \textit{\textbf{gravitational polarisation modes}} as
+
+        \begin{equation}
+            h_+ = a_+e^{i\omega\left(t - \frac{z}{C} \right)},
+        \end{equation}
+
+        \begin{equation}
+            h_{\times} = a_{\times}e^{i\omega\left(t - \frac{z}{C} \right)}.
+        \end{equation}
+
+        \subsubsection{Polarisation and Stokes parameters for gravitational waves}
+
+            We are going to start from the perturbation under the influence of a traceless transverse gauge \ref{eq:hTT} this because it has got a really familiar form so we have to ask ourselves, \textit{what is the difference between light's polarisation an gravitational polarisation?} Well, lets figure it out.\\
+
+            First, we have to use the fact there is an isomorphism between the vector space $\mathbb{M}_{n\times n}$ (square $n\times n$ matrices) and $\mathbb{R}^{n^2}$, therefore from the perturbation matrix \ref{eq:hTT} we can define our \textit{perturbation state vector}
+
+            \begin{equation}
+                \textbf{h}^{TT} =
+                \begin{bmatrix}
+                    h_+\\
+                    h_{\times}\\
+                    h_{\times}\\
+                    -h_+
+                \end{bmatrix}.
+            \end{equation}
+
+            This vector will tell us the polarisation mode state where our space-time is under the perturbation \ref{eq:hTT} but before going further we must take on count an important fact, $a_+$,$a_{\times}$ must have their own spatial phase because not always $h_+$ and $h_{\times}$ will be on phase or will represent the same oscillation but with different amplitude, both are different, in general, polarisation modes, then if $A_+$,$\phi_+$,$A_{\times}$,$\phi_{\times}$ are their amplitudes and phases respectively then the polarisation mode state vector will be
+
+            \begin{equation}\label{eq:PertVector}
+                \textbf{h}^{TT} =
+                \begin{bmatrix}
+                    A_+e^{i\phi_+}\\
+                    A_{\times}e^{i\phi_{\times}}\\
+                    A_{\times}e^{i\phi_{\times}}\\
+                    -A_+e^{i\phi_+}
+                \end{bmatrix}e^{i\left(\omega t - kz \right)}.
+            \end{equation}
+
+            We have got only two degrees of freedom in the state vector \ref{eq:PertVector} one for the $+$ modes and the other for the $x$ modes, lets see how are they related geometrically. We can see easily the following two equations
+
+            \begin{equation}
+                \frac{a_+}{A_+}e^{-i\phi_{\times}} = e^{i\left(\omega t -kz \right)}e^{i\triangle\phi},\;\; \frac{a_{\times}}{A_{\times}}e^{-i\phi_{+}} = e^{i\left(\omega t - kz\right)}e^{-i\triangle \phi}
+            \end{equation}
+
+            where $\triangle\phi = \phi_+ - \phi_{\times}$ having all of this on count lets calculate the following product
+
+            \begin{equation}
+                \left(\frac{a_+}{A_+}e^{-i\phi_{\times}}-  \frac{a_{\times}}{A_{\times}}e^{-i\phi_+}\right)\left(\frac{a_+}{A_+}e^{-i\phi_{\times}}-  \frac{a_{\times}}{A_{\times}}e^{-i\phi_+}\right)^*,
+            \end{equation}
+
+            \begin{align*}
+                &\left(\frac{a_+}{A_+}e^{-i\phi_{\times}}-  \frac{a_{\times}}{A_{\times}}e^{-i\phi_+}\right)\left(\frac{a_+}{A_+}e^{-i\phi_{\times}}-  \frac{a_{\times}}{A_{\times}}e^{-i\phi_+}\right)^*\\
+                &= \frac{a_+^2}{A_+^2} - \frac{a_+a_{\times}^*}{A_+A_{\times}}e^{i\triangle\phi} - \frac{a_{\times}a_+^*}{A_+A_{\times}}e^{-i\triangle\phi} + \frac{a_{\times}^2}{A_{\times}^2}\\
+                &= \frac{a_+^2}{A_+^2} + \frac{a_{\times}^2}{A_{\times}^2} - 2\frac{\mathrm{Re}\{a_+a_{\times}^*\}}{A_{\times}A_+}\cos\triangle\phi,
+            \end{align*}
+
+            \begin{equation}
+                \left(\frac{a_+}{A_+}e^{-i\phi_{\times}}-  \frac{a_{\times}}{A_{\times}}e^{-i\phi_+}\right)\left(\frac{a_+}{A_+}e^{-i\phi_{\times}}-  \frac{a_{\times}}{A_{\times}}e^{-i\phi_+}\right)^* = \sin^2\triangle\phi
+            \end{equation}
+
+            or joining all
+
+            \begin{equation}\label{eq:Ellipse}
+                \frac{a_+^2}{A_+^2} + \frac{a_{\times}^2}{A_{\times}^2} - 2\frac{\mathrm{Re}\{a_+a_{\times}^*\}}{A_{\times}A_+}\cos\triangle\phi = \sin^2\triangle\phi.
+            \end{equation}
+
+            The polarisation modes describe an hyper-ellipse in the complex plane $\mathbb{C}^2$ in the same way as the light's polarisation! Then this implies the polarisation mode state vector \ref{eq:PertVector} lives, in someway as a vector of this ellipse. Now, we haven't got stationary perturbations, this in the real life usually oscillates very fast and has some kind of time-dependence, under the same calculation we can arrive to an ellipse in the real space (this time taking its real part and ignoring the imaginary part) 
+
+            \begin{equation}
+                \frac{a_+^2(t)}{A_+^2(t)} + \frac{a_{\times}^2(t)}{A_{\times}^2(t)} - 2\frac{a_+(t)a_{\times}(t)}{A_{\times}(t)A_+(t)}\cos\triangle\phi = \sin^2\triangle\phi.
+            \end{equation}
+
+            To solve this problem of the time dependence we can take time averages, why? Because we in fact measure time averages and we, for simplicity, we have suppose monochromatic waves thus
+
+            \begin{equation}\label{eq:EllipseDeT}
+                \frac{\left<a_+^2(t)\right>}{A_+^2} + \frac{\left<a_{\times}^2(t)\right>}{A_{\times}^2} - 2\frac{\left<a_+(t)a_{\times}^*(t)\right>}{A_{\times}A_+}\cos\triangle\phi = \sin^2\triangle\phi
+            \end{equation}
+
+            where
+
+            \begin{equation}
+                \left<a_i(t)a_j(t) \right> = \lim_{T\to\infty} \frac{1}{T}\int_0^Ta_i(t)a_j(t)dt\;i,j=+,x.
+            \end{equation}
+
+            Multiplying the equation \ref{eq:EllipseDeT} by $4A_+^2A_{\times}^2$ we can see that 
+
+            \begin{equation}
+                4A_{\times}^2\left<a_+^2(t)\right> + 4A_+^2\left<a_{\times}^2(t)\right> - 8 A_{\times}A_+\left<a_+(t)a_{\times}(t)\right>\cos\triangle\phi = (2A_+A_{\times}\sin\triangle\phi)^2.
+            \end{equation}
+
+            Because in the perturbation \ref{eq:hTT} we have plane and harmonic waves, is easy to see the time averages are
+
+            \begin{align}
+                \left<a_+(t)^2\right> &= \frac{1}{2}A_+^2\\
+                \left<a_{\times}(t)^2\right> &= \frac{1}{2}A_{\times}^2\\
+                \left<a_+(t)a_{\times}(t)\right> &= \frac{1}{2}A_+A_{\times}\cos\triangle\phi,
+            \end{align}
+
+            substituting these equation in \ref{eq:EllipseDeT} yields to
+
+            \begin{equation}\label{eq:casiStokes}
+                2A_+^2A_{\times}^2 + 2A_+^2A_{\times}^2 - (2A_+A_{\times}\cos\triangle\phi)^2 = (2A_+A_{\times}\sin\triangle\phi)^2,
+            \end{equation}
+
+            Since we want to express the result in terms of a \textit{gravitational intensity}, we use on the left hand side of equation \ref{eq:casiStokes} the algebraic identity ${\color{blue}4A_+^2A_{\times}^2 = \left(A_+^2+A_{\times}^2\right)^2 - \left(A_+^2-A_{\times}^2\right)^2}$, which turns the two leading terms into a difference of perfect squares and gives
+
+            \begin{equation}\label{eq:StokesEq}
+                (A_+^2+A_{\times}^2)^2 - (A_+^2-A_{\times}^2)^2-(2A_+A_{\times}\cos\triangle\phi)^2=(2A_+A_{\times}\sin\triangle\phi)^2,
+            \end{equation}
+
+            or defining the following quantities
+
+            \begin{align}
+                S^G_0 &=A_+^2+A_{\times}^2,\\
+                S^G_1 &= A_+^2-A_{\times}^2,\\
+                S^G_2 &= 2A_+A_{\times}\cos\triangle\phi,\\
+                S^G_3 &= 2A_+A_{\times}\sin\triangle\phi
+            \end{align}
+
+            letting us to write the equation \ref{eq:StokesEq} as
+
+            \begin{equation}
+                (S^G_0)^2 = (S^G_1)^2 + (S^G_2)^2 + (S^G_3)^2
+            \end{equation}
+
+            this is the same equation for the Stokes parameters for a well polarised light beam. The analogy can be pushed one step further, because exactly as in optics the three parameters $S^G_1$, $S^G_2$ and $S^G_3$ can be read as the Cartesian coordinates of a point in an abstract space, and the relation we have just derived says that for a perfectly polarised wave that point is forced to lie on a sphere of radius $S^G_0$. This is the \textit{Poincar\'e sphere} of the gravitational field, drawn in figure \ref{fig:PoincareSphere}, and a partially polarised signal, which is what a real detector buried in noise actually records, falls strictly inside the sphere rather than on its surface, the ratio between the two radii being what in optics is called the degree of polarisation.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=0.85\textwidth]{Chapter 5/Figures/Distribution.pdf}
+                \caption{The Poincar\'e sphere built out of the gravitational Stokes parameters $S^G_1$, $S^G_2$ and $S^G_3$. A perfectly polarised wave is a single point on the surface of the sphere, while the colour scale gives the degree of polarisation of the distribution of states, which for a partially polarised signal places the point strictly inside the sphere.}
+                \label{fig:PoincareSphere}
+            \end{figure}
+
+        \subsubsection{Helicity, and why gravitational polarisation is not optical polarisation}
+
+            We opened the previous subsection by asking what the difference is between the polarisation of light and the polarisation of a gravitational wave, and having found that the two obey the very same Stokes relation the reader would be forgiven for concluding that there is no difference at all. There is one, it is fundamental, and it shows itself the moment we ask not what the polarisation states look like but how they behave when we rotate the apparatus that measures them.
+
+            Let us therefore rotate our frame by an angle $\vartheta$ about the direction in which the wave travels, which we have taken to be the $z$ axis, so that the two transverse coordinates mix among themselves according to
+
+            \begin{equation}\label{eq:RotationMatrix}
+                \mathbb{R} =
+                \begin{bmatrix}
+                    \cos\vartheta & \sin\vartheta\\
+                    -\sin\vartheta & \cos\vartheta
+                \end{bmatrix}.
+            \end{equation}
+
+            The amplitude of the wave is a tensor of rank two, not a vector, so it needs one copy of the rotation matrix for each of its two indices, which is to say $h' = \mathbb{R}\,h\,\mathbb{R}^{T}$. Writing out the transverse block of the perturbation \ref{eq:hTT} and multiplying the three matrices together,
+
+            \begin{align*}
+                h' &=
+                \begin{bmatrix}
+                    \cos\vartheta & \sin\vartheta\\
+                    -\sin\vartheta & \cos\vartheta
+                \end{bmatrix}
+                \begin{bmatrix}
+                    h_+ & h_{\times}\\
+                    h_{\times} & -h_+
+                \end{bmatrix}
+                \begin{bmatrix}
+                    \cos\vartheta & -\sin\vartheta\\
+                    \sin\vartheta & \cos\vartheta
+                \end{bmatrix},
+            \end{align*}
+
+            and carrying out the two products one after the other, the entry in the first row and first column comes out as
+
+            \begin{align*}
+                h'_{+} &= \cos\vartheta\left(h_+\cos\vartheta + h_{\times}\sin\vartheta\right) + \sin\vartheta\left(h_{\times}\cos\vartheta - h_+\sin\vartheta\right)\\
+                &= h_+\left({\color{blue}\cos^2\vartheta - \sin^2\vartheta}\right) + h_{\times}\left({\color{blue}2\sin\vartheta\cos\vartheta}\right) = h_+\cos2\vartheta + h_{\times}\sin2\vartheta,
+            \end{align*}
+
+            where we have used the two double angle identities marked in blue, and the entry in the first row and second column comes out, by exactly the same route, as
+
+            \begin{align*}
+                h'_{\times} &= \cos\vartheta\left(h_{\times}\cos\vartheta - h_+\sin\vartheta\right) - \sin\vartheta\left(h_{\times}\sin\vartheta + h_+\cos\vartheta\right)\\
+                &= h_{\times}\left({\color{blue}\cos^2\vartheta-\sin^2\vartheta}\right) - h_+\left({\color{blue}2\sin\vartheta\cos\vartheta}\right) = -h_+\sin2\vartheta + h_{\times}\cos2\vartheta,
+            \end{align*}
+
+            while the remaining two entries add nothing new, since the matrix stays symmetric and traceless as it must. The cleanest way to read these two results is to combine them into a single complex amplitude, which gives
+
+            \begin{align*}
+                h'_+ + ih'_{\times} &= h_+\left(\cos2\vartheta - i\sin2\vartheta\right) + h_{\times}\left(\sin2\vartheta + i\cos2\vartheta\right)\\
+                &= h_+\,{\color{blue}e^{-2i\vartheta}} + h_{\times}\,{\color{blue}ie^{-2i\vartheta}},
+            \end{align*}
+
+            so that finally
+
+            \begin{equation}\label{eq:Helicity2}
+                h'_+ + ih'_{\times} = e^{-2i\vartheta}\left(h_+ + ih_{\times}\right).
+            \end{equation}
+
+            Equation \ref{eq:Helicity2} is the whole answer, and it is worth comparing it at once with the corresponding statement for light. The electric field is a vector and therefore carries a single index, so under the same rotation it picks up a single copy of the rotation matrix, and the identical manipulation gives
+
+            \begin{equation}\label{eq:Helicity1}
+                E'_x + iE'_y = e^{-i\vartheta}\left(E_x + iE_y\right).
+            \end{equation}
+
+            The two expressions differ by nothing except a factor of two in the exponent, and that factor of two is the difference between electromagnetism and gravitation. A field whose polarisation state acquires a phase $e^{-is\vartheta}$ under a rotation by $\vartheta$ about its direction of propagation is said to have \textit{helicity} $s$, so light has helicity one and the gravitational wave has helicity two, and in the quantum language this is the statement that the photon is a particle of spin one while the graviton, should it exist, must be a particle of spin two.
+
+            Three consequences follow immediately and all three are measurable. The first is that rotating the apparatus by half a turn, $\vartheta=\pi$, leaves the gravitational amplitude exactly as it was, since $e^{-2i\pi}=1$, whereas the electric field would have been reversed, so that \textbf{a gravitational wave repeats itself every $180$ degrees while light needs a full $360$}. The second is that setting $\vartheta = \pi/4$ turns $h_+$ into $h_{\times}$ and $h_{\times}$ into $-h_+$, so the two linear polarisation states of a gravitational wave are separated by forty five degrees and not by the ninety degrees that separate the two linear polarisations of light, which is precisely why the plus and the cross patterns look rotated into one another by half a right angle. The third concerns the Poincaré sphere of figure \ref{fig:PoincareSphere}: since the Stokes parameters are quadratic in the amplitudes, a rotation of the amplitudes by $2\vartheta$ carries $S^G_1$ and $S^G_2$ around the $S^G_3$ axis by $4\vartheta$, twice as fast as the corresponding rotation in optics, so the gravitational Poincaré sphere is traversed at double the optical rate.
+
+            The same factor of two is also the reason behind the quadrupolar pattern we promised to explain. A field of helicity two cannot have a monopole or a dipole moment radiating, because those would transform with helicity zero and one respectively, and the lowest multipole that carries helicity two is the quadrupole. We shall see that statement emerge again, from an entirely different direction, when we come to the generation of waves in the next section.
+
+    \subsection{Effects of the gravitational radiation on the matter}
+
+        To study the effects of the gravitational radiation under the traceless transverse gauge we are going to suppose a particle $A$ which interacts only gravitationally and follows a geodesic parameterized with its proper time $\tau$ this particle stays at rest at the origin of coordinates, this means its world line will be a vertical line, therefore given a coordinate chart its coordinates are
+
+        \begin{equation}
+            X^0_{\;A}(\tau)=C t,\;\;\&\;\; X^i_{\;A}(\tau)=0,
+        \end{equation}
+
+        lets solve its geodesic equation
+
+        \begin{equation}
+            \frac{d^2X_A^{\;\alpha}}{d\tau^2} + \Gamma^{\alpha}_{\;\mu\nu}\Dot{x}_A^{\;\mu}\Dot{x}_A^{\;\nu}=0
+        \end{equation}
+
+        where
+
+        \begin{equation}
+            \Gamma^0_{\;\beta\gamma}=-\frac{1}{2}\left(h_{0\gamma,\beta} + h_{0\beta,\gamma}-h_{\gamma\beta,0} \right),
+        \end{equation}
+
+        \begin{equation}
+            \Gamma^i_{\;\beta\gamma}=\frac{1}{2}\left(h_{i\gamma,\beta} + h_{i\beta,\gamma} - h_{\gamma\beta,i} \right).
+        \end{equation}
+
+        Using the TTG
+
+        \begin{align}
+            \Gamma^0_{\;\beta\gamma}&=\frac{1}{2C}h^{TT}_{\quad\gamma\beta,t},\\
+            \Gamma^0_{\;0\alpha}&=0,\\
+            \Gamma^0_{\;ij}&=\frac{1}{2C}h^{TT}_{\quad ij,t},\\
+            \Gamma^i_{\;00}&=0,\\
+            \Gamma^i_{\;0j}&=\frac{1}{2C}h^{TT}_{\quad ij,t},\\
+            \Gamma^i_{\;jk}&=\frac{1}{2}\left(h^{TT}_{\quad ik,j} + h^{TT}_{\quad ji,k}  - h^{TT}_{\quad jk,i}\right).
+        \end{align}
+
+        Putting these symbols into the geodesic equation for a particle initially at rest, every term on the left hand side vanishes, and therefore a particle that starts at rest in these coordinates stays at the same coordinate values for ever. This result is famous for being misread, so it is worth stating what it does and does not mean. It does \textbf{not} mean that the wave has no effect on the particle, it means that the traceless transverse coordinates are comoving with the free particles, so that the coordinates themselves are dragged along and the coordinate positions stop being informative. What a detector actually measures is the proper distance between two such particles, and that distance is computed with the metric, which is precisely what the wave is modulating, so the separation does oscillate even though the coordinates do not change. We shall see that the pattern of that oscillation is quadrupolar, which is the deep reason a gravitational wave stretches one transverse direction while squeezing the other.
+
+        
+
+\section{The generation of gravitational waves}
+
+    Everything we have done so far has described a wave that was already there, travelling through empty space, and we have said nothing whatever about where it came from. That is the question we take up now, and it is the question that decides whether the whole subject is observational physics or merely an elegant exercise, because a wave nobody can produce is a wave nobody can detect. The answer, which Einstein worked out in 1918 after correcting an error in his own paper of two years earlier \citep{einstein1918}, is that gravitational radiation is generated by the second time derivative of the quadrupole moment of the source, and the purpose of this section is to derive that statement and then to ask how much energy such a source loses.
+
+    \subsection{The retarded solution of the wave equation}
+
+        We begin again from the field equations in the Lorenz gauge, which we obtained in equation \ref{eq:GravWaveEq} and which we now keep with their source term rather than setting it to zero,
+
+        \begin{equation}\label{eq:SourcedWave}
+            \Box\overline{h}_{\mu\nu} = -\frac{16\pi G}{C^4}T_{\mu\nu},\qquad \Box = -\frac{1}{C^2}\frac{\partial^2}{\partial t^2} + \nabla^2.
+        \end{equation}
+
+        Equation \ref{eq:SourcedWave} is a set of ten uncoupled wave equations, each of them with a source, and it is exactly the equation that electromagnetism hands us for the vector potential in the same gauge, so we may borrow the solution wholesale. Writing it in the form $\Box\overline{h}_{\mu\nu} = -4\pi S_{\mu\nu}$ with
+
+        \begin{equation}
+            S_{\mu\nu} = \frac{4G}{C^4}T_{\mu\nu},
+        \end{equation}
+
+        the retarded Green function of the d'Alembertian gives
+
+        \begin{equation}\label{eq:RetardedSolution}
+            \overline{h}_{\mu\nu}(t,\Vec{x}) = \frac{4G}{C^4}\int\frac{T_{\mu\nu}\left(t - \frac{|\Vec{x}-\Vec{x}'|}{C},\;\Vec{x}'\right)}{|\Vec{x}-\Vec{x}'|}\,d^3x'.
+        \end{equation}
+
+        The physical content of equation \ref{eq:RetardedSolution} is worth stating in words before we do anything with it, because it is the precise statement of what Newton could not have. The field at the point $\Vec{x}$ and at the time $t$ does not depend on where the matter is now, it depends on where the matter was at the earlier time $t - |\Vec{x}-\Vec{x}'|/C$, which is to say at the moment when a signal leaving the source would have had to set out in order to arrive here now. Gravity propagates, and it propagates at the speed of light, and the instantaneous action at a distance that so disturbed Newton in the letter we quoted in chapter 1 has finally disappeared from the theory.
+
+        We are interested in the field far from the source, in what is called the \textit{wave zone}, so let $r=|\Vec{x}|$ be the distance from the source to the observer and suppose that the source is small and confined, so that $|\Vec{x}'|\ll r$ for every point of it. To leading order we may then replace $|\Vec{x}-\Vec{x}'|$ by $r$ in both places where it appears, in the denominator because the correction is of relative order $|\Vec{x}'|/r$, and inside the retarded time because the light travel time across the source is short compared with the time scale on which the source itself changes, an approximation which amounts to demanding that the source move slowly compared with light. With that,
+
+        \begin{equation}\label{eq:FarField}
+            \overline{h}_{\mu\nu}(t,\Vec{x}) \approx \frac{4G}{C^4r}\int T_{\mu\nu}\left(t-\frac{r}{C},\;\Vec{x}'\right)d^3x',
+        \end{equation}
+
+        and the whole problem has been reduced to computing three volume integrals of the energy momentum tensor, one for each kind of index.
+
+    \subsection{Why there is no monopole and no dipole radiation}
+
+        Before evaluating the spatial integral, which is the one that will give us the answer, it pays to look at the other two, because what they give us is nothing, and the reason they give us nothing is one of the most instructive facts in the whole theory.
+
+        Consider first the purely temporal component. The integral appearing in equation \ref{eq:FarField} is
+
+        \begin{equation}
+            \int T^{00}\,d^3x' = C^2\int\rho\, d^3x' = MC^2,
+        \end{equation}
+
+        which is nothing other than the total energy of the source, and conservation of the energy momentum tensor tells us at once that it cannot change. Indeed, taking the temporal component of $\partial_{\mu}T^{\mu\nu}=0$ and integrating over all space,
+
+        \begin{align*}
+            \frac{1}{C}\frac{d}{dt}\int T^{00}d^3x &= -\int \partial_iT^{i0}\,d^3x = -\oint_{\Sigma} T^{i0}\,dS_i = {\color{red}0},
+        \end{align*}
+
+        where the volume integral of a divergence has been turned into a surface integral by the divergence theorem, and that surface integral vanishes because the source is confined and $T^{\mu\nu}$ is zero on a surface far enough out. The total mass is therefore a constant, and a constant produces a static field and not a wave. This is the statement that \textbf{there is no monopole gravitational radiation}, and it is the exact counterpart of the statement in electromagnetism that a spherically symmetric pulsating charge radiates nothing, which we already met from the geometrical side as Birkhoff's theorem in chapter 4.
+
+        Now the mixed component, whose integral is
+
+        \begin{equation}
+            \int T^{0i}d^3x' = C\,P^i,
+        \end{equation}
+
+        the total momentum of the source, and the spatial component of the conservation law treats it exactly as before,
+
+        \begin{align*}
+            \frac{1}{C}\frac{d}{dt}\int T^{0i}d^3x &= -\int\partial_jT^{ji}d^3x = -\oint_{\Sigma}T^{ji}dS_j = {\color{red}0},
+        \end{align*}
+
+        so the total momentum is conserved too and this component is static as well. It is worth pausing on how different this is from electromagnetism, because the contrast is the whole point. The electromagnetic dipole moment is $\Vec{d}=\sum_a q_a\Vec{r}_a$, and there is nothing in Maxwell's theory to stop it oscillating, since positive and negative charges can perfectly well move in opposite directions, which is exactly what an antenna is built to do and why dipole radiation dominates the electromagnetic world. The gravitational analogue of the dipole moment is $\sum_a m_a\Vec{r}_a = M\Vec{R}_{cm}$, and its second derivative is
+
+        \begin{equation}
+            \frac{d^2}{dt^2}\left(M\Vec{R}_{cm}\right) = \frac{d\Vec{P}}{dt} = 0,
+        \end{equation}
+
+        which vanishes identically because momentum is conserved and because, crucially, there is no negative mass with which to build a gravitational antenna. \textbf{Conservation of momentum forbids dipole gravitational radiation}, and the same argument applied to the antisymmetric part of the second moment forbids the magnetic dipole term too, since the quantity that would have to oscillate there is the total angular momentum, which is also conserved. The first multipole left standing is the quadrupole, exactly as the helicity argument of the previous section predicted, and this is why gravitational radiation is so much feebler than electromagnetic radiation and why it took a century to detect.
+
+    \subsection{The quadrupole formula}
+
+        Everything therefore hangs on the spatial integral $\int T^{ij}d^3x$, and at first sight there is no reason it should be related to anything familiar. That it is, is the content of a small and rather beautiful identity which follows from the conservation law used twice.
+
+        Start from the two components of $\partial_{\mu}T^{\mu\nu}=0$, written out with $x^0=Ct$,
+
+        \begin{align}
+            \frac{1}{C}\frac{\partial T^{00}}{\partial t} + \partial_iT^{i0} &= 0,\\
+            \frac{1}{C}\frac{\partial T^{0j}}{\partial t} + \partial_iT^{ij} &= 0,
+        \end{align}
+
+        and differentiate the first with respect to time once more, then use the second to eliminate the mixed component,
+
+        \begin{align*}
+            \frac{1}{C^2}\frac{\partial^2 T^{00}}{\partial t^2} &= -\frac{1}{C}\frac{\partial}{\partial t}\partial_iT^{i0} = -\partial_i\left({\color{blue}\frac{1}{C}\frac{\partial T^{0i}}{\partial t}}\right) = -\partial_i\left({\color{blue}-\partial_jT^{ji}}\right) = \partial_i\partial_jT^{ij}.
+        \end{align*}
+
+        Multiply both sides by $x^kx^l$ and integrate over all space. On the left we obtain the second time derivative of the second moment of the energy density, and on the right we integrate by parts twice, throwing away both surface terms because the source is confined,
+
+        \begin{align*}
+            \int\left(\partial_i\partial_jT^{ij}\right)x^kx^l\,d^3x &= \int T^{ij}\,\partial_i\partial_j\left(x^kx^l\right)d^3x.
+        \end{align*}
+
+        The derivatives of the product are elementary, and this is the step that produces the factor of two,
+
+        \begin{align*}
+            \partial_j\left(x^kx^l\right) &= \delta_j^{\;k}x^l + x^k\delta_j^{\;l},\\
+            \partial_i\partial_j\left(x^kx^l\right) &= \delta_j^{\;k}\delta_i^{\;l} + \delta_i^{\;k}\delta_j^{\;l},
+        \end{align*}
+
+        so that, substituting back and letting the two Kronecker deltas do their work,
+
+        \begin{align*}
+            \int T^{ij}\left(\delta_j^{\;k}\delta_i^{\;l} + \delta_i^{\;k}\delta_j^{\;l}\right)d^3x &= \int\left(T^{lk} + T^{kl}\right)d^3x = {\color{blue}2}\int T^{kl}d^3x,
+        \end{align*}
+
+        where the last equality uses the symmetry of the energy momentum tensor. Putting the two sides together and introducing the second mass moment of the source,
+
+        \begin{equation}\label{eq:MassMoment}
+            I^{kl}(t) = \int \rho\left(t,\Vec{x}\right)x^kx^l\,d^3x,
+        \end{equation}
+
+        and remembering that $T^{00}=\rho C^2$, the two factors of $C^2$ cancel and we are left with the identity we were after,
+
+        \begin{equation}\label{eq:StressMomentIdentity}
+            \int T^{kl}\,d^3x = \frac{1}{2}\frac{d^2I^{kl}}{dt^2}.
+        \end{equation}
+
+        There is something almost unreasonable about equation \ref{eq:StressMomentIdentity}. On the left sits an integral of stresses, of pressures and shears inside the source, quantities that depend on the detailed internal constitution of the star or the binary, and on the right sits nothing but the second derivative of how the mass is distributed in space. All the complicated internal physics has cancelled, and it has cancelled because of the conservation law alone.
+
+        Substituting equation \ref{eq:StressMomentIdentity} into the far field expression \ref{eq:FarField} gives the result we have been working towards,
+
+        \begin{equation}\label{eq:QuadrupoleFormula}
+            \overline{h}^{ij}(t,\Vec{x}) = \frac{4G}{C^4r}\cdot\frac{1}{2}\frac{d^2I^{ij}}{dt^2} = \frac{2G}{C^4r}\,\ddot{I}^{ij}\left(t-\frac{r}{C}\right),
+        \end{equation}
+
+        which is the \textit{quadrupole formula}. To obtain the physical wave one still has to project onto the traceless transverse gauge, discarding the trace and the components along the direction of propagation exactly as we did in the previous section, and since the projection removes the trace anyway one may equally well write the formula in terms of the traceless quadrupole moment
+
+        \begin{equation}
+            Q^{ij} = I^{ij} - \frac{1}{3}\delta^{ij}\,\delta_{kl}I^{kl},
+        \end{equation}
+
+        which gives the same answer, so that $h^{TT}_{ij} = \frac{2G}{C^4r}\ddot{Q}^{TT}_{ij}$.
+
+        Three readings of equation \ref{eq:QuadrupoleFormula} are worth carrying away. The amplitude falls off as $1/r$ and not as $1/r^2$, which is what makes distant sources detectable at all and is the signature of a genuine radiation field rather than a near field. The amplitude is governed by $\ddot{I}$, so a source whose mass distribution moves but does not change shape, a perfectly spherical star collapsing or a rigid body rotating about its symmetry axis, radiates nothing whatever, and this is why an axisymmetric pulsar is gravitationally silent while a deformed one is not. And the prefactor $G/C^4$ is the same absurdly small number we met when we fixed the coupling constant in chapter 3, which is the honest reason the strains we are chasing are of order $10^{-21}$.
+
+    \subsection{The energy carried away by the waves}
+
+        A wave that does no work is a mathematical curiosity, so the last question of this chapter is how much energy a gravitational wave carries, and here we run immediately into a difficulty of principle that has no counterpart in electromagnetism. The equivalence principle says that at any single event we may choose a freely falling frame in which the gravitational field vanishes, and if the field can be transformed away at a point then so can any energy density we try to attribute to it at that point. There is therefore no meaningful local energy density of the gravitational field, and any expression claiming to be one is a coordinate artefact.
+
+        What does survive is an average. If we average over a region several wavelengths across, larger than the wave but much smaller than the scale on which the background curves, the result is well defined and behaves exactly as an energy momentum tensor should. This is the construction due to Isaacson \citep{isaacson1968}, and for a wave in the traceless transverse gauge it reads
+
+        \begin{equation}\label{eq:Isaacson}
+            t_{\mu\nu} = \frac{C^4}{32\pi G}\left\langle \partial_{\mu}h^{TT}_{ij}\,\partial_{\nu}h^{TT\,ij}\right\rangle,
+        \end{equation}
+
+        where the angle brackets denote precisely that average over several wavelengths. The object $t_{\mu\nu}$ is not a tensor under general coordinate changes, which is the mathematical way of saying what the equivalence principle already told us, but it is a perfectly good tensor under the Lorentz transformations of the flat background, and that is enough to compute a flux.
+
+        The energy crossing unit area per unit time in the radial direction is the component $t_{0r}$, and integrating it over a large sphere surrounding the source, then substituting the quadrupole formula \ref{eq:QuadrupoleFormula} and performing the angular integral that the traceless transverse projection leaves behind, one arrives at the luminosity
+
+        \begin{equation}\label{eq:QuadrupoleLuminosity}
+            L = -\frac{dE}{dt} = \frac{G}{5C^5}\left\langle \dddot{Q}_{ij}\,\dddot{Q}^{ij}\right\rangle,
+        \end{equation}
+
+        which is the gravitational analogue of the Larmor formula of electrodynamics, with the third derivative of the quadrupole moment playing the part that the second derivative of the dipole moment plays there.
+
+        The constant in front of equation \ref{eq:QuadrupoleLuminosity} deserves the same treatment we gave the coupling constant of the field equations. The combination $C^5/G$ has the dimensions of a power and is worth about $3.6\times10^{52}$ watts, a quantity sometimes called the Planck luminosity, and since the luminosity of any source is that enormous number multiplied by the square of a dimensionless third derivative, two things follow at once and they seem to contradict each other. On the one hand almost nothing radiates measurably, because for ordinary matter that dimensionless factor is minute. On the other hand a source that is both very compact and very asymmetric, such as two black holes in their final orbits, can drive the factor towards unity, and in the last fraction of a second before they merge such a pair momentarily outshines, in gravitational waves, the entire electromagnetic output of the observable universe. Both statements are consequences of the same formula, and the reconciliation is simply that the energy is spread over cosmological distances by the time it reaches us.
+
+        Equation \ref{eq:QuadrupoleLuminosity} was not merely believed, it was tested, and tested long before any wave was detected directly. In 1974 Russell Hulse and Joseph Taylor discovered a pulsar in a binary orbit with another neutron star \citep{hulse1975}, a system whose orbital period is now known to extraordinary precision, and that period is shrinking year by year at exactly the rate the quadrupole formula predicts for a pair of masses losing energy to gravitational radiation. The agreement is better than a fraction of a percent, it earned the Nobel Prize of 1993, and it meant that when the detectors of chapter 1 finally recorded a passing wave in 2015 nobody seriously doubted what they were looking at.

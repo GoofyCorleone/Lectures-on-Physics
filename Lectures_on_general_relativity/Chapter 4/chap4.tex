@@ -1,669 +1,817 @@
-\section{Lorenz Gauge and gravitational waves}
+\section{The Schwarzschild solution}
 
-    Lets remember how are the conditions of the gravitational field we're working on which is a \textit{theory of weak field} this means we have a flat (Minkowski) space-time but there is a certain perturbation on a region we represent it as $g_{\alpha\beta} = \eta_{\alpha\beta} + h_{\alpha\beta}\;|h_{\alpha\beta}| \ll 1 $. We can do these perturbations on the coordinate charts as $x'^{\alpha} =x^{\alpha} + \xi^{\alpha} $ where $\xi^{\alpha}=\xi^{\alpha}(x^{\alpha}) $ are infinitesimal transformations such that
+    The previous chapter left the Einstein field equations standing as ten coupled, non linear partial differential equations for ten unknown functions of four variables, with no general method available for solving them and with a weak field programme half finished, waiting for a gauge choice we had only just begun to set up. That programme will be picked up again in due course, because it is what eventually hands us gravitational radiation, but it is not the natural place to start, and history did not start there either. Within six weeks of Einstein publishing his equations in November 1915, Karl Schwarzschild had already found an exact solution, in closed form, while serving on the Russian front, as we recounted in chapter 1 \citep{schwarzschild1916}. The reason such a thing is possible so soon is that symmetry is enormously powerful: if we demand from the outset that the space-time be static and spherically symmetric, the ten unknown functions collapse to two functions of a single variable, and the field equations collapse with them into ordinary differential equations that can be integrated by hand. This chapter is devoted to solutions of exactly that kind, exact and closed form, found by imposing enough symmetry on Einstein's equations to solve them outright rather than merely to linearise them, and it begins with the solution that started it all.
 
-    \begin{equation}
-        \left|\frac{\partial \xi^{\alpha}}{\partial x^{\beta}} \right| \approx |h_{\alpha\beta}| \rightarrow \left|\frac{\partial \xi^{\alpha}}{\partial x^{\beta}} \right| \ll 1.
-    \end{equation}
+    \subsection{The ansatz}
 
-    We are looking for a gauge theory that leaves invariant certain quantity, in our case such quantity is the Riemann's tensor, to do it we gotta see how is the behavior of our space-time
+        We are looking for the geometry outside a spherical star, so we impose two physical requirements on the metric. The first is that the space-time be \textit{static}, meaning that nothing depends on the time coordinate and that the geometry is unchanged if we run time backwards, which forbids any cross term of the form $dt\,dr$. The second is that it be \textit{spherically symmetric}, meaning that the two dimensional surfaces of constant $t$ and constant $r$ are ordinary round spheres, so that the angular part of the metric can only be the metric of a sphere multiplied by a function of $r$, and by choosing the radial coordinate appropriately we can always arrange that function to be exactly $r^2$. This is worth saying carefully, because it fixes the physical meaning of $r$: in the Schwarzschild solution $r$ is not the distance from the centre, it is the \textit{areal radius}, defined so that the sphere at radius $r$ has area $4\pi r^2$. With these two demands the most general metric we can write, in the mostly plus signature of this book, is
 
-    \begin{equation}
-        g'_{\alpha\beta}=g_{\mu\nu}\frac{\partial x^{\mu}}{\partial x'^{\alpha}}\frac{\partial x^{\nu}}{\partial x'^{\beta}},
-    \end{equation}
-
-    \begin{equation}
-        \frac{\partial x^{\mu}}{\partial x'^{\alpha}} = \delta^{\mu}_{\;\alpha} - \frac{\partial \xi^{\mu}}{\partial x^{\nu}}\frac{\partial x^{\nu}}{\partial x'^{\alpha}} = \delta^{\mu}_{\;\alpha}-\frac{\partial \xi^{\mu}}{\partial x^{\nu}}\left(\delta^{\nu}_{\;\alpha}-\frac{\partial \xi^{\nu}}{\partial x^{\rho}}\frac{\partial x^{\rho}}{\partial x'^{\alpha}} \right),
-    \end{equation}
-
-    \begin{equation}\label{eq:deMuaPrimaAlpha}
-        \frac{\partial x^{\mu}}{\partial x'^{\alpha}} = \delta^{\mu}_{\;\alpha}-\frac{\partial \xi^{\mu}}{\partial x^{\alpha}},
-    \end{equation}
-
-    \begin{equation}
-        g'_{\alpha\beta} = g_{\mu\nu}\left(\delta_{\alpha}^{\;\mu} - \frac{\partial \xi^{\mu}}{\partial x^{\alpha}} \right)\left(\delta^{\nu}_{\;\beta} - \frac{\partial \xi^{\nu}}{\partial x^{\beta}} \right) = g_{\alpha\beta} - g_{\alpha\nu}\frac{\partial \xi^{\nu}}{\partial x^{\beta}} - g_{\beta\mu}\frac{\partial \xi^{\mu}}{\partial x^{\alpha}},
-    \end{equation}
-
-    \begin{equation}
-        g'_{\alpha\beta} = \left(\eta_{\alpha\beta} + h_{\alpha\beta} \right) - \eta_{\alpha\nu}\frac{\partial\xi^{\nu}}{\partial x^{\beta}} - \eta_{\beta\mu}\frac{\partial\xi^{\mu}}{\partial x^{\alpha}},
-    \end{equation}
-
-    \begin{equation}
-        g'_{\alpha\beta} = \eta_{\alpha\beta}+h'_{\alpha\beta}\;\rightarrow\; h'_{\alpha\beta} = h_{\alpha\beta} - \eta_{\alpha\nu}\frac{\partial\xi^{\nu}}{\partial x^{\beta}} - \eta_{\beta\mu}\frac{\partial \xi^{\mu}}{\partial x^{\alpha}}.
-    \end{equation}
-
-    % TODO (nota personal): agregar algo sobre teoría de gauge en el electromagnetismo, como anexo o como sección.
-    % Se deja como comentario para que no salga impreso en el libro.
-
-    In analogy to see how transforms the Riemann's tensor, lets first calculate the following transform of the tensor $R'^{\alpha\beta}_{\quad\mu\nu}$ this because it will be easier mathematically calculate in this form and in the end using the Minkowski metric tensor we can lower one index, therefore
-
-    \begin{equation}\label{eq:TransoformandoAndo}
-        R'^{\alpha\beta}_{\quad\mu\nu} = \frac{\partial x'^{\alpha}}{\partial x^{a}}\frac{\partial x'^{\beta}}{\partial x^{b}}\frac{\partial x^c}{\partial x'^{\mu}}\frac{\partial x^{d}}{\partial x'^{\nu}}R^{ab}_{\quad cd}
-    \end{equation}
-
-    we gotta calculate the derivative of the prime coordinates respect to the non primed one , then
-
-    \begin{equation}\label{eq:DePrimaNoPrima}
-        \frac{\partial x'^{\alpha}}{\partial x^{\mu}} = \delta_{\mu}^{\;\alpha} + \frac{\partial \xi^{\alpha}}{\partial x^{\mu}}.
-    \end{equation}
-
-    Using the equation \ref{eq:deMuaPrimaAlpha} and \ref{eq:DePrimaNoPrima} into the equation \ref{eq:TransoformandoAndo} we then have
-
-    \begin{align*}
-        R'^{\alpha\beta}_{\quad\mu\nu} &= \left[\delta_a^{\;\alpha}+\frac{\partial \xi^{\alpha}}{\partial x^a} \right]\left[\delta_b^{\;\beta}+\frac{\partial \xi^{\beta}}{\partial x^b} \right]\left[\delta_{\mu}^{\;c}-\frac{\partial \xi^{c}}{\partial x^{\mu}} \right]\left[\delta_{\nu}^{\;d}-\frac{\partial \xi^{d}}{\partial x^{\nu}} \right]R^{ab}_{\quad cd}\\
-        &= \left[\delta_a^{\;\alpha}\delta_b^{\;\beta} + \delta_a^{\;\alpha}\frac{\partial \xi^{\beta}}{\partial x^b} + \delta_b^{\;\beta}\frac{\partial\xi^{\alpha}}{\partial x^a} \right]\left[\delta_{\mu}^{\;c}\delta_{\nu}^{\;d} - \delta_{\mu}^{\;c}\frac{\partial\xi^{d}}{\partial x^{\nu}} - \delta_{\nu}^{\;d}\frac{\partial\xi^c}{\partial x^{\mu}} \right]R^{ab}_{\quad cd}\\
-        &= \left[\delta_a^{\;\alpha}\delta_b^{\;\beta}\delta_{\mu}^{\;c}\delta_{\nu}^{\;d} - \delta_a^{\;\alpha}\delta_b^{\;\beta}\delta_{\mu}^{\;c}\frac{\partial\xi^d}{\partial x^{\nu}} - \delta_a^{\;\alpha}\delta_b^{\;\beta}\delta_{\nu}^{\;d}\frac{\partial \xi^c}{\partial x^{\mu}} + \delta_a^{\;\alpha}\delta_{\mu}^{\;c}\delta_{\nu}^{\;d}\frac{\partial \xi^{\beta}}{\partial x^b} + \delta_b^{\;\beta}\delta_{\mu}^{\;c}\delta_{\nu}^{\;d}\frac{\partial\xi^{\alpha}}{\partial x^a} \right]R^{ab}_{\quad cd}\\
-        &= R^{\alpha\beta}_{\quad\mu\nu}+\left\{\delta_b^{\;\beta}\delta_{\mu}^{\;c}\left[\delta_{\nu}^{\;d}\frac{\partial\xi^{\alpha}}{\partial x^a} - \delta_a^{\;\alpha}\frac{\partial\xi^d}{\partial x^{\nu}} \right] + \delta_a^{\;\alpha}\delta_{\nu}^{\;d}\left[\delta_{\mu}^{\;c}\frac{\partial \xi^{\beta}}{\partial x^b}-  \delta_b^{\;\beta}\frac{\partial \xi^c}{\partial x^{\mu}} \right] \right\}R^{ab}_{\quad cd}\\
-        &= R^{\alpha\beta}_{\quad\mu\nu}+\left\{\delta_b^{\;\beta}\delta_{\mu}^{\;c}\left[\delta_{\nu}^{\;d}\delta_{a}^{\;\nu} \frac{\partial\xi^{\alpha}}{\partial x^{\nu}} - \delta_a^{\;\alpha}\delta_{\alpha}^{\;d} \frac{\partial\xi^{\alpha}}{\partial x^{\nu}} \right] + \delta_a^{\;\alpha}\delta_{\nu}^{\;d}\left[\delta_{\mu}^{\;c}\delta^{\mu}_{\;b} \frac{\partial \xi^{\beta}}{\partial x^{\mu}}-  \delta_b^{\;\beta}\delta^c_{\;\beta} \frac{\partial \xi^{\beta}}{\partial x^{\mu}} \right] \right\}R^{ab}_{\quad cd}\\
-        &= R^{\alpha\beta}_{\quad\mu\nu}+\left\{\delta_b^{\;\beta}\delta_{\mu}^{\;c}\delta^d_{\;a} \left[\frac{\partial\xi^{\alpha}}{\partial x^{\nu}} - \frac{\partial\xi^{\alpha}}{\partial x^{\nu}} \right] + \delta_a^{\;\alpha}\delta_{\nu}^{\;d}\delta^c_{\;b} \left[\frac{\partial \xi^{\beta}}{\partial x^{\mu}}  - \frac{\partial \xi^{\beta}}{\partial x^{\mu}} \right] \right\}R^{ab}_{\quad cd},
-    \end{align*}
-
-    \begin{align}
-        R'^{\alpha\beta}_{\quad\mu\nu} &= R^{\alpha\beta}_{\quad\mu\nu}\\
-        \eta_{b\beta} R'^{\alpha\beta}_{\quad\mu\nu} &= R'^{\alpha}_{\;b\mu\nu} = \eta_{b\beta} R^{\alpha\beta}_{\quad\mu\nu} = R^{\alpha}_{\;b\mu\nu}  
-    \end{align}
-    Doing the variable change $b = \beta$ we then arrive that the Riemann's tensor keep invariant under these infinitesimal transformations:
-
-    \begin{equation}
-        R'^{\alpha}_{\;\beta\mu\nu} = R^{\alpha}_{\;\beta\mu\nu},
-    \end{equation}
-    and thus
-
-    \begin{equation}
-        R'_{\alpha\beta} = R_{\alpha\beta}
-    \end{equation}
-
-    and the Lorenz gauge, the one we already know from electromagnetism, is
-
-    \begin{equation}
-        \partial_{\alpha}\left(\eta^{\alpha\beta}A_{\beta} \right) = \partial^{\beta}A_{\beta} = 0
-    \end{equation}
-
-    and then by analogy with the electromagnetism $\overline{h}_{\alpha\beta}$ fulfil a Lorenz Gauge as follows
-
-    \begin{equation}
-        \frac{\partial}{\partial x^{\mu}}\left(\eta^{\mu\nu}\overline{h}_{\alpha\nu} \right)=0.
-    \end{equation}
-
-    Well then, in the Einstein's equation  \ref{eq:EinsteinEqHbar} there is the trace and the trace reversed tensors, so we have to calculate their transformed versions too, in this way lets do it
-
-    \begin{equation}
-        h' = h - 2\partial_{\mu}\xi^{\mu},
-    \end{equation}
-
-    \begin{equation}
-        \overline{h}'_{\alpha\beta} = h'_{\alpha\beta} - \frac{1}{2}\eta_{\alpha\beta}h' = h_{\alpha\beta}-\frac{\partial\xi_{\alpha}}{\partial x^{\beta}} - \frac{\partial \xi_{\beta}}{\partial x^{\alpha}} - \frac{1}{2}\eta_{\alpha\beta}\left(h-2\frac{\partial\xi^{\mu}}{\partial x^{\mu}} \right),
-    \end{equation}
-
-    \begin{equation}
-        \overline{h}'_{\alpha\beta}=\overline{h}_{\alpha\beta} - \frac{\partial \xi_{\alpha}}{\partial x^{\beta}} - \frac{\partial \xi_{\beta}}{\partial x^{\alpha}} + \eta_{\alpha\beta}\frac{\partial \xi^{\mu}}{\partial x^{\mu}},
-    \end{equation}
-
-    \begin{equation}
-        W'_{\alpha} = \frac{\partial}{\partial x^{\mu}}\left(\eta^{\mu\nu}\overline{h}'_{\alpha\nu} \right),
-    \end{equation}
-
-    \begin{equation}
-        W'_{\alpha}=\partial_{\mu}\left[\eta^{\mu\nu}\left(\overline{h}_{\alpha\nu} - \partial_{\nu}\xi_{\alpha}-\partial_{\alpha}\xi_{\nu}+\eta_{\alpha\nu}\partial_{\sigma}\xi^{\sigma} \right)\right],
-    \end{equation}
-
-    \begin{equation}
-        W'_{\alpha} = \partial_{\mu}\left[\eta^{\mu\nu}\overline{h}_{\alpha\nu} - \eta^{\mu\nu}\partial_{\nu}\xi_{\alpha} - {\color{red}\partial_{\alpha}\xi^{\mu}} + {\color{red}\delta_{\alpha}^{\;\mu}\partial_{\sigma}\xi^{\sigma}} \right],
-    \end{equation}
-
-    \begin{equation}
-        W'_{\alpha} = W_{\alpha}-\eta^{\mu\nu}\frac{\partial^2\xi_{\alpha}}{\partial x^{\mu}\partial x^{\nu}} \;\rightarrow\;W'_{\alpha} = W_{\alpha}-\Box \xi_{\alpha},
-    \end{equation}
-
-    \begin{equation}
-        W'_{\alpha}=0 \iff W_{\alpha}=\Box\xi_{\alpha}.
-    \end{equation}
-
-    where the two terms marked in red cancel against each other once the derivative is carried out, because mixed partial derivatives commute. We therefore still have the freedom to choose the four functions $\xi_{\alpha}$, and choosing them so that $\Box\xi_{\alpha}=W_{\alpha}$ makes $W'_{\alpha}$ vanish without disturbing the Riemann tensor, which leaves the field equations in the form
-
-    \begin{equation}
-        \Box\overline{h}_{\alpha\beta} = -16\pi T_{\alpha\beta},
-    \end{equation}
-
-    and restoring the units therefore
-
-    \begin{equation}\label{eq:GravWaveEq}
-        \Box\overline{h}_{\alpha\beta}=-\frac{16\pi G}{C^4}T_{\alpha\beta}.
-    \end{equation}
-
-    The equation \ref{eq:GravWaveEq}  is the wave equation for gravitational waves! Lets see how are their solutions, first we are going to analyze the vacuum case $T_{\alpha\beta}=0$ and the simplest  solution would be a traveling monochromatic plane wave as
-
-    \begin{equation}
-        \overline{h}_{\alpha\beta}(x^{\mu}) = A_{\alpha\beta}e^{ik_{\mu}x^{\mu}},
-    \end{equation}
-
-    using this solution in the equation \ref{eq:GravWaveEq} we find that $k_{\alpha}k^{\alpha}=0$ this means the wave vector $k^{\mu}$ is a null or light-like vector, this implies that \textit{the gravitational waves travels at the speed of light in vacuum} and from the  Lorenz Gauge we find this
-
-    \begin{equation}
-        \frac{\partial}{\partial x^{\mu}}\left(\eta^{\mu\nu}A_{\alpha\nu}e^{ik_{\sigma}x^{\sigma}} \right)=0,
-    \end{equation}
-
-    \begin{equation}
-        \eta^{\mu\nu}A_{\alpha\nu}\frac{\partial}{\partial x^{\mu}}e^{ik_{\sigma}x^{\sigma}}=0,
-    \end{equation}
-
-    \begin{equation}
-        \eta^{\mu\nu}A_{\alpha\nu}e^{ik_{\sigma}x^{\sigma}}ik_{\beta}\frac{\partial x^{\beta}}{\partial x^{\mu}} = 0,
-    \end{equation}
-
-    \begin{equation}\label{eq:GravWaveOrto}
-        \eta^{\mu\nu}A_{\alpha\nu}ik_{\mu}e^{ik_{\sigma}x^{\sigma}}=0.
-    \end{equation}
-
-    The equation \ref{eq:GravWaveOrto} means that the wave vector is orthogonal to the amplitude tensor.
-\section{Gravitational waves}
-
-    Here we are going to keep developing the wave equation for the perturbation $h_{\alpha\beta}$ see how are the equations for the perturbations of the coordinates components and we will work with a new Gauge, the called \textit{traceless transverse gauge} and we will find out the gravitational waves have got polarisation properties. \\
-
-    From our Lorenz gauge we had found that $W'_{\alpha} = 0$ but this also means that the perturbations of the coordinates satisfies a wave equation $W_{\alpha}=\Box \xi_{\alpha}$ so we can suppose the most basic solution to this equation is a plane wave, therefore
-
-    \begin{equation}
-        \xi^{\alpha} = B^{\alpha}e^{ik_{\sigma}x^{\sigma}},
-    \end{equation}
-
-    where $B^{\alpha}$ are four infinitesimal constants, and we gotta find them to have a complete solution for the wave equation to do it lets start from the primed and bar perturbation
-
-    \begin{equation}
-        \overline{h}'_{\alpha\beta} = \overline{h}_{\alpha\beta} - \frac{\partial \xi_{\alpha}}{\partial x^{\beta}} - \frac{\partial \xi_{\beta}}{\partial x^{\alpha}} + \eta_{\alpha\beta  }\frac{\partial \xi_{\mu}}{\partial x^{\mu}},
-    \end{equation}
-
-    \begin{equation}
-        \overline{h}'_{\alpha\beta} = A_{\alpha\beta}e^{ik_{\sigma}x^{\sigma}} - iB_{\alpha}k_{\beta}e^{ik_{\sigma}x^{\sigma}} - iB_{\beta}k_{\alpha}e^{ik_{\sigma}x^{\sigma}} + i \eta_{\alpha\beta}k_{\sigma}B^{\sigma} e^{ik_{\sigma}x^{\sigma}} = A'_{\alpha\beta}e^{ik_{\sigma}x^{\sigma}},
-    \end{equation}
-    thus
-
-    \begin{equation}\label{eq:Aprima}
-        A'_{\alpha\beta} = A_{\alpha\beta}  - iB_{\alpha}k_{\beta} - i B_{\beta}k_{\alpha} + i \eta_{\alpha\beta}k_{\sigma}B^{\sigma}.
-    \end{equation}
-
-    \subsection{Traceless transverse gauge}
-
-        Here we are going to choose a new gauge, the \textit{traceless transverse gauge} which will allow us to work as well with $\overline{h}_{\alpha\beta}$ as $h_{\alpha\beta}$ because, as we shall see in a moment, both satisfy the same wave equations. The traceless transverse gauge is:
-
-        \begin{equation}
-            \eta^{\mu\nu}A'_{\mu\nu}=0,
+        \begin{equation}\label{eq:SchwAnsatz}
+            ds^2 = -e^{2\alpha(r)}dt^2 + e^{2\beta(r)}dr^2 + r^2\left(d\vartheta^2 + \sin^2\vartheta\, d\varphi^2\right),
         \end{equation}
 
-        \begin{equation}
-            A'_{0i} = 0.
-        \end{equation}
-
-        Calculating the Gauge of the equation \ref{eq:Aprima} we have
+        where $\alpha(r)$ and $\beta(r)$ are the two unknown functions, and where writing them inside exponentials costs us nothing and saves us a great deal of algebra later, since it guarantees automatically that $g_{tt}$ never changes sign and that $g_{rr}$ stays positive. Reading off the components of the metric and of its inverse from equation \ref{eq:SchwAnsatz} we have
 
         \begin{align}
-            \eta^{\mu\nu}A'_{\mu\nu} &= \eta^{\mu\nu}A_{\mu\nu} - i \eta^{\mu\nu}B_{\mu}k_{\nu} - i\eta^{\mu\nu}B_{\nu}k_{\mu} + i \eta^{\mu\nu}\eta_{\mu\nu}k_{\sigma}B^{\sigma}=0,\\
-            A'_{0i} &= A_{0i} - iB_0k_i - iB_ik_0 + \eta_{0i} ik_{\sigma}B^{\sigma} = 0,
+            g_{tt} &= -e^{2\alpha},\quad g_{rr} = e^{2\beta},\quad g_{\vartheta\vartheta}=r^2,\quad g_{\varphi\varphi}=r^2\sin^2\vartheta,\\
+            g^{tt} &= -e^{-2\alpha},\quad g^{rr} = e^{-2\beta},\quad g^{\vartheta\vartheta}=\frac{1}{r^2},\quad g^{\varphi\varphi}=\frac{1}{r^2\sin^2\vartheta},
         \end{align}
 
-        \begin{equation}
-            \eta^{\mu\nu}A'_{\mu\nu} = \eta^{\mu\nu}A_{\mu\nu} + 2ik_{\mu}B^{\mu}=0,
+        the inverse being trivial to write down because the metric is diagonal, and every other component of both vanishing identically. From now on a prime will always denote a derivative with respect to $r$, which is the only variable anything depends on.
+
+    \subsection{The Christoffel symbols}
+
+        Everything that follows is built on the connection, so we compute all of its components from the definition
+
+        \begin{equation}\label{eq:GammaDefSchw}
+            \Gamma^{\lambda}_{\;\mu\nu} = \frac{1}{2}g^{\lambda\sigma}\left(\partial_{\mu}g_{\sigma\nu} + \partial_{\nu}g_{\sigma\mu} - \partial_{\sigma}g_{\mu\nu}\right),
         \end{equation}
 
-        \begin{equation}
-            A_{0i} - iB_0k_i - iB_ik_0=0.
-        \end{equation}
-
-        Or, written in a more convenient way,
-
-        \begin{equation}
-            \eta^{\mu\nu}A_{\mu\nu}=-2ik_{\mu}B^{\mu},
-        \end{equation}
-
-        \begin{equation}
-            B_0k_i + B_ik_0 = -iA_{0i}.
-        \end{equation}
-
-        Now, from the orthogonality condition \ref{eq:GravWaveOrto} we can calculate how are the components of $A_{\mu\nu}$ therefore
-
-        \begin{equation}
-            A_{0\beta}k^{\beta} = A_{00}k^0 + A_{0i}k^i = A_{00}k^0=0 \;\rightarrow A_{00}=0 \;\rightarrow A_{0\alpha}=0,
-        \end{equation}
-
-        \begin{equation}
-            A_{i\beta}k^{\beta}={\color{red}A_{i0}}k^0 + A_{ij}k^j= A_{ij}k^j = 0,
-        \end{equation}
-
-        where the first term has dropped out because the gauge condition $A_{0i}=0$ has already killed it. It is worth reading the surviving statement carefully, because it does \textit{not} say that the spatial amplitudes vanish, which would leave us with no wave at all: what it says is that the amplitude tensor is \textit{transverse}, that is, orthogonal to the direction in which the wave travels, so that a gravitational wave can only shake the two directions perpendicular to its propagation. This is the origin of the word transverse in the name of the gauge.
-
-        Before going further it will be worth to calculate the trace of the perturbation under these gauge, thus
-
-        \begin{equation}
-            \overline{h}_{0\alpha}=0,\qquad \overline{h}=\eta^{\alpha\beta}\overline{h}_{\alpha\beta} = \eta^{\alpha\beta}A_{\alpha\beta}e^{ik_{\sigma}x^{\sigma}}=0 \;\;\longrightarrow\;\; h = -\overline{h} = 0,
-        \end{equation}
-
-        \begin{equation}
-            \overline{h}_{\alpha\beta}=h_{\alpha\beta}.
-        \end{equation}
-
-        Here we can see that using this gauge the wave equation for $h_{\alpha\beta}$ is the same that for $\overline{h}_{\alpha\beta}$ lets write the perturbation in a matrix form under the assumption that the wave travels along the $z$ axis, so that its contravariant wave vector is $k^{\alpha} = [\omega/C,0,0,\omega/C]$ and, lowering the index with the mostly plus metric, $k_{\alpha} = [-\omega/C,0,0,\omega/C]$, thus
-
-        \begin{equation}
-            A_{\alpha\beta}k^{\beta} = A_{\alpha 0}k^0 + A_{\alpha i}k^i = A_{\alpha 0}\frac{\omega}{C} + A_{\alpha z}\frac{\omega}{C}=0 \;\;\longrightarrow\;\; A_{\alpha z} = -A_{\alpha 0} = 0,
-        \end{equation}
-
-        \begin{equation}
-            \eta^{\mu\nu}A_{\mu\nu}=0 \;\rightarrow A_{xx}+A_{yy}=0.
-        \end{equation}
-
-        We now set $A_{xx}=a_{+}$, which is called the \textit{plus mode}, and $A_{xy}=a_{\times}$, which is called the \textit{cross mode}, and since the trace condition forces $A_{yy}=-A_{xx}$ while transversality has already emptied the whole $z$ row and column, the perturbation written in the traceless transverse gauge is
-
-        \begin{equation}\label{eq:hTT}
-            h_{\alpha\beta}^{\quad TT} =
-            \begin{bmatrix}
-                0&0&0&0\\
-                0&h_+&h_{\times}&0\\
-                0&h_{\times}&-h_+&0\\
-                0&0&0&0
-            \end{bmatrix}
-        \end{equation}
-
-        then we can define now the \textit{\textbf{gravitational polarisation modes}} as
-
-        \begin{equation}
-            h_+ = a_+e^{i\omega\left(t - \frac{z}{C} \right)},
-        \end{equation}
-
-        \begin{equation}
-            h_{\times} = a_{\times}e^{i\omega\left(t - \frac{z}{C} \right)}.
-        \end{equation}
-
-        \subsubsection{Polarisation and Stokes parameters for gravitational waves}
-
-            We are going to start from the perturbation under the influence of a traceless transverse gauge \ref{eq:hTT} this because it has got a really familiar form so we have to ask ourselves, \textit{what is the difference between light's polarisation an gravitational polarisation?} Well, lets figure it out.\\
-
-            First, we have to use the fact there is an isomorphism between the vector space $\mathbb{M}_{n\times n}$ (square $n\times n$ matrices) and $\mathbb{R}^{n^2}$, therefore from the perturbation matrix \ref{eq:hTT} we can define our \textit{perturbation state vector}
-
-            \begin{equation}
-                \textbf{h}^{TT} =
-                \begin{bmatrix}
-                    h_+\\
-                    h_{\times}\\
-                    h_{\times}\\
-                    -h_+
-                \end{bmatrix}.
-            \end{equation}
-
-            This vector will tell us the polarisation mode state where our space-time is under the perturbation \ref{eq:hTT} but before going further we must take on count an important fact, $a_+$,$a_{\times}$ must have their own spatial phase because not always $h_+$ and $h_{\times}$ will be on phase or will represent the same oscillation but with different amplitude, both are different, in general, polarisation modes, then if $A_+$,$\phi_+$,$A_{\times}$,$\phi_{\times}$ are their amplitudes and phases respectively then the polarisation mode state vector will be
-
-            \begin{equation}\label{eq:PertVector}
-                \textbf{h}^{TT} =
-                \begin{bmatrix}
-                    A_+e^{i\phi_+}\\
-                    A_{\times}e^{i\phi_{\times}}\\
-                    A_{\times}e^{i\phi_{\times}}\\
-                    -A_+e^{i\phi_+}
-                \end{bmatrix}e^{i\left(\omega t - kz \right)}.
-            \end{equation}
-
-            We have got only two degrees of freedom in the state vector \ref{eq:PertVector} one for the $+$ modes and the other for the $x$ modes, lets see how are they related geometrically. We can see easily the following two equations
-
-            \begin{equation}
-                \frac{a_+}{A_+}e^{-i\phi_{\times}} = e^{i\left(\omega t -kz \right)}e^{i\triangle\phi},\;\; \frac{a_{\times}}{A_{\times}}e^{-i\phi_{+}} = e^{i\left(\omega t - kz\right)}e^{-i\triangle \phi}
-            \end{equation}
-
-            where $\triangle\phi = \phi_+ - \phi_{\times}$ having all of this on count lets calculate the following product
-
-            \begin{equation}
-                \left(\frac{a_+}{A_+}e^{-i\phi_{\times}}-  \frac{a_{\times}}{A_{\times}}e^{-i\phi_+}\right)\left(\frac{a_+}{A_+}e^{-i\phi_{\times}}-  \frac{a_{\times}}{A_{\times}}e^{-i\phi_+}\right)^*,
-            \end{equation}
-
-            \begin{align*}
-                &\left(\frac{a_+}{A_+}e^{-i\phi_{\times}}-  \frac{a_{\times}}{A_{\times}}e^{-i\phi_+}\right)\left(\frac{a_+}{A_+}e^{-i\phi_{\times}}-  \frac{a_{\times}}{A_{\times}}e^{-i\phi_+}\right)^*\\
-                &= \frac{a_+^2}{A_+^2} - \frac{a_+a_{\times}^*}{A_+A_{\times}}e^{i\triangle\phi} - \frac{a_{\times}a_+^*}{A_+A_{\times}}e^{-i\triangle\phi} + \frac{a_{\times}^2}{A_{\times}^2}\\
-                &= \frac{a_+^2}{A_+^2} + \frac{a_{\times}^2}{A_{\times}^2} - 2\frac{\mathrm{Re}\{a_+a_{\times}^*\}}{A_{\times}A_+}\cos\triangle\phi,
-            \end{align*}
-
-            \begin{equation}
-                \left(\frac{a_+}{A_+}e^{-i\phi_{\times}}-  \frac{a_{\times}}{A_{\times}}e^{-i\phi_+}\right)\left(\frac{a_+}{A_+}e^{-i\phi_{\times}}-  \frac{a_{\times}}{A_{\times}}e^{-i\phi_+}\right)^* = \sin^2\triangle\phi
-            \end{equation}
-
-            or joining all
-
-            \begin{equation}\label{eq:Ellipse}
-                \frac{a_+^2}{A_+^2} + \frac{a_{\times}^2}{A_{\times}^2} - 2\frac{\mathrm{Re}\{a_+a_{\times}^*\}}{A_{\times}A_+}\cos\triangle\phi = \sin^2\triangle\phi.
-            \end{equation}
-
-            The polarisation modes describe an hyper-ellipse in the complex plane $\mathbb{C}^2$ in the same way as the light's polarisation! Then this implies the polarisation mode state vector \ref{eq:PertVector} lives, in someway as a vector of this ellipse. Now, we haven't got stationary perturbations, this in the real life usually oscillates very fast and has some kind of time-dependence, under the same calculation we can arrive to an ellipse in the real space (this time taking its real part and ignoring the imaginary part) 
-
-            \begin{equation}
-                \frac{a_+^2(t)}{A_+^2(t)} + \frac{a_{\times}^2(t)}{A_{\times}^2(t)} - 2\frac{a_+(t)a_{\times}(t)}{A_{\times}(t)A_+(t)}\cos\triangle\phi = \sin^2\triangle\phi.
-            \end{equation}
-
-            To solve this problem of the time dependence we can take time averages, why? Because we in fact measure time averages and we, for simplicity, we have suppose monochromatic waves thus
-
-            \begin{equation}\label{eq:EllipseDeT}
-                \frac{\left<a_+^2(t)\right>}{A_+^2} + \frac{\left<a_{\times}^2(t)\right>}{A_{\times}^2} - 2\frac{\left<a_+(t)a_{\times}^*(t)\right>}{A_{\times}A_+}\cos\triangle\phi = \sin^2\triangle\phi
-            \end{equation}
-
-            where
-
-            \begin{equation}
-                \left<a_i(t)a_j(t) \right> = \lim_{T\to\infty} \frac{1}{T}\int_0^Ta_i(t)a_j(t)dt\;i,j=+,x.
-            \end{equation}
-
-            Multiplying the equation \ref{eq:EllipseDeT} by $4A_+^2A_{\times}^2$ we can see that 
-
-            \begin{equation}
-                4A_{\times}^2\left<a_+^2(t)\right> + 4A_+^2\left<a_{\times}^2(t)\right> - 8 A_{\times}A_+\left<a_+(t)a_{\times}(t)\right>\cos\triangle\phi = (2A_+A_{\times}\sin\triangle\phi)^2.
-            \end{equation}
-
-            Because in the perturbation \ref{eq:hTT} we have plane and harmonic waves, is easy to see the time averages are
-
-            \begin{align}
-                \left<a_+(t)^2\right> &= \frac{1}{2}A_+^2\\
-                \left<a_{\times}(t)^2\right> &= \frac{1}{2}A_{\times}^2\\
-                \left<a_+(t)a_{\times}(t)\right> &= \frac{1}{2}A_+A_{\times}\cos\triangle\phi,
-            \end{align}
-
-            substituting these equation in \ref{eq:EllipseDeT} yields to
-
-            \begin{equation}\label{eq:casiStokes}
-                2A_+^2A_{\times}^2 + 2A_+^2A_{\times}^2 - (2A_+A_{\times}\cos\triangle\phi)^2 = (2A_+A_{\times}\sin\triangle\phi)^2,
-            \end{equation}
-
-            Since we want to express the result in terms of a \textit{gravitational intensity}, we use on the left hand side of equation \ref{eq:casiStokes} the algebraic identity ${\color{blue}4A_+^2A_{\times}^2 = \left(A_+^2+A_{\times}^2\right)^2 - \left(A_+^2-A_{\times}^2\right)^2}$, which turns the two leading terms into a difference of perfect squares and gives
-
-            \begin{equation}\label{eq:StokesEq}
-                (A_+^2+A_{\times}^2)^2 - (A_+^2-A_{\times}^2)^2-(2A_+A_{\times}\cos\triangle\phi)^2=(2A_+A_{\times}\sin\triangle\phi)^2,
-            \end{equation}
-
-            or defining the following quantities
-
-            \begin{align}
-                S^G_0 &=A_+^2+A_{\times}^2,\\
-                S^G_1 &= A_+^2-A_{\times}^2,\\
-                S^G_2 &= 2A_+A_{\times}\cos\triangle\phi,\\
-                S^G_3 &= 2A_+A_{\times}\sin\triangle\phi
-            \end{align}
-
-            letting us to write the equation \ref{eq:StokesEq} as
-
-            \begin{equation}
-                (S^G_0)^2 = (S^G_1)^2 + (S^G_2)^2 + (S^G_3)^2
-            \end{equation}
-
-            this is the same equation for the Stokes parameters for a well polarised light beam. The analogy can be pushed one step further, because exactly as in optics the three parameters $S^G_1$, $S^G_2$ and $S^G_3$ can be read as the Cartesian coordinates of a point in an abstract space, and the relation we have just derived says that for a perfectly polarised wave that point is forced to lie on a sphere of radius $S^G_0$. This is the \textit{Poincar\'e sphere} of the gravitational field, drawn in figure \ref{fig:PoincareSphere}, and a partially polarised signal, which is what a real detector buried in noise actually records, falls strictly inside the sphere rather than on its surface, the ratio between the two radii being what in optics is called the degree of polarisation.
-
-            \begin{figure}[h]
-                \centering
-                \includegraphics[width=0.85\textwidth]{Chapter 4/Figures/Distribution.pdf}
-                \caption{The Poincar\'e sphere built out of the gravitational Stokes parameters $S^G_1$, $S^G_2$ and $S^G_3$. A perfectly polarised wave is a single point on the surface of the sphere, while the colour scale gives the degree of polarisation of the distribution of states, which for a partially polarised signal places the point strictly inside the sphere.}
-                \label{fig:PoincareSphere}
-            \end{figure}
-
-        \subsubsection{Helicity, and why gravitational polarisation is not optical polarisation}
-
-            We opened the previous subsection by asking what the difference is between the polarisation of light and the polarisation of a gravitational wave, and having found that the two obey the very same Stokes relation the reader would be forgiven for concluding that there is no difference at all. There is one, it is fundamental, and it shows itself the moment we ask not what the polarisation states look like but how they behave when we rotate the apparatus that measures them.
-
-            Let us therefore rotate our frame by an angle $\vartheta$ about the direction in which the wave travels, which we have taken to be the $z$ axis, so that the two transverse coordinates mix among themselves according to
-
-            \begin{equation}\label{eq:RotationMatrix}
-                \mathbb{R} =
-                \begin{bmatrix}
-                    \cos\vartheta & \sin\vartheta\\
-                    -\sin\vartheta & \cos\vartheta
-                \end{bmatrix}.
-            \end{equation}
-
-            The amplitude of the wave is a tensor of rank two, not a vector, so it needs one copy of the rotation matrix for each of its two indices, which is to say $h' = \mathbb{R}\,h\,\mathbb{R}^{T}$. Writing out the transverse block of the perturbation \ref{eq:hTT} and multiplying the three matrices together,
-
-            \begin{align*}
-                h' &=
-                \begin{bmatrix}
-                    \cos\vartheta & \sin\vartheta\\
-                    -\sin\vartheta & \cos\vartheta
-                \end{bmatrix}
-                \begin{bmatrix}
-                    h_+ & h_{\times}\\
-                    h_{\times} & -h_+
-                \end{bmatrix}
-                \begin{bmatrix}
-                    \cos\vartheta & -\sin\vartheta\\
-                    \sin\vartheta & \cos\vartheta
-                \end{bmatrix},
-            \end{align*}
-
-            and carrying out the two products one after the other, the entry in the first row and first column comes out as
-
-            \begin{align*}
-                h'_{+} &= \cos\vartheta\left(h_+\cos\vartheta + h_{\times}\sin\vartheta\right) + \sin\vartheta\left(h_{\times}\cos\vartheta - h_+\sin\vartheta\right)\\
-                &= h_+\left({\color{blue}\cos^2\vartheta - \sin^2\vartheta}\right) + h_{\times}\left({\color{blue}2\sin\vartheta\cos\vartheta}\right) = h_+\cos2\vartheta + h_{\times}\sin2\vartheta,
-            \end{align*}
-
-            where we have used the two double angle identities marked in blue, and the entry in the first row and second column comes out, by exactly the same route, as
-
-            \begin{align*}
-                h'_{\times} &= \cos\vartheta\left(h_{\times}\cos\vartheta - h_+\sin\vartheta\right) - \sin\vartheta\left(h_{\times}\sin\vartheta + h_+\cos\vartheta\right)\\
-                &= h_{\times}\left({\color{blue}\cos^2\vartheta-\sin^2\vartheta}\right) - h_+\left({\color{blue}2\sin\vartheta\cos\vartheta}\right) = -h_+\sin2\vartheta + h_{\times}\cos2\vartheta,
-            \end{align*}
-
-            while the remaining two entries add nothing new, since the matrix stays symmetric and traceless as it must. The cleanest way to read these two results is to combine them into a single complex amplitude, which gives
-
-            \begin{align*}
-                h'_+ + ih'_{\times} &= h_+\left(\cos2\vartheta - i\sin2\vartheta\right) + h_{\times}\left(\sin2\vartheta + i\cos2\vartheta\right)\\
-                &= h_+\,{\color{blue}e^{-2i\vartheta}} + h_{\times}\,{\color{blue}ie^{-2i\vartheta}},
-            \end{align*}
-
-            so that finally
-
-            \begin{equation}\label{eq:Helicity2}
-                h'_+ + ih'_{\times} = e^{-2i\vartheta}\left(h_+ + ih_{\times}\right).
-            \end{equation}
-
-            Equation \ref{eq:Helicity2} is the whole answer, and it is worth comparing it at once with the corresponding statement for light. The electric field is a vector and therefore carries a single index, so under the same rotation it picks up a single copy of the rotation matrix, and the identical manipulation gives
-
-            \begin{equation}\label{eq:Helicity1}
-                E'_x + iE'_y = e^{-i\vartheta}\left(E_x + iE_y\right).
-            \end{equation}
-
-            The two expressions differ by nothing except a factor of two in the exponent, and that factor of two is the difference between electromagnetism and gravitation. A field whose polarisation state acquires a phase $e^{-is\vartheta}$ under a rotation by $\vartheta$ about its direction of propagation is said to have \textit{helicity} $s$, so light has helicity one and the gravitational wave has helicity two, and in the quantum language this is the statement that the photon is a particle of spin one while the graviton, should it exist, must be a particle of spin two.
-
-            Three consequences follow immediately and all three are measurable. The first is that rotating the apparatus by half a turn, $\vartheta=\pi$, leaves the gravitational amplitude exactly as it was, since $e^{-2i\pi}=1$, whereas the electric field would have been reversed, so that \textbf{a gravitational wave repeats itself every $180$ degrees while light needs a full $360$}. The second is that setting $\vartheta = \pi/4$ turns $h_+$ into $h_{\times}$ and $h_{\times}$ into $-h_+$, so the two linear polarisation states of a gravitational wave are separated by forty five degrees and not by the ninety degrees that separate the two linear polarisations of light, which is precisely why the plus and the cross patterns look rotated into one another by half a right angle. The third concerns the Poincaré sphere of figure \ref{fig:PoincareSphere}: since the Stokes parameters are quadratic in the amplitudes, a rotation of the amplitudes by $2\vartheta$ carries $S^G_1$ and $S^G_2$ around the $S^G_3$ axis by $4\vartheta$, twice as fast as the corresponding rotation in optics, so the gravitational Poincaré sphere is traversed at double the optical rate.
-
-            The same factor of two is also the reason behind the quadrupolar pattern we promised to explain. A field of helicity two cannot have a monopole or a dipole moment radiating, because those would transform with helicity zero and one respectively, and the lowest multipole that carries helicity two is the quadrupole. We shall see that statement emerge again, from an entirely different direction, when we come to the generation of waves in the next section.
-
-    \subsection{Effects of the gravitational radiation on the matter}
-
-        To study the effects of the gravitational radiation under the traceless transverse gauge we are going to suppose a particle $A$ which interacts only gravitationally and follows a geodesic parameterized with its proper time $\tau$ this particle stays at rest at the origin of coordinates, this means its world line will be a vertical line, therefore given a coordinate chart its coordinates are
-
-        \begin{equation}
-            X^0_{\;A}(\tau)=C t,\;\;\&\;\; X^i_{\;A}(\tau)=0,
-        \end{equation}
-
-        lets solve its geodesic equation
-
-        \begin{equation}
-            \frac{d^2X_A^{\;\alpha}}{d\tau^2} + \Gamma^{\alpha}_{\;\mu\nu}\Dot{x}_A^{\;\mu}\Dot{x}_A^{\;\nu}=0
-        \end{equation}
-
-        where
-
-        \begin{equation}
-            \Gamma^0_{\;\beta\gamma}=-\frac{1}{2}\left(h_{0\gamma,\beta} + h_{0\beta,\gamma}-h_{\gamma\beta,0} \right),
-        \end{equation}
-
-        \begin{equation}
-            \Gamma^i_{\;\beta\gamma}=\frac{1}{2}\left(h_{i\gamma,\beta} + h_{i\beta,\gamma} - h_{\gamma\beta,i} \right).
-        \end{equation}
-
-        Using the TTG
+        and the work is much lighter than it looks because the metric is diagonal, so the sum over $\sigma$ in equation \ref{eq:GammaDefSchw} collapses to the single term $\sigma=\lambda$, and because the only non vanishing derivatives of the metric are
 
         \begin{align}
-            \Gamma^0_{\;\beta\gamma}&=\frac{1}{2C}h^{TT}_{\quad\gamma\beta,t},\\
-            \Gamma^0_{\;0\alpha}&=0,\\
-            \Gamma^0_{\;ij}&=\frac{1}{2C}h^{TT}_{\quad ij,t},\\
-            \Gamma^i_{\;00}&=0,\\
-            \Gamma^i_{\;0j}&=\frac{1}{2C}h^{TT}_{\quad ij,t},\\
-            \Gamma^i_{\;jk}&=\frac{1}{2}\left(h^{TT}_{\quad ik,j} + h^{TT}_{\quad ji,k}  - h^{TT}_{\quad jk,i}\right).
+            \partial_rg_{tt} &= -2\alpha'e^{2\alpha},\quad \partial_rg_{rr} = 2\beta'e^{2\beta},\quad \partial_rg_{\vartheta\vartheta}=2r,\\
+            \partial_rg_{\varphi\varphi} &= 2r\sin^2\vartheta,\quad \partial_{\vartheta}g_{\varphi\varphi}=2r^2\sin\vartheta\cos\vartheta.
         \end{align}
 
-        Putting these symbols into the geodesic equation for a particle initially at rest, every term on the left hand side vanishes, and therefore a particle that starts at rest in these coordinates stays at the same coordinate values for ever. This result is famous for being misread, so it is worth stating what it does and does not mean. It does \textbf{not} mean that the wave has no effect on the particle, it means that the traceless transverse coordinates are comoving with the free particles, so that the coordinates themselves are dragged along and the coordinate positions stop being informative. What a detector actually measures is the proper distance between two such particles, and that distance is computed with the metric, which is precisely what the wave is modulating, so the separation does oscillate even though the coordinates do not change. We shall see that the pattern of that oscillation is quadrupolar, which is the deep reason a gravitational wave stretches one transverse direction while squeezing the other.
-
-        
-
-\section{The generation of gravitational waves}
-
-    Everything we have done so far has described a wave that was already there, travelling through empty space, and we have said nothing whatever about where it came from. That is the question we take up now, and it is the question that decides whether the whole subject is observational physics or merely an elegant exercise, because a wave nobody can produce is a wave nobody can detect. The answer, which Einstein worked out in 1918 after correcting an error in his own paper of two years earlier \citep{einstein1918}, is that gravitational radiation is generated by the second time derivative of the quadrupole moment of the source, and the purpose of this section is to derive that statement and then to ask how much energy such a source loses.
-
-    \subsection{The retarded solution of the wave equation}
-
-        We begin again from the field equations in the Lorenz gauge, which we obtained in equation \ref{eq:GravWaveEq} and which we now keep with their source term rather than setting it to zero,
-
-        \begin{equation}\label{eq:SourcedWave}
-            \Box\overline{h}_{\mu\nu} = -\frac{16\pi G}{C^4}T_{\mu\nu},\qquad \Box = -\frac{1}{C^2}\frac{\partial^2}{\partial t^2} + \nabla^2.
-        \end{equation}
-
-        Equation \ref{eq:SourcedWave} is a set of ten uncoupled wave equations, each of them with a source, and it is exactly the equation that electromagnetism hands us for the vector potential in the same gauge, so we may borrow the solution wholesale. Writing it in the form $\Box\overline{h}_{\mu\nu} = -4\pi S_{\mu\nu}$ with
-
-        \begin{equation}
-            S_{\mu\nu} = \frac{4G}{C^4}T_{\mu\nu},
-        \end{equation}
-
-        the retarded Green function of the d'Alembertian gives
-
-        \begin{equation}\label{eq:RetardedSolution}
-            \overline{h}_{\mu\nu}(t,\Vec{x}) = \frac{4G}{C^4}\int\frac{T_{\mu\nu}\left(t - \frac{|\Vec{x}-\Vec{x}'|}{C},\;\Vec{x}'\right)}{|\Vec{x}-\Vec{x}'|}\,d^3x'.
-        \end{equation}
-
-        The physical content of equation \ref{eq:RetardedSolution} is worth stating in words before we do anything with it, because it is the precise statement of what Newton could not have. The field at the point $\Vec{x}$ and at the time $t$ does not depend on where the matter is now, it depends on where the matter was at the earlier time $t - |\Vec{x}-\Vec{x}'|/C$, which is to say at the moment when a signal leaving the source would have had to set out in order to arrive here now. Gravity propagates, and it propagates at the speed of light, and the instantaneous action at a distance that so disturbed Newton in the letter we quoted in chapter 1 has finally disappeared from the theory.
-
-        We are interested in the field far from the source, in what is called the \textit{wave zone}, so let $r=|\Vec{x}|$ be the distance from the source to the observer and suppose that the source is small and confined, so that $|\Vec{x}'|\ll r$ for every point of it. To leading order we may then replace $|\Vec{x}-\Vec{x}'|$ by $r$ in both places where it appears, in the denominator because the correction is of relative order $|\Vec{x}'|/r$, and inside the retarded time because the light travel time across the source is short compared with the time scale on which the source itself changes, an approximation which amounts to demanding that the source move slowly compared with light. With that,
-
-        \begin{equation}\label{eq:FarField}
-            \overline{h}_{\mu\nu}(t,\Vec{x}) \approx \frac{4G}{C^4r}\int T_{\mu\nu}\left(t-\frac{r}{C},\;\Vec{x}'\right)d^3x',
-        \end{equation}
-
-        and the whole problem has been reduced to computing three volume integrals of the energy momentum tensor, one for each kind of index.
-
-    \subsection{Why there is no monopole and no dipole radiation}
-
-        Before evaluating the spatial integral, which is the one that will give us the answer, it pays to look at the other two, because what they give us is nothing, and the reason they give us nothing is one of the most instructive facts in the whole theory.
-
-        Consider first the purely temporal component. The integral appearing in equation \ref{eq:FarField} is
-
-        \begin{equation}
-            \int T^{00}\,d^3x' = C^2\int\rho\, d^3x' = MC^2,
-        \end{equation}
-
-        which is nothing other than the total energy of the source, and conservation of the energy momentum tensor tells us at once that it cannot change. Indeed, taking the temporal component of $\partial_{\mu}T^{\mu\nu}=0$ and integrating over all space,
+        We now go through the symbols one at a time. Taking $\lambda=t$, $\mu=t$, $\nu=r$, the first and third terms of equation \ref{eq:GammaDefSchw} involve $\partial_tg_{tr}$ and $\partial_tg_{tr}$, both zero because the metric is static and because $g_{tr}$ does not exist in the first place, so that
 
         \begin{align*}
-            \frac{1}{C}\frac{d}{dt}\int T^{00}d^3x &= -\int \partial_iT^{i0}\,d^3x = -\oint_{\Sigma} T^{i0}\,dS_i = {\color{red}0},
+            \Gamma^{t}_{\;tr} &= \frac{1}{2}g^{tt}\left({\color{red}\partial_tg_{tr}} + \partial_rg_{tt} - {\color{red}\partial_tg_{tr}}\right) = \frac{1}{2}\left(-e^{-2\alpha}\right)\left(-2\alpha'e^{2\alpha}\right) = \alpha',
         \end{align*}
 
-        where the volume integral of a divergence has been turned into a surface integral by the divergence theorem, and that surface integral vanishes because the source is confined and $T^{\mu\nu}$ is zero on a surface far enough out. The total mass is therefore a constant, and a constant produces a static field and not a wave. This is the statement that \textbf{there is no monopole gravitational radiation}, and it is the exact counterpart of the statement in electromagnetism that a spherically symmetric pulsating charge radiates nothing, which we already met from the geometrical side as Birkhoff's theorem in chapter 3.
-
-        Now the mixed component, whose integral is
-
-        \begin{equation}
-            \int T^{0i}d^3x' = C\,P^i,
-        \end{equation}
-
-        the total momentum of the source, and the spatial component of the conservation law treats it exactly as before,
+        where the two red terms have cancelled against each other before doing anything else and the exponentials have cancelled in the product. For $\lambda=r$, $\mu=\nu=t$ only the last term of equation \ref{eq:GammaDefSchw} survives, and it comes with a minus sign,
 
         \begin{align*}
-            \frac{1}{C}\frac{d}{dt}\int T^{0i}d^3x &= -\int\partial_jT^{ji}d^3x = -\oint_{\Sigma}T^{ji}dS_j = {\color{red}0},
+            \Gamma^{r}_{\;tt} &= \frac{1}{2}g^{rr}\left({\color{red}\partial_tg_{rt}} + {\color{red}\partial_tg_{rt}} - \partial_rg_{tt}\right) = \frac{1}{2}e^{-2\beta}\left[-\left(-2\alpha'e^{2\alpha}\right)\right] = \alpha'e^{2\alpha-2\beta}.
         \end{align*}
 
-        so the total momentum is conserved too and this component is static as well. It is worth pausing on how different this is from electromagnetism, because the contrast is the whole point. The electromagnetic dipole moment is $\Vec{d}=\sum_a q_a\Vec{r}_a$, and there is nothing in Maxwell's theory to stop it oscillating, since positive and negative charges can perfectly well move in opposite directions, which is exactly what an antenna is built to do and why dipole radiation dominates the electromagnetic world. The gravitational analogue of the dipole moment is $\sum_a m_a\Vec{r}_a = M\Vec{R}_{cm}$, and its second derivative is
+        For $\lambda=\mu=\nu=r$ all three terms are the same and two of them cancel against the third only partially, leaving
 
-        \begin{equation}
-            \frac{d^2}{dt^2}\left(M\Vec{R}_{cm}\right) = \frac{d\Vec{P}}{dt} = 0,
-        \end{equation}
+        \begin{align*}
+            \Gamma^{r}_{\;rr} &= \frac{1}{2}g^{rr}\left(\partial_rg_{rr} + \partial_rg_{rr} - \partial_rg_{rr}\right) = \frac{1}{2}g^{rr}\partial_rg_{rr} = \frac{1}{2}e^{-2\beta}\left(2\beta'e^{2\beta}\right) = \beta'.
+        \end{align*}
 
-        which vanishes identically because momentum is conserved and because, crucially, there is no negative mass with which to build a gravitational antenna. \textbf{Conservation of momentum forbids dipole gravitational radiation}, and the same argument applied to the antisymmetric part of the second moment forbids the magnetic dipole term too, since the quantity that would have to oscillate there is the total angular momentum, which is also conserved. The first multipole left standing is the quadrupole, exactly as the helicity argument of the previous section predicted, and this is why gravitational radiation is so much feebler than electromagnetic radiation and why it took a century to detect.
+        The two angular symbols with an upper radial index follow the same pattern as $\Gamma^r_{\;tt}$, since again only the derivative of the angular metric with respect to $r$ survives,
 
-    \subsection{The quadrupole formula}
+        \begin{align*}
+            \Gamma^{r}_{\;\vartheta\vartheta} &= \frac{1}{2}g^{rr}\left({\color{red}\partial_{\vartheta}g_{r\vartheta}} + {\color{red}\partial_{\vartheta}g_{r\vartheta}} - \partial_rg_{\vartheta\vartheta}\right) = \frac{1}{2}e^{-2\beta}\left(-2r\right) = -re^{-2\beta},\\
+            \Gamma^{r}_{\;\varphi\varphi} &= \frac{1}{2}g^{rr}\left({\color{red}\partial_{\varphi}g_{r\varphi}} + {\color{red}\partial_{\varphi}g_{r\varphi}} - \partial_rg_{\varphi\varphi}\right) = \frac{1}{2}e^{-2\beta}\left(-2r\sin^2\vartheta\right) = -r\sin^2\vartheta\, e^{-2\beta}.
+        \end{align*}
 
-        Everything therefore hangs on the spatial integral $\int T^{ij}d^3x$, and at first sight there is no reason it should be related to anything familiar. That it is, is the content of a small and rather beautiful identity which follows from the conservation law used twice.
+        The symbols with an upper angular index are just as quick. For $\lambda=\vartheta$, $\mu=r$, $\nu=\vartheta$ only the derivative $\partial_rg_{\vartheta\vartheta}$ survives, and the factor $r^{-2}$ coming from the inverse metric leaves a pure $1/r$,
 
-        Start from the two components of $\partial_{\mu}T^{\mu\nu}=0$, written out with $x^0=Ct$,
+        \begin{align*}
+            \Gamma^{\vartheta}_{\;r\vartheta} &= \frac{1}{2}g^{\vartheta\vartheta}\partial_rg_{\vartheta\vartheta} = \frac{1}{2}\frac{1}{r^2}\left(2r\right) = \frac{1}{r},
+        \end{align*}
 
-        \begin{align}
-            \frac{1}{C}\frac{\partial T^{00}}{\partial t} + \partial_iT^{i0} &= 0,\\
-            \frac{1}{C}\frac{\partial T^{0j}}{\partial t} + \partial_iT^{ij} &= 0,
+        and in exactly the same way, using this time the derivative of $g_{\varphi\varphi}$ with respect to $r$ and then with respect to $\vartheta$,
+
+        \begin{align*}
+            \Gamma^{\varphi}_{\;r\varphi} &= \frac{1}{2}g^{\varphi\varphi}\partial_rg_{\varphi\varphi} = \frac{1}{2}\frac{1}{r^2\sin^2\vartheta}\left(2r\sin^2\vartheta\right) = \frac{1}{r},\\
+            \Gamma^{\varphi}_{\;\vartheta\varphi} &= \frac{1}{2}g^{\varphi\varphi}\partial_{\vartheta}g_{\varphi\varphi} = \frac{1}{2}\frac{1}{r^2\sin^2\vartheta}\left(2r^2\sin\vartheta\cos\vartheta\right) = \frac{\cos\vartheta}{\sin\vartheta} = \cot\vartheta,
+        \end{align*}
+
+        while the remaining one carries an upper $\vartheta$ and two lower $\varphi$,
+
+        \begin{align*}
+            \Gamma^{\vartheta}_{\;\varphi\varphi} &= \frac{1}{2}g^{\vartheta\vartheta}\left(-\partial_{\vartheta}g_{\varphi\varphi}\right) = \frac{1}{2}\frac{1}{r^2}\left(-2r^2\sin\vartheta\cos\vartheta\right) = -\sin\vartheta\cos\vartheta.
+        \end{align*}
+
+        Collecting everything, and remembering that the connection is symmetric in its two lower indices so that each of these also gives the symbol with those indices exchanged, the complete list of non vanishing Christoffel symbols of the metric \ref{eq:SchwAnsatz} is
+
+        \begin{align}\label{eq:SchwChristoffels}
+            \Gamma^{t}_{\;tr} &= \alpha',\qquad \Gamma^{r}_{\;tt} = \alpha'e^{2\alpha-2\beta},\qquad \Gamma^{r}_{\;rr} = \beta',\nonumber\\
+            \Gamma^{r}_{\;\vartheta\vartheta} &= -re^{-2\beta},\qquad \Gamma^{r}_{\;\varphi\varphi} = -r\sin^2\vartheta\,e^{-2\beta},\qquad \Gamma^{\vartheta}_{\;r\vartheta} = \frac{1}{r},\\
+            \Gamma^{\vartheta}_{\;\varphi\varphi} &= -\sin\vartheta\cos\vartheta,\qquad \Gamma^{\varphi}_{\;r\varphi} = \frac{1}{r},\qquad \Gamma^{\varphi}_{\;\vartheta\varphi} = \cot\vartheta.\nonumber
         \end{align}
 
-        and differentiate the first with respect to time once more, then use the second to eliminate the mixed component,
+        There are nine of them, and every other one vanishes. It is worth noticing in passing that several of these symbols, $\Gamma^{\vartheta}_{\;r\vartheta}$ and $\Gamma^{\varphi}_{\;r\varphi}$ and $\Gamma^{\varphi}_{\;\vartheta\varphi}$, would be there even in perfectly flat space written in spherical coordinates, which is the point we insisted on earlier: a non vanishing connection is a statement about the coordinates, not about the curvature.
 
-        \begin{align*}
-            \frac{1}{C^2}\frac{\partial^2 T^{00}}{\partial t^2} &= -\frac{1}{C}\frac{\partial}{\partial t}\partial_iT^{i0} = -\partial_i\left({\color{blue}\frac{1}{C}\frac{\partial T^{0i}}{\partial t}}\right) = -\partial_i\left({\color{blue}-\partial_jT^{ji}}\right) = \partial_i\partial_jT^{ij}.
-        \end{align*}
+        One combination we shall need repeatedly is the contracted symbol $\Gamma^{\lambda}_{\;\lambda\mu}$, obtained by summing over the repeated index. Only two of its four components are non zero,
 
-        Multiply both sides by $x^kx^l$ and integrate over all space. On the left we obtain the second time derivative of the second moment of the energy density, and on the right we integrate by parts twice, throwing away both surface terms because the source is confined,
+        \begin{align}\label{eq:ContractedGamma}
+            \Gamma^{\lambda}_{\;\lambda r} &= \Gamma^{t}_{\;tr} + \Gamma^{r}_{\;rr} + \Gamma^{\vartheta}_{\;\vartheta r} + \Gamma^{\varphi}_{\;\varphi r} = \alpha' + \beta' + \frac{1}{r} + \frac{1}{r} = \alpha' + \beta' + \frac{2}{r},\\
+            \Gamma^{\lambda}_{\;\lambda\vartheta} &= \Gamma^{t}_{\;t\vartheta} + \Gamma^{r}_{\;r\vartheta} + \Gamma^{\vartheta}_{\;\vartheta\vartheta} + \Gamma^{\varphi}_{\;\varphi\vartheta} = 0 + 0 + 0 + \cot\vartheta = \cot\vartheta,\nonumber
+        \end{align}
 
-        \begin{align*}
-            \int\left(\partial_i\partial_jT^{ij}\right)x^kx^l\,d^3x &= \int T^{ij}\,\partial_i\partial_j\left(x^kx^l\right)d^3x.
-        \end{align*}
+        while $\Gamma^{\lambda}_{\;\lambda t}$ and $\Gamma^{\lambda}_{\;\lambda\varphi}$ both vanish, the first because the geometry is static and the second because it is axially symmetric.
 
-        The derivatives of the product are elementary, and this is the step that produces the factor of two,
+    \subsection{The Ricci tensor}
 
-        \begin{align*}
-            \partial_j\left(x^kx^l\right) &= \delta_j^{\;k}x^l + x^k\delta_j^{\;l},\\
-            \partial_i\partial_j\left(x^kx^l\right) &= \delta_j^{\;k}\delta_i^{\;l} + \delta_i^{\;k}\delta_j^{\;l},
-        \end{align*}
+        We now assemble the Ricci tensor from the connection using
 
-        so that, substituting back and letting the two Kronecker deltas do their work,
-
-        \begin{align*}
-            \int T^{ij}\left(\delta_j^{\;k}\delta_i^{\;l} + \delta_i^{\;k}\delta_j^{\;l}\right)d^3x &= \int\left(T^{lk} + T^{kl}\right)d^3x = {\color{blue}2}\int T^{kl}d^3x,
-        \end{align*}
-
-        where the last equality uses the symmetry of the energy momentum tensor. Putting the two sides together and introducing the second mass moment of the source,
-
-        \begin{equation}\label{eq:MassMoment}
-            I^{kl}(t) = \int \rho\left(t,\Vec{x}\right)x^kx^l\,d^3x,
+        \begin{equation}\label{eq:RicciDefSchw}
+            R_{\mu\nu} = \partial_{\lambda}\Gamma^{\lambda}_{\;\mu\nu} - \partial_{\nu}\Gamma^{\lambda}_{\;\mu\lambda} + \Gamma^{\lambda}_{\;\lambda\rho}\Gamma^{\rho}_{\;\mu\nu} - \Gamma^{\lambda}_{\;\nu\rho}\Gamma^{\rho}_{\;\mu\lambda},
         \end{equation}
 
-        and remembering that $T^{00}=\rho C^2$, the two factors of $C^2$ cancel and we are left with the identity we were after,
+        and we take the four diagonal components in turn. All the off diagonal components vanish, which one can check directly and which is in any case guaranteed by the symmetry of the problem, since there is no preferred direction available with which to build them.
 
-        \begin{equation}\label{eq:StressMomentIdentity}
-            \int T^{kl}\,d^3x = \frac{1}{2}\frac{d^2I^{kl}}{dt^2}.
-        \end{equation}
+        Starting with the temporal component, the second term of equation \ref{eq:RicciDefSchw} dies immediately because nothing depends on $t$, and in the third and fourth terms only $\rho=r$ and the pairs involving $t$ and $r$ can contribute, because those are the only non vanishing symbols with a $t$ among their lower indices,
 
-        There is something almost unreasonable about equation \ref{eq:StressMomentIdentity}. On the left sits an integral of stresses, of pressures and shears inside the source, quantities that depend on the detailed internal constitution of the star or the binary, and on the right sits nothing but the second derivative of how the mass is distributed in space. All the complicated internal physics has cancelled, and it has cancelled because of the conservation law alone.
+        \begin{align*}
+            R_{tt} &= \partial_r\Gamma^{r}_{\;tt} - {\color{red}\partial_t\Gamma^{\lambda}_{\;t\lambda}} + \Gamma^{\lambda}_{\;\lambda r}\Gamma^{r}_{\;tt} - \left(\Gamma^{t}_{\;tr}\Gamma^{r}_{\;tt} + \Gamma^{r}_{\;tt}\Gamma^{t}_{\;tr}\right).
+        \end{align*}
 
-        Substituting equation \ref{eq:StressMomentIdentity} into the far field expression \ref{eq:FarField} gives the result we have been working towards,
+        The first term requires the derivative of a product of exponentials, which we do carefully,
 
-        \begin{equation}\label{eq:QuadrupoleFormula}
-            \overline{h}^{ij}(t,\Vec{x}) = \frac{4G}{C^4r}\cdot\frac{1}{2}\frac{d^2I^{ij}}{dt^2} = \frac{2G}{C^4r}\,\ddot{I}^{ij}\left(t-\frac{r}{C}\right),
-        \end{equation}
+        \begin{align*}
+            \partial_r\Gamma^{r}_{\;tt} &= \frac{d}{dr}\left(\alpha'e^{2\alpha-2\beta}\right) = \alpha''e^{2\alpha-2\beta} + \alpha'\left(2\alpha'-2\beta'\right)e^{2\alpha-2\beta}\\
+            &= e^{2\alpha-2\beta}\left[\alpha'' + 2(\alpha')^2 - 2\alpha'\beta'\right],
+        \end{align*}
 
-        which is the \textit{quadrupole formula}. To obtain the physical wave one still has to project onto the traceless transverse gauge, discarding the trace and the components along the direction of propagation exactly as we did in the previous section, and since the projection removes the trace anyway one may equally well write the formula in terms of the traceless quadrupole moment
+        the third term is read straight off equation \ref{eq:ContractedGamma},
+
+        \begin{align*}
+            \Gamma^{\lambda}_{\;\lambda r}\Gamma^{r}_{\;tt} &= \left(\alpha'+\beta'+\frac{2}{r}\right)\alpha'e^{2\alpha-2\beta} = e^{2\alpha-2\beta}\left[(\alpha')^2 + \alpha'\beta' + \frac{2\alpha'}{r}\right],
+        \end{align*}
+
+        and the fourth, which appears twice because the pair of indices can be taken in either order, is
+
+        \begin{align*}
+            -\left(\Gamma^{t}_{\;tr}\Gamma^{r}_{\;tt} + \Gamma^{r}_{\;tt}\Gamma^{t}_{\;tr}\right) &= -2\alpha'\left(\alpha'e^{2\alpha-2\beta}\right) = -2e^{2\alpha-2\beta}(\alpha')^2.
+        \end{align*}
+
+        Adding the three surviving pieces and factoring out the common exponential, the terms in $(\alpha')^2$ largely destroy one another,
+
+        \begin{align*}
+            R_{tt} &= e^{2\alpha-2\beta}\left[\alpha'' + {\color{red}2(\alpha')^2} - {\color{red}2\alpha'\beta'} + {\color{red}(\alpha')^2} + {\color{red}\alpha'\beta'} + \frac{2\alpha'}{r} - {\color{red}2(\alpha')^2}\right]\\
+            &= e^{2(\alpha-\beta)}\left[\alpha'' + (\alpha')^2 - \alpha'\beta' + \frac{2\alpha'}{r}\right],
+        \end{align*}
+
+        where of the three contributions $2(\alpha')^2 + (\alpha')^2 - 2(\alpha')^2$ only one survives, and of $-2\alpha'\beta' + \alpha'\beta'$ only one half survives with its sign.
+
+        The radial component is assembled in the same way, except that now the second term of equation \ref{eq:RicciDefSchw} does contribute, since $\Gamma^{\lambda}_{\;r\lambda}$ depends on $r$,
+
+        \begin{align*}
+            R_{rr} &= \partial_r\Gamma^{r}_{\;rr} - \partial_r\Gamma^{\lambda}_{\;r\lambda} + \Gamma^{\lambda}_{\;\lambda r}\Gamma^{r}_{\;rr} - \Gamma^{\lambda}_{\;r\rho}\Gamma^{\rho}_{\;r\lambda}.
+        \end{align*}
+
+        Term by term, the first is simply $\beta''$, the second follows from differentiating equation \ref{eq:ContractedGamma},
+
+        \begin{align*}
+            -\partial_r\Gamma^{\lambda}_{\;r\lambda} &= -\frac{d}{dr}\left(\alpha'+\beta'+\frac{2}{r}\right) = -\alpha'' - \beta'' + \frac{2}{r^2},
+        \end{align*}
+
+        the third is
+
+        \begin{align*}
+            \Gamma^{\lambda}_{\;\lambda r}\Gamma^{r}_{\;rr} &= \left(\alpha'+\beta'+\frac{2}{r}\right)\beta' = \alpha'\beta' + (\beta')^2 + \frac{2\beta'}{r},
+        \end{align*}
+
+        and the fourth collects the four symbols that carry a lower $r$ together with a matching pair of indices, namely $\Gamma^t_{\;rt}$, $\Gamma^r_{\;rr}$, $\Gamma^{\vartheta}_{\;r\vartheta}$ and $\Gamma^{\varphi}_{\;r\varphi}$,
+
+        \begin{align*}
+            -\Gamma^{\lambda}_{\;r\rho}\Gamma^{\rho}_{\;r\lambda} &= -\left[\left(\Gamma^{t}_{\;rt}\right)^2 + \left(\Gamma^{r}_{\;rr}\right)^2 + \left(\Gamma^{\vartheta}_{\;r\vartheta}\right)^2 + \left(\Gamma^{\varphi}_{\;r\varphi}\right)^2\right] = -\left[(\alpha')^2 + (\beta')^2 + \frac{2}{r^2}\right].
+        \end{align*}
+
+        Adding the four contributions, the second derivatives of $\beta$ cancel, the two terms in $(\beta')^2$ cancel, and the two terms in $2/r^2$ cancel as well,
+
+        \begin{align*}
+            R_{rr} &= {\color{red}\beta''} - \alpha'' - {\color{red}\beta''} + {\color{red}\frac{2}{r^2}} + \alpha'\beta' + {\color{red}(\beta')^2} + \frac{2\beta'}{r} - (\alpha')^2 - {\color{red}(\beta')^2} - {\color{red}\frac{2}{r^2}}\\
+            &= -\alpha'' - (\alpha')^2 + \alpha'\beta' + \frac{2\beta'}{r}.
+        \end{align*}
+
+        The polar component takes a little more care because it is the only one in which the angular symbols play a role. Writing out equation \ref{eq:RicciDefSchw} with $\mu=\nu=\vartheta$,
+
+        \begin{align*}
+            R_{\vartheta\vartheta} &= \partial_r\Gamma^{r}_{\;\vartheta\vartheta} - \partial_{\vartheta}\Gamma^{\lambda}_{\;\vartheta\lambda} + \Gamma^{\lambda}_{\;\lambda r}\Gamma^{r}_{\;\vartheta\vartheta} - \Gamma^{\lambda}_{\;\vartheta\rho}\Gamma^{\rho}_{\;\vartheta\lambda},
+        \end{align*}
+
+        the first term is
+
+        \begin{align*}
+            \partial_r\Gamma^{r}_{\;\vartheta\vartheta} &= \frac{d}{dr}\left(-re^{-2\beta}\right) = -e^{-2\beta} + 2r\beta'e^{-2\beta} = e^{-2\beta}\left(2r\beta' - 1\right),
+        \end{align*}
+
+        the second uses $\Gamma^{\lambda}_{\;\vartheta\lambda} = \cot\vartheta$ from equation \ref{eq:ContractedGamma} and produces the only trigonometric derivative of the whole calculation,
+
+        \begin{align*}
+            -\partial_{\vartheta}\Gamma^{\lambda}_{\;\vartheta\lambda} &= -\frac{d}{d\vartheta}\cot\vartheta = -\left(-\frac{1}{\sin^2\vartheta}\right) = \frac{1}{\sin^2\vartheta},
+        \end{align*}
+
+        the third is
+
+        \begin{align*}
+            \Gamma^{\lambda}_{\;\lambda r}\Gamma^{r}_{\;\vartheta\vartheta} &= \left(\alpha'+\beta'+\frac{2}{r}\right)\left(-re^{-2\beta}\right) = -e^{-2\beta}\left(r\alpha' + r\beta' + 2\right),
+        \end{align*}
+
+        and the fourth collects the three surviving index pairs, the first two of which are equal and appear with opposite orderings,
+
+        \begin{align*}
+            -\Gamma^{\lambda}_{\;\vartheta\rho}\Gamma^{\rho}_{\;\vartheta\lambda} &= -\left[\Gamma^{r}_{\;\vartheta\vartheta}\Gamma^{\vartheta}_{\;\vartheta r} + \Gamma^{\vartheta}_{\;\vartheta r}\Gamma^{r}_{\;\vartheta\vartheta} + \left(\Gamma^{\varphi}_{\;\vartheta\varphi}\right)^2\right]\\
+            &= -\left[2\left(-re^{-2\beta}\right)\frac{1}{r} + \cot^2\vartheta\right] = 2e^{-2\beta} - \cot^2\vartheta.
+        \end{align*}
+
+        Now we add the four pieces. The trigonometric terms combine through the Pythagorean identity divided by $\sin^2\vartheta$, that is through ${\color{blue}\csc^2\vartheta - \cot^2\vartheta = 1}$, which we insert deliberately at this point, while among the exponential terms the constants $-2$ and $+2$ cancel against each other,
+
+        \begin{align*}
+            R_{\vartheta\vartheta} &= e^{-2\beta}\left(2r\beta' - 1\right) + {\color{blue}\frac{1}{\sin^2\vartheta}} - e^{-2\beta}\left(r\alpha'+r\beta'+{\color{red}2}\right) + {\color{red}2e^{-2\beta}} - {\color{blue}\cot^2\vartheta}\\
+            &= e^{-2\beta}\left(2r\beta' - 1 - r\alpha' - r\beta'\right) + {\color{blue}1}\\
+            &= e^{-2\beta}\left[r\left(\beta'-\alpha'\right) - 1\right] + 1.
+        \end{align*}
+
+        The azimuthal component needs no separate calculation. Spherical symmetry guarantees that the two angular directions cannot be distinguished by the geometry, and carrying the computation through confirms it,
 
         \begin{equation}
-            Q^{ij} = I^{ij} - \frac{1}{3}\delta^{ij}\,\delta_{kl}I^{kl},
+            R_{\varphi\varphi} = \sin^2\vartheta\, R_{\vartheta\vartheta},
         \end{equation}
 
-        which gives the same answer, so that $h^{TT}_{ij} = \frac{2G}{C^4r}\ddot{Q}^{TT}_{ij}$.
+        so it gives us no information that $R_{\vartheta\vartheta}$ has not already given.
 
-        Three readings of equation \ref{eq:QuadrupoleFormula} are worth carrying away. The amplitude falls off as $1/r$ and not as $1/r^2$, which is what makes distant sources detectable at all and is the signature of a genuine radiation field rather than a near field. The amplitude is governed by $\ddot{I}$, so a source whose mass distribution moves but does not change shape, a perfectly spherical star collapsing or a rigid body rotating about its symmetry axis, radiates nothing whatever, and this is why an axisymmetric pulsar is gravitationally silent while a deformed one is not. And the prefactor $G/C^4$ is the same absurdly small number we met when we fixed the coupling constant in chapter 3, which is the honest reason the strains we are chasing are of order $10^{-21}$.
+    \subsection{Solving the vacuum equations}
 
-    \subsection{The energy carried away by the waves}
+        Outside the star there is no matter, so $T_{\mu\nu}=0$, and we showed earlier that in that case the field equations reduce to the vanishing of the Ricci tensor alone. We therefore have to solve
 
-        A wave that does no work is a mathematical curiosity, so the last question of this chapter is how much energy a gravitational wave carries, and here we run immediately into a difficulty of principle that has no counterpart in electromagnetism. The equivalence principle says that at any single event we may choose a freely falling frame in which the gravitational field vanishes, and if the field can be transformed away at a point then so can any energy density we try to attribute to it at that point. There is therefore no meaningful local energy density of the gravitational field, and any expression claiming to be one is a coordinate artefact.
-
-        What does survive is an average. If we average over a region several wavelengths across, larger than the wave but much smaller than the scale on which the background curves, the result is well defined and behaves exactly as an energy momentum tensor should. This is the construction due to Isaacson \citep{isaacson1968}, and for a wave in the traceless transverse gauge it reads
-
-        \begin{equation}\label{eq:Isaacson}
-            t_{\mu\nu} = \frac{C^4}{32\pi G}\left\langle \partial_{\mu}h^{TT}_{ij}\,\partial_{\nu}h^{TT\,ij}\right\rangle,
+        \begin{equation}\label{eq:VacuumSchw}
+            R_{tt} = R_{rr} = R_{\vartheta\vartheta} = 0,
         \end{equation}
 
-        where the angle brackets denote precisely that average over several wavelengths. The object $t_{\mu\nu}$ is not a tensor under general coordinate changes, which is the mathematical way of saying what the equivalence principle already told us, but it is a perfectly good tensor under the Lorentz transformations of the flat background, and that is enough to compute a flux.
+        which is three equations for two unknown functions, and the fact that the system is nevertheless consistent is itself a consequence of the Bianchi identity.
 
-        The energy crossing unit area per unit time in the radial direction is the component $t_{0r}$, and integrating it over a large sphere surrounding the source, then substituting the quadrupole formula \ref{eq:QuadrupoleFormula} and performing the angular integral that the traceless transverse projection leaves behind, one arrives at the luminosity
+        The first move is the one that makes the whole problem collapse. Since $e^{2(\alpha-\beta)}$ never vanishes, the condition $R_{tt}=0$ is equivalent to the vanishing of the bracket, and we may therefore add that bracket to $R_{rr}$ and ask what the sum gives,
 
-        \begin{equation}\label{eq:QuadrupoleLuminosity}
-            L = -\frac{dE}{dt} = \frac{G}{5C^5}\left\langle \dddot{Q}_{ij}\,\dddot{Q}^{ij}\right\rangle,
+        \begin{align*}
+            e^{-2(\alpha-\beta)}R_{tt} + R_{rr} &= \left[{\color{red}\alpha''} + {\color{red}(\alpha')^2} - {\color{red}\alpha'\beta'} + \frac{2\alpha'}{r}\right] + \left[-{\color{red}\alpha''} - {\color{red}(\alpha')^2} + {\color{red}\alpha'\beta'} + \frac{2\beta'}{r}\right]\\
+            &= \frac{2\alpha'}{r} + \frac{2\beta'}{r} = \frac{2}{r}\left(\alpha'+\beta'\right) = 0.
+        \end{align*}
+
+        Every single term involving second derivatives or products of first derivatives has cancelled, and what is left is almost embarrassingly simple: since $r$ is not zero anywhere in the region we care about,
+
+        \begin{equation}
+            \alpha' + \beta' = 0 \;\;\longrightarrow\;\; \alpha + \beta = \text{constant}.
         \end{equation}
 
-        which is the gravitational analogue of the Larmor formula of electrodynamics, with the third derivative of the quadrupole moment playing the part that the second derivative of the dipole moment plays there.
+        That constant can be set to zero without any loss of generality, and the reason is worth stating because it is a genuinely physical argument rather than an algebraic convenience. A non zero constant would amount to multiplying $g_{tt}$ by a fixed positive number, which is the same as rescaling the time coordinate by $t\rightarrow e^{\text{const}}t$, and we are free to choose the unit of time so that a clock infinitely far from the star, where the geometry is flat, ticks at the same rate as the coordinate $t$. Making that choice,
 
-        The constant in front of equation \ref{eq:QuadrupoleLuminosity} deserves the same treatment we gave the coupling constant of the field equations. The combination $C^5/G$ has the dimensions of a power and is worth about $3.6\times10^{52}$ watts, a quantity sometimes called the Planck luminosity, and since the luminosity of any source is that enormous number multiplied by the square of a dimensionless third derivative, two things follow at once and they seem to contradict each other. On the one hand almost nothing radiates measurably, because for ordinary matter that dimensionless factor is minute. On the other hand a source that is both very compact and very asymmetric, such as two black holes in their final orbits, can drive the factor towards unity, and in the last fraction of a second before they merge such a pair momentarily outshines, in gravitational waves, the entire electromagnetic output of the observable universe. Both statements are consequences of the same formula, and the reconciliation is simply that the energy is spread over cosmological distances by the time it reaches us.
+        \begin{equation}\label{eq:alphabeta}
+            \beta = -\alpha.
+        \end{equation}
 
-        Equation \ref{eq:QuadrupoleLuminosity} was not merely believed, it was tested, and tested long before any wave was detected directly. In 1974 Russell Hulse and Joseph Taylor discovered a pulsar in a binary orbit with another neutron star \citep{hulse1975}, a system whose orbital period is now known to extraordinary precision, and that period is shrinking year by year at exactly the rate the quadrupole formula predicts for a pair of masses losing energy to gravitational radiation. The agreement is better than a fraction of a percent, it earned the Nobel Prize of 1993, and it meant that when the detectors of chapter 1 finally recorded a passing wave in 2015 nobody seriously doubted what they were looking at.
+        With equation \ref{eq:alphabeta} in hand we go to the angular equation, which is now an equation for $\alpha$ alone. Substituting $\beta'=-\alpha'$ and $e^{-2\beta}=e^{2\alpha}$ into $R_{\vartheta\vartheta}=0$,
+
+        \begin{align*}
+            e^{2\alpha}\left[r\left({\color{blue}-\alpha'}-\alpha'\right)-1\right] + 1 &= 0,\\
+            e^{2\alpha}\left(-2r\alpha' - 1\right) &= -1,\\
+            e^{2\alpha}\left(2r\alpha' + 1\right) &= 1,
+        \end{align*}
+
+        where in the last step we multiplied both sides by $-1$. Now comes the only trick in the entire derivation, and it is the observation that the left hand side is an exact derivative. Differentiating the product $re^{2\alpha}$ with the chain rule,
+
+        \begin{equation}\label{eq:ExactDerivative}
+            \frac{d}{dr}\left(re^{2\alpha}\right) = e^{2\alpha} + r\left(2\alpha'e^{2\alpha}\right) = e^{2\alpha}\left({\color{blue}1 + 2r\alpha'}\right),
+        \end{equation}
+
+        which is precisely the combination we have just been left with. Our equation therefore reads
+
+        \begin{equation}
+            \frac{d}{dr}\left(re^{2\alpha}\right) = 1,
+        \end{equation}
+
+        and this we integrate at sight. Writing the constant of integration as $K$,
+
+        \begin{align*}
+            re^{2\alpha} &= r + K,\\
+            e^{2\alpha} &= 1 + \frac{K}{r}.
+        \end{align*}
+
+        We have solved the field equations. Before interpreting the answer it is worth performing the consistency check we promised, namely verifying that the third equation, $R_{tt}=0$, which we never used, is satisfied automatically. Writing $f \equiv e^{2\alpha}$, so that $2\alpha' = f'/f$ and $\alpha'' = f''/2f - (f')^2/2f^2$, and substituting $\beta=-\alpha$ into the bracket of $R_{tt}$,
+
+        \begin{align*}
+            \alpha'' + (\alpha')^2 - \alpha'\beta' + \frac{2\alpha'}{r} &= \alpha'' + (\alpha')^2 + (\alpha')^2 + \frac{2\alpha'}{r} = \alpha'' + 2(\alpha')^2 + \frac{2\alpha'}{r}\\
+            &= \frac{f''}{2f} - {\color{red}\frac{(f')^2}{2f^2}} + {\color{red}\frac{2(f')^2}{4f^2}} + \frac{f'}{rf} = \frac{1}{2f}\left(f'' + \frac{2f'}{r}\right),
+        \end{align*}
+
+        where the two terms in $(f')^2$ have cancelled exactly, and inserting $f = 1 + K/r$, whose derivatives are $f' = -K/r^2$ and $f''=2K/r^3$,
+
+        \begin{align*}
+            f'' + \frac{2f'}{r} &= {\color{red}\frac{2K}{r^3}} + \frac{2}{r}\left(-\frac{K}{r^2}\right) = {\color{red}\frac{2K}{r^3}} - {\color{red}\frac{2K}{r^3}} = 0,
+        \end{align*}
+
+        so that $R_{tt}$ vanishes identically, as the Bianchi identity promised it would.
+
+    \subsection{Identifying the constant and reading the solution}
+
+        The constant $K$ is not fixed by the field equations, which know nothing about what sits at the centre, and it can only be determined by matching the solution to a situation we already understand. Far from the source the field is weak, and there we derived in the Newtonian limit that the temporal component of the metric must be $g_{tt} = -\left(1 + 2\phi\right)$ with $\phi = -Gm/r$ the Newtonian potential of a body of mass $m$. Comparing that with what we have just found,
+
+        \begin{align*}
+            g_{tt} = -e^{2\alpha} = -\left(1+\frac{K}{r}\right) \quad\text{and}\quad g_{tt} = -\left(1 - \frac{2Gm}{r}\right),
+        \end{align*}
+
+        we can read the constant off immediately, $K = -2Gm$, or simply $K=-2m$ in the geometrised units in which $G=C=1$. Putting everything together, the solution of the vacuum field equations outside a static spherically symmetric body is
+
+        \begin{equation}\label{eq:Schwarzschild}
+            ds^2 = -\left(1-\frac{2Gm}{C^2r}\right)C^2dt^2 + \left(1-\frac{2Gm}{C^2r}\right)^{-1}dr^2 + r^2\left(d\vartheta^2 + \sin^2\vartheta\,d\varphi^2\right),
+        \end{equation}
+
+        which is the Schwarzschild metric, and which in geometrised units is written in the compact form one usually meets,
+
+        \begin{equation}\label{eq:SchwarzschildGeom}
+            ds^2 = -\left(1-\frac{2m}{r}\right)dt^2 + \frac{dr^2}{1-\frac{2m}{r}} + r^2d\Omega^2.
+        \end{equation}
+
+        Several things about equation \ref{eq:SchwarzschildGeom} deserve comment. The first is that it depends on the source only through the single number $m$, so that two stars of the same mass produce exactly the same exterior geometry no matter how differently their interiors are built, which is the first hint of the no hair behaviour that black holes display in full. The second is that as $r\rightarrow\infty$ the metric tends to $\eta_{\mu\nu}$, so the solution is asymptotically flat and describes an isolated body, as it should. The third is that we assumed staticity at the very start, and it turns out we need not have: Birkhoff proved in 1923 that \textit{every} spherically symmetric solution of the vacuum equations is necessarily static and is necessarily the Schwarzschild metric, so that a spherically pulsating star radiates no gravitational waves at all, which is the exact gravitational analogue of the statement that a spherically symmetric distribution of charge radiates no electromagnetic waves \citep{wald1984}.
+
+        The fourth point is the one that occupied physicists for half a century. The metric \ref{eq:SchwarzschildGeom} misbehaves at two places, at $r=2m$, where $g_{tt}$ vanishes and $g_{rr}$ blows up, and at $r=0$, where the reverse happens, and the question is whether either of these is a genuine feature of the geometry or merely a failure of the coordinates, in the same way that the spherical chart on $S^2$ failed at the poles in chapter 2 although nothing whatever happens to the sphere there. The way to settle such a question is to compute a scalar built from the curvature, since a scalar cannot depend on the chart, and the simplest one available is the Kretschmann scalar, which for the Schwarzschild metric works out to
+
+        \begin{equation}\label{eq:Kretschmann}
+            R_{abcd}R^{abcd} = \frac{48m^2}{r^6}.
+        \end{equation}
+
+        Equation \ref{eq:Kretschmann} is perfectly finite at $r=2m$, which tells us that the surface $r=2m$ is a coordinate singularity and nothing more, an artefact of having insisted on a static observer's time coordinate in a region where no observer can remain static. It is the \textit{event horizon}, and a freely falling traveller crosses it without noticing anything locally unusual, although they can never come back. At $r=0$ the same scalar diverges, and no change of coordinates can repair a divergent scalar, so that is a genuine curvature singularity where the theory that produced it stops making sense and where we expect a quantum theory of gravity to take over. For an ordinary star none of this matters in the slightest, because $2m$ lies far inside the surface, where the vacuum solution does not apply in the first place: for the Sun the radius $2Gm/C^2$ is about three kilometres, buried under seven hundred thousand kilometres of hydrogen.
+
+        With the exterior geometry in hand one can go on to compute everything that made general relativity famous, the precession of the perihelion of Mercury, the deflection of starlight grazing the Sun and the delay of radar signals passing near it, all of which follow from integrating the geodesic equation in the metric \ref{eq:SchwarzschildGeom}. Before we do any of that, however, there are two pieces of machinery which the Schwarzschild solution allows us to introduce in their natural habitat, and which we shall need constantly from here onwards. The first tells us how to translate the components of a tensor into numbers an actual observer would measure, and the second tells us how to extract conserved quantities from a space-time without integrating anything at all.
+
+\section{Observers and symmetries}
+
+    The two sections which follow share a common motivation. So far every component we have written has been a component with respect to a coordinate basis, and coordinates are bookkeeping devices with no physical meaning of their own. A physicist eventually has to ask what an observer sitting somewhere in the space-time actually measures, and that question requires a basis attached to the observer rather than to the chart. Separately, integrating the geodesic equation directly is painful, and we know from Lagrangian mechanics that the honest way to avoid the pain is to find conserved quantities. Both needs are answered by ideas that cost us nothing new: the first by choosing a different basis, the second by asking the Lie derivative of chapter 2 a question about the metric.
+
+    \subsection{Tetrads and what an observer measures}
+
+        Everything in this chapter has been written in a coordinate basis, the set $\{\partial_{\mu}\}$ attached to a chart, and it is time to say why that is not good enough. The vectors $\partial_{\mu}$ are in general neither unit vectors nor orthogonal to one another, because their inner products are the metric components themselves,
+
+        \begin{equation}\label{eq:CoordBasisInner}
+            \mathbb{G}\left(\partial_{\mu},\partial_{\nu}\right) = g_{\mu\nu},
+        \end{equation}
+
+        and in Schwarzschild coordinates that means $\partial_t$ has squared length $-(1-2m/r)$, which is not $-1$, and $\partial_{\varphi}$ has squared length $r^2\sin^2\vartheta$, which grows without bound. So when we compute a component such as $T^{tt}$ we have not computed an energy density that anybody could measure with an instrument, we have computed a number expressed in units which themselves vary from place to place.
+
+        We already know the remedy, because we built it in chapter 2 when we abandoned the requirement that a basis come from a chart and allowed ourselves an arbitrary frame $\{e_{(a)}\}$ with its dual coframe $\{e^{(a)}\}$, its dictionary $e_{(a)}^{\;\;\mu}$ and its structure functions. What we could not do there was single out any particular frame, because choosing one requires a criterion and the only criterion a physicist wants is a metric one. Now we have a metric, so we impose it: of all the frames available at a point we keep those which satisfy
+
+        \begin{equation}\label{eq:TetradDef}
+            \mathbb{G}\left(e_{(a)},e_{(b)}\right) = \eta_{ab},
+        \end{equation}
+
+        that is, those which are orthonormal with respect to the space-time metric at every point. A frame obeying \ref{eq:TetradDef} is what in four dimensions we call a \textit{tetrad}. Latin indices from the beginning of the alphabet will always be frame indices, raised and lowered with $\eta_{ab}$, while Greek indices remain coordinate indices, raised and lowered with $g_{\mu\nu}$. That a tetrad always exists is guaranteed by the local flatness we built into the theory in the first place, since the equivalence principle says precisely that at any point we can bring the metric to the Minkowski form, and equation \ref{eq:TetradDef} is that statement written as a choice of basis rather than as a choice of coordinates.
+
+        Writing the frame vectors in the coordinate basis, $e_{(a)} = e_{(a)}^{\;\;\mu}\partial_{\mu}$, and substituting into \ref{eq:TetradDef} with the help of \ref{eq:CoordBasisInner}, the defining condition becomes a relation between the dictionary and the metric,
+
+        \begin{equation}\label{eq:TetradMetric}
+            g_{\mu\nu}\,e_{(a)}^{\;\;\mu}e_{(b)}^{\;\;\nu} = \eta_{ab},
+        \end{equation}
+
+        and contracting \ref{eq:TetradMetric} with the inverse dictionary of chapter 2 turns it inside out and gives the metric back as
+
+        \begin{equation}\label{eq:TetradMetricInverse}
+            g_{\mu\nu} = \eta_{ab}\,e^{(a)}_{\;\;\mu}e^{(b)}_{\;\;\nu}.
+        \end{equation}
+
+        Equation \ref{eq:TetradMetricInverse} is worth pausing over, because it says that the metric can be regarded as a derived object: give me four one form fields and I will hand you back a metric. That observation is the starting point of the tetrad formulation of general relativity, and it is what makes it possible to put spinors, which have no coordinate description at all, into a curved space-time.
+
+        The translation of tensor components between the two languages is the one we already wrote in chapter 2, but it acquires here a physical meaning it did not have there. The numbers $T_{ab} = T_{\mu\nu}e_{(a)}^{\;\;\mu}e_{(b)}^{\;\;\nu}$ are components in an orthonormal basis, which is to say components measured with respect to rods and clocks that are locally identical to the rods and clocks of special relativity, and they are therefore the numbers an observer whose worldline carries that frame would actually read off an instrument. The numbers $T_{\mu\nu}$ are not.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Chapter 4/Figures/Tetrad.pdf}
+            \caption{A coordinate basis and an orthonormal frame at the same event. The coordinate vectors $\partial_{\mu}$ follow the chart and are in general neither unit nor orthogonal, and their lengths change from one event to the next, while the tetrad $e_{(a)}$ is orthonormal at every event and is the basis with respect to which an observer measures. The two are related by the matrix $e_{(a)}^{\;\;\mu}$.}
+            \label{fig:Tetrad}
+        \end{figure}
+
+        The freedom we have gained is not free of ambiguity, and the ambiguity is itself interesting. Equation \ref{eq:TetradDef} does not determine the tetrad uniquely, because if $\{e_{(a)}\}$ is orthonormal then so is any $\Lambda^{b}_{\;a}(x)\,e_{(b)}$ provided the matrix $\Lambda$ preserves $\eta_{ab}$, and the matrices that preserve $\eta_{ab}$ are precisely the Lorentz transformations. A tetrad field therefore carries a local Lorentz symmetry, one independent Lorentz transformation at every point of the space-time, which is nothing other than the freedom of each observer to choose their own orientation and their own state of motion. General relativity written in the tetrad language looks remarkably like a gauge theory with the Lorentz group as its gauge group, and that resemblance is not an accident.
+
+        The price is the one chapter 2 warned us about, namely that the frame vectors no longer commute and their structure functions $C^{c}_{\;ab}$ are not zero. If they were, the tetrad would be a coordinate basis, and a coordinate basis cannot be orthonormal everywhere unless the space-time is flat, so a curved geometry leaves us no choice in the matter. It bears repeating here, because the temptation is strongest at exactly this point, that those structure functions are not a measure of curvature: the plane is flat and its orthonormal polar frame already has one of them different from zero. Curvature is the Riemann tensor and nothing else.
+
+        Let us make all of this concrete with the only solution we have in hand. Consider an observer who remains at fixed $r$, $\vartheta$ and $\varphi$ outside a Schwarzschild body, a person standing on a platform held up by rockets far above a black hole, and build the frame they carry. The timelike leg must be the normalised four velocity of such an observer, and the remaining three must be the normalised coordinate directions, which are already mutually orthogonal because the Schwarzschild metric is diagonal. Dividing each $\partial_{\mu}$ by the square root of the magnitude of the corresponding metric component gives
+
+        \begin{align}\label{eq:SchwarzschildTetrad}
+            e_{(0)} = \left(1-\frac{2m}{r}\right)^{-1/2}\partial_t, \qquad & e_{(1)} = \left(1-\frac{2m}{r}\right)^{1/2}\partial_r,\\
+            e_{(2)} = \frac{1}{r}\,\partial_{\vartheta}, \qquad & e_{(3)} = \frac{1}{r\sin\vartheta}\,\partial_{\varphi},\nonumber
+        \end{align}
+
+        and the reader may verify directly from \ref{eq:TetradMetric} that these four satisfy $\mathbb{G}(e_{(a)},e_{(b)})=\eta_{ab}$, since for example
+
+        \begin{align*}
+            \mathbb{G}\left(e_{(0)},e_{(0)}\right) = \left(1-\frac{2m}{r}\right)^{-1}g_{tt} = {\color{red}\left(1-\frac{2m}{r}\right)^{-1}}\left[-{\color{red}\left(1-\frac{2m}{r}\right)}\right] = -1.
+        \end{align*}
+
+        The frame \ref{eq:SchwarzschildTetrad} pays for itself immediately. Suppose a photon of coordinate energy $E$ is emitted at radius $r_1$ and received at radius $r_2$. The energy measured by a static observer is not $E$ but the frame component
+
+        \begin{align*}
+            E_{\text{meas}} = -p_{\mu}e_{(0)}^{\;\;\mu} = \left(1-\frac{2m}{r}\right)^{-1/2}\left(-p_t\right) = \left(1-\frac{2m}{r}\right)^{-1/2}E,
+        \end{align*}
+
+        because $-p_t$ is the conserved quantity, as we are about to prove in the next section, while the frame factor is what converts it into a reading. Taking the ratio at the two radii gives the gravitational redshift
+
+        \begin{equation}\label{eq:RedshiftTetrad}
+            \frac{E_2}{E_1} = \left(\frac{1-2m/r_1}{1-2m/r_2}\right)^{1/2},
+        \end{equation}
+
+        which reproduces the result we obtained from the equivalence principle in chapter 3, only now it has fallen out of the formalism rather than out of a thought experiment about lifts. Notice also what \ref{eq:SchwarzschildTetrad} says as $r\rightarrow 2m$: the normalisation factor of $e_{(0)}$ diverges, which is the frame telling us that the proper acceleration required to stay in place becomes infinite, and that no observer can remain static at the horizon. The horizon is a coordinate singularity of the metric but it is a genuine obstruction for this particular family of observers, and the tetrad is what lets us say the two things separately without confusing them.
+
+    \subsection{Killing vectors and conserved quantities}
+
+        We now come to the question that the Lie derivative was invented to answer. A symmetry of a space-time should mean that the geometry looks the same after we have moved along some flow, and we have already built the instrument that measures how a tensor changes when it is dragged along a flow, so the definition writes itself. A vector field $\xi$ is a \textit{Killing vector field} of the space-time $(M,\mathbb{G})$ if the metric is unchanged when dragged along its flow,
+
+        \begin{equation}\label{eq:KillingDef}
+            \mathcal{L}_{\xi}\mathbb{G} = 0,
+        \end{equation}
+
+        and the flow generated by such a field is called an isometry. Equation \ref{eq:KillingDef} deserves to be read slowly. It does not say that the metric components are constant, which would be a statement about a chart and therefore meaningless. It says that if we pick up the entire geometry and slide it along the integral curves of $\xi$, every distance and every angle comes back exactly as it was, so that no measurement whatsoever could detect that the sliding had happened.
+
+        The definition is geometrical, but for computation we want it in components, and getting it there is a short exercise with equation \ref{eq:LieGeneral}. Applying the Lie derivative to the metric and using the fact that the covariant derivative of the metric vanishes for the Levi-Civita connection,
+
+        \begin{align*}
+            \mathcal{L}_{\xi}g_{\mu\nu} &= \xi^{\rho}\,{\color{red}\Vec{\nabla}_{\rho}g_{\mu\nu}} + g_{\rho\nu}\Vec{\nabla}_{\mu}\xi^{\rho} + g_{\mu\rho}\Vec{\nabla}_{\nu}\xi^{\rho}\\
+            &= \Vec{\nabla}_{\mu}\xi_{\nu} + \Vec{\nabla}_{\nu}\xi_{\mu},
+        \end{align*}
+
+        where the term in red is zero by metric compatibility and where we have used the metric to lower the index inside the derivative, which is legitimate for the same reason. So the condition \ref{eq:KillingDef} is equivalent to
+
+        \begin{equation}\label{eq:KillingEquation}
+            \Vec{\nabla}_{\mu}\xi_{\nu} + \Vec{\nabla}_{\nu}\xi_{\mu} = 2\Vec{\nabla}_{(\mu}\xi_{\nu)} = 0,
+        \end{equation}
+
+        which is the \textit{Killing equation}. It is a system of ten coupled first order partial differential equations for four unknown functions, which is heavily overdetermined, and that is the technical reason why a generic space-time has no symmetries at all: solutions simply do not exist unless the geometry has been arranged to admit them. Minkowski space-time admits the maximum number, ten of them, corresponding to four translations, three rotations and three boosts, which is the Poincaré group reappearing as the isometry group of flat space. Schwarzschild admits four.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Chapter 4/Figures/KillingFlow.pdf}
+            \caption{On the left the surface is invariant under rotation about its axis, so the flow generated by $\xi$ slides the surface along itself and every distance is left exactly as it was: $\xi$ is a Killing vector. On the right the same flow carries the bulge round onto a region where there is none, so distances are changed and $\xi$ satisfies no Killing equation. A symmetry is not a property of the flow but of the geometry the flow is made to act on.}
+            \label{fig:KillingFlow}
+        \end{figure}
+
+        The reason Killing vectors matter to a physicist rather than to a geometer is the following theorem, which is the general relativistic form of Noether's theorem and which is one of the most useful results in the whole subject.
+
+        \begin{myteo}
+            Let $\xi$ be a Killing vector field and let $\gamma$ be a geodesic with tangent $u^{\mu}$. Then the quantity
+            \begin{equation*}
+                Q = \xi_{\mu}u^{\mu}
+            \end{equation*}
+            is constant along $\gamma$.
+        \end{myteo}
+
+        \begin{proof}
+            The rate of change of $Q$ along the curve is its covariant derivative in the direction of the tangent, so
+
+            \begin{align*}
+                \frac{dQ}{d\tau} = u^{\nu}\Vec{\nabla}_{\nu}\left(\xi_{\mu}u^{\mu}\right) = u^{\nu}u^{\mu}\Vec{\nabla}_{\nu}\xi_{\mu} + \xi_{\mu}\,{\color{red}u^{\nu}\Vec{\nabla}_{\nu}u^{\mu}},
+            \end{align*}
+
+            where we used the Leibniz rule. The term in red is exactly the left hand side of the geodesic equation and therefore vanishes, because $\gamma$ is a geodesic. What remains is the contraction of $u^{\nu}u^{\mu}$, which is symmetric under the exchange of its two indices, with $\Vec{\nabla}_{\nu}\xi_{\mu}$, and by the identity we proved in chapter 2 the contraction of a symmetric object with an antisymmetric one vanishes, so only the symmetric part of the derivative survives,
+
+            \begin{align*}
+                \frac{dQ}{d\tau} = u^{\nu}u^{\mu}\Vec{\nabla}_{(\nu}\xi_{\mu)} = 0,
+            \end{align*}
+
+            which is zero by the Killing equation \ref{eq:KillingEquation}.
+        \end{proof}
+
+        That is a remarkable trade. In exchange for one symmetry of the geometry we obtain one first integral of the motion, and first integrals are precisely what turn an unmanageable system of second order equations into something we can solve. The physical interpretation of each conserved quantity is read off from the Killing vector that produced it, exactly as in Lagrangian mechanics: a timelike Killing vector gives a conserved energy, a rotational one gives a conserved angular momentum, and a translational one gives a conserved linear momentum.
+
+        There is a second version of the theorem which is just as useful and which applies to fields rather than to particles. If $\xi$ is a Killing vector and $T^{\mu\nu}$ is the energy momentum tensor, then the current
+
+        \begin{equation}\label{eq:KillingCurrent}
+            J^{\mu} = T^{\mu\nu}\xi_{\nu}
+        \end{equation}
+
+        is covariantly conserved, since
+
+        \begin{align*}
+            \Vec{\nabla}_{\mu}J^{\mu} = \left({\color{red}\Vec{\nabla}_{\mu}T^{\mu\nu}}\right)\xi_{\nu} + T^{\mu\nu}\Vec{\nabla}_{\mu}\xi_{\nu} = T^{\mu\nu}\Vec{\nabla}_{(\mu}\xi_{\nu)} = 0,
+        \end{align*}
+
+        where the red term vanishes by the conservation law $\Vec{\nabla}_{\mu}T^{\mu\nu}=0$ which the Bianchi identities forced upon us, and where the second term dies because $T^{\mu\nu}$ is symmetric and the symmetric part of $\Vec{\nabla}_{\mu}\xi_{\nu}$ is zero. This is worth emphasising because it rescues something we lost earlier. We remarked when we wrote down $\Vec{\nabla}_{\mu}T^{\mu\nu}=0$ that this is a local statement and does not by itself give a globally conserved energy, since one cannot integrate a vector equation over a curved space-time in any invariant way. Equation \ref{eq:KillingCurrent} is a scalar equation for a genuine current, and a current can be integrated. \textit{Energy in general relativity is globally conserved when, and only when, the space-time possesses a timelike Killing vector}, and since a generic space-time possesses none, the total energy of a generic space-time is simply not a defined quantity.
+
+        Let us apply all of this to Schwarzschild, where the payoff is immediate. The metric \ref{eq:SchwarzschildGeom} has components which depend on $r$ and $\vartheta$ but on neither $t$ nor $\varphi$, and whenever the components in some chart are independent of a coordinate $x^{\lambda}$ the corresponding coordinate vector is a Killing vector, because then
+
+        \begin{align*}
+            \mathcal{L}_{\partial_{\lambda}}g_{\mu\nu} = \partial_{\lambda}g_{\mu\nu} = 0
+        \end{align*}
+
+        directly from the definition. So $\xi_{(t)}=\partial_t$ and $\xi_{(\varphi)}=\partial_{\varphi}$ are Killing vectors of the Schwarzschild geometry, the first expressing the fact that the geometry does not change with time and the second that it does not change under rotation about the axis. There are two more coming from the full spherical symmetry, which together with $\xi_{(\varphi)}$ close into the algebra $\mathfrak{so}(3)$ we computed on the sphere in chapter 2, but these two suffice for what follows.
+
+        Lowering the index on each with the metric, so that $\xi_{(t)\mu} = g_{\mu t}$ and $\xi_{(\varphi)\mu}=g_{\mu\varphi}$, and contracting with the four velocity $u^{\mu} = (\dot{t},\dot{r},\dot{\vartheta},\dot{\varphi})$ of a particle in free fall, where the dot is the derivative with respect to proper time, the theorem hands us two constants of the motion,
+
+        \begin{equation}\label{eq:SchwarzschildEL}
+            E = -\xi_{(t)\mu}u^{\mu} = \left(1-\frac{2m}{r}\right)\dot{t}, \qquad L = \xi_{(\varphi)\mu}u^{\mu} = r^2\sin^2\vartheta\,\dot{\varphi},
+        \end{equation}
+
+        the minus sign in the first being conventional so that $E$ comes out positive for a future directed particle. These are the energy per unit mass and the angular momentum per unit mass of the orbit, as we can check by letting $r\rightarrow\infty$, where $E\rightarrow\dot{t}$, which is the special relativistic $\gamma$ and therefore the energy per unit mass of a free particle, and where $L$ reduces to the familiar $r^2\dot{\varphi}$ of Newtonian mechanics, which is Kepler's second law in disguise.
+
+        With \ref{eq:SchwarzschildEL} in hand the geodesic problem becomes almost easy. Restricting to the equatorial plane $\vartheta=\pi/2$, which we may always do by a rotation, and substituting both constants into the normalisation condition $g_{\mu\nu}u^{\mu}u^{\nu}=-1$, a little algebra gives
+
+        \begin{equation}\label{eq:RadialEnergy}
+            \frac{1}{2}\dot{r}^2 + \underbrace{\left[-\frac{m}{r} + \frac{L^2}{2r^2} - \frac{mL^2}{r^3}\right]}_{V_{\text{eff}}(r)} = \frac{E^2-1}{2},
+        \end{equation}
+
+        which is the energy equation of a single particle moving in one dimension under an effective potential, and which we have obtained without ever writing down a Christoffel symbol. Equation \ref{eq:RadialEnergy} is the whole of orbital dynamics around a spherical body. Its first two terms are exactly Newton's, the attractive potential and the centrifugal barrier, and the third term, the one proportional to $m L^2/r^3$, is the entire contribution of general relativity. It is small at large radii, which is why Newton worked so well for two centuries, and it is attractive and grows faster than the centrifugal barrier as $r$ decreases, which has two consequences with names attached to them. The first is that orbits no longer close on themselves, and their slow rotation is the perihelion precession of Mercury. The second is that at small enough radius the barrier is overwhelmed altogether, so that unlike in Newtonian gravity a particle with any amount of angular momentum whatsoever can fall in. That is a genuinely new possibility, and it is the origin of the innermost stable circular orbit at $r=6m$ which sets the inner edge of the accretion discs we observe around black holes.
+
+        So the two ideas of this section do what we advertised. The tetrad tells us what an observer measures, and the Killing vectors tell us what does not change, and between them they convert the geometry of the previous sections into predictions.
+
+\section{The Einstein-Maxwell equations}
+
+    Every source we have fed to the field equations so far has been matter of one kind or another, dust or a perfect fluid, and in each case we wrote down an energy momentum tensor and then forgot where it came from. There is one source that does not allow us that luxury, and it is the electromagnetic field. Electromagnetism is, together with gravity, one of the only two interactions of unbounded range in classical physics, it is the only other field theory Einstein had available when he was building general relativity, and unlike a fluid it comes with field equations of its own which must be solved simultaneously with Einstein's. The result is the first genuinely coupled system in the theory, and the first one in which we can see gravitation and another field determining each other rather than one merely sitting inside the other.
+
+    The physical statement behind the mathematics is simple enough to be worth saying before any equation. The electromagnetic field carries energy and momentum, and by the equivalence principle anything carrying energy and momentum must gravitate. A region of space containing nothing but light is therefore not flat, and two beams of light attract one another, a conclusion no one would have drawn from Maxwell's theory alone and which follows here with no additional hypothesis whatever. Conversely, the geometry produced in this way tells the field how to propagate, so the two theories are locked together and neither can be solved first.
+
+    \subsection{Maxwell's theory on a curved background}
+
+        The transition from flat to curved space-time is governed by the rule we have used throughout, minimal coupling, which instructs us to replace $\eta_{\mu\nu}$ by $g_{\mu\nu}$ and every partial derivative by a covariant one. Applying it blindly to the definition of the Faraday tensor would give
+
+        \begin{align*}
+            F_{\mu\nu} = \Vec{\nabla}_{\mu}A_{\nu} - \Vec{\nabla}_{\nu}A_{\mu} = \partial_{\mu}A_{\nu} - {\color{red}\Gamma^{\lambda}_{\;\mu\nu}A_{\lambda}} - \partial_{\nu}A_{\mu} + {\color{red}\Gamma^{\lambda}_{\;\nu\mu}A_{\lambda}},
+        \end{align*}
+
+        and the two terms in red cancel each other exactly, because the Levi-Civita connection is symmetric in its lower indices. The Faraday tensor is therefore unchanged by the passage to curved space-time,
+
+        \begin{equation}\label{eq:FaradayCurved}
+            F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu},
+        \end{equation}
+
+        and this is the promise made in chapter 2 being kept. We noticed there that the antisymmetrised partial derivative of a one form is a tensor even though the plain partial derivative is not, and called it the first appearance of the exterior derivative. Equation \ref{eq:FaradayCurved} is that observation cashed in: the electromagnetic field strength needs no connection to be defined, and a physicist may go on writing it with ordinary derivatives in the most violently curved space-time without committing any error at all.
+
+        The homogeneous Maxwell equations inherit the same protection. They state that the exterior derivative of $F$ vanishes,
+
+        \begin{equation}\label{eq:MaxwellHomog}
+            \partial_{[\lambda}F_{\mu\nu]} = \Vec{\nabla}_{[\lambda}F_{\mu\nu]} = 0,
+        \end{equation}
+
+        which in three dimensional language is the absence of magnetic monopoles together with Faraday's law of induction, and which holds identically once \ref{eq:FaradayCurved} is granted, since it amounts to the statement that mixed partial derivatives commute. The inhomogeneous pair is where the geometry finally enters,
+
+        \begin{equation}\label{eq:MaxwellInhomog}
+            \Vec{\nabla}_{\nu}F^{\mu\nu} = 4\pi J^{\mu},
+        \end{equation}
+
+        and here the order of the indices genuinely matters, because $F$ is antisymmetric and writing the divergence on the first slot instead of the second flips the sign, $\Vec{\nabla}_{\mu}F^{\mu\nu} = -4\pi J^{\nu}$. We shall keep the form \ref{eq:MaxwellInhomog} throughout. There is a practical simplification worth recording, which is that the divergence of an antisymmetric tensor never needs a Christoffel symbol either,
+
+        \begin{equation}\label{eq:DivAntisym}
+            \Vec{\nabla}_{\nu}F^{\mu\nu} = \frac{1}{\sqrt{-g}}\,\partial_{\nu}\left(\sqrt{-g}\,F^{\mu\nu}\right),
+        \end{equation}
+
+        a formula we shall lean on heavily when we solve the equations, and which is again a consequence of the symmetry of the connection contracting against the antisymmetry of the field.
+
+        Charge conservation is no longer an independent assumption but a theorem. Taking the divergence of \ref{eq:MaxwellInhomog} and commuting the two covariant derivatives, the commutator produces two Riemann terms which contract down to the Ricci tensor, and since the Ricci tensor is symmetric while $F^{\mu\nu}$ is antisymmetric the identity we proved in chapter 2 kills them both,
+
+        \begin{align*}
+            4\pi\,\Vec{\nabla}_{\mu}J^{\mu} = \Vec{\nabla}_{\mu}\Vec{\nabla}_{\nu}F^{\mu\nu} = \frac{1}{2}\left[\Vec{\nabla}_{\mu},\Vec{\nabla}_{\nu}\right]F^{\mu\nu} = \frac{1}{2}\left({\color{red}R_{\lambda\nu}F^{\lambda\nu}} + {\color{red}R_{\lambda\mu}F^{\mu\lambda}}\right) = 0,
+        \end{align*}
+
+        so that $\Vec{\nabla}_{\mu}J^{\mu}=0$ in any space-time whatsoever. That the curvature drops out of the argument is not an accident of the calculation, it is the statement that the conservation of electric charge is a topological fact about the theory and not a dynamical one, and that no gravitational field however strong can create or destroy a single electron.
+
+    \subsection{The coupled system from a single action}
+
+        The most economical way to obtain both sets of equations at once, and the way that makes the structure of the theory clearest, is to write a single action and vary it twice. Adding the Maxwell Lagrangian to the Einstein-Hilbert action of the previous section gives
+
+        \begin{equation}\label{eq:EMAction}
+            S\left[g_{\mu\nu},A_{\mu}\right] = \int\left(\frac{R}{16\pi} - \frac{1}{16\pi}F_{\alpha\beta}F^{\alpha\beta}\right)\sqrt{-g}\;d^4x,
+        \end{equation}
+
+        in which the dynamical variables are the metric and the potential, and in which the only coupling between them is hidden in the index raising and in the volume element. Everything follows from \ref{eq:EMAction}.
+
+        Varying with respect to the potential is the easier of the two, since the gravitational term does not contain $A_{\mu}$ at all. Using $\delta F_{\alpha\beta} = \partial_{\alpha}\delta A_{\beta} - \partial_{\beta}\delta A_{\alpha}$ and the antisymmetry of $F^{\alpha\beta}$, which lets us combine the two resulting terms into one,
+
+        \begin{align*}
+            \delta S = -\frac{1}{16\pi}\int F^{\alpha\beta}\,{\color{blue}2}\,\delta F_{\alpha\beta}\sqrt{-g}\,d^4x = -\frac{1}{4\pi}\int F^{\alpha\beta}\left(\partial_{\alpha}\delta A_{\beta}\right)\sqrt{-g}\,d^4x,
+        \end{align*}
+
+        where the factor in blue comes from the two identical contributions of $F_{\alpha\beta}F^{\alpha\beta}$ and the second one from the antisymmetry, and integrating by parts while discarding the boundary term in the usual way,
+
+        \begin{align*}
+            \delta S = \frac{1}{4\pi}\int \partial_{\alpha}\left(\sqrt{-g}\,F^{\alpha\beta}\right)\delta A_{\beta}\;d^4x = \frac{1}{4\pi}\int \Vec{\nabla}_{\alpha}F^{\alpha\beta}\,\delta A_{\beta}\,\sqrt{-g}\;d^4x,
+        \end{align*}
+
+        where the last step used \ref{eq:DivAntisym} backwards. Demanding that this vanish for every variation $\delta A_{\beta}$ returns the source free Maxwell equation, and had we included a coupling term $-\int A_{\mu}J^{\mu}\sqrt{-g}\,d^4x$ in the action it would have returned \ref{eq:MaxwellInhomog} complete with its source.
+
+        Varying with respect to the metric is the calculation that produces the coupling. We showed when deriving the field equations that the variation of the gravitational term gives the Einstein tensor, so we need only the matter part, and for it we need two standard results. The first is the variation of the determinant,
+
+        \begin{equation}\label{eq:VarDet}
+            \delta\sqrt{-g} = -\frac{1}{2}\sqrt{-g}\,g_{\mu\nu}\,\delta g^{\mu\nu},
+        \end{equation}
+
+        and the second is that $F_{\alpha\beta}$, being built from partial derivatives of $A_{\mu}$ alone by equation \ref{eq:FaradayCurved}, does not depend on the metric at all, so that the whole metric dependence of the Maxwell term sits in the two inverse metrics needed to raise its indices,
+
+        \begin{align*}
+            F_{\alpha\beta}F^{\alpha\beta} = g^{\alpha\mu}g^{\beta\nu}F_{\alpha\beta}F_{\mu\nu}.
+        \end{align*}
+
+        Varying that product, the two inverse metrics contribute one term each and the two terms are equal after relabelling, so
+
+        \begin{align*}
+            \delta\left(F_{\alpha\beta}F^{\alpha\beta}\right) = {\color{blue}2}\,F_{\mu\beta}F_{\nu}^{\;\;\beta}\,\delta g^{\mu\nu},
+        \end{align*}
+
+        and assembling this with \ref{eq:VarDet} the variation of the Maxwell part of \ref{eq:EMAction} becomes
+
+        \begin{align*}
+            \delta S_{\text{M}} &= -\frac{1}{16\pi}\int\left[{\color{blue}2}F_{\mu\alpha}F_{\nu}^{\;\;\alpha}\sqrt{-g} - \frac{1}{2}\sqrt{-g}\,g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right]\delta g^{\mu\nu}\,d^4x\\
+            &= -\frac{1}{8\pi}\int\left[F_{\mu\alpha}F_{\nu}^{\;\;\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right]\delta g^{\mu\nu}\sqrt{-g}\;d^4x.
+        \end{align*}
+
+        Comparing the bracket with the general definition of the energy momentum tensor as the response of the matter action to a change of the metric, we recover precisely the tensor we wrote down without justification in chapter 3,
+
+        \begin{equation}\label{eq:TemAgain}
+            T_{\mu\nu} = \frac{1}{4\pi}\left(F_{\mu\alpha}F_{\nu}^{\;\;\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right),
+        \end{equation}
+
+        which is a satisfying closure, since what was then an educated guess is now a consequence of the action. Putting the two variations together, the Einstein-Maxwell system reads
+
+        \begin{align}\label{eq:EinsteinMaxwell}
+            G_{\mu\nu} &= 8\pi T_{\mu\nu} = 2\left(F_{\mu\alpha}F_{\nu}^{\;\;\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right),\\
+            \Vec{\nabla}_{\nu}F^{\mu\nu} &= 4\pi J^{\mu}, \qquad \partial_{[\lambda}F_{\mu\nu]} = 0.\nonumber
+        \end{align}
+
+        One simplification is available immediately and it is worth having in hand before we attempt a solution. We showed earlier that the tensor \ref{eq:TemAgain} is traceless in four dimensions, and a traceless source forces the Ricci scalar to vanish through the trace of the field equations, $R = -8\pi T = 0$. The Einstein-Maxwell equations therefore collapse to the simpler form
+
+        \begin{equation}\label{eq:EMRicci}
+            R_{\mu\nu} = 8\pi T_{\mu\nu},
+        \end{equation}
+
+        with no trace term to carry around, so that an electrovacuum space-time is not Ricci flat, as a vacuum one is, but it does have vanishing curvature scalar. The tracelessness itself reflects the fact that Maxwell's theory contains no length and no mass, and it is the classical shadow of the conformal invariance of electromagnetism.
+
+    \subsection{Why the system is consistent, and where the Lorentz force comes from}
+
+        Before solving anything we should check that the system \ref{eq:EinsteinMaxwell} is not self contradictory, and the check turns out to deliver a good deal more than we asked of it. The Bianchi identity guarantees that $\Vec{\nabla}^{\mu}G_{\mu\nu}=0$ identically, so the field equations can only be consistent if the right hand side is also divergence free. Let us compute that divergence honestly and see what the theory demands.
+
+        Taking the divergence of \ref{eq:TemAgain} and applying the Leibniz rule to each of the two terms,
+
+        \begin{align*}
+            4\pi\,\Vec{\nabla}_{\mu}T^{\mu\nu} = \underbrace{\left(\Vec{\nabla}_{\mu}F^{\mu\alpha}\right)F^{\nu}_{\;\;\alpha}}_{\text{(I)}} + \underbrace{F^{\mu\alpha}\Vec{\nabla}_{\mu}F^{\nu}_{\;\;\alpha}}_{\text{(II)}} - \underbrace{\frac{1}{2}F^{\alpha\beta}\Vec{\nabla}^{\nu}F_{\alpha\beta}}_{\text{(III)}},
+        \end{align*}
+
+        where the factor of one half in the third term appeared because the two factors of $F$ in the trace part contribute equally. The first term is the only one that knows about the sources, and by \ref{eq:MaxwellInhomog} written with the divergence on the first index it is
+
+        \begin{align*}
+            \text{(I)} = -4\pi J^{\alpha}F^{\nu}_{\;\;\alpha}.
+        \end{align*}
+
+        The remaining two terms contain no sources and we now show that they cancel each other identically, which is where the homogeneous Maxwell equations earn their keep. Since $F^{\mu\alpha}$ is antisymmetric in $\mu$ and $\alpha$, only the antisymmetric part of what it multiplies survives the contraction, so we may write the second term as
+
+        \begin{align*}
+            \text{(II)} = \frac{1}{2}F^{\mu\alpha}\left(\Vec{\nabla}_{\mu}F^{\nu}_{\;\;\alpha} - \Vec{\nabla}_{\alpha}F^{\nu}_{\;\;\mu}\right),
+        \end{align*}
+
+        and now the homogeneous equation \ref{eq:MaxwellHomog}, written out as the cyclic identity $\Vec{\nabla}_{\mu}F_{\rho\alpha} + \Vec{\nabla}_{\rho}F_{\alpha\mu} + \Vec{\nabla}_{\alpha}F_{\mu\rho} = 0$, lets us rewrite the bracket. Lowering the free index for a moment and using the antisymmetry of $F$ in the middle term of the cycle,
+
+        \begin{align*}
+            \Vec{\nabla}_{\mu}F_{\rho\alpha} - \Vec{\nabla}_{\alpha}F_{\rho\mu} = \Vec{\nabla}_{\mu}F_{\rho\alpha} + \Vec{\nabla}_{\alpha}F_{\mu\rho} = -\Vec{\nabla}_{\rho}F_{\alpha\mu} = \Vec{\nabla}_{\rho}F_{\mu\alpha},
+        \end{align*}
+
+        so that raising the index $\rho$ back up
+
+        \begin{align*}
+            \text{(II)} = \frac{1}{2}F^{\mu\alpha}\Vec{\nabla}^{\nu}F_{\mu\alpha} = \text{(III)},
+        \end{align*}
+
+        and the two cancel exactly. What survives is
+
+        \begin{equation}\label{eq:TemDivergence}
+            \Vec{\nabla}_{\mu}T^{\mu\nu} = -F^{\nu\alpha}J_{\alpha},
+        \end{equation}
+
+        and equation \ref{eq:TemDivergence} deserves to be read carefully, because it is one of the most eloquent results in the whole theory. In a genuine vacuum, with $J^{\mu}=0$, the right hand side vanishes and the system is consistent, which is what we set out to verify. But when charges are present the electromagnetic energy momentum tensor is \textit{not} conserved on its own, and the rate at which it fails to be conserved is exactly the four force per unit volume that the field exerts on the charges. The total energy momentum of field plus matter is conserved, and what \ref{eq:TemDivergence} describes is the transfer between the two.
+
+        The consequence is remarkable. The Lorentz force law, which in flat space-time is an independent postulate that has to be supplied by hand alongside Maxwell's equations, is here a theorem. If the charges are carried by a dust of charge density $\varrho$ and four velocity $u^{\mu}$, so that $J^{\mu}=\varrho u^{\mu}$, then demanding the conservation of the total energy momentum tensor and using \ref{eq:TemDivergence} gives for the matter part
+
+        \begin{equation}\label{eq:LorentzForceDerived}
+            \rho\,u^{\mu}\Vec{\nabla}_{\mu}u^{\nu} = \varrho\,F^{\nu}_{\;\;\mu}u^{\mu},
+        \end{equation}
+
+        which is precisely the equation of motion of a charged particle, mass times four acceleration equal to charge times the Faraday tensor contracted with the four velocity. General relativity therefore does to electromagnetism what it did to gravity itself: it demotes a force law to a consequence of a conservation law, exactly as the geodesic equation for neutral dust fell out of $\Vec{\nabla}_{\mu}T^{\mu\nu}=0$ in chapter 3. A charged particle in a curved space-time does not follow a geodesic, and \ref{eq:LorentzForceDerived} says by exactly how much it deviates.
+
+    \subsection{The Reissner-Nordström solution}
+
+        The obvious thing to do with a new system of equations is to solve it in the simplest case, and the simplest case is the charged analogue of Schwarzschild: the geometry outside a static, spherically symmetric body carrying a total charge $q$. Reissner found it in 1916 and Nordström independently in 1918, within months of Schwarzschild's own solution and while the theory was barely a year old \citep{reissner1916,nordstrom1918}.
+
+        Since the symmetries we impose are exactly those of the Schwarzschild problem, we may reuse the ansatz \ref{eq:SchwAnsatz} without any modification, along with every Christoffel symbol and every component of the Ricci tensor we computed there. The only new ingredient is the electromagnetic field, and symmetry pins it down almost completely. A static configuration forbids any magnetic field, since a magnetic field would single out a direction and break spherical symmetry unless it were radial, and a radial magnetic field would require a monopole, which \ref{eq:MaxwellHomog} forbids. The electric field must be radial for the same reason and can depend on $r$ alone. The only surviving components of the Faraday tensor are therefore
+
+        \begin{equation}\label{eq:RNFieldAnsatz}
+            F_{tr} = -F_{rt} = \mathcal{E}(r),
+        \end{equation}
+
+        with everything else zero, and one unknown function $\mathcal{E}$ to determine alongside $\alpha$ and $\beta$.
+
+        We solve Maxwell first, because it decouples. Outside the body there are no charges, so $J^{\mu}=0$, and the only non trivial component of \ref{eq:MaxwellInhomog} is the temporal one. Raising both indices with the diagonal metric,
+
+        \begin{align*}
+            F^{tr} = g^{tt}g^{rr}F_{tr} = \left(-e^{-2\alpha}\right)\left(e^{-2\beta}\right)\mathcal{E} = -e^{-2(\alpha+\beta)}\mathcal{E},
+        \end{align*}
+
+        and with the determinant of the ansatz being $\sqrt{-g} = e^{\alpha+\beta}r^2\sin\vartheta$, formula \ref{eq:DivAntisym} gives for $\mu=t$ a single surviving derivative,
+
+        \begin{align*}
+            \Vec{\nabla}_{\nu}F^{t\nu} = \frac{1}{e^{\alpha+\beta}r^2{\color{red}\sin\vartheta}}\,\partial_r\left(e^{\alpha+\beta}r^2{\color{red}\sin\vartheta}\cdot\left(-e^{-2(\alpha+\beta)}\mathcal{E}\right)\right) = 0,
+        \end{align*}
+
+        where the factors in red cancel because nothing depends on $\vartheta$. The equation therefore states that the quantity inside the derivative is a constant, which we may name at our convenience,
+
+        \begin{align*}
+            r^2e^{-(\alpha+\beta)}\mathcal{E} = -q,
+        \end{align*}
+
+        and the choice of sign is made so that the potential comes out in the familiar Coulomb form, as we verify in a moment. Solving for the field,
+
+        \begin{equation}\label{eq:RNField}
+            \mathcal{E}(r) = -\frac{q}{r^2}\,e^{\alpha+\beta}.
+        \end{equation}
+
+        We shall find shortly that $\alpha+\beta=0$ for this solution exactly as it did for Schwarzschild, in which case $F_{tr}=-q/r^2$ and the potential $A_{t}=-q/r$ reproduces the Coulomb field of a point charge $q$, which identifies the integration constant physically and justifies the name we gave it.
+
+        Now for the geometry. Since the source is traceless we may use the reduced form \ref{eq:EMRicci} and never compute a Ricci scalar. Substituting \ref{eq:RNField} into \ref{eq:TemAgain}, the invariant is
+
+        \begin{align*}
+            F_{\alpha\beta}F^{\alpha\beta} = {\color{blue}2}\,F_{tr}F^{tr} = 2\mathcal{E}\left(-e^{-2(\alpha+\beta)}\mathcal{E}\right) = -2e^{-2(\alpha+\beta)}\mathcal{E}^2 = -\frac{2q^2}{r^4},
+        \end{align*}
+
+        the factor in blue counting the two orderings $tr$ and $rt$, which contribute equally because both $F$ factors change sign. For the temporal component of the source we need $F_{t\alpha}F_{t}^{\;\;\alpha} = F_{tr}g^{rr}F_{tr} = e^{-2\beta}\mathcal{E}^2 = q^2e^{2\alpha}/r^4$, so that
+
+        \begin{align*}
+            T_{tt} = \frac{1}{4\pi}\left(\frac{q^2e^{2\alpha}}{r^4} - \frac{1}{4}\left(-e^{2\alpha}\right)\left(-\frac{2q^2}{r^4}\right)\right) = \frac{1}{4\pi}\left(\frac{q^2e^{2\alpha}}{r^4} - \frac{q^2e^{2\alpha}}{2r^4}\right) = \frac{q^2e^{2\alpha}}{8\pi r^4},
+        \end{align*}
+
+        and repeating the same two steps for the radial and polar directions, where $F_{r\alpha}F_{r}^{\;\;\alpha} = F_{rt}g^{tt}F_{rt} = -q^2e^{2\beta}/r^4$ and where the angular directions receive no contribution from the first term at all,
+
+        \begin{align*}
+            T_{rr} = -\frac{q^2e^{2\beta}}{8\pi r^4}, \qquad T_{\vartheta\vartheta} = \frac{q^2}{8\pi r^2}.
+        \end{align*}
+
+        The sign pattern is the familiar one of a radial electric field, positive energy density, negative radial pressure, positive tangential pressure, and the reader may check that the trace does vanish as promised.
+
+        The field equations \ref{eq:EMRicci} now read, using the Ricci components computed for the Schwarzschild ansatz,
+
+        \begin{align}\label{eq:RNFieldEqs}
+            R_{tt} &= e^{2(\alpha-\beta)}\left[\alpha'' + (\alpha')^2 - \alpha'\beta' + \frac{2\alpha'}{r}\right] = \frac{q^2e^{2\alpha}}{r^4},\\
+            R_{rr} &= -\alpha'' - (\alpha')^2 + \alpha'\beta' + \frac{2\beta'}{r} = -\frac{q^2e^{2\beta}}{r^4},\nonumber\\
+            R_{\vartheta\vartheta} &= e^{-2\beta}\left[r\left(\beta'-\alpha'\right)-1\right] + 1 = \frac{q^2}{r^2}.\nonumber
+        \end{align}
+
+        The first move is the one that worked before. Multiplying the first equation by $e^{-2(\alpha-\beta)}$ and adding it to the second, the entire left hand side collapses exactly as it did in the vacuum case, and the right hand sides collapse too,
+
+        \begin{align*}
+            \underbrace{\frac{2}{r}\left(\alpha'+\beta'\right)}_{\text{left hand sides}} = \underbrace{e^{-2(\alpha-\beta)}\frac{q^2e^{2\alpha}}{r^4} - \frac{q^2e^{2\beta}}{r^4}}_{\text{right hand sides}} = {\color{red}\frac{q^2e^{2\beta}}{r^4}} - {\color{red}\frac{q^2e^{2\beta}}{r^4}} = 0,
+        \end{align*}
+
+        the two terms in red being identical and cancelling. This is a small miracle and it is worth pausing on: the charge has disappeared from this particular combination, so we recover the same conclusion as in vacuum,
+
+        \begin{equation}\label{eq:RNAlphaBeta}
+            \alpha' + \beta' = 0 \quad\Longrightarrow\quad \beta = -\alpha,
+        \end{equation}
+
+        where the constant of integration has been absorbed into a rescaling of $t$, chosen so that the metric approaches $\eta_{\mu\nu}$ at infinity. The reason this happens is not a coincidence of algebra: the combination that vanishes is $T_{tt}e^{-2\alpha} + T_{rr}e^{-2\beta}$, which is zero precisely because a radial electric field has energy density equal and opposite to its radial pressure, and that in turn is a consequence of the tracelessness of the Maxwell tensor. With \ref{eq:RNAlphaBeta} in hand the relation $F_{tr}=-q/r^2$ promised above follows at once from \ref{eq:RNField}.
+
+        Only the angular equation is left, and with $\beta=-\alpha$ it becomes an ordinary differential equation in one unknown. Substituting $e^{-2\beta}=e^{2\alpha}$ and $\beta'=-\alpha'$,
+
+        \begin{align*}
+            e^{2\alpha}\left(-2r\alpha' - 1\right) + 1 = \frac{q^2}{r^2},
+        \end{align*}
+
+        and the equation becomes transparent under the substitution $\mathcal{F}(r) \equiv e^{2\alpha(r)}$, whose derivative is $\mathcal{F}' = 2\alpha'e^{2\alpha}$, so that the first term is simply $-r\mathcal{F}'$,
+
+        \begin{align*}
+            -r\mathcal{F}' - \mathcal{F} + 1 = \frac{q^2}{r^2} \quad\Longrightarrow\quad r\mathcal{F}' + \mathcal{F} = 1 - \frac{q^2}{r^2}.
+        \end{align*}
+
+        The left hand side is an exact derivative, since $\left(r\mathcal{F}\right)' = r\mathcal{F}' + \mathcal{F}$, so the equation integrates in one step,
+
+        \begin{align*}
+            \left(r\mathcal{F}\right)' = 1 - \frac{q^2}{r^2} \quad\Longrightarrow\quad r\mathcal{F} = r + \frac{q^2}{r} + K \quad\Longrightarrow\quad \mathcal{F} = 1 + \frac{q^2}{r^2} + \frac{K}{r},
+        \end{align*}
+
+        with $K$ an integration constant which the field equations cannot determine, exactly as in the Schwarzschild case, and which we fix by the same argument: far from the body the charge term dies faster than the mass term, the field is weak, and the Newtonian limit demands $g_{tt}\rightarrow -(1-2Gm/C^2r)$, so that $K=-2m$ in geometrised units. Collecting everything,
+
+        \begin{equation}\label{eq:ReissnerNordstrom}
+            ds^2 = -\left(1 - \frac{2m}{r} + \frac{q^2}{r^2}\right)dt^2 + \frac{dr^2}{1 - \frac{2m}{r} + \frac{q^2}{r^2}} + r^2d\Omega^2,
+        \end{equation}
+
+        which is the Reissner-Nordström metric, accompanied by the electromagnetic field $F_{tr}=-q/r^2$. Setting $q=0$ returns Schwarzschild, as it must.
+
+        The charge term enters with the opposite sign to the mass term, and that single observation contains most of the physics of \ref{eq:ReissnerNordstrom}. Gravitationally, charge is repulsive. The reason is not that like charges repel, since the metric depends on $q^2$ and is blind to the sign of the charge, but rather that the electric field surrounding the body carries positive energy which is spread throughout the exterior region, so that the effective mass contained within a radius $r$ decreases as we descend, and less of it remains to pull.
+
+        The consequences for the causal structure are dramatic. The metric function vanishes where $r^2-2mr+q^2=0$, that is at
+
+        \begin{equation}\label{eq:RNHorizons}
+            r_{\pm} = m \pm \sqrt{m^2-q^2},
+        \end{equation}
+
+        so that instead of the single horizon of Schwarzschild there are now two, an outer event horizon at $r_+$ and an inner Cauchy horizon at $r_-$, provided $m>|q|$. As the charge grows the two approach each other, and at $|q|=m$, the \textit{extremal} case, they merge into a single degenerate horizon at $r=m$. Beyond that, for $|q|>m$, equation \ref{eq:RNHorizons} has no real solutions, the metric function never vanishes, and the singularity at $r=0$ stands exposed to the outside universe with no horizon to hide it. Such a \textit{naked singularity} would allow the breakdown of predictability to propagate into the region where we live, and the conjecture that nature refuses to produce one is Penrose's cosmic censorship hypothesis \citep{penrose1969}, still unproved and one of the central open problems of the subject.
+
+        That $r=0$ is a genuine singularity and that both horizons are not is settled as before by a curvature scalar, and computing the Kretschmann invariant for \ref{eq:ReissnerNordstrom} gives
+
+        \begin{equation}\label{eq:RNKretschmann}
+            R_{abcd}R^{abcd} = \frac{48m^2}{r^6} - \frac{96mq^2}{r^7} + \frac{56q^4}{r^8},
+        \end{equation}
+
+        which reduces to the Schwarzschild value when $q=0$, is perfectly finite at $r_{\pm}$, and diverges at the origin. There is one further difference from the uncharged case which is worth knowing: the singularity of \ref{eq:ReissnerNordstrom} is timelike rather than spacelike, so that unlike in Schwarzschild an infalling observer is not obliged to hit it, and can in principle avoid it and pass through the inner horizon. What lies beyond is a different story, because the inner horizon turns out to be violently unstable to any infalling radiation, and the smooth continuation predicted by the exact solution is almost certainly destroyed in any realistic collapse.
+
+        A last word on whether any of this describes a real object. Astrophysical black holes are expected to carry essentially no charge, and the reason is the overwhelming strength of electromagnetism relative to gravity: the ratio of the electrostatic to the gravitational force between two protons is of order $10^{36}$, so a body that acquired any appreciable charge would attract opposite charges from the surrounding plasma and neutralise itself almost instantly. The Reissner-Nordström solution is therefore not a model of anything we expect to observe, and its importance is entirely theoretical, as the simplest laboratory in which to study horizons, extremality and the structure of the field equations when a second field is present.
+
+    \subsection{The importance and reach of the Einstein-Maxwell equations}
+
+        It is worth closing this chapter by saying plainly why a system that describes no astrophysical object we can point to should occupy so central a place in relativity, because the reasons are several and they are not the ones a first reading might suggest.
+
+        The first is conceptual, and we have already met it. The Einstein-Maxwell system is the simplest case in which gravity is coupled to something that is not a phenomenological fluid but a field with equations of its own, and it is therefore the place where one learns what coupling actually means. Everything that is difficult about general relativity as a physical theory, the fact that the source depends on the metric, that the metric depends on the source, and that the two must be solved together, appears here in its mildest possible form, and every lesson learnt in this setting carries over unchanged to the Einstein-Yang-Mills and Einstein-Dirac systems and to the coupling of gravity to the whole Standard Model.
+
+        The second is mathematical. The Einstein-Maxwell equations were the first setting in which the initial value problem of general relativity was brought under control, and the existence and uniqueness theorems that Choquet-Bruhat proved for them in the nineteen fifties are what made it legitimate to speak of general relativity as a predictive theory at all \citep{fouresbruhat1952}. Every numerical simulation of a black hole merger performed today rests on the well posedness that was first established in this context. There is also a striking structural result due to Rainich, who showed as early as 1925 that a source free electromagnetic field leaves such a distinctive fingerprint on the curvature that one can recognise an electrovacuum space-time from the metric alone and reconstruct the field from it, so that in this case electromagnetism is not something added to geometry but something already encoded in it \citep{rainich1925}.
+
+        The third is that the system is the natural home of the black hole uniqueness theorems. Israel proved in 1968 that the only static, asymptotically flat electrovacuum black hole is Reissner-Nordström \citep{israel1968}, and when rotation is allowed the unique stationary solution is the Kerr-Newman metric found in 1965 \citep{newman1965}, which depends on exactly three numbers, the mass, the angular momentum and the charge. This is the precise content of the statement that black holes have no hair, and it is a genuinely astonishing result: an object formed from the collapse of a star with all its chemistry, its magnetic fields and its history retains, once it settles down, exactly three of them. The extremal limit $|q|=m$ that appeared in our solution is the boundary of the allowed region of that three parameter family, and it plays a distinguished role in the laws of black hole mechanics, where it corresponds to zero temperature and is the subject of the third law \citep{bardeen1973}. Extremal and near extremal charged black holes are also the cases in which string theory has succeeded in counting the microscopic states responsible for the entropy, which is why a solution describing nothing in the sky remains a central object of study in quantum gravity.
+
+        The fourth reason is that the Einstein-Maxwell equations were the first serious attempt at unification, and it failed in an instructive way. Weyl tried in 1918 to obtain electromagnetism by enlarging the geometry with a scale connection, and although the theory was wrong the word he coined for the idea, \textit{gauge}, survived and now organises all of fundamental physics \citep{weyl1918}. Kaluza in 1921 and Klein in 1926 showed that general relativity written in five dimensions, with the fifth curled into a small circle, produces exactly the four dimensional Einstein-Maxwell system plus a scalar field \citep{kaluza1921,klein1926}, which is as close to a geometrical unification of gravity and electromagnetism as anyone has come, and which is the direct ancestor of every extra dimensional theory since.
+
+        The last reason is the most practical, and it is the one that has come to dominate. Although charge is negligible in astrophysics, magnetic fields are not, and the equations governing a magnetised plasma in a strong gravitational field are the Einstein-Maxwell equations with the source supplied by the plasma rather than left in vacuum. That system, general relativistic magnetohydrodynamics, is what is actually solved on supercomputers to model accretion discs, relativistic jets and neutron star mergers. The mechanism by which a rotating black hole can extract its own rotational energy through the magnetic field threading its horizon was identified by Blandford and Znajek in 1977 and is the leading explanation for the jets emitted by active galactic nuclei \citep{blandford1977}. Magnetars, neutron stars whose magnetic fields reach $10^{15}$ gauss and are strong enough for the magnetic energy density to distort the star's own geometry, are another regime in which the two theories must be solved together \citep{duncan1992}. And the images of the shadows of black holes produced in recent years are compared against simulations in which nothing but Einstein's equations, Maxwell's equations and the coupling we have derived in this section are integrated forward in time.
+
+        So the equations we have written down, which describe no real charged black hole, nevertheless underlie the initial value formulation of the theory, the classification of its black holes, the first attempts at unification, and most of what is currently computed in relativistic astrophysics. That is a considerable return on a Lagrangian with two terms in it.
+
+    \section{The Kerr solution}
+
+    \section{The Kerr-Newman solution}
+
+    We now return to the weak field programme we interrupted, because the linearised equations we derived before this detour are about to give us something that neither Schwarzschild's static solution nor the charged one we have just built can provide, namely radiation.

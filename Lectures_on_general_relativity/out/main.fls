@@ -482,24 +482,27 @@ INPUT ./Chapter 3/Figures/surface.pdf
 INPUT ./Chapter 3/Figures/surface.pdf
 INPUT ./Chapter 3/Figures/surface.pdf
 INPUT ./Chapter 3/Figures/surface.pdf
-INPUT ./Chapter 3/Figures/Tetrad.pdf
-INPUT ./Chapter 3/Figures/Tetrad.pdf
-INPUT ./Chapter 3/Figures/Tetrad.pdf
-INPUT ./Chapter 3/Figures/Tetrad.pdf
-INPUT ./Chapter 3/Figures/Tetrad.pdf
-INPUT ./Chapter 3/Figures/KillingFlow.pdf
-INPUT ./Chapter 3/Figures/KillingFlow.pdf
-INPUT ./Chapter 3/Figures/KillingFlow.pdf
-INPUT ./Chapter 3/Figures/KillingFlow.pdf
-INPUT ./Chapter 3/Figures/KillingFlow.pdf
 INPUT ./Chapter 4/chap4.tex
 INPUT ./Chapter 4/chap4.tex
 INPUT Chapter 4/chap4.tex
-INPUT ./Chapter 4/Figures/Distribution.pdf
-INPUT ./Chapter 4/Figures/Distribution.pdf
-INPUT ./Chapter 4/Figures/Distribution.pdf
-INPUT ./Chapter 4/Figures/Distribution.pdf
-INPUT ./Chapter 4/Figures/Distribution.pdf
+INPUT ./Chapter 4/Figures/Tetrad.pdf
+INPUT ./Chapter 4/Figures/Tetrad.pdf
+INPUT ./Chapter 4/Figures/Tetrad.pdf
+INPUT ./Chapter 4/Figures/Tetrad.pdf
+INPUT ./Chapter 4/Figures/Tetrad.pdf
+INPUT ./Chapter 4/Figures/KillingFlow.pdf
+INPUT ./Chapter 4/Figures/KillingFlow.pdf
+INPUT ./Chapter 4/Figures/KillingFlow.pdf
+INPUT ./Chapter 4/Figures/KillingFlow.pdf
+INPUT ./Chapter 4/Figures/KillingFlow.pdf
+INPUT ./Chapter 5/chap5.tex
+INPUT ./Chapter 5/chap5.tex
+INPUT Chapter 5/chap5.tex
+INPUT ./Chapter 5/Figures/Distribution.pdf
+INPUT ./Chapter 5/Figures/Distribution.pdf
+INPUT ./Chapter 5/Figures/Distribution.pdf
+INPUT ./Chapter 5/Figures/Distribution.pdf
+INPUT ./Chapter 5/Figures/Distribution.pdf
 INPUT out/main.bbl
 INPUT out/main.bbl
 INPUT out/main.bbl
