@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex out/main"] 1789840877.91187 "out/main.aux" "out/main.bbl" "out/main" 1789840902.88853 0
-  "./bibliografia.bib" 1789840194.76375 11606 7530334868f6610ae6a08b1e7121b0cc ""
+["bibtex out/main"] 1789841632.01353 "out/main.aux" "out/main.bbl" "out/main" 1789841633.39757 0
+  "./bibliografia.bib" 1789841574.46718 12378 8c09d2392f08028d61b5f5c640c6744e ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "out/main.aux" 1789840902.66049 36912 bdee275f118a77cb2985625be518993a "pdflatex"
+  "out/main.aux" 1789841633.16143 40045 3d65d93d4c32be86fdd1845fd04c90dd "pdflatex"
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1789840901.64681 "main.tex" "out/main.pdf" "main" 1789840902.88866 0
+["pdflatex"] 1789841632.078 "main.tex" "out/main.pdf" "main" 1789841633.3977 0
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -239,15 +239,15 @@
   "Chapter 3/Figures/tdeu.pdf" 1771986394 10479 132723762189beb1f7dc5d8133df2ad7 ""
   "Chapter 3/chap3.tex" 1789840896.105 200163 c0ee6cda22804316d5e265bf24c73960 ""
   "Chapter 4/Figures/Distribution.pdf" 1771986394 61087 343ceb1145f79d642f47424fa3ae5189 ""
-  "Chapter 4/chap4.tex" 1789837595.97847 25328 838206273f4da98b8e10d3d0196a302f ""
+  "Chapter 4/chap4.tex" 1789841622.46543 52433 1a92973c8645e63c44c373e5bbbd5b5a ""
   "Figures/LoGOTS.png" 1771986394 56924 0eb3d3c0ccaeac2fa2164ae400c3163f ""
   "Figures/logouis.png" 1771986394 63563 516325fe37699bb556ddbb3ecd6899e7 ""
   "main.tex" 1789836885.66949 6044 c81e1f258a5c63acba5e24cfd1910ce1 ""
-  "out/main.aux" 1789840902.66049 36912 bdee275f118a77cb2985625be518993a "pdflatex"
-  "out/main.bbl" 1789840877.97555 9360 cfd0f820b71f3fad43ee82fd23dc0ecd "bibtex out/main"
-  "out/main.lof" 1789840902.66278 5055 0d9cd0a761e0c89c84197bb39eb7de17 "pdflatex"
-  "out/main.out" 1789840902.66258 17749 d73ccf018091e43948eed69e45f5a6a0 "pdflatex"
-  "out/main.toc" 1789840902.66276 7995 85ada598caf4fe14ff44f6c83d0ec1a5 "pdflatex"
+  "out/main.aux" 1789841633.16143 40045 3d65d93d4c32be86fdd1845fd04c90dd "pdflatex"
+  "out/main.bbl" 1789841632.07404 10004 e80f84089ff2b4e0207d8a43e826301f "bibtex out/main"
+  "out/main.lof" 1789841633.16438 5394 aa70f65a8e642d34034c00588981549b "pdflatex"
+  "out/main.out" 1789841633.16362 19511 139158adacf7582d7efbe9c27c19ee7f "pdflatex"
+  "out/main.toc" 1789841633.1642 8684 420320a0c0e6f1f40cfe30a7a1986e1c "pdflatex"
   (generated)
   "out/main.aux"
   "out/main.lof"

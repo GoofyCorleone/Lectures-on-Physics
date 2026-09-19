@@ -77,6 +77,12 @@
 \contentsline {section}{\numberline {4.1}Lorenz Gauge and gravitational waves}{128}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Gravitational waves}{131}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Traceless transverse gauge}{132}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}Polarization and Stokes parameters for gravitational waves}{133}{subsubsection.4.2.1.1}%
-\contentsline {subsection}{\numberline {4.2.2}Effects of the gravitational radiation on the matter}{136}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Polarisation and Stokes parameters for gravitational waves}{134}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Helicity, and why gravitational polarisation is not optical polarisation}{137}{subsubsection.4.2.1.2}%
+\contentsline {subsection}{\numberline {4.2.2}Effects of the gravitational radiation on the matter}{139}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}The generation of gravitational waves}{140}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}The retarded solution of the wave equation}{140}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Why there is no monopole and no dipole radiation}{141}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}The quadrupole formula}{143}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}The energy carried away by the waves}{145}{subsection.4.3.4}%
 \contentsfinish 

@@ -47,6 +47,12 @@ Einstein, A. (1915).
 \newblock {\em Sitzungsberichte der K{\"o}niglich Preu{\ss}ischen Akademie der
   Wissenschaften}, pages 844--847.
 
+\bibitem[Einstein, 1918]{einstein1918}
+Einstein, A. (1918).
+\newblock {\"U}ber gravitationswellen.
+\newblock {\em Sitzungsberichte der K{\"o}niglich Preu{\ss}ischen Akademie der
+  Wissenschaften}, pages 154--167.
+
 \bibitem[Einstein, 1949]{einstein1949}
 Einstein, A. (1949).
 \newblock Autobiographical notes.
@@ -106,6 +112,17 @@ Hubble, E. (1929).
   nebulae.
 \newblock {\em Proceedings of the National Academy of Sciences},
   15(3):168--173.
+
+\bibitem[Hulse and Taylor, 1975]{hulse1975}
+Hulse, R.~A. and Taylor, J.~H. (1975).
+\newblock Discovery of a pulsar in a binary system.
+\newblock {\em The Astrophysical Journal}, 195:L51--L53.
+
+\bibitem[Isaacson, 1968]{isaacson1968}
+Isaacson, R.~A. (1968).
+\newblock Gravitational radiation in the limit of high frequency. ii. nonlinear
+  terms and the effective stress tensor.
+\newblock {\em Physical Review}, 166(5):1272--1280.
 
 \bibitem[Klein, 1872]{klein1872}
 Klein, F. (1872).
