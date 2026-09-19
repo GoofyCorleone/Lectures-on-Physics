@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  19 SEP 2026 12:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  19 SEP 2026 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -751,12 +751,12 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 al/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2
 
 ]
-<Figures/LoGOTS.png, id=310, 668.4975pt x 376.40625pt>
+<Figures/LoGOTS.png, id=338, 668.4975pt x 376.40625pt>
 File: Figures/LoGOTS.png Graphic file (type png)
 <use Figures/LoGOTS.png>
 Package pdftex.def Info: Figures/LoGOTS.png  used on input line 109.
 (pdftex.def)             Requested size: 187.89912pt x 105.80081pt.
-<Figures/logouis.png, id=312, 1196.47pt x 596.2275pt>
+<Figures/logouis.png, id=340, 1196.47pt x 596.2275pt>
 File: Figures/logouis.png Graphic file (type png)
 <use Figures/logouis.png>
 Package pdftex.def Info: Figures/logouis.png  used on input line 113.
@@ -800,7 +800,7 @@ Underfull \hbox (badness 1360) in paragraph at lines 64--65
  []
 
 [20] [21]
-<Chapter 2/Figures/TercerPostu.pdf, id=722, 463.89328pt x 557.87683pt>
+<Chapter 2/Figures/TercerPostu.pdf, id=757, 463.89328pt x 557.87683pt>
 File: Chapter 2/Figures/TercerPostu.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/TercerPostu.pdf>
 Package pdftex.def Info: Chapter 2/Figures/TercerPostu.pdf  used on input line 
@@ -808,33 +808,33 @@ Package pdftex.def Info: Chapter 2/Figures/TercerPostu.pdf  used on input line
 (pdftex.def)             Requested size: 234.87749pt x 282.4619pt.
  [22{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.e
 nc} <./Chapter 2/Figures/TercerPostu.pdf>]
-<Chapter 2/Figures/CartasS1.pdf, id=754, 519.80968pt x 235.90918pt>
+<Chapter 2/Figures/CartasS1.pdf, id=790, 519.80968pt x 235.90918pt>
 File: Chapter 2/Figures/CartasS1.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/CartasS1.pdf>
 Package pdftex.def Info: Chapter 2/Figures/CartasS1.pdf  used on input line 145
 .
 (pdftex.def)             Requested size: 422.77661pt x 191.8809pt.
  [23 <./Chapter 2/Figures/CartasS1.pdf>]
-<Chapter 2/Figures/S2toR2.pdf, id=779, 486.24911pt x 219.0317pt>
+<Chapter 2/Figures/S2toR2.pdf, id=814, 486.24911pt x 219.0317pt>
 File: Chapter 2/Figures/S2toR2.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/S2toR2.pdf>
-Package pdftex.def Info: Chapter 2/Figures/S2toR2.pdf  used on input line 190.
+Package pdftex.def Info: Chapter 2/Figures/S2toR2.pdf  used on input line 192.
 (pdftex.def)             Requested size: 375.80542pt x 169.28992pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Chapter 2/Figures/SphereMap.pdf, id=781, 525.7695pt x 256.08446pt>
+[24]
+<Chapter 2/Figures/SphereMap.pdf, id=825, 525.7695pt x 256.08446pt>
 File: Chapter 2/Figures/SphereMap.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/SphereMap.pdf>
 Package pdftex.def Info: Chapter 2/Figures/SphereMap.pdf  used on input line 20
-5.
+7.
 (pdftex.def)             Requested size: 375.80542pt x 183.0482pt.
-[24]
-<Chapter 2/Figures/Estereo.pdf, id=791, 526.31415pt x 267.10257pt>
+<Chapter 2/Figures/Estereo.pdf, id=826, 526.31415pt x 267.10257pt>
 File: Chapter 2/Figures/Estereo.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Estereo.pdf>
-Package pdftex.def Info: Chapter 2/Figures/Estereo.pdf  used on input line 218.
+Package pdftex.def Info: Chapter 2/Figures/Estereo.pdf  used on input line 220.
 
 (pdftex.def)             Requested size: 328.82706pt x 166.87755pt.
 
@@ -842,21 +842,21 @@ Package pdftex.def Info: Chapter 2/Figures/Estereo.pdf  used on input line 218.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [25 <./Chapter 2/Figures/S2toR2.pdf>]
-<Chapter 2/Figures/SmoothFunc.pdf, id=812, 554.77423pt x 278.21143pt>
+<Chapter 2/Figures/SmoothFunc.pdf, id=847, 554.77423pt x 278.21143pt>
 File: Chapter 2/Figures/SmoothFunc.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/SmoothFunc.pdf>
 Package pdftex.def Info: Chapter 2/Figures/SmoothFunc.pdf  used on input line 2
-36.
+38.
 (pdftex.def)             Requested size: 328.82706pt x 164.90744pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [26 <./Chapter 2/Figures/SphereMap.pdf>]
-<Chapter 2/Figures/Curva.pdf, id=836, 520.0624pt x 312.99016pt>
+<Chapter 2/Figures/Curva.pdf, id=871, 520.0624pt x 312.99016pt>
 File: Chapter 2/Figures/Curva.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Curva.pdf>
-Package pdftex.def Info: Chapter 2/Figures/Curva.pdf  used on input line 284.
+Package pdftex.def Info: Chapter 2/Figures/Curva.pdf  used on input line 286.
 (pdftex.def)             Requested size: 328.82706pt x 197.90598pt.
 
 
@@ -864,10 +864,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [27 <./Chapter 2/Figures/Estereo.pdf>] [28 <./Chapter 2/Figures/SmoothFunc.pdf>
 ]
-<Chapter 2/Figures/Tangents.pdf, id=881, 550.74263pt x 381.19296pt>
+<Chapter 2/Figures/Tangents.pdf, id=917, 550.74263pt x 381.19296pt>
 File: Chapter 2/Figures/Tangents.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Tangents.pdf>
-Package pdftex.def Info: Chapter 2/Figures/Tangents.pdf  used on input line 366
+Package pdftex.def Info: Chapter 2/Figures/Tangents.pdf  used on input line 368
 .
 (pdftex.def)             Requested size: 328.82706pt x 227.60075pt.
 
@@ -875,42 +875,42 @@ Package pdftex.def Info: Chapter 2/Figures/Tangents.pdf  used on input line 366
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [29 <./Chapter 2/Figures/Curva.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
 [30 <./Chapter 2/Figures/Tangents.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
+
+ []
+
 [32] [33] [34] [35] [36] [37] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 697--698
+Underfull \hbox (badness 10000) in paragraph at lines 699--700
 
  []
 
 [39] [40]
-Underfull \hbox (badness 10000) in paragraph at lines 780--781
+Underfull \hbox (badness 10000) in paragraph at lines 782--783
 
  []
 
 [41] [42]
-Underfull \hbox (badness 10000) in paragraph at lines 814--815
+Underfull \hbox (badness 10000) in paragraph at lines 816--817
 
  []
 
 [43] [44] [45] [46] [47] [48])
-Underfull \hbox (badness 10000) in paragraph at lines 973--175
+Underfull \hbox (badness 10000) in paragraph at lines 975--175
 
  []
 
@@ -918,300 +918,289 @@ Underfull \hbox (badness 10000) in paragraph at lines 973--175
 
 ]
 Chapter 3.
-[51] (./Chapter 3/chap3.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
-
- []
-
-
-Overfull \hbox (7.52443pt too wide) in paragraph at lines 15--16
-[]\T1/cmr/m/n/10.95 (-20) General rel-a-tiv-ity also pro-vides the foun-da-tion
- for un-der-stand-ing black holes, where the grav-i-ta-tional
- []
-
-[52
+[51] (./Chapter 3/chap3.tex [52
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
-[53]
+
 Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+[53]
+Overfull \hbox (7.52443pt too wide) in paragraph at lines 49--50
+[]\T1/cmr/m/n/10.95 (-20) General rel-a-tiv-ity also pro-vides the foun-da-tion
+ for un-der-stand-ing black holes, where the grav-i-ta-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
 [54]
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
 [55]
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
-[56]
-<Chapter 3/Figures/CircularTrajectory.pdf, id=1189, 216.03482pt x 195.97885pt>
+[56] [57]
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
+
+ []
+
+<Chapter 3/Figures/CircularTrajectory.pdf, id=1231, 216.03482pt x 195.97885pt>
 File: Chapter 3/Figures/CircularTrajectory.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/CircularTrajectory.pdf>
 Package pdftex.def Info: Chapter 3/Figures/CircularTrajectory.pdf  used on inpu
-t line 171.
+t line 205.
 (pdftex.def)             Requested size: 234.87749pt x 213.07443pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[57] [58 <./Chapter 3/Figures/CircularTrajectory.pdf>]
-Overfull \hbox (48.09824pt too wide) detected at line 222
-[]
- []
-
-[59]
-<Chapter 3/Figures/TidalForces.pdf, id=1236, 516.03128pt x 221.52376pt>
+[58] [59 <./Chapter 3/Figures/CircularTrajectory.pdf>] [60]
+<Chapter 3/Figures/TidalForces.pdf, id=1276, 516.03128pt x 221.52376pt>
 File: Chapter 3/Figures/TidalForces.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/TidalForces.pdf>
 Package pdftex.def Info: Chapter 3/Figures/TidalForces.pdf  used on input line 
-250.
+286.
 (pdftex.def)             Requested size: 328.82706pt x 141.16628pt.
-<Chapter 3/Figures/LightDeflection.pdf, id=1239, 535.83777pt x 153.67494pt>
+ [61 <./Chapter 3/Figures/TidalForces.pdf>]
+<Chapter 3/Figures/LightDeflection.pdf, id=1340, 535.83777pt x 153.67494pt>
 File: Chapter 3/Figures/LightDeflection.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/LightDeflection.pdf>
 Package pdftex.def Info: Chapter 3/Figures/LightDeflection.pdf  used on input l
-ine 261.
+ine 297.
 (pdftex.def)             Requested size: 422.77661pt x 121.25412pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
-[60 <./Chapter 3/Figures/TidalForces.pdf>] [61 <./Chapter 3/Figures/LightDeflec
-tion.pdf>] [62]
-<Chapter 3/Figures/Spacetimediagram.pdf, id=1352, 247.00835pt x 147.7273pt>
+[62 <./Chapter 3/Figures/LightDeflection.pdf>] [63]
+<Chapter 3/Figures/Spacetimediagram.pdf, id=1395, 247.00835pt x 147.7273pt>
 File: Chapter 3/Figures/Spacetimediagram.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/Spacetimediagram.pdf>
 Package pdftex.def Info: Chapter 3/Figures/Spacetimediagram.pdf  used on input 
-line 349.
+line 385.
 (pdftex.def)             Requested size: 328.82706pt x 196.66641pt.
- [63 <./Chapter 3/Figures/Spacetimediagram.pdf>] [64]
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
-
- []
-
-[65]
-<Chapter 3/Figures/ConoDeLuz.pdf, id=1399, 242.73465pt x 232.10233pt>
-File: Chapter 3/Figures/ConoDeLuz.pdf Graphic file (type pdf)
-<use Chapter 3/Figures/ConoDeLuz.pdf>
-Package pdftex.def Info: Chapter 3/Figures/ConoDeLuz.pdf  used on input line 49
-5.
-(pdftex.def)             Requested size: 234.87749pt x 224.60065pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 500--501
+ [64 <./Chapter 3/Figures/Spacetimediagram.pdf>] [65]
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
 [66]
-Underfull \hbox (badness 10000) in paragraph at lines 508--509
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
 
  []
 
-<Chapter 3/Figures/TimeCurve.pdf, id=1413, 396.90128pt x 227.74559pt>
+[67]
+<Chapter 3/Figures/ConoDeLuz.pdf, id=1451, 242.73465pt x 232.10233pt>
+File: Chapter 3/Figures/ConoDeLuz.pdf Graphic file (type pdf)
+<use Chapter 3/Figures/ConoDeLuz.pdf>
+Package pdftex.def Info: Chapter 3/Figures/ConoDeLuz.pdf  used on input line 52
+9.
+(pdftex.def)             Requested size: 234.87749pt x 224.60065pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 534--535
+
+ []
+
+[68 <./Chapter 3/Figures/ConoDeLuz.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 542--543
+
+ []
+
+<Chapter 3/Figures/TimeCurve.pdf, id=1479, 396.90128pt x 227.74559pt>
 File: Chapter 3/Figures/TimeCurve.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/TimeCurve.pdf>
-Package pdftex.def Info: Chapter 3/Figures/TimeCurve.pdf  used on input line 51
-4.
+Package pdftex.def Info: Chapter 3/Figures/TimeCurve.pdf  used on input line 54
+8.
 (pdftex.def)             Requested size: 234.87749pt x 134.77531pt.
-[67 <./Chapter 3/Figures/ConoDeLuz.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 553--554
+[69 <./Chapter 3/Figures/TimeCurve.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 587--588
 
  []
 
-[68 <./Chapter 3/Figures/TimeCurve.pdf>]
-<Chapter 3/Figures/Variational.pdf, id=1467, 487.90067pt x 332.89595pt>
+<Chapter 3/Figures/Variational.pdf, id=1510, 487.90067pt x 332.89595pt>
 File: Chapter 3/Figures/Variational.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/Variational.pdf>
 Package pdftex.def Info: Chapter 3/Figures/Variational.pdf  used on input line 
-559.
+593.
 (pdftex.def)             Requested size: 234.87749pt x 160.25555pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 572--573
-
- []
-
-[69 <./Chapter 3/Figures/Variational.pdf>] [70] [71] [72]
-Underfull \hbox (badness 10000) in paragraph at lines 723--724
+[70 <./Chapter 3/Figures/Variational.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
 
  []
 
-[73] [74]
-Underfull \hbox (badness 10000) in paragraph at lines 817--818
+[71] [72] [73]
+Underfull \hbox (badness 10000) in paragraph at lines 757--758
 
  []
 
-[75] [76] [77] [78]
-Overfull \hbox (4.36737pt too wide) in paragraph at lines 1025--1026
+[74] [75]
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
+
+ []
+
+[76] [77] [78] [79] [80]
+Overfull \hbox (4.36737pt too wide) in paragraph at lines 1059--1060
 []\T1/cmr/m/n/10.95 (-20) It is easy to prove that the po-si-tion of a par-ti-c
 le can be de-ter-mined us-ing these three trans-for-ma-tions,
  []
 
-[79]
-Underfull \hbox (badness 10000) in paragraph at lines 1063--1064
-
- []
-
-[80]
-Underfull \hbox (badness 10000) in paragraph at lines 1115--1116
-
- []
-
 [81]
-Underfull \hbox (badness 10000) in paragraph at lines 1164--1165
+Underfull \hbox (badness 10000) in paragraph at lines 1097--1098
 
  []
 
 [82]
-Underfull \hbox (badness 10000) in paragraph at lines 1214--1215
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1150
 
  []
 
-<Chapter 3/Figures/tdeu.pdf, id=1652, 510.38724pt x 410.2243pt>
+[83]
+Underfull \hbox (badness 10000) in paragraph at lines 1198--1199
+
+ []
+
+[84]
+Underfull \hbox (badness 10000) in paragraph at lines 1248--1249
+
+ []
+
+<Chapter 3/Figures/tdeu.pdf, id=1697, 510.38724pt x 410.2243pt>
 File: Chapter 3/Figures/tdeu.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/tdeu.pdf>
-Package pdftex.def Info: Chapter 3/Figures/tdeu.pdf  used on input line 1220.
+Package pdftex.def Info: Chapter 3/Figures/tdeu.pdf  used on input line 1254.
 (pdftex.def)             Requested size: 328.82706pt x 264.29532pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[83] [84 <./Chapter 3/Figures/tdeu.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1264
-
- []
-
 [85]
-Overfull \hbox (13.21877pt too wide) in paragraph at lines 1321--1322
-[]\T1/cmr/m/n/10.95 (-20) This means the Rie-mann's cur-va-ture ten-sors is mul
--ti-lin-ear in his two ar-gu-ments, the demon-stra-tions
+Underfull \hbox (badness 10000) in paragraph at lines 1297--1298
+
  []
 
-[86] [87]
-<Chapter 3/Figures/Tareinha.pdf, id=1721, 432.18428pt x 344.15811pt>
+[86 <./Chapter 3/Figures/tdeu.pdf>] [87]
+Overfull \hbox (9.00922pt too wide) in paragraph at lines 1355--1356
+[]\T1/cmr/m/n/10.95 (-20) This means the Rie-mann's cur-va-ture ten-sors is mul
+-ti-lin-ear in his two ar-gu-ments, the demon-stra-tion
+ []
+
+[88]
+<Chapter 3/Figures/Tareinha.pdf, id=1757, 432.18428pt x 344.15811pt>
 File: Chapter 3/Figures/Tareinha.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/Tareinha.pdf>
-Package pdftex.def Info: Chapter 3/Figures/Tareinha.pdf  used on input line 141
-4.
+Package pdftex.def Info: Chapter 3/Figures/Tareinha.pdf  used on input line 144
+9.
 (pdftex.def)             Requested size: 281.85585pt x 224.46158pt.
- [88 <./Chapter 3/Figures/Tareinha.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1425--1426
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[89]
+Underfull \hbox (badness 10000) in paragraph at lines 1460--1461
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1427--1428
+Underfull \hbox (badness 10000) in paragraph at lines 1462--1463
 
  []
 
-[89] [90]
-Underfull \hbox (badness 10000) in paragraph at lines 1516--1517
+[90 <./Chapter 3/Figures/Tareinha.pdf>] [91]
+Underfull \hbox (badness 10000) in paragraph at lines 1551--1552
 
  []
 
-[91] [92]
-Underfull \hbox (badness 10000) in paragraph at lines 1616--1617
+[92] [93]
+Underfull \hbox (badness 10000) in paragraph at lines 1651--1652
 
  []
 
-[93] [94] [95]
-<Chapter 3/Figures/GeodesicDeviation.pdf, id=1846, 315.66678pt x 248.5187pt>
+[94] [95] [96] [97]
+<Chapter 3/Figures/GeodesicDeviation.pdf, id=1903, 315.66678pt x 248.5187pt>
 File: Chapter 3/Figures/GeodesicDeviation.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/GeodesicDeviation.pdf>
 Package pdftex.def Info: Chapter 3/Figures/GeodesicDeviation.pdf  used on input
- line 1765.
+ line 1800.
 (pdftex.def)             Requested size: 352.31624pt x 277.37964pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[96] [97 <./Chapter 3/Figures/GeodesicDeviation.pdf>] [98] [99] [100] [101]
-[102] [103] [104] [105]
-<Chapter 3/Figures/surface.pdf, id=1978, 285.55363pt x 199.62965pt>
+[98] [99 <./Chapter 3/Figures/GeodesicDeviation.pdf>] [100] [101] [102]
+[103] [104] [105] [106] [107] [108]
+<Chapter 3/Figures/surface.pdf, id=2043, 285.55363pt x 199.62965pt>
 File: Chapter 3/Figures/surface.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/surface.pdf>
-Package pdftex.def Info: Chapter 3/Figures/surface.pdf  used on input line 2165
+Package pdftex.def Info: Chapter 3/Figures/surface.pdf  used on input line 2234
 .
 (pdftex.def)             Requested size: 117.43874pt x 82.1015pt.
- [106 <./Chapter 3/Figures/surface.pdf>] [107] [108]
-[109]) [110]
+ [109 <./Chapter 3/Figures/surface.pdf>]
+[110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121]
+[122] [123] [124] [125]) [126]
 Chapter 4.
-[111
+[127
 
-] (./Chapter 4/chap4.tex [112
+] (./Chapter 4/chap4.tex [128
 
-] [113] [114]
+] [129] [130]
 Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
-[115] [116]
+[131] [132]
 Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
-[117] [118] [119] [120]
-<Chapter 4/Figures/Distribution.pdf, id=2184, 527.08919pt x 376.52669pt>
+[133] [134] [135] [136]
+<Chapter 4/Figures/Distribution.pdf, id=2354, 527.08919pt x 376.52669pt>
 File: Chapter 4/Figures/Distribution.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/Distribution.pdf>
 Package pdftex.def Info: Chapter 4/Figures/Distribution.pdf  used on input line
  428.
 (pdftex.def)             Requested size: 422.77661pt x 302.02034pt.
-) (out/main.bbl [121 <./Chapter 4/Figures/Distribution.pdf>] [122
+) (out/main.bbl [137 <./Chapter 4/Figures/Distribution.pdf>] [138
 
-] [123] [124]) [125] (out/main.aux)
+] [139] [140]) [141] (out/main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E5DBD486818D5112536C78E47449D993;16502.
+(rerunfilecheck)             Checksum: D73CCF018091E43948EED69E45F5A6A0;17749.
  ) 
 Here is how much of TeX's memory you used:
- 21341 strings out of 467525
- 339634 string characters out of 5418982
- 823799 words of memory out of 5000000
- 48637 multiletter control sequences out of 15000+600000
- 678208 words of font info for 348 fonts, out of 8000000 for 9000
+ 21438 strings out of 467525
+ 340958 string characters out of 5418982
+ 824201 words of memory out of 5000000
+ 48671 multiletter control sequences out of 15000+600000
+ 678376 words of font info for 352 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,22n,79p,1992b,691s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1248,10 +1237,10 @@ pe1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type
 public/cm-super/sfti1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pu
 blic/cm-super/sfti1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
 ic/cm-super/sfti2488.pfb>
-Output written on out/main.pdf (135 pages, 1276682 bytes).
+Output written on out/main.pdf (151 pages, 1341521 bytes).
 PDF statistics:
- 2544 PDF objects out of 2984 (max. 8388607)
- 2192 compressed objects within 22 object streams
- 834 named destinations out of 1000 (max. 500000)
- 78519 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 2728 PDF objects out of 2984 (max. 8388607)
+ 2358 compressed objects within 24 object streams
+ 889 named destinations out of 1000 (max. 500000)
+ 78575 words of extra memory for PDF output out of 89155 (max. 10000000)
 

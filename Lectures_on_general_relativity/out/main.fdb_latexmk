@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex out/main"] 1789839494.28079 "out/main.aux" "out/main.bbl" "out/main" 1789839507.84151 0
-  "./bibliografia.bib" 1789839407.67227 11036 a5774a73649e66b26bba5a1f8bff7941 ""
+["bibtex out/main"] 1789840877.91187 "out/main.aux" "out/main.bbl" "out/main" 1789840902.88853 0
+  "./bibliografia.bib" 1789840194.76375 11606 7530334868f6610ae6a08b1e7121b0cc ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "out/main.aux" 1789839507.59865 33367 5aeef016c8b74fbf3eeb33c8aaef8494 "pdflatex"
+  "out/main.aux" 1789840902.66049 36912 bdee275f118a77cb2985625be518993a "pdflatex"
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1789839506.71577 "main.tex" "out/main.pdf" "main" 1789839507.84168 0
+["pdflatex"] 1789840901.64681 "main.tex" "out/main.pdf" "main" 1789840902.88866 0
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -225,7 +225,7 @@
   "Chapter 2/Figures/SphereMap.pdf" 1771986394 10740 d49a5392b66bb7e90841d6afdd995be7 ""
   "Chapter 2/Figures/Tangents.pdf" 1771986394 11326 39f75836f807f88224706f20b1df0c9c ""
   "Chapter 2/Figures/TercerPostu.pdf" 1771986394 15014 603f88c0f04d57bd8cf4cc42d6c38b75 ""
-  "Chapter 2/chap2.tex" 1789839503.00486 96700 d2878e30f8221c09ed6428c48cd7d8b2 ""
+  "Chapter 2/chap2.tex" 1789839882.07602 96742 8c57bc1e61a47e46ebca72d206da3572 ""
   "Chapter 3/Figures/CircularTrajectory.pdf" 1771986394 10214 411ada0a64899d8795e2e3aa1fc92f31 ""
   "Chapter 3/Figures/ConoDeLuz.pdf" 1771986394 10291 c0ee92b95568a467f7a19562edd6a072 ""
   "Chapter 3/Figures/GeodesicDeviation.pdf" 1771986394 6292 1e7289d230e92d1f49c481faedaa7b43 ""
@@ -237,17 +237,17 @@
   "Chapter 3/Figures/Variational.pdf" 1771986394 10956 f267cb4c2a709dc805a915db41c65d00 ""
   "Chapter 3/Figures/surface.pdf" 1771986394 8194 ed6010f2966ac698391619d5094c8b88 ""
   "Chapter 3/Figures/tdeu.pdf" 1771986394 10479 132723762189beb1f7dc5d8133df2ad7 ""
-  "Chapter 3/chap3.tex" 1789837518.53887 151738 58caf5a25d547958a2101e23462f2962 ""
+  "Chapter 3/chap3.tex" 1789840896.105 200163 c0ee6cda22804316d5e265bf24c73960 ""
   "Chapter 4/Figures/Distribution.pdf" 1771986394 61087 343ceb1145f79d642f47424fa3ae5189 ""
   "Chapter 4/chap4.tex" 1789837595.97847 25328 838206273f4da98b8e10d3d0196a302f ""
   "Figures/LoGOTS.png" 1771986394 56924 0eb3d3c0ccaeac2fa2164ae400c3163f ""
   "Figures/logouis.png" 1771986394 63563 516325fe37699bb556ddbb3ecd6899e7 ""
   "main.tex" 1789836885.66949 6044 c81e1f258a5c63acba5e24cfd1910ce1 ""
-  "out/main.aux" 1789839507.59865 33367 5aeef016c8b74fbf3eeb33c8aaef8494 "pdflatex"
-  "out/main.bbl" 1789839494.34152 8868 8a7fd5b54a73cdb5888c0eb078168109 "bibtex out/main"
-  "out/main.lof" 1789839507.60073 5055 e5a721580dcab22230e19e00777a7bcc "pdflatex"
-  "out/main.out" 1789839507.60051 16502 e5dbd486818d5112536c78e47449d993 "pdflatex"
-  "out/main.toc" 1789839507.6007 7353 e107f8b65a13213dfc104044e1cd9c9d "pdflatex"
+  "out/main.aux" 1789840902.66049 36912 bdee275f118a77cb2985625be518993a "pdflatex"
+  "out/main.bbl" 1789840877.97555 9360 cfd0f820b71f3fad43ee82fd23dc0ecd "bibtex out/main"
+  "out/main.lof" 1789840902.66278 5055 0d9cd0a761e0c89c84197bb39eb7de17 "pdflatex"
+  "out/main.out" 1789840902.66258 17749 d73ccf018091e43948eed69e45f5a6a0 "pdflatex"
+  "out/main.toc" 1789840902.66276 7995 85ada598caf4fe14ff44f6c83d0ec1a5 "pdflatex"
   (generated)
   "out/main.aux"
   "out/main.lof"

@@ -50,7 +50,7 @@
 
     If we wanted to make a completely rigorous study of differential geometry we should begin with set theory, then topology, then manifolds, and only then arrive at differentiable manifolds. We shall take a shorter road, but it is worth knowing which stations we are skipping.
 
-    \subsection{A dictionary for the physicist}
+    \subsection{A dictionary}
 
         Before we start it is worth confronting a difficulty which has nothing to do with the mathematics itself and everything to do with the fact that mathematicians and physicists have spent a century describing the very same objects with different words. A student arriving here from a physics degree already knows most of these objects perfectly well and has been computing with them since the second year, so what makes the first encounter with differential geometry so uncomfortable is usually not that the content is new but that the names are. Because of that, and before writing down a single definition, we are going to lay out a small dictionary in table \ref{tab:Dictionary}, which the reader should feel entirely free to come back to as often as necessary, since almost everything appearing in it will only be properly defined in the pages that follow.
 
@@ -132,11 +132,11 @@
         \begin{equation}
             \begin{split}
                 \phi\;:\;\mathbb{R}^n &\longrightarrow \mathbb{R}^n\\
-                (x^1,...,x^n) &\longmapsto (x^1,...,x^n).
+                x &\longmapsto \phi(x) = x,
             \end{split}
         \end{equation}
 
-        This is a manifold of dimension $n$.
+        which leaves every $n$-tuple $x = (x^1,...,x^n)$ exactly where it already was, so a single chart is enough here and a second one is never needed. This is a manifold of dimension $n$.
 
         \item $S^1$, also called the unit circle, $S^1 = \{(x,y) \in \mathbb{R}^2 \;:\; x^2 + y^2 = 1 \}$. It is a one dimensional manifold, because we only need one parameter to describe it, and at the same time it is a subset of $\mathbb{R}^2$ given by $(\cos\theta,\sin\theta)$ with $\theta \in \mathbb{R}$. Let us see how to cover this manifold.
 
@@ -152,18 +152,20 @@
         \begin{equation}
             \begin{split}
                 \phi_1\;:\;\mathcal{O}_1 &\longrightarrow (0,2\pi)\\
-                (\cos\theta_1,\sin\theta_1) &\longmapsto \theta_1,
+                s &\longmapsto \phi_1(s) = \theta_1,
             \end{split}
         \end{equation}
 
-        and removing instead the diametrically opposite point $q = (-1,0)$ we define $\mathcal{O}_2 = S^1 \setminus \{q\}$ together with
+        where $\theta_1$ is the angle of the point $s = (\cos\theta_1,\sin\theta_1)$ measured anticlockwise starting from the removed point $p$. Removing instead the diametrically opposite point $q = (-1,0)$ we define $\mathcal{O}_2 = S^1 \setminus \{q\}$ together with
 
         \begin{equation}
             \begin{split}
                 \phi_2\;:\;\mathcal{O}_2 &\longrightarrow (-\pi,\pi)\\
-                (\cos\theta_2,\sin\theta_2) &\longmapsto \theta_2.
+                s &\longmapsto \phi_2(s) = \theta_2,
             \end{split}
         \end{equation}
+
+        where now $\theta_2$ is measured from the point diametrically opposite to $q$, so that the cut of this second chart falls where the first one was perfectly well behaved.
 
         Neither chart alone covers the circle, but between them they leave nothing out, so the atlas for this manifold is
 
@@ -586,7 +588,7 @@
             \end{equation}
         \end{myDef}
 
-        \textbf{The transformation law in components.} Up to this point we have defined a tensor as a multilinear machine, which is the honest and coordinate free way of doing it, but it is not the definition the reader will meet in most physics books, where a tensor is instead introduced as \textit{a collection of numbers which transforms in a particular way under a change of coordinates}. The two definitions are completely equivalent and it is worth deriving the second from the first, because the second one is what we actually use whenever we sit down to compute. Everything follows from the way the bases transform: we already know from equation \ref{eq:BasisTransf} how the coordinate basis of $T_p(M)$ behaves, and inverting that relation gives
+        Up to this point we have defined a tensor as a multilinear machine, which is the honest and coordinate free way of doing it, but it is not the definition the reader will meet in most physics books, where a tensor is instead introduced as \textit{a collection of numbers which transforms in a particular way under a change of coordinates}. The two definitions are completely equivalent and it is worth deriving the second from the first, because the second one is what we actually use whenever we sit down to compute. Everything follows from the way the bases transform: we already know from equation \ref{eq:BasisTransf} how the coordinate basis of $T_p(M)$ behaves, and inverting that relation gives
 
         \begin{equation}\label{eq:BasisTransfInv}
             \mathbf{e}_{\Bar{\nu}} = \left(\frac{\partial x^{\beta}}{\partial x^{\Bar{\nu}}}\right)\mathbf{e}_{\beta},
@@ -606,7 +608,7 @@
 
         which is the law every physicist eventually learns by heart. The rule it encodes is simple enough to state in one sentence: \textbf{each index brings its own Jacobian, the indices upstairs carry $\partial x^{\Bar{\mu}}/\partial x^{\alpha}$ and the indices downstairs carry $\partial x^{\beta}/\partial x^{\Bar{\nu}}$}, and the whole content of the older definition of a tensor is the demand that equation \ref{eq:TensorTransf} should hold. That definition sounds circular the first time one hears it, since it seems to say that a tensor is whatever transforms like a tensor, but it is perfectly precise and it is enormously useful in practice, because it converts the question \textit{is this object geometrical?} into a mechanical check that can be carried out with nothing more than the chain rule.
 
-        \textbf{Contraction.} There is one operation on tensors which has no analogue for ordinary numbers and which we shall use constantly from chapter 3 onwards, and it consists in setting one upper index equal to one lower index and summing over it.
+        There is one operation on tensors which has no analogue for ordinary numbers and which we shall use constantly from chapter 3 onwards, and it consists in setting one upper index equal to one lower index and summing over it.
 
         \begin{myDef}
             Let $T$ be a tensor of type $\binom{r}{s}$ with $r \geq 1$ and $s \geq 1$. The contraction of $T$ on its $i$-th contravariant and $j$-th covariant slot is the tensor of type $\binom{r-1}{s-1}$ whose components are obtained by setting those two indices equal and summing,
@@ -624,7 +626,7 @@
 
         where the two Jacobians marked in red have collapsed into a Kronecker delta precisely because one of them came from an upper index and the other from a lower one, so that they are inverse matrices being multiplied together. \textbf{Contraction is only legitimate between one upper and one lower index}, and an expression such as $T^{\mu\mu}$, with both indices upstairs, is not chart independent and therefore does not define anything geometrical, at least not until we have a metric available to lower one of them for us. The reader has in fact been contracting tensors for years without calling it that: the trace of a matrix, the divergence of a vector field, the scalar product written as $\omega_{\mu}X^{\mu}$ and the invariant $F^{\mu\nu}F_{\mu\nu}$ of electromagnetism are all contractions, and in chapter 3 the Ricci tensor and the Ricci scalar will be built out of the Riemann tensor by exactly this operation and nothing else.
 
-        \textbf{Symmetric and antisymmetric parts.} Any tensor with two or more indices of the same kind can be split into a part which does not care about the order of those indices and a part which changes sign when they are swapped, and because the physically important tensors of relativity are almost always one or the other it pays to fix the notation now. We write the symmetric and antisymmetric parts with round and square brackets respectively,
+        Any tensor with two or more indices of the same kind can be split into a part which does not care about the order of those indices and a part which changes sign when they are swapped, and because the physically important tensors of relativity are almost always one or the other it pays to fix the notation now. We write the symmetric and antisymmetric parts with round and square brackets respectively,
 
         \begin{align}
             T_{(\mu\nu)} = \frac{1}{2}\left(T_{\mu\nu} + T_{\nu\mu}\right),\\
@@ -843,7 +845,7 @@
 
         Everything we have built so far has been abstract on purpose, since the whole point of the construction is that it never refers to an ambient space, but abstraction is much easier to trust once one has seen it produce familiar answers in a case where the answers are already known. In this subsection we are going to take the unit sphere $S^2$, which we already met as an example of a manifold, and compute absolutely everything explicitly: the coordinate basis, a curve and its tangent vector, a non coordinate basis, the commutators, a change of chart and an integral curve. The reader who works through this once will find the rest of the book considerably less intimidating.
 
-        \textbf{The chart and the coordinate basis.} We work on the region covered by the usual spherical chart, $\phi = (\vartheta,\varphi)$ with $0 < \vartheta < \pi$ and $0 < \varphi < 2\pi$, which as we discussed above misses one meridian and both poles, so strictly speaking we are working on one patch of an atlas which needs at least two. The coordinate basis of the tangent space at each point of the patch is
+        We begin by working on the region covered by the usual spherical chart, $\phi = (\vartheta,\varphi)$ with $0 < \vartheta < \pi$ and $0 < \varphi < 2\pi$, which as we discussed above misses one meridian and both poles, so strictly speaking we are working on one patch of an atlas which needs at least two. The coordinate basis of the tangent space at each point of the patch is
 
         \begin{equation}
             \left\{\left(\frac{\partial}{\partial \vartheta}\right)_p,\;\left(\frac{\partial}{\partial \varphi}\right)_p\right\},
@@ -851,7 +853,7 @@
 
         and since there are two of them the tangent space $T_p(S^2)$ is two dimensional, exactly as the general theorem promised, which is already worth noticing: \textbf{the tangent space to the sphere is a plane of two dimensions and not of three}, even though we habitually draw the sphere sitting inside $\mathbb{R}^3$, because the manifold itself is two dimensional and the third dimension in the drawing is our own addition and nothing the sphere knows about.
 
-        \textbf{A curve and its tangent vector.} Consider the circle of constant latitude at $\vartheta = \vartheta_0$, described by the curve
+        Consider now the circle of constant latitude at $\vartheta = \vartheta_0$, described by the curve
 
         \begin{equation}
             \lambda(t) = \phi^{-1}\left(\vartheta_0, \varphi_0 + t\right),
@@ -865,7 +867,7 @@
 
         which says that the vector field $\partial/\partial\varphi$ is precisely the field whose integral curves are the circles of latitude, travelled once per $2\pi$ of parameter. This is the generator of rotations about the polar axis and we will meet it again in a moment.
 
-        \textbf{A basis which is not a coordinate basis.} Physicists almost never use the coordinate basis on a sphere, because $\partial/\partial\varphi$ does not have unit length, its length being $\sin\vartheta$, which shrinks to nothing as we approach the poles. What we use instead is the orthonormal basis
+        Physicists almost never use the coordinate basis on a sphere, because $\partial/\partial\varphi$ does not have unit length, its length being $\sin\vartheta$, which shrinks to nothing as we approach the poles. What we use instead is the orthonormal basis
 
         \begin{equation}
             \hat{\mathbf{e}}_{\vartheta} = \frac{\partial}{\partial \vartheta},\qquad \hat{\mathbf{e}}_{\varphi} = \frac{1}{\sin\vartheta}\frac{\partial}{\partial \varphi},
@@ -887,7 +889,7 @@
 
         So the orthonormal basis on the sphere, exactly like the orthonormal polar basis on the plane, is anholonomic, and no coordinate system exists whose partial derivatives are $\hat{\mathbf{e}}_{\vartheta}$ and $\hat{\mathbf{e}}_{\varphi}$.
 
-        \textbf{The rotation generators and an old friend.} The sphere has three obvious symmetries, the rotations about the three Cartesian axes, and each of them is generated by a vector field on $S^2$. Written in our chart they are
+        The sphere has three obvious symmetries, the rotations about the three Cartesian axes, and each of them is generated by a vector field on $S^2$. Written in our chart they are
 
         \begin{align}
             \Vec{X}_{(z)} &= \frac{\partial}{\partial \varphi},\\
@@ -911,7 +913,7 @@
 
         together with its cyclic partners, and \textbf{the commutation relations that a physics student first meets as an algebraic curiosity about operators turn out to be a purely geometrical statement about how rotations fail to commute on the surface of a sphere}. The overall sign is a matter of convention, since flipping the sign of all three fields flips the sign of the structure constants, but the content does not depend on that choice.
 
-        \textbf{A change of chart.} Let us now check equation \ref{eq:BasisTransf} on a concrete change of coordinates, using the stereographic projection we described earlier. Projecting from the north pole onto the plane tangent at the south pole gives the chart $(u,v)$ with
+        Let us now check equation \ref{eq:BasisTransf} on a concrete change of coordinates, using the stereographic projection we described earlier. Projecting from the north pole onto the plane tangent at the south pole gives the chart $(u,v)$ with
 
         \begin{equation}
             u = 2\cot\left(\frac{\vartheta}{2}\right)\cos\varphi,\qquad v = 2\cot\left(\frac{\vartheta}{2}\right)\sin\varphi,
@@ -926,7 +928,7 @@
 
         The first of these is worth reading twice, because $-v\,\partial_u + u\,\partial_v$ is exactly the generator of rotations in the plane that we all wrote down in first year mechanics, and it has appeared here automatically: the field which rotates the sphere about its polar axis is, seen through the stereographic chart, the field which rotates the plane about its origin. The second one is a pure radial field, which is the projection of the meridians, and both expressions are perfectly regular everywhere except at the origin of the plane and at infinity, which are the two points where this single chart is bound to fail.
 
-        \textbf{An integral curve, and a warning.} Finally let us solve equation \ref{eq:IntegralCurveODE} for the field $\Vec{X}_{(z)} = \partial/\partial\varphi$, whose components are $X^{\vartheta}=0$ and $X^{\varphi}=1$, so that the system reads
+        Finally let us solve equation \ref{eq:IntegralCurveODE} for the field $\Vec{X}_{(z)} = \partial/\partial\varphi$, whose components are $X^{\vartheta}=0$ and $X^{\varphi}=1$, so that the system reads
 
         \begin{equation}
             \frac{d\vartheta}{dt} = 0,\qquad \frac{d\varphi}{dt} = 1,
