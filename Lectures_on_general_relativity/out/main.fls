@@ -393,9 +393,33 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT ./Chapter 2/Figures/PushPull.pdf
+INPUT ./Chapter 2/Figures/PushPull.pdf
+INPUT ./Chapter 2/Figures/PushPull.pdf
+INPUT ./Chapter 2/Figures/PushPull.pdf
+INPUT ./Chapter 2/Figures/PushPull.pdf
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-euf.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-euf.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-euf.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
+INPUT ./Chapter 2/Figures/LieDrag.pdf
+INPUT ./Chapter 2/Figures/LieDrag.pdf
+INPUT ./Chapter 2/Figures/LieDrag.pdf
+INPUT ./Chapter 2/Figures/LieDrag.pdf
+INPUT ./Chapter 2/Figures/LieDrag.pdf
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT ./Chapter 3/chap3.tex
 INPUT ./Chapter 3/chap3.tex
 INPUT Chapter 3/chap3.tex
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT ./Chapter 3/Figures/CircularTrajectory.pdf
 INPUT ./Chapter 3/Figures/CircularTrajectory.pdf
 INPUT ./Chapter 3/Figures/CircularTrajectory.pdf
@@ -433,6 +457,11 @@ INPUT ./Chapter 3/Figures/Variational.pdf
 INPUT ./Chapter 3/Figures/Variational.pdf
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx0800.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx0600.tfm
+INPUT ./Chapter 3/Figures/LieVsCovariant.pdf
+INPUT ./Chapter 3/Figures/LieVsCovariant.pdf
+INPUT ./Chapter 3/Figures/LieVsCovariant.pdf
+INPUT ./Chapter 3/Figures/LieVsCovariant.pdf
+INPUT ./Chapter 3/Figures/LieVsCovariant.pdf
 INPUT ./Chapter 3/Figures/tdeu.pdf
 INPUT ./Chapter 3/Figures/tdeu.pdf
 INPUT ./Chapter 3/Figures/tdeu.pdf
@@ -453,6 +482,16 @@ INPUT ./Chapter 3/Figures/surface.pdf
 INPUT ./Chapter 3/Figures/surface.pdf
 INPUT ./Chapter 3/Figures/surface.pdf
 INPUT ./Chapter 3/Figures/surface.pdf
+INPUT ./Chapter 3/Figures/Tetrad.pdf
+INPUT ./Chapter 3/Figures/Tetrad.pdf
+INPUT ./Chapter 3/Figures/Tetrad.pdf
+INPUT ./Chapter 3/Figures/Tetrad.pdf
+INPUT ./Chapter 3/Figures/Tetrad.pdf
+INPUT ./Chapter 3/Figures/KillingFlow.pdf
+INPUT ./Chapter 3/Figures/KillingFlow.pdf
+INPUT ./Chapter 3/Figures/KillingFlow.pdf
+INPUT ./Chapter 3/Figures/KillingFlow.pdf
+INPUT ./Chapter 3/Figures/KillingFlow.pdf
 INPUT ./Chapter 4/chap4.tex
 INPUT ./Chapter 4/chap4.tex
 INPUT Chapter 4/chap4.tex
@@ -483,6 +522,7 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb

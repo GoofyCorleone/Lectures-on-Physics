@@ -11,6 +11,17 @@ Aristotle (1984).
 \newblock In Barnes, J., editor, {\em The Complete Works of Aristotle: The
   Revised Oxford Translation}. Princeton University Press, Princeton.
 
+\bibitem[Bardeen et~al., 1973]{bardeen1973}
+Bardeen, J.~M., Carter, B., and Hawking, S.~W. (1973).
+\newblock The four laws of black hole mechanics.
+\newblock {\em Communications in Mathematical Physics}, 31(2):161--170.
+
+\bibitem[Blandford and Znajek, 1977]{blandford1977}
+Blandford, R.~D. and Znajek, R.~L. (1977).
+\newblock Electromagnetic extraction of energy from kerr black holes.
+\newblock {\em Monthly Notices of the Royal Astronomical Society},
+  179(3):433--456.
+
 \bibitem[Bolyai, 1832]{bolyai1832}
 Bolyai, J. (1832).
 \newblock Appendix: Scientiam spatii absolute veram exhibens.
@@ -33,6 +44,12 @@ Clagett, M. (1959).
 Corry, L., Renn, J., and Stachel, J. (1997).
 \newblock Belated decision in the hilbert-einstein priority dispute.
 \newblock {\em Science}, 278(5341):1270--1273.
+
+\bibitem[Duncan and Thompson, 1992]{duncan1992}
+Duncan, R.~C. and Thompson, C. (1992).
+\newblock Formation of very strongly magnetized neutron stars: Implications for
+  gamma-ray bursts.
+\newblock {\em The Astrophysical Journal Letters}, 392:L9--L13.
 
 \bibitem[Dyson et~al., 1920]{dyson1920}
 Dyson, F.~W., Eddington, A.~S., and Davidson, C. (1920).
@@ -70,6 +87,12 @@ Euclid (1908).
 \newblock {\em The Thirteen Books of Euclid's Elements}.
 \newblock Cambridge University Press, Cambridge.
 \newblock Translated with introduction and commentary by Thomas L. Heath.
+
+\bibitem[Four{\`e}s-Bruhat, 1952]{fouresbruhat1952}
+Four{\`e}s-Bruhat, Y. (1952).
+\newblock Th{\'e}or{\`e}me d'existence pour certains syst{\`e}mes
+  d'{\'e}quations aux d{\'e}riv{\'e}es partielles non lin{\'e}aires.
+\newblock {\em Acta Mathematica}, 88:141--225.
 
 \bibitem[Friedmann, 1922]{friedmann1922}
 Friedmann, A. (1922).
@@ -124,12 +147,28 @@ Isaacson, R.~A. (1968).
   terms and the effective stress tensor.
 \newblock {\em Physical Review}, 166(5):1272--1280.
 
+\bibitem[Israel, 1968]{israel1968}
+Israel, W. (1968).
+\newblock Event horizons in static electrovac space-times.
+\newblock {\em Communications in Mathematical Physics}, 8(3):245--260.
+
+\bibitem[Kaluza, 1921]{kaluza1921}
+Kaluza, T. (1921).
+\newblock Zum unit{\"a}tsproblem der physik.
+\newblock {\em Sitzungsberichte der Preussischen Akademie der Wissenschaften zu
+  Berlin}, pages 966--972.
+
 \bibitem[Klein, 1872]{klein1872}
 Klein, F. (1872).
 \newblock {\em Vergleichende Betrachtungen {\"u}ber neuere geometrische
   Forschungen}.
 \newblock Verlag von Andreas Deichert, Erlangen.
 \newblock The Erlangen Programme.
+
+\bibitem[Klein, 1926]{klein1926}
+Klein, O. (1926).
+\newblock Quantentheorie und f{\"u}nfdimensionale relativit{\"a}tstheorie.
+\newblock {\em Zeitschrift f{\"u}r Physik}, 37(12):895--906.
 
 \bibitem[Kline, 1972]{kline1972}
 Kline, M. (1972).
@@ -165,6 +204,12 @@ Nakahara, M. (2003).
 \newblock {\em Geometry, Topology and Physics}.
 \newblock Institute of Physics Publishing, Bristol, 2nd edition.
 
+\bibitem[Newman et~al., 1965]{newman1965}
+Newman, E.~T., Couch, E., Chinnapared, K., Exton, A., Prakash, A., and
+  Torrence, R. (1965).
+\newblock Metric of a rotating, charged mass.
+\newblock {\em Journal of Mathematical Physics}, 6(6):918--919.
+
 \bibitem[Newton, 1958]{newton1958papers}
 Newton, I. (1958).
 \newblock {\em Isaac Newton's Papers and Letters on Natural Philosophy}.
@@ -177,6 +222,12 @@ Newton, I. (1999).
 \newblock University of California Press, Berkeley.
 \newblock Translated by I. Bernard Cohen and Anne Whitman.
 
+\bibitem[Nordstr{\"o}m, 1918]{nordstrom1918}
+Nordstr{\"o}m, G. (1918).
+\newblock On the energy of the gravitational field in einstein's theory.
+\newblock {\em Koninklijke Nederlandse Akademie van Wetenschappen Proceedings},
+  20:1238--1245.
+
 \bibitem[Oppenheimer and Snyder, 1939]{oppenheimersnyder1939}
 Oppenheimer, J.~R. and Snyder, H. (1939).
 \newblock On continued gravitational contraction.
@@ -187,6 +238,11 @@ Pais, A. (1982).
 \newblock {\em Subtle is the Lord: The Science and the Life of Albert
   Einstein}.
 \newblock Oxford University Press, Oxford.
+
+\bibitem[Penrose, 1969]{penrose1969}
+Penrose, R. (1969).
+\newblock Gravitational collapse: The role of general relativity.
+\newblock {\em Rivista del Nuovo Cimento}, 1:252--276.
 
 \bibitem[{Perlmutter, Saul et al.}, 1999]{perlmutter1999}
 {Perlmutter, Saul et al.} (1999).
@@ -200,10 +256,22 @@ Ptolemy, C. (1998).
 \newblock Princeton University Press, Princeton.
 \newblock Translated and annotated by G. J. Toomer.
 
+\bibitem[Rainich, 1925]{rainich1925}
+Rainich, G.~Y. (1925).
+\newblock Electrodynamics in the general relativity theory.
+\newblock {\em Transactions of the American Mathematical Society},
+  27(1):106--136.
+
 \bibitem[Rashed, 1996]{rashed1996}
 Rashed, R., editor (1996).
 \newblock {\em Encyclopedia of the History of Arabic Science}.
 \newblock Routledge, London.
+
+\bibitem[Reissner, 1916]{reissner1916}
+Reissner, H. (1916).
+\newblock {\"U}ber die eigengravitation des elektrischen feldes nach der
+  einsteinschen theorie.
+\newblock {\em Annalen der Physik}, 355(9):106--120.
 
 \bibitem[Ricci-Curbastro and Levi-Civita, 1900]{ricci1900}
 Ricci-Curbastro, G. and Levi-Civita, T. (1900).

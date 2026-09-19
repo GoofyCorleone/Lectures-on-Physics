@@ -657,6 +657,38 @@
 
         Finally it is worth counting, because the counting explains a good deal of physics. In $n$ dimensions a symmetric two index tensor has $n(n+1)/2$ independent components and an antisymmetric one has $n(n-1)/2$, so in the four dimensions of space-time we get ten and six respectively. Those two numbers should look familiar: the metric $g_{\mu\nu}$ is symmetric and has exactly ten independent components, which is why Einstein's field equations are ten equations and not sixteen, while the Faraday tensor $F_{\mu\nu}$ is antisymmetric and has exactly six, which is nothing other than the three components of the electric field plus the three of the magnetic field.
 
+        There is one last question of a practical kind which the transformation law leaves open and which a working physicist runs into constantly. Suppose we have built some array of numbers out of a physical situation, an array of conductivities measured in a crystal or of field strengths read off an experiment, and we want to know whether it is a tensor. Checking the transformation law directly means computing sixteen Jacobians and comparing sixteen expressions, which is honest work but exhausting, and very often we are in a much better position than that: we already know that the array, once contracted with something arbitrary, produces something we are sure is a tensor. The quotient theorem says that this alone is enough.
+
+        \begin{myteo}
+            Let $T^{\mu}_{\;\nu}$ be an array of numbers defined in every coordinate chart, and suppose that for \textit{every} vector $V^{\nu}$ the contraction $W^{\mu} = T^{\mu}_{\;\nu}V^{\nu}$ transforms as a vector. Then $T^{\mu}_{\;\nu}$ is a $\binom{1}{1}$ tensor.
+        \end{myteo}
+
+        \textbf{\textit{Demonstration:}}\\
+
+        Write the hypothesis in a second chart. Because $W^{\mu}$ is assumed to be a vector, its barred components are obtained with a single Jacobian, and the same is true of $V^{\nu}$, so that
+
+        \begin{align*}
+            \Bar{T}^{\Bar{\mu}}_{\;\Bar{\nu}}\Bar{V}^{\Bar{\nu}} = \Bar{W}^{\Bar{\mu}} = \frac{\partial x^{\Bar{\mu}}}{\partial x^{\alpha}}W^{\alpha} = \frac{\partial x^{\Bar{\mu}}}{\partial x^{\alpha}}T^{\alpha}_{\;\beta}V^{\beta},
+        \end{align*}
+
+        and replacing $\Bar{V}^{\Bar{\nu}}$ on the far left by its own transformation law $\Bar{V}^{\Bar{\nu}} = \left(\partial x^{\Bar{\nu}}/\partial x^{\beta}\right)V^{\beta}$ we may bring everything to one side,
+
+        \begin{align*}
+            \left(\frac{\partial x^{\Bar{\mu}}}{\partial x^{\alpha}}T^{\alpha}_{\;\beta} - \Bar{T}^{\Bar{\mu}}_{\;\Bar{\nu}}\frac{\partial x^{\Bar{\nu}}}{\partial x^{\beta}}\right)V^{\beta} = 0.
+        \end{align*}
+
+        Here comes the only step that matters. This expression vanishes not for some cleverly chosen $V$ but for \textit{every} vector whatsoever, and a linear form that annihilates every vector is the zero form, so the bracket itself must vanish identically. Contracting what is left with the inverse Jacobian $\partial x^{\beta}/\partial x^{\Bar{\sigma}}$, and using that the two Jacobians collapse into a Kronecker delta exactly as they did when we proved that contraction is well defined,
+
+        \begin{align*}
+            \frac{\partial x^{\Bar{\mu}}}{\partial x^{\alpha}}\frac{\partial x^{\beta}}{\partial x^{\Bar{\sigma}}}T^{\alpha}_{\;\beta} = \Bar{T}^{\Bar{\mu}}_{\;\Bar{\nu}}\,{\color{red}\frac{\partial x^{\Bar{\nu}}}{\partial x^{\beta}}\frac{\partial x^{\beta}}{\partial x^{\Bar{\sigma}}}} = \Bar{T}^{\Bar{\mu}}_{\;\Bar{\nu}}\,{\color{red}\delta^{\Bar{\nu}}_{\;\Bar{\sigma}}} = \Bar{T}^{\Bar{\mu}}_{\;\Bar{\sigma}},
+        \end{align*}
+
+        which is word for word the transformation law of a $\binom{1}{1}$ tensor, and the theorem is proved. The same argument, with more indices and no new ideas, gives the general version: if the contraction of an array with an arbitrary tensor is a tensor, then the array was a tensor all along.
+
+        The physical value of this result is that it converts a tedious verification into a statement about experiments. Consider the Lorentz force law written relativistically, $m\,a^{\mu} = qF^{\mu}_{\;\nu}u^{\nu}$. The four acceleration on the left is a vector, because it is built from a worldline and nothing else, and the four velocity on the right is a vector too, and the law is supposed to hold for a test charge moving in \textit{any} way we please, which is to say for every $u^{\nu}$. The quotient theorem then tells us at once that the electromagnetic field strength $F^{\mu}_{\;\nu}$ is a tensor, and we never had to transform it. The same reasoning is what guarantees that the conductivity of a crystal, the moment of inertia of a rigid body and the polarisability of a molecule are all genuine tensors rather than accidental tables of numbers: in each case an experiment feeds the array an arbitrary vector and gets a vector back.
+
+        It is just as instructive to notice where the theorem fails to apply, because that is what protects us from using it carelessly. The Christoffel symbols $\Gamma^{\lambda}_{\;\mu\nu}$, which we shall meet in chapter 3, look exactly like the components of a $\binom{1}{2}$ tensor and are not one, and the reason is that the object they contract with in the covariant derivative is not an arbitrary tensor but a derivative, whose own transformation law carries the inhomogeneous term we found at the end of this chapter. The hypothesis of the theorem is genuinely a hypothesis, and \textbf{the words \textit{for every} in its statement are doing all the work}.
+
     \subsection{Tensor fields}
 
         \begin{myDef}
@@ -809,7 +841,47 @@
             \left[\hat{\mathbf{e}}_r,\hat{\mathbf{e}}_{\theta}\right] = -\frac{1}{r}\hat{\mathbf{e}}_{\theta} \neq 0.
         \end{equation}
 
-        \textbf{The orthonormal polar basis is therefore not a coordinate basis}, and there is no coordinate system anywhere whose partial derivatives are $\hat{\mathbf{e}}_r$ and $\hat{\mathbf{e}}_{\theta}$, which is the honest reason behind all those extra terms that appear when one writes the divergence or the Laplacian in polar coordinates and which students usually memorise without ever being told where they come from. Bases of this kind, with non vanishing commutators, are called \textit{anholonomic} or non coordinate bases, and far from being pathological they are extremely useful in relativity, since an observer carrying a set of orthonormal rods and a clock is carrying exactly such a basis and not a coordinate one.
+        The orthonormal polar basis is therefore not a coordinate basis, and there is no coordinate system anywhere whose partial derivatives are $\hat{\mathbf{e}}_r$ and $\hat{\mathbf{e}}_{\theta}$, which is the honest reason behind all those extra terms that appear when one writes the divergence or the Laplacian in polar coordinates and which students usually memorise without ever being told where they come from. Bases of this kind, with non vanishing commutators, are called \textit{anholonomic} or non coordinate bases, and far from being pathological they are extremely useful in relativity, since an observer carrying a set of orthonormal rods and a clock is carrying exactly such a basis and not a coordinate one.
+
+    \subsection{Non-coordinate bases}
+
+        The polar example is worth taking seriously rather than treating as a curiosity, because it shows that we have been quietly assuming something we never needed. Nothing in the definition of the tangent space $T_pM$ requires its basis to come from a chart. A basis is simply a set of $n$ linearly independent vectors, and if we choose one such set smoothly at every point of the manifold we obtain what is called a \textit{frame}, or a moving frame in the older literature, which we shall write as
+
+        \begin{equation}\label{eq:FrameDef}
+            \left\{e_{(a)}\right\}_{a=1}^{n}, \qquad e_{(a)} = e_{(a)}^{\;\;\mu}\,\partial_{\mu}.
+        \end{equation}
+
+        The round brackets on the index are a warning, and they will stay with us for the rest of these notes. The label $a$ says which vector of the frame we are talking about, and it is not a coordinate index: it does not transform when we change chart, because the frame was chosen without reference to any chart in the first place. The Greek index $\mu$ in equation \ref{eq:FrameDef} is a coordinate index and does transform. The $n^2$ functions $e_{(a)}^{\;\;\mu}$ are therefore a dictionary between the two languages, and since the frame is by construction linearly independent the matrix they form is invertible at every point, with inverse written $e^{(a)}_{\;\;\mu}$, so that
+
+        \begin{equation}\label{eq:FrameInverse}
+            e_{(a)}^{\;\;\mu}e^{(a)}_{\;\;\nu} = \delta^{\mu}_{\;\nu}, \qquad e_{(a)}^{\;\;\mu}e^{(b)}_{\;\;\mu} = \delta^{b}_{\;a}.
+        \end{equation}
+
+        The second of these identities is more than an algebraic accident. It says that the one forms $e^{(a)} = e^{(a)}_{\;\;\mu}dx^{\mu}$ satisfy $e^{(a)}\left(e_{(b)}\right)=\delta^{a}_{\;b}$, which is precisely the condition defining the dual basis of $\{e_{(a)}\}$ in the cotangent space. Choosing a frame in $T_pM$ therefore chooses a coframe in $T^{*}_pM$ automatically, exactly as the coordinate basis $\{\partial_{\mu}\}$ came with the coordinate coframe $\{dx^{\mu}\}$, and the components of any tensor can be referred to the frame instead of to the chart by contracting with the dictionary in the obvious way,
+
+        \begin{equation}\label{eq:FrameComponents}
+            T_{ab} = T_{\mu\nu}\,e_{(a)}^{\;\;\mu}e_{(b)}^{\;\;\nu}, \qquad T_{\mu\nu} = T_{ab}\,e^{(a)}_{\;\;\mu}e^{(b)}_{\;\;\nu}.
+        \end{equation}
+
+        The freedom we have just granted ourselves is enormous. At every point we may act on the frame with any invertible matrix $M^{b}_{\;a}(x)$ and obtain another perfectly good frame, so the choice is a whole general linear group's worth of arbitrariness, one independent copy at every point of the manifold. In practice one never uses all of it, because the whole reason for abandoning the coordinate basis is usually to impose some condition the coordinate basis could not satisfy, and imposing that condition cuts the group down to a subgroup. In relativity the condition will be that the frame be orthonormal with respect to the metric, and the subgroup that survives will turn out to be the Lorentz group, but the metric is not part of the structure we have built so far and that discussion belongs to chapter 3.
+
+        What we can already say is how much the frame differs from a coordinate basis, and the criterion \ref{eq:CoordBasisCriterion} gives the answer without any extra work. Since the frame vectors are vector fields, their commutator is a vector field, and since the frame is a basis that commutator can be expanded in it,
+
+        \begin{equation}\label{eq:StructureFunctions2}
+            \left[e_{(a)},e_{(b)}\right] = C^{c}_{\;ab}\,e_{(c)},
+        \end{equation}
+
+        which defines the $n^2(n-1)/2$ functions $C^{c}_{\;ab}$, antisymmetric in their two lower indices and called the \textit{structure functions} of the frame. They are computed directly from the dictionary by feeding equation \ref{eq:CommutatorComponents} into the definition,
+
+        \begin{equation}\label{eq:StructureFromDict}
+            C^{c}_{\;ab} = e^{(c)}_{\;\;\mu}\left(e_{(a)}^{\;\;\nu}\partial_{\nu}e_{(b)}^{\;\;\mu} - e_{(b)}^{\;\;\nu}\partial_{\nu}e_{(a)}^{\;\;\mu}\right),
+        \end{equation}
+
+        and the polar example we have just done is the smallest possible illustration, with the single non vanishing structure function $C^{\theta}_{\;r\theta} = -1/r$. Everything said in this subsection is summarised by the statement that a frame is a coordinate basis if and only if all its structure functions vanish, which is the criterion \ref{eq:CoordBasisCriterion} written in the new notation.
+
+        Two remarks are worth making before we leave the subject, because both of them are sources of confusion later. The first is that the structure functions are not the components of a tensor. Equation \ref{eq:StructureFunctions2} involves derivatives of the frame, and the same argument that showed the derivative of a vector field is not a tensor applies here unchanged. The second, and more important, is that they have nothing whatever to do with curvature. The plane is flat, and its orthonormal polar frame has a non vanishing structure function, so a frame can fail to be holonomic in a perfectly flat space simply because we insisted on a condition, in that case unit length, that the chart could not provide. Curvature will be measured in chapter 3 by an entirely different object, and the reader who keeps these two failures apart from the beginning will be spared a good deal of confusion.
+
+        The name the physicist will meet for these objects depends on the dimension and on the tradition. In four dimensions a frame is a \textit{tetrad} or a \textit{vierbein}, in $n$ dimensions a \textit{vielbein}, and in Cartan's own language the coframe $e^{(a)}$ is a set of one forms whose exterior derivatives encode \ref{eq:StructureFunctions2}. They are all the same idea, which is that the basis in which we write our components should be chosen to suit the physics rather than the chart.
 
     \subsection{Integral curves}
 
@@ -968,8 +1040,241 @@
 
 \section{The Lie derivative}
 
-    There is a truly important concept in general relativity and differential geometry, the derivative, but there is no single derivative, there are many kinds and all of them have their own meaning and applications: the ordinary derivative, the partial derivative, the gradient, the divergence, the curl, the Jacobian, the covariant derivative, the fractional derivative. Here we are going to develop one special derivative that allows us to pull or push elements from one manifold to another, and to find the notion of a derivative along a curve together with the relation between manifolds which are in general different. These are the pull back and push forward operations, and with them we can develop the \textit{Lie derivative}, a kind of primitive and primordial derivative of which the scalar, partial and even the covariant derivative are particular cases.
+    There is a truly important concept in general relativity and differential geometry, the derivative, but there is no single derivative, there are many kinds and all of them have their own meaning and applications: the ordinary derivative, the partial derivative, the gradient, the divergence, the curl, the Jacobian, the covariant derivative, the fractional derivative. Here we are going to develop one special derivative that allows us to pull or push elements from one manifold to another, and to find the notion of a derivative along a curve together with the relation between manifolds which are in general different. These are the pull back and push forward operations, and with them we can develop the \textit{Lie derivative}, a primitive and primordial derivative in the precise sense that it needs no structure on the manifold beyond the manifold itself, no metric and no connection, and of which the derivative of a scalar along a direction and the plain partial derivative are both particular cases. Its relation to the covariant derivative is subtler than that, and rather than the one the reader might guess, so we shall settle it carefully in chapter 3 once both derivatives are on the table.
 
     \subsection{Pull back and push forward}
 
-        Let $M$ and $N$ be two different manifolds, let $f$ be a smooth function mapping from $N$ to $\mathbb{R}$, and let $\phi$ be a bijection mapping from $M$ to $N$. There then exists an inverse map $\phi^{-1}: N \rightarrow M$ such that $\phi \circ\phi^{-1} = I_N$, where $I_N$ is the identity function on the manifold $N$, and $\phi^{-1}\circ \phi = I_M$, where $I_M$ is the identity function on the manifold $M$.\\
+        Let $M$ and $N$ be two different manifolds, let $f$ be a smooth function mapping from $N$ to $\mathbb{R}$, and let $\phi$ be a bijection mapping from $M$ to $N$. There then exists an inverse map $\phi^{-1}: N \rightarrow M$ such that $\phi \circ\phi^{-1} = I_N$, where $I_N$ is the identity function on the manifold $N$, and $\phi^{-1}\circ \phi = I_M$, where $I_M$ is the identity function on the manifold $M$.
+
+        The question we want to answer is the following. If we have a map between two manifolds, and we have some geometrical object living on one of them, can we transport that object to the other one? The answer is yes for some objects and no for others, and finding out which is which is not a formality: the pattern of what can be transported and in which direction is what the whole of this section rests on, and it is also, as we shall see at the end, the precise sense in which general relativity has no preferred coordinates.
+
+        The easiest case is a function, and it goes backwards. Suppose $f: N\rightarrow\mathbb{R}$ assigns a number to every point of $N$, and suppose we stand at a point $p$ of $M$ and want a number. We have one, because $\phi$ takes us to the point $\phi(p)$ of $N$ and $f$ gives us a number there. Composing the two maps defines a function on $M$, which we call the \textit{pull back} of $f$ by $\phi$ and write
+
+        \begin{equation}\label{eq:Pullback}
+            \begin{split}
+                \phi^{*}f: \;\; M \;\; &\rightarrow \;\; \mathbb{R}\\
+                p \;\; &\mapsto \;\; \left(\phi^{*}f\right)(p) = \left(f\circ\phi\right)(p) = f\left(\phi(p)\right).
+            \end{split}
+        \end{equation}
+
+        Notice the direction. The map $\phi$ goes from $M$ to $N$ but the pull back carries functions from $N$ to $M$, against the arrow, and that is where the name comes from: $f$ lived on $N$ and we have pulled it back to $M$. Notice also that we never used $\phi^{-1}$, so equation \ref{eq:Pullback} makes perfect sense even when $\phi$ has no inverse at all, which will matter shortly.
+
+        Now take a vector, and it goes forwards. Here we must remember what a vector actually is, because the naive picture of an arrow gives no hint of how to move it from one manifold to another. A vector at $p$, as we defined it, is a derivation: a machine that eats functions defined near $p$ and returns numbers. So to define a vector at $\phi(p)$ on $N$ we need only say what number it returns when fed a function on $N$, and there is exactly one sensible answer available to us. Given a function $f$ on $N$, pull it back to $M$ with \ref{eq:Pullback}, feed the result to the vector we already have, and hand over the number. That defines the \textit{push forward} of $X$,
+
+        \begin{equation}\label{eq:Pushforward}
+            \left(\phi_{*}X\right)\left(f\right)\Big|_{\phi(p)} = X\left(\phi^{*}f\right)\Big|_{p} = X\left(f\circ\phi\right)\Big|_{p},
+        \end{equation}
+
+        and the reader should appreciate how little choice we had. Equation \ref{eq:Pushforward} is not a convention, it is the only definition that could possibly be written down with the ingredients available, and this is a recurring experience in differential geometry: once the objects are defined properly the constructions build themselves.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Chapter 2/Figures/PushPull.pdf}
+            \caption{The map $\phi$ carries points of $M$ to points of $N$. Vectors travel with the arrow, since a curve through $p$ is carried to a curve through $\phi(p)$ and its tangent goes with it, while functions travel against it, since a function on $N$ becomes a function on $M$ by composition. Covectors, being machines that eat vectors, travel against the arrow for the same reason functions do.}
+            \label{fig:PushPull}
+        \end{figure}
+
+        To see what \ref{eq:Pushforward} says in components, put coordinates $x^{\mu}$ on $M$ and $y^{\alpha}$ on $N$, so that the map $\phi$ is described by the $n$ functions $y^{\alpha}(x^{\mu})$. Expanding both sides in the respective coordinate bases and using the chain rule,
+
+        \begin{align*}
+            \left(\phi_{*}X\right)^{\alpha}\frac{\partial f}{\partial y^{\alpha}} = X^{\mu}\frac{\partial\left(f\circ\phi\right)}{\partial x^{\mu}} = X^{\mu}\frac{\partial y^{\alpha}}{\partial x^{\mu}}\frac{\partial f}{\partial y^{\alpha}},
+        \end{align*}
+
+        and since this must hold for every function $f$ the coefficients must agree, so that
+
+        \begin{equation}\label{eq:PushforwardComp}
+            \left(\phi_{*}X\right)^{\alpha} = \frac{\partial y^{\alpha}}{\partial x^{\mu}}\,X^{\mu}.
+        \end{equation}
+
+        The push forward is therefore nothing more mysterious than the Jacobian matrix of the map acting on the components, which is a reassuring result: it says that the abstract machinery we have built reduces, when one finally puts coordinates on everything, to the object every physicist already knows from changing variables in an integral. The map $\phi_{*}$ is often called the \textit{differential} of $\phi$ for exactly this reason.
+
+        Covectors go backwards, like functions, and the argument is the same one again. A covector at $\phi(p)$ is a machine that eats vectors at $\phi(p)$ and returns numbers, so to build a covector at $p$ we must say what it returns when fed a vector at $p$, and the only route available is to push that vector forward first,
+
+        \begin{equation}\label{eq:PullbackForm}
+            \left(\phi^{*}\omega\right)(X)\Big|_{p} = \omega\left(\phi_{*}X\right)\Big|_{\phi(p)},
+        \end{equation}
+
+        whose component version follows immediately from \ref{eq:PushforwardComp},
+
+        \begin{equation}\label{eq:PullbackFormComp}
+            \left(\phi^{*}\omega\right)_{\mu} = \frac{\partial y^{\alpha}}{\partial x^{\mu}}\,\omega_{\alpha}.
+        \end{equation}
+
+        Let us take stock, because the pattern is worth stating plainly. Vectors push forward and covectors pull back, and neither of the two operations we have defined required $\phi$ to be invertible. What we cannot do with a general $\phi$ is the opposite pair: there is no way to pull a vector back or to push a covector forward, and the reason is not a failure of imagination. If $\phi$ is not injective then two different points of $M$ may be sent to the same point of $N$, and a vector sitting there would have to be pulled back to both of them at once with no way of deciding how; and if $\phi$ is not surjective then there are points of $N$ carrying no vector at all, so a pushed forward covector would have nothing to eat over most of the target. Both obstructions disappear at once if $\phi$ is a bijection with smooth inverse, which is what we called a \textit{diffeomorphism}, and in that case we simply define the missing operations using the inverse map,
+
+        \begin{equation}\label{eq:DiffeoBothWays}
+            \phi_{*} \equiv \left(\phi^{-1}\right)^{*}, \qquad \phi^{*} \equiv \left(\phi^{-1}\right)_{*},
+        \end{equation}
+
+        so that for a diffeomorphism everything can be transported in both directions and the distinction between pushing and pulling becomes a matter of bookkeeping rather than of principle. This is why we insisted at the start that $\phi$ be a bijection.
+
+        With both directions available the extension to a general tensor is immediate, since a tensor is built out of vectors and covectors and each slot is transported in whichever direction its own kind of object goes. For a tensor of type $\binom{k}{l}$ the rule is
+
+        \begin{equation}\label{eq:PushTensor}
+            \left(\phi_{*}T\right)^{\alpha_1\cdots\alpha_k}_{\qquad\;\;\beta_1\cdots\beta_l} = \frac{\partial y^{\alpha_1}}{\partial x^{\mu_1}}\cdots\frac{\partial y^{\alpha_k}}{\partial x^{\mu_k}}\frac{\partial x^{\nu_1}}{\partial y^{\beta_1}}\cdots\frac{\partial x^{\nu_l}}{\partial y^{\beta_l}}\;T^{\mu_1\cdots\mu_k}_{\qquad\;\;\nu_1\cdots\nu_l},
+        \end{equation}
+
+        one Jacobian for each contravariant index and one inverse Jacobian for each covariant one, and the reader who compares \ref{eq:PushTensor} with the transformation law \ref{eq:TensorTransf} will notice that the two expressions are identical. That coincidence is the most important thing in this subsection and it deserves to be said out loud rather than left as an observation. A change of coordinates is a passive operation: nothing moves, we merely relabel the same point with different numbers. A diffeomorphism is an active operation: the points genuinely move, and the tensor is genuinely carried from one place to another. The two are conceptually entirely different, and yet they produce exactly the same formula, and therefore no experiment can distinguish them. That is the technical content of the statement that general relativity is diffeomorphism invariant, and it is also, as we saw in chapter 1, precisely the trap Einstein fell into with his hole argument and spent almost three years escaping from.
+
+        A small example will fix the ideas. Let $M=\mathbb{R}^2$ with coordinates $(\theta,z)$, let $N=\mathbb{R}^3$ with the usual Cartesian coordinates, and let $\phi$ be the map that wraps the plane around a cylinder of unit radius,
+
+        \begin{equation}
+            \begin{split}
+                \phi: \;\; \mathbb{R}^2 \;\; &\rightarrow \;\; \mathbb{R}^3\\
+                (\theta,z) \;\; &\mapsto \;\; \left(\cos\theta,\;\sin\theta,\;z\right).
+            \end{split}
+        \end{equation}
+
+        This $\phi$ is not injective, since $\theta$ and $\theta+2\pi$ land on the same point, so it is not a diffeomorphism and we may only push vectors forward and pull functions back, which is exactly what the general theory predicted. Applying \ref{eq:PushforwardComp} to the basis vector $\partial_{\theta}$, whose components are $(1,0)$, gives
+
+        \begin{align*}
+            \phi_{*}\partial_{\theta} = \frac{\partial x}{\partial\theta}\partial_x + \frac{\partial y}{\partial\theta}\partial_y + \frac{\partial z}{\partial\theta}\partial_z = -\sin\theta\,\partial_x + \cos\theta\,\partial_y + {\color{red}0\cdot\partial_z},
+        \end{align*}
+
+        which is the unit vector tangent to the circle at the corresponding point of the cylinder, as it should be, and pulling back the function $f = x^2+y^2$ from $\mathbb{R}^3$ gives $\phi^{*}f = \cos^2\theta + \sin^2\theta = 1$, the constant function, which is the analytic way of saying that the cylinder sits at unit distance from the axis everywhere.
+
+    \subsection{The flow of a vector field}
+
+        Everything we have built so far concerned two different manifolds, but the case we actually need is the one where they are the same. Let $X$ be a vector field on $M$ and recall from the section on integral curves that through every point there passes exactly one curve whose tangent is $X$. Now do something slightly different from what we did there: instead of following one curve, take \textit{every} point of the manifold at once and slide each of them a parameter distance $t$ along the curve through it. The result is a map from $M$ to itself,
+
+        \begin{equation}\label{eq:FlowDef}
+            \begin{split}
+                \sigma_t: \;\; M \;\; &\rightarrow \;\; M\\
+                p \;\; &\mapsto \;\; \sigma_t(p) = \text{the point reached from } p \text{ after a parameter } t \text{ along the integral curve of } X,
+            \end{split}
+        \end{equation}
+
+        which is called the \textit{flow} generated by $X$. The name is well chosen, and the physical picture behind it is the honest one: think of $X$ as the velocity field of a fluid filling the manifold, and of $\sigma_t$ as the operation of letting the fluid run for a time $t$ and asking where each particle has ended up.
+
+        The flow is not merely a collection of maps, it is a group, and this is the structural fact that makes the whole construction work. Flowing for no time at all changes nothing, flowing for $t$ and then for $s$ is the same as flowing for $t+s$ because the integral curves do not care where we choose to start counting, and consequently flowing for $-t$ undoes flowing for $t$,
+
+        \begin{equation}\label{eq:FlowGroup}
+            \sigma_0 = I_M, \qquad \sigma_t\circ\sigma_s = \sigma_{t+s}, \qquad \left(\sigma_t\right)^{-1} = \sigma_{-t}.
+        \end{equation}
+
+        A family of maps satisfying \ref{eq:FlowGroup} is called a \textit{one-parameter group of diffeomorphisms}, and the last of the three identities is the one we care about most, because it says that every $\sigma_t$ has a smooth inverse and is therefore a diffeomorphism. By the discussion of the previous subsection we may consequently transport any tensor whatsoever along the flow, in either direction, and we did not have to assume it: the invertibility came for free from the group property, which in turn came for free from the uniqueness of integral curves.
+
+        It is worth writing down what the flow looks like to first order in $t$, because that is the only thing we shall ever need. Expanding the integral curve in a Taylor series about $t=0$ and using the fact that its tangent is $X$,
+
+        \begin{equation}\label{eq:FlowFirstOrder}
+            \sigma_t^{\mu}(x) = x^{\mu} + t\,X^{\mu}(x) + \mathcal{O}(t^2),
+        \end{equation}
+
+        so that for infinitesimal $t$ the flow is an infinitesimal displacement in the direction of $X$, and the vector field can be regarded as the generator of the flow in exactly the sense in which, in quantum mechanics, the momentum operator generates translations. The parallel is not a loose analogy: the commutator \ref{eq:CommutatorComponents} of two vector fields is the Lie bracket of the corresponding generators, and the algebra $\mathfrak{so}(3)$ we found on the sphere is the same algebra the angular momentum operators obey.
+
+    \subsection{The Lie derivative}
+
+        We are finally in a position to say what it means to differentiate a tensor field, and to see why the obstruction of the previous section is genuinely overcome rather than swept aside. The difficulty was never the differentiation itself, it was the subtraction. To compute a rate of change at $p$ we must compare the value of the field at $p$ with its value at a nearby point $q$, and those two values live in different vector spaces, $T_pM$ and $T_qM$, between which no canonical identification exists. Subtracting them is not merely inaccurate, it is meaningless, in the same way that subtracting a vector in one tangent plane of a sphere from a vector in another is meaningless until someone tells us how to compare them.
+
+        The flow tells us how. If we take the value of the tensor at the displaced point $\sigma_t(p)$ and drag it back to $p$ with the flow, using $\left(\sigma_{-t}\right)_{*} = \left(\sigma_t\right)^{*}$, then both objects sit at the same point, both belong to the same vector space, and the subtraction becomes legitimate. Dividing by $t$ and letting $t$ tend to zero gives a derivative.
+
+        \begin{myDef}
+            Let $X$ be a vector field on $M$ with flow $\sigma_t$, and let $T$ be a tensor field of any type. The \textit{Lie derivative} of $T$ along $X$ is the tensor field defined at each point $p$ by
+
+            \begin{equation}\label{eq:LieDefAbstract}
+                \left(\mathcal{L}_XT\right)\Big|_p = \lim_{t\rightarrow 0}\frac{\left[\left(\sigma_{-t}\right)_{*}T\right]_{\,\sigma_t(p)} \;-\; T\big|_p}{t} = \frac{d}{dt}\left[\left(\sigma_{-t}\right)_{*}T\right]\Bigg|_{t=0}.
+            \end{equation}
+        \end{myDef}
+
+        Three features of the definition \ref{eq:LieDefAbstract} deserve emphasis before we compute anything with it. The first is that it uses nothing but the smooth structure of the manifold. There is no metric in it, no connection, no basis and no coordinates, only the flow of a vector field, which every vector field has. The Lie derivative is therefore available on any manifold whatsoever, and in this precise sense it is the most primitive derivative in differential geometry. The second is that the result is a tensor of the same type as $T$, because pushing forward preserves type and the limit of tensors of a given type is a tensor of that type, so the objection that sank the partial derivative simply does not arise. The third is that $\mathcal{L}_XT$ at $p$ depends on the field $X$ in a whole neighbourhood of $p$ and not only on its value there, since the flow through nearby points is what does the dragging. We shall see in chapter 3 that this apparently technical remark is exactly what separates the Lie derivative from the covariant derivative.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Chapter 2/Figures/LieDrag.pdf}
+            \caption{The construction behind definition \ref{eq:LieDefAbstract}. The value of the field at $p$ and its value at $\sigma_t(p)$ live in different tangent spaces and cannot be subtracted. Dragging the second one back to $p$ along the flow puts both in $T_pM$, and the difference, divided by $t$, has a limit as $t$ tends to zero.}
+            \label{fig:LieDrag}
+        \end{figure}
+
+        Let us now extract the component formulas, starting with the simplest case. For a scalar field there is nothing to drag, since the push forward of a function is just composition, and
+
+        \begin{align*}
+            \mathcal{L}_Xf\big|_p = \lim_{t\rightarrow 0}\frac{f\left(\sigma_t(p)\right) - f(p)}{t} = \frac{d}{dt}f\left(\sigma_t(p)\right)\Bigg|_{t=0},
+        \end{align*}
+
+        which is by definition the derivative of $f$ along the integral curve of $X$, that is,
+
+        \begin{equation}\label{eq:LieScalar}
+            \mathcal{L}_Xf = X(f) = X^{\mu}\partial_{\mu}f.
+        \end{equation}
+
+        The case of a vector field is the one that does the real work, and we do it in full. Write everything in a chart and use \ref{eq:FlowFirstOrder}. The Jacobian of the map $\sigma_{-t}$, which is what \ref{eq:PushforwardComp} requires, is obtained by differentiating $\sigma^{\mu}_{-t}(x) = x^{\mu} - tX^{\mu}(x) + \mathcal{O}(t^2)$,
+
+        \begin{align*}
+            \frac{\partial\sigma^{\mu}_{-t}}{\partial x^{\nu}} = \delta^{\mu}_{\;\nu} - t\,\partial_{\nu}X^{\mu} + \mathcal{O}(t^2),
+        \end{align*}
+
+        so that dragging the vector $Y$ from the point $\sigma_t(p)$ back to $p$ gives, to first order,
+
+        \begin{align*}
+            \left[\left(\sigma_{-t}\right)_{*}Y\right]^{\mu}\Big|_p = \left(\delta^{\mu}_{\;\nu} - t\,\partial_{\nu}X^{\mu}\right)Y^{\nu}\left(\sigma_t(p)\right) + \mathcal{O}(t^2).
+        \end{align*}
+
+        The components appearing on the right are still evaluated at the displaced point, so we must expand them about $p$ as well, again with \ref{eq:FlowFirstOrder},
+
+        \begin{align*}
+            Y^{\nu}\left(\sigma_t(p)\right) = Y^{\nu}(p) + t\,X^{\rho}\partial_{\rho}Y^{\nu} + \mathcal{O}(t^2),
+        \end{align*}
+
+        and multiplying the two expansions while discarding everything of order $t^2$,
+
+        \begin{align*}
+            \left[\left(\sigma_{-t}\right)_{*}Y\right]^{\mu}\Big|_p &= \left(\delta^{\mu}_{\;\nu} - t\,\partial_{\nu}X^{\mu}\right)\left(Y^{\nu} + t\,X^{\rho}\partial_{\rho}Y^{\nu}\right) + \mathcal{O}(t^2)\\
+            &= {\color{red}Y^{\mu}} + t\,X^{\rho}\partial_{\rho}Y^{\mu} - t\,Y^{\nu}\partial_{\nu}X^{\mu} - {\color{blue}t^2X^{\rho}\partial_{\nu}X^{\mu}\partial_{\rho}Y^{\nu}} + \mathcal{O}(t^2),
+        \end{align*}
+
+        where the term in blue is of second order and joins the remainder. Substituting this into the definition \ref{eq:LieDefAbstract}, the term in red cancels against $Y^{\mu}(p)$, which is precisely what had to happen if the limit was to exist at all, and dividing by $t$ leaves
+
+        \begin{equation}\label{eq:LieVectorComp}
+            \left(\mathcal{L}_XY\right)^{\mu} = X^{\nu}\partial_{\nu}Y^{\mu} - Y^{\nu}\partial_{\nu}X^{\mu},
+        \end{equation}
+
+        which the reader will recognise at once. Comparing \ref{eq:LieVectorComp} with the component formula \ref{eq:CommutatorComponents} for the commutator we obtain a result which is one of the small miracles of the subject.
+
+        \begin{myteo}
+            The Lie derivative of a vector field $Y$ along a vector field $X$ is their commutator,
+            \begin{equation}\label{eq:LieIsCommutator}
+                \mathcal{L}_XY = \left[X,Y\right].
+            \end{equation}
+        \end{myteo}
+
+        Equation \ref{eq:LieIsCommutator} closes a circle that has been open since we introduced the commutator, where it appeared as a purely algebraic repair job, the antisymmetric combination invented to cancel the second derivatives that spoiled the Leibniz rule. It now turns out that this artificial looking object was a derivative all along, and the geometrical meaning of the commutator is the one the definition supplies: $[X,Y]$ measures the failure of the field $Y$ to be carried into itself by the flow of $X$. In particular the criterion \ref{eq:CoordBasisCriterion} for a coordinate basis acquires a new reading, since $[\partial_{\mu},\partial_{\nu}]=0$ now says that each coordinate vector field is dragged into itself by the flow of every other, which is exactly what one would expect of a rigid grid.
+
+        The remaining cases follow from \ref{eq:LieScalar} and \ref{eq:LieVectorComp} without any further use of the definition, and the trick is the standard one of applying the Leibniz rule to a scalar. Given a one-form $\omega$ and an arbitrary vector field $Y$, the contraction $\omega(Y) = \omega_{\mu}Y^{\mu}$ is a scalar, so on the one hand \ref{eq:LieScalar} gives
+
+        \begin{align*}
+            \mathcal{L}_X\left(\omega_{\mu}Y^{\mu}\right) = X^{\nu}\partial_{\nu}\left(\omega_{\mu}Y^{\mu}\right) = X^{\nu}Y^{\mu}\partial_{\nu}\omega_{\mu} + X^{\nu}\omega_{\mu}\partial_{\nu}Y^{\mu},
+        \end{align*}
+
+        while on the other the Leibniz rule demands
+
+        \begin{align*}
+            \mathcal{L}_X\left(\omega_{\mu}Y^{\mu}\right) = \left(\mathcal{L}_X\omega\right)_{\mu}Y^{\mu} + \omega_{\mu}\left(\mathcal{L}_XY\right)^{\mu} = \left(\mathcal{L}_X\omega\right)_{\mu}Y^{\mu} + {\color{red}\omega_{\mu}X^{\nu}\partial_{\nu}Y^{\mu}} - \omega_{\mu}Y^{\nu}\partial_{\nu}X^{\mu}.
+        \end{align*}
+
+        Setting the two expressions equal, the terms in red cancel against their counterparts, and after relabelling the dummy indices of the last term so that it carries a free $Y^{\mu}$ we are left with an identity that holds for every $Y$, whence
+
+        \begin{equation}\label{eq:LieFormComp}
+            \left(\mathcal{L}_X\omega\right)_{\mu} = X^{\nu}\partial_{\nu}\omega_{\mu} + \omega_{\nu}\partial_{\mu}X^{\nu}.
+        \end{equation}
+
+        The sign of the second term in \ref{eq:LieFormComp} is opposite to the one in \ref{eq:LieVectorComp}, and that is not a slip: it is the same reversal we met when vectors pushed forward and covectors pulled back, appearing now at the level of derivatives. Repeating the argument slot by slot gives the general formula, one term with a minus sign for each contravariant index and one with a plus sign for each covariant one,
+
+        \begin{equation}\label{eq:LieTensorComp}
+            \mathcal{L}_XT^{\mu_1\cdots\mu_k}_{\qquad\;\;\nu_1\cdots\nu_l} = X^{\rho}\partial_{\rho}T^{\mu_1\cdots\mu_k}_{\qquad\;\;\nu_1\cdots\nu_l} - \sum_{i=1}^{k}T^{\mu_1\cdots\rho\cdots\mu_k}_{\qquad\;\;\;\nu_1\cdots\nu_l}\,\partial_{\rho}X^{\mu_i} + \sum_{j=1}^{l}T^{\mu_1\cdots\mu_k}_{\qquad\;\;\nu_1\cdots\rho\cdots\nu_l}\,\partial_{\nu_j}X^{\rho}.
+        \end{equation}
+
+        The properties of the operator are now easy to collect, and each of them is either immediate from \ref{eq:LieTensorComp} or was built into the definition from the start. The Lie derivative is linear over the real numbers and obeys the Leibniz rule with respect to the tensor product, it maps tensors of type $\binom{k}{l}$ to tensors of the same type, and it commutes with contraction, which is what allowed the argument that produced \ref{eq:LieFormComp}. It is linear over the real numbers in the field $X$ as well, but, and this is the property to remember, it is \textit{not} linear over functions in $X$,
+
+        \begin{equation}\label{eq:LieNotFLinear}
+            \mathcal{L}_{fX}Y = f\,\mathcal{L}_XY - Y(f)\,X,
+        \end{equation}
+
+        for the reason we gave when the definition was introduced, namely that the dragging depends on the flow in a neighbourhood and not merely on the arrow at the point. Finally, the operators built from different fields do not commute among themselves, and their failure to do so is itself a Lie derivative,
+
+        \begin{equation}\label{eq:LieCommutatorAlgebra}
+            \left[\mathcal{L}_X,\mathcal{L}_Y\right] = \mathcal{L}_{[X,Y]},
+        \end{equation}
+
+        which for vector fields is nothing but the Jacobi identity written in a different notation, and which says that the map sending a vector field to its Lie derivative is a homomorphism of Lie algebras. The set of vector fields on a manifold, equipped with the commutator, is an infinite dimensional Lie algebra, and equation \ref{eq:LieCommutatorAlgebra} says that this algebra acts on tensor fields by Lie differentiation. That is the structural statement behind every symmetry argument in the rest of these notes.
+
+        The interpretation that matters for physics is the vanishing case. If $\mathcal{L}_XT=0$ then the tensor $T$ is carried into itself by the flow of $X$, which is to say that sliding the whole manifold along $X$ leaves $T$ exactly as it was, and $T$ is said to be invariant under the flow. When $T$ happens to be the metric, that condition is the statement that the geometry itself has a symmetry, and the vector field generating it will be called a Killing field. We cannot pursue that here, because we have no metric yet and shall not have one until the next chapter, but it is worth knowing in advance that this is what the whole construction has been for.

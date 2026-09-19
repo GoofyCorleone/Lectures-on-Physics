@@ -896,7 +896,7 @@
         now, if there is no torsion, therefore the Christoffel symbol commutes in the lower indices, thus
 
         \begin{equation}
-            X^{\nu}\Vec{\nabla}_{\nu}Y^{\mu}-Y^{\nu}\Vec{\nabla}_{\nu}X^{\mu} =  [X,Y]^{\mu}.
+            X^{\nu}\Vec{\nabla}_{\nu}Y^{\mu}-Y^{\nu}\Vec{\nabla}_{\nu}X^{\mu} =  [X,Y]^{\mu}.\label{eq:LieCommutatorNabla}
         \end{equation}
 
         We can also define a torsion tensor as follows
@@ -906,7 +906,80 @@
         \end{equation}
 
         Even if the theory is free of torsion, the second derivatives don't commute for a tensor field. The torsion is analogous to the rotation plane of the particle, \textit{we can have curvature but not torsion.}
-        
+
+    \subsection{The Lie derivative and the covariant derivative}
+
+        We promised in chapter 2 that once both derivatives were on the table we would settle how they are related, and this is the moment to keep that promise. The question deserves care, because the answer is not the one most readers guess the first time, and because the guess that fails is repeated often enough that it has acquired an air of respectability.
+
+        Let us begin with what the two operators agree on. Acting on a scalar field there is nothing for either of them to correct, since a function carries no indices and therefore no basis vectors that could rotate or stretch from one point to the next, and both collapse onto the ordinary directional derivative,
+
+        \begin{equation}\label{eq:BothOnScalars}
+            \mathcal{L}_Xf = X(f) = X^{\mu}\partial_{\mu}f = \Vec{\nabla}_Xf.
+        \end{equation}
+
+        Equation \ref{eq:BothOnScalars} is the small grain of truth out of which the confusion grows. There is a second and equally honest coincidence. Taking for $X$ one of the basis vectors of a coordinate chart, $X=\partial_{\sigma}$, whose components $X^{\mu}=\delta^{\mu}_{\;\sigma}$ are the same numbers at every point of the chart, the component formula for the Lie derivative of a vector field gives
+
+        \begin{align*}
+            \left(\mathcal{L}_{\partial_{\sigma}}Y\right)^{\nu} = X^{\mu}\partial_{\mu}Y^{\nu} - Y^{\mu}\partial_{\mu}X^{\nu} &= \delta^{\mu}_{\;\sigma}\partial_{\mu}Y^{\nu} - Y^{\mu}\,{\color{red}\partial_{\mu}\delta^{\nu}_{\;\sigma}}\\
+            &= \partial_{\sigma}Y^{\nu},
+        \end{align*}
+
+        where the term in red is the derivative of a constant and dies at once. The partial derivative is therefore the Lie derivative taken along a coordinate direction, which is a rather satisfying way of understanding why $\partial_{\mu}$ feels so natural inside a chart and becomes meaningless the moment we leave it.
+
+        Now for the real question, and the answer runs in the direction opposite to the expected one: it is the Lie derivative that can be written using a covariant derivative, and not the covariant derivative that can be written using a Lie derivative. We already met the statement in equation \ref{eq:LieCommutatorNabla}, and it is worth seeing exactly why it works. Take a torsion free connection, which is the only kind we shall ever use, and compute the antisymmetric combination
+
+        \begin{align*}
+            X^{\mu}\Vec{\nabla}_{\mu}Y^{\nu} - Y^{\mu}\Vec{\nabla}_{\mu}X^{\nu} &= X^{\mu}\left(\partial_{\mu}Y^{\nu} + \Gamma^{\nu}_{\;\mu\rho}Y^{\rho}\right) - Y^{\mu}\left(\partial_{\mu}X^{\nu} + \Gamma^{\nu}_{\;\mu\rho}X^{\rho}\right)\\
+            &= X^{\mu}\partial_{\mu}Y^{\nu} - Y^{\mu}\partial_{\mu}X^{\nu} + {\color{red}\Gamma^{\nu}_{\;\mu\rho}X^{\mu}Y^{\rho}} - {\color{red}\Gamma^{\nu}_{\;\mu\rho}Y^{\mu}X^{\rho}}.
+        \end{align*}
+
+        The two terms in red carry the whole argument. Both $\mu$ and $\rho$ are summed over in the last one, so we are free to exchange their names, and after doing so it reads $\Gamma^{\nu}_{\;\rho\mu}X^{\mu}Y^{\rho}$, which lets the pair collect into
+
+        \begin{align*}
+            \left(\Gamma^{\nu}_{\;\mu\rho} - \Gamma^{\nu}_{\;\rho\mu}\right)X^{\mu}Y^{\rho} = 2\,{\color{red}\Gamma^{\nu}_{\;[\mu\rho]}}X^{\mu}Y^{\rho} = 0,
+        \end{align*}
+
+        vanishing identically because a torsion free connection is symmetric in its two lower indices. Every trace of the connection has cancelled, and what survives is
+
+        \begin{equation}\label{eq:LieFromNabla}
+            \left(\mathcal{L}_XY\right)^{\nu} = \left[X,Y\right]^{\nu} = X^{\mu}\Vec{\nabla}_{\mu}Y^{\nu} - Y^{\mu}\Vec{\nabla}_{\mu}X^{\nu}.
+        \end{equation}
+
+        The same computation performed on a tensor field of arbitrary valence, and the reader should carry it out once for a $\binom{1}{1}$ tensor in order to see the pattern with their own hands, produces
+
+        \begin{equation}\label{eq:LieGeneral}
+            \mathcal{L}_XT^{\mu}_{\;\nu} = X^{\rho}\Vec{\nabla}_{\rho}T^{\mu}_{\;\nu} - T^{\rho}_{\;\nu}\Vec{\nabla}_{\rho}X^{\mu} + T^{\mu}_{\;\rho}\Vec{\nabla}_{\nu}X^{\rho},
+        \end{equation}
+
+        where once again all the Christoffel symbols disappear. Equations \ref{eq:LieFromNabla} and \ref{eq:LieGeneral} are genuinely useful in practice, because they say that we may compute a Lie derivative with whatever torsion free connection happens to be convenient and the result will not depend on which one we chose. That independence is exactly what we should demand of an object which never needed a connection in the first place.
+
+        What is false, and here is the statement we came to correct, is that the covariant derivative is a particular case of the Lie derivative. Two independent arguments rule it out, and both of them are short. The first is about how much structure each operator requires. A manifold admits infinitely many connections, all of them equally legitimate, so writing down a covariant derivative means making a genuine choice and feeding the manifold information it did not previously possess. The Lie derivative is fixed by the smooth structure alone and asks for no such choice. No amount of algebra performed on Lie derivatives can produce information that was never supplied to them.
+
+        The second argument is sharper and can be checked in a single line. The covariant derivative is linear over functions in the direction along which we differentiate,
+
+        \begin{equation}\label{eq:NablaFLinear}
+            \Vec{\nabla}_{fX}Y = f\,\Vec{\nabla}_XY,
+        \end{equation}
+
+        which is nothing but the first defining property of a connection, whereas the Lie derivative is not,
+
+        \begin{align*}
+            \mathcal{L}_{fX}Y = \left[fX,Y\right] = f\left[X,Y\right] - Y(f)X = f\,\mathcal{L}_XY - {\color{blue}Y(f)X}.
+        \end{align*}
+
+        The extra term written in blue refuses to go away, and it is the algebraic fingerprint of a geometrical fact. Equation \ref{eq:NablaFLinear} says that $\Vec{\nabla}_XY$ evaluated at a point depends on the field $X$ only through the single arrow sitting at that point, which is why it makes perfect sense to speak of the covariant derivative of a field along a direction, and why parallel transport along a curve is well defined. The Lie derivative enjoys no such property. The value of $\mathcal{L}_XY$ at a point depends on how $X$ itself is varying in a neighbourhood, and therefore on the entire family of integral curves surrounding the point rather than on the arrow standing at it. Two operators which depend on their direction argument in different ways cannot be special cases of one another, and with that the question is closed.
+
+        The distinction is far easier to hold on to as a picture than as an inequality between two formulas, and figure \ref{fig:LieVsCovariant} is that picture. To transport a vector covariantly we need a curve to travel along and a connection to tell us what remaining parallel means, and nothing more, so the neighbourhood of the curve plays no role whatsoever. To drag a vector in the sense of Lie we need an entire congruence of curves, the flow of $X$, and the question we are asking is how the vector joining two neighbouring curves gets stretched and turned as the flow carries it forward. Remove the neighbouring curves and the question cannot even be posed.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Chapter 3/Figures/LieVsCovariant.pdf}
+            \caption{The two derivatives compared. On the left a vector is carried along a single curve by a connection, which is the only information the covariant derivative requires. On the right the vector is dragged by the flow of a vector field, and the Lie derivative measures the failure of the vector joining two neighbouring integral curves to be reproduced by the flow.}
+            \label{fig:LieVsCovariant}
+        \end{figure}
+
+        The two derivatives also answer two different physical questions, and general relativity needs both of them. The covariant derivative asks how a quantity changes with respect to the notion of parallelism carried by the gravitational field itself, which is why it appears in the geodesic equation and in the field equations, and why every law of physics is written with it. The Lie derivative asks how a quantity changes when the whole space-time is dragged along a flow, which is a question about diffeomorphisms rather than about gravity, and it is therefore the natural instrument for discussing symmetries. That is precisely the use we shall make of it at the end of this chapter, when we ask what it means for a metric to be left untouched by a flow and discover that the answer hands us the conserved energy and angular momentum of an orbiting particle.
+
     \subsection{Levi-Civita connection}
 
         \begin{myteo}
@@ -2821,4 +2894,494 @@ Multiplying both sides by $-1$ and changing $\mu \rightarrow \alpha$ and $\nu \r
 
         Equation \ref{eq:Kretschmann} is perfectly finite at $r=2m$, which tells us that the surface $r=2m$ is a coordinate singularity and nothing more, an artefact of having insisted on a static observer's time coordinate in a region where no observer can remain static. It is the \textit{event horizon}, and a freely falling traveller crosses it without noticing anything locally unusual, although they can never come back. At $r=0$ the same scalar diverges, and no change of coordinates can repair a divergent scalar, so that is a genuine curvature singularity where the theory that produced it stops making sense and where we expect a quantum theory of gravity to take over. For an ordinary star none of this matters in the slightest, because $2m$ lies far inside the surface, where the vacuum solution does not apply in the first place: for the Sun the radius $2Gm/C^2$ is about three kilometres, buried under seven hundred thousand kilometres of hydrogen.
 
-        With the exterior geometry in hand one can go on to compute everything that made general relativity famous, the precession of the perihelion of Mercury, the deflection of starlight grazing the Sun and the delay of radar signals passing near it, all of which follow from integrating the geodesic equation in the metric \ref{eq:SchwarzschildGeom}. Those calculations, and the black holes hiding behind the horizon, are the natural continuation of this chapter. For the moment we return to the weak field programme we interrupted, because the linearised equations we derived before this detour are about to give us something Schwarzschild's static solution cannot, namely radiation.
+        With the exterior geometry in hand one can go on to compute everything that made general relativity famous, the precession of the perihelion of Mercury, the deflection of starlight grazing the Sun and the delay of radar signals passing near it, all of which follow from integrating the geodesic equation in the metric \ref{eq:SchwarzschildGeom}. Before we do any of that, however, there are two pieces of machinery which the Schwarzschild solution allows us to introduce in their natural habitat, and which we shall need constantly from here onwards. The first tells us how to translate the components of a tensor into numbers an actual observer would measure, and the second tells us how to extract conserved quantities from a space-time without integrating anything at all.
+
+\section{Observers and symmetries}
+
+    The two sections which follow share a common motivation. So far every component we have written has been a component with respect to a coordinate basis, and coordinates are bookkeeping devices with no physical meaning of their own. A physicist eventually has to ask what an observer sitting somewhere in the space-time actually measures, and that question requires a basis attached to the observer rather than to the chart. Separately, integrating the geodesic equation directly is painful, and we know from Lagrangian mechanics that the honest way to avoid the pain is to find conserved quantities. Both needs are answered by ideas that cost us nothing new: the first by choosing a different basis, the second by asking the Lie derivative of chapter 2 a question about the metric.
+
+    \subsection{Tetrads and what an observer measures}
+
+        Everything in this chapter has been written in a coordinate basis, the set $\{\partial_{\mu}\}$ attached to a chart, and it is time to say why that is not good enough. The vectors $\partial_{\mu}$ are in general neither unit vectors nor orthogonal to one another, because their inner products are the metric components themselves,
+
+        \begin{equation}\label{eq:CoordBasisInner}
+            \mathbb{G}\left(\partial_{\mu},\partial_{\nu}\right) = g_{\mu\nu},
+        \end{equation}
+
+        and in Schwarzschild coordinates that means $\partial_t$ has squared length $-(1-2m/r)$, which is not $-1$, and $\partial_{\varphi}$ has squared length $r^2\sin^2\vartheta$, which grows without bound. So when we compute a component such as $T^{tt}$ we have not computed an energy density that anybody could measure with an instrument, we have computed a number expressed in units which themselves vary from place to place.
+
+        We already know the remedy, because we built it in chapter 2 when we abandoned the requirement that a basis come from a chart and allowed ourselves an arbitrary frame $\{e_{(a)}\}$ with its dual coframe $\{e^{(a)}\}$, its dictionary $e_{(a)}^{\;\;\mu}$ and its structure functions. What we could not do there was single out any particular frame, because choosing one requires a criterion and the only criterion a physicist wants is a metric one. Now we have a metric, so we impose it: of all the frames available at a point we keep those which satisfy
+
+        \begin{equation}\label{eq:TetradDef}
+            \mathbb{G}\left(e_{(a)},e_{(b)}\right) = \eta_{ab},
+        \end{equation}
+
+        that is, those which are orthonormal with respect to the space-time metric at every point. A frame obeying \ref{eq:TetradDef} is what in four dimensions we call a \textit{tetrad}. Latin indices from the beginning of the alphabet will always be frame indices, raised and lowered with $\eta_{ab}$, while Greek indices remain coordinate indices, raised and lowered with $g_{\mu\nu}$. That a tetrad always exists is guaranteed by the local flatness we built into the theory in the first place, since the equivalence principle says precisely that at any point we can bring the metric to the Minkowski form, and equation \ref{eq:TetradDef} is that statement written as a choice of basis rather than as a choice of coordinates.
+
+        Writing the frame vectors in the coordinate basis, $e_{(a)} = e_{(a)}^{\;\;\mu}\partial_{\mu}$, and substituting into \ref{eq:TetradDef} with the help of \ref{eq:CoordBasisInner}, the defining condition becomes a relation between the dictionary and the metric,
+
+        \begin{equation}\label{eq:TetradMetric}
+            g_{\mu\nu}\,e_{(a)}^{\;\;\mu}e_{(b)}^{\;\;\nu} = \eta_{ab},
+        \end{equation}
+
+        and contracting \ref{eq:TetradMetric} with the inverse dictionary of chapter 2 turns it inside out and gives the metric back as
+
+        \begin{equation}\label{eq:TetradMetricInverse}
+            g_{\mu\nu} = \eta_{ab}\,e^{(a)}_{\;\;\mu}e^{(b)}_{\;\;\nu}.
+        \end{equation}
+
+        Equation \ref{eq:TetradMetricInverse} is worth pausing over, because it says that the metric can be regarded as a derived object: give me four one form fields and I will hand you back a metric. That observation is the starting point of the tetrad formulation of general relativity, and it is what makes it possible to put spinors, which have no coordinate description at all, into a curved space-time.
+
+        The translation of tensor components between the two languages is the one we already wrote in chapter 2, but it acquires here a physical meaning it did not have there. The numbers $T_{ab} = T_{\mu\nu}e_{(a)}^{\;\;\mu}e_{(b)}^{\;\;\nu}$ are components in an orthonormal basis, which is to say components measured with respect to rods and clocks that are locally identical to the rods and clocks of special relativity, and they are therefore the numbers an observer whose worldline carries that frame would actually read off an instrument. The numbers $T_{\mu\nu}$ are not.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Chapter 3/Figures/Tetrad.pdf}
+            \caption{A coordinate basis and an orthonormal frame at the same event. The coordinate vectors $\partial_{\mu}$ follow the chart and are in general neither unit nor orthogonal, and their lengths change from one event to the next, while the tetrad $e_{(a)}$ is orthonormal at every event and is the basis with respect to which an observer measures. The two are related by the matrix $e_{(a)}^{\;\;\mu}$.}
+            \label{fig:Tetrad}
+        \end{figure}
+
+        The freedom we have gained is not free of ambiguity, and the ambiguity is itself interesting. Equation \ref{eq:TetradDef} does not determine the tetrad uniquely, because if $\{e_{(a)}\}$ is orthonormal then so is any $\Lambda^{b}_{\;a}(x)\,e_{(b)}$ provided the matrix $\Lambda$ preserves $\eta_{ab}$, and the matrices that preserve $\eta_{ab}$ are precisely the Lorentz transformations. A tetrad field therefore carries a local Lorentz symmetry, one independent Lorentz transformation at every point of the space-time, which is nothing other than the freedom of each observer to choose their own orientation and their own state of motion. General relativity written in the tetrad language looks remarkably like a gauge theory with the Lorentz group as its gauge group, and that resemblance is not an accident.
+
+        The price is the one chapter 2 warned us about, namely that the frame vectors no longer commute and their structure functions $C^{c}_{\;ab}$ are not zero. If they were, the tetrad would be a coordinate basis, and a coordinate basis cannot be orthonormal everywhere unless the space-time is flat, so a curved geometry leaves us no choice in the matter. It bears repeating here, because the temptation is strongest at exactly this point, that those structure functions are not a measure of curvature: the plane is flat and its orthonormal polar frame already has one of them different from zero. Curvature is the Riemann tensor and nothing else.
+
+        Let us make all of this concrete with the only solution we have in hand. Consider an observer who remains at fixed $r$, $\vartheta$ and $\varphi$ outside a Schwarzschild body, a person standing on a platform held up by rockets far above a black hole, and build the frame they carry. The timelike leg must be the normalised four velocity of such an observer, and the remaining three must be the normalised coordinate directions, which are already mutually orthogonal because the Schwarzschild metric is diagonal. Dividing each $\partial_{\mu}$ by the square root of the magnitude of the corresponding metric component gives
+
+        \begin{align}\label{eq:SchwarzschildTetrad}
+            e_{(0)} = \left(1-\frac{2m}{r}\right)^{-1/2}\partial_t, \qquad & e_{(1)} = \left(1-\frac{2m}{r}\right)^{1/2}\partial_r,\\
+            e_{(2)} = \frac{1}{r}\,\partial_{\vartheta}, \qquad & e_{(3)} = \frac{1}{r\sin\vartheta}\,\partial_{\varphi},\nonumber
+        \end{align}
+
+        and the reader may verify directly from \ref{eq:TetradMetric} that these four satisfy $\mathbb{G}(e_{(a)},e_{(b)})=\eta_{ab}$, since for example
+
+        \begin{align*}
+            \mathbb{G}\left(e_{(0)},e_{(0)}\right) = \left(1-\frac{2m}{r}\right)^{-1}g_{tt} = {\color{red}\left(1-\frac{2m}{r}\right)^{-1}}\left[-{\color{red}\left(1-\frac{2m}{r}\right)}\right] = -1.
+        \end{align*}
+
+        The frame \ref{eq:SchwarzschildTetrad} pays for itself immediately. Suppose a photon of coordinate energy $E$ is emitted at radius $r_1$ and received at radius $r_2$. The energy measured by a static observer is not $E$ but the frame component
+
+        \begin{align*}
+            E_{\text{meas}} = -p_{\mu}e_{(0)}^{\;\;\mu} = \left(1-\frac{2m}{r}\right)^{-1/2}\left(-p_t\right) = \left(1-\frac{2m}{r}\right)^{-1/2}E,
+        \end{align*}
+
+        because $-p_t$ is the conserved quantity, as we are about to prove in the next section, while the frame factor is what converts it into a reading. Taking the ratio at the two radii gives the gravitational redshift
+
+        \begin{equation}\label{eq:RedshiftTetrad}
+            \frac{E_2}{E_1} = \left(\frac{1-2m/r_1}{1-2m/r_2}\right)^{1/2},
+        \end{equation}
+
+        which reproduces the result we obtained from the equivalence principle at the very beginning of this chapter, only now it has fallen out of the formalism rather than out of a thought experiment about lifts. Notice also what \ref{eq:SchwarzschildTetrad} says as $r\rightarrow 2m$: the normalisation factor of $e_{(0)}$ diverges, which is the frame telling us that the proper acceleration required to stay in place becomes infinite, and that no observer can remain static at the horizon. The horizon is a coordinate singularity of the metric but it is a genuine obstruction for this particular family of observers, and the tetrad is what lets us say the two things separately without confusing them.
+
+    \subsection{Killing vectors and conserved quantities}
+
+        We now come to the question that the Lie derivative was invented to answer. A symmetry of a space-time should mean that the geometry looks the same after we have moved along some flow, and we have already built the instrument that measures how a tensor changes when it is dragged along a flow, so the definition writes itself. A vector field $\xi$ is a \textit{Killing vector field} of the space-time $(M,\mathbb{G})$ if the metric is unchanged when dragged along its flow,
+
+        \begin{equation}\label{eq:KillingDef}
+            \mathcal{L}_{\xi}\mathbb{G} = 0,
+        \end{equation}
+
+        and the flow generated by such a field is called an isometry. Equation \ref{eq:KillingDef} deserves to be read slowly. It does not say that the metric components are constant, which would be a statement about a chart and therefore meaningless. It says that if we pick up the entire geometry and slide it along the integral curves of $\xi$, every distance and every angle comes back exactly as it was, so that no measurement whatsoever could detect that the sliding had happened.
+
+        The definition is geometrical, but for computation we want it in components, and getting it there is a short exercise with equation \ref{eq:LieGeneral}. Applying the Lie derivative to the metric and using the fact that the covariant derivative of the metric vanishes for the Levi-Civita connection,
+
+        \begin{align*}
+            \mathcal{L}_{\xi}g_{\mu\nu} &= \xi^{\rho}\,{\color{red}\Vec{\nabla}_{\rho}g_{\mu\nu}} + g_{\rho\nu}\Vec{\nabla}_{\mu}\xi^{\rho} + g_{\mu\rho}\Vec{\nabla}_{\nu}\xi^{\rho}\\
+            &= \Vec{\nabla}_{\mu}\xi_{\nu} + \Vec{\nabla}_{\nu}\xi_{\mu},
+        \end{align*}
+
+        where the term in red is zero by metric compatibility and where we have used the metric to lower the index inside the derivative, which is legitimate for the same reason. So the condition \ref{eq:KillingDef} is equivalent to
+
+        \begin{equation}\label{eq:KillingEquation}
+            \Vec{\nabla}_{\mu}\xi_{\nu} + \Vec{\nabla}_{\nu}\xi_{\mu} = 2\Vec{\nabla}_{(\mu}\xi_{\nu)} = 0,
+        \end{equation}
+
+        which is the \textit{Killing equation}. It is a system of ten coupled first order partial differential equations for four unknown functions, which is heavily overdetermined, and that is the technical reason why a generic space-time has no symmetries at all: solutions simply do not exist unless the geometry has been arranged to admit them. Minkowski space-time admits the maximum number, ten of them, corresponding to four translations, three rotations and three boosts, which is the Poincaré group reappearing as the isometry group of flat space. Schwarzschild admits four.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.95\textwidth]{Chapter 3/Figures/KillingFlow.pdf}
+            \caption{On the left the surface is invariant under rotation about its axis, so the flow generated by $\xi$ slides the surface along itself and every distance is left exactly as it was: $\xi$ is a Killing vector. On the right the same flow carries the bulge round onto a region where there is none, so distances are changed and $\xi$ satisfies no Killing equation. A symmetry is not a property of the flow but of the geometry the flow is made to act on.}
+            \label{fig:KillingFlow}
+        \end{figure}
+
+        The reason Killing vectors matter to a physicist rather than to a geometer is the following theorem, which is the general relativistic form of Noether's theorem and which is one of the most useful results in the whole subject.
+
+        \begin{myteo}
+            Let $\xi$ be a Killing vector field and let $\gamma$ be a geodesic with tangent $u^{\mu}$. Then the quantity
+            \begin{equation*}
+                Q = \xi_{\mu}u^{\mu}
+            \end{equation*}
+            is constant along $\gamma$.
+        \end{myteo}
+
+        \begin{proof}
+            The rate of change of $Q$ along the curve is its covariant derivative in the direction of the tangent, so
+
+            \begin{align*}
+                \frac{dQ}{d\tau} = u^{\nu}\Vec{\nabla}_{\nu}\left(\xi_{\mu}u^{\mu}\right) = u^{\nu}u^{\mu}\Vec{\nabla}_{\nu}\xi_{\mu} + \xi_{\mu}\,{\color{red}u^{\nu}\Vec{\nabla}_{\nu}u^{\mu}},
+            \end{align*}
+
+            where we used the Leibniz rule. The term in red is exactly the left hand side of the geodesic equation and therefore vanishes, because $\gamma$ is a geodesic. What remains is the contraction of $u^{\nu}u^{\mu}$, which is symmetric under the exchange of its two indices, with $\Vec{\nabla}_{\nu}\xi_{\mu}$, and by the identity we proved in chapter 2 the contraction of a symmetric object with an antisymmetric one vanishes, so only the symmetric part of the derivative survives,
+
+            \begin{align*}
+                \frac{dQ}{d\tau} = u^{\nu}u^{\mu}\Vec{\nabla}_{(\nu}\xi_{\mu)} = 0,
+            \end{align*}
+
+            which is zero by the Killing equation \ref{eq:KillingEquation}.
+        \end{proof}
+
+        That is a remarkable trade. In exchange for one symmetry of the geometry we obtain one first integral of the motion, and first integrals are precisely what turn an unmanageable system of second order equations into something we can solve. The physical interpretation of each conserved quantity is read off from the Killing vector that produced it, exactly as in Lagrangian mechanics: a timelike Killing vector gives a conserved energy, a rotational one gives a conserved angular momentum, and a translational one gives a conserved linear momentum.
+
+        There is a second version of the theorem which is just as useful and which applies to fields rather than to particles. If $\xi$ is a Killing vector and $T^{\mu\nu}$ is the energy momentum tensor, then the current
+
+        \begin{equation}\label{eq:KillingCurrent}
+            J^{\mu} = T^{\mu\nu}\xi_{\nu}
+        \end{equation}
+
+        is covariantly conserved, since
+
+        \begin{align*}
+            \Vec{\nabla}_{\mu}J^{\mu} = \left({\color{red}\Vec{\nabla}_{\mu}T^{\mu\nu}}\right)\xi_{\nu} + T^{\mu\nu}\Vec{\nabla}_{\mu}\xi_{\nu} = T^{\mu\nu}\Vec{\nabla}_{(\mu}\xi_{\nu)} = 0,
+        \end{align*}
+
+        where the red term vanishes by the conservation law $\Vec{\nabla}_{\mu}T^{\mu\nu}=0$ which the Bianchi identities forced upon us, and where the second term dies because $T^{\mu\nu}$ is symmetric and the symmetric part of $\Vec{\nabla}_{\mu}\xi_{\nu}$ is zero. This is worth emphasising because it rescues something we lost earlier. We remarked when we wrote down $\Vec{\nabla}_{\mu}T^{\mu\nu}=0$ that this is a local statement and does not by itself give a globally conserved energy, since one cannot integrate a vector equation over a curved space-time in any invariant way. Equation \ref{eq:KillingCurrent} is a scalar equation for a genuine current, and a current can be integrated. \textit{Energy in general relativity is globally conserved when, and only when, the space-time possesses a timelike Killing vector}, and since a generic space-time possesses none, the total energy of a generic space-time is simply not a defined quantity.
+
+        Let us apply all of this to Schwarzschild, where the payoff is immediate. The metric \ref{eq:SchwarzschildGeom} has components which depend on $r$ and $\vartheta$ but on neither $t$ nor $\varphi$, and whenever the components in some chart are independent of a coordinate $x^{\lambda}$ the corresponding coordinate vector is a Killing vector, because then
+
+        \begin{align*}
+            \mathcal{L}_{\partial_{\lambda}}g_{\mu\nu} = \partial_{\lambda}g_{\mu\nu} = 0
+        \end{align*}
+
+        directly from the definition. So $\xi_{(t)}=\partial_t$ and $\xi_{(\varphi)}=\partial_{\varphi}$ are Killing vectors of the Schwarzschild geometry, the first expressing the fact that the geometry does not change with time and the second that it does not change under rotation about the axis. There are two more coming from the full spherical symmetry, which together with $\xi_{(\varphi)}$ close into the algebra $\mathfrak{so}(3)$ we computed on the sphere in chapter 2, but these two suffice for what follows.
+
+        Lowering the index on each with the metric, so that $\xi_{(t)\mu} = g_{\mu t}$ and $\xi_{(\varphi)\mu}=g_{\mu\varphi}$, and contracting with the four velocity $u^{\mu} = (\dot{t},\dot{r},\dot{\vartheta},\dot{\varphi})$ of a particle in free fall, where the dot is the derivative with respect to proper time, the theorem hands us two constants of the motion,
+
+        \begin{equation}\label{eq:SchwarzschildEL}
+            E = -\xi_{(t)\mu}u^{\mu} = \left(1-\frac{2m}{r}\right)\dot{t}, \qquad L = \xi_{(\varphi)\mu}u^{\mu} = r^2\sin^2\vartheta\,\dot{\varphi},
+        \end{equation}
+
+        the minus sign in the first being conventional so that $E$ comes out positive for a future directed particle. These are the energy per unit mass and the angular momentum per unit mass of the orbit, as we can check by letting $r\rightarrow\infty$, where $E\rightarrow\dot{t}$, which is the special relativistic $\gamma$ and therefore the energy per unit mass of a free particle, and where $L$ reduces to the familiar $r^2\dot{\varphi}$ of Newtonian mechanics, which is Kepler's second law in disguise.
+
+        With \ref{eq:SchwarzschildEL} in hand the geodesic problem becomes almost easy. Restricting to the equatorial plane $\vartheta=\pi/2$, which we may always do by a rotation, and substituting both constants into the normalisation condition $g_{\mu\nu}u^{\mu}u^{\nu}=-1$, a little algebra gives
+
+        \begin{equation}\label{eq:RadialEnergy}
+            \frac{1}{2}\dot{r}^2 + \underbrace{\left[-\frac{m}{r} + \frac{L^2}{2r^2} - \frac{mL^2}{r^3}\right]}_{V_{\text{eff}}(r)} = \frac{E^2-1}{2},
+        \end{equation}
+
+        which is the energy equation of a single particle moving in one dimension under an effective potential, and which we have obtained without ever writing down a Christoffel symbol. Equation \ref{eq:RadialEnergy} is the whole of orbital dynamics around a spherical body. Its first two terms are exactly Newton's, the attractive potential and the centrifugal barrier, and the third term, the one proportional to $m L^2/r^3$, is the entire contribution of general relativity. It is small at large radii, which is why Newton worked so well for two centuries, and it is attractive and grows faster than the centrifugal barrier as $r$ decreases, which has two consequences with names attached to them. The first is that orbits no longer close on themselves, and their slow rotation is the perihelion precession of Mercury. The second is that at small enough radius the barrier is overwhelmed altogether, so that unlike in Newtonian gravity a particle with any amount of angular momentum whatsoever can fall in. That is a genuinely new possibility, and it is the origin of the innermost stable circular orbit at $r=6m$ which sets the inner edge of the accretion discs we observe around black holes.
+
+        So the two ideas of this section do what we advertised. The tetrad tells us what an observer measures, and the Killing vectors tell us what does not change, and between them they convert the geometry of the previous sections into predictions.
+
+\section{The Einstein-Maxwell equations}
+
+    Every source we have fed to the field equations so far has been matter of one kind or another, dust or a perfect fluid, and in each case we wrote down an energy momentum tensor and then forgot where it came from. There is one source that does not allow us that luxury, and it is the electromagnetic field. Electromagnetism is, together with gravity, one of the only two interactions of unbounded range in classical physics, it is the only other field theory Einstein had available when he was building general relativity, and unlike a fluid it comes with field equations of its own which must be solved simultaneously with Einstein's. The result is the first genuinely coupled system in the theory, and the first one in which we can see gravitation and another field determining each other rather than one merely sitting inside the other.
+
+    The physical statement behind the mathematics is simple enough to be worth saying before any equation. The electromagnetic field carries energy and momentum, and by the equivalence principle anything carrying energy and momentum must gravitate. A region of space containing nothing but light is therefore not flat, and two beams of light attract one another, a conclusion no one would have drawn from Maxwell's theory alone and which follows here with no additional hypothesis whatever. Conversely, the geometry produced in this way tells the field how to propagate, so the two theories are locked together and neither can be solved first.
+
+    \subsection{Maxwell's theory on a curved background}
+
+        The transition from flat to curved space-time is governed by the rule we have used throughout, minimal coupling, which instructs us to replace $\eta_{\mu\nu}$ by $g_{\mu\nu}$ and every partial derivative by a covariant one. Applying it blindly to the definition of the Faraday tensor would give
+
+        \begin{align*}
+            F_{\mu\nu} = \Vec{\nabla}_{\mu}A_{\nu} - \Vec{\nabla}_{\nu}A_{\mu} = \partial_{\mu}A_{\nu} - {\color{red}\Gamma^{\lambda}_{\;\mu\nu}A_{\lambda}} - \partial_{\nu}A_{\mu} + {\color{red}\Gamma^{\lambda}_{\;\nu\mu}A_{\lambda}},
+        \end{align*}
+
+        and the two terms in red cancel each other exactly, because the Levi-Civita connection is symmetric in its lower indices. The Faraday tensor is therefore unchanged by the passage to curved space-time,
+
+        \begin{equation}\label{eq:FaradayCurved}
+            F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu},
+        \end{equation}
+
+        and this is the promise made in chapter 2 being kept. We noticed there that the antisymmetrised partial derivative of a one form is a tensor even though the plain partial derivative is not, and called it the first appearance of the exterior derivative. Equation \ref{eq:FaradayCurved} is that observation cashed in: the electromagnetic field strength needs no connection to be defined, and a physicist may go on writing it with ordinary derivatives in the most violently curved space-time without committing any error at all.
+
+        The homogeneous Maxwell equations inherit the same protection. They state that the exterior derivative of $F$ vanishes,
+
+        \begin{equation}\label{eq:MaxwellHomog}
+            \partial_{[\lambda}F_{\mu\nu]} = \Vec{\nabla}_{[\lambda}F_{\mu\nu]} = 0,
+        \end{equation}
+
+        which in three dimensional language is the absence of magnetic monopoles together with Faraday's law of induction, and which holds identically once \ref{eq:FaradayCurved} is granted, since it amounts to the statement that mixed partial derivatives commute. The inhomogeneous pair is where the geometry finally enters,
+
+        \begin{equation}\label{eq:MaxwellInhomog}
+            \Vec{\nabla}_{\nu}F^{\mu\nu} = 4\pi J^{\mu},
+        \end{equation}
+
+        and here the order of the indices genuinely matters, because $F$ is antisymmetric and writing the divergence on the first slot instead of the second flips the sign, $\Vec{\nabla}_{\mu}F^{\mu\nu} = -4\pi J^{\nu}$. We shall keep the form \ref{eq:MaxwellInhomog} throughout. There is a practical simplification worth recording, which is that the divergence of an antisymmetric tensor never needs a Christoffel symbol either,
+
+        \begin{equation}\label{eq:DivAntisym}
+            \Vec{\nabla}_{\nu}F^{\mu\nu} = \frac{1}{\sqrt{-g}}\,\partial_{\nu}\left(\sqrt{-g}\,F^{\mu\nu}\right),
+        \end{equation}
+
+        a formula we shall lean on heavily when we solve the equations, and which is again a consequence of the symmetry of the connection contracting against the antisymmetry of the field.
+
+        Charge conservation is no longer an independent assumption but a theorem. Taking the divergence of \ref{eq:MaxwellInhomog} and commuting the two covariant derivatives, the commutator produces two Riemann terms which contract down to the Ricci tensor, and since the Ricci tensor is symmetric while $F^{\mu\nu}$ is antisymmetric the identity we proved in chapter 2 kills them both,
+
+        \begin{align*}
+            4\pi\,\Vec{\nabla}_{\mu}J^{\mu} = \Vec{\nabla}_{\mu}\Vec{\nabla}_{\nu}F^{\mu\nu} = \frac{1}{2}\left[\Vec{\nabla}_{\mu},\Vec{\nabla}_{\nu}\right]F^{\mu\nu} = \frac{1}{2}\left({\color{red}R_{\lambda\nu}F^{\lambda\nu}} + {\color{red}R_{\lambda\mu}F^{\mu\lambda}}\right) = 0,
+        \end{align*}
+
+        so that $\Vec{\nabla}_{\mu}J^{\mu}=0$ in any space-time whatsoever. That the curvature drops out of the argument is not an accident of the calculation, it is the statement that the conservation of electric charge is a topological fact about the theory and not a dynamical one, and that no gravitational field however strong can create or destroy a single electron.
+
+    \subsection{The coupled system from a single action}
+
+        The most economical way to obtain both sets of equations at once, and the way that makes the structure of the theory clearest, is to write a single action and vary it twice. Adding the Maxwell Lagrangian to the Einstein-Hilbert action of the previous section gives
+
+        \begin{equation}\label{eq:EMAction}
+            S\left[g_{\mu\nu},A_{\mu}\right] = \int\left(\frac{R}{16\pi} - \frac{1}{16\pi}F_{\alpha\beta}F^{\alpha\beta}\right)\sqrt{-g}\;d^4x,
+        \end{equation}
+
+        in which the dynamical variables are the metric and the potential, and in which the only coupling between them is hidden in the index raising and in the volume element. Everything follows from \ref{eq:EMAction}.
+
+        Varying with respect to the potential is the easier of the two, since the gravitational term does not contain $A_{\mu}$ at all. Using $\delta F_{\alpha\beta} = \partial_{\alpha}\delta A_{\beta} - \partial_{\beta}\delta A_{\alpha}$ and the antisymmetry of $F^{\alpha\beta}$, which lets us combine the two resulting terms into one,
+
+        \begin{align*}
+            \delta S = -\frac{1}{16\pi}\int F^{\alpha\beta}\,{\color{blue}2}\,\delta F_{\alpha\beta}\sqrt{-g}\,d^4x = -\frac{1}{4\pi}\int F^{\alpha\beta}\left(\partial_{\alpha}\delta A_{\beta}\right)\sqrt{-g}\,d^4x,
+        \end{align*}
+
+        where the factor in blue comes from the two identical contributions of $F_{\alpha\beta}F^{\alpha\beta}$ and the second one from the antisymmetry, and integrating by parts while discarding the boundary term in the usual way,
+
+        \begin{align*}
+            \delta S = \frac{1}{4\pi}\int \partial_{\alpha}\left(\sqrt{-g}\,F^{\alpha\beta}\right)\delta A_{\beta}\;d^4x = \frac{1}{4\pi}\int \Vec{\nabla}_{\alpha}F^{\alpha\beta}\,\delta A_{\beta}\,\sqrt{-g}\;d^4x,
+        \end{align*}
+
+        where the last step used \ref{eq:DivAntisym} backwards. Demanding that this vanish for every variation $\delta A_{\beta}$ returns the source free Maxwell equation, and had we included a coupling term $-\int A_{\mu}J^{\mu}\sqrt{-g}\,d^4x$ in the action it would have returned \ref{eq:MaxwellInhomog} complete with its source.
+
+        Varying with respect to the metric is the calculation that produces the coupling. We showed when deriving the field equations that the variation of the gravitational term gives the Einstein tensor, so we need only the matter part, and for it we need two standard results. The first is the variation of the determinant,
+
+        \begin{equation}\label{eq:VarDet}
+            \delta\sqrt{-g} = -\frac{1}{2}\sqrt{-g}\,g_{\mu\nu}\,\delta g^{\mu\nu},
+        \end{equation}
+
+        and the second is that $F_{\alpha\beta}$, being built from partial derivatives of $A_{\mu}$ alone by equation \ref{eq:FaradayCurved}, does not depend on the metric at all, so that the whole metric dependence of the Maxwell term sits in the two inverse metrics needed to raise its indices,
+
+        \begin{align*}
+            F_{\alpha\beta}F^{\alpha\beta} = g^{\alpha\mu}g^{\beta\nu}F_{\alpha\beta}F_{\mu\nu}.
+        \end{align*}
+
+        Varying that product, the two inverse metrics contribute one term each and the two terms are equal after relabelling, so
+
+        \begin{align*}
+            \delta\left(F_{\alpha\beta}F^{\alpha\beta}\right) = {\color{blue}2}\,F_{\mu\beta}F_{\nu}^{\;\;\beta}\,\delta g^{\mu\nu},
+        \end{align*}
+
+        and assembling this with \ref{eq:VarDet} the variation of the Maxwell part of \ref{eq:EMAction} becomes
+
+        \begin{align*}
+            \delta S_{\text{M}} &= -\frac{1}{16\pi}\int\left[{\color{blue}2}F_{\mu\alpha}F_{\nu}^{\;\;\alpha}\sqrt{-g} - \frac{1}{2}\sqrt{-g}\,g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right]\delta g^{\mu\nu}\,d^4x\\
+            &= -\frac{1}{8\pi}\int\left[F_{\mu\alpha}F_{\nu}^{\;\;\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right]\delta g^{\mu\nu}\sqrt{-g}\;d^4x.
+        \end{align*}
+
+        Comparing the bracket with the general definition of the energy momentum tensor as the response of the matter action to a change of the metric, we recover precisely the tensor we wrote down without justification earlier in this chapter,
+
+        \begin{equation}\label{eq:TemAgain}
+            T_{\mu\nu} = \frac{1}{4\pi}\left(F_{\mu\alpha}F_{\nu}^{\;\;\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right),
+        \end{equation}
+
+        which is a satisfying closure, since what was then an educated guess is now a consequence of the action. Putting the two variations together, the Einstein-Maxwell system reads
+
+        \begin{align}\label{eq:EinsteinMaxwell}
+            G_{\mu\nu} &= 8\pi T_{\mu\nu} = 2\left(F_{\mu\alpha}F_{\nu}^{\;\;\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right),\\
+            \Vec{\nabla}_{\nu}F^{\mu\nu} &= 4\pi J^{\mu}, \qquad \partial_{[\lambda}F_{\mu\nu]} = 0.\nonumber
+        \end{align}
+
+        One simplification is available immediately and it is worth having in hand before we attempt a solution. We showed earlier that the tensor \ref{eq:TemAgain} is traceless in four dimensions, and a traceless source forces the Ricci scalar to vanish through the trace of the field equations, $R = -8\pi T = 0$. The Einstein-Maxwell equations therefore collapse to the simpler form
+
+        \begin{equation}\label{eq:EMRicci}
+            R_{\mu\nu} = 8\pi T_{\mu\nu},
+        \end{equation}
+
+        with no trace term to carry around, so that an electrovacuum space-time is not Ricci flat, as a vacuum one is, but it does have vanishing curvature scalar. The tracelessness itself reflects the fact that Maxwell's theory contains no length and no mass, and it is the classical shadow of the conformal invariance of electromagnetism.
+
+    \subsection{Why the system is consistent, and where the Lorentz force comes from}
+
+        Before solving anything we should check that the system \ref{eq:EinsteinMaxwell} is not self contradictory, and the check turns out to deliver a good deal more than we asked of it. The Bianchi identity guarantees that $\Vec{\nabla}^{\mu}G_{\mu\nu}=0$ identically, so the field equations can only be consistent if the right hand side is also divergence free. Let us compute that divergence honestly and see what the theory demands.
+
+        Taking the divergence of \ref{eq:TemAgain} and applying the Leibniz rule to each of the two terms,
+
+        \begin{align*}
+            4\pi\,\Vec{\nabla}_{\mu}T^{\mu\nu} = \underbrace{\left(\Vec{\nabla}_{\mu}F^{\mu\alpha}\right)F^{\nu}_{\;\;\alpha}}_{\text{(I)}} + \underbrace{F^{\mu\alpha}\Vec{\nabla}_{\mu}F^{\nu}_{\;\;\alpha}}_{\text{(II)}} - \underbrace{\frac{1}{2}F^{\alpha\beta}\Vec{\nabla}^{\nu}F_{\alpha\beta}}_{\text{(III)}},
+        \end{align*}
+
+        where the factor of one half in the third term appeared because the two factors of $F$ in the trace part contribute equally. The first term is the only one that knows about the sources, and by \ref{eq:MaxwellInhomog} written with the divergence on the first index it is
+
+        \begin{align*}
+            \text{(I)} = -4\pi J^{\alpha}F^{\nu}_{\;\;\alpha}.
+        \end{align*}
+
+        The remaining two terms contain no sources and we now show that they cancel each other identically, which is where the homogeneous Maxwell equations earn their keep. Since $F^{\mu\alpha}$ is antisymmetric in $\mu$ and $\alpha$, only the antisymmetric part of what it multiplies survives the contraction, so we may write the second term as
+
+        \begin{align*}
+            \text{(II)} = \frac{1}{2}F^{\mu\alpha}\left(\Vec{\nabla}_{\mu}F^{\nu}_{\;\;\alpha} - \Vec{\nabla}_{\alpha}F^{\nu}_{\;\;\mu}\right),
+        \end{align*}
+
+        and now the homogeneous equation \ref{eq:MaxwellHomog}, written out as the cyclic identity $\Vec{\nabla}_{\mu}F_{\rho\alpha} + \Vec{\nabla}_{\rho}F_{\alpha\mu} + \Vec{\nabla}_{\alpha}F_{\mu\rho} = 0$, lets us rewrite the bracket. Lowering the free index for a moment and using the antisymmetry of $F$ in the middle term of the cycle,
+
+        \begin{align*}
+            \Vec{\nabla}_{\mu}F_{\rho\alpha} - \Vec{\nabla}_{\alpha}F_{\rho\mu} = \Vec{\nabla}_{\mu}F_{\rho\alpha} + \Vec{\nabla}_{\alpha}F_{\mu\rho} = -\Vec{\nabla}_{\rho}F_{\alpha\mu} = \Vec{\nabla}_{\rho}F_{\mu\alpha},
+        \end{align*}
+
+        so that raising the index $\rho$ back up
+
+        \begin{align*}
+            \text{(II)} = \frac{1}{2}F^{\mu\alpha}\Vec{\nabla}^{\nu}F_{\mu\alpha} = \text{(III)},
+        \end{align*}
+
+        and the two cancel exactly. What survives is
+
+        \begin{equation}\label{eq:TemDivergence}
+            \Vec{\nabla}_{\mu}T^{\mu\nu} = -F^{\nu\alpha}J_{\alpha},
+        \end{equation}
+
+        and equation \ref{eq:TemDivergence} deserves to be read carefully, because it is one of the most eloquent results in the whole theory. In a genuine vacuum, with $J^{\mu}=0$, the right hand side vanishes and the system is consistent, which is what we set out to verify. But when charges are present the electromagnetic energy momentum tensor is \textit{not} conserved on its own, and the rate at which it fails to be conserved is exactly the four force per unit volume that the field exerts on the charges. The total energy momentum of field plus matter is conserved, and what \ref{eq:TemDivergence} describes is the transfer between the two.
+
+        The consequence is remarkable. The Lorentz force law, which in flat space-time is an independent postulate that has to be supplied by hand alongside Maxwell's equations, is here a theorem. If the charges are carried by a dust of charge density $\varrho$ and four velocity $u^{\mu}$, so that $J^{\mu}=\varrho u^{\mu}$, then demanding the conservation of the total energy momentum tensor and using \ref{eq:TemDivergence} gives for the matter part
+
+        \begin{equation}\label{eq:LorentzForceDerived}
+            \rho\,u^{\mu}\Vec{\nabla}_{\mu}u^{\nu} = \varrho\,F^{\nu}_{\;\;\mu}u^{\mu},
+        \end{equation}
+
+        which is precisely the equation of motion of a charged particle, mass times four acceleration equal to charge times the Faraday tensor contracted with the four velocity. General relativity therefore does to electromagnetism what it did to gravity itself: it demotes a force law to a consequence of a conservation law, exactly as the geodesic equation for neutral dust fell out of $\Vec{\nabla}_{\mu}T^{\mu\nu}=0$ earlier in this chapter. A charged particle in a curved space-time does not follow a geodesic, and \ref{eq:LorentzForceDerived} says by exactly how much it deviates.
+
+    \subsection{The Reissner-Nordström solution}
+
+        The obvious thing to do with a new system of equations is to solve it in the simplest case, and the simplest case is the charged analogue of Schwarzschild: the geometry outside a static, spherically symmetric body carrying a total charge $q$. Reissner found it in 1916 and Nordström independently in 1918, within months of Schwarzschild's own solution and while the theory was barely a year old \citep{reissner1916,nordstrom1918}.
+
+        Since the symmetries we impose are exactly those of the Schwarzschild problem, we may reuse the ansatz \ref{eq:SchwAnsatz} without any modification, along with every Christoffel symbol and every component of the Ricci tensor we computed there. The only new ingredient is the electromagnetic field, and symmetry pins it down almost completely. A static configuration forbids any magnetic field, since a magnetic field would single out a direction and break spherical symmetry unless it were radial, and a radial magnetic field would require a monopole, which \ref{eq:MaxwellHomog} forbids. The electric field must be radial for the same reason and can depend on $r$ alone. The only surviving components of the Faraday tensor are therefore
+
+        \begin{equation}\label{eq:RNFieldAnsatz}
+            F_{tr} = -F_{rt} = \mathcal{E}(r),
+        \end{equation}
+
+        with everything else zero, and one unknown function $\mathcal{E}$ to determine alongside $\alpha$ and $\beta$.
+
+        We solve Maxwell first, because it decouples. Outside the body there are no charges, so $J^{\mu}=0$, and the only non trivial component of \ref{eq:MaxwellInhomog} is the temporal one. Raising both indices with the diagonal metric,
+
+        \begin{align*}
+            F^{tr} = g^{tt}g^{rr}F_{tr} = \left(-e^{-2\alpha}\right)\left(e^{-2\beta}\right)\mathcal{E} = -e^{-2(\alpha+\beta)}\mathcal{E},
+        \end{align*}
+
+        and with the determinant of the ansatz being $\sqrt{-g} = e^{\alpha+\beta}r^2\sin\vartheta$, formula \ref{eq:DivAntisym} gives for $\mu=t$ a single surviving derivative,
+
+        \begin{align*}
+            \Vec{\nabla}_{\nu}F^{t\nu} = \frac{1}{e^{\alpha+\beta}r^2{\color{red}\sin\vartheta}}\,\partial_r\left(e^{\alpha+\beta}r^2{\color{red}\sin\vartheta}\cdot\left(-e^{-2(\alpha+\beta)}\mathcal{E}\right)\right) = 0,
+        \end{align*}
+
+        where the factors in red cancel because nothing depends on $\vartheta$. The equation therefore states that the quantity inside the derivative is a constant, which we may name at our convenience,
+
+        \begin{align*}
+            r^2e^{-(\alpha+\beta)}\mathcal{E} = -q,
+        \end{align*}
+
+        and the choice of sign is made so that the potential comes out in the familiar Coulomb form, as we verify in a moment. Solving for the field,
+
+        \begin{equation}\label{eq:RNField}
+            \mathcal{E}(r) = -\frac{q}{r^2}\,e^{\alpha+\beta}.
+        \end{equation}
+
+        We shall find shortly that $\alpha+\beta=0$ for this solution exactly as it did for Schwarzschild, in which case $F_{tr}=-q/r^2$ and the potential $A_{t}=-q/r$ reproduces the Coulomb field of a point charge $q$, which identifies the integration constant physically and justifies the name we gave it.
+
+        Now for the geometry. Since the source is traceless we may use the reduced form \ref{eq:EMRicci} and never compute a Ricci scalar. Substituting \ref{eq:RNField} into \ref{eq:TemAgain}, the invariant is
+
+        \begin{align*}
+            F_{\alpha\beta}F^{\alpha\beta} = {\color{blue}2}\,F_{tr}F^{tr} = 2\mathcal{E}\left(-e^{-2(\alpha+\beta)}\mathcal{E}\right) = -2e^{-2(\alpha+\beta)}\mathcal{E}^2 = -\frac{2q^2}{r^4},
+        \end{align*}
+
+        the factor in blue counting the two orderings $tr$ and $rt$, which contribute equally because both $F$ factors change sign. For the temporal component of the source we need $F_{t\alpha}F_{t}^{\;\;\alpha} = F_{tr}g^{rr}F_{tr} = e^{-2\beta}\mathcal{E}^2 = q^2e^{2\alpha}/r^4$, so that
+
+        \begin{align*}
+            T_{tt} = \frac{1}{4\pi}\left(\frac{q^2e^{2\alpha}}{r^4} - \frac{1}{4}\left(-e^{2\alpha}\right)\left(-\frac{2q^2}{r^4}\right)\right) = \frac{1}{4\pi}\left(\frac{q^2e^{2\alpha}}{r^4} - \frac{q^2e^{2\alpha}}{2r^4}\right) = \frac{q^2e^{2\alpha}}{8\pi r^4},
+        \end{align*}
+
+        and repeating the same two steps for the radial and polar directions, where $F_{r\alpha}F_{r}^{\;\;\alpha} = F_{rt}g^{tt}F_{rt} = -q^2e^{2\beta}/r^4$ and where the angular directions receive no contribution from the first term at all,
+
+        \begin{align*}
+            T_{rr} = -\frac{q^2e^{2\beta}}{8\pi r^4}, \qquad T_{\vartheta\vartheta} = \frac{q^2}{8\pi r^2}.
+        \end{align*}
+
+        The sign pattern is the familiar one of a radial electric field, positive energy density, negative radial pressure, positive tangential pressure, and the reader may check that the trace does vanish as promised.
+
+        The field equations \ref{eq:EMRicci} now read, using the Ricci components computed for the Schwarzschild ansatz,
+
+        \begin{align}\label{eq:RNFieldEqs}
+            R_{tt} &= e^{2(\alpha-\beta)}\left[\alpha'' + (\alpha')^2 - \alpha'\beta' + \frac{2\alpha'}{r}\right] = \frac{q^2e^{2\alpha}}{r^4},\\
+            R_{rr} &= -\alpha'' - (\alpha')^2 + \alpha'\beta' + \frac{2\beta'}{r} = -\frac{q^2e^{2\beta}}{r^4},\nonumber\\
+            R_{\vartheta\vartheta} &= e^{-2\beta}\left[r\left(\beta'-\alpha'\right)-1\right] + 1 = \frac{q^2}{r^2}.\nonumber
+        \end{align}
+
+        The first move is the one that worked before. Multiplying the first equation by $e^{-2(\alpha-\beta)}$ and adding it to the second, the entire left hand side collapses exactly as it did in the vacuum case, and the right hand sides collapse too,
+
+        \begin{align*}
+            \underbrace{\frac{2}{r}\left(\alpha'+\beta'\right)}_{\text{left hand sides}} = \underbrace{e^{-2(\alpha-\beta)}\frac{q^2e^{2\alpha}}{r^4} - \frac{q^2e^{2\beta}}{r^4}}_{\text{right hand sides}} = {\color{red}\frac{q^2e^{2\beta}}{r^4}} - {\color{red}\frac{q^2e^{2\beta}}{r^4}} = 0,
+        \end{align*}
+
+        the two terms in red being identical and cancelling. This is a small miracle and it is worth pausing on: the charge has disappeared from this particular combination, so we recover the same conclusion as in vacuum,
+
+        \begin{equation}\label{eq:RNAlphaBeta}
+            \alpha' + \beta' = 0 \quad\Longrightarrow\quad \beta = -\alpha,
+        \end{equation}
+
+        where the constant of integration has been absorbed into a rescaling of $t$, chosen so that the metric approaches $\eta_{\mu\nu}$ at infinity. The reason this happens is not a coincidence of algebra: the combination that vanishes is $T_{tt}e^{-2\alpha} + T_{rr}e^{-2\beta}$, which is zero precisely because a radial electric field has energy density equal and opposite to its radial pressure, and that in turn is a consequence of the tracelessness of the Maxwell tensor. With \ref{eq:RNAlphaBeta} in hand the relation $F_{tr}=-q/r^2$ promised above follows at once from \ref{eq:RNField}.
+
+        Only the angular equation is left, and with $\beta=-\alpha$ it becomes an ordinary differential equation in one unknown. Substituting $e^{-2\beta}=e^{2\alpha}$ and $\beta'=-\alpha'$,
+
+        \begin{align*}
+            e^{2\alpha}\left(-2r\alpha' - 1\right) + 1 = \frac{q^2}{r^2},
+        \end{align*}
+
+        and the equation becomes transparent under the substitution $\mathcal{F}(r) \equiv e^{2\alpha(r)}$, whose derivative is $\mathcal{F}' = 2\alpha'e^{2\alpha}$, so that the first term is simply $-r\mathcal{F}'$,
+
+        \begin{align*}
+            -r\mathcal{F}' - \mathcal{F} + 1 = \frac{q^2}{r^2} \quad\Longrightarrow\quad r\mathcal{F}' + \mathcal{F} = 1 - \frac{q^2}{r^2}.
+        \end{align*}
+
+        The left hand side is an exact derivative, since $\left(r\mathcal{F}\right)' = r\mathcal{F}' + \mathcal{F}$, so the equation integrates in one step,
+
+        \begin{align*}
+            \left(r\mathcal{F}\right)' = 1 - \frac{q^2}{r^2} \quad\Longrightarrow\quad r\mathcal{F} = r + \frac{q^2}{r} + K \quad\Longrightarrow\quad \mathcal{F} = 1 + \frac{q^2}{r^2} + \frac{K}{r},
+        \end{align*}
+
+        with $K$ an integration constant which the field equations cannot determine, exactly as in the Schwarzschild case, and which we fix by the same argument: far from the body the charge term dies faster than the mass term, the field is weak, and the Newtonian limit demands $g_{tt}\rightarrow -(1-2Gm/C^2r)$, so that $K=-2m$ in geometrised units. Collecting everything,
+
+        \begin{equation}\label{eq:ReissnerNordstrom}
+            ds^2 = -\left(1 - \frac{2m}{r} + \frac{q^2}{r^2}\right)dt^2 + \frac{dr^2}{1 - \frac{2m}{r} + \frac{q^2}{r^2}} + r^2d\Omega^2,
+        \end{equation}
+
+        which is the Reissner-Nordström metric, accompanied by the electromagnetic field $F_{tr}=-q/r^2$. Setting $q=0$ returns Schwarzschild, as it must.
+
+        The charge term enters with the opposite sign to the mass term, and that single observation contains most of the physics of \ref{eq:ReissnerNordstrom}. Gravitationally, charge is repulsive. The reason is not that like charges repel, since the metric depends on $q^2$ and is blind to the sign of the charge, but rather that the electric field surrounding the body carries positive energy which is spread throughout the exterior region, so that the effective mass contained within a radius $r$ decreases as we descend, and less of it remains to pull.
+
+        The consequences for the causal structure are dramatic. The metric function vanishes where $r^2-2mr+q^2=0$, that is at
+
+        \begin{equation}\label{eq:RNHorizons}
+            r_{\pm} = m \pm \sqrt{m^2-q^2},
+        \end{equation}
+
+        so that instead of the single horizon of Schwarzschild there are now two, an outer event horizon at $r_+$ and an inner Cauchy horizon at $r_-$, provided $m>|q|$. As the charge grows the two approach each other, and at $|q|=m$, the \textit{extremal} case, they merge into a single degenerate horizon at $r=m$. Beyond that, for $|q|>m$, equation \ref{eq:RNHorizons} has no real solutions, the metric function never vanishes, and the singularity at $r=0$ stands exposed to the outside universe with no horizon to hide it. Such a \textit{naked singularity} would allow the breakdown of predictability to propagate into the region where we live, and the conjecture that nature refuses to produce one is Penrose's cosmic censorship hypothesis \citep{penrose1969}, still unproved and one of the central open problems of the subject.
+
+        That $r=0$ is a genuine singularity and that both horizons are not is settled as before by a curvature scalar, and computing the Kretschmann invariant for \ref{eq:ReissnerNordstrom} gives
+
+        \begin{equation}\label{eq:RNKretschmann}
+            R_{abcd}R^{abcd} = \frac{48m^2}{r^6} - \frac{96mq^2}{r^7} + \frac{56q^4}{r^8},
+        \end{equation}
+
+        which reduces to the Schwarzschild value when $q=0$, is perfectly finite at $r_{\pm}$, and diverges at the origin. There is one further difference from the uncharged case which is worth knowing: the singularity of \ref{eq:ReissnerNordstrom} is timelike rather than spacelike, so that unlike in Schwarzschild an infalling observer is not obliged to hit it, and can in principle avoid it and pass through the inner horizon. What lies beyond is a different story, because the inner horizon turns out to be violently unstable to any infalling radiation, and the smooth continuation predicted by the exact solution is almost certainly destroyed in any realistic collapse.
+
+        A last word on whether any of this describes a real object. Astrophysical black holes are expected to carry essentially no charge, and the reason is the overwhelming strength of electromagnetism relative to gravity: the ratio of the electrostatic to the gravitational force between two protons is of order $10^{36}$, so a body that acquired any appreciable charge would attract opposite charges from the surrounding plasma and neutralise itself almost instantly. The Reissner-Nordström solution is therefore not a model of anything we expect to observe, and its importance is entirely theoretical, as the simplest laboratory in which to study horizons, extremality and the structure of the field equations when a second field is present.
+
+    \subsection{The importance and reach of the Einstein-Maxwell equations}
+
+        It is worth closing this chapter by saying plainly why a system that describes no astrophysical object we can point to should occupy so central a place in relativity, because the reasons are several and they are not the ones a first reading might suggest.
+
+        The first is conceptual, and we have already met it. The Einstein-Maxwell system is the simplest case in which gravity is coupled to something that is not a phenomenological fluid but a field with equations of its own, and it is therefore the place where one learns what coupling actually means. Everything that is difficult about general relativity as a physical theory, the fact that the source depends on the metric, that the metric depends on the source, and that the two must be solved together, appears here in its mildest possible form, and every lesson learnt in this setting carries over unchanged to the Einstein-Yang-Mills and Einstein-Dirac systems and to the coupling of gravity to the whole Standard Model.
+
+        The second is mathematical. The Einstein-Maxwell equations were the first setting in which the initial value problem of general relativity was brought under control, and the existence and uniqueness theorems that Choquet-Bruhat proved for them in the nineteen fifties are what made it legitimate to speak of general relativity as a predictive theory at all \citep{fouresbruhat1952}. Every numerical simulation of a black hole merger performed today rests on the well posedness that was first established in this context. There is also a striking structural result due to Rainich, who showed as early as 1925 that a source free electromagnetic field leaves such a distinctive fingerprint on the curvature that one can recognise an electrovacuum space-time from the metric alone and reconstruct the field from it, so that in this case electromagnetism is not something added to geometry but something already encoded in it \citep{rainich1925}.
+
+        The third is that the system is the natural home of the black hole uniqueness theorems. Israel proved in 1968 that the only static, asymptotically flat electrovacuum black hole is Reissner-Nordström \citep{israel1968}, and when rotation is allowed the unique stationary solution is the Kerr-Newman metric found in 1965 \citep{newman1965}, which depends on exactly three numbers, the mass, the angular momentum and the charge. This is the precise content of the statement that black holes have no hair, and it is a genuinely astonishing result: an object formed from the collapse of a star with all its chemistry, its magnetic fields and its history retains, once it settles down, exactly three of them. The extremal limit $|q|=m$ that appeared in our solution is the boundary of the allowed region of that three parameter family, and it plays a distinguished role in the laws of black hole mechanics, where it corresponds to zero temperature and is the subject of the third law \citep{bardeen1973}. Extremal and near extremal charged black holes are also the cases in which string theory has succeeded in counting the microscopic states responsible for the entropy, which is why a solution describing nothing in the sky remains a central object of study in quantum gravity.
+
+        The fourth reason is that the Einstein-Maxwell equations were the first serious attempt at unification, and it failed in an instructive way. Weyl tried in 1918 to obtain electromagnetism by enlarging the geometry with a scale connection, and although the theory was wrong the word he coined for the idea, \textit{gauge}, survived and now organises all of fundamental physics \citep{weyl1918}. Kaluza in 1921 and Klein in 1926 showed that general relativity written in five dimensions, with the fifth curled into a small circle, produces exactly the four dimensional Einstein-Maxwell system plus a scalar field \citep{kaluza1921,klein1926}, which is as close to a geometrical unification of gravity and electromagnetism as anyone has come, and which is the direct ancestor of every extra dimensional theory since.
+
+        The last reason is the most practical, and it is the one that has come to dominate. Although charge is negligible in astrophysics, magnetic fields are not, and the equations governing a magnetised plasma in a strong gravitational field are the Einstein-Maxwell equations with the source supplied by the plasma rather than left in vacuum. That system, general relativistic magnetohydrodynamics, is what is actually solved on supercomputers to model accretion discs, relativistic jets and neutron star mergers. The mechanism by which a rotating black hole can extract its own rotational energy through the magnetic field threading its horizon was identified by Blandford and Znajek in 1977 and is the leading explanation for the jets emitted by active galactic nuclei \citep{blandford1977}. Magnetars, neutron stars whose magnetic fields reach $10^{15}$ gauss and are strong enough for the magnetic energy density to distort the star's own geometry, are another regime in which the two theories must be solved together \citep{duncan1992}. And the images of the shadows of black holes produced in recent years are compared against simulations in which nothing but Einstein's equations, Maxwell's equations and the coupling we have derived in this section are integrated forward in time.
+
+        So the equations we have written down, which describe no real charged black hole, nevertheless underlie the initial value formulation of the theory, the classification of its black holes, the first attempts at unification, and most of what is currently computed in relativistic astrophysics. That is a considerable return on a Lagrangian with two terms in it.
+
+    We now return to the weak field programme we interrupted, because the linearised equations we derived before this detour are about to give us something that neither Schwarzschild's static solution nor the charged one we have just built can provide, namely radiation.

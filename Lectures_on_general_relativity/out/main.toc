@@ -32,57 +32,70 @@
 \contentsline {subsection}{\numberline {2.2.4}Curves and vectors}{27}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Covectors and one-forms}{33}{subsection.2.2.5}%
 \contentsline {subsection}{\numberline {2.2.6}Tensors}{35}{subsection.2.2.6}%
-\contentsline {subsection}{\numberline {2.2.7}Tensor fields}{38}{subsection.2.2.7}%
-\contentsline {subsection}{\numberline {2.2.8}Commutator}{39}{subsection.2.2.8}%
-\contentsline {subsection}{\numberline {2.2.9}Integral curves}{43}{subsection.2.2.9}%
-\contentsline {subsection}{\numberline {2.2.10}A worked example: the two sphere}{44}{subsection.2.2.10}%
-\contentsline {subsection}{\numberline {2.2.11}Why the partial derivative is not enough}{47}{subsection.2.2.11}%
-\contentsline {section}{\numberline {2.3}The Lie derivative}{48}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Pull back and push forward}{49}{subsection.2.3.1}%
-\contentsline {chapter}{\numberline {3}The Theory of General Relativity}{51}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Conventions and notation}{52}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Introduction to general relativity}{53}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}The incompatibility between the Newtonian gravity with the special relativity}{54}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Weak equivalence principle}{56}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Experimental evidence for a general relativity theory}{58}{subsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.3.1}Eötvös experiment}{58}{subsubsection.3.2.3.1}%
-\contentsline {subsubsection}{\numberline {3.2.3.2}Tidal forces}{61}{subsubsection.3.2.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.3.3}Light deflection and gravitational red shift}{62}{subsubsection.3.2.3.3}%
-\contentsline {subsection}{\numberline {3.2.4}Einstein's equivalence principle and the space-time}{64}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}First steps on general relativity}{66}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Metric tensor}{66}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Proper time and an introduction to paths}{68}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Covariant derivative}{74}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Levi-Civita connection}{78}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Geodesics}{79}{subsection.3.3.5}%
-\contentsline {subsubsection}{\numberline {3.3.5.1}Affine transformations in Galilean relativity}{81}{subsubsection.3.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.3.5.2}Affine transformations in special relativity}{82}{subsubsection.3.3.5.2}%
-\contentsline {section}{\numberline {3.4}Riemann's tensor}{86}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Curvature of the Levi-Civita connection}{87}{subsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.1.1}Einstein's equations}{94}{subsubsection.3.4.1.1}%
-\contentsline {subsection}{\numberline {3.4.2}Properties related to the Riemann's tensor}{95}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Geodesic deviation}{98}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Gravitation and the Einstein's field equation}{100}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Newtonian limit}{100}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Einstein's field equations}{102}{subsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.2.1}Einstein-Hilbert action}{105}{subsubsection.3.5.2.1}%
-\contentsline {subsubsection}{\numberline {3.5.2.2}Energy-momentum tensor}{109}{subsubsection.3.5.2.2}%
-\contentsline {section}{\numberline {3.6}The Schwarzschild solution}{116}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}The ansatz}{117}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}The Christoffel symbols}{117}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}The Ricci tensor}{120}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}Solving the vacuum equations}{123}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3.6.5}Identifying the constant and reading the solution}{125}{subsection.3.6.5}%
-\contentsline {chapter}{\numberline {4}Gravitational Waves}{127}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Lorenz Gauge and gravitational waves}{128}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Gravitational waves}{131}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Traceless transverse gauge}{132}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}Polarisation and Stokes parameters for gravitational waves}{134}{subsubsection.4.2.1.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.2}Helicity, and why gravitational polarisation is not optical polarisation}{137}{subsubsection.4.2.1.2}%
-\contentsline {subsection}{\numberline {4.2.2}Effects of the gravitational radiation on the matter}{139}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}The generation of gravitational waves}{140}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}The retarded solution of the wave equation}{140}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Why there is no monopole and no dipole radiation}{141}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}The quadrupole formula}{143}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}The energy carried away by the waves}{145}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {2.2.7}Tensor fields}{40}{subsection.2.2.7}%
+\contentsline {subsection}{\numberline {2.2.8}Commutator}{41}{subsection.2.2.8}%
+\contentsline {subsection}{\numberline {2.2.9}Non-coordinate bases}{44}{subsection.2.2.9}%
+\contentsline {subsection}{\numberline {2.2.10}Integral curves}{46}{subsection.2.2.10}%
+\contentsline {subsection}{\numberline {2.2.11}A worked example: the two sphere}{47}{subsection.2.2.11}%
+\contentsline {subsection}{\numberline {2.2.12}Why the partial derivative is not enough}{50}{subsection.2.2.12}%
+\contentsline {section}{\numberline {2.3}The Lie derivative}{51}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Pull back and push forward}{52}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}The flow of a vector field}{55}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}The Lie derivative}{56}{subsection.2.3.3}%
+\contentsline {chapter}{\numberline {3}The Theory of General Relativity}{61}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Conventions and notation}{62}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Introduction to general relativity}{63}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}The incompatibility between the Newtonian gravity with the special relativity}{64}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Weak equivalence principle}{66}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Experimental evidence for a general relativity theory}{68}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}Eötvös experiment}{68}{subsubsection.3.2.3.1}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}Tidal forces}{71}{subsubsection.3.2.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.3.3}Light deflection and gravitational red shift}{72}{subsubsection.3.2.3.3}%
+\contentsline {subsection}{\numberline {3.2.4}Einstein's equivalence principle and the space-time}{74}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}First steps on general relativity}{76}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Metric tensor}{76}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Proper time and an introduction to paths}{78}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Covariant derivative}{84}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}The Lie derivative and the covariant derivative}{88}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Levi-Civita connection}{90}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Geodesics}{92}{subsection.3.3.6}%
+\contentsline {subsubsection}{\numberline {3.3.6.1}Affine transformations in Galilean relativity}{94}{subsubsection.3.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.3.6.2}Affine transformations in special relativity}{95}{subsubsection.3.3.6.2}%
+\contentsline {section}{\numberline {3.4}Riemann's tensor}{99}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Curvature of the Levi-Civita connection}{100}{subsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.1}Einstein's equations}{107}{subsubsection.3.4.1.1}%
+\contentsline {subsection}{\numberline {3.4.2}Properties related to the Riemann's tensor}{108}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Geodesic deviation}{111}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Gravitation and the Einstein's field equation}{113}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Newtonian limit}{113}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Einstein's field equations}{115}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}Einstein-Hilbert action}{118}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}Energy-momentum tensor}{122}{subsubsection.3.5.2.2}%
+\contentsline {section}{\numberline {3.6}The Schwarzschild solution}{129}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}The ansatz}{130}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}The Christoffel symbols}{130}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}The Ricci tensor}{133}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Solving the vacuum equations}{136}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Identifying the constant and reading the solution}{138}{subsection.3.6.5}%
+\contentsline {section}{\numberline {3.7}Observers and symmetries}{139}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Tetrads and what an observer measures}{139}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Killing vectors and conserved quantities}{143}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3.8}The Einstein-Maxwell equations}{146}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Maxwell's theory on a curved background}{147}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}The coupled system from a single action}{148}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}Why the system is consistent, and where the Lorentz force comes from}{150}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.4}The Reissner-Nordström solution}{152}{subsection.3.8.4}%
+\contentsline {subsection}{\numberline {3.8.5}The importance and reach of the Einstein-Maxwell equations}{156}{subsection.3.8.5}%
+\contentsline {chapter}{\numberline {4}Gravitational Waves}{159}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Lorenz Gauge and gravitational waves}{160}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Gravitational waves}{163}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Traceless transverse gauge}{164}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Polarisation and Stokes parameters for gravitational waves}{166}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Helicity, and why gravitational polarisation is not optical polarisation}{169}{subsubsection.4.2.1.2}%
+\contentsline {subsection}{\numberline {4.2.2}Effects of the gravitational radiation on the matter}{171}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}The generation of gravitational waves}{172}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}The retarded solution of the wave equation}{172}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Why there is no monopole and no dipole radiation}{173}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}The quadrupole formula}{175}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}The energy carried away by the waves}{177}{subsection.4.3.4}%
 \contentsfinish 

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="350" viewBox="0 0 820 350">
+  <defs>
+    <marker id="lGrey" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#9aa0b8"/>
+    </marker>
+    <marker id="lGreen" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#1a7f37"/>
+    </marker>
+    <marker id="lRed" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#b03030"/>
+    </marker>
+    <marker id="lNavy" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#14235c"/>
+    </marker>
+  </defs>
+  <style>
+    .flow{fill:none;stroke:#9aa0b8;stroke-width:1.8}
+    .main{fill:none;stroke:#14235c;stroke-width:3}
+    .vec{stroke:#1a7f37;stroke-width:2.8;fill:none}
+    .drag{stroke:#b03030;stroke-width:2.8;fill:none}
+    .pull{stroke:#b03030;stroke-width:1.8;fill:none;stroke-dasharray:7 5}
+    .lbl{font-family:Georgia,'Times New Roman',serif;font-size:19px;fill:#14235c}
+    .lg{font-family:Georgia,'Times New Roman',serif;font-size:18px;fill:#1a7f37}
+    .lr{font-family:Georgia,'Times New Roman',serif;font-size:18px;fill:#b03030}
+    .sub{font-size:13px}
+  </style>
+
+  <path class="flow" d="M 60,74  C 240,40 480,96 760,52"  marker-end="url(#lGrey)"/>
+  <path class="flow" d="M 60,286 C 240,252 480,308 760,264" marker-end="url(#lGrey)"/>
+  <path class="flow" d="M 60,332 C 240,300 480,354 760,310" marker-end="url(#lGrey)"/>
+  <path class="main" d="M 60,206 C 240,170 480,226 760,182" marker-end="url(#lNavy)"/>
+  <text class="lbl" x="700" y="214">X</text>
+
+  <circle cx="200" cy="180" r="5.5" fill="#14235c"/>
+  <text class="lbl" x="178" y="226">p</text>
+  <line class="vec" x1="200" y1="180" x2="238" y2="98" marker-end="url(#lGreen)"/>
+  <text class="lg" x="212" y="88">Y|<tspan class="sub" dy="5">p</tspan></text>
+
+  <circle cx="520" cy="204" r="5.5" fill="#14235c"/>
+  <text class="lbl" x="486" y="250">&#963;<tspan class="sub" dy="5">t</tspan><tspan dy="-5">(p)</tspan></text>
+  <line class="vec" x1="520" y1="204" x2="606" y2="164" marker-end="url(#lGreen)"/>
+  <text class="lg" x="610" y="160">Y|<tspan class="sub" dy="5">&#963;t(p)</tspan></text>
+
+  <path class="pull" d="M 566,178 C 480,108 360,84 300,96" marker-end="url(#lRed)"/>
+  <text class="lr" x="372" y="70">drag back along the flow</text>
+
+  <line class="drag" x1="200" y1="180" x2="300" y2="134" marker-end="url(#lRed)"/>
+  <text class="lr" x="306" y="132">(&#963;<tspan class="sub" dy="5">&#8722;t</tspan><tspan dy="-5">)</tspan><tspan class="sub" dy="5">*</tspan><tspan dy="-5">Y</tspan></text>
+</svg>

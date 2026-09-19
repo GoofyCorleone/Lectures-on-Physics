@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="400" viewBox="0 0 820 400">
+  <defs>
+    <marker id="aNavy" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto">
+      <path d="M0,0 L11,4.5 L0,9 z" fill="#14235c"/>
+    </marker>
+    <marker id="aGreen" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto">
+      <path d="M0,0 L11,4.5 L0,9 z" fill="#1a7f37"/>
+    </marker>
+    <marker id="aGrey" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#8a8a8a"/>
+    </marker>
+  </defs>
+  <style>
+    .lbl{font-family:Georgia,'Times New Roman',serif;font-size:19px;fill:#14235c}
+    .lblg{font-family:Georgia,'Times New Roman',serif;font-size:19px;fill:#1a7f37}
+    .ttl{font-family:Georgia,'Times New Roman',serif;font-size:20px;fill:#000;font-style:italic}
+    .sm{font-family:Georgia,'Times New Roman',serif;font-size:15px;fill:#555}
+    .curve{fill:none;stroke:#14235c;stroke-width:2.6}
+    .flow{fill:none;stroke:#8a8a8a;stroke-width:1.7}
+    .vec{stroke:#1a7f37;stroke-width:2.6;fill:none}
+  </style>
+
+  <text class="ttl" x="115" y="34">parallel transport</text>
+  <path class="curve" d="M 70,320 C 150,312 250,250 340,150"/>
+  <circle cx="70" cy="320" r="4" fill="#14235c"/>
+  <circle cx="205" cy="258" r="4" fill="#14235c"/>
+  <circle cx="340" cy="150" r="4" fill="#14235c"/>
+  <line class="vec" x1="70" y1="320" x2="48" y2="262" marker-end="url(#aGreen)"/>
+  <line class="vec" x1="205" y1="258" x2="192" y2="198" marker-end="url(#aGreen)"/>
+  <line class="vec" x1="340" y1="150" x2="336" y2="88" marker-end="url(#aGreen)"/>
+  <line class="curve" x1="70" y1="320" x2="142" y2="313" marker-end="url(#aNavy)"/>
+  <text class="lbl" x="118" y="342">X</text>
+  <text class="lbl" x="352" y="176">&#955;</text>
+  <text class="lblg" x="20" y="252">Y</text>
+  <text class="sm" x="60" y="372">one curve and a connection are enough:</text>
+  <text class="sm" x="60" y="392">the answer depends on X only at the point</text>
+
+  <line x1="410" y1="20" x2="410" y2="400" stroke="#cccccc" stroke-width="1.4"/>
+
+  <text class="ttl" x="548" y="34">Lie dragging</text>
+  <path class="flow" d="M 455,336 C 545,330 640,318 785,312" marker-end="url(#aGrey)"/>
+  <path class="flow" d="M 455,286 C 545,272 640,250 785,232" marker-end="url(#aGrey)"/>
+  <path class="flow" d="M 455,236 C 545,214 640,180 785,146" marker-end="url(#aGrey)"/>
+  <path class="flow" d="M 455,186 C 545,156 640,110 785,64"  marker-end="url(#aGrey)"/>
+  <circle cx="500" cy="281" r="4" fill="#14235c"/>
+  <circle cx="500" cy="227" r="4" fill="#14235c"/>
+  <circle cx="720" cy="245" r="4" fill="#14235c"/>
+  <circle cx="720" cy="160" r="4" fill="#14235c"/>
+  <line class="vec" x1="500" y1="281" x2="500" y2="235" marker-end="url(#aGreen)"/>
+  <line class="vec" x1="720" y1="245" x2="720" y2="168" marker-end="url(#aGreen)"/>
+  <text class="lblg" x="474" y="258">Y</text>
+  <text class="lbl" x="484" y="304">p</text>
+  <text class="lblg" x="694" y="208">Y</text>
+  <text class="lbl" x="694" y="270">&#963;<tspan dy="5" font-size="13">t</tspan><tspan dy="-5">(p)</tspan></text>
+  <text class="lbl" x="793" y="300">X</text>
+  <text class="sm" x="452" y="372">the whole neighbouring flow is needed:</text>
+  <text class="sm" x="452" y="392">the answer depends on how X itself varies</text>
+</svg>

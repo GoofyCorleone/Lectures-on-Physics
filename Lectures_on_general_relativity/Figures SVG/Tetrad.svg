@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="430" viewBox="0 0 780 430">
+  <defs>
+    <marker id="tGreen" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#1a7f37"/>
+    </marker>
+    <marker id="tRed" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#b03030"/>
+    </marker>
+    <marker id="tGrey" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#7a7f96"/>
+    </marker>
+  </defs>
+  <style>
+    .grid{fill:none;stroke:#d5d5e2;stroke-width:1.2}
+    .wl{fill:none;stroke:#14235c;stroke-width:3}
+    .e0{stroke:#b03030;stroke-width:2.8;fill:none}
+    .ei{stroke:#1a7f37;stroke-width:2.6;fill:none}
+    .cb{stroke:#7a7f96;stroke-width:2.4;fill:none}
+    .lbl{font-family:Georgia,'Times New Roman',serif;font-size:18px;fill:#14235c}
+    .lr{font-family:Georgia,'Times New Roman',serif;font-size:18px;fill:#b03030}
+    .lg{font-family:Georgia,'Times New Roman',serif;font-size:18px;fill:#1a7f37}
+    .lc{font-family:Georgia,'Times New Roman',serif;font-size:18px;fill:#7a7f96}
+    .sm{font-family:Georgia,'Times New Roman',serif;font-size:15px;fill:#555}
+    .sb{font-size:13px}
+  </style>
+
+  <path class="grid" d="M 40,90  C 200,66 400,114 470,96"/>
+  <path class="grid" d="M 40,170 C 200,144 400,194 470,176"/>
+  <path class="grid" d="M 40,250 C 200,222 400,274 470,256"/>
+  <path class="grid" d="M 40,330 C 200,300 400,354 470,336"/>
+  <path class="grid" d="M 110,56 C 86,170 130,290 104,400"/>
+  <path class="grid" d="M 240,56 C 216,170 260,290 234,400"/>
+  <path class="grid" d="M 370,56 C 346,170 390,290 364,400"/>
+
+  <path class="wl" d="M 180,395 C 230,300 210,190 300,66"/>
+
+  <line class="cb" x1="223" y1="272" x2="186" y2="176" marker-end="url(#tGrey)"/>
+  <line class="cb" x1="223" y1="272" x2="342" y2="258" marker-end="url(#tGrey)"/>
+  <text class="lc" x="146" y="172">&#8706;<tspan class="sb" dy="5">0</tspan></text>
+  <text class="lc" x="348" y="254">&#8706;<tspan class="sb" dy="5">1</tspan></text>
+
+  <circle cx="223" cy="272" r="4.5" fill="#14235c"/>
+  <line class="e0" x1="223" y1="272" x2="234" y2="200" marker-end="url(#tRed)"/>
+  <line class="ei" x1="223" y1="272" x2="297" y2="263" marker-end="url(#tGreen)"/>
+  <line class="ei" x1="223" y1="272" x2="176" y2="322" marker-end="url(#tGreen)"/>
+  <text class="lr" x="246" y="222">e<tspan class="sb" dy="5">0</tspan></text>
+  <text class="lg" x="276" y="292">e<tspan class="sb" dy="5">1</tspan></text>
+  <text class="lg" x="146" y="340">e<tspan class="sb" dy="5">2</tspan></text>
+  <text class="lbl" x="188" y="290">p</text>
+
+  <circle cx="270" cy="128" r="4.5" fill="#14235c"/>
+  <line class="e0" x1="270" y1="128" x2="292" y2="60" marker-end="url(#tRed)"/>
+  <line class="ei" x1="270" y1="128" x2="338" y2="106" marker-end="url(#tGreen)"/>
+  <line class="ei" x1="270" y1="128" x2="218" y2="172" marker-end="url(#tGreen)"/>
+  <text class="lbl" x="248" y="118">q</text>
+
+  <text class="lbl" x="270" y="414">worldline of the observer</text>
+
+  <text class="sm" x="500" y="126">the grey vectors are the coordinate</text>
+  <text class="sm" x="500" y="148">basis &#8706;<tspan class="sb" dy="4">&#956;</tspan><tspan dy="-4">&#160;read off the chart: neither</tspan></text>
+  <text class="sm" x="500" y="170">unit nor orthogonal, and different</text>
+  <text class="sm" x="500" y="192">at every event</text>
+
+  <text class="sm" x="500" y="232">the coloured vectors are the tetrad:</text>
+  <text class="sm" x="500" y="254">e<tspan class="sb" dy="4">0</tspan><tspan dy="-4">&#160;is the four velocity of the</tspan></text>
+  <text class="sm" x="500" y="276">observer and the e<tspan class="sb" dy="4">i</tspan><tspan dy="-4">&#160;are the rods of</tspan></text>
+  <text class="sm" x="500" y="298">their laboratory, orthonormal at p,</text>
+  <text class="sm" x="500" y="320">at q and at every event</text>
+</svg>

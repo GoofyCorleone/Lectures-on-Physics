@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  19 SEP 2026 13:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  19 SEP 2026 16:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -622,30 +622,30 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 (out/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Info: Redefining \microtypecontext on input line 86.
-Package microtype Info: Applying patch `item' on input line 86.
-Package microtype Info: Applying patch `eqnum' on input line 86.
-Package microtype Info: Applying patch `footnote' on input line 86.
-Package microtype Info: Applying patch `verbatim' on input line 86.
-LaTeX Info: Redefining \microtypesetup on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Info: Redefining \microtypecontext on input line 88.
+Package microtype Info: Applying patch `item' on input line 88.
+Package microtype Info: Applying patch `eqnum' on input line 88.
+Package microtype Info: Applying patch `footnote' on input line 88.
+Package microtype Info: Applying patch `verbatim' on input line 88.
+LaTeX Info: Redefining \microtypesetup on input line 88.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -714,14 +714,14 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count375
-Package hyperref Info: Link coloring ON on input line 86.
+Package hyperref Info: Link coloring ON on input line 88.
  (out/main.out) (out/main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 89.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
-
+Package hyperref Info: Option `pageanchor' set `false' on input line 91.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 101
+.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -729,8 +729,8 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 101
+.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -738,8 +738,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 99
-.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
+1.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -751,30 +751,30 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 al/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2
 
 ]
-<Figures/LoGOTS.png, id=362, 668.4975pt x 376.40625pt>
+<Figures/LoGOTS.png, id=415, 668.4975pt x 376.40625pt>
 File: Figures/LoGOTS.png Graphic file (type png)
 <use Figures/LoGOTS.png>
-Package pdftex.def Info: Figures/LoGOTS.png  used on input line 109.
+Package pdftex.def Info: Figures/LoGOTS.png  used on input line 111.
 (pdftex.def)             Requested size: 187.89912pt x 105.80081pt.
-<Figures/logouis.png, id=364, 1196.47pt x 596.2275pt>
+<Figures/logouis.png, id=417, 1196.47pt x 596.2275pt>
 File: Figures/logouis.png Graphic file (type png)
 <use Figures/logouis.png>
-Package pdftex.def Info: Figures/logouis.png  used on input line 113.
+Package pdftex.def Info: Figures/logouis.png  used on input line 115.
 (pdftex.def)             Requested size: 187.89912pt x 93.63339pt.
  [1
 
  <./Figures/LoGOTS.png> <./Figures/logouis.png>]
-Package hyperref Info: Option `pageanchor' set `true' on input line 141.
+Package hyperref Info: Option `pageanchor' set `true' on input line 143.
  [2
 
-] (out/main.toc [3] [4])
+] (out/main.toc [3] [4] [5])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [5] [6
+ [6]
+(out/main.lof [7
 
-]
-(out/main.lof [7])
+])
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
@@ -800,7 +800,7 @@ Underfull \hbox (badness 1360) in paragraph at lines 64--65
  []
 
 [20] [21]
-<Chapter 2/Figures/TercerPostu.pdf, id=791, 463.89328pt x 557.87683pt>
+<Chapter 2/Figures/TercerPostu.pdf, id=887, 463.89328pt x 557.87683pt>
 File: Chapter 2/Figures/TercerPostu.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/TercerPostu.pdf>
 Package pdftex.def Info: Chapter 2/Figures/TercerPostu.pdf  used on input line 
@@ -808,14 +808,14 @@ Package pdftex.def Info: Chapter 2/Figures/TercerPostu.pdf  used on input line
 (pdftex.def)             Requested size: 234.87749pt x 282.4619pt.
  [22{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.e
 nc} <./Chapter 2/Figures/TercerPostu.pdf>]
-<Chapter 2/Figures/CartasS1.pdf, id=823, 519.80968pt x 235.90918pt>
+<Chapter 2/Figures/CartasS1.pdf, id=920, 519.80968pt x 235.90918pt>
 File: Chapter 2/Figures/CartasS1.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/CartasS1.pdf>
 Package pdftex.def Info: Chapter 2/Figures/CartasS1.pdf  used on input line 145
 .
 (pdftex.def)             Requested size: 422.77661pt x 191.8809pt.
  [23 <./Chapter 2/Figures/CartasS1.pdf>]
-<Chapter 2/Figures/S2toR2.pdf, id=847, 486.24911pt x 219.0317pt>
+<Chapter 2/Figures/S2toR2.pdf, id=944, 486.24911pt x 219.0317pt>
 File: Chapter 2/Figures/S2toR2.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/S2toR2.pdf>
 Package pdftex.def Info: Chapter 2/Figures/S2toR2.pdf  used on input line 192.
@@ -825,13 +825,13 @@ Package pdftex.def Info: Chapter 2/Figures/S2toR2.pdf  used on input line 192.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [24]
-<Chapter 2/Figures/SphereMap.pdf, id=858, 525.7695pt x 256.08446pt>
+<Chapter 2/Figures/SphereMap.pdf, id=955, 525.7695pt x 256.08446pt>
 File: Chapter 2/Figures/SphereMap.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/SphereMap.pdf>
 Package pdftex.def Info: Chapter 2/Figures/SphereMap.pdf  used on input line 20
 7.
 (pdftex.def)             Requested size: 375.80542pt x 183.0482pt.
-<Chapter 2/Figures/Estereo.pdf, id=859, 526.31415pt x 267.10257pt>
+<Chapter 2/Figures/Estereo.pdf, id=956, 526.31415pt x 267.10257pt>
 File: Chapter 2/Figures/Estereo.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Estereo.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Estereo.pdf  used on input line 220.
@@ -842,7 +842,7 @@ Package pdftex.def Info: Chapter 2/Figures/Estereo.pdf  used on input line 220.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [25 <./Chapter 2/Figures/S2toR2.pdf>]
-<Chapter 2/Figures/SmoothFunc.pdf, id=880, 554.77423pt x 278.21143pt>
+<Chapter 2/Figures/SmoothFunc.pdf, id=977, 554.77423pt x 278.21143pt>
 File: Chapter 2/Figures/SmoothFunc.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/SmoothFunc.pdf>
 Package pdftex.def Info: Chapter 2/Figures/SmoothFunc.pdf  used on input line 2
@@ -853,7 +853,7 @@ Package pdftex.def Info: Chapter 2/Figures/SmoothFunc.pdf  used on input line 2
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [26 <./Chapter 2/Figures/SphereMap.pdf>]
-<Chapter 2/Figures/Curva.pdf, id=905, 520.0624pt x 312.99016pt>
+<Chapter 2/Figures/Curva.pdf, id=1001, 520.0624pt x 312.99016pt>
 File: Chapter 2/Figures/Curva.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Curva.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Curva.pdf  used on input line 286.
@@ -864,7 +864,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [27 <./Chapter 2/Figures/Estereo.pdf>] [28 <./Chapter 2/Figures/SmoothFunc.pdf>
 ]
-<Chapter 2/Figures/Tangents.pdf, id=950, 550.74263pt x 381.19296pt>
+<Chapter 2/Figures/Tangents.pdf, id=1047, 550.74263pt x 381.19296pt>
 File: Chapter 2/Figures/Tangents.pdf Graphic file (type pdf)
 <use Chapter 2/Figures/Tangents.pdf>
 Package pdftex.def Info: Chapter 2/Figures/Tangents.pdf  used on input line 368
@@ -894,31 +894,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 444--445
 
  []
 
-[32] [33] [34] [35] [36] [37] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 699--700
+[32] [33] [34] [35] [36] [37]
+Underfull \hbox (badness 10000) in paragraph at lines 666--667
 
  []
 
-[39] [40]
-Underfull \hbox (badness 10000) in paragraph at lines 782--783
+[38] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 731--732
 
  []
 
-[41] [42]
-Underfull \hbox (badness 10000) in paragraph at lines 816--817
+[40] [41] [42]
+Underfull \hbox (badness 10000) in paragraph at lines 814--815
 
  []
 
-[43] [44] [45] [46] [47] [48])
-Underfull \hbox (badness 10000) in paragraph at lines 975--175
+[43] [44] [45]
+Underfull \hbox (badness 10000) in paragraph at lines 888--889
 
  []
 
-[49] [50
+[46] [47] [48] [49] [50] [51] [52]
+<Chapter 2/Figures/PushPull.pdf, id=1328, 617.30624pt x 323.70938pt>
+File: Chapter 2/Figures/PushPull.pdf Graphic file (type pdf)
+<use Chapter 2/Figures/PushPull.pdf>
+Package pdftex.def Info: Chapter 2/Figures/PushPull.pdf  used on input line 107
+2.
+(pdftex.def)             Requested size: 446.2658pt x 234.02388pt.
+ [53 <./Chapter 2/Figures/PushPull.pdf>]
+[54] [55]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 116
+3.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
-]
+) [56]
+<Chapter 2/Figures/LieDrag.pdf, id=1386, 617.30624pt x 263.48438pt>
+File: Chapter 2/Figures/LieDrag.pdf Graphic file (type pdf)
+<use Chapter 2/Figures/LieDrag.pdf>
+Package pdftex.def Info: Chapter 2/Figures/LieDrag.pdf  used on input line 1183
+.
+(pdftex.def)             Requested size: 446.2658pt x 190.48454pt.
+
+[57 <./Chapter 2/Figures/LieDrag.pdf>] [58] [59]) [60]
 Chapter 3.
-[51] (./Chapter 3/chap3.tex [52
+[61
+
+] (./Chapter 3/chap3.tex [62
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
@@ -940,7 +965,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-[53]
+[63]
 Overfull \hbox (7.52443pt too wide) in paragraph at lines 49--50
 []\T1/cmr/m/n/10.95 (-20) General rel-a-tiv-ity also pro-vides the foun-da-tion
  for un-der-stand-ing black holes, where the grav-i-ta-tional
@@ -956,22 +981,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[54]
+[64]
 Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
-[55]
+[65]
 Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
-[56] [57]
+[66] [67]
 Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
-<Chapter 3/Figures/CircularTrajectory.pdf, id=1265, 216.03482pt x 195.97885pt>
+<Chapter 3/Figures/CircularTrajectory.pdf, id=1505, 216.03482pt x 195.97885pt>
 File: Chapter 3/Figures/CircularTrajectory.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/CircularTrajectory.pdf>
 Package pdftex.def Info: Chapter 3/Figures/CircularTrajectory.pdf  used on inpu
@@ -980,15 +1005,15 @@ t line 205.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[58] [59 <./Chapter 3/Figures/CircularTrajectory.pdf>] [60]
-<Chapter 3/Figures/TidalForces.pdf, id=1309, 516.03128pt x 221.52376pt>
+[68] [69 <./Chapter 3/Figures/CircularTrajectory.pdf>] [70]
+<Chapter 3/Figures/TidalForces.pdf, id=1550, 516.03128pt x 221.52376pt>
 File: Chapter 3/Figures/TidalForces.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/TidalForces.pdf>
 Package pdftex.def Info: Chapter 3/Figures/TidalForces.pdf  used on input line 
 286.
 (pdftex.def)             Requested size: 328.82706pt x 141.16628pt.
- [61 <./Chapter 3/Figures/TidalForces.pdf>]
-<Chapter 3/Figures/LightDeflection.pdf, id=1374, 535.83777pt x 153.67494pt>
+ [71 <./Chapter 3/Figures/TidalForces.pdf>]
+<Chapter 3/Figures/LightDeflection.pdf, id=1614, 535.83777pt x 153.67494pt>
 File: Chapter 3/Figures/LightDeflection.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/LightDeflection.pdf>
 Package pdftex.def Info: Chapter 3/Figures/LightDeflection.pdf  used on input l
@@ -999,25 +1024,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
-[62 <./Chapter 3/Figures/LightDeflection.pdf>] [63]
-<Chapter 3/Figures/Spacetimediagram.pdf, id=1428, 247.00835pt x 147.7273pt>
+[72 <./Chapter 3/Figures/LightDeflection.pdf>] [73]
+<Chapter 3/Figures/Spacetimediagram.pdf, id=1668, 247.00835pt x 147.7273pt>
 File: Chapter 3/Figures/Spacetimediagram.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/Spacetimediagram.pdf>
 Package pdftex.def Info: Chapter 3/Figures/Spacetimediagram.pdf  used on input 
 line 385.
 (pdftex.def)             Requested size: 328.82706pt x 196.66641pt.
- [64 <./Chapter 3/Figures/Spacetimediagram.pdf>] [65]
+ [74 <./Chapter 3/Figures/Spacetimediagram.pdf>] [75]
 Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
-[66]
+[76]
 Underfull \hbox (badness 10000) in paragraph at lines 469--470
 
  []
 
-[67]
-<Chapter 3/Figures/ConoDeLuz.pdf, id=1484, 242.73465pt x 232.10233pt>
+[77]
+<Chapter 3/Figures/ConoDeLuz.pdf, id=1725, 242.73465pt x 232.10233pt>
 File: Chapter 3/Figures/ConoDeLuz.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/ConoDeLuz.pdf>
 Package pdftex.def Info: Chapter 3/Figures/ConoDeLuz.pdf  used on input line 52
@@ -1028,158 +1053,192 @@ Underfull \hbox (badness 10000) in paragraph at lines 534--535
 
  []
 
-[68 <./Chapter 3/Figures/ConoDeLuz.pdf>]
+[78 <./Chapter 3/Figures/ConoDeLuz.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 542--543
 
  []
 
-<Chapter 3/Figures/TimeCurve.pdf, id=1513, 396.90128pt x 227.74559pt>
+<Chapter 3/Figures/TimeCurve.pdf, id=1754, 396.90128pt x 227.74559pt>
 File: Chapter 3/Figures/TimeCurve.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/TimeCurve.pdf>
 Package pdftex.def Info: Chapter 3/Figures/TimeCurve.pdf  used on input line 54
 8.
 (pdftex.def)             Requested size: 234.87749pt x 134.77531pt.
-[69 <./Chapter 3/Figures/TimeCurve.pdf>]
+[79 <./Chapter 3/Figures/TimeCurve.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 587--588
 
  []
 
-<Chapter 3/Figures/Variational.pdf, id=1543, 487.90067pt x 332.89595pt>
+<Chapter 3/Figures/Variational.pdf, id=1783, 487.90067pt x 332.89595pt>
 File: Chapter 3/Figures/Variational.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/Variational.pdf>
 Package pdftex.def Info: Chapter 3/Figures/Variational.pdf  used on input line 
 593.
 (pdftex.def)             Requested size: 234.87749pt x 160.25555pt.
-[70 <./Chapter 3/Figures/Variational.pdf>]
+[80 <./Chapter 3/Figures/Variational.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 606--607
 
  []
 
-[71] [72] [73]
+[81] [82] [83]
 Underfull \hbox (badness 10000) in paragraph at lines 757--758
 
  []
 
-[74] [75]
+[84] [85]
 Underfull \hbox (badness 10000) in paragraph at lines 851--852
 
  []
 
-[76] [77] [78] [79] [80]
-Overfull \hbox (4.36737pt too wide) in paragraph at lines 1059--1060
+[86] [87] [88] [89]
+<Chapter 3/Figures/LieVsCovariant.pdf, id=1913, 617.30624pt x 301.125pt>
+File: Chapter 3/Figures/LieVsCovariant.pdf Graphic file (type pdf)
+<use Chapter 3/Figures/LieVsCovariant.pdf>
+Package pdftex.def Info: Chapter 3/Figures/LieVsCovariant.pdf  used on input li
+ne 976.
+(pdftex.def)             Requested size: 446.2658pt x 217.69661pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[90] [91 <./Chapter 3/Figures/LieVsCovariant.pdf>] [92] [93]
+Overfull \hbox (4.36737pt too wide) in paragraph at lines 1132--1133
 []\T1/cmr/m/n/10.95 (-20) It is easy to prove that the po-si-tion of a par-ti-c
 le can be de-ter-mined us-ing these three trans-for-ma-tions,
  []
 
-[81]
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1098
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 1170--1171
 
  []
 
-[82]
-Underfull \hbox (badness 10000) in paragraph at lines 1149--1150
+[95]
+Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
 
  []
 
-[83]
-Underfull \hbox (badness 10000) in paragraph at lines 1198--1199
+[96]
+Underfull \hbox (badness 10000) in paragraph at lines 1271--1272
 
  []
 
-[84]
-Underfull \hbox (badness 10000) in paragraph at lines 1248--1249
+[97]
+Underfull \hbox (badness 10000) in paragraph at lines 1321--1322
 
  []
 
-<Chapter 3/Figures/tdeu.pdf, id=1731, 510.38724pt x 410.2243pt>
+<Chapter 3/Figures/tdeu.pdf, id=2016, 510.38724pt x 410.2243pt>
 File: Chapter 3/Figures/tdeu.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/tdeu.pdf>
-Package pdftex.def Info: Chapter 3/Figures/tdeu.pdf  used on input line 1254.
+Package pdftex.def Info: Chapter 3/Figures/tdeu.pdf  used on input line 1327.
 (pdftex.def)             Requested size: 328.82706pt x 264.29532pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[85]
-Underfull \hbox (badness 10000) in paragraph at lines 1297--1298
+[98]
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1371
 
  []
 
-[86 <./Chapter 3/Figures/tdeu.pdf>] [87]
-Overfull \hbox (9.00922pt too wide) in paragraph at lines 1355--1356
+[99 <./Chapter 3/Figures/tdeu.pdf>] [100]
+Overfull \hbox (9.00922pt too wide) in paragraph at lines 1428--1429
 []\T1/cmr/m/n/10.95 (-20) This means the Rie-mann's cur-va-ture ten-sors is mul
 -ti-lin-ear in his two ar-gu-ments, the demon-stra-tion
  []
 
-[88]
-<Chapter 3/Figures/Tareinha.pdf, id=1790, 432.18428pt x 344.15811pt>
+[101]
+<Chapter 3/Figures/Tareinha.pdf, id=2075, 432.18428pt x 344.15811pt>
 File: Chapter 3/Figures/Tareinha.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/Tareinha.pdf>
-Package pdftex.def Info: Chapter 3/Figures/Tareinha.pdf  used on input line 144
-9.
+Package pdftex.def Info: Chapter 3/Figures/Tareinha.pdf  used on input line 152
+2.
 (pdftex.def)             Requested size: 281.85585pt x 224.46158pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[89]
-Underfull \hbox (badness 10000) in paragraph at lines 1460--1461
+[102]
+Underfull \hbox (badness 10000) in paragraph at lines 1533--1534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1462--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1535--1536
 
  []
 
-[90 <./Chapter 3/Figures/Tareinha.pdf>] [91]
-Underfull \hbox (badness 10000) in paragraph at lines 1551--1552
+[103 <./Chapter 3/Figures/Tareinha.pdf>] [104]
+Underfull \hbox (badness 10000) in paragraph at lines 1624--1625
 
  []
 
-[92] [93]
-Underfull \hbox (badness 10000) in paragraph at lines 1651--1652
+[105] [106]
+Underfull \hbox (badness 10000) in paragraph at lines 1724--1725
 
  []
 
-[94] [95] [96] [97]
-<Chapter 3/Figures/GeodesicDeviation.pdf, id=1936, 315.66678pt x 248.5187pt>
+[107] [108] [109] [110]
+<Chapter 3/Figures/GeodesicDeviation.pdf, id=2222, 315.66678pt x 248.5187pt>
 File: Chapter 3/Figures/GeodesicDeviation.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/GeodesicDeviation.pdf>
 Package pdftex.def Info: Chapter 3/Figures/GeodesicDeviation.pdf  used on input
- line 1800.
+ line 1873.
 (pdftex.def)             Requested size: 352.31624pt x 277.37964pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[98] [99 <./Chapter 3/Figures/GeodesicDeviation.pdf>] [100] [101] [102]
-[103] [104] [105] [106] [107] [108]
-<Chapter 3/Figures/surface.pdf, id=2077, 285.55363pt x 199.62965pt>
+[111] [112 <./Chapter 3/Figures/GeodesicDeviation.pdf>] [113] [114] [115]
+[116] [117] [118] [119] [120] [121]
+<Chapter 3/Figures/surface.pdf, id=2362, 285.55363pt x 199.62965pt>
 File: Chapter 3/Figures/surface.pdf Graphic file (type pdf)
 <use Chapter 3/Figures/surface.pdf>
-Package pdftex.def Info: Chapter 3/Figures/surface.pdf  used on input line 2234
+Package pdftex.def Info: Chapter 3/Figures/surface.pdf  used on input line 2307
 .
 (pdftex.def)             Requested size: 117.43874pt x 82.1015pt.
- [109 <./Chapter 3/Figures/surface.pdf>]
-[110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121]
-[122] [123] [124] [125]) [126]
+ [122 <./Chapter 3/Figures/surface.pdf>]
+[123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134]
+[135] [136] [137] [138] [139]
+<Chapter 3/Figures/Tetrad.pdf, id=2543, 587.19376pt x 323.70938pt>
+File: Chapter 3/Figures/Tetrad.pdf Graphic file (type pdf)
+<use Chapter 3/Figures/Tetrad.pdf>
+Package pdftex.def Info: Chapter 3/Figures/Tetrad.pdf  used on input line 2939.
+
+(pdftex.def)             Requested size: 446.2658pt x 246.01674pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[140] [141 <./Chapter 3/Figures/Tetrad.pdf>] [142]
+<Chapter 3/Figures/KillingFlow.pdf, id=2584, 617.30624pt x 323.70938pt>
+File: Chapter 3/Figures/KillingFlow.pdf Graphic file (type pdf)
+<use Chapter 3/Figures/KillingFlow.pdf>
+Package pdftex.def Info: Chapter 3/Figures/KillingFlow.pdf  used on input line 
+3002.
+(pdftex.def)             Requested size: 446.2658pt x 234.02388pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[143] [144 <./Chapter 3/Figures/KillingFlow.pdf>] [145] [146] [147] [148]
+[149] [150] [151] [152] [153] [154] [155] [156]) [157] [158
+
+]
 Chapter 4.
-[127
+[159] (./Chapter 4/chap4.tex [160
 
-] (./Chapter 4/chap4.tex [128
-
-] [129] [130]
+] [161] [162]
 Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
-[131] [132]
+[163] [164]
 Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
-[133] [134] [135]
-<Chapter 4/Figures/Distribution.pdf, id=2370, 527.08919pt x 376.52669pt>
+[165] [166] [167]
+<Chapter 4/Figures/Distribution.pdf, id=2895, 527.08919pt x 376.52669pt>
 File: Chapter 4/Figures/Distribution.pdf Graphic file (type pdf)
 <use Chapter 4/Figures/Distribution.pdf>
 Package pdftex.def Info: Chapter 4/Figures/Distribution.pdf  used on input line
@@ -1189,25 +1248,26 @@ Package pdftex.def Info: Chapter 4/Figures/Distribution.pdf  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[136] [137 <./Chapter 4/Figures/Distribution.pdf>] [138] [139] [140] [141]
-[142] [143] [144]) [145] (out/main.bbl [146] [147
+[168] [169 <./Chapter 4/Figures/Distribution.pdf>] [170] [171] [172] [173]
+[174] [175] [176]) [177] (out/main.bbl [178] [179
 
-] [148]) [149] (out/main.aux)
+] [180] [181]) [182]
+(out/main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 139158ADACF7582D7EFBE9C27C19EE7F;19511.
+(rerunfilecheck)             Checksum: 7BCEF4CD47F323C85F3E50BFFB67302F;22866.
  ) 
 Here is how much of TeX's memory you used:
- 21503 strings out of 467525
- 341923 string characters out of 5418982
- 827462 words of memory out of 5000000
- 48697 multiletter control sequences out of 15000+600000
- 678530 words of font info for 354 fonts, out of 8000000 for 9000
+ 21820 strings out of 467525
+ 347807 string characters out of 5418982
+ 835650 words of memory out of 5000000
+ 48877 multiletter control sequences out of 15000+600000
+ 680628 words of font info for 364 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,22n,79p,1992b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,22n,79p,1992b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
 /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
@@ -1224,28 +1284,29 @@ ive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
 /2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
 2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
 26/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/
-2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
-ive/2026/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2026
-/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2026/t
-exmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2026/tex
-mf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2026/texmf
--dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf-d
-ist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-dis
-t/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2026/texmf-dist/
-fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2026/texmf-dist/fo
-nts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/font
-s/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2026/texmf-dist/fonts/
-type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type
-1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/
-public/cm-super/sfti1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pu
-blic/cm-super/sfti1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
-ic/cm-super/sfti2488.pfb>
-Output written on out/main.pdf (159 pages, 1375082 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/20
+26/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texliv
+e/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/te
+xlive/2026/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/20
+26/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2026
+/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2026/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2026/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf
+-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-d
+ist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2026/texmf-dis
+t/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2026/texmf-dist/
+fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/fo
+nts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2026/texmf-dist/font
+s/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/
+type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type
+1/public/cm-super/sfti1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/
+public/cm-super/sfti1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pu
+blic/cm-super/sfti2488.pfb>
+Output written on out/main.pdf (192 pages, 1600918 bytes).
 PDF statistics:
- 2843 PDF objects out of 2984 (max. 8388607)
- 2464 compressed objects within 25 object streams
- 924 named destinations out of 1000 (max. 500000)
- 78623 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 3402 PDF objects out of 3580 (max. 8388607)
+ 2951 compressed objects within 30 object streams
+ 1048 named destinations out of 1200 (max. 500000)
+ 78752 words of extra memory for PDF output out of 89155 (max. 10000000)
 

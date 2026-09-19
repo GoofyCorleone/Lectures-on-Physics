@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="430" viewBox="0 0 820 430">
+  <defs>
+    <marker id="pGreen" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#1a7f37"/>
+    </marker>
+    <marker id="pNavy" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#14235c"/>
+    </marker>
+    <marker id="pRed" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#b03030"/>
+    </marker>
+  </defs>
+  <style>
+    .blob{fill:#eef0f8;stroke:#14235c;stroke-width:2.4}
+    .crv{fill:none;stroke:#14235c;stroke-width:2.6}
+    .vec{stroke:#1a7f37;stroke-width:2.8;fill:none}
+    .map{stroke:#14235c;stroke-width:2;fill:none}
+    .pull{stroke:#b03030;stroke-width:2;fill:none;stroke-dasharray:7 5}
+    .ax{stroke:#555;stroke-width:1.6}
+    .lbl{font-family:Georgia,'Times New Roman',serif;font-size:19px;fill:#14235c}
+    .lg{font-family:Georgia,'Times New Roman',serif;font-size:18px;fill:#1a7f37}
+    .lr{font-family:Georgia,'Times New Roman',serif;font-size:18px;fill:#b03030}
+    .sm{font-family:Georgia,'Times New Roman',serif;font-size:15px;fill:#555}
+  </style>
+
+  <path class="blob" d="M 60,150 C 60,74 150,52 210,68 C 268,50 330,86 322,152 C 336,222 262,258 196,246 C 120,256 52,224 60,150 Z"/>
+  <text class="lbl" x="80" y="100">M</text>
+  <path class="crv" d="M 104,206 C 150,176 178,132 246,108"/>
+  <circle cx="160" cy="168" r="5" fill="#14235c"/>
+  <line class="vec" x1="160" y1="168" x2="222" y2="130" marker-end="url(#pGreen)"/>
+  <text class="lbl" x="136" y="190">p</text>
+  <text class="lg"  x="196" y="112">X</text>
+
+  <path class="blob" d="M 500,150 C 500,74 590,52 650,68 C 708,50 770,86 762,152 C 776,222 702,258 636,246 C 560,256 492,224 500,150 Z"/>
+  <text class="lbl" x="726" y="100">N</text>
+  <path class="crv" d="M 542,204 C 588,192 624,142 692,132"/>
+  <circle cx="604" cy="168" r="5" fill="#14235c"/>
+  <line class="vec" x1="604" y1="168" x2="662" y2="142" marker-end="url(#pGreen)"/>
+  <text class="lbl" x="588" y="202">&#966;(p)</text>
+  <text class="lg"  x="640" y="126">&#966;<tspan dy="5" font-size="13">*</tspan><tspan dy="-5">X</tspan></text>
+
+  <path class="map" d="M 340,120 C 400,92 440,92 484,116" marker-end="url(#pNavy)"/>
+  <text class="lbl" x="400" y="86">&#966;</text>
+  <text class="sm"  x="356" y="162">vectors travel with it</text>
+
+  <line class="ax" x1="300" y1="366" x2="560" y2="366"/>
+  <line class="ax" x1="300" y1="360" x2="300" y2="372"/>
+  <line class="ax" x1="560" y1="360" x2="560" y2="372"/>
+  <text class="lbl" x="420" y="396">&#8477;</text>
+
+  <path class="pull" d="M 640,258 C 636,318 600,350 566,362" marker-end="url(#pRed)"/>
+  <text class="lr" x="650" y="304">f</text>
+  <path class="pull" d="M 214,258 C 220,318 258,350 294,362" marker-end="url(#pRed)"/>
+  <text class="lr" x="136" y="304">&#966;<tspan dy="-7" font-size="13">*</tspan><tspan dy="7">f</tspan></text>
+  <text class="sm" x="330" y="330">functions travel against it</text>
+</svg>
