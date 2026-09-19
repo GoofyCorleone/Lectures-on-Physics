@@ -8,7 +8,21 @@
 \bibitem[Aristotle, 1984]{aristotle_physics}
 Aristotle (1984).
 \newblock Physics.
-\newblock In Barnes, J., editor, {\em The Complete Works of Aristotle: The Revised Oxford Translation}. Princeton University Press, Princeton.
+\newblock In Barnes, J., editor, {\em The Complete Works of Aristotle: The
+  Revised Oxford Translation}. Princeton University Press, Princeton.
+
+\bibitem[Bolyai, 1832]{bolyai1832}
+Bolyai, J. (1832).
+\newblock Appendix: Scientiam spatii absolute veram exhibens.
+\newblock In {\em Tentamen Juventutem Studiosam in Elementa Matheseos Purae
+  Introducendi, by Farkas Bolyai}. Typis Collegii Reformatorum,
+  Maros-V{\'a}s{\'a}rhely.
+
+\bibitem[Christoffel, 1869]{christoffel1869}
+Christoffel, E.~B. (1869).
+\newblock {\"U}ber die transformation der homogenen differentialausdr{\"u}cke
+  zweiten grades.
+\newblock {\em Journal f{\"u}r die reine und angewandte Mathematik}, 70:46--70.
 
 \bibitem[Clagett, 1959]{clagett1959}
 Clagett, M. (1959).
@@ -22,23 +36,34 @@ Corry, L., Renn, J., and Stachel, J. (1997).
 
 \bibitem[Dyson et~al., 1920]{dyson1920}
 Dyson, F.~W., Eddington, A.~S., and Davidson, C. (1920).
-\newblock A determination of the deflection of light by the sun's gravitational field, from observations made at the total eclipse of may 29, 1919.
-\newblock {\em Philosophical Transactions of the Royal Society A}, 220:291--333.
+\newblock A determination of the deflection of light by the sun's gravitational
+  field, from observations made at the total eclipse of may 29, 1919.
+\newblock {\em Philosophical Transactions of the Royal Society A},
+  220:291--333.
 
 \bibitem[Einstein, 1915]{einstein1915}
 Einstein, A. (1915).
 \newblock Die feldgleichungen der gravitation.
-\newblock {\em Sitzungsberichte der K{\"o}niglich Preu{\ss}ischen Akademie der Wissenschaften}, pages 844--847.
+\newblock {\em Sitzungsberichte der K{\"o}niglich Preu{\ss}ischen Akademie der
+  Wissenschaften}, pages 844--847.
 
 \bibitem[Einstein, 1949]{einstein1949}
 Einstein, A. (1949).
 \newblock Autobiographical notes.
-\newblock In Schilpp, P.~A., editor, {\em Albert Einstein: Philosopher-Scientist}. Open Court, La Salle, Illinois.
+\newblock In Schilpp, P.~A., editor, {\em Albert Einstein:
+  Philosopher-Scientist}. Open Court, La Salle, Illinois.
 
 \bibitem[Einstein and Grossmann, 1913]{einsteingrossmann1913}
 Einstein, A. and Grossmann, M. (1913).
-\newblock Entwurf einer verallgemeinerten relativit{\"a}tstheorie und einer theorie der gravitation.
+\newblock Entwurf einer verallgemeinerten relativit{\"a}tstheorie und einer
+  theorie der gravitation.
 \newblock {\em Zeitschrift f{\"u}r Mathematik und Physik}, 62:225--261.
+
+\bibitem[Euclid, 1908]{euclid_elements}
+Euclid (1908).
+\newblock {\em The Thirteen Books of Euclid's Elements}.
+\newblock Cambridge University Press, Cambridge.
+\newblock Translated with introduction and commentary by Thomas L. Heath.
 
 \bibitem[Friedmann, 1922]{friedmann1922}
 Friedmann, A. (1922).
@@ -60,22 +85,68 @@ Galilei, G. (1974).
 \bibitem[Gauss, 1828]{gauss1828}
 Gauss, C.~F. (1828).
 \newblock Disquisitiones generales circa superficies curvas.
-\newblock {\em Commentationes Societatis Regiae Scientiarum Gottingensis Recentiores}, 6.
+\newblock {\em Commentationes Societatis Regiae Scientiarum Gottingensis
+  Recentiores}, 6.
+
+\bibitem[Herodotus, 2003]{herodotus_histories}
+Herodotus (2003).
+\newblock {\em The Histories}.
+\newblock Penguin Books, London.
+\newblock Translated by Aubrey de S{\'e}lincourt.
 
 \bibitem[Hilbert, 1915]{hilbert1915}
 Hilbert, D. (1915).
 \newblock Die grundlagen der physik (erste mitteilung).
-\newblock {\em Nachrichten von der Gesellschaft der Wissenschaften zu G{\"o}ttingen, Mathematisch-Physikalische Klasse}, pages 395--407.
+\newblock {\em Nachrichten von der Gesellschaft der Wissenschaften zu
+  G{\"o}ttingen, Mathematisch-Physikalische Klasse}, pages 395--407.
 
 \bibitem[Hubble, 1929]{hubble1929}
 Hubble, E. (1929).
-\newblock A relation between distance and radial velocity among extra-galactic nebulae.
-\newblock {\em Proceedings of the National Academy of Sciences}, 15(3):168--173.
+\newblock A relation between distance and radial velocity among extra-galactic
+  nebulae.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  15(3):168--173.
+
+\bibitem[Klein, 1872]{klein1872}
+Klein, F. (1872).
+\newblock {\em Vergleichende Betrachtungen {\"u}ber neuere geometrische
+  Forschungen}.
+\newblock Verlag von Andreas Deichert, Erlangen.
+\newblock The Erlangen Programme.
+
+\bibitem[Kline, 1972]{kline1972}
+Kline, M. (1972).
+\newblock {\em Mathematical Thought from Ancient to Modern Times}.
+\newblock Oxford University Press, New York.
 
 \bibitem[Lema{\^i}tre, 1927]{lemaitre1927}
 Lema{\^i}tre, G. (1927).
-\newblock Un univers homog{\`e}ne de masse constante et de rayon croissant rendant compte de la vitesse de r{\'e}cession des n{\'e}buleuses extra-galactiques.
-\newblock {\em Annales de la Soci{\'e}t{\'e} Scientifique de Bruxelles}, 47:49--59.
+\newblock Un univers homog{\`e}ne de masse constante et de rayon croissant
+  rendant compte de la vitesse de r{\'e}cession des n{\'e}buleuses
+  extra-galactiques.
+\newblock {\em Annales de la Soci{\'e}t{\'e} Scientifique de Bruxelles},
+  47:49--59.
+
+\bibitem[Levi-Civita, 1917]{levicivita1917}
+Levi-Civita, T. (1917).
+\newblock Nozione di parallelismo in una variet{\`a} qualunque e conseguente
+  specificazione geometrica della curvatura riemanniana.
+\newblock {\em Rendiconti del Circolo Matematico di Palermo}, 42:173--204.
+
+\bibitem[Lobachevsky, 1829]{lobachevsky1829}
+Lobachevsky, N.~I. (1829).
+\newblock On the principles of geometry.
+\newblock {\em Kazan Messenger}.
+
+\bibitem[Misner et~al., 1973]{mtw1973}
+Misner, C.~W., Thorne, K.~S., and Wheeler, J.~A. (1973).
+\newblock {\em Gravitation}.
+\newblock W. H. Freeman, San Francisco.
+
+\bibitem[Nakahara, 2003]{nakahara2003}
+Nakahara, M. (2003).
+\newblock {\em Geometry, Topology and Physics}.
+\newblock Institute of Physics Publishing, Bristol, 2nd edition.
 
 \bibitem[Newton, 1958]{newton1958papers}
 Newton, I. (1958).
@@ -96,7 +167,8 @@ Oppenheimer, J.~R. and Snyder, H. (1939).
 
 \bibitem[Pais, 1982]{pais1982}
 Pais, A. (1982).
-\newblock {\em Subtle is the Lord: The Science and the Life of Albert Einstein}.
+\newblock {\em Subtle is the Lord: The Science and the Life of Albert
+  Einstein}.
 \newblock Oxford University Press, Oxford.
 
 \bibitem[Ptolemy, 1998]{ptolemy_almagest}
@@ -110,25 +182,63 @@ Rashed, R., editor (1996).
 \newblock {\em Encyclopedia of the History of Arabic Science}.
 \newblock Routledge, London.
 
+\bibitem[Ricci-Curbastro and Levi-Civita, 1900]{ricci1900}
+Ricci-Curbastro, G. and Levi-Civita, T. (1900).
+\newblock M{\'e}thodes de calcul diff{\'e}rentiel absolu et leurs applications.
+\newblock {\em Mathematische Annalen}, 54:125--201.
+
 \bibitem[Riemann, 1873]{riemann1873}
 Riemann, B. (1873).
 \newblock On the hypotheses which lie at the bases of geometry.
 \newblock {\em Nature}, 8:14--17, 36--37.
 \newblock Translated by William Kingdon Clifford.
 
+\bibitem[Saccheri, 1733]{saccheri1733}
+Saccheri, G. (1733).
+\newblock {\em Euclides ab Omni Naevo Vindicatus}.
+\newblock Paolo Antonio Montano, Milan.
+
+\bibitem[Sakurai and Napolitano, 2011]{sakurai2011}
+Sakurai, J.~J. and Napolitano, J. (2011).
+\newblock {\em Modern Quantum Mechanics}.
+\newblock Addison-Wesley, Boston, 2nd edition.
+
 \bibitem[Saliba, 1987]{saliba1987}
 Saliba, G. (1987).
-\newblock The height of the atmosphere according to mu'ayyad al-din al-'urdi, qutb al-din al-shirazi, and ibn al-shatir.
+\newblock The height of the atmosphere according to mu'ayyad al-din al-'urdi,
+  qutb al-din al-shirazi, and ibn al-shatir.
 \newblock {\em Annals of the New York Academy of Sciences}, 500:121--181.
+
+\bibitem[Schutz, 1980]{schutz1980}
+Schutz, B.~F. (1980).
+\newblock {\em Geometrical Methods of Mathematical Physics}.
+\newblock Cambridge University Press, Cambridge.
 
 \bibitem[Schwarzschild, 1916]{schwarzschild1916}
 Schwarzschild, K. (1916).
-\newblock {\"U}ber das gravitationsfeld eines massenpunktes nach der einsteinschen theorie.
-\newblock {\em Sitzungsberichte der K{\"o}niglich Preu{\ss}ischen Akademie der Wissenschaften}, pages 189--196.
+\newblock {\"U}ber das gravitationsfeld eines massenpunktes nach der
+  einsteinschen theorie.
+\newblock {\em Sitzungsberichte der K{\"o}niglich Preu{\ss}ischen Akademie der
+  Wissenschaften}, pages 189--196.
+
+\bibitem[Wald, 1984]{wald1984}
+Wald, R.~M. (1984).
+\newblock {\em General Relativity}.
+\newblock University of Chicago Press, Chicago.
+
+\bibitem[Weyl, 1918]{weyl1918}
+Weyl, H. (1918).
+\newblock {\em Raum, Zeit, Materie}.
+\newblock Springer, Berlin.
 
 \bibitem[Wheeler and Ford, 1998]{wheeler1998}
 Wheeler, J.~A. and Ford, K. (1998).
 \newblock {\em Geons, Black Holes, and Quantum Foam: A Life in Physics}.
 \newblock W. W. Norton, New York.
+
+\bibitem[Whitney, 1936]{whitney1936}
+Whitney, H. (1936).
+\newblock Differentiable manifolds.
+\newblock {\em Annals of Mathematics}, 37(3):645--680.
 
 \end{thebibliography}
