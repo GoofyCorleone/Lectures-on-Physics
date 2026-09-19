@@ -1,0 +1,540 @@
+\section{Differential geometry}
+
+    \subsection{Differential manifolds}
+
+        This is one of the most attractive theories in physics and maths because it allowed physicist to arrive one of the most important theories of modern physics, the general relativity, a geometrical theory of the space and time bounded as one entity called \textit{space-time} all the implications of our reality this theory allowed us to see beyond our planet, allowing us to travel beyond this earth and dreaming of really strange systems, galaxies o universes, here we're going to study briefly the foundations of the differential geometry and the differentiable manifolds.\\
+
+        If we want to make a correct study of the differential geometry we should begin from the sets theory, then topology, manifolds and then arrive to differential manifolds.\\
+
+        \begin{myDef}
+            A n-dimensional differential manifold is a set $M$ with a collection of subsets $\mathcal{O}_{\alpha}$ such that:
+        \end{myDef}
+
+        \begin{enumerate}
+            \item $\bigcup_{i=1}^{n}\mathcal{O}_i = M$. This means that the finite union of all the subsets covers the manifold $M$.
+
+            \item $\forall \alpha \;\; \exists \;\; \phi_{\alpha} \;|\; \phi_{\alpha}: \mathcal{O}_{\alpha} \rightarrow U_{\alpha} \;\; \& \;\; U_{\alpha} \subset \mathbb{R}^n$. For every subset $\mathcal{O}_{\alpha}$ of the manifold $M$ exists a bijective map which goes from the subset to an open subset of $\mathbb{R}^n$.
+
+            \item  
+            if $\mathcal{O}_{\alpha}$ and $\mathcal{O}_{\beta}$ intersect such that $\mathcal{O}_{\alpha} \cap \mathcal{O}_{\beta} \neq \emptyset$ , then $\phi_{\beta} \circ \phi_{\alpha}^{-1}$ maps from $\phi_{\alpha}\left( \mathcal{O}_{\alpha} \cap \mathcal{O}_{\beta} \right) \subset U_{\alpha} \subset \mathbb{R}^n$ to $\phi_{\beta}\left( \mathcal{O}_{\alpha} \cap \mathcal{O}_{\beta} \right) \subset U_{\beta} \subset \mathbb{R}^n$. This map must be smooth (infinitely differentiable.)
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width = 0.5\textwidth]{Chapter 2/Figures/TercerPostu.pdf}
+                \caption{Schematic representation of the third postulate what it means is that in a differential manifold we can always go from one coordinate chard to another.}
+                \label{fig:TercerPostu}
+            \end{figure}
+
+            Here we must say some comments or observations:
+
+            \begin{itemize}
+                \item The maps $\phi_{\alpha}$ are usually called coordinate charts or coordinate systems, we will later see this is directly related to the strong equivalence principle.
+
+                \item $\{\phi_{\alpha}\}$ is called an Atlas.
+
+                \item A point $p$ represented in a coordinate chard $\phi_{\alpha}$ is represented as $\phi_{\alpha}(p) = \left(x_{\alpha}^1(p) , ...,x_{\alpha}^n\right)$ and the components $x_{\alpha}^i$ are called the coordinates of $p$.
+            \end{itemize}
+        \end{enumerate}
+
+        Here we will use often the word \textit{smooth} this refers to the differentiability of the geometrical object, we say something is smooth if it is of class $C^{\infty}$ this means it is infinitely differentiable, usually (specially in physics) such objects are hard to find, so we work on objects of class $C^k$ or $k$-times differentiable. Lets see some examples:
+
+        \begin{enumerate}
+            \item $\mathbb{R}^n$ by its own represents a manifold whose atlas is a chart $\phi \;:\; (x^1,...,x^n) \rightarrow (x^1,...,x^n).$ This is a manifold of dimension $n$.
+
+            \item $S^1$ also called the unitary circle; $S^1 = \{(x,y) \in \mathbb{R}^2 \;:\; x^2 + y^2 = 1 \}$. It is a one dimension manifold because we only need one parameters to describe it and also at same time it is a subset of $\mathbb{R}^2$ given by $(cos\theta,sin\theta)$, where $\theta \in \mathbb{R}$, lets see how to cover this manifold
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width = 0.9\textwidth]{Chapter 2/Figures/CartasS1.pdf}
+                \caption{In the left there is the first chart $\phi_1$ which covers almost all the circumference but a point $p$ and to the right there is the other chard which covers almost all the circumference except a point $q$ diametrically opposite to $p$.}
+                \label{fig:CartasS1}
+            \end{figure}
+
+            We cannot set a closed interval lets say $0 \leq \theta \leq 2\pi$ because then the map $\phi = \theta$ would not be bijective because at $\theta = 0$ and $\theta = 2\pi$ it would have the same value, because of that we choose two coordinate charts $\phi_1 = S^1 - \{p\}\;\; \phi_1(p) = \theta_1$ and the point we remove is $p = (1,0)$ and the second map $\phi_2 = S^1 - \{q\} \;\; \phi_2(q) = \theta_2$ where the point we had removed is $q = (-1,0)$.\\
+
+            From here we can see what is the Atlas for this manifold it is 
+
+            \begin{equation}
+                A = \{\phi_1,\phi_2\},
+            \end{equation}
+
+            so now, how using this both coordinate chards can we built on $S^1$, how are related $\theta_1$ and $\theta_2$ from the third postulate is easy to see that 
+
+            \begin{equation}
+                \theta_2 = \phi_2 \circ \phi_1^{-1} = \theta_1 - 2\pi.
+            \end{equation}
+
+            This is also easy to interpret geometrically, this means \textit{to get $\theta_2$ from the chart $\phi_1$ we only have to do a complete turn of $\theta_1$ } (this is because we had chosen two point diametrically opposite.)
+
+            \item $S^2$. This is an sphere of unitary radius $S^2 = \{(x,y,z) \in \mathbb{R}^3\;:\;x^2 + y^2 + z^2 = 1\}$. We can choose any point to have an analogous solution to $S^1$ because any point on the sphere has a enough small vicinity which is a one to one onto a disc of $\mathbb{R}^2$, see figure \ref{fig:S2toR2},
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width = 0.8\textwidth]{Chapter 2/Figures/S2toR2.pdf}
+                \caption{Each point on the sphere has a small vicinity which maps as a disc on $\mathbb{R}^2$.}
+                \label{fig:S2toR2}
+            \end{figure}
+
+            This also illustrates that the map certainly does not preserve neither length nor angles. Consider the spherical coordinates we always use in our courses of calculus, an example of map with $\theta = x$ and $\phi = y$, therefore the sphere seems to be mapped into the rectangle
+
+            \begin{equation*}
+                0 \leq x \leq \pi, \;\; 0 \leq y \leq 2\pi.
+            \end{equation*}
+
+            The map breaks on the pole, when $\theta = 0$. When a point is mapped to the line $x = 0$, $0 \leq y \leq 2\pi$, see figure \ref{fig:SphereMap}, then in the pole there is no even a map. 
+
+            \begin{figure}
+                \centering
+                \includegraphics[width = 0.8\textwidth]{Chapter 2/Figures/SphereMap.pdf}
+                \caption{Representation of traditional map from $S^2$ to $\mathbb{R}^2$ we can see there are multi valued points which wont allow us to cover the manifold $S^2$.}
+                \label{fig:SphereMap}
+            \end{figure}
+
+            The second problem rise at the points whose polar coordinate is $phi = 0$ they are mapped to both places $y = 0$ and $y = 2\pi$ therefore there is no map.\\
+
+            If instead of having a closed interval we take an open interval as $0 < x < \pi$ , $0 < y < 2\pi$ using two coordinate charts, the other one map can be taken in the line $phi = 0$ in the equator, then $\phi$ goes from $\phi = \pi/2$ to $\phi = 3\pi/2$.\\
+
+            There is another way to choose the maps for $S^2$, called the stereographic projection of the manifold on $\mathbb{R}^2$.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width = 0.7\textwidth]{Chapter 2/Figures/Estereo.pdf}
+                \caption{Graphical representation to find teh stereographic projection of $^2$ to $\mathbb{R}^2$.}
+                \label{fig:Estereo}
+            \end{figure}
+
+            The sphere is tangent to the plane an from a point $N$ diametrically opposite to the tangent point we draw a line to the sphere at $P$ and $\mathbb{R}^2$ in $Q$ this defines the map: P maps to q, the coordinates of $P$ in $S^2$ are the coordinate of $Q$ in $\mathbb{R}^2$. It is a one to one map except on $N$ in the vicinity of $N$ there is a map which tends to infinity there can be chosen another coordinate chart.
+        \end{enumerate}
+
+        \begin{myDef}
+            Two Atlas are compatible if their union is another Atlas. \textit{The union of all the compatible atlas is called the \textbf{complete atlas}}. It is an atlas that it is no in any other atlas.
+        \end{myDef}
+        \subsubsection{Smooth functions}
+
+            If $\phi \;: \mathcal{O} \rightarrow U$ is a coordinate chart and $f\;: M \rightarrow \mathbb{R}$ then $f \circ \phi^{-1}$ is a map from $U \subset \mathbb{R}^n$ to $\mathbb{R}$. Because of that every scalar field implicitly goes from the manifold.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width = 0.7\textwidth]{Chapter 2/Figures/SmoothFunc.pdf}
+                \caption{Schematic representation of the map $f$, this takes elements from the manifold and maps then to the rect of the reals $\mathbb{R}$.}
+                \label{fig:SmoothFunc}
+            \end{figure}
+
+
+            \begin{myDef}
+                A function $f\;: M \rightarrow \mathbb{R}$ is smooth if and only if, for all coordinate chart $\phi$ can be define a map $F \equiv f  \circ \phi^{-1}$
+
+                \begin{equation}
+                    F\;: U \rightarrow \mathbb{R}
+                \end{equation}
+
+                is a smooth function.
+            \end{myDef}
+
+            In general relativity, a function $f\;:M \rightarrow \mathbb{R}$ is sometimes called scalar field.
+        \subsubsection{Curves and vectors}
+
+            \begin{myDef}
+                A smooth curve on a differentiable manifold $M$ is a smooth function
+
+                \begin{equation}
+                    \lambda\;: I \rightarrow M
+                \end{equation}
+
+                where $I$ is an open interval in $\mathbb{R}$.
+            \end{myDef}
+
+            This means that $\phi_{\alpha} \circ \lambda$ is a map from $I$ to $\mathbb{R}^n$ for all the coordinate charts $\phi_{\alpha}$ this is represented in the figure \ref{fig:Curva}.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width = 0.7\textwidth]{Chapter 2/Figures/Curva.pdf}
+                \caption{The curve $\lambda$ maps from an open interval of the reals to the manifold, in the manifold this maps looks like, (remember this is just an scheme), a curve we see usually, from a point in that curve we can define a tangent vector $X_p$.}
+                \label{fig:Curva}
+            \end{figure}
+
+            The elements of $I$ can be though as the parameters that parameterize the curve. Let 
+
+            \begin{equation}
+                f\;:M \rightarrow \mathbb{R} \;\;\&\;\; \lambda\;:I \rightarrow M,
+            \end{equation}
+
+            then we can define the following map
+
+            \begin{equation}
+                f \circ \lambda\;:I\rightarrow \mathbb{R}.
+            \end{equation}
+
+            This is in fact, the form of a parameterized function $f(\lambda(t))$ and we talk about its derivative respect to the parameter $t$:
+
+            \begin{equation}
+                \frac{d}{dt}\left[(f\circ \lambda)((t)\right] = \frac{d}{dt}f(\lambda(t)) = \frac{\partial f}{\partial \lambda}\frac{d \lambda}{dt}.
+            \end{equation}
+
+            \begin{myDef}
+                Let $\lambda\;: I \rightarrow M$ a smooth curve with $\lambda(0) = p$ represents the point $p$ on the manifold, see figure \ref{fig:Curva}. The vector tangent to $\lambda$ at $p$ is a linear map $X_p$ from $M$ to $\mathbb{R}$ define by:
+
+                \begin{equation}
+                    X_p(f) = \left\{\frac{d}{dt}\left[f(\lambda(t))\right]\right\}_{t=0}.
+                \end{equation}
+            \end{myDef}
+
+            This tangent vector satisfies some really important algebraic properties
+
+            \begin{enumerate}
+                \item The tangent vector is a linear map:
+
+                \begin{align}
+                    X_p(f+g) = X_p(f) + X_p(g),\\
+                    X_p(\alpha f) = \alpha X_p(f).
+                \end{align}
+
+                \item The tangent vector satisfies the Leibniz's rule:
+
+                \begin{equation}
+                    X_p(fg) = g X_p(f) + f X_p(g).
+                \end{equation}
+            \end{enumerate}
+
+            Lets consider a coordinated chart defined in the vicinity of $P$ 
+
+            \begin{equation}
+                \phi(x^1,...,x^n),
+            \end{equation}
+
+            and we're going to consider the following function $F = f\circ \phi^{-1}$ there because $\phi$ is a bijective map we can write
+
+            \begin{equation}
+                f\circ \lambda = f \circ \phi^{-1}\circ \phi \circ \lambda,
+            \end{equation}
+
+            or
+
+            \begin{equation}
+                f \circ \lambda = F \circ \phi \circ \lambda.
+            \end{equation}
+
+            The tangent vector, using the chain rule, is given by
+
+            \begin{equation}
+                 X_p(f) = \left\{\frac{d}{dt}\left[f(\lambda(t))\right]\right\}_{t=0} = \left(\frac{\partial F(x)}{\partial x^{\mu}}\right)_{\phi(p)} \left(\frac{dx^{\mu}(\lambda(t))}{dt}\right)_{t=0},
+            \end{equation}
+
+            this means we, in general, can write every tangent vector as a linear combination of some components in product with some basis elements.
+
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width = 0.7\textwidth]{Chapter 2/Figures/Tangents.pdf}
+                \caption{Two tangent vectors $X_p$ and $Y_p$ which both are tangent to $p$ but live in two different curves, ($\lambda_1$,$\lambda_2$) but in the same vectorial space $T_p(M)$.}
+                \label{fig:Tangents}
+            \end{figure}
+
+            \begin{myteo}
+                The set of all tangent vectors to $p$ form an $n$-dimensional vectorial space, called the tangent space $T_p(M)$
+            \end{myteo}
+
+            \textbf{\textit{Demonstration:}}\\
+
+            Let $\lambda_1$ and $\lambda_2$ two curves such that $\lambda_1(0) = \lambda_2(0) = p$ and let $X_p$ and $Y_p$ their tangent vectors, respectively we must define the multiplication by a constant and the addition of two vectors. Let $\phi(x^1,...,x^n)$ a coordinate chart defined in a vicinity of $p$. Consider the following curve 
+
+            \begin{equation}
+                \nu(t) = \phi^{-1}\left\{\alpha\left[\phi(\lambda_1(t)) - \phi(p)\right] + \beta\left[\phi(\lambda_2(t)) - \phi(p)\right] + \phi(p)\right\},
+            \end{equation}
+
+            we can see that at $t = 0$ the curve is $\nu(0) = p$. Let $Z_p$ the tangent vector to this curve on $p$, then
+
+            \begin{align}
+                Z_p(f) = \left(\frac{\partial F(x)}{\partial x^{\mu}}\right)_{\phi(p)}\left\{\frac{d}{dt}\left[\alpha(x^{\mu}(\lambda_1(t)) - x^{\mu}(p)) + \beta(x^{\mu}(\lambda_2(t)) - x^{\mu}(p)) + x^{\mu}(p)\right]\right\}_{t=0},\\
+                Z_p(f) = \left(\frac{\partial F(x)}{\partial x^{\mu}}\right)_{\phi(p)}\left[\alpha\left(\frac{d}{dt}x^{\mu}(\lambda_1(t))\right)_{t=0} + \beta\left(\frac{d}{dt}x^{\mu}(\lambda_2(t))\right)_{t=0}\right],\\
+                Z_p(f) = \alpha X_p(f) + \beta Y_p(f),\\
+                Z_p(f) = (\alpha X_p + \beta Y_p)(f).
+            \end{align}
+
+            Since this is true for any smooth function $f$ we have $Z_p(f) = \alpha X_p(f) + \beta Y_p(f)$. Therefore $Z_p$ is tangent to the curve $\nu$ at $p$. Then is deduced the set of tangent vectors to $p$ form a vectorial space.\\
+
+            Now, we gotta prove it is $n$-dimensional, to do this lets define a basis. Let $1 \leq \mu \leq n$. Consider the curve $\lambda_{\mu}$ along $p$ defined by:
+
+            \begin{equation}
+                \lambda_{\mu}(t) = \phi^{-1}\left(x^1(p),...,x^{\mu-1}(p),x^{\mu}(p) + t , x^{\mu + 1}(p),...,x^n(p) \right).
+            \end{equation}
+
+            The tangent vector to this curve on $p$ is denoted by $\left(\frac{\partial}{\partial x^{\mu}}\right)_p$. To see this lets see that:
+
+            \begin{equation}
+                \left(\frac{\partial}{\partial x^{\mu}}\right)_p(f) = \left(\frac{\partial F}{\partial x^{\mu}}\right)_{\phi(p)}
+            \end{equation}
+
+            this is easy to see because we had define that $F = f \circ \phi^{-1}$ but it is evaluated at $\phi(p)$ so the global effect of the coordinated chart is balance and it became evaluated at $p$ instead of $\phi(p)$. Lets see the $n$ tangent vectors $\left(\frac{\partial}{\partial x^{\mu}}\right)_p$ are linearly independent, if the vectors are tangent then the following relation is fulfilled
+
+            \begin{equation}
+                \sum_{\mu=1}^n a_{\mu}\left(\frac{\partial}{\partial x^{\mu}}\right)_p = 0 \rightarrow a_1 = a_2=...=a_n = 0.
+            \end{equation}
+
+            \begin{align*}
+                \sum_{\mu=1}^n a_{\mu}\left(\frac{\partial}{\partial x^{\mu}}\right)_p = 0 ,\\
+                \left(\frac{\partial}{\partial x^{\nu}}\right)\sum_{\mu=1}^n a_{\mu}\left(\frac{\partial}{\partial x^{\mu}}\right)_p = \sum_{\mu=1}a_{\mu}\left(\frac{\partial^2}{\partial x^{\nu}\partial x^{\mu}}\right)_p \frac{\partial x^{\mu}}{\partial x^{\nu}} = 0,\\
+                =\sum_{\mu=1}a_{\mu}\left(\frac{\partial^2}{\partial x^{\nu}\partial x^{\mu}}\right)_p \delta^{\mu}_{\nu} = a_{\nu}\left(\frac{\partial^2}{\partial (x^{\nu})^2}\right)_p = 0
+            \end{align*}
+
+            and because we're working of smooth functions such second derivative must exist and no always be zero because otherwise we would be working on a trivial manifold, the empty set $\emptyset$ thus using the elemental theory of algebra
+
+            \begin{equation}
+                a_{\nu}\left(\frac{\partial^2}{\partial (x^{\nu})^2}\right)_p = 0 \rightarrow a_{\nu} = 0 \;\forall \nu \in [1,n].
+            \end{equation}
+
+            Finally, once proven they're linearly independent we then have
+
+            \begin{equation}
+                X_p(f) = \left(\frac{dx^{\mu}(\lambda(t))}{dt}\right)_{t=0}\left(\frac{\partial}{\partial x^{\mu}}\right)_p(f)
+            \end{equation}
+
+            this is true for every $f$ therefore:
+
+            \begin{equation}
+                X_p = \left(\frac{dx^{\mu}(\lambda(t))}{dt}\right)_{t=0}\left(\frac{\partial}{\partial x^{\mu}}\right)_p.
+            \end{equation}
+
+            $X_p$ can be written as a linear combination of $n$ tangent vectors $\left(\frac{\partial}{\partial x^{\mu}}\right)_p$. This $n$ vectors then form a base for $T_p(M)$, which establish the tangent space is $n$-dimensional.\\
+
+            The base $\left\{\left(\frac{\partial}{\partial x^{\mu}}\right)_p\;: \mu = 1,...,n\right\}$ is dependent of the coordinate chart: it is necessary to choose a coordinate chard $\phi$ defined in a vicinity of $p$. Choosing a different chart it would give to $T_p(M)$. A basis chosen like this is called a coordinate basis.\\
+
+            We often want to represent the samething in one coordinate system or in another, so we must know how to transform the components of the vector from one representation to another. Let $\phi = (x^1,...,x^n)$ and $\Bar{\phi}=(x^{\Bar{1}},...,x^{\Bar{n}})$ two coordinate charts thus
+
+            \begin{equation}
+                \left(\frac{\partial}{\partial x^{\mu}}\right)_p(f) = \left(\frac{\partial}{\partial x^{\mu}}(f \circ \phi^{-1})\right)_{\phi(p)} = \left\{\frac{\partial}{\partial x^{\mu}}\left[(f\circ \Bar{\phi}^{-1})\circ(\Bar{\phi}\circ \phi^{-1})\right]\right\}_{\phi(p)},
+            \end{equation}
+
+            \begin{equation}
+                \Bar{F} = f \circ \Bar{\phi}^{-1}\;\;:\;\; \Bar{F} = \Bar{F}(\Bar{X}).
+            \end{equation}
+
+            \begin{align*}
+                \left(\frac{\partial}{\partial x^{\mu}}\right)_p(f) = \left(\frac{\partial}{\partial x^{\mu}}\left[\Bar{F}(\Bar{x}(x))\right]\right)_{\phi(p)}\\
+                = \left(\frac{\partial x^{\Bar{\nu}}}{\partial x^{\mu}}\right)_{\phi(p)} \left(\frac{\partial \Bar{F}(\Bar{x})}{\partial x^{\Bar{\nu}}}\right)_{\Bar{\phi}(p)}\\
+                = \left(\frac{\partial x^{\Bar{\nu}}}{\partial x^{\mu}}\right)_{\phi(p)}\left(\frac{\partial}{\partial x^{\Bar{\nu}}}\right)_p(f).
+            \end{align*}
+
+            In this way we have found the transformation rule for the components of a vector from one coordinate system to another which is given by
+
+            \begin{equation}
+                \left(\frac{\partial}{\partial x^{\mu}}\right)_p = \left(\frac{\partial x^{\Bar{\nu}}}{\partial x^{\mu}}\right)_{\phi(p)}\left(\frac{\partial}{\partial x^{\Bar{\nu}}}\right)_p,
+            \end{equation}
+
+            every vector can be seen then as
+
+            \begin{equation}
+                X_p = x^{\nu}\left(\frac{\partial}{\partial x^{\nu}}\right)_p = x^{\nu}\left(\frac{\partial x^{\Bar{\mu}}}{\partial x^{\nu}}\right)\left(\frac{\partial}{\partial x^{\Bar{\mu}}}\right)_p = x^{\Bar{\mu}}\left(\frac{\partial}{\partial x^{\Bar{\mu}}}\right)_p.
+            \end{equation}
+        \subsubsection{Covectors and one-forms}
+
+            \begin{myDef}
+                Let $V$ a real vectorial space. The dual space $V^*$ of $V$ is a vectorial space which maps linearly from $V$ to the reals
+
+                \begin{equation}
+                    \Tilde{P}\;: V\rightarrow \mathbb{R}.
+                \end{equation}
+            \end{myDef}
+
+            \textbf{Lemma:} If $V$ is n-dimensional, then $V^*$ too. If $\left\{\mathbf{e}_{\mu}\;: \mu = 1,...,N\right\}$ is a basis of $V$ then $V^*$ has a base $\{f^{\mu}\;:\mu=1,...,N\}$ (dual basis), define by $f^{\mu}(\mathbf{e_{\nu}}) = \delta^{\mu}_{\nu}$. If $X = x^{\alpha}\mathbf{e}_{\alpha}$ then:
+
+            \begin{equation}
+                f^{\alpha}(x) = f^{\alpha}\left(x^{\beta}e_{\beta}\right) = x^{\beta}f^{\alpha}(\mathbf{e}_{\beta}) = x^{\alpha}.
+            \end{equation}
+
+            As $V$ and $V^*$ have the same dimension, we can then say they're isomorphic, therefore there exists an isomorphism.
+
+            \begin{myteo}
+                If V is dimensionally finite, then $(V^*)^*$ is naturally isomorphic to V.
+
+                \begin{equation}
+                    \phi\;:V \rightarrow (V^*)^* \equiv \phi(x)(\omega) = \omega(x) \;\forall\;\omega \in V^*.
+                \end{equation}
+            \end{myteo}
+
+            \begin{myDef}
+                The dual space of $T_p(M)$ is called the cotangent space in $p$ and is represented as $T_p^*(M)$.
+            \end{myDef}
+
+            \begin{myDef}
+                Let $f\;:M \rightarrow \mathbb{R}$ a smooth function, a covector $(df)_p$ is given by $(df)_p(x) = x(f)$ for any $x \in T_p(M)$. It is also called the gradient of $f$ at the point $p$. This covector or one-form satisfies the following properties
+
+                \begin{enumerate}
+                    \item If $\eta \in V^*$ then
+
+                    \begin{equation}
+                        \eta(\mathbf{e}_{\mu}) = \eta_{\nu}f^{\nu}(\mathbf{e}_{\mu}) = \eta_{\mu}.
+                    \end{equation}
+
+                    \item If $X \in T_p(M)$ then:
+
+                    \begin{equation}
+                        \eta(x) = x^{\alpha}\eta_{\alpha} \in \mathbb{R}.
+                    \end{equation}
+                \end{enumerate}
+            \end{myDef}
+
+            A one-form is a really special geometrical object, because we constantly use it in physics but usually is late in our studies when we start to think about it, for example, if vectors are represented as directed arrows, hos does it look like a covector or one-form? To see this lets consider the interaction between the vector $\Vec{A} = \begin{bmatrix}
+                1\\
+                2
+            \end{bmatrix}$ and the one-form $\Tilde{q} = [x,y]$ thus
+
+            \begin{equation}\label{eq:qdeA}
+                \Tilde{q}(\Vec{A}) = x + 2y.
+            \end{equation}
+
+            The equation \ref{eq:qdeA}represents a linear rect such that their normal vector has components $[1,2]^T$ this means that meanwhile vectors are directed arrows, one-form represent orthogonal planes which folds the vector, the number of planes that folds the vector is the norm of the vector.\\
+
+            What is the most common operation that gets an scalar and returns orthogonal vectors to the scalar field? The gradient, in fact, the gradient is the most common example of an one-form, they represent the orthogonal vector to the equi-potential surfaces, that is the reason why we denote the uno-form in a point $p$ as $(df)_p$, this also allow us to realize that electric field in a Coloumbian Gauge is not a vector it is an uno-form and the vector we always work with is the magnetic field.
+        \subsubsection{Tensors}
+
+            A tensor of kind $\binom{r}{s}$ in $p$ is a multilinear map
+
+            \begin{equation}
+                T\;:\;T_p^*(M) \times ... \times T_p^*(M)\times T_p(M) \times ... \times T_p(M) \rightarrow \mathbb{R}
+            \end{equation}
+
+            which maps $r$ uno-forms and $s$ vectors into the reals, we can also represent it as
+
+            \begin{equation}
+                T = T(\Tilde{q}_1,...,\Tilde{q}_r,\Vec{A}_1,...,\Vec{A}_s) \rightarrow \mathbb{R},
+            \end{equation}
+
+            and we can calculate the components of the tensor as
+
+            \begin{equation}
+                T^{\mu_1\;...\;\mu_r}_{\nu_1\;...\;\nu_s} = T(f^{\mu_1},...,f^{\mu_r},\mathbf{e}_{\nu_1},...,\mathbf{e}_{\nu_s}).
+            \end{equation}
+
+            \begin{myDef}
+                If $S$ is a tensor of type $\binom{p}{q}$ and $T$ is a tensor of type $\binom{r}{s}$ then the tensorial product between $S$ and $T$, denoted by $S \otimes T$ and it is a tensor of type $\binom{p + r }{q + s}$
+
+                \begin{equation}
+                    S \bigotimes T = (\omega_1,...,\omega_p,\eta_1,...,\eta_r,x_1,...,x_q,y_1,...,y_s) = S(\omega_1,...,\omega_p,\eta_1,...,\eta_r)T(x_1,...,x_q,y_1,...,y_s).
+                \end{equation}
+            \end{myDef}
+
+        \subsubsection{Tensor fields}
+
+            \begin{myDef}
+                A vectorial field is a map $X$ which maps any point $p \in M$ to a vector $X_p$ in $p$
+
+                \begin{equation}
+                    X(f)\;:\; M \rightarrow \mathbb{R}\;\;\&\;\; X(f) \;: p \rightarrow X_p(f).
+                \end{equation}
+            \end{myDef}
+
+            These vectorial fields talk about how a physical quantity could change from a point to another inside a manifold, usually we see a vectorial field as an arrows fields but that is in the $\mathbb{R}^n$ manifold, this last definition is more general and those abstract arrows can be interpreted as the changing rate of our physical quantities, and this is smooth is $f$ is smooth.
+
+            \begin{myDef}
+                A covectorial field is a map $\omega$ from a point $p \in M$ to a covector $\omega_p$ in $p$
+
+                \begin{equation}
+                    \omega(\Vec{X}) \;:\; M \rightarrow \mathbb{R}\;\;\&\;\; \omega(\Vec{X}) \;: p \rightarrow \omega_p(\Vec{X}_p).
+                \end{equation}
+            \end{myDef}
+
+            This is analogous to the vectorial field but in this case there is no analogous to an arrows space, this would be the manifold foliations and we must remember that the smoothness of a vectorial or covectorial fields, depends on the smoothness of the components and the functions $f$.
+
+            \begin{myDef}
+                A $\binom{r}{s}$ tensor field is a map $T$, which maps from any point $P \in M$ to an $\binom{r}{s}$ tensor $T_p$ in $p$
+
+                \begin{align}
+                    T(\eta_1,...,\eta_r,\Vec{X}_1,...,\Vec{X_s})\;:M \rightarrow \mathbb{R},\\
+                    P\rightarrow T_p\left((\eta_1)_p ,...,(\eta_r)_p,(\Vec{X}_1)_p,...,(\Vec{X}_s)_p\right).
+                \end{align}
+            \end{myDef}
+
+            The tensor fields can be though as the generalization of the vector fields and covector fields, this tensor field is the hearth of many physical theories, not only the general or special relativity, in solid state physics, in particle physics, even in the crystals optics, it is very important because, as we will see later, with this tensor we can define the notion of events distance \footnote{this is also related to a topology in the manifold M} and also will allow us to define physical quantities that do not depend on the coordinate chart such quantities as the Maxwell's tensor, which tell us how much electromagnetic energy density is in our system, the Faraday's electromagnetic tensor which tell us how are related the electric and magnetic fields and the conservations laws in a dynamical system, the pressure tensor, which tell us abut the pressure fields in every direction of a fluid, even in a magnetrohyydrodinamical fluid.\\
+
+            Tensors had been the hearth of the 20th century physics but now there are more geometrical objects, such as spinors, such are define ad fractional rank tensors or even the twistors of Penrose which contain both tensors and spinors.
+        \subsubsection{Commutator}
+
+            We're going to analyze two vectorial fields $\Vec{X}$, $\Vec{Y}$ and we're going to take a smooth function $f$, and also lets define another smooth function $\Vec{Y}(f)$ so is then $\Vec{X}\left(\Vec{Y}(t)\right)$ a vector field? To answer this we first must see this new function have to satisfy the linearity and Leibniz rule
+
+            \begin{align*}
+                \Vec{X}\left(\Vec{Y}(fg)\right) = \Vec{X}\left( f\Vec{Y}(g) + g \Vec{Y}(f)\right) = f \Vec{X}\left(\Vec{Y}(g)\right) + g\Vec{X}\left(\Vec{Y}(f)\right) = \Vec{X}(f)\Vec{Y}(g) + \Vec{X}(g)\Vec{Y}(f).
+            \end{align*}
+
+            we then can appreciate this new function $\Vec{X}$ is not a vector field it does not fulfill the Leibniz rule, but we can define another map $\Vec{Z}(f)$ as:
+
+            \begin{equation}
+                \Vec{Z}(f) = \Vec{X}\left(\Vec{Y}(f)\right) - \Vec{Y}\left(\Vec{X}(f)\right),
+            \end{equation}
+
+            which is a vectorial field.
+
+            \begin{myDef}
+                The commutator of two vector field $\Vec{X}$ and $\Vec{Y}$ is a vector field defined as
+
+                \begin{equation}
+                    \left[\Vec{X},\Vec{Y}\right](f) = \Vec{X}\left(\Vec{Y}(f)\right) - \Vec{Y}\left(\Vec{X}(f)\right)\;\; \forall f \subset C^{\infty}.
+                \end{equation}
+            \end{myDef}
+
+            We can expand the definition of commutator to see how does it operates in a given coordinated chart $\phi_1 = (x^1,...,x^n)$ 
+
+            \begin{align*}
+                \left[\Vec{X},\Vec{Y}\right](f) = \Vec{X}\left(Y^{\alpha}\frac{\partial F}{\partial x^{\alpha}}\right) - \Vec{Y}\left(X^{\beta}\frac{\partial F}{\partial x^{\beta}}\right)\\
+                = X^{\beta}\frac{\partial}{\partial x^{\beta}}\left(Y^{\alpha}\frac{\partial F}{\partial x^{\alpha}}\right) - Y^{\alpha}\frac{\partial}{\partial x^{\alpha}}\left(X^{\beta}\frac{\partial F}{\partial x^{\beta}} \right)\\
+                =\left(X^{\beta}\frac{\partial}{\partial x^{\beta}}Y^{\alpha}\frac{\partial F}{\partial x^{\alpha}} - Y^{\alpha}\frac{\partial X^{\beta}}{Y^{\alpha}}\frac{\partial F}{\partial x^{\beta}} \right)\\
+                \left[\Vec{X},\Vec{Y}\right](f) = \left(X^{\alpha}\frac{\partial Y^{\beta}}{\partial X^{\alpha}} - Y^{\alpha}\frac{\partial X^{\beta}}{\partial Y^{\alpha}}\right)\frac{\partial F}{\partial x^{\beta}},
+            \end{align*}
+
+            \begin{equation}
+                \left[\Vec{X},\Vec{Y}\right](f) = \left[\Vec{X},\Vec{Y}\right]^{\beta}\left( \frac{\partial}{\partial x^{\beta}}(f)\right)_p,
+            \end{equation}
+                
+            \begin{equation}
+                \left[\Vec{X},\Vec{Y}\right]^{\beta} = \left(X^{\alpha}\frac{\partial Y^{\beta}}{\partial X^{\alpha}} - Y^{\alpha}\frac{\partial X^{\beta}}{\partial Y^{\alpha}}\right).
+            \end{equation}
+
+            The commutator satisfies some four important relations:
+
+            \begin{enumerate}
+                \item $\left[\Vec{X},\Vec{Y}\right] = - \left[\Vec{Y},\Vec{X}\right]  $ ; the commutator is antisymmetric.
+
+                \item $\left[\Vec{X},\Vec{Y} + \Vec{Z}\right] = \left[\Vec{X},\Vec{Y}\right] + \left[\Vec{X},\Vec{Z}\right]$; the commutator is a linear map.
+                \item $\left[\Vec{X},\Vec{fY}\right] = f \left[\Vec{X},\Vec{Y}\right] + \Vec{X}(f)\Vec{Y}$; the commutator is closed under the product with any smooth function $f$.
+
+                \item  $\left[\Vec{X},\left[\Vec{Y},\Vec{Z}\right]\right] + \left[\Vec{Y},\left[\Vec{Z},\Vec{X}\right]\right] + \left[\Vec{Z},\left[\Vec{X},\Vec{Y}\right]\right] = 0$ ; the Jacobi identity.
+            \end{enumerate}
+
+            We will later see this commutator has a lot of physical information because we can set the Riemann tensor, which tell us how is the geometry of the system, in term of the commutator and it allows it to be independent from a coordinate chart also we will see it later will allow us to see if some basis is a coordinate basis or not.
+        \subsubsection{Integral curves}
+
+            In the common language the term curve, vector field are used often but in fact, if we look carefully, they usually are separated but they are not, if we turn back to our elemental calculus classes we can remember in $\mathbb{R}^3$ a curve is defined as a vector whose components are parameterized functions, in we look carefully it is exactly what we've been developing to this point, a curve is a map from a interval $I$ parameterized with a parameter $t$ to the manifold $\mathbb{R}^3$ which is represented as a vector $\lambda = [X(t),Y(t),Z(t)]^T$.\\
+
+            It is time to formalize all we've studied in our calculus classes using as a mental picture the speed of a flux, which (no only in special relativity) is usually written as $\Vec{U}(\Vec{X}) \in \mathbb{R}^3$ a vector field. The behavior of that speed field is characterized by an initial position $\Vec{X}_0$ such that 
+
+            \begin{equation}\label{eq:curvaintegral}
+                \frac{d \Vec{X}}{dt} = \Vec{U}\left(\Vec{X}(t)\right)\;;\;\Vec{X}(0) = \Vec{X}_0.
+            \end{equation}
+
+            The solution of the equation \ref{eq:curvaintegral} is what we will call \textit{integral curve of $\Vec{U}$ across $\Vec{X}_0$}.
+
+            \begin{myDef}
+                Let $\Vec{X}$ a vector field over a manifold $M$ and $p \in M$. An integral curve of $\Vec{X}$ across $p$ is a curve whose tangent in every point is $\Vec{X}$
+            \end{myDef}
+
+            Let $\lambda$ an integral curve of $\Vec{X}$ with $\lambda(0) = p$ and we're going to choose a coordinate chart $\phi^{\mu} = (x^1,...,x^n)$ therefore
+
+            \begin{equation}
+                \frac{X^{\alpha}}{dt}(\lambda(t)) = x^{\alpha} = x^{\alpha}(\lambda(t)),
+            \end{equation}
+
+            \begin{equation}
+                X^{\alpha}(0) = X^{\alpha}_p.
+            \end{equation}
+
+            The solution to this equation is unique if and only if the initial conditions are set otherwise we would have a dynamical system which can be autonomous or not what will allow us to talk about chaos.
+
+    \subsection{The Lie's derivative}
+
+        There is a truly important concept in general relativity and differential geometry the derivative, but there is no one derivative, there are many kinds and all have got their meaning and applications, there is the ordinary derivative, the partial derivative, the gradient, the divergence, the rotational, the Jacobian, the covariant derivative, the fractional derivative here we are go develope one special derivative that allow us to pull or push elements from a manifold to another manifold and find out the notion of derivative along a curve and the relation between manifolds which, in general, are different, this is the pull back and push forwards operations, with those we can develope the \textit{Lie's derivative} a kind of primitive and primordial derivative, the scalar, partial and even the covariant derivative are particular cases of this derivative.
+
+        \subsubsection{Pull back and push forward}
+
+            Let $M$ and $N$ two different manifolds, and $f$ a smooth function that maps from $N$ to $\mathbb{R}$ and let $\phi$ a a bijection which maps from $M$ to $N$ Therefore there exists an inverse map $\phi^{-1}: N \rightarrow M$ such that $\phi \circ\phi^{-1} = I_N$ where $I_N$ is the identity function on the manifold $N$, and $\phi^{-1}\circ \phi = I_M$ where $I_M$ is the identity function on the manifold $M$.\\
+
+            
+
