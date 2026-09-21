@@ -4,45 +4,45 @@ The top-level auxiliary file: main.aux
 The style file: apalike.bst
 Database file #1: referencias.bib
 Warning--empty journal in zettili2009quantum
-You've used 30 entries,
+You've used 145 entries,
             1935 wiz_defined-function locations,
-            664 strings with 7678 characters,
-and the built_in function-call counts, 9934 in all, are:
-= -- 975
-> -- 296
-< -- 27
-+ -- 103
-- -- 90
-* -- 767
-:= -- 1775
-add.period$ -- 90
-call.type$ -- 30
-change.case$ -- 187
-chr.to.int$ -- 29
-cite$ -- 31
-duplicate$ -- 418
-empty$ -- 752
-format.name$ -- 134
-if$ -- 1926
-int.to.chr$ -- 2
+            1290 strings with 23523 characters,
+and the built_in function-call counts, 51180 in all, are:
+= -- 5187
+> -- 1281
+< -- 140
++ -- 449
+- -- 384
+* -- 4106
+:= -- 8866
+add.period$ -- 436
+call.type$ -- 145
+change.case$ -- 885
+chr.to.int$ -- 136
+cite$ -- 146
+duplicate$ -- 2069
+empty$ -- 4053
+format.name$ -- 569
+if$ -- 10020
+int.to.chr$ -- 10
 int.to.str$ -- 0
-missing$ -- 39
-newline$ -- 153
-num.names$ -- 90
-pop$ -- 168
+missing$ -- 180
+newline$ -- 728
+num.names$ -- 435
+pop$ -- 684
 preamble$ -- 1
-purify$ -- 195
+purify$ -- 917
 quote$ -- 0
-skip$ -- 322
+skip$ -- 1596
 stack$ -- 0
-substring$ -- 671
-swap$ -- 35
-text.length$ -- 1
+substring$ -- 4408
+swap$ -- 187
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 160
+type$ -- 798
 warning$ -- 1
-while$ -- 85
+while$ -- 498
 width$ -- 0
-write$ -- 381
+write$ -- 1859
 (There was 1 warning)

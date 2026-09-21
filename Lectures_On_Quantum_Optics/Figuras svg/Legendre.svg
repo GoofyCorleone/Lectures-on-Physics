@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     width="108mm" height="72mm" viewBox="0 0 108 72" version="1.1">
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#000"/></marker>
+  <marker id="arrowR" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#c00"/></marker>
+  <marker id="arrowB" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#00c"/></marker>
+</defs>
+<g inkscape:groupmode="layer" inkscape:label="legendre">
+<line x1="14.00" y1="58.00" x2="100.00" y2="58.00" stroke="#000" stroke-width="0.5" marker-end="url(#arrow)"/>
+<line x1="30.00" y1="66.00" x2="30.00" y2="12.00" stroke="#000" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text x="100.00" y="63.00" font-family="serif" font-size="4.2" fill="#000" text-anchor="start" font-style="italic">x</text>
+<text x="26.00" y="14.00" font-family="serif" font-size="4.2" fill="#000" text-anchor="end" font-style="italic">f (x)</text>
+<polyline points="18.00,56.44 18.80,56.37 19.60,56.29 20.40,56.19 21.20,56.07 22.00,55.92 22.80,55.76 23.60,55.58 24.40,55.37 25.20,55.15 26.00,54.90 26.80,54.63 27.60,54.35 28.40,54.04 29.20,53.71 30.00,53.36 30.80,53.00 31.60,52.61 32.40,52.20 33.20,51.77 34.00,51.32 34.80,50.84 35.60,50.35 36.40,49.84 37.20,49.31 38.00,48.76 38.80,48.18 39.60,47.59 40.40,46.97 41.20,46.34 42.00,45.68 42.80,45.01 43.60,44.31 44.40,43.60 45.20,42.86 46.00,42.10 46.80,41.32 47.60,40.52 48.40,39.70 49.20,38.86 50.00,38.00 50.80,37.12 51.60,36.22 52.40,35.30 53.20,34.36 54.00,33.40 54.80,32.41 55.60,31.41 56.40,30.39 57.20,29.34 58.00,28.28 58.80,27.19 59.60,26.08 60.40,24.96 61.20,23.81 62.00,22.64 62.80,21.46 63.60,20.25 64.40,19.02 65.20,17.77 66.00,16.50 66.80,15.21" fill="none" stroke="#000" stroke-width="0.9"/>
+<line x1="16.00" y1="87.48" x2="82.00" y2="-5.45" stroke="#00c" stroke-width="0.5" stroke-dasharray="3,2"/>
+<circle cx="60.00" cy="25.52" r="0.9" fill="#000"/>
+<line x1="60.00" y1="25.52" x2="60.00" y2="58.00" stroke="#000" stroke-width="0.3" stroke-dasharray="1.5,1.2"/>
+<text x="60.00" y="63.00" font-family="serif" font-size="4" fill="#000" text-anchor="middle" font-style="italic">x<tspan font-size="2.72" dy="0.88" font-style="normal">0</tspan></text>
+<circle cx="30.00" cy="67.76" r="1.0" fill="#00c"/>
+<line x1="30.00" y1="67.76" x2="21.00" y2="67.76" stroke="#00c" stroke-width="0.3" stroke-dasharray="1.5,1.2"/>
+<text x="20.00" y="68.96" font-family="serif" font-size="4" fill="#00c" text-anchor="end" font-style="italic">&#8722;g(u)</text>
+<text x="60.00" y="-31.72" font-family="serif" font-size="3.8" fill="#00c" text-anchor="start" font-style="italic">pendiente u = df/dx</text>
+</g>
+</svg>

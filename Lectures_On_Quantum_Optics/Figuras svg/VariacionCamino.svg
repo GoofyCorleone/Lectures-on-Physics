@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     width="112mm" height="74mm" viewBox="0 0 112 74" version="1.1">
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#000"/></marker>
+  <marker id="arrowR" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#c00"/></marker>
+  <marker id="arrowB" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#00c"/></marker>
+</defs>
+<g inkscape:groupmode="layer" inkscape:label="variacion">
+<line x1="12.00" y1="56.00" x2="106.00" y2="56.00" stroke="#000" stroke-width="0.5" marker-end="url(#arrow)"/>
+<line x1="18.00" y1="64.00" x2="18.00" y2="12.00" stroke="#000" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text x="106.00" y="61.00" font-family="serif" font-size="4.2" fill="#000" text-anchor="start" font-style="italic">t</text>
+<text x="12.00" y="13.00" font-family="serif" font-size="4.2" fill="#000" text-anchor="start" font-style="italic">q</text>
+<text x="18.00" y="62.00" font-family="serif" font-size="3.8" fill="#000" text-anchor="middle" font-style="italic">t<tspan font-size="2.58" dy="0.84" font-style="normal">1</tspan></text>
+<text x="100.00" y="62.00" font-family="serif" font-size="3.8" fill="#000" text-anchor="middle" font-style="italic">t<tspan font-size="2.58" dy="0.84" font-style="normal">2</tspan></text>
+<polyline points="18.00,56.00 19.37,54.93 20.73,53.86 22.10,52.79 23.47,51.73 24.83,50.67 26.20,49.62 27.57,48.57 28.93,47.54 30.30,46.51 31.67,45.50 33.03,44.50 34.40,43.51 35.77,42.54 37.13,41.58 38.50,40.64 39.87,39.71 41.23,38.81 42.60,37.92 43.97,37.05 45.33,36.21 46.70,35.38 48.07,34.58 49.43,33.80 50.80,33.04 52.17,32.31 53.53,31.60 54.90,30.91 56.27,30.25 57.63,29.61 59.00,29.00 60.37,28.41 61.73,27.85 63.10,27.31 64.47,26.80 65.83,26.31 67.20,25.84 68.57,25.40 69.93,24.98 71.30,24.58 72.67,24.21 74.03,23.85 75.40,23.52 76.77,23.21 78.13,22.91 79.50,22.64 80.87,22.38 82.23,22.14 83.60,21.91 84.97,21.70 86.33,21.50 87.70,21.31 89.07,21.14 90.43,20.97 91.80,20.82 93.17,20.67 94.53,20.53 95.90,20.39 97.27,20.26 98.63,20.13 100.00,20.00" fill="none" stroke="#000" stroke-width="0.9"/>
+<polyline points="18.00,56.00 19.37,54.95 20.73,53.93 22.10,52.95 23.47,52.01 24.83,51.11 26.20,50.24 27.57,49.41 28.93,48.61 30.30,47.85 31.67,47.12 33.03,46.43 34.40,45.76 35.77,45.11 37.13,44.49 38.50,43.89 39.87,43.30 41.23,42.73 42.60,42.17 43.97,41.62 45.33,41.08 46.70,40.54 48.07,40.00 49.43,39.46 50.80,38.92 52.17,38.37 53.53,37.82 54.90,37.25 56.27,36.68 57.63,36.09 59.00,35.50 60.37,34.89 61.73,34.28 63.10,33.65 64.47,33.02 65.83,32.37 67.20,31.72 68.57,31.06 69.93,30.40 71.30,29.74 72.67,29.08 74.03,28.42 75.40,27.77 76.77,27.13 78.13,26.50 79.50,25.89 80.87,25.29 82.23,24.71 83.60,24.16 84.97,23.63 86.33,23.12 87.70,22.65 89.07,22.21 90.43,21.81 91.80,21.44 93.17,21.11 94.53,20.81 95.90,20.55 97.27,20.33 98.63,20.15 100.00,20.00" fill="none" stroke="#777" stroke-width="0.4" stroke-dasharray="2,1.5"/>
+<polyline points="18.00,56.00 19.37,54.91 20.73,53.78 22.10,52.61 23.47,51.40 24.83,50.17 26.20,48.90 27.57,47.61 28.93,46.30 30.30,44.97 31.67,43.62 33.03,42.27 34.40,40.92 35.77,39.57 37.13,38.22 38.50,36.89 39.87,35.57 41.23,34.28 42.60,33.01 43.97,31.78 45.33,30.58 46.70,29.43 48.07,28.32 49.43,27.26 50.80,26.26 52.17,25.31 53.53,24.42 54.90,23.59 56.27,22.83 57.63,22.13 59.00,21.50 60.37,20.93 61.73,20.43 63.10,19.99 64.47,19.62 65.83,19.31 67.20,19.06 68.57,18.86 69.93,18.72 71.30,18.63 72.67,18.58 74.03,18.58 75.40,18.61 76.77,18.68 78.13,18.77 79.50,18.89 80.87,19.02 82.23,19.17 83.60,19.32 84.97,19.47 86.33,19.62 87.70,19.77 89.07,19.90 90.43,20.01 91.80,20.10 93.17,20.17 94.53,20.20 95.90,20.21 97.27,20.18 98.63,20.11 100.00,20.00" fill="none" stroke="#777" stroke-width="0.4" stroke-dasharray="2,1.5"/>
+<line x1="67.20" y1="25.84" x2="67.20" y2="31.72" stroke="#c00" stroke-width="0.45" marker-end="url(#arrowR)"/>
+<text x="69.20" y="29.98" font-family="serif" font-size="4" fill="#c00" text-anchor="start" font-style="italic">&#949;&#951;(t)</text>
+<circle cx="18.00" cy="56.00" r="0.9" fill="#000"/>
+<circle cx="100.00" cy="20.00" r="0.9" fill="#000"/>
+<text x="12.00" y="57.00" font-family="serif" font-size="4" fill="#000" text-anchor="middle" font-style="italic">q<tspan font-size="2.72" dy="0.88" font-style="normal">1</tspan></text>
+<text x="105.00" y="21.00" font-family="serif" font-size="4" fill="#000" text-anchor="middle" font-style="italic">q<tspan font-size="2.72" dy="0.88" font-style="normal">2</tspan></text>
+<text x="46.00" y="17.00" font-family="serif" font-size="4" fill="#000" text-anchor="start">camino cl&#225;sico</text>
+<line x1="45.00" y1="18.50" x2="38.00" y2="39.48" stroke="#000" stroke-width="0.3" stroke-dasharray="1.5,1.2"/>
+<text x="84.00" y="50.00" font-family="serif" font-size="3.5" fill="#777" text-anchor="middle">caminos de comparaci&#243;n</text>
+</g>
+</svg>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     width="104mm" height="76mm" viewBox="0 0 104 76" version="1.1">
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#000"/></marker>
+  <marker id="arrowR" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#c00"/></marker>
+  <marker id="arrowB" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#00c"/></marker>
+</defs>
+<g inkscape:groupmode="layer" inkscape:label="conteomodos">
+<line x1="30.00" y1="64.00" x2="90.00" y2="64.00" stroke="#000" stroke-width="0.5" marker-end="url(#arrow)"/>
+<line x1="30.00" y1="64.00" x2="30.00" y2="10.00" stroke="#000" stroke-width="0.5" marker-end="url(#arrow)"/>
+<line x1="30.00" y1="64.00" x2="11.00" y2="81.00" stroke="#000" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text x="92.00" y="69.00" font-family="serif" font-size="4.2" fill="#000" text-anchor="start" font-style="italic">n<tspan font-size="2.86" dy="0.92" font-style="normal">x</tspan></text>
+<text x="26.00" y="9.00" font-family="serif" font-size="4.2" fill="#000" text-anchor="end" font-style="italic">n<tspan font-size="2.86" dy="0.92" font-style="normal">z</tspan></text>
+<text x="8.00" y="85.00" font-family="serif" font-size="4.2" fill="#000" text-anchor="end" font-style="italic">n<tspan font-size="2.86" dy="0.92" font-style="normal">y</tspan></text>
+<polyline points="76.00,64.00 75.98,62.80 75.94,61.59 75.86,60.39 75.75,59.19 75.61,58.00 75.43,56.80 75.23,55.62 74.99,54.44 74.73,53.26 74.43,52.09 74.11,50.94 73.75,49.79 73.36,48.64 72.94,47.52 72.50,46.40 72.02,45.29 71.52,44.20 70.99,43.12 70.43,42.05 69.84,41.00 69.22,39.97 68.58,38.95 67.91,37.95 67.21,36.96 66.49,36.00 65.75,35.05 64.98,34.13 64.18,33.22 63.37,32.34 62.53,31.47 61.66,30.63 60.78,29.82 59.87,29.02 58.95,28.25 58.00,27.51 57.04,26.79 56.05,26.09 55.05,25.42 54.03,24.78 53.00,24.16 51.95,23.57 50.88,23.01 49.80,22.48 48.71,21.98 47.60,21.50 46.48,21.06 45.36,20.64 44.21,20.25 43.06,19.89 41.91,19.57 40.74,19.27 39.56,19.01 38.38,18.77 37.20,18.57 36.00,18.39 34.81,18.25 33.61,18.14 32.41,18.06 31.20,18.02 30.00,18.00" fill="none" stroke="#000" stroke-width="0.9"/>
+<circle cx="30.00" cy="64.00" r="0.7" fill="#333"/>
+<circle cx="30.00" cy="56.80" r="0.7" fill="#333"/>
+<circle cx="30.00" cy="49.60" r="0.7" fill="#333"/>
+<circle cx="30.00" cy="42.40" r="0.7" fill="#333"/>
+<circle cx="30.00" cy="35.20" r="0.7" fill="#333"/>
+<circle cx="30.00" cy="28.00" r="0.7" fill="#333"/>
+<circle cx="30.00" cy="20.80" r="0.7" fill="#333"/>
+<circle cx="37.20" cy="64.00" r="0.7" fill="#333"/>
+<circle cx="37.20" cy="56.80" r="0.7" fill="#333"/>
+<circle cx="37.20" cy="49.60" r="0.7" fill="#333"/>
+<circle cx="37.20" cy="42.40" r="0.7" fill="#333"/>
+<circle cx="37.20" cy="35.20" r="0.7" fill="#333"/>
+<circle cx="37.20" cy="28.00" r="0.7" fill="#333"/>
+<circle cx="37.20" cy="20.80" r="0.7" fill="#333"/>
+<circle cx="44.40" cy="64.00" r="0.7" fill="#333"/>
+<circle cx="44.40" cy="56.80" r="0.7" fill="#333"/>
+<circle cx="44.40" cy="49.60" r="0.7" fill="#333"/>
+<circle cx="44.40" cy="42.40" r="0.7" fill="#333"/>
+<circle cx="44.40" cy="35.20" r="0.7" fill="#333"/>
+<circle cx="44.40" cy="28.00" r="0.7" fill="#333"/>
+<circle cx="44.40" cy="20.80" r="0.7" fill="#333"/>
+<circle cx="51.60" cy="64.00" r="0.7" fill="#333"/>
+<circle cx="51.60" cy="56.80" r="0.7" fill="#333"/>
+<circle cx="51.60" cy="49.60" r="0.7" fill="#333"/>
+<circle cx="51.60" cy="42.40" r="0.7" fill="#333"/>
+<circle cx="51.60" cy="35.20" r="0.7" fill="#333"/>
+<circle cx="51.60" cy="28.00" r="0.7" fill="#333"/>
+<circle cx="58.80" cy="64.00" r="0.7" fill="#333"/>
+<circle cx="58.80" cy="56.80" r="0.7" fill="#333"/>
+<circle cx="58.80" cy="49.60" r="0.7" fill="#333"/>
+<circle cx="58.80" cy="42.40" r="0.7" fill="#333"/>
+<circle cx="58.80" cy="35.20" r="0.7" fill="#333"/>
+<circle cx="66.00" cy="64.00" r="0.7" fill="#333"/>
+<circle cx="66.00" cy="56.80" r="0.7" fill="#333"/>
+<circle cx="66.00" cy="49.60" r="0.7" fill="#333"/>
+<circle cx="66.00" cy="42.40" r="0.7" fill="#333"/>
+<circle cx="73.20" cy="64.00" r="0.7" fill="#333"/>
+<circle cx="73.20" cy="56.80" r="0.7" fill="#333"/>
+<circle cx="73.20" cy="49.60" r="0.7" fill="#333"/>
+<line x1="30.00" y1="64.00" x2="62.70" y2="31.65" stroke="#c00" stroke-width="0.5" marker-end="url(#arrowR)"/>
+<text x="50.00" y="39.00" font-family="serif" font-size="4.2" fill="#c00" text-anchor="start" font-style="italic">n = 2L&#957;/c</text>
+</g>
+</svg>

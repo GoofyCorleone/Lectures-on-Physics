@@ -1,0 +1,370 @@
+\section{Necesidad de plantear un modelo alternativo}
+
+Uno de las etapas fundamentales que tuvo el desarrollo del entendimiento del fotón, fue la cuantización de la radiación llevada a cabo por Albert Einstein, de manera que ahora la energía de los fotones estaba \emph{cuantizada} o discretizada de la forma $E = n\hbar\omega$, siendo $n$ un número entero que caracteriza el número de \emph{cuantos} que tiene mi fotón. De manera que, dado un fotón con energía definida, esto implicaría a su vez una frecuencia $\omega$.\\
+
+
+Esto último representa un conveniente teórico para nada ignorable dentro de la construcción de una teoría cuántica de la luz, puesto que si se desea estudiar la dinámica de los estados cuánticos de los fotones, irremediablemente se hace necesaria una función de onda los caracterice. La salida más directa a ello sería mediante los armónicos de Fourier: Dado un fotón con energía $E = h\nu$, su función de onda está caracterizada por una onda plana monomodal de frecuencia $\nu$, sin embargo esto implicaría una extensión infinita tanto en tiempo como en espacio, indicando un hecho para nada coherente con la fenomenología de los fotones. 
+
+
+\section{Ecuación de onda de los fotones}
+
+
+Un paso absolutamente necesario si se quiere estudiar una función de onda para los fotones es justamente caracterizar la ecuación de onda que describa la dinámica de este. Para ello, se retomará el vector de Riemann-Silberstein \ref{eq:RSVector}, así como las ecuaciones de Maxwell escritas en términos de este: 
+
+\begin{equation}
+    i \partial _t \mathbf{F}(\mathbf{r},t) = c \nabla \times \mathbf{F} (\mathbf{r},t)
+\end{equation}  
+
+\begin{equation}
+    \nabla \cdot \mathbf{F}(\mathbf{r},t) = 0.
+\end{equation}
+
+
+Retomemos nuevamente la idea de concebir al vector de Riemann-Silberstein como el campo generalizado de Maxwell para fotones, de modo que haciendo uso de la identidad vectorial $\mathbf{A}\times \mathbf{B} = -i (\mathbf{A}\cdot \mathbf{S}) \mathbf{B}$, donde las componentes del vector $\mathbf{S}$ corresponden a las matrices de espín 1 (el de los fotones), las cuales pueden trabajarse en la representación dada por: 
+
+\begin{equation}
+S_x = 
+\begin{pmatrix}
+0 & 0 & 0 \\
+0 & 0 & -i \\
+0 & i & 0
+\end{pmatrix}
+\quad
+S_y = 
+\begin{pmatrix}
+0 & 0 & i \\
+0 & 0 & 0 \\
+-i & 0 & 0
+\end{pmatrix}
+\quad
+S_z =
+\begin{pmatrix}
+0 & -i & 0 \\
+i & 0 & 0 \\
+0 & 0 & 0
+\end{pmatrix},
+\end{equation}
+
+de manera que consecuentemente se obtiene 
+
+\begin{equation}
+    i\hbar \partial_t\mathbf{F} (\mathbf{r},t) = c\left( \mathbf{S} \cdot \dfrac{\hbar}{i}\nabla \right) \mathbf{F}(\mathbf{r},t).
+\end{equation}
+
+Es inmediato notar que la estructura de la ecuación resultante se asemeja bastante a la de una ecuación de Schrodinger caracterizada por un hamiltoniano 
+
+\begin{equation}
+    \widehat{H} = c\left( \mathbf{S} \cdot \dfrac{\hbar}{i}\nabla \right)
+\end{equation}
+
+
+y donde la función de onda, justamente correspondería al vector de Riemann-Silberstein $\mathbf{F}(\mathbf{r},t)$. Esto apoya fuertemente la idea de considerar a las ecuaciones de Maxwell como amplitudes de probabilidad de los fotones, siendo en esencia una primera cuantización del campo electromagnético.\\
+
+
+Además, si se desea ahora partir de la relación de Einstein para la energía en relatividad especial:
+
+\begin{equation}
+    E^2 = (mc)^2 + \mathbf{p}\cdot \mathbf{p} c^2, 
+\end{equation}
+
+siendo $m=0$ puesto que los fotones no tienen masa en reposo, es posible descomponer la ecuación de la forma
+
+
+\begin{equation}
+    \left(\frac{E^2}{c^2} - \mathbf{p}\cdot \mathbf{p}\right) I^{(3)} = \left( \frac{E}{c} - \mathbf{p} \cdot\mathbf{S} \right)\left( \frac{E}{c} + \mathbf{p} \cdot\mathbf{S} \right)I ^{(3)}  - (\mathbf{p}\otimes\mathbf{p}) I^{(3)},
+\end{equation}
+
+donde nuevamente se han introducido las matrices de espín 1, para finalmente obtener la misma estructura de la ecuación diferencial sobre un estado $\psi(\mathbf{r},t)$:
+
+\begin{equation}
+    \label{eq:R-S}
+    i\hbar \partial _t \psi (\mathbf{r},t) = c\left( \mathbf{S} \cdot \dfrac{\hbar}{i}\nabla \right) \psi(\mathbf{r},t).
+\end{equation}
+
+
+Indicando ahora que la ecuación mecanocuántica para los estados de fotones que estamos describiendo también es invariante relativista.\\
+
+Asimismo, el vector de Riemann-Silberstein puede ser escrito ya sea como la suma de los campos eléctrico y magnético o como su resta, es decir:
+
+\begin{equation}
+    \mathbf{F}_{\pm} = \sqrt{\frac{\epsilon_0}{2}}(\mathbf{E}(\mathbf{r},t) \pm ic\mathbf{B}(\mathbf{r},t))
+\end{equation}
+
+siendo $\mathbf{F}_+(\mathbf{r},t) = \mathbf{F}_-^\ast(\mathbf{r},t)$. Considerando esto en la ecuación de onda \ref{eq:R-S} tenemos
+
+\begin{equation}
+    i\hbar \partial _t \mathbf{F}_\pm (\mathbf{r},t) = \pm c\left( \mathbf{S} \cdot \dfrac{\hbar}{i}\nabla \right) \mathbf{F}_\pm(\mathbf{r},t), 
+\end{equation}
+
+indicando las dos helicidades ($\pm$) de los fotones, de forma que de manera completa se debería hablar de la función de onda 
+
+\begin{equation}
+\label{F_pm}
+\mathcal{F} = 
+\begin{bmatrix}
+\mathbf{F}_{+} \\
+\mathbf{F}_{-}
+\end{bmatrix}
+\end{equation}
+
+donde cada componente caracteriza un fotón con una helicidad dada. \\
+
+
+\subsection{Fotones como paquetes de ondas}
+
+Estudiar al fotón como un paquete de onda, nos permite ahondar de manera más ingeniosa la cuestión sobre la localización de un fotón con energía definida $\hbar \omega$. Recordemos la pregunta fundamental que motiva todo el desarrollo mostrado en este capítulo: ¿Cómo es posible describir una partícula localizada y con frecuencia única, si su función de onda asociada se extiende infinitamente en tiempo y espacio?. \\
+
+
+Ya se ha expuesto que el vector de Riemann-Silberstein funge como función de onda para los fotones, y a su vez este mismo puede estudiarse como una composición de ondas planas monomodales efectuando una transformación de Fourier:
+
+\begin{equation}
+    \mathbf{F}(\mathbf{r},t) = \frac{1}{2\pi}\int_{\infty}^\infty \mathbf{F}(\mathbf{r},\omega)e^{-i\omega t}d\omega,
+\end{equation}
+
+de manera que, entendiendo al campo generalizado de Maxwell como un oscilador que resulta de las excitaciones vacío, podemos asociar cada onda monomodal como una oscilación obtenida del vacío cuántico, quien no tiene el inconveniente conceptual de la localización espacio-temporal (pues a priori, podría tener extensión infinita). Esto motiva la solución que se propondrá a continuación, la cual corresponde a una descripción del fotón como un paquete de onda fundamentalmente policromático. \\
+
+
+
+
+\noindent \emph{\textbf{Definición
+}}: Entendemos por \textbf{fotón} al paquete de onda \[\psi(\mathbf{r},t) = \int_{\mathbb{R}} \xi(\mathbf{r,\nu}) e^{i2\pi \nu t} d\nu =\widetilde{\mathcal{A}}(\mathbf{r},t)e^{i2\pi \widetilde{\nu}t + \widetilde{\phi}(\mathbf{r})}, \] donde $\widetilde{\mathcal{A}} $ corresponde a la envolvente y $\widetilde{\nu}$ a la frecuencia de la portadora, junto a su respectiva fase $\widetilde{\phi}$. El espectro de $\psi(\mathbf{r},t)$ corresponde a la densidad espectral de potencia instantánea $^{w}S(\nu)$. Se dice entonces que el fotón tiene una energía $E = h\widetilde{\nu}$, y su localización se encuentra dentro del paquete de onda con una probabilidad dada por la envolvente.   \\ \\
+
+\noindent \emph{\textbf{Densidad espectral de potencia (DEP):}} Función matemática que proporciona información sobre la distribución de la energía de una señal sobre su espectro. Para un proceso aleatorio $^w U(\nu)$, su DEP asociada se entiende como:
+
+\begin{equation}
+    ^w S(\nu) = \lim_{T\rightarrow0} \frac{|\mathcal{F}[^wU_{X}]|^2}{T},
+\end{equation}
+
+\noindent con $^wU_{X} = U(t)\Pi(\frac{t}{T})$.\\ 
+
+
+\noindent \textbf{De función policromática a paquete de onda}: Esto es posible gracias al análisis de Fourier de una señal analítica $f_{A} = f(x) + if_{H}(x)$, de la forma:
+
+\begin{equation}
+    f_{A}(x) = \int_{\mathbb{R}} F_A(x')e^{+i2\pi xx'} dx' = \int_{\mathbb{R}} \widetilde{F_A}(x') \ast\delta (x'-\widetilde{x}')  e^{+i2\pi xx'} dx' = \widetilde{f_{A}}(x) e^{+i2\pi x\widetilde{x}'}
+\end{equation}
+
+\noindent donde trasladamos la función $F_{A} (x')$ en el espectro de Fourier a bajas frecuencias con una convolución y luego aplicamos $\mathcal{F}[f\cdot g] = F \ast G$. Esta última podemos escribirla en notación polar $\widetilde{f}_{A} = \widetilde{A}(x) e^{i\widetilde{\phi}(x)}$. De modo que tenemos, para nuestra señal analítica: \\
+
+\begin{equation}
+    f_{A} = \widetilde{A}(x)e^{i[\widetilde{\phi}(x) + 2\pi x \widetilde{x}' ]}.
+\end{equation}
+
+
+Ahora bien, conviene preguntarnos, ¿Cómo emerge el estado del fotón?, la respuesta reside en el vacío. Podemos pensar en un operador de creación $\hat{b}^{\dagger}(\omega) |0\rangle = |0_{\omega}^{\uparrow}\rangle$, el cuál toma instantáneamente uno de los modos de vibración del vacío cuántico con frecuencia $\omega$. De este modo, el estado cuántico de un fotón, también denominados estados vibracionales del vacío.
+
+\begin{equation}
+    |\gamma\rangle = \int d\omega |0^\uparrow_{\omega}\rangle.
+\end{equation}
+
+
+Nuestro nuevo operador de creación se relaciona con el de creación $\hat{a}^\dagger$ de toda la vida de la forma: 
+
+\begin{equation}
+    \hat{b}^{\dagger}(\omega) = \xi \hat{a}^\dagger(\omega) \rightarrow \quad |\gamma \rangle = \int d\omega \xi (\omega)\hat{a}^\dagger(\omega)|0\rangle .
+\end{equation}
+
+
+Esto implica que a nivel fundamental los fotones son de naturaleza policromática, lo cual iría de la mano mediciones experimentales de \emph{bandas} en lugar de \emph{lineas} de emisión para los átomos en una configuración dada. En este orden de ideas, se ve necesario introducir los estados excitados $|e\rangle$ y los estados base $|g\rangle$ de un átomo, los cuales se definen como 
+
+\begin{equation}
+    \label{exc}
+    |e\rangle_{\Omega} = \int d\omega [g_e (\omega)]^{1/2}\Omega_+ (\omega)|g\rangle.
+\end{equation}
+
+
+\begin{equation}
+    \label{bas}
+    |g\rangle_{\Omega} = \int d\omega [g_g (\omega)]^{1/2}\Omega_- (\omega)|e\rangle,
+\end{equation}
+
+donde $\Omega_+ = |e\rangle \langle g|$ se puede entender como un operador de transición electrónica de estado base a excitado y  $\Omega_- = |g\rangle \langle e| = \Omega_+^\dagger$ el operador de transición de estado excitado a base. De manera que \ref{exc} y \ref{bas} están caracterizando a los estados $|e\rangle$ y $|g\rangle$ cómo bandas multimodales moduladas por las funciones de peso $ [g_e (\omega)]^{1/2}$ y $ [g_g (\omega)]^{1/2}$, siendo su producto $g(\omega) = [g_e (\omega)]^{1/2}  [g_g (\omega)]^{1/2}$ el equivalente al perfil de densidad espectral de la fuente. Esto último nos permite caracterizar qué tipo de fotones van a favorecer una transición electrónica dada, puesto que la tasa de transición va a estar relacionada con qué tan similares resulta el perfil de densidad espectral de la fuente con la densidad espectral de la radiación, es decir del paquete de onda del fotón. \\
+
+\subsection{Estados Coherentes de los paquetes de onda}
+
+
+Ya se ha definido el modelo del fotón que se está planteando, en donde hemos resaltado el papel que tiene el carácter multimodal del fotón en su interacción con una transición electrónica arbitraria. Sin embargo quedan queda aún sin definir qué se va a entender por fase cuántica del estado del fotón y la helicidad, los cuales son esenciales para entender el mecanismo de la emisión estimulada de los fotones y su diferencia con la emisión espontánea. Para ello vamos a emplear con un tipo de estados ampliamente trabajados en óptica cuántica: Los estados coherentes.\\
+
+
+
+Dada la función de onda $|\psi_{\alpha} \rangle$, tenemos el \emph{paquete de ondas de estados coherentes}:
+
+\begin{equation}
+    | \psi_{\alpha} \rangle = \Sigma_{\sigma} \int  \frac{Vd^3k}{(2\pi)^3} \psi_{\sigma} (k) |\alpha_{\sigma} \rangle. 
+\end{equation}
+
+donde $\sigma$ es la helicidad y $|\alpha\rangle$ un estado coherente entendido como 
+
+
+\begin{equation}
+\left| \alpha_{\sigma}(\mathbf{k}) \right\rangle \equiv \hat{D}(\alpha_{\sigma}(\mathbf{k})) \left| \text{vac} \right\rangle 
+= e^{-\frac{1}{2} |\alpha_{\sigma}(\mathbf{k})|^2} 
+\sum_{n=0}^{\infty} \frac{\left( \alpha_{\sigma}(\mathbf{k}) \, \hat{a}^{\dagger}_{\sigma}(\mathbf{k}) \right)^n}{n!} 
+\left| \text{vac} \right\rangle
+\end{equation}
+
+
+
+
+Queremos que en un espacio de Fock, esta representación siga denotando un cuanto de fotón, de modo que imponemos:
+
+\begin{equation}
+    \langle\psi_{\alpha} | \hat{N} | \psi_{\alpha} \rangle  =  \Sigma_{\sigma} \int  \frac{Vd^3k}{(2\pi)^3} |\psi_{\sigma} (k)|^2 |\alpha_{\sigma} (k)|^2  \equiv 1,
+ \end{equation}
+
+
+por la condición de normalización tenemos 
+
+\begin{equation}
+    \langle \psi_{\alpha}| \psi_{\alpha} \rangle = \Sigma \int \frac{V d^3k}{(2\pi)^3} \psi^\ast_{\sigma}\psi_{\sigma}(k) = 1
+\end{equation}
+
+por lo que necesariamente $\alpha_{\sigma} = e^{i\theta_{\sigma} (k)}$. De esta manera tenemos una expresión para el estado del fotón que incluye la fase cuántica:
+
+\begin{equation}
+    | \psi_{\theta} \rangle = \Sigma_{\sigma} \int  \frac{Vd^3k}{(2\pi)^3} \psi_{\sigma} (k) |e^{i\theta_{\sigma}(k)} \rangle. 
+\end{equation}
+
+Aquí podemos resaltar la ventaja que nos trae trabajar sobre representación, al emplear el espacio de estados coherentes podemos acceder a una distribución de fase bien localiza
+\begin{equation}
+    P(\phi) = \frac{1}{2\pi}|\langle \phi| \psi_{\theta} \rangle|^2,
+\end{equation}
+
+a diferencia de si trabajáramos simplemente en el espacio de Fock, en donde la distribución de fase es completamente uniforme para todos ángulos posibles, $P(\phi) = \frac{1}{2\pi}$. \\
+
+
+
+Si hallamos el valor esperado del hamiltoniano: 
+
+\begin{equation}
+    \langle\Psi_\theta | \widehat{H}| \psi_\theta \rangle     = \Sigma_\sigma \int\frac{Vd^3k}{(2\pi)^3} \hbar\omega_\mathbf{k} \psi^\ast _\sigma (\mathbf{k)}\psi _\sigma (\mathbf{k)}. 
+\end{equation}
+
+encontramos que la función de peso $\psi$ caracteriza el valor esperado de la energia del estado del fotón, por lo que ya tenemos una manera apropiada de caracterizar las tres cantidades fundamentales de un estado de fotón: Su energía (asociada a su densidad de potencia espectral), su helicidad y su fase.\\
+
+Recordemos que ya se ha descrito anteriormente una ecuación de onda para estos fotones, que estando aún en un espacio de estados coherentes debe seguir satisfaciéndolo. Para ello, consideramos ahora el vector de Riemann-Silberstein elevado a estatus de operador, y lo escribimos en términos de las dos helicidades del fotón:
+
+\begin{equation}
+    \hat{\Psi}(\mathbf{r},t)^{\pm} = \left(\frac{\epsilon_0}{2} \right)^{1/2} \left(\hat{\mathbf{E}}^\pm(\mathbf{r},t) + ic\hat{\mathbf{B}}^\pm(\mathbf{r},t) \right),
+\end{equation}
+
+de manera que podemos hallar las funciones de onda para el paquete de onda de estados coherentes en las helicidades (+) y (-) a través de los elementos diagonales del operador de campo entre el estado del fotón y el vacío.
+
+\begin{equation}
+    \Psi_\theta ^+ (\mathbf{r},t) = \langle 0| \widehat{\Psi}^+(\mathbf{r},t) | \psi^+ _\theta\rangle
+\end{equation}
+
+y 
+\begin{equation}
+    \Psi_\theta ^- (\mathbf{r},t)= \langle \psi_\theta| \widehat{\Psi}^- (\mathbf{r},t) | 0\rangle,
+\end{equation}
+
+
+
+de manera que ahora garantizamos que nuestra función de onda para el fotón satisface la ecuación mecanocuántica hallada en \ref{eq:R-S}. En este sentido, las soluciones que se obtienen son
+
+\begin{equation}
+    \Psi_\theta ^+(\mathbf{r},t) = i\int \frac{Vd^3k}{(2\pi)^3} \Psi_{+} \sqrt{\hbar\omega_{\mathbf{k}}} e^{i(\mathbf{k} \cdot \mathbf{r} - \omega_{\mathbf{K}}t )}e^{i\theta_+(\mathbf{k)}}
+\end{equation}
+
+y
+\begin{equation}
+    \Psi_\theta ^-(\mathbf{r},t) = -i\int \frac{Vd^3k}{(2\pi)^3} \Psi_{-} \sqrt{\hbar\omega_{\mathbf{k}}} e^{-i(\mathbf{k} \cdot \mathbf{r} - \omega_{\mathbf{K}}t )}e^{-i\theta_+(\mathbf{k)}}.
+\end{equation}
+
+y con ello una función de onda completa análoga a \ref{F_pm}.\\
+
+\subsection{La emisión de fotones como estados paquetes de onda coherentes}
+
+
+Ahora bien, el siguiente paso de relevancia consistiría en aplicar esta idea del fotón como paquete de onda en la interacción luz-materia, con el fin de dar una descripción de los mecanismos de emisión espontánea y estimulada (aunque a priori podría extenderse a cualquier fenómeno de absorción y emisión). Para ello, un primer paso consistiría en caracterizar nuestro hamiltoniano de interacción tipo Jaynes-Cummings \cite{Jaynes-Cummings}:
+
+\begin{equation}
+    \label{H-multimodal}
+    \widehat{H}^{(I)} = \Sigma_{j,\sigma}C_{j,\sigma} \left(\widehat{\Omega}_+ \widehat{a}_{j,\sigma,\theta} + \widehat{\Omega}_-\widehat{a}^\dagger_{j,\sigma,\theta}  \right),
+\end{equation}
+
+
+donde las constantes $C_{j,\sigma}$ indican la probabilidad de que el átomo absorba o emita un paquete de ondas con modos $j$ y helicidad $\sigma$, de igual forma se tienen los operadores de transición electrónica $\widehat{\Omega}_{\pm}$, y los operadores escalera asociados al campo electromagnético
+
+\begin{equation}
+    \widehat{a}^\dagger_{j,\sigma,\theta} \equiv\int \frac{Vd^3k}{(2\pi)^3} U_{j}^{(\sigma)}(\mathbf{k})\widehat{D}(e^{i\theta_{\sigma}(\mathbf{k})})
+\end{equation}
+y
+\begin{equation}
+    \widehat{a}_{j,\sigma,\theta} \equiv\int \frac{Vd^3k}{(2\pi)^3} U_{j}^{(\sigma)}(\mathbf{k})\widehat{D}^\dagger(e^{i\theta_{\sigma}(\mathbf{k})}),
+\end{equation}
+
+los cuales siguen la misma idea de un operador de creación y aniquilación de carácter multimodal modulado por $U_j^{\sigma}(\mathbf{k})$), utilizando el operador de desplazamiento tal que, aplicado sobre vacío obtenemos 
+
+\begin{equation}
+\hat{a}^{\dagger}_{j, \sigma, \theta} | \text{vac} \rangle 
+= \int \frac{V \, d^3 \mathbf{k}}{(2\pi)^3} \, U^{(\sigma)}_j(\mathbf{k}) 
+\, \hat{D} \left( e^{i \theta_{\sigma}(\mathbf{k})} \right) | \text{vac} \rangle = |1_{j, \sigma, \theta} \rangle,
+\end{equation}
+
+representando así al estado cuántico de un fotón con una energía caracterizada por los modos j, helicidad $\sigma$ y fase $\theta$. Cabe resaltar que  $U_j^{\sigma}(\mathbf{k})$) satisface 
+
+\begin{equation}
+\label{U-dirac}
+\sum_j U^{(\sigma)}_j(\mathbf{k}') U^{(\sigma)}_j(\mathbf{k}) 
+=  \delta_{j j'}, 
+\quad
+\int \frac{V \, d^3 \mathbf{k}}{(2\pi)^3} 
+\left( U^{(\sigma)}_{j'}(\mathbf{k}) \right)^{\dagger} U^{(\sigma)}_j(\mathbf{k}) 
+= (2\pi)^3 \delta(\mathbf{k}' - \mathbf{k}),
+\end{equation}
+
+
+
+
+
+
+de modo que podemos hallar la relación de conmutación entre nuestros operadores escalera multimodales
+
+\begin{equation}
+\left[ \hat{a}_{j, \sigma, \theta}, \hat{a}^{\dagger}_{j', \sigma', \theta} \right] 
+= \delta_{j j'} \delta_{\sigma \sigma'}.
+\end{equation}
+
+Dicho esto, tenemos entonces el caso de la emisión espontánea en donde el estado inicial del sistema $\psi _i = |e\rangle|vac\rangle$, es decir se tiene un electrón en estado excitado y un campo electromagnético en ausencia de fotones, es decir, tenemos el vacío cuántico. De manera que aplicando el hamiltoniano de interacción \ref{H-multimodal}:
+
+\begin{equation}
+    |\psi_f \rangle = H^{(I)} |\psi_i\rangle = \Sigma_{j,\sigma} C_{j,\sigma}|g\rangle |1_{j,\sigma,\eta}\rangle,
+\end{equation}
+
+
+en donde es claro que la fase $\eta$ resulta ser de carácter arbitrario puesto que en el estado del vacío la fase de un estado coherente se encuentra completamente deslocalizada. Asimismo, los modos y la helicidad dependerán del estado de la fuente, de modo que el estado final del sistema está en una superposición de todos los posibles paquetes de onda que pueden emitirse para efectuar la transición mostrada.\\
+
+
+En este orden de ideas, se aborda ahora la situación de la emisión estimulada de fotones, en la cual se tiene como estado inicial del sistema a $ |\psi_i \rangle = |e\rangle  | |1_{j,\sigma,\theta} \rangle$. De manera que la interacción esta dada por
+
+\begin{equation}
+    |\psi_f \rangle = H^{(I)} |\psi_i\rangle = \Sigma_{j,\sigma} C_{j,\sigma}|g\rangle |2_{j,\sigma,\theta}\rangle,
+\end{equation}
+
+donde el fotón emitido hereda las mismas propiedades $j, \sigma, \theta$ del fotón que estimuló la emisión, ya que si se sigue la relación \ref{U-dirac}, se tiene que el operador de creación actuará solo para un modo, helicidad y fase específico:
+
+\begin{equation}
+\widehat{a}^\dagger_{j',\sigma',\theta'} |1_{j,\sigma,\theta}\rangle = |2_{j,\sigma,\theta}\rangle \delta_{jj'}\delta_{\sigma \sigma'},
+\end{equation}
+
+
+por lo que los dos fotones resultantes en la emisión resultan ser idénticos. Esta es la idea principal que va a dar respuesta a qué es la coherencia cuántica de campo electromagnético, puesto que si se sigue la teoría desarrollada por Roy Glauber para la coherencia de los fotones \cite{Glauber-Coherencia}, se dice que el campo será completamente coherente (a primer orden, pero puede extenderse la idea a orden $n$) cuando el \emph{grado de coherencia} sea igual a uno, es decir: 
+
+\begin{equation}
+    \label{grad_coher}
+     |g^{(1)}(x_1,x_2)| =\frac{|G^{(1)}(x_1,x_2)|}{|G^{(1)}(x_1,x_1)G^{(1)}(x_2,x_2)|^{1/2}} = 1,
+ \end{equation}
+
+
+ donde $G^{(1)} = \langle1_{j,\sigma,\theta}| \widehat{E}^{(-)}(x_1) \widehat{E}^{(+)}(x_2) |1_{j,\sigma,\theta}\rangle $ es la denominada \emph{función de coherencia a orden 1}. Vemos que para ello era necesario caracterizar la función de onda de los fotones que componen el campo, tarea que ya se ha descrito hasta ahora, de modo que la función de coherencia obtenida en este caso es 
+
+\begin{equation}
+G^{(1)}(x_1, x_2) = \sum_{\sigma} \int \frac{V \, d^3 \mathbf{k}}{(2\pi)^3} 
+\frac{\hbar \omega_{\mathbf{k}} \left| U^{(\sigma)}_j(\mathbf{k}) \right|^2}{2 \epsilon_0 V} 
+\, e^{i \left[ \mathbf{k} \cdot (\mathbf{r}_2 - \mathbf{r}_1) - \omega_{\mathbf{k}} (t_2 - t_1) \right]},
+\end{equation}
+
+quien satisface la condición de coherencia a primer orden dada en \ref{grad_coher}. Es decir, que las correlaciones en dos puntos $x_1$y $x_2$ del campo cuántico electromagnético surgen de las similitudes en las estadísticas de los fotones que lo componen: Si un campo esta compuesto por $n$ fotones idénticos, las estadísticas que describen sus modos, helicidades y fases serán las mismas, por lo que el campo se dice que será completamente coherente puesto que sus estadísticas están en completa correlación. Si por el contrario todos los $n$ fotones son diferentes, las estadísticas de sus obervables principales también lo son y entonces el campo será completamente no coherente, o lo que es lo equivalente, la correlación estadística será nula. \\ 
+

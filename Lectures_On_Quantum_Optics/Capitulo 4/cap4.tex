@@ -1,1214 +1,712 @@
-El vector RS fue estudiado en detalle por primera vez en 1907 por Silberstein \cite{silberstein1907elektromagnetische}. En su segundo artículo \cite{silberstein1907nachtrag}, Silberstein mencionó que este vector hizo su primera aparición en las conferencias sobre ecuaciones diferenciales parciales de Bernhard Riemann, editadas y publicadas en 1901 por Weber. Posteriormente, Silberstein incorporó este vector en la formulación cuaterniónica de la teoría de la relatividad \cite{silberstein1912lxxvi}. El nombre \textit{vector de Riemann-Silberstein} fue introducido por nosotros en otro artículo escrito por el físico Polaco Iwo Białynicki-Birula y ahora es generalmente aceptado.
+\section{Breve historia de la formulación de la mecánica cuántica}
 
-    Vamos a estudiar este campo en dos partes: la teoría clásica del electromagnetismo y la electrodinámica cuántica. Mostraremos que el vector RS ofrece una descripción uniforme que vincula el aspecto de onda y el aspecto corpuscular del electromagnetismo. . También debemos mencionar las extensas revisiones realizadas por Keller y Saari, donde el vector RS se utiliza para describir la mecánica cuántica de los fotones, con especial énfasis en la localización de los fotones.
-    
-    El campo de RS tiene la siguiente forma:
+    El capítulo anterior terminó con la ecuación de Schrödinger y con la integral de camino, es decir, con dos maneras distintas de escribir la dinámica cuántica, pero sin haber dicho en ningún momento qué es lo que evoluciona ni qué relación guarda con lo que se mide en un laboratorio. Esa omisión no es un descuido de la exposición sino un reflejo fiel de la historia: la mecánica cuántica se construyó primero como un conjunto de reglas de cálculo que funcionaban, y solo después, y con considerable esfuerzo, se le encontró una estructura matemática coherente y una interpretación. Este capítulo recorre esa estructura y esa interpretación, porque sin ellas el capítulo siguiente, en el cual promoveremos las amplitudes del campo electromagnético a operadores, sería una manipulación formal sin contenido.
 
-        \begin{equation}\label{eq:RSVector}
-            \Vec{F} = \Vec{E} + iC\Vec{B}\;,
-        \end{equation}
+    El punto de partida es el verano de 1925 y un joven de veintitrés años enfermo de fiebre del heno. Werner Heisenberg, refugiado en la isla de Helgoland para escapar del polen, decidió abandonar por completo el intento de describir la órbita del electrón y construir una teoría que se refiriese únicamente a cantidades observables, es decir, a las frecuencias y a las intensidades de las líneas espectrales \citep{heisenberg1925umdeutung}. El resultado fue un esquema de cálculo en el que a cada observable le corresponde una tabla doblemente indexada de números, y en el que el producto de dos tablas no conmuta. Heisenberg no sabía que estaba multiplicando matrices; fue Max Born quien lo reconoció al leer el manuscrito, y quien junto con Pascual Jordan escribió la teoría en forma matricial y descubrió la relación fundamental \citep{bornjordan1925zur}
+    \begin{equation}\label{eq:ConmutadorHistorico}
+        \hat{q}\hat{p} - \hat{p}\hat{q} = i\hbar\,\mathbb{1},
+    \end{equation}
+    que apareció así, en noviembre de 1925, antes de que existiera ninguna función de onda y sin ninguna interpretación clara de qué era lo que representaba. La versión definitiva del formalismo matricial, extendida a sistemas de varios grados de libertad, se publicó pocos meses después en el célebre trabajo de los tres autores \citep{bornheisenbergjordan1926}.
 
-        donde $\Vec{E}$ y $\Vec{B}$ son los vectores de campo eléctrico y campo magnético, $C$ es la velocidad de la luz e $i$ es la unidad imaginaria. Desde un punto de vista de la geometría diferencial, y desde la interpretación física surge a simple vista una particularidad del vector de RS pues el campo eléctrico es una uno-forma, debido a que lo podemos obtener desde un gradiente y el campo magnético es un vector\footnote{No siempre aplica esto podemos tener casos extremos en donde el campo magnético puede obtenerse de un gradiente en ese caso este sería una uno-forma.} en este orden de ideas, matemáticamente no es posible sumar aritméticamente un campo eléctrico y un campo magnético entonces ¿qué significa $i$ para que le dé esta nueva naturaleza al campo magnético? Si nos fijamos, aparentemente mediante matrices de Pauli podríamos obtener el vector de RS a partir de los campos por si solos.\\
+    En enero de 1926 Schrödinger publicó, como vimos, una teoría completamente distinta en apariencia, basada en una ecuación diferencial para una función de onda continua \citep{schrodinger1926quantisierung}. La coexistencia de dos formalismos que producían los mismos números pero que no se parecían en nada resultaba intolerable, y el propio Schrödinger demostró ese mismo año la equivalencia entre ambos \citep{schrodinger1926verhaltnis}, mostrando que las matrices de Heisenberg son los elementos de matriz de operadores diferenciales entre las funciones propias de su ecuación. La demostración era correcta en el espíritu aunque incompleta en el rigor, y la versión definitiva de la equivalencia, junto con la estructura que hoy llamamos teoría de transformaciones, es obra de Dirac en 1927 \citep{dirac1927physical}.
 
-        Antes de adentrarnos en la matemática que nos permite el campo de RS quisiera hacer una pequeña discusión sobre la naturaleza relativa del campo electromagnético. Desde los cursos de pregrado se nos dice que el campo magnético surge de un efecto relativista del campo eléctrico, también es un ejercicio bastante común en cursos de electromagnetismo o física del plasma encontrar la velocidad \footnote{conocida como velocidad de deriva.} a la que debe moverse un observador tal que desde su perspectiva solo haya un campo magnético \footnote{también se puede hacer el cálculo para solo ver un campo eléctrico pero no es un ejercicio tan común, pues son campos magnéticos los que se utilizan para confinar plasmas.} tal que la trayectoria que tenga una partícula de prueba sea ciclotrónica pero en ambos ejemplos surge una naturaleza relativa al observador de los campos eléctricos y magnéticos, es necesario preguntarse \textbf{¿cuál es el campo verdadero?} a mi forma de ver, es el campo de Riemann-Silberstein.\\
+    Faltaba, sin embargo, lo esencial. Schrödinger creía que $|\psi|^{2}$ describía una densidad de carga real, una especie de nube material extendida, y defendió esa lectura durante años pese a la objeción evidente de que el paquete de ondas de una partícula libre se ensancha indefinidamente mientras que un electrón nunca se observa dividido. La interpretación correcta la propuso Born en junio de 1926, en un artículo sobre colisiones atómicas, y lo hizo en una nota a pie de página añadida durante la corrección de pruebas: $|\psi|^{2}$ no es una densidad de materia sino una \textit{densidad de probabilidad} \citep{born1926stossvorgange}. \textbf{Aquella nota al pie, que Born escribió casi como una enmienda de último momento, es probablemente la frase más consecuente de toda la física del siglo XX}, porque introdujo el azar en el nivel fundamental de la descripción y cambió para siempre el estatus de las leyes físicas. Born recibió el premio Nobel por ella en 1954, veintiocho años después.
 
-        La respuesta de esa pregunta creo que está la teoría de las señales analíticas ---una teoría sobre las mediciones naturales, en el sentido de que se ajusta muy bien a lo que se mide mayormente en el laboratorio--- la luz es un fenómeno perfectamente estocástico. Cuando medimos algo, medimos y obtenemos una señal aleatoria, en este orden de ideas, si la naturaleza del campo electromagnético es aleatoria el hecho de que dos observadores que miden la misma fuente detecten más señales eléctricas que magnéticas uno y viceversa el otro ¿existe entonces una aleatoriedad entre la diferencia de campos que mide uno con el otro? Parece que sí pero no tiene mucho sentido físico en realidad es de más interés físico un campo aleatorio que no dependa del observador, este podría ser el campo de RS.\\
+    El año siguiente trajo los dos resultados que fijaron el significado físico del formalismo. Heisenberg publicó en 1927 su análisis de lo que puede saberse simultáneamente sobre la posición y el momento de una partícula \citep{heisenberg1927anschaulichen}, obteniendo la relación de indeterminación mediante un argumento sobre el microscopio de rayos gamma que, como veremos, es sugerente pero engañoso; Earle Kennard demostró ese mismo año la versión rigurosa para el caso canónico \citep{kennard1927quantenmechanik} y Howard Robertson la generalizó en 1929 a cualquier par de observables \citep{robertson1929uncertainty}. Y Niels Bohr presentó en el congreso de Como su principio de complementariedad \citep{bohr1928quantum}, según el cual las descripciones ondulatoria y corpuscular no se contradicen sino que se excluyen mutuamente en cada montaje experimental concreto, tesis que sigue siendo el núcleo de la llamada interpretación de Copenhague.
 
-        Hay muchos indicios de que el campo que estamos buscando es el de RS porque este tiene las siguientes cualidades:
+    La arquitectura matemática definitiva llegó en 1932 de la mano de John von Neumann, quien en \textit{Mathematische Grundlagen der Quantenmechanik} demostró que el espacio de funciones de onda de Schrödinger y el espacio de sucesiones de Heisenberg son dos realizaciones del mismo objeto abstracto, un espacio de Hilbert separable, y reformuló toda la teoría en ese lenguaje \citep{vonneumann1932mathematische}. Von Neumann introdujo también, en un trabajo previo de 1927 \citep{vonneumann1927wahrscheinlichkeitstheoretischer} y de manera independiente a Landau, quien llegó al mismo objeto estudiando la emisión espontánea \citep{landau1927dampfungsproblem}, la matriz densidad, que es la herramienta imprescindible cuando el sistema no se encuentra en un estado puro. Esa herramienta, que en su origen era un tecnicismo para tratar subsistemas y mezclas estadísticas, resultó ser el objeto central de la óptica cuántica, porque la luz que emiten las fuentes reales, desde una bombilla hasta una estrella, nunca está en un estado puro.
 
-        \begin{itemize}
-            \item Es autofunción del operador de Dirac.
+    El orden de exposición que seguiremos invierte el orden histórico, como es habitual y conveniente. Enunciaremos primero la estructura del espacio de estados, después los postulados en su forma moderna, junto con su interpretación física y con las objeciones que cada uno suscita, y a continuación los resultados que necesitaremos más adelante: el principio de indeterminación, las representaciones de posición y momento, las imágenes de evolución, el oscilador armónico resuelto algebraicamente y, para terminar, la matriz densidad y su conexión con la teoría de la coherencia del capítulo segundo.
 
-            \item Se acomoda naturalmente en la descripción del fotón y la función de onda de este.
+\section{El espacio de estados}
 
-            \item Se pueden escribir las 4 ecuaciones de Maxwell de forma covariante en una sola ecuación (ver la sección \ref{subsec:ElecClasik}.
+        Toda la mecánica cuántica se desarrolla sobre una estructura matemática única, y la definimos con precisión antes de colgar de ella ninguna física.
 
-            \item El vector RS está lo más cerca posible de la función de onda del fotón en el espacio de coordenadas, tomando en cuenta las limitaciones impuestas por la falta del operador de posición para fotones.
-        \end{itemize}
-
-        entre otras, pero hay otra cosa que me gustaría añadir y que hasta la fecha no hemos encontrado trabajos al respecto es que si el campo de RS es una señal analítica ¿esto implicaría que los campos eléctricos y magnéticos son pares conjugados de Hilbert? Demostrar esto matemáticamente debe ser todo un reto, pero en caso de que lo sean de forma general esto solucionaría el problema del observador, pues al transformarse de los campos electromagnéticos estos efectos se compensarían en el campo de RS el cual sería un invariante de Lorentz, si a esto le agregamos que muchas de las ecuaciones de la física a nivel clásico y cuántico se pueden escribir en términos del campo de RS ¿no implica que en este campo está una pista para unificar la cuántica con la relatividad? Pues si lograramos reescribir toda la relatividad general y la teoría cuántica de campos en términos de este campo habremos dado un paso enorme en la comprensión de la naturaleza (matemática) cuántica de la relatividad.
-    \section{Electrodinámica clásica}\label{subsec:ElecClasik}
-
-        Partamos este desarrollo con las ecuaciones de Maxwell sin fuentes:
-
-        \begin{equation}
-            \Vec{\nabla} \cdot \Vec{E} = 0 ,
-        \end{equation}
-
-        \begin{equation}
-            \Vec{\nabla} \cdot \Vec{B} = 0 ,
-        \end{equation}
-
-        \begin{equation}
-            \partial_t \Vec{B} + \Vec{\nabla}\times\Vec{E} = 0,
-        \end{equation}
-
-        \begin{equation}
-            \mu\epsilon\partial_t \Vec{E} - \Vec{\nabla}\times \Vec{B} = 0.
-        \end{equation}
-
-        Jugando con el álgebra, es fácil ver que estas 4 ecuaciones se pueden reducir a dos utilizando el vector de RS
-
-        \begin{equation}
-            \Vec{\nabla}\cdot\Vec{F}(\Vec{r},t) = 0,
-        \end{equation}
-
-        \begin{equation}
-            \partial_t \Vec{F}(\Vec{r},t) + i\Vec{\nabla}\times\left( \frac{\Vec{E}}{\sqrt{2\mu}} + i \frac{\Vec{B}}{\sqrt{2\epsilon\mu^2}}\right) = \partial_t \Vec{F}(\Vec{r},t) + i\Vec{\nabla}\times\Vec{T} = 0.
-        \end{equation}
-
-        Hay que tener en cuenta que mientras la permitividad eléctrica y la permeabilidad magnética no varíen con la posición o en el tiempo esta formulación funciona, las ecuaciones de Maxwell en la materia no las trataremos acá por el momento. 
-
-        \subsection{Propiedades básicas del vector de RS}
-
-            En la ausencia de fuente, separar el campo electromagnético en las correspondientes partes eléctricas y magnéticas es algo no absoluto porque en este caso las ecuaciones de Maxwell son invariantes bajo rotaciones de dualidad \footnote{La rotación de la dualidad, también conocida como "dualidad de rotación" o "rotación de Hodge", es un concepto matemático utilizado en álgebra lineal y geometría diferencial. Se relaciona con la noción de "dualidad" entre diferentes espacios vectoriales.
-
-            En la dualidad, dado un espacio vectorial V, se define su espacio dual V* como el conjunto de todos los funcionales lineales sobre V. Es decir, los elementos de V* son aplicaciones lineales que toman un vector de V y producen un escalar.
-
-            La rotación de la dualidad se refiere a la transformación que se aplica sobre los elementos del espacio dual cuando se realiza una rotación en el espacio vectorial original. Esta rotación puede ser en dos o tres dimensiones, dependiendo del contexto.
-
-            En el caso de la rotación de dos dimensiones, si se tiene un vector v en el espacio vectorial V y se realiza una rotación en sentido antihorario por un ángulo $\theta$, entonces el correspondiente funcional en el espacio dual V* experimentará una rotación en sentido horario por el mismo ángulo $\theta$. En otras palabras, la rotación en el espacio vectorial se refleja en una rotación opuesta en el espacio dual.
-
-            En el caso de la rotación de tres dimensiones, se utiliza el concepto de producto exterior y el operador de Hodge para describir la rotación de la dualidad. Aquí, los elementos del espacio dual se representan como k-formas diferenciales, y la rotación en el espacio vectorial original induce una rotación en las k-formas del espacio dual.} del campo electromagnético,
-
+        \begin{myDef}\label{def:Hilbert}
+            Un \textit{espacio de Hilbert} $\mathcal{H}$ es un espacio vectorial sobre el cuerpo de los números complejos, dotado de un producto interno $\langle\cdot\,|\,\cdot\rangle : \mathcal{H}\times\mathcal{H}\rightarrow\mathbb{C}$ que satisface, para todos $\ket{\psi},\ket{\phi},\ket{\chi}\in\mathcal{H}$ y todo $\alpha\in\mathbb{C}$,
             \begin{align}
-                \Vec{E'} = \Vec{E}cos\theta - C\Vec{B}sen\theta,\\
-                C\Vec{B}' = C\Vec{B}cos\theta + \Vec{E}sen\theta.
+                \braket{\psi|\phi} &= \overline{\braket{\phi|\psi}} \qquad\text{(simetría hermítica)},\label{eq:SimetriaHermitica}\\
+                \braket{\psi|\alpha\phi + \chi} &= \alpha\braket{\psi|\phi} + \braket{\psi|\chi} \qquad\text{(linealidad en el segundo argumento)},\label{eq:LinealidadProducto}\\
+                \braket{\psi|\psi} &\geq 0, \quad\text{con igualdad si y solo si}\quad \ket{\psi} = 0 \qquad\text{(definición positiva)},\label{eq:PositividadProducto}
             \end{align}
+            y que es \textit{completo} respecto de la norma $\|\psi\| = \sqrt{\braket{\psi|\psi}}$ inducida por ese producto, es decir, toda sucesión de Cauchy de elementos de $\mathcal{H}$ converge a un elemento de $\mathcal{H}$.
+        \end{myDef}
 
-            La rotación de dualidad en términos del vector de RS simplementa significa multiplicar este vector por una fase
+        Ninguna de estas condiciones es un capricho del matemático. La estructura de espacio vectorial es la que permite superponer estados, que es el rasgo distintivo de la teoría y el origen de todos los fenómenos de interferencia estudiados en los dos primeros capítulos. El cuerpo tiene que ser el de los complejos y no el de los reales porque, como demostramos en \eqref{eq:SchrodingerTemporal}, la ecuación de evolución es de primer orden en el tiempo con un coeficiente imaginario, de modo que sus soluciones no pueden ser reales. El producto interno proporciona la noción de ángulo entre estados, y será él quien produzca las probabilidades. La condición \eqref{eq:PositividadProducto} garantiza que esas probabilidades sean no negativas. Y la completitud es la que asegura que los procedimientos de límite, como los desarrollos en serie que usaremos constantemente, no nos saquen del espacio.
 
-            \begin{equation}
-                \Vec{F} \rightarrow \Vec{F}e^{i\theta}.
+        Adoptamos desde ahora la notación que Dirac introdujo en 1939 y que es universal en óptica cuántica: los elementos de $\mathcal{H}$ se denotan $\ket{\psi}$ y se llaman \textit{kets}. El producto interno es antilineal en el primer argumento, como se sigue de combinar \eqref{eq:SimetriaHermitica} con \eqref{eq:LinealidadProducto},
+        \begin{equation}\label{eq:Antilinealidad}
+            \braket{\alpha\psi + \chi|\phi} = \overline{\braket{\phi|\alpha\psi+\chi}} = \overline{\alpha\braket{\phi|\psi} + \braket{\phi|\chi}} = \bar{\alpha}\braket{\psi|\phi} + \braket{\chi|\phi},
+        \end{equation}
+        y esa asimetría, que al principio incomoda, es la que hace que la norma sea real y positiva pese a que los coeficientes sean complejos.
+
+        A cada ket le corresponde un funcional lineal, el \textit{bra} $\bra{\psi}$, definido por su acción $\bra{\psi}:\ket{\phi}\mapsto\braket{\psi|\phi}$. Que todo funcional lineal continuo sobre $\mathcal{H}$ sea de esta forma, es decir, que la correspondencia entre bras y kets sea biyectiva, es el contenido del teorema de representación de Riesz, y es la razón por la cual la notación de Dirac es consistente: podemos manipular bras y kets como si fuesen objetos del mismo tipo porque el teorema garantiza que hay exactamente uno de cada.
+
+        Un conjunto $\{\ket{n}\}$ de vectores se dice \textit{ortonormal} cuando $\braket{n|m} = \delta_{nm}$, y constituye una \textit{base} cuando además todo estado admite desarrollo,
+        \begin{equation}\label{eq:DesarrolloBase}
+            \ket{\psi} = \sum_{n} c_{n}\ket{n} .
+        \end{equation}
+        Los coeficientes se extraen proyectando, es decir, aplicando $\bra{m}$ a ambos lados y usando la ortonormalidad,
+        \begin{equation}\label{eq:Coeficientes}
+            \braket{m|\psi} = \sum_{n}c_{n}\braket{m|n} = \sum_{n}c_{n}\delta_{mn} = c_{m},
+        \end{equation}
+        donde la delta ha colapsado la suma dejando un único término. Sustituyendo \eqref{eq:Coeficientes} de nuevo en \eqref{eq:DesarrolloBase},
+        \begin{equation}\label{eq:CompletitudPaso}
+            \ket{\psi} = \sum_{n}\ket{n}\braket{n|\psi} = \left(\sum_{n}\ket{n}\bra{n}\right)\ket{\psi},
+        \end{equation}
+        y como esto vale para todo estado, el operador entre paréntesis debe ser la identidad,
+        \begin{equation}\label{eq:CompletitudHilbert}
+            \boxed{\;\sum_{n}\ket{n}\bra{n} = \hat{\mathbb{1}} .\;}
+        \end{equation}
+        Esta es la \textit{relación de completitud} o \textit{resolución de la identidad}, y es con diferencia la herramienta de cálculo más utilizada en todo el formalismo: permite insertar una base completa en cualquier punto de una expresión sin alterarla, que es exactamente lo que hicimos al construir la integral de camino en \eqref{eq:Completitud} del capítulo anterior al partir el intervalo temporal en rodajas.
+
+        Los espacios de Hilbert relevantes en física son \textit{separables}, es decir, admiten una base ortonormal numerable, y ese hecho tiene una consecuencia notable: todos ellos son isomorfos entre sí. El espacio $L^{2}(\mathbb{R})$ de las funciones de onda de Schrödinger y el espacio $\ell^{2}$ de las sucesiones de cuadrado sumable de Heisenberg son, como demostró von Neumann, el mismo espacio escrito en dos bases distintas, y esa es la formulación precisa de la equivalencia entre la mecánica ondulatoria y la mecánica matricial. La disputa de 1926 sobre cuál de las dos teorías era la correcta carecía de objeto: eran la misma teoría en dos sistemas de coordenadas.
+
+        Una dificultad técnica surge cuando el observable tiene espectro continuo, como ocurre con la posición de una partícula libre. Los objetos $\ket{x}$ que uno querría usar como base no son normalizables, pues su producto interno es
+        \begin{equation}\label{eq:NormalizacionContinua}
+            \braket{x|x'} = \delta\left(x-x'\right),
+        \end{equation}
+        que diverge cuando $x = x'$, de modo que estrictamente no pertenecen al espacio de Hilbert. La relación de completitud adopta entonces la forma integral
+        \begin{equation}\label{eq:CompletitudContinua}
+            \int_{\mathbb{R}}\ket{x}\bra{x}\,dx = \hat{\mathbb{1}},
+        \end{equation}
+        y el tratamiento riguroso exige ampliar el espacio de Hilbert a una terna de espacios encajados, la llamada construcción del espacio de Hilbert equipado, en la cual las distribuciones adquieren carta de ciudadanía del mismo modo que en el capítulo primero la hubo de adquirir la delta de Dirac al servir de fuente puntual para la función de Green. No desarrollaremos ese aparato, pero hay que saber que existe y que las manipulaciones formales con $\ket{x}$ están justificadas por él y no por costumbre.
+
+\section{Los postulados}
+
+    Sobre la estructura anterior se levantan cinco enunciados que no se deducen de nada y que constituyen el contenido físico de la teoría. Los presentamos por separado porque cada uno responde a una pregunta distinta, a saber, qué describe el estado de un sistema, qué representa una magnitud medible, qué ocurre al medirla, cómo evoluciona el sistema cuando no se le mide y cómo se combinan dos sistemas en uno solo. Tras cada enunciado discutiremos su contenido y, cuando lo haya, también sus dificultades.
+
+    \subsection{Primer postulado: el estado}
+
+        \begin{Assumption}[Estado]\label{sup:Estado}
+            El estado de un sistema físico aislado en un instante dado queda completamente descrito por un vector $\ket{\psi}$ de norma unidad perteneciente a un espacio de Hilbert $\mathcal{H}$ asociado al sistema. Dos vectores que difieran en un factor de fase global, $\ket{\psi}$ y $e^{i\theta}\ket{\psi}$, describen el mismo estado físico.
+        \end{Assumption}
+
+        Tres afirmaciones distintas se esconden en este enunciado, y las separamos porque su contenido físico es muy diferente.
+
+        La primera es que la descripción es \textit{completa}. El vector de estado no es un resumen estadístico de nuestra ignorancia sobre variables ocultas más finas, al modo en que la distribución de velocidades de un gas resume nuestra ignorancia sobre las trayectorias individuales; es todo lo que hay que saber. Esta afirmación fue rechazada por Einstein, quien en el artículo de 1935 escrito con Podolsky y Rosen argumentó que la descripción cuántica debía ser incompleta, y el debate permaneció abierto hasta que Bell formuló en 1964 una desigualdad que permitía someterlo a prueba experimental. Los experimentos de Aspect y colaboradores, que este libro discute en el capítulo siguiente, dieron la razón a la mecánica cuántica.
+
+        La segunda es el \textit{principio de superposición}. Si $\ket{\psi_{1}}$ y $\ket{\psi_{2}}$ son estados posibles, también lo es cualquier combinación lineal normalizada
+        \begin{equation}\label{eq:Superposicion}
+            \ket{\psi} = c_{1}\ket{\psi_{1}} + c_{2}\ket{\psi_{2}},
+            \qquad
+            |c_{1}|^{2} + |c_{2}|^{2} = 1 \quad\text{si}\quad \braket{\psi_{1}|\psi_{2}} = 0 .
+        \end{equation}
+        Este principio es el responsable directo de todos los fenómenos de interferencia, y merece subrayarse que es el mismo principio que gobierna las ondas clásicas estudiadas en los capítulos primero y segundo. La diferencia entre la interferencia clásica y la cuántica no está en la superposición, que es idéntica, sino en qué es lo que se superpone: allí se superponen campos cuyo cuadrado es una intensidad medible, aquí se superponen amplitudes cuyo cuadrado es una probabilidad.
+
+        La tercera es la irrelevancia de la \textit{fase global}. Que $\ket{\psi}$ y $e^{i\theta}\ket{\psi}$ sean físicamente indistinguibles significa que el estado no es propiamente un vector sino un rayo, es decir, una clase de equivalencia de vectores que difieren en un factor complejo de módulo unidad. Hay que ser muy cuidadoso aquí, porque el estudiante confunde con facilidad este enunciado con la afirmación, radicalmente falsa, de que las fases no importan. Consideremos la superposición
+        \begin{equation}\label{eq:FaseRelativa}
+            \ket{\psi_{\theta}} = \frac{1}{\sqrt{2}}\left(\ket{\psi_{1}} + e^{i\theta}\ket{\psi_{2}}\right),
+        \end{equation}
+        cuya fase $\theta$ es \textit{relativa} entre las dos componentes y no global. Si multiplicamos el estado completo por $e^{i\varphi}$ nada cambia, pero si variamos $\theta$ el estado cambia por completo, y de hecho \eqref{eq:FaseRelativa} recorre un conjunto continuo de estados físicamente distintos a medida que $\theta$ varía entre $0$ y $2\pi$. \textbf{Las fases relativas son observables y las globales no lo son}, y toda la interferometría, clásica y cuántica, consiste en convertir fases relativas en diferencias de intensidad medibles.
+
+    \subsection{Segundo postulado: los observables}
+
+        \begin{Assumption}[Observables]\label{sup:Observables}
+            A toda magnitud física medible $A$ le corresponde un operador lineal autoadjunto $\hat{A}$ que actúa sobre el espacio de Hilbert del sistema. Los únicos resultados posibles de una medida de $A$ son los elementos del espectro de $\hat{A}$.
+        \end{Assumption}
+
+        La exigencia de linealidad es consistente con el principio de superposición, pues un operador no lineal destruiría la estructura del espacio. La exigencia de autoadjunción, es decir, de que $\hat{A}^{\dagger} = \hat{A}$ con igualdad también de los dominios de definición, tiene una motivación física inmediata que pasamos a demostrar.
+
+        \begin{myteo}\label{teo:ValoresPropiosReales}
+            Los valores propios de un operador autoadjunto son reales, y los vectores propios correspondientes a valores propios distintos son ortogonales.
+        \end{myteo}
+
+        \textbf{\textit{Demostración:}} sea $\hat{A}\ket{a} = a\ket{a}$ con $\ket{a}\neq 0$. Tomando el producto interno con el propio $\ket{a}$ obtenemos
+        \begin{equation}\label{eq:ValorPropioReal1}
+            \braket{a|\hat{A}|a} = a\braket{a|a},
+        \end{equation}
+        y tomando el complejo conjugado de esta igualdad, y usando la simetría hermítica \eqref{eq:SimetriaHermitica} junto con la definición de adjunto y la hipótesis $\hat{A}^{\dagger} = \hat{A}$,
+        \begin{equation}\label{eq:ValorPropioReal2}
+            \overline{\braket{a|\hat{A}|a}} = \braket{a|\hat{A}^{\dagger}|a} = \braket{a|\hat{A}|a} = \bar{a}\braket{a|a} .
+        \end{equation}
+        Restando \eqref{eq:ValorPropioReal2} de \eqref{eq:ValorPropioReal1} resulta $\left(a - \bar{a}\right)\braket{a|a} = 0$, y como la norma es estrictamente positiva por \eqref{eq:PositividadProducto}, concluimos $a = \bar{a}$, es decir, $a$ es real.
+
+        Para la segunda afirmación, sean $\hat{A}\ket{a} = a\ket{a}$ y $\hat{A}\ket{b} = b\ket{b}$ con $a\neq b$. Podemos calcular $\braket{b|\hat{A}|a}$ de dos maneras: dejando actuar el operador hacia la derecha se obtiene $a\braket{b|a}$, y dejándolo actuar hacia la izquierda, lo que es lícito por ser autoadjunto, se obtiene $\bar{b}\braket{b|a} = b\braket{b|a}$ puesto que $b$ ya sabemos que es real. Igualando ambos resultados,
+        \begin{equation}\label{eq:Ortogonalidad}
+            \left(a - b\right)\braket{b|a} = 0,
+        \end{equation}
+        y como $a\neq b$ por hipótesis, necesariamente $\braket{b|a} = 0$. $\blacksquare$
+
+        El teorema explica exactamente por qué los observables deben ser autoadjuntos: los resultados de las medidas son números reales, de modo que los valores propios han de serlo. La ortogonalidad, por su parte, tiene una lectura física igualmente directa: dos estados con valores distintos de una misma magnitud son perfectamente distinguibles, pues una medida los separa sin ambigüedad, y la ortogonalidad es la traducción geométrica de esa distinguibilidad.
+
+        El teorema espectral, que no demostraremos, garantiza además que los vectores propios de un operador autoadjunto forman una base completa del espacio, de modo que todo observable lleva asociada una descomposición
+        \begin{equation}\label{eq:DescomposicionEspectral}
+            \hat{A} = \sum_{n} a_{n}\ket{a_{n}}\bra{a_{n}} = \sum_{n} a_{n}\hat{P}_{n},
+            \qquad
+            \hat{P}_{n} \equiv \ket{a_{n}}\bra{a_{n}},
+        \end{equation}
+        donde los $\hat{P}_{n}$ son proyectores ortogonales que satisfacen $\hat{P}_{n}\hat{P}_{m} = \delta_{nm}\hat{P}_{n}$ y $\sum_{n}\hat{P}_{n} = \hat{\mathbb{1}}$. Nótese que \eqref{eq:DescomposicionEspectral} contiene toda la información sobre el observable: los valores que puede arrojar una medida y las direcciones del espacio asociadas a cada uno de ellos.
+
+        Merece una advertencia la distinción entre hermítico y autoadjunto, que en dimensión finita es vacua pero en dimensión infinita no lo es. Un operador puede satisfacer $\braket{\phi|\hat{A}\psi} = \braket{\hat{A}\phi|\psi}$ para todo par de vectores de su dominio y no ser autoadjunto, si el dominio de su adjunto es estrictamente mayor. El ejemplo clásico es el operador de momento en un intervalo finito, que admite una familia de extensiones autoadjuntas distintas según la condición de contorno que se imponga, y cada extensión describe una física diferente. Esta sutileza reaparecerá en el capítulo siguiente al intentar definir un operador de fase para el campo electromagnético, problema que Dirac abordó ingenuamente en 1927 y que resultó ser mucho más delicado de lo que parecía.
+
+    \subsection{Tercer postulado: la medida}
+
+        \begin{Assumption}[Regla de Born]\label{sup:Born}
+            Si el sistema se encuentra en el estado normalizado $\ket{\psi}$ y se mide el observable $\hat{A}$, la probabilidad de obtener el valor propio $a_{n}$ es
+            \begin{equation}\label{eq:ReglaBorn}
+                P(a_{n}) = \left|\braket{a_{n}|\psi}\right|^{2} = \braket{\psi|\hat{P}_{n}|\psi},
             \end{equation}
-
-            La rotación de dualidad cambia las proporciones relativas de los campos eléctrico y magnético. La presencia de cargas eléctricas en el mundo real rompe la simetría bajo las rotaciones de dualidad e introduce la distinción física entre electricidad y magnetismo. En otras palabras, en el plano de dualidad donde ocurren las rotaciones duales, se introduce una dirección distinguida debido a la carga eléctrica.
-
-            Existe cierta analogía entre el cambio de fase del vector RS y el cambio de fase de la función de onda en la mecánica de ondas. Es decir, las cantidades físicas más importantes, es decir, la energía del campo (Hamiltoniano) $H$, el momento $\Vec{P}$ y el momento angular $\Vec{M}$, son invariantes bajo el cambio de fase de $\Vec{F}$. Por supuesto, la fase de F, a diferencia de la fase de la función de onda, es observable una vez que distinguimos entre los campos eléctrico y magnético.
-
-            Las cantidades $H$, $\Vec{P}$ y $\Vec{M}$ son los generadores de las relaciones en el tiempo y el espacio y las rotaciones. La lista completa de generadores también incluye el generador de la transformación de Lorentz $\Vec{L}$.
-
-            \begin{equation}
-                \Vec{F}\cdot \Vec{F}^* = \frac{\epsilon}{2}E^2 + \frac{1}{2\mu}B^2\;,
+            e inmediatamente después de la medida el sistema queda en el estado propio correspondiente,
+            \begin{equation}\label{eq:Colapso}
+                \ket{\psi} \;\longrightarrow\; \frac{\hat{P}_{n}\ket{\psi}}{\sqrt{\braket{\psi|\hat{P}_{n}|\psi}}} .
             \end{equation}
+        \end{Assumption}
 
-            el cual, es bien sabido corresponde a la densidad de energía electromagnética, análogamente podemos encontrar la densidad de momentum ( que es el vector de Poyinting multiplicado por $\epsilon\mu$)
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.56\linewidth]{Capitulo 4/Figuras/MedidaProyeccion.pdf}
+            \caption{Contenido geométrico de la regla de Born. El estado se descompone en la base propia del observable y la probabilidad de cada resultado es el cuadrado del módulo de la componente correspondiente.}
+            \label{fig:MedidaProyeccion}
+        \end{figure}
 
-            \begin{equation}
-                \frac{i}{C}\left( \Vec{F} \times \Vec{F}^*\right) =  \Vec{D}\times \Vec{B}.
+        La prescripción es consistente, es decir, las probabilidades suman uno. Sumando \eqref{eq:ReglaBorn} sobre todos los resultados posibles y usando la completitud de la base de vectores propios,
+        \begin{equation}\label{eq:SumaProbabilidades}
+            \sum_{n}P(a_{n}) = \sum_{n}\braket{\psi|\hat{P}_{n}|\psi} = \braket{\psi|\left(\sum_{n}\hat{P}_{n}\right)|\psi} = \braket{\psi|\hat{\mathbb{1}}|\psi} = \braket{\psi|\psi} = 1,
+        \end{equation}
+        donde el último paso usa la normalización exigida en el postulado \ref{sup:Estado}. La normalización del estado y la conservación de la probabilidad son, por tanto, la misma condición, y esa es la razón de que el primer postulado exija norma unidad.
+
+        De la regla de Born se sigue de inmediato la expresión del valor medio de una magnitud, que es la cantidad que efectivamente se compara con el experimento cuando la medida se repite muchas veces sobre sistemas preparados de manera idéntica. Por definición de promedio estadístico,
+        \begin{equation}\label{eq:ValorMedio1}
+            \left\langle A\right\rangle = \sum_{n} a_{n}P(a_{n}) = \sum_{n}a_{n}\braket{\psi|\hat{P}_{n}|\psi} = \braket{\psi|\left(\sum_{n}a_{n}\hat{P}_{n}\right)|\psi},
+        \end{equation}
+        y reconociendo en el paréntesis la descomposición espectral \eqref{eq:DescomposicionEspectral} del propio operador obtenemos la fórmula fundamental
+        \begin{equation}\label{eq:ValorMedio}
+            \boxed{\;\left\langle A\right\rangle_{\psi} = \braket{\psi|\hat{A}|\psi} .\;}
+        \end{equation}
+        Este resultado no es un postulado adicional sino una consecuencia de \eqref{eq:ReglaBorn}, y hay que tenerlo presente porque en muchos textos se enuncia como si fuese independiente.
+
+        La segunda parte del postulado, la proyección del estado tras la medida, es con mucho la más problemática de toda la teoría y sería deshonesto presentarla sin señalarlo. Su justificación operativa es sólida: si medimos dos veces seguidas la misma magnitud sin dar tiempo al sistema a evolucionar, obtenemos el mismo resultado, y la única manera de que la teoría reproduzca ese hecho experimental es que la primera medida haya dejado al sistema en el estado propio correspondiente. En efecto, aplicando \eqref{eq:ReglaBorn} al estado proyectado,
+        \begin{equation}\label{eq:MedidaRepetida}
+            P'(a_{m}) = \frac{\braket{\psi|\hat{P}_{n}\hat{P}_{m}\hat{P}_{n}|\psi}}{\braket{\psi|\hat{P}_{n}|\psi}} = \frac{\delta_{nm}\braket{\psi|\hat{P}_{n}|\psi}}{\braket{\psi|\hat{P}_{n}|\psi}} = \delta_{nm},
+        \end{equation}
+        donde hemos usado la ortogonalidad de los proyectores, de manera que el segundo resultado coincide con el primero con certeza.
+
+        La dificultad es de otro orden y es la siguiente. El cuarto postulado, que enunciaremos a continuación, afirma que la evolución de un sistema aislado es unitaria, y por tanto lineal, determinista y reversible; el tercero afirma que la medida produce un salto no lineal, indeterminista e irreversible. Un aparato de medida está hecho de átomos y debería obedecer al cuarto postulado, de modo que la teoría contiene dos leyes de evolución incompatibles y no especifica dónde está la frontera entre sus dominios de aplicación. Esta es la formulación precisa del llamado \textit{problema de la medida}, y no está resuelto. Las respuestas que se han propuesto van desde negar que el colapso sea un proceso físico, como en la interpretación de Copenhague, hasta negar que ocurra en absoluto, como en la interpretación de los muchos mundos, pasando por modificar la ecuación de evolución para que el colapso emerja de ella, como en los modelos de colapso espontáneo. La teoría de la decoherencia explica de manera satisfactoria por qué las superposiciones macroscópicas se vuelven inobservables con enorme rapidez, y ese es un avance genuino, pero no explica por qué de todos los resultados posibles se realiza uno concreto. Que una teoría con esta fisura conceptual sea al mismo tiempo la más precisa jamás construida, con predicciones verificadas hasta la duodécima cifra decimal, es probablemente el hecho más desconcertante de la física contemporánea.
+
+        Cuando el valor propio $a_{n}$ está degenerado, es decir, cuando le corresponde un subespacio de dimensión mayor que uno, la regla de proyección debe formularse con el proyector sobre todo el subespacio y no sobre un vector particular, como estableció Lüders en 1950 \citep{luders1950zustandsanderung}; las expresiones \eqref{eq:ReglaBorn} y \eqref{eq:Colapso} ya están escritas en esa forma general, y por eso hemos preferido escribirlas con proyectores en lugar de con productos escalares.
+
+    \subsection{Cuarto postulado: la evolución}
+
+        \begin{Assumption}[Evolución]\label{sup:Evolucion}
+            Entre medidas, el estado de un sistema aislado evoluciona de manera determinista según la ecuación de Schrödinger
+            \begin{equation}\label{eq:SchrodingerPostulado}
+                i\hbar\frac{d}{dt}\ket{\psi(t)} = \hat{H}\ket{\psi(t)},
             \end{equation}
+            donde $\hat{H}$ es el operador hamiltoniano del sistema, obtenido del hamiltoniano clásico mediante la correspondencia canónica.
+        \end{Assumption}
 
-            y las cantidades electrodinámicas están dadas por las siguientes integrales:
+        La estructura de esta evolución se entiende mejor introduciendo el \textit{operador de evolución} $\hat{U}(t,t_{0})$ definido por
+        \begin{equation}\label{eq:OperadorEvolucion}
+            \ket{\psi(t)} = \hat{U}(t,t_{0})\ket{\psi(t_{0})},
+        \end{equation}
+        que para un hamiltoniano independiente del tiempo se obtiene integrando formalmente \eqref{eq:SchrodingerPostulado},
+        \begin{equation}\label{eq:ExponencialEvolucion}
+            \hat{U}(t,t_{0}) = \exp\left[-\frac{i}{\hbar}\hat{H}\left(t-t_{0}\right)\right],
+        \end{equation}
+        donde la exponencial de un operador se define mediante su serie de potencias. Que esta expresión resuelve la ecuación se comprueba derivándola término a término,
+        \begin{equation}\label{eq:VerificacionU}
+            i\hbar\frac{d\hat{U}}{dt} = i\hbar\left(-\frac{i}{\hbar}\hat{H}\right)\exp\left[-\frac{i}{\hbar}\hat{H}(t-t_{0})\right] = \hat{H}\hat{U},
+        \end{equation}
+        donde el producto $i\hbar\cdot(-i/\hbar) = 1$ deja exactamente el hamiltoniano.
 
-            \begin{align}\label{eq:VariableselectrodinamicasRS}
-                H = \int_{-\infty}^{\infty} \Vec{F}\cdot\Vec{F}^*d^3r, \\
-                \Vec{P} = \frac{i}{C}\int_{-\infty}^{\infty}\left(\Vec{F}\times \Vec{F}^* \right)d^3r, \\
-                \Vec{M} = \frac{i}{C}\int_{-\infty}^{\infty}\Vec{r}\times\left(\Vec{F}\times \Vec{F}^* \right)d^3r, \\
-                \Vec{L} = \int_{-\infty}^{\infty} \Vec{r} \Vec{F}\cdot\Vec{F}^*d^3r.
-            \end{align}
+        La propiedad esencial de esta evolución es su unitariedad, que demostramos a continuación porque es el fundamento de la conservación de la probabilidad.
 
-            El generador de la transformación de Lorentz $\Vec{L}$ toma la forma del primer momento de energía en $t=0$. Debido a que no es una integral de movimiento en otros instantes de tiempos, surge un término dependiente del tiempo $-C^2t\Vec{P}$.
+        \begin{myteo}\label{teo:Unitariedad}
+            Si $\hat{H}$ es autoadjunto, entonces el operador de evolución satisface $\hat{U}^{\dagger}\hat{U} = \hat{U}\hat{U}^{\dagger} = \hat{\mathbb{1}}$, y en consecuencia la norma del estado se conserva.
+        \end{myteo}
 
-            El vector de RS tiene una propiedad bastante importante la cual nos servirá más adelante para escribir las 4 ecuaciones como una sola en espacios-tiempo planos y de forma covariante (es decir que no dependen del marco de referencia) y es que el cuadrado de este vector es la combinación lineal de dos \textit{invariantes electrodinámicos relativistas},
-
-            \begin{equation}
-                F^2 = \Vec{F}\cdot\Vec{F} = \epsilon\left[\frac{1}{2}(E^2 - C^2B^2) + iC \Vec{E}\cdot\Vec{B}\right].
-            \end{equation}
-
-            tanto la parte real como la parte imaginaria son invariantes, la parte real me habla sobre la invarianza de la densidad de energía pues si recordamos el campo eléctrico y magnético depende del observador que los mida entonces la diferencia de las amplitudes de estos (multiplicados por algunos factores de escala) debe ser una cantidad que no dependa del observador. 
-
-            El segundo invariante relativista $\Vec{E}\cdot\Vec{B}$ lo podemos interpretar de varias formas, si nos montamos en un marco de referencia inercial los campos eléctricos y magnéticos se verán transformados, pero esta transformación de Lorentz se puede ver como una cierta rotación especial en un diagrama de espacio-tiempo y como el producto punto en realidad lo podemos ver como una proyección es natural que estas rotaciones especiales (transformaciones de Lorentz) me conserven las proyecciones. Podemos ver esta invariancia también desde un punto de vista un poco cuántico, este producto punto lo podemos interpretar como una interacción en un cierto punto en un instante dado $(\Vec{r},t)$ entonces es de esperar que esta interacción de las funciones de onda no dependa del observador.\\
-
-            En este orden e ideas no sería sorprendente que la transformación de propiedades del campo electromagnético expresadas en términos del vector de RS tengan las forma de rotatciones que conservan el cuadrado de $\Vec{F}$. Bajo rotaciones ordinarias, el vector de RS transforma como un vector normal:
-
-            \begin{equation}
-                \Vec{F}' = \Vec{F}cos\theta + \hat{n}\times \Vec{F}sen\theta + \hat{n}(\hat{n}\cdot\Vec{F})(1-cos\theta),
-            \end{equation}
-
-            donde $\theta$ es el ángulo de rotación y $\hat{n}$ es el vector unitario del eje de rotación. Una transformación pura de Lorentz es obtenida de esta ecuación sustituyendo el ángulo $\theta$ por la rotación imaginaria $-i\Theta$:
-
-            \begin{equation}\label{eq:transformRS}
-                \Vec{F}' = \Vec{F}cosh\Theta - i\hat{n}\times\Vec{F}senh\Theta + \hat{n}(\hat{n}\cdot\Vec{F})(1-cosh\Theta),
-            \end{equation}
-
-            donde $\Theta = atanh\left(\frac{v}{C}\right)$ y $\hat{n}$ es el vector unitario en la dirección de la velocidad.
-
-
-            
-        \subsubsection{La polarización de la luz como vector en la esfera de Poincaré como solución a las ecuaciones de Maxwell}
-
-            Cuando se habla de la polarización de la luz, por lo general en la literatura de pregrado , solo se habla de estados perfectamente polarizados de haces perfectamente monocromáticos y muy rara vez se hace un énfasis sobre la naturaleza estocástica o \textit{topológica} de la polarización, estocástica en el sentido de que hay cierto grado de polarización de la luz pues esta se compone de campo aleatorios y topológica en el sentido de que la esfera de Poincaré, un espacio de configuraciones que utilizamos para representar cualquier estado de polarización sobre o dentro de dicha esfera, fue encontrada por Poincaré  y encontró que ciertas proyecciones estereográficas  coincidan con los parámetros de Stokes. Vamos a revisar cómo utilizando el vector de RS en el espacio de Fourier las ecuaciones de Maxwell nos dan paso a un formulación muy natural de la Polarización como un vector que vive en una esfera.\\
-
-            Aplicando la transformación de Fourier a las ecuaciones de Maxwell escritas en términos del vector de RS llegamos a las siguientes ecuaciones algebráicas
-
-            \begin{equation}\label{eq:RSEvolution}
-                \partial_t \Vec{F} = C \Vec{k}\times \Vec{F}(\Vec{k},t),
-            \end{equation}
-
-            \begin{equation}\label{eq:transversalidad}
-                \Vec{k}\cdot \Vec{F}(\Vec{k},t) = 0.
-            \end{equation}
-
-            La condición de transversalidad \ref{eq:transversalidad} nos dice que el vector de RS solución debe vivir en un plano ortogonal al vector de onda $\Vec{k}$. Construyamos este espacio a partir de dos vectores ortogonales de polarización pero utilizando una base compleja $\hat{e}_{\pm}(\Vec{k)}$ la cual proviene de los vectores propios del siguiente producto cruz:
-
-            \begin{equation}
-                \Vec{k}\times \hat{e}_{\pm} = \mp ik\hat{e}_{\pm},
-            \end{equation}
-
-            donde $k = |\Vec{k}|$. Todos los vectores normalizados que satisfacen estas ecuaciones difieren solo en fase. Vamos a escoger las fases de estos vectores tales que $\hat{e}_+ = \hat{e}$ y $\hat{e}_- = \hat{e}^* = \hat{e}(-\Vec{k})$ más adelante veremos que estos vectores en coordenadas esféricas representan puntos diametralmente opuestos. Vamos a escoger el vector de polarización de la siguiente forma
-
-            \begin{equation}
-                \hat{e}(\Vec{k}) = \frac{\Vec{k}\times(\hat{u}\times \Vec{k}) - ik \hat{u}\times \Vec{k}}{\sqrt{2}k|\hat{u}\times\Vec{k}|},
-            \end{equation}
-
-            donde $\hat{u}$ es un vector unitario arbitrario, ahora bien si escogemos a $\hat{u}$ como un vector unitario en dirección $z$ el vector de polarización tiene la siguiente forma
-
-            \begin{equation}
-                \hat{e}(\Vec{k}) = 
-                \frac{1}{\sqrt{2}k\sqrt{k_x^2 + k_y^2}}
-                \begin{bmatrix}
-                    -kxkz + ikk_y\\
-                    -kykz - ikk_x\\
-                    k_x^2 + k_y^2
-                \end{bmatrix}.
-            \end{equation}
-
-        Acá podemos ver que el vector de polarización es adimensional y está normalizado es decir $\langle \hat{e},\hat{e \rangle = 1}$ . En coordenadas esféricas sabemos que existen las siguientes relaciones de cambio de coordenadas
-
-        \begin{align}
-            k_x = kcos\phi sen\theta,\\
-            k_y = ksen\phi sen\theta,\\
-            k_z = kcos\theta,
-        \end{align}
-
-        entonces el vector de polarización adquiere la siguiente forma
-
-        \begin{equation}
-            \hat{e}(\phi,\theta) = \frac{1}{\sqrt{2}}
-            \begin{bmatrix}
-                -cos\phi cos\theta + isen\phi \\
-                -sen\phi cos\theta - icos\phi \\
-                sen\theta
-            \end{bmatrix}.
+        \textbf{\textit{Demostración:}} el adjunto de la exponencial se obtiene conjugando la serie término a término, lo que cambia el signo del exponente imaginario y sustituye $\hat{H}$ por $\hat{H}^{\dagger}$,
+        \begin{equation}\label{eq:AdjuntoU}
+            \hat{U}^{\dagger} = \exp\left[+\frac{i}{\hbar}\hat{H}^{\dagger}\left(t-t_{0}\right)\right] = \exp\left[+\frac{i}{\hbar}\hat{H}\left(t-t_{0}\right)\right],
+        \end{equation}
+        donde el segundo paso usa la hipótesis $\hat{H}^{\dagger} = \hat{H}$. Multiplicando ambos operadores, y teniendo en cuenta que las exponenciales de un mismo operador conmutan entre sí, de manera que sus exponentes se suman,
+        \begin{equation}\label{eq:ProductoU}
+            \hat{U}^{\dagger}\hat{U} = \exp\left[\textcolor{red}{+\frac{i}{\hbar}\hat{H}(t-t_{0})} \textcolor{red}{-\frac{i}{\hbar}\hat{H}(t-t_{0})}\right] = \exp\left(0\right) = \hat{\mathbb{1}},
+        \end{equation}
+        donde los dos exponentes marcados en rojo se cancelan idénticamente. La conservación de la norma se sigue de inmediato,
+        \begin{equation}\label{eq:ConservacionNorma}
+            \braket{\psi(t)|\psi(t)} = \braket{\psi(t_{0})|\hat{U}^{\dagger}\hat{U}|\psi(t_{0})} = \braket{\psi(t_{0})|\psi(t_{0})} = 1 . \qquad\blacksquare
         \end{equation}
 
-        A diferencia de cómo se hace en la literatura no debemos ignorar la parte imaginaria ni subinterpretar la parte real, primero fijémonos en la parte real. Si nos damos cuenta la forma de este vector es idéntica a la del de Stokes cuando lo escribimos en términos de los ángulos de elipticidad y orientación $\chi$,$\Psi$ respectivamente el cual es \cite{goldstein2017polarized}
+        La lectura física de este teorema es que la autoadjunción del hamiltoniano, que ya habíamos exigido por ser la energía un observable, garantiza además que la probabilidad total no se pierda durante la evolución. Un hamiltoniano no autoadjunto describiría un sistema en el cual las partículas desaparecen, y de hecho los hamiltonianos efectivos no hermíticos se usan deliberadamente en óptica para describir medios con pérdidas, donde los fotones son absorbidos y la probabilidad de detectarlos efectivamente disminuye.
 
-        \begin{equation}
-            \Vec{S} = S_0 
-            \begin{bmatrix}
-                1\\
-                cos2\chi cos2\Psi\\
-                cos2\chi sen2\Psi \\
-                sen2\chi
-            \end{bmatrix},
+        Hay además una relación entre este postulado y el capítulo anterior. Comparando \eqref{eq:ExponencialEvolucion} con el propagador \eqref{eq:DefinicionPropagador} que definimos allí vemos que el núcleo de Feynman no es otra cosa que el elemento de matriz del operador de evolución entre estados de posición,
+        \begin{equation}\label{eq:PropagadorComoU}
+            K(x_{F},t;x_{I},0) = \braket{x_{F}|\hat{U}(t,0)|x_{I}},
+        \end{equation}
+        de modo que la integral de camino \eqref{eq:IntegralCamino} es una manera de calcular la exponencial de un operador sumando sobre trayectorias clásicas. Los dos formalismos son equivalentes y usaremos uno u otro según convenga.
+
+    \subsection{Quinto postulado: sistemas compuestos}
+
+        \begin{Assumption}[Composición]\label{sup:Composicion}
+            El espacio de estados de un sistema compuesto por dos subsistemas $A$ y $B$ es el producto tensorial de los espacios de cada uno,
+            \begin{equation}\label{eq:ProductoTensorial}
+                \mathcal{H}_{AB} = \mathcal{H}_{A}\otimes\mathcal{H}_{B} .
+            \end{equation}
+        \end{Assumption}
+
+        Si $\{\ket{a_{i}}\}$ y $\{\ket{b_{j}}\}$ son bases de cada factor, entonces $\{\ket{a_{i}}\otimes\ket{b_{j}}\}$ es una base del conjunto, de manera que la dimensión del espacio compuesto es el \textit{producto} de las dimensiones y no su suma, como ocurriría en una suma directa. Esa diferencia, que parece puramente aritmética, tiene una consecuencia física enorme: el estado más general del sistema compuesto,
+        \begin{equation}\label{eq:EstadoCompuesto}
+            \ket{\Psi} = \sum_{i,j}c_{ij}\,\ket{a_{i}}\otimes\ket{b_{j}},
+        \end{equation}
+        no puede en general factorizarse en la forma $\ket{\psi_{A}}\otimes\ket{\psi_{B}}$, pues para que ello ocurra la matriz de coeficientes $c_{ij}$ debe tener rango uno, condición que la inmensa mayoría de las matrices no cumple. Los estados que no admiten esa factorización se llaman \textit{entrelazados}, y son la regla y no la excepción.
+
+        Merece la pena detenerse en lo que acaba de aparecer, porque no es un tecnicismo del producto tensorial. La existencia de estados entrelazados es la consecuencia más profunda del formalismo y la que separa de manera más nítida a la física cuántica de la clásica, porque en un estado entrelazado el sistema compuesto está en un estado puro, es decir, perfectamente determinado, mientras que ninguno de sus subsistemas lo está. El todo está mejor definido que las partes, afirmación que no tiene ningún análogo clásico posible. Para describir el estado de uno solo de los subsistemas necesitaremos la matriz densidad, que introduciremos al final del capítulo, y que es precisamente el objeto que la teoría exige cuando se renuncia a mirar el sistema completo.
+
+\section{Compatibilidad y el principio de indeterminación}
+
+        El hecho de que los observables sean operadores, y de que los operadores en general no conmuten, introduce en la física una restricción que no tiene contrapartida clásica: no todas las magnitudes pueden determinarse simultáneamente. El resultado preciso es el siguiente.
+
+        \begin{myteo}\label{teo:Compatibles}
+            Dos observables $\hat{A}$ y $\hat{B}$ admiten un conjunto completo de vectores propios comunes si y solo si conmutan, $[\hat{A},\hat{B}] = 0$.
+        \end{myteo}
+
+        \textbf{\textit{Demostración:}} supongamos primero que existe una base común $\{\ket{n}\}$ tal que $\hat{A}\ket{n} = a_{n}\ket{n}$ y $\hat{B}\ket{n} = b_{n}\ket{n}$. Aplicando el conmutador a cualquier elemento de la base,
+        \begin{equation}\label{eq:ConmutadorBase}
+            \left[\hat{A},\hat{B}\right]\ket{n} = \hat{A}\hat{B}\ket{n} - \hat{B}\hat{A}\ket{n} = b_{n}\hat{A}\ket{n} - a_{n}\hat{B}\ket{n} = \left(\textcolor{red}{a_{n}b_{n}} - \textcolor{red}{b_{n}a_{n}}\right)\ket{n} = 0,
+        \end{equation}
+        donde los dos productos marcados en rojo se cancelan por ser números y conmutar entre sí. Como el conmutador anula a todos los elementos de una base, y es lineal, anula a todo el espacio y por tanto es el operador nulo.
+
+        Recíprocamente, supongamos $[\hat{A},\hat{B}] = 0$ y sea $\ket{a}$ un vector propio de $\hat{A}$ con valor propio $a$ no degenerado. Entonces
+        \begin{equation}\label{eq:ReciprocoConmutan}
+            \hat{A}\left(\hat{B}\ket{a}\right) = \hat{B}\hat{A}\ket{a} = a\left(\hat{B}\ket{a}\right),
+        \end{equation}
+        donde el primer paso usa la conmutación. La igualdad afirma que el vector $\hat{B}\ket{a}$ es también vector propio de $\hat{A}$ con el mismo valor propio $a$, y como hemos supuesto que ese valor propio no está degenerado, el subespacio correspondiente tiene dimensión uno y por tanto $\hat{B}\ket{a}$ debe ser proporcional a $\ket{a}$,
+        \begin{equation}\label{eq:BEsPropio}
+            \hat{B}\ket{a} = b\ket{a},
+        \end{equation}
+        es decir, $\ket{a}$ es también vector propio de $\hat{B}$. Cuando hay degeneración el argumento se aplica dentro de cada subespacio propio de $\hat{A}$, donde $\hat{B}$ actúa como un operador autoadjunto y puede diagonalizarse por el teorema espectral. $\blacksquare$
+
+        La interpretación física es directa, pero hay que enunciarla con cuidado, porque se presta a confusión. Si dos observables conmutan, existe una base de estados en los cuales ambos tienen valor definido, y medir uno no perturba el valor del otro, de modo que pueden medirse en cualquier orden con resultados reproducibles; se dice entonces que son \textit{compatibles}. Si no conmutan, no existe tal base, y la afirmación de que el sistema posee simultáneamente valores definidos de ambas magnitudes carece de sentido dentro de la teoría. No se trata de que el sistema tenga esos valores y nosotros no podamos conocerlos, sino de que la teoría no le atribuye tales valores, y esta distinción, que Bohr insistió en subrayar durante toda su vida, es la diferencia entre la mecánica cuántica y una teoría clásica con ignorancia añadida.
+
+        Un conjunto de observables que conmutan dos a dos y cuyos valores propios simultáneos identifican unívocamente a cada elemento de la base se llama \textit{conjunto completo de observables compatibles}, y proporciona la manera sistemática de etiquetar los estados de un sistema. En el capítulo siguiente los estados del campo electromagnético en una cavidad se etiquetarán mediante los números de ocupación de todos los modos, que forman precisamente un conjunto de esta clase.
+
+        La incompatibilidad admite una formulación cuantitativa. Definamos la \textit{dispersión} de un observable en un estado dado como la raíz cuadrada de la varianza,
+        \begin{equation}\label{eq:Dispersion}
+            \left(\Delta A\right)^{2} \equiv \left\langle\left(\hat{A} - \left\langle A\right\rangle\right)^{2}\right\rangle = \left\langle \hat{A}^{2}\right\rangle - \left\langle A\right\rangle^{2},
+        \end{equation}
+        donde la segunda igualdad se obtiene desarrollando el cuadrado y usando la linealidad del valor medio. La dispersión mide cuánto fluctúan los resultados de la medida alrededor de su promedio, y se anula si y solo si el estado es un vector propio del observable.
+
+        \begin{myteo}[Robertson]\label{teo:Robertson}
+            Para cualesquiera dos observables $\hat{A}$ y $\hat{B}$ y cualquier estado normalizado $\ket{\psi}$ se cumple
+            \begin{equation}\label{eq:Robertson}
+                \Delta A\,\Delta B \;\geq\; \frac{1}{2}\left|\left\langle\left[\hat{A},\hat{B}\right]\right\rangle\right| .
+            \end{equation}
+        \end{myteo}
+
+        \textbf{\textit{Demostración:}} definamos los operadores centrados
+        \begin{equation}\label{eq:OperadoresCentrados}
+            \hat{\mathcal{A}} = \hat{A} - \left\langle A\right\rangle, \qquad \hat{\mathcal{B}} = \hat{B} - \left\langle B\right\rangle,
+        \end{equation}
+        que son autoadjuntos por serlo $\hat{A}$ y $\hat{B}$ y por ser reales sus valores medios, y que satisfacen $\left(\Delta A\right)^{2} = \braket{\psi|\hat{\mathcal{A}}^{2}|\psi}$ y análogamente para $\hat{\mathcal{B}}$. Su conmutador, además, coincide con el de los operadores originales, pues las constantes conmutan con todo,
+        \begin{equation}\label{eq:ConmutadorCentrado}
+            \left[\hat{\mathcal{A}},\hat{\mathcal{B}}\right] = \left[\hat{A} - \left\langle A\right\rangle,\;\hat{B} - \left\langle B\right\rangle\right] = \left[\hat{A},\hat{B}\right] .
         \end{equation}
 
-        es inevitable negar el parentesco de la parte real del vector de polarización con el vector que formarían $[s_1,s_2,s_3]$ en coordenadas polares, podemos demostrar que la correspondencia entre los ángulos $\phi$ y $\theta$ es tal que coinciden con los ángulos $2\chi$ y $2\Psi$. \\
-
-        La parte imaginaria no debe ser ignorada pues en realidad esta coincide con el vector de Young normalizado es decir, en este formalismo podemos encontrar dos representaciones importantísimas que se han usado a lo largo de la historia en el estudio de la polarización.
-        
-        \subsection{El tensor de RS en espacios-tiempo planos}
-
-        El objetivo principal de esta sección es entender las relación entre las ecuaciones de Maxwell, los observables electromagnéticos, y ciertas cantidades que llamamos invariantes relativistas electrodinámicos para formular un tensor de energía momentum, el cual contiene toda la información sobre los variables mecánicas, electromagnéticas y termodinámicas del sistema.\\
-
-        Partamos de una acción generalizada $S$ de la siguiente forma:
-        
-        \begin{equation}
-            S = \int L\left(q,\frac{\partial q}{\partial x^{\alpha}}\right)dt .
+        Con los vectores $\ket{u} = \hat{\mathcal{A}}\ket{\psi}$ y $\ket{v} = \hat{\mathcal{B}}\ket{\psi}$, cuyas normas al cuadrado son precisamente las varianzas, se tiene
+        \begin{equation}\label{eq:NormasUV}
+            \braket{u|u} = \braket{\psi|\hat{\mathcal{A}}^{\dagger}\hat{\mathcal{A}}|\psi} = \braket{\psi|\hat{\mathcal{A}}^{2}|\psi} = \left(\Delta A\right)^{2},
+            \qquad
+            \braket{v|v} = \left(\Delta B\right)^{2} .
+        \end{equation}
+        La desigualdad de Cauchy y Schwarz, válida en todo espacio con producto interno, afirma que
+        \begin{equation}\label{eq:CauchySchwarz}
+            \braket{u|u}\braket{v|v} \geq \left|\braket{u|v}\right|^{2},
+        \end{equation}
+        de manera que el problema se reduce a acotar inferiormente el miembro derecho. El número complejo $\braket{u|v}$ se separa en sus partes real e imaginaria como
+        \begin{equation}\label{eq:SeparacionZ}
+            \braket{u|v} = \braket{\psi|\hat{\mathcal{A}}\hat{\mathcal{B}}|\psi} = \frac{1}{2}\braket{\psi|\left\{\hat{\mathcal{A}},\hat{\mathcal{B}}\right\}|\psi} + \frac{1}{2}\braket{\psi|\left[\hat{\mathcal{A}},\hat{\mathcal{B}}\right]|\psi},
+        \end{equation}
+        donde hemos usado la identidad $\hat{\mathcal{A}}\hat{\mathcal{B}} = \frac{1}{2}\{\hat{\mathcal{A}},\hat{\mathcal{B}}\} + \frac{1}{2}[\hat{\mathcal{A}},\hat{\mathcal{B}}]$, que se comprueba desarrollando el anticonmutador y el conmutador y observando que los términos $\hat{\mathcal{B}}\hat{\mathcal{A}}$ se cancelan,
+        \begin{equation}\label{eq:IdentidadAntiConm}
+            \frac{1}{2}\left(\hat{\mathcal{A}}\hat{\mathcal{B}} + \textcolor{red}{\hat{\mathcal{B}}\hat{\mathcal{A}}}\right) + \frac{1}{2}\left(\hat{\mathcal{A}}\hat{\mathcal{B}} - \textcolor{red}{\hat{\mathcal{B}}\hat{\mathcal{A}}}\right) = \hat{\mathcal{A}}\hat{\mathcal{B}} .
         \end{equation}
 
-        Donde $L$ es el lagrangiano del sistema y el conjunto de pares conjungados es $\{q(x^{\alpha}) , \frac{\partial q}{\partial x^{\alpha}}\}\;\; \alpha = 0,1,2,3$. El hecho de considerar una coordenada "$\alpha = 0$" implica que consideramos una variedad espacio-temporal esto con el objetivo de analizar la electrodinámica del sistema en un espacio-tiempo un tratamiento más amplio que si tan solo tomáramos el espacio físico tridimensional al que estamos acostumbrados. \\
+        Los dos términos de \eqref{eq:SeparacionZ} tienen carácter distinto, y esa es la clave de la demostración. El anticonmutador de dos operadores autoadjuntos es autoadjunto, de modo que su valor medio es real; el conmutador de dos operadores autoadjuntos es antiautoadjunto, pues
+        \begin{equation}\label{eq:ConmutadorAntihermitico}
+            \left[\hat{\mathcal{A}},\hat{\mathcal{B}}\right]^{\dagger} = \left(\hat{\mathcal{A}}\hat{\mathcal{B}}\right)^{\dagger} - \left(\hat{\mathcal{B}}\hat{\mathcal{A}}\right)^{\dagger} = \hat{\mathcal{B}}\hat{\mathcal{A}} - \hat{\mathcal{A}}\hat{\mathcal{B}} = -\left[\hat{\mathcal{A}},\hat{\mathcal{B}}\right],
+        \end{equation}
+        y el valor medio de un operador antiautoadjunto es imaginario puro. El módulo al cuadrado de \eqref{eq:SeparacionZ} es por tanto la suma de los cuadrados de ambas contribuciones,
+        \begin{equation}\label{eq:ModuloZ}
+            \left|\braket{u|v}\right|^{2} = \frac{1}{4}\left|\left\langle\left\{\hat{\mathcal{A}},\hat{\mathcal{B}}\right\}\right\rangle\right|^{2} + \frac{1}{4}\left|\left\langle\left[\hat{\mathcal{A}},\hat{\mathcal{B}}\right]\right\rangle\right|^{2}
+            \;\geq\; \frac{1}{4}\left|\left\langle\left[\hat{\mathcal{A}},\hat{\mathcal{B}}\right]\right\rangle\right|^{2},
+        \end{equation}
+        donde la desigualdad final se obtiene simplemente descartando el primer sumando, que es no negativo. Combinando \eqref{eq:NormasUV}, \eqref{eq:CauchySchwarz} y \eqref{eq:ModuloZ}, y usando \eqref{eq:ConmutadorCentrado},
+        \begin{equation}\label{eq:RobertsonFinal}
+            \left(\Delta A\right)^{2}\left(\Delta B\right)^{2} \geq \frac{1}{4}\left|\left\langle\left[\hat{A},\hat{B}\right]\right\rangle\right|^{2},
+        \end{equation}
+        y tomando la raíz cuadrada, que preserva la desigualdad por ser ambos miembros no negativos, se obtiene \eqref{eq:Robertson}. $\blacksquare$
 
-        Como se mencionó anteriormente queremos relacionar las ecuaciones de Maxwell e invariantes con observables, desde este punto de vista físico no es tan conveniente trabajar con el lagrangiano, sino con una densidad lagrangiana $\mathcal{L}$ por lo cual la acción $S$ se escribiría como:
+        Aplicando el teorema al par canónico, cuyo conmutador es el número $i\hbar$ según \eqref{eq:ConmutadorHistorico}, el valor medio se calcula de inmediato porque una constante sale fuera y el estado está normalizado,
+        \begin{equation}\label{eq:HeisenbergCanonico}
+            \Delta x\,\Delta p \geq \frac{1}{2}\left|\braket{\psi|i\hbar|\psi}\right| = \frac{\hbar}{2}\left|\braket{\psi|\psi}\right| = \frac{\hbar}{2},
+        \end{equation}
+        que es la relación de indeterminación de Heisenberg en la forma precisa que le dio Kennard \citep{kennard1927quantenmechanik}.
 
-        \begin{equation}
-            S = \int_{\mathcal{R}^4}\Lambda \left(q , \frac{\partial q}{\partial x^{\alpha}} \right)d^3rdt \;\;[J\;S] \;.
+        La interpretación de \eqref{eq:HeisenbergCanonico} exige cuidado porque la que popularizó Heisenberg es incorrecta, o al menos gravemente incompleta. El argumento del microscopio de rayos gamma, según el cual al iluminar el electrón con un fotón de longitud de onda corta se le transfiere un momento incontrolado, describe un efecto real pero sugiere que la partícula \textit{tiene} una posición y un momento definidos que la medida perturba. Nada en la demostración anterior se refiere a perturbación alguna: la desigualdad \eqref{eq:Robertson} es una propiedad del estado, no del procedimiento de medida, y afirma que \textbf{no existe ningún estado en el cual ambas dispersiones sean simultáneamente arbitrariamente pequeñas}. Las dispersiones se determinan midiendo cada magnitud sobre sistemas distintos preparados de manera idéntica, de modo que ni siquiera hace falta medir ambas sobre el mismo sistema para que la relación se manifieste. La indeterminación es una propiedad de la preparación y no del acto de medir.
+
+        Vale la pena añadir, porque lo usaremos en el capítulo siguiente, que la desigualdad \eqref{eq:HeisenbergCanonico} se satura, es decir, se convierte en igualdad, precisamente para los estados gaussianos, y que en el contexto del campo electromagnético esa saturación define a los estados coherentes y, cuando además se redistribuye la incertidumbre entre las dos cuadraturas, a los estados comprimidos. La luz comprimida consiste en explotar el hecho de que \eqref{eq:HeisenbergCanonico} acota el producto de las dispersiones y no cada una de ellas por separado, de manera que una cuadratura puede medirse con precisión arbitraria a costa de la otra.
+
+\section{Representaciones}
+
+        El formalismo desarrollado hasta aquí es abstracto, en el sentido de que no hace referencia a ninguna base concreta. Para calcular hay que escoger una, y las dos elecciones habituales son las bases de vectores propios de la posición y del momento.
+
+        En la \textit{representación de posición} se desarrolla el estado en la base $\{\ket{x}\}$ mediante la completitud continua \eqref{eq:CompletitudContinua},
+        \begin{equation}\label{eq:FuncionOnda}
+            \ket{\psi} = \int_{\mathbb{R}}\ket{x}\braket{x|\psi}\,dx \equiv \int_{\mathbb{R}}\psi(x)\ket{x}\,dx,
+            \qquad
+            \psi(x) \equiv \braket{x|\psi},
+        \end{equation}
+        y la colección de coeficientes $\psi(x)$ es precisamente la \textit{función de onda} de Schrödinger. La función de onda no es el estado sino sus componentes en una base particular, exactamente como las tres componentes de un vector ordinario no son el vector sino su expresión en unos ejes escogidos, y esta observación, evidente una vez formulada, es la que disuelve la pretendida rivalidad entre la mecánica ondulatoria y la matricial.
+
+        En esta representación la regla de Born \eqref{eq:ReglaBorn} adopta la forma familiar: la probabilidad de hallar la partícula en el intervalo $[x,x+dx]$ es
+        \begin{equation}\label{eq:BornPosicion}
+            dP = \left|\braket{x|\psi}\right|^{2}dx = \left|\psi(x)\right|^{2}dx,
+        \end{equation}
+        que es la interpretación que Born propuso en su nota al pie de 1926 \citep{born1926stossvorgange}.
+
+        La acción del operador de posición es multiplicativa, pues $\braket{x|\hat{x}|\psi} = x\braket{x|\psi} = x\psi(x)$. Para el operador de momento la acción se deduce del conmutador canónico, y hacemos el cálculo porque suele presentarse como una definición cuando en realidad es un teorema. Partiendo de la identidad $[\hat{x},\hat{p}] = i\hbar$ y tomando su elemento de matriz entre estados de posición,
+        \begin{equation}\label{eq:ElementoConmutador}
+            \braket{x|\left(\hat{x}\hat{p} - \hat{p}\hat{x}\right)|x'} = \left(x - x'\right)\braket{x|\hat{p}|x'} = i\hbar\,\delta\left(x-x'\right),
+        \end{equation}
+        donde hemos dejado actuar $\hat{x}$ hacia la izquierda en el primer término y hacia la derecha en el segundo, lo que es lícito por ser autoadjunto. La solución de esta ecuación, en el sentido de las distribuciones, es
+        \begin{equation}\label{eq:MomentoDistribucion}
+            \braket{x|\hat{p}|x'} = -i\hbar\,\frac{\partial}{\partial x}\delta\left(x-x'\right),
+        \end{equation}
+        como se verifica usando la propiedad $y\,\delta'(y) = -\delta(y)$ de la delta de Dirac. Aplicando \eqref{eq:MomentoDistribucion} a un estado arbitrario e integrando por partes,
+        \begin{equation}\label{eq:MomentoDerivada}
+            \braket{x|\hat{p}|\psi} = \int_{\mathbb{R}}\braket{x|\hat{p}|x'}\braket{x'|\psi}dx'
+            = -i\hbar\int_{\mathbb{R}}\frac{\partial\delta(x-x')}{\partial x}\psi(x')\,dx'
+            = -i\hbar\frac{\partial\psi(x)}{\partial x},
+        \end{equation}
+        de manera que en la representación de posición el momento actúa como una derivada,
+        \begin{equation}\label{eq:OperadorMomento}
+            \boxed{\;\hat{p} \;\longrightarrow\; -i\hbar\frac{\partial}{\partial x} .\;}
+        \end{equation}
+        Sustituyendo esta prescripción y la multiplicativa para la posición en el hamiltoniano $\hat{H} = \hat{p}^{2}/2m + V(\hat{x})$, la ecuación de evolución \eqref{eq:SchrodingerPostulado} se convierte literalmente en la ecuación diferencial \eqref{eq:SchrodingerTemporal} que dedujimos en el capítulo anterior siguiendo el razonamiento de Schrödinger. Aquel camino, que partía de la óptica y de Hamilton-Jacobi, y este, que parte de los postulados y del álgebra de conmutadores, conducen exactamente a la misma ecuación.
+
+        La relación entre las dos representaciones es de especial interés en este libro, porque resulta ser la misma transformación que gobierna la difracción en campo lejano estudiada en el capítulo primero.
+
+        Los estados propios del momento en la representación de posición se obtienen resolviendo la ecuación de valores propios $\hat{p}\ket{p} = p\ket{p}$ con la prescripción \eqref{eq:OperadorMomento},
+        \begin{equation}\label{eq:EcuacionPropiosP}
+            -i\hbar\frac{\partial}{\partial x}\braket{x|p} = p\braket{x|p},
+        \end{equation}
+        que es una ecuación diferencial ordinaria de primer orden cuya solución es una exponencial. Separando variables e integrando,
+        \begin{equation}\label{eq:SolucionPropiosP}
+            \frac{\partial\braket{x|p}}{\braket{x|p}} = \frac{ip}{\hbar}\partial x
+            \qquad\Longrightarrow\qquad
+            \braket{x|p} = \frac{1}{\sqrt{2\pi\hbar}}\,e^{ipx/\hbar},
+        \end{equation}
+        donde la constante de normalización se fija exigiendo $\braket{p|p'} = \delta(p-p')$ y usando la representación integral de la delta. Estas son ondas planas, es decir, exactamente los objetos que en el capítulo primero describían la propagación de una componente espectral del campo.
+
+        Insertando la completitud en posiciones, la función de onda en la representación de momentos resulta ser
+        \begin{equation}\label{eq:FourierMomento}
+            \tilde{\psi}(p) = \braket{p|\psi} = \int_{\mathbb{R}}\braket{p|x}\braket{x|\psi}\,dx
+            = \frac{1}{\sqrt{2\pi\hbar}}\int_{\mathbb{R}}\psi(x)\,e^{-ipx/\hbar}\,dx,
+        \end{equation}
+        que es la transformada de Fourier de la función de onda, con $\hbar$ haciendo el papel de la constante que empareja las dos variables conjugadas. Posición y momento son variables conjugadas de Fourier, del mismo modo que lo son la coordenada en el plano del objeto y la frecuencia espacial en el plano de Fraunhofer, y esa coincidencia explica por qué el principio de indeterminación tiene un análogo exacto en óptica clásica: el producto de la anchura de una abertura por la anchura angular de su patrón de difracción está acotado inferiormente por la misma razón matemática por la cual lo está $\Delta x\,\Delta p$. En ambos casos se trata del teorema según el cual una función y su transformada de Fourier no pueden estar ambas arbitrariamente concentradas.
+
+        La conexión llega aún más lejos. En el capítulo primero demostramos que la propagación de Fresnel entre dos superficies esféricas es una transformada fraccionaria de Fourier, es decir, una interpolación continua entre la identidad y la transformada ordinaria. En el capítulo anterior obtuvimos que la evolución temporal de un oscilador armónico es esa misma transformación, con el ángulo fraccionario igual a $\omega t$. Y ahora vemos que la transformada ordinaria conecta las representaciones de posición y momento. Las tres afirmaciones son consistentes entre sí y dicen, reunidas, que la evolución de un oscilador armónico durante un cuarto de período intercambia exactamente los papeles de la posición y del momento, hecho que en el capítulo siguiente reaparecerá como la rotación de las cuadraturas del campo electromagnético en el espacio de fase.
+
+\section{Las imágenes de evolución}
+
+        El postulado \ref{sup:Evolucion} atribuye la evolución temporal al estado y deja fijos los operadores, y esa es la llamada \textit{imagen de Schrödinger}. Sin embargo, todo lo que la teoría predice son valores medios de la forma \eqref{eq:ValorMedio}, y en esa expresión aparecen tanto el estado como el operador, de manera que la asignación de la dependencia temporal a uno u otro es convencional. Podemos escribir el valor medio en el instante $t$ sustituyendo la evolución \eqref{eq:OperadorEvolucion},
+        \begin{equation}\label{eq:ValorMedioEvolucionado}
+            \left\langle A\right\rangle_{t} = \braket{\psi(t)|\hat{A}|\psi(t)}
+            = \braket{\psi(0)|\hat{U}^{\dagger}(t)\,\hat{A}\,\hat{U}(t)|\psi(0)},
+        \end{equation}
+        y observemos que la misma expresión admite dos lecturas: podemos agrupar los operadores de evolución con los estados, que es la imagen de Schrödinger, o agruparlos con el observable, definiendo
+        \begin{equation}\label{eq:OperadorHeisenberg}
+            \hat{A}_{H}(t) \equiv \hat{U}^{\dagger}(t)\,\hat{A}\,\hat{U}(t),
+        \end{equation}
+        con lo cual el estado permanece congelado y es el operador el que evoluciona. Esta es la \textit{imagen de Heisenberg}, y es literalmente la formulación que Heisenberg construyó en 1925, antes de que existiese la función de onda.
+
+        La ecuación de movimiento de estos operadores se deduce sin dificultad. Derivando \eqref{eq:OperadorHeisenberg} respecto del tiempo mediante la regla del producto, y usando que $d\hat{U}/dt = -i\hat{H}\hat{U}/\hbar$ junto con su adjunta $d\hat{U}^{\dagger}/dt = +i\hat{U}^{\dagger}\hat{H}/\hbar$,
+        \begin{equation}\label{eq:DerivadaHeisenberg}
+            \frac{d\hat{A}_{H}}{dt} = \frac{i}{\hbar}\hat{U}^{\dagger}\hat{H}\hat{A}\hat{U} - \frac{i}{\hbar}\hat{U}^{\dagger}\hat{A}\hat{H}\hat{U} + \hat{U}^{\dagger}\frac{\partial\hat{A}}{\partial t}\hat{U},
+        \end{equation}
+        donde el último término recoge una posible dependencia temporal explícita del observable. Insertando la identidad $\hat{U}\hat{U}^{\dagger} = \hat{\mathbb{1}}$ entre los operadores de cada producto, lo que es lícito por la unitariedad demostrada en el teorema \ref{teo:Unitariedad}, y reconociendo en cada factor la definición \eqref{eq:OperadorHeisenberg},
+        \begin{equation}\label{eq:EcuacionHeisenberg}
+            \boxed{\;\frac{d\hat{A}_{H}}{dt} = \frac{1}{i\hbar}\left[\hat{A}_{H},\hat{H}\right] + \left(\frac{\partial\hat{A}}{\partial t}\right)_{H} .\;}
         \end{equation}
 
-        A  través de principios variacionales, en los cuales extremamos el funcional  de acción $S$, se llega a la ecuación de Euler-Lagrange tal que podemos encontrar una densidad lagrangiana $\Lambda$ estacionaria para dicho funcional.
-
-        \begin{equation}\label{eq:EL}
-            \frac{\partial}{\partial x^{\alpha}}\left[\frac{\partial \Lambda}{\partial \left(\frac{\partial q}{\partial x^{\alpha}} \right)} \right] - \frac{\partial \Lambda}{\partial q} = 0 \; .
+        Al lado de esta ecuación vale la pena poner la ecuación de movimiento clásica en forma de Poisson que obtuvimos en el capítulo anterior,
+        \begin{equation}\label{eq:ComparacionPoisson}
+            \frac{df}{dt} = \left\{f,H\right\} + \frac{\partial f}{\partial t},
         \end{equation}
+        y la correspondencia es exacta bajo la regla de Dirac \eqref{eq:CorrespondenciaDirac}, que sustituye el corchete de Poisson por el conmutador dividido por $i\hbar$. La imagen de Heisenberg es la mecánica hamiltoniana con los observables convertidos en operadores y el corchete de Poisson convertido en conmutador, y esa identidad estructural es la razón por la cual el procedimiento de cuantización canónica funciona. En el capítulo siguiente aplicaremos \eqref{eq:EcuacionHeisenberg} a los operadores de creación y aniquilación del campo para obtener su dependencia temporal, y comprobaremos que reproduce las oscilaciones armónicas del campo clásico.
 
-        Para calcular la ecuación de Euler-Lagrange \ref{eq:EL} vamos primero a calcular la derivada parcial respecto a la coordenada $\alpha$-ésima de la densidad lagrangiana $\Lambda$.
+    \subsection{El teorema de Ehrenfest y el límite clásico}
 
-        \begin{equation*}
-            \frac{\partial \Lambda}{\partial x^{\alpha}} = \frac{\partial \Lambda}{\partial q}\frac{\partial q}{\partial x^{\alpha}} + \frac{\partial \Lambda}{\partial \left(\frac{\partial q}{\partial x^{\beta}}\right)}\frac{\partial \left(\frac{\partial q}{\partial x^{\beta}} \right)}{\partial x^{\alpha}} \; ,
-        \end{equation*}
+        La imagen de Heisenberg permite demostrar con muy poco esfuerzo en qué sentido preciso la mecánica clásica emerge de la cuántica, resultado que Ehrenfest estableció en 1927 \citep{ehrenfest1927bemerkung}.
 
-        El segundo miembro de la anterior ecuación se anula y de la ecuación \ref{eq:EL} tenemos la siguiente ecuación diferencial parcial:
-
-        \begin{equation}\label{eq:LamAlf}
-            \frac{\partial \Lambda}{\partial x^{\alpha}} = \frac{\partial}{\partial x^{\beta}}\left[\frac{\partial \Lambda}{\partial \left(\frac{\partial q}{\partial x^{\beta}} \right)} \right]\frac{\partial q}{\partial x^{\alpha}} \; .
+        Podemos aplicar \eqref{eq:EcuacionHeisenberg} a los operadores canónicos para una partícula con hamiltoniano $\hat{H} = \hat{p}^{2}/2m + V(\hat{x})$. Para la posición necesitamos el conmutador $[\hat{x},\hat{p}^{2}]$, que calculamos insertando el conmutador canónico dos veces,
+        \begin{equation}\label{eq:ConmutadorXP2}
+            \left[\hat{x},\hat{p}^{2}\right] = \hat{p}\left[\hat{x},\hat{p}\right] + \left[\hat{x},\hat{p}\right]\hat{p} = i\hbar\hat{p} + i\hbar\hat{p} = 2i\hbar\hat{p},
         \end{equation}
-
-        Si en el sistema hay cantidades disipativas  podemos añadir sus respectivas densidades asociadas como una suma al miembro derecho de la ecuación \ref{eq:LamAlf}, en esta misma ecuación podemos observar derivadas cruzadas, es decir, la ecuación \ref{eq:LamAlf} se puede reescribir como:
-
-        \begin{equation}
-            \frac{\partial \Lambda}{\partial x^{\alpha}} = \frac{\partial}{\partial x^{\beta}}\left[\frac{\partial q}{\partial x^{\alpha}}\frac{\partial \Lambda}{\partial \left(\frac{\partial q}{\partial x^{\beta}} \right)} \right] \; ,
+        donde hemos usado la identidad $[\hat{A},\hat{B}\hat{C}] = \hat{B}[\hat{A},\hat{C}] + [\hat{A},\hat{B}]\hat{C}$. Sustituyendo en la ecuación de Heisenberg, y teniendo en cuenta que $\hat{x}$ conmuta con $V(\hat{x})$,
+        \begin{equation}\label{eq:EhrenfestX}
+            \frac{d\hat{x}}{dt} = \frac{1}{i\hbar}\cdot\frac{2i\hbar\hat{p}}{2m} = \frac{\hat{p}}{m} .
         \end{equation}
-
-        Si jugamos un poco con esta ecuación llegaremos a la siguiente ley de conservación:
-
-        \begin{equation}
-            \frac{\partial}{\partial x^{\beta}}\left[-\delta_{\alpha}^{\;\beta}\Lambda + \frac{\partial q}{\partial x^{\alpha}}\frac{\partial \Lambda}{\partial \left(\frac{\partial q}{\partial x^{\beta}} \right)} \right] = 0 \; .
+        Para el momento necesitamos $[\hat{p},V(\hat{x})]$, que se obtiene aplicando la representación \eqref{eq:OperadorMomento} a un estado arbitrario y usando la regla del producto,
+        \begin{equation}\label{eq:ConmutadorPV}
+            \left[\hat{p},V\right]\psi = -i\hbar\frac{\partial}{\partial x}\left(V\psi\right) + i\hbar V\frac{\partial\psi}{\partial x}
+            = -i\hbar\frac{\partial V}{\partial x}\psi - \textcolor{red}{i\hbar V\frac{\partial\psi}{\partial x}} + \textcolor{red}{i\hbar V\frac{\partial\psi}{\partial x}}
+            = -i\hbar\frac{\partial V}{\partial x}\psi,
         \end{equation}
-
-        Vemos que de manera natural surge una cantidad conservada, y por la naturaleza de las coordenadas $\{x^{\beta}\}$ es una cantidad conservada en el espacio y el tiempo o bien una cantidad que se conserva en el tiempo y otra que se conserva en el espacio, definiremos esta cantidad como el tensor de energía momentum $\mathbb{T}$ de la siguiente forma:
-
-        \begin{equation}
-            T^{\;\beta}_{\alpha} = -\delta_{\alpha}^{\;\beta}\Lambda + \frac{\partial q}{\partial x^{\alpha}}\frac{\partial \Lambda}{\partial \left(\frac{\partial q}{\partial x^{\beta}} \right)}\;.
-        \end{equation}  
-
-        \begin{equation*}
-            \frac{\partial}{\partial x^{\beta}} T^{\;\beta}_{\alpha} = 0\;.
-        \end{equation*}
-
-        El tensor de energía momentum es de vital importancia, no solo en el sentido de que me codifica la conservación de la energía y el momentum en un solo ente geométrico sino que sus interpretaciones nos arrastran directamente a la dinámica de fluidos y con una correcta elección de observadores o marcos de referncia podemos tener información sobre flujos de cantidades sobre ciertas superficies.\\
-
-
-        El alma fundamental de esta desarrollo son los invariantes electrodinámicos relativistas. La razón principal para utilizar invariantes es precisamente porque estos no dependen de un marco de referencia por lo que la cantidad física que me describen me da mucha información sobre el estado o en este caso, los observables. Por facilidad algebráica los calculos desarrollados en este apartado se harán en coordenadas geometrizadas, es decir $C = \epsilon_0 = \mu_0 = 1$ donde $C$ es la velocidad de la luz en el vacío, y $\epsilon_0 \;,\; \mu_0$ son la permitividad eléctrica y permeabilidad magnética, en el vacío, respectivamente. Los invariantes se escribirán respecto tal tensor de Faraday el cual está definido en una métrica plana, en este caso Minkowskiana, de la siguiente forma: 
-
-            \begin{equation}
-                F^{\alpha\beta} = \partial^{\alpha}A^{\beta} - \partial^{\beta}A^{\alpha}\;.
-            \end{equation}
-
-        Donde $A$ es el cuadri-potencial electromagnético. Los invariantes electromagnéticos relativistas son los siguientes:
-
-            \begin{enumerate}
-                \item $F^{\alpha\beta}F_{\alpha\beta} = 2(B^2-E^2)$,
-
-                \item $^*F^{\alpha\beta}F_{\alpha\beta}  =\epsilon^{\mu\nu\alpha\beta}F_{\mu\nu}F_{\alpha\beta} = -8\Vec{E}\cdot\Vec{B}$, 
-
-                \item
-                $^*F^{\alpha\beta}\;^*F_{\alpha\beta} = 12(B^2-E^2)$.
-            \end{enumerate}
-
-        Podemos identificar que el cuadrado del campo de RS es directamente proporcional a los invariantes anteriormente utilizados para encontrar las ecuaciones de Maxwell si nos fijamos el cuadrado del campo de RS se puede reescribir como:
-
-        \begin{equation}
-            F^2 = -\frac{1}{2}F^{\alpha\beta}F_{\alpha\beta} - \frac{i}{4}\;^*F^{\alpha\beta}F_{\alpha\beta}.
+        donde los dos términos en rojo se cancelan, de manera que
+        \begin{equation}\label{eq:EhrenfestP}
+            \frac{d\hat{p}}{dt} = \frac{1}{i\hbar}\left(-i\hbar\frac{\partial V}{\partial x}\right) = -\frac{\partial V}{\partial \hat{x}} .
         \end{equation}
-
-        Así que cabe preguntarnos ¿Qué ocurre si usamos como densidad lagrangiana este primer invariante del campo de RS? Planteemos la siguiente densidad lagrangiana:
-
-        \begin{equation}
-            \Lambda(x^{\alpha},A_{\alpha}) = K_1A_{\alpha}J^{\alpha} + K_2F_{RS}^2 = K_1A_{\alpha}J^{\alpha} +K_2F^{\alpha\beta}F_{\alpha\beta} + iK_3;^*F^{\alpha\beta}F_{\alpha\beta},
+        Tomando valores medios en ambas ecuaciones obtenemos el \textit{teorema de Ehrenfest},
+        \begin{equation}\label{eq:Ehrenfest}
+            \frac{d\left\langle x\right\rangle}{dt} = \frac{\left\langle p\right\rangle}{m},
+            \qquad
+            \frac{d\left\langle p\right\rangle}{dt} = -\left\langle\frac{\partial V}{\partial x}\right\rangle,
         \end{equation}
+        que son formalmente las ecuaciones de Hamilton \eqref{eq:Hamilton} del capítulo anterior escritas para los valores medios.
 
-
-        Y utilizaremos la ecuación de Euler-Lagrange \ref{eq:EL}. Calculemos ambos miembros de la ecuación de Euler-Lagrange
-
-        \begin{equation*}
-            \frac{\partial \Lambda}{\partial A_{\alpha}} = K_1J^{\alpha}\;,
-        \end{equation*}
-
-        \begin{equation*}
-            \frac{\partial}{\partial x^{\beta}}\left(\frac{\partial \Lambda}{\partial(\partial_{\beta}A_{\alpha})} \right) = k_2\frac{\partial(F^{\mu\nu}F_{\mu\nu})}{\partial(\partial_{\beta}A_{\alpha})} +  i\frac{k_3}{2}\frac{\partial(\epsilon^{\mu\nu\omega\gamma F_{\omega\gamma}F_{\mu\nu}})}{\partial(\partial_{\beta}A_{\alpha})}\;,
-        \end{equation*}
-
-        \begin{equation*}
-            \frac{\partial}{\partial x^{\beta}}\left(\frac{\partial \Lambda}{\partial(\partial_{\beta}A_{\alpha})} \right) = -4k_2F^{\alpha\beta} + ik_3\frac{\epsilon^{\mu\nu\omega\gamma}}{2}\left[F_{\omega\gamma} \frac{\partial F_{\mu\nu}}{\partial(\partial_{\beta}A_{\alpha})} + F_{\mu\nu} \frac{\partial F_{\omega\gamma}}{\partial(\partial_{\beta}A_{\alpha})} \right]\;,
-        \end{equation*}
-
-        \begin{equation*}
-            \frac{\partial}{\partial x^{\beta}}\left(\frac{\partial \Lambda}{\partial(\partial_{\beta}A_{\alpha})} \right) = -4k_2F^{\alpha\beta} + ik_3\frac{\epsilon^{\mu\nu\omega\gamma}}{2}\left[F_{\omega\gamma}(\delta^{\mu}_{\beta}\delta^{\nu}_{\alpha} - \delta^{\nu}_{\beta}\delta^{\mu}_{\alpha}) + F_{\mu\nu}(\delta^{\omega}_{\beta}\delta^{\gamma}_{\alpha} - \delta^{\gamma}_{\beta}\delta^{\omega}_{\alpha})\right]\;,
-        \end{equation*}
-
-        \begin{equation*}
-            \frac{\partial}{\partial x^{\beta}}\left(\frac{\partial \Lambda}{\partial(\partial_{\beta}A_{\alpha})} \right) = -4k_2F^{\alpha\beta} - i\frac{k_3}{2}\left[4\epsilon^{\alpha\beta\omega\gamma}F_{\omega\gamma} \right] = -4k_2F^{\alpha\beta} - 4ik_3\;^*F^{\alpha\beta}\;.
-        \end{equation*}
-
-        De esta forma, tenemos que la ecuación de Euler-Lagrange nos lleva a la siguiente ecuación:
-
-        \begin{equation*}
-            \partial_{\beta}(-4k_2F^{\alpha\beta} - 4ik_3\;^*F^{\alpha\beta}) = k_1J^{\alpha}\;,
-        \end{equation*}
-
-        \begin{equation*}
-            \partial_{\beta}(F^{\alpha\beta} + i\frac{k_3}{k_2}\;^*F^{\alpha\beta}) =-\frac{k_1}{4k_2}J^{\alpha}\;.
-        \end{equation*}
-
-        Si imponemos que: $k_1 = 1$ , $k_2 = -\frac{1}{4}$ y $k_3 = k_2$. Llegaremos a:
-
-        \begin{equation}\label{eq:EcuaMax1}
-            \partial_{\beta}(F^{\alpha\beta} + i\;^*F^{\alpha\beta}) = J^{\alpha}\;.
+        La lectura ingenua de \eqref{eq:Ehrenfest} afirma que los centroides de los paquetes de ondas siguen trayectorias clásicas, y esa lectura es incorrecta en general. La razón está en el segundo miembro de la segunda ecuación: lo que aparece es el valor medio de la derivada del potencial y no la derivada del potencial evaluada en el valor medio,
+        \begin{equation}\label{eq:EhrenfestObjecion}
+            \left\langle\frac{\partial V}{\partial x}(\hat{x})\right\rangle \neq \frac{\partial V}{\partial x}\left(\left\langle x\right\rangle\right)
+            \qquad\text{en general},
         \end{equation}
+        y ambas cantidades coinciden únicamente cuando el potencial es a lo sumo cuadrático, en cuyo caso su derivada es lineal y el promedio de una función lineal es la función del promedio, o bien cuando el paquete es tan estrecho que el potencial puede considerarse lineal en su interior. El límite clásico no consiste en que los promedios cuánticos obedezcan ecuaciones clásicas, que es lo que \eqref{eq:Ehrenfest} dice, sino en que además el paquete permanezca estrecho durante el tiempo de interés, condición que falla con rapidez en sistemas caóticos y que se cumple espléndidamente para el oscilador armónico, cuyo potencial es exactamente cuadrático. Este es el mismo mensaje que obtuvimos en el capítulo anterior al examinar el término $i\hbar\nabla^{2}\mathcal{S}/2m$ de la ecuación \eqref{eq:HJCuantica}, escrito ahora en el lenguaje de los operadores.
 
-        Definimos entonces el tensor de Riemann-Silberstein como:
-
-        \begin{equation}\label{eq:TR}
-            F^{\alpha\beta} + i\;^*F^{\alpha\beta} 
+        Existe una tercera posibilidad, intermedia entre las dos anteriores, que resulta indispensable cuando el hamiltoniano se descompone en una parte libre soluble y una interacción que se desea tratar perturbativamente,
+        \begin{equation}\label{eq:HamiltonianoDividido}
+            \hat{H} = \hat{H}_{0} + \hat{V} .
         \end{equation}
-
-        Y las 4 ecuaciones de Maxwell \ref{eq:EcuaMax1} quedan reducidas a una sola:
-
-        \begin{equation}\label{eq:EcuaMax2}
-            \partial_{\beta}R^{\alpha\beta} = J^{\alpha}
+        En la \textit{imagen de interacción} se atribuye a los operadores la evolución generada por la parte libre y a los estados la generada por la interacción, definiendo
+        \begin{equation}\label{eq:ImagenInteraccion}
+            \ket{\psi_{I}(t)} = e^{i\hat{H}_{0}t/\hbar}\ket{\psi_{S}(t)},
+            \qquad
+            \hat{A}_{I}(t) = e^{i\hat{H}_{0}t/\hbar}\,\hat{A}_{S}\,e^{-i\hat{H}_{0}t/\hbar} .
         \end{equation}
-
-        Y la densidad Lagrangiana sería:
-
-        \begin{equation*}
-            \Lambda = A_{\alpha}J^{\alpha} - \frac{1}{4}F^{\alpha\beta}F_{\alpha\beta} -\frac{i}{4}\;^*F^{\alpha\beta}F_{\alpha\beta}
-        \end{equation*}
-
-        \begin{equation}
-            \Lambda = A_{\alpha}J^{\alpha} + \frac{1}{4}F^{\alpha\beta}F_{\alpha\beta} + F_{RS}^2
+        Derivando la primera de estas relaciones respecto del tiempo mediante la regla del producto y sustituyendo la ecuación de Schrödinger,
+        \begin{equation}\label{eq:EcuacionInteraccion1}
+            i\hbar\frac{d\ket{\psi_{I}}}{dt} = -\hat{H}_{0}e^{i\hat{H}_{0}t/\hbar}\ket{\psi_{S}} + e^{i\hat{H}_{0}t/\hbar}\left(\hat{H}_{0}+\hat{V}\right)\ket{\psi_{S}},
         \end{equation}
-
-        Antes de pasar a dar interpretaciones de esta reformulación de las 4 ecuaciones de Maxwell vale la pena calcular este nuevo tensor de Riemann-Silberstein $R^{\alpha\beta}$ pues con este y la nueva densidad Lagrangiana que hemos encontrado podemos calcular todas las leyes de conservación del electromagnetismo.
-
-        \begin{equation}
-            R^{\alpha\beta} = F^{\alpha\beta} + i\;^*F^{\alpha\beta},
+        y como $\hat{H}_{0}$ conmuta con su propia exponencial, los dos términos que lo contienen se cancelan,
+        \begin{equation}\label{eq:EcuacionInteraccion2}
+            i\hbar\frac{d\ket{\psi_{I}}}{dt} = \textcolor{red}{-\hat{H}_{0}e^{i\hat{H}_{0}t/\hbar}\ket{\psi_{S}}} + \textcolor{red}{\hat{H}_{0}e^{i\hat{H}_{0}t/\hbar}\ket{\psi_{S}}} + \hat{V}_{I}(t)\ket{\psi_{I}(t)} = \hat{V}_{I}(t)\ket{\psi_{I}(t)},
         \end{equation}
+        de manera que el estado evoluciona únicamente bajo la interacción, expresada en la imagen. Toda la dinámica trivial del sistema libre ha sido absorbida en la definición de los operadores, y lo que queda es exactamente el efecto que interesa calcular. Esta es la imagen en la que se desarrolla la teoría de perturbaciones dependiente del tiempo, la regla de oro de Fermi y el modelo de Jaynes y Cummings para la interacción entre un átomo de dos niveles y un modo del campo, que es el modelo fundamental de la óptica cuántica.
 
-        Y en su formulación matricial tenemos que el tensor de Faraday de forma contravariante y covariente se escriben de la siguiente forma:
+\section{El oscilador armónico en forma algebraica}
 
-        \begin{equation}
-            [F^{\alpha\beta}]=
-            \begin{bmatrix}
-                0 & E^1 & E^2 & E^3 \\
-                -E^2 & 0 & B_3 & -B_2 \\
-                -E^2 & B_3 & 0 & B_1 \\
-                -E^3 & B_2 & -B_1 & 0
-            \end{bmatrix},
+    Dedicamos una sección propia al oscilador armónico porque es, sin exageración, el sistema central de toda la óptica cuántica: en el capítulo siguiente demostraremos que el campo electromagnético en una cavidad es dinámicamente equivalente a una colección infinita de osciladores independientes, uno por cada modo, de manera que todo cuanto sepamos resolver aquí se traducirá allí sin esfuerzo. Lo resolveremos por el método algebraico de Dirac, que no requiere resolver ninguna ecuación diferencial y que exhibe con total claridad el origen de la cuantización.
+
+        Partimos del hamiltoniano
+        \begin{equation}\label{eq:HamiltonianoOscQ}
+            \hat{H} = \frac{\hat{p}^{2}}{2m} + \frac{1}{2}m\omega^{2}\hat{x}^{2},
+            \qquad
+            \left[\hat{x},\hat{p}\right] = i\hbar,
         \end{equation}
-
-        \begin{equation}
-            [F_{\alpha\beta}]=
-            \begin{bmatrix}
-                0 & -E_1 & -E_2 & -E_3 \\
-                E_2 & 0 & B^3 & -B^2 \\
-                E_2 & B^3 & 0 & B^1 \\
-                E_3 & B^2 & -B^1 & 0
-            \end{bmatrix}.
+        y observamos que, si los operadores fuesen números, la expresión sería una suma de cuadrados y podría factorizarse como el producto de dos factores conjugados. Intentemos esa factorización y veamos qué impide que sea exacta. Definimos el \textit{operador de aniquilación}
+        \begin{equation}\label{eq:DefinicionA}
+            \hat{a} \equiv \sqrt{\frac{m\omega}{2\hbar}}\left(\hat{x} + \frac{i}{m\omega}\hat{p}\right),
         \end{equation}
-
-        Para calcular $[\;^*F^{\alpha\beta}]$ debemos tener en cuenta lo siguiente:
-
-        \begin{equation}
-            F^{0i}=E^i,
+        cuyo adjunto, el \textit{operador de creación}, se obtiene conjugando y recordando que $\hat{x}$ y $\hat{p}$ son autoadjuntos,
+        \begin{equation}\label{eq:DefinicionADaga}
+            \hat{a}^{\dagger} = \sqrt{\frac{m\omega}{2\hbar}}\left(\hat{x} - \frac{i}{m\omega}\hat{p}\right).
         \end{equation}
-        
-        \begin{equation}
-            F^{ii} = 0,
+        Obsérvese que $\hat{a}$ no es autoadjunto y por tanto no es un observable; es una combinación auxiliar cuya única justificación, por ahora, es que simplifica el álgebra.
+
+        Su conmutador se obtiene desarrollando el producto y usando la bilinealidad,
+        \begin{equation}\label{eq:ConmutadorAADaga1}
+            \left[\hat{a},\hat{a}^{\dagger}\right] = \frac{m\omega}{2\hbar}\left[\hat{x}+\frac{i\hat{p}}{m\omega},\;\hat{x}-\frac{i\hat{p}}{m\omega}\right]
+            = \frac{m\omega}{2\hbar}\left(\textcolor{red}{\left[\hat{x},\hat{x}\right]} - \frac{i}{m\omega}\left[\hat{x},\hat{p}\right] + \frac{i}{m\omega}\left[\hat{p},\hat{x}\right] + \textcolor{red}{\frac{1}{m^{2}\omega^{2}}\left[\hat{p},\hat{p}\right]}\right),
         \end{equation}
-
-        \begin{equation}
-            F^{ij}=\epsilon^{ijk}B_k,
+        donde los dos conmutadores marcados en rojo se anulan por conmutar todo operador consigo mismo. Usando $[\hat{x},\hat{p}] = i\hbar$ y $[\hat{p},\hat{x}] = -i\hbar$, los dos términos supervivientes resultan iguales y se suman,
+        \begin{equation}\label{eq:ConmutadorAADaga2}
+            \left[\hat{a},\hat{a}^{\dagger}\right] = \frac{m\omega}{2\hbar}\left(-\frac{i}{m\omega}\cdot i\hbar - \frac{i}{m\omega}\cdot i\hbar\right)
+            = \frac{m\omega}{2\hbar}\cdot\frac{2\hbar}{m\omega} = 1 .
         \end{equation}
+        La relación $\left[\hat{a},\hat{a}^{\dagger}\right] = 1$ es toda el álgebra que necesitaremos, y es equivalente al conmutador canónico: contiene exactamente la misma información escrita en otras variables.
 
-        \begin{equation}
-            B^i = \frac{1}{2}\epsilon^{ijk}F_{jk},
+        Invirtiendo \eqref{eq:DefinicionA} y \eqref{eq:DefinicionADaga}, es decir, sumando y restando ambas expresiones, se recuperan las variables originales,
+        \begin{equation}\label{eq:XPenA}
+            \hat{x} = \sqrt{\frac{\hbar}{2m\omega}}\left(\hat{a}+\hat{a}^{\dagger}\right),
+            \qquad
+            \hat{p} = -i\sqrt{\frac{m\omega\hbar}{2}}\left(\hat{a}-\hat{a}^{\dagger}\right).
         \end{equation}
-
-        \begin{equation}
-            ^*F^{\alpha\beta}=\frac{1}{2}\epsilon^{\alpha\beta\mu\nu}F_{\mu\nu}.
+        Sustituyendo en el hamiltoniano \eqref{eq:HamiltonianoOscQ} y desarrollando ambos cuadrados con cuidado de no alterar el orden de los factores, el término cinético da
+        \begin{equation}\label{eq:CineticoEnA}
+            \frac{\hat{p}^{2}}{2m} = \frac{1}{2m}\left(-\frac{m\omega\hbar}{2}\right)\left(\hat{a}-\hat{a}^{\dagger}\right)^{2}
+            = -\frac{\hbar\omega}{4}\left(\hat{a}^{2} - \hat{a}\hat{a}^{\dagger} - \hat{a}^{\dagger}\hat{a} + \hat{a}^{\dagger 2}\right),
         \end{equation}
-
-        Evaluemos todos los casos posibles para las combinaciones de índices $\alpha,\beta\mu\nu$ recordando que según esta notación los índices griegos van de 0 a 3 y los índices latinos van de 1 a 3.
-
-        \begin{enumerate}
-            \item $\alpha=\beta$ en este caso como tenemos dos índices en el símbolo de Levi-Civitta es fácil ver que:
-            \begin{equation*}
-                ^*F^{\alpha\alpha}=\frac{1}{2}\epsilon^{\alpha\alpha\mu\nu}F_{\mu\nu} = 0.
-            \end{equation*}
-
-            \item $\alpha = 0\;,\;\beta = i$ acá nos aprovecharmos de las propiedades del Levi-Civitta al cmabiar índices griegos por latinos pues ya está el valor de 0 fijo.
-            \begin{equation*}
-                ^*F^{0i}=\frac{1}{2}\epsilon^{0i\mu\nu}= \frac{1}{2}\epsilon^{0ijk}F_{jk} = \frac{1}{2}\epsilon^{ijk}F_{jk} = B^i.
-            \end{equation*}
-
-            \item $\alpha = i \;,\; \beta = 0$ acá nos aprovechamos de la antisimetría del símbolo de Levi-Civitta:
-            \begin{equation*}
-                ^*F^{i0} = \frac{1}{2}\epsilon^{i0\mu\nu} = - \frac{1}{2}\epsilon^{0i\mu\nu}F_{\mu\nu}=-B^i.
-            \end{equation*}
-
-            \item $\alpha = i \;,\; \beta = j$ acá permutaremos el símbolo de LC y nos aprovecharemos de la antisimetría del tensor de Faraday:
-            \begin{equation*}
-                ^*F^{ij}=\frac{1}{2}\epsilon^{ij0m}F_{0m} + \frac{1}{2}\epsilon^{ijl0}F_{l0} = \frac{1}{2}\epsilon^{ij0m}E_m -\frac{1}{2}\epsilon^{ij0l}(lE_l) = \epsilon^{ijm}E_m.
-            \end{equation*}
-        \end{enumerate}
-
-        Con todo lo anterior vemos que el tensor resultando de Riemann-Silberstein es:
-
-        \begin{equation}\label{eq:TensorRS}
-            [R^{\alpha\beta}]=
-            \begin{bmatrix}
-                0 & E^1+iB^1 & E^2+iB^2 & E^3+iB^3\\
-                -(E^1+iB^1) & 0 & E_3+iB_3 & -(E_2 + iB_2)\\
-                -(E^2+iB^2) & -(E_3+iB_3) & 0 & -(E_1+iB_1)\\
-                -(E^3+iB^3) & E_2 + iB_2 & E_1 + iB_1 & 0.
-            \end{bmatrix}
+        y el término potencial
+        \begin{equation}\label{eq:PotencialEnA}
+            \frac{1}{2}m\omega^{2}\hat{x}^{2} = \frac{1}{2}m\omega^{2}\cdot\frac{\hbar}{2m\omega}\left(\hat{a}+\hat{a}^{\dagger}\right)^{2}
+            = \frac{\hbar\omega}{4}\left(\hat{a}^{2} + \hat{a}\hat{a}^{\dagger} + \hat{a}^{\dagger}\hat{a} + \hat{a}^{\dagger 2}\right).
         \end{equation}
-
-        Este resultado es simplemente magnífico pues forma que encontramos \ref{eq:EcuaMax2} para las ecuaciones de Maxwell con nuestro tensor de RS \ref{eq:TensorRS} es en realidad una forma similar a una ecuación de continuidad es decir que la presencia de cargas y densidades de corrientes (el término de la derecha de la ecuación \ref{eq:EcuaMax2}) crea divergencias y circulaciones del campo de Riemann-Silberstein esto es lo que quiere decir en realidad las ecuaciones de Maxwell, una argumento o una pista más a favor de que el campo de RS es el verdadero campo físico y no el campo eléctrico y magnético por separado.\\
-
-        De forma natural podemos desacoplar la ecuacióń \ref{eq:EcuaMax2} y obtener las ecuaciones de Maxwell homogéneas y no homogéneas. Desarrollemos la expresión:
-
-        \begin{equation*}
-            \partial_{\beta}R^{\alpha\beta}=J^{\alpha}
-        \end{equation*}
-
-        \begin{equation}
-            \partial_{\beta}(F^{\alpha\beta} + i\;^*F^{\alpha\beta}F_{\alpha\beta}) = J^{\alpha}.
+        Al sumar \eqref{eq:CineticoEnA} y \eqref{eq:PotencialEnA} los términos $\hat{a}^{2}$ y $\hat{a}^{\dagger 2}$ aparecen con signos opuestos y se cancelan, mientras que los cruzados se refuerzan,
+        \begin{equation}\label{eq:HamiltonianoSuma}
+            \hat{H} = \frac{\hbar\omega}{4}\left(\textcolor{red}{-\hat{a}^{2}} + \hat{a}\hat{a}^{\dagger} + \hat{a}^{\dagger}\hat{a} \textcolor{red}{- \hat{a}^{\dagger 2}} + \textcolor{red}{\hat{a}^{2}} + \hat{a}\hat{a}^{\dagger} + \hat{a}^{\dagger}\hat{a} + \textcolor{red}{\hat{a}^{\dagger 2}}\right)
+            = \frac{\hbar\omega}{2}\left(\hat{a}\hat{a}^{\dagger} + \hat{a}^{\dagger}\hat{a}\right),
         \end{equation}
-
-        Aquí de manera no forzada podemos separar esta ecuación en dos ecuaciones, una para la parte real y otra para la parte 
-
-        \begin{equation}\label{eq:NoHomogeneas}
-            \partial_{\beta}F^{\alpha\beta} = J^{\alpha},
+        Para reducir el resultado a un único ordenamiento sustituimos el primer producto usando el conmutador \eqref{eq:ConmutadorAADaga2}, lo que equivale a sumar y restar deliberadamente la unidad,
+        \begin{equation}\label{eq:ReordenamientoNormal}
+            \hat{a}\hat{a}^{\dagger} = \hat{a}^{\dagger}\hat{a} + \textcolor{blue}{\left[\hat{a},\hat{a}^{\dagger}\right]} = \hat{a}^{\dagger}\hat{a} + \textcolor{blue}{1},
         \end{equation}
-
-        \begin{equation}\label{eq:Homogeneas}
-            \partial_{\beta}\;^*F^{\alpha\beta} = 0.
+        y llevando \eqref{eq:ReordenamientoNormal} a \eqref{eq:HamiltonianoSuma},
+        \begin{equation}\label{eq:HamiltonianoNumero}
+            \boxed{\;\hat{H} = \hbar\omega\left(\hat{n} + \frac{1}{2}\right),\qquad \hat{n}\equiv\hat{a}^{\dagger}\hat{a} .\;}
         \end{equation}
+        El operador $\hat{n}$, llamado \textit{operador número}, es autoadjunto por construcción, pues $\left(\hat{a}^{\dagger}\hat{a}\right)^{\dagger} = \hat{a}^{\dagger}\hat{a}$, de manera que el problema de hallar el espectro del hamiltoniano se reduce a hallar el de $\hat{n}$.
 
-
-        Hagamos primero el desarrollo para las ecuaciones no homogéneas \ref{eq:NoHomogeneas}, para esto recordemos las siguientes definiciones:
-
-        \begin{equation}
-            \partial_{\beta} = [\partial_t , \Vec{\nabla}] \;\;,\;\; J^{\alpha} = [\rho , \Vec{J}].
+        Los conmutadores de $\hat{n}$ con los operadores de escalera se calculan de inmediato usando la identidad $[\hat{A}\hat{B},\hat{C}] = \hat{A}[\hat{B},\hat{C}] + [\hat{A},\hat{C}]\hat{B}$,
+        \begin{equation}\label{eq:ConmutadorNA}
+            \left[\hat{n},\hat{a}\right] = \hat{a}^{\dagger}\left[\hat{a},\hat{a}\right] + \left[\hat{a}^{\dagger},\hat{a}\right]\hat{a} = -\hat{a},
+            \qquad
+            \left[\hat{n},\hat{a}^{\dagger}\right] = \hat{a}^{\dagger}\left[\hat{a},\hat{a}^{\dagger}\right] + \left[\hat{a}^{\dagger},\hat{a}^{\dagger}\right]\hat{a} = +\hat{a}^{\dagger},
         \end{equation}
-
-        Entonces evaluemos los posibles casos
-
-        \begin{enumerate}
-            \item $\alpha = 0$ 
-            \begin{equation}
-                \partial_{\beta}F^{0\beta} = \partial_{i}F^{0i} =  \Vec{\nabla}\cdot\Vec{E} = \rho,
-            \end{equation}
-
-            Podemos ver que recuperamos la ley del Gauss para el campo eléctrico en coordenadas geometrizadas.
-
-            \item $\alpha = i$
-            \begin{equation}
-                \partial_{\beta}F^{i\beta} = J^i \rightarrow \partial_tF^{i0} + \partial_{j}F^{ij} = \epsilon^{ijk}\partial_jB_k - \partial_tE^i = J^i,
-            \end{equation}
-
-            ahora expresándolo vectorialmente obtendremos la ley de Ampere-Maxwell
-
-            \begin{equation}
-                \Vec{\nabla}\times\Vec{B} = \Vec{J} + \partial_t\Vec{E}.
-            \end{equation}
-        \end{enumerate}
-
-        Ahora desarrollemos las ecuaciones homogéneas \ref{eq:Homogeneas}:
-
-        \begin{enumerate}
-            \item $\alpha = 0$
-
-            \begin{equation*}
-                \epsilon^{0\beta\mu\nu}\partial_{\beta}F_{\mu\nu} = 0 \rightarrow \epsilon^{ijk}\partial_iF_{jk}=\partial_iB^i
-            \end{equation*}
-
-            reescribiendo esto de forma vectorial tenemos la ley de Gauss para el campo magnético
-
-            \begin{equation}
-                \Vec{\nabla}\cdot\Vec{B} = 0.
-            \end{equation}
-
-            \item $\alpha = l$
-
-            \begin{equation*}
-                \epsilon^{l\beta\mu\nu}\partial_{\beta}F_{\mu\nu} = 0 = \epsilon^{l0\mu\nu}\partial_tF{\mu\nu} + \epsilon^{li\alpha\beta}\partial_iF_{\mu\nu} = 0,
-            \end{equation*}
-
-            \begin{equation*}
-                \epsilon^{l0ij}\partial_tF_{ij} + \epsilon^{li0\nu}\partial_iF_{0\nu} + \epsilon^{lij\nu}\partial_iF_{j\nu} = 0,
-            \end{equation*}
-
-            \begin{equation*}
-                -\epsilon^{0lij}\partial_tF_{ij} + \epsilon^{li0j}\partial_iF_{0j} + \epsilon^{lij0}\partial_iF_{j0}=0,
-            \end{equation*}
-
-            \begin{equation*}
-                -\epsilon^{0lij}\partial_tF_{ij} - \epsilon^{0lij}\partial_iF_{j0}-\epsilon^{0lij}\partial_iF_{j0}=0,
-            \end{equation*}
-
-            \begin{equation}
-                2\partial_tB^{l}-2(\Vec{\nabla}\times\Vec{E})^{l} = 0.
-            \end{equation}
-
-            Reescribiendo esto en forma vectorial recuperamos la ley de Faraday.
-
-            \begin{equation}
-                \partial_t\Vec{B} + \Vec{\nabla}\times\Vec{E} = 0.
-            \end{equation}
-        \end{enumerate}
-
-        De esta forma vemos que la ecuación \ref{eq:EcuaMax2} contiene toda la información sobre las ecuaciones de Maxwell contenidas en una sola ecuación tensorial.
-
-        \subsection{El campo de RS en una configuración relativista}
-
-        El vector 3D de RS es parte del tensor relativista antisimétrico $F^{\mu\nu}$,
-
-        \begin{equation}\label{eq:FmunuGeneral}
-            F^{\mu\nu} = \sqrt{-g}\left( g^{\mu\lambda}g^{\nu\rho}f_{\lambda\rho} + \frac{i}{2\sqrt{-g}}\epsilon^{\mu\nu\lambda\rho} f_{\lambda\rho} \right),
+        y estas dos relaciones contienen toda la solución del problema. Sea en efecto $\ket{\nu}$ un vector propio normalizado de $\hat{n}$ con valor propio $\nu$. Aplicando el primer conmutador al estado,
+        \begin{equation}\label{eq:BajaEscalera}
+            \hat{n}\left(\hat{a}\ket{\nu}\right) = \left(\hat{a}\hat{n} - \hat{a}\right)\ket{\nu} = \left(\nu-1\right)\hat{a}\ket{\nu},
         \end{equation}
-
-        Donde $\epsilon^{\mu\nu\lambda\rho}$ es el símbolo de Levi-Civita (antisimétrico en todos los índices y 0123 = 1). El símbolo de Levi-Civita por sí solo no es un tensor, sino una densidad tensorial, se convierte en un tensor regular después de la división por $\sqrt{-g}$. Por lo tanto, para ser precisos, $F^{\mu\nu}$ es la densidad tensorial; es una suma de dos tensores multiplicados por $\sqrt{-g}$. La definición de $F^{\mu\nu}$ es válida en un sistema de coordenadas arbitrario, incluso en un espacio curvo.
-
-        
-        Dado que $f_{\lambda\rho}$ tiene seis componentes reales, solo tres componentes del tensor complejo $F^{\mu\nu}$ pueden ser independientes. De hecho, este tensor es auto-dual; se transforma en sí mismo bajo la siguiente transformación de dualidad:
-
-        \begin{equation}
-            F^{\mu\nu} = \frac{i}{2\sqrt{-g}}\epsilon^{\mu\nu}_{\;\;\lambda\rho}F^{\lambda\rho},
+        de manera que $\hat{a}\ket{\nu}$, si no es el vector nulo, es vector propio de $\hat{n}$ con valor propio $\nu-1$. El mismo cálculo con el segundo conmutador da
+        \begin{equation}\label{eq:SubeEscalera}
+            \hat{n}\left(\hat{a}^{\dagger}\ket{\nu}\right) = \left(\nu+1\right)\hat{a}^{\dagger}\ket{\nu} .
         \end{equation}
+        Las dos relaciones anteriores admiten una lectura inmediata y es la que da nombre a estos operadores. Los operadores $\hat{a}$ y $\hat{a}^{\dagger}$ desplazan en una unidad hacia abajo y hacia arriba el valor propio del operador número, de manera que actúan como los peldaños de una escalera que conecta entre sí a todos los estados propios de la energía.
 
-        este tensor relativistas obedece las ecuaciones de Maxwell en una forma bastante similar a como las habíamos encontrado en \ref{eq:EcuaMax2},
-
-        \begin{equation}
-            \partial_{\mu}F^{\mu\nu} = 0.
+        El espectro no puede extenderse indefinidamente hacia abajo, y la razón es la positividad de la norma. En efecto,
+        \begin{equation}\label{eq:PositividadN}
+            \nu = \braket{\nu|\hat{n}|\nu} = \braket{\nu|\hat{a}^{\dagger}\hat{a}|\nu} = \left\|\hat{a}\ket{\nu}\right\|^{2} \geq 0,
         \end{equation}
+        de modo que todos los valores propios son no negativos. Si $\nu$ no fuese un entero, la aplicación repetida de $\hat{a}$ produciría la sucesión $\nu, \nu-1, \nu-2,\ldots$ de valores propios, que tarde o temprano se haría negativa, en contradicción con \eqref{eq:PositividadN}. La única escapatoria es que la sucesión se interrumpa, y por \eqref{eq:BajaEscalera} eso solo puede ocurrir si en algún paso el vector resultante es el vector nulo,
+        \begin{equation}\label{eq:EstadoFundamental}
+            \hat{a}\ket{0} = 0,
+        \end{equation}
+        lo que exige, tomando la norma en \eqref{eq:PositividadN}, que el valor propio correspondiente sea exactamente $\nu = 0$. Como la sucesión descendente parte de $\nu$ y termina en cero dando pasos de longitud unidad, $\nu$ tiene que ser un entero no negativo, y esa es toda la demostración de la cuantización: no hemos resuelto ninguna ecuación diferencial ni impuesto ninguna condición de contorno, sino que la discretización se sigue del álgebra \eqref{eq:ConmutadorAADaga2} junto con la positividad de la norma del espacio de Hilbert.
 
-        Las componentes del vector RS también pueden ser identificadas con las componentes espacio-espacio de $F^{\mu\nu}$. Esto explica el por qué las componentes del vector RS bajo una transformación de Lorentz se transforman entre sí como vimos en la ecuación \ref{eq:transformRS}, a pesar de que al mismo tiempo son las componentes de un tensor relativista $F_{\mu\nu}$ cuyas componentes espacio-temporales deberían mezclarse con las componentes espacio-espacio.
+        Las energías permitidas son, por \eqref{eq:HamiltonianoNumero},
+        \begin{equation}\label{eq:EspectroOscilador}
+            E_{n} = \hbar\omega\left(n + \frac{1}{2}\right), \qquad n = 0,1,2,\ldots,
+        \end{equation}
+        equiespaciadas en $\hbar\omega$ y con un valor mínimo no nulo $E_{0} = \hbar\omega/2$. Ese término, la \textit{energía de punto cero}, es una consecuencia directa del principio de indeterminación: un estado de energía nula exigiría posición y momento simultáneamente nulos, lo que violaría \eqref{eq:HeisenbergCanonico}. En el capítulo siguiente veremos que, al sumar esa contribución sobre todos los modos del campo electromagnético, se obtiene una energía del vacío infinita, y que las fluctuaciones asociadas son perfectamente medibles pese a ello.
 
-        En otras palabras, los vectores de campo eléctrico y magnético pueden combinarse en dos objetos geométricos equivalentes: un vector complejo F que se transforma bajo el grupo ortogonal complejo O(3,C), o un tensor real de segundo rango $f_{\mu\nu}$ que se transforma bajo el grupo real O(1, 3).
-    
-    \section{Unificación de las ecuaciones de Maxwell mediante el tensor de Riemann-Silberstein}
-        
-        El objetivo de esta sección es extender el resultado obtenido en la sección anterior al marco de la \textbf{Relatividad General} (RG). En la sección anterior se demostró que, en un espacio-tiempo plano de Minkowski, las cuatro ecuaciones de Maxwell se reducen a la única ecuación tensorial $\partial_{\beta}R^{\alpha\beta} = J^{\alpha}$. La pregunta natural es: ¿qué forma toma esta ecuación cuando el espacio-tiempo es \emph{curvo}? La respuesta requiere reemplazar cuidadosamente los objetos geométricos planos por sus análogos covariantes en una variedad pseudo-Riemanniana general.
+        Queda normalizar los estados. Escribiendo $\hat{a}\ket{n} = c_{n}\ket{n-1}$ con $c_{n}$ por determinar y tomando la norma al cuadrado de ambos miembros y usando \eqref{eq:PositividadN},
+        \begin{equation}\label{eq:NormalizacionA}
+            \left|c_{n}\right|^{2} = \braket{n|\hat{a}^{\dagger}\hat{a}|n} = n
+            \qquad\Longrightarrow\qquad
+            \hat{a}\ket{n} = \sqrt{n}\,\ket{n-1},
+        \end{equation}
+        donde la fase se escoge real y positiva por convenio. Análogamente, usando $\hat{a}\hat{a}^{\dagger} = \hat{n}+1$,
+        \begin{equation}\label{eq:NormalizacionADaga}
+            \left\|\hat{a}^{\dagger}\ket{n}\right\|^{2} = \braket{n|\hat{a}\hat{a}^{\dagger}|n} = n+1
+            \qquad\Longrightarrow\qquad
+            \hat{a}^{\dagger}\ket{n} = \sqrt{n+1}\,\ket{n+1},
+        \end{equation}
+        y aplicando repetidamente esta última relación al estado fundamental se genera toda la base,
+        \begin{equation}\label{eq:EstadosNumero}
+            \ket{n} = \frac{\left(\hat{a}^{\dagger}\right)^{n}}{\sqrt{n!}}\ket{0},
+        \end{equation}
+        como se comprueba por inducción observando que cada aplicación aporta un factor $\sqrt{k+1}$ y que el producto de todos ellos es $\sqrt{n!}$.
 
-        \subsection{Elementos de geometría diferencial en espacio-tiempo curvo}\label{subsec:GeomDif}
-    %----------------------------------------------------------
+        Esto se lee, de cara al capítulo siguiente, de la manera siguiente. Cuando el oscilador en cuestión no sea una partícula en un pozo sino un modo del campo electromagnético, el entero $n$ dejará de contar cuantos de vibración para contar \textit{fotones}, los operadores $\hat{a}^{\dagger}$ y $\hat{a}$ crearán y destruirán uno de ellos, y el estado $\ket{0}$ será el vacío. \textbf{El fotón no aparecerá en la teoría como un postulado sobre la naturaleza corpuscular de la luz, sino como el cuanto de excitación de un oscilador armónico, es decir, como una consecuencia aritmética del álgebra \eqref{eq:ConmutadorAADaga2}.}
 
-            En la Relatividad General el espacio-tiempo es una variedad diferenciable $(\mathcal{M}, g_{\mu\nu})$, donde $g_{\mu\nu}$ es el \emph{tensor métrico} pseudo-Riemanniano de signatura $(-,+,+,+)$.  Todo el contenido físico del campo gravitacional queda codificado en $g_{\mu\nu}$.  Adoptamos a lo largo de esta sección las unidades geometrizadas $c = \epsilon_0 = \mu_0 = 1$.
+\section{Estados mezclados y la matriz densidad}
 
-            \begin{myDef}[Tensor métrico y su inversa]
-                El tensor métrico $g_{\mu\nu}$ es un campo tensorial covariante de rango 2, simétrico ($g_{\mu\nu}=g_{\nu\mu}$) y no degenerado.  Su inversa
-                $g^{\mu\nu}$ satisface
-                \begin{equation}
-                    g^{\mu\alpha}g_{\alpha\nu} = \delta^{\mu}_{\ \nu}\;.
-                \end{equation}
-                El determinante de la métrica se denota $g = \det(g_{\mu\nu})$; con la signatura Lorentziana se tiene $g < 0$, por lo que $\sqrt{-g}$ es siempre real y positivo.
-            \end{myDef}
+        Todo lo anterior supone que conocemos el estado del sistema, es decir, que disponemos de un vector $\ket{\psi}$ bien definido. Hay al menos dos situaciones de enorme importancia práctica en las cuales esa suposición falla, y ambas son la regla y no la excepción en óptica.
 
-            \begin{myDef}[Símbolo y tensor de Levi-Civita]\label{def:LC}
-                Se distingue con rigor entre dos objetos:
-                \begin{enumerate}
-                    \item El \textbf{símbolo de Levi-Civita} $\varepsilon^{\mu\nu\rho\sigma}$,
-                        totalmente antisimétrico con $\varepsilon^{0123}=+1$, es una \emph{densidad tensorial de peso} $+1$: bajo un cambio de coordenadas $x\to x'$ transforma con un factor adicional igual al determinante del jacobiano $\det(\partial x/\partial x')$.  Por tanto \textbf{no es un tensor genuino}.
+        La primera es la ignorancia estadística. Una fuente térmica, como el filamento de una lámpara o la superficie de una estrella, emite radiación mediante un número inmenso de procesos atómicos incontrolados, de manera que no sabemos en qué estado se encuentra el campo: sabemos, a lo sumo, que está en el estado $\ket{\psi_{1}}$ con probabilidad $p_{1}$, en el $\ket{\psi_{2}}$ con probabilidad $p_{2}$, y así sucesivamente. La segunda es el entrelazamiento: como vimos al enunciar el postulado \ref{sup:Composicion}, cuando un sistema compuesto está en un estado entrelazado, ninguno de sus subsistemas admite descripción mediante un vector de estado propio, aunque el conjunto sí la admita.
 
-                    \item El \textbf{tensor de Levi-Civita} se define corrigiendo el peso
-                        con $\sqrt{-g}$:
-                        \begin{equation}\label{eq:TensorLC}
-                            \mathcal{E}^{\mu\nu\rho\sigma}
-                                = \frac{1}{\sqrt{-g}}\,\varepsilon^{\mu\nu\rho\sigma}\;,
-                            \qquad
-                            \mathcal{E}_{\mu\nu\rho\sigma}
-                                = \sqrt{-g}\,\varepsilon_{\mu\nu\rho\sigma}\;.
-                        \end{equation}
-                        Este sí es un tensor $(4,0)$ genuino en espacio curvo.
-                \end{enumerate}
-            \end{myDef}
+        Es crucial entender que la primera situación no puede describirse mediante una superposición. Una superposición como \eqref{eq:FaseRelativa} es un estado perfectamente definido con fases relativas definidas, capaz de producir interferencia; una mezcla estadística es una situación de ignorancia en la cual esas fases no existen. \textbf{Confundir una superposición con una mezcla es el error conceptual más frecuente en toda la mecánica cuántica}, y la diferencia entre ambas es precisamente lo que distingue a la luz coherente de la luz térmica, es decir, el tema central del capítulo segundo de estos apuntes traducido al lenguaje cuántico.
 
-            Una identidad fundamental del tensor de Levi-Civita, que usaremos repetidamente, es la contracción de dos índices:
-            \begin{equation}\label{eq:ContrLC}
-                \mathcal{E}^{\mu\nu\rho\sigma}\mathcal{E}_{\mu\nu\alpha\beta}
-                = -2\!\left(\delta^{\rho}_{\ \alpha}\delta^{\sigma}_{\ \beta}
-                        -\delta^{\rho}_{\ \beta}\delta^{\sigma}_{\ \alpha}\right)\;.
+        \begin{myDef}\label{def:MatrizDensidad}
+            Sea un sistema que se encuentra en el estado $\ket{\psi_{i}}$ con probabilidad $p_{i}$, con $\sum_{i}p_{i} = 1$. Se llama \textit{operador densidad} o \textit{matriz densidad} al operador
+            \begin{equation}\label{eq:MatrizDensidad}
+                \hat{\rho} \equiv \sum_{i} p_{i}\,\ket{\psi_{i}}\bra{\psi_{i}} .
             \end{equation}
-
-            \begin{myDef}[Derivada covariante y símbolos de Christoffel]
-                La derivada covariante, compatible con la métrica de Levi-Civita, actúa sobre un tensor contravariante $T^{\mu\nu}$ como
-                \begin{equation}\label{eq:DerCov}
-                    \nabla_{\lambda}T^{\mu\nu}
-                        = \partial_{\lambda}T^{\mu\nu}
-                        + \Gamma^{\mu}_{\ \lambda\sigma}T^{\sigma\nu}
-                        + \Gamma^{\nu}_{\ \lambda\sigma}T^{\mu\sigma}\;,
-                \end{equation}
-                donde los \emph{símbolos de Christoffel} de segunda especie son
-                \begin{equation}\label{eq:Christoffel}
-                    \Gamma^{\sigma}_{\ \mu\nu}
-                        = \frac{1}{2}g^{\sigma\lambda}
-                        \!\left(\partial_{\mu}g_{\nu\lambda}
-                                +\partial_{\nu}g_{\mu\lambda}
-                                -\partial_{\lambda}g_{\mu\nu}\right)\;.
-                \end{equation}
-                La conexión de Levi-Civita es libre de torsión:
-                $\Gamma^{\sigma}_{\ \mu\nu} = \Gamma^{\sigma}_{\ \nu\mu}$.
-            \end{myDef}
-
-            Un resultado que usaremos extensamente es la expresión de la divergencia covariante de un tensor antisimétrico en términos de derivadas parciales ordinarias.
-
-            \begin{myteo}[Divergencia covariante de tensor antisimétrico]\label{teo:DivCov} 
-                Sea $T^{\mu\nu}$ un tensor antisimétrico ($T^{\mu\nu}=-T^{\nu\mu}$). Entonces
-                \begin{equation}\label{eq:DivCovAntis}
-                    \nabla_{\nu}T^{\mu\nu}
-                        = \frac{1}{\sqrt{-g}}\,
-                        \partial_{\nu}\!\left(\sqrt{-g}\;T^{\mu\nu}\right)\;.
-                \end{equation}
-            \end{myteo}
-
-            \begin{proof}
-                Expandiendo la derivada covariante mediante \eqref{eq:DerCov}:
-                \begin{equation*}
-                    \nabla_{\nu}T^{\mu\nu}
-                        = \partial_{\nu}T^{\mu\nu}
-                        + \Gamma^{\mu}_{\ \nu\lambda}T^{\lambda\nu}
-                        + \Gamma^{\nu}_{\ \nu\lambda}T^{\mu\lambda}\;.
-                \end{equation*}
-                El segundo término se anula: $\Gamma^{\mu}_{\ \nu\lambda}$ es simétrico en $(\nu,\lambda)$ mientras $T^{\lambda\nu}$ es antisimétrico, de modo que su contracción es cero.  Para el tercer término usamos la identidad estándar de la traza de Christoffel:
-                \begin{equation*}
-                    \Gamma^{\nu}_{\ \nu\lambda}
-                        = \partial_{\lambda}\ln\sqrt{-g}\;.
-                \end{equation*}
-                Entonces
-                \begin{equation*}
-                    \nabla_{\nu}T^{\mu\nu}
-                        = \partial_{\nu}T^{\mu\nu}
-                        + T^{\mu\lambda}\partial_{\lambda}\ln\sqrt{-g}
-                        = \frac{1}{\sqrt{-g}}
-                        \partial_{\nu}\!\left(\sqrt{-g}\;T^{\mu\nu}\right)\;,
-                \end{equation*}
-                que es exactamente la regla del producto para $\partial_{\nu}(\sqrt{-g}\;T^{\mu\nu})$.
-            \end{proof}
-
-            \begin{myteo}[Nulidad de la derivada covariante del tensor de Levi-Civita]
-                \label{teo:NablaLC}
-                $\nabla_{\lambda}\mathcal{E}_{\mu\nu\rho\sigma} = 0$.
-            \end{myteo}
-
-            \begin{proof}
-                Por definición $\mathcal{E}_{\mu\nu\rho\sigma}=\sqrt{-g}\,\varepsilon_{\mu\nu\rho\sigma}$.  La derivada covariante actúa como
-                \begin{equation*}
-                    \nabla_{\lambda}\mathcal{E}_{\mu\nu\rho\sigma}
-                        = \partial_{\lambda}(\sqrt{-g})\,\varepsilon_{\mu\nu\rho\sigma}
-                        - \Gamma^{\alpha}_{\ \lambda\mu}\mathcal{E}_{\alpha\nu\rho\sigma}
-                        - \Gamma^{\alpha}_{\ \lambda\nu}\mathcal{E}_{\mu\alpha\rho\sigma}
-                        - \Gamma^{\alpha}_{\ \lambda\rho}\mathcal{E}_{\mu\nu\alpha\sigma}
-                        - \Gamma^{\alpha}_{\ \lambda\sigma}\mathcal{E}_{\mu\nu\rho\alpha}\;.
-                \end{equation*}
-                Usando $\partial_{\lambda}\sqrt{-g}=\sqrt{-g}\,\Gamma^{\nu}_{\ \nu\lambda}$ y la total antisimetría de $\varepsilon$, los cuatro términos con Christoffel producen exactamente $-\sqrt{-g}\,\Gamma^{\nu}_{\ \nu\lambda} \varepsilon_{\mu\nu\rho\sigma}$, que cancela el primer término. Por tanto el resultado es cero.
-            \end{proof}
-
-        \subsection{El tensor de Faraday en espacio-tiempo curvo}\label{subsec:Faraday}
-
-            \begin{myDef}[Tensor de Faraday en espacio curvo]
-                El tensor de Faraday en espacio-tiempo curvo se define como
-                \begin{equation}\label{eq:FaradayCurvo}
-                    F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}\;.
-                \end{equation}
-            \end{myDef}
-
-            Nótese que, aunque en RG las derivadas de tensores covariantes ordinariamente producen objetos que no son tensores, en el caso antisimetrzado los símbolos de Christoffel se cancelan mutuamente:
-            \begin{equation*}
-                \nabla_{\mu}A_{\nu} - \nabla_{\nu}A_{\mu}
-                = (\partial_{\mu}A_{\nu} - \Gamma^{\lambda}_{\ \mu\nu}A_{\lambda})
-                - (\partial_{\nu}A_{\mu} - \Gamma^{\lambda}_{\ \nu\mu}A_{\lambda})
-                = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}\;,
-            \end{equation*}
-            donde se ha usado la libre de torsión $\Gamma^{\lambda}_{\ \mu\nu}= \Gamma^{\lambda}_{\ \nu\mu}$.  Por consiguiente $F_{\mu\nu}$ es un tensor $(0,2)$ genuino. La versión contravariante se obtiene subiendo ambos índices con la métrica inversa:
-            \begin{equation}\label{eq:FContra}
-                F^{\mu\nu} = g^{\mu\alpha}g^{\nu\beta}F_{\alpha\beta}\;.
-            \end{equation}
-
-            \begin{myDef}[Dual de Hodge en espacio curvo]
-                \label{def:Dual}
-                El dual de Hodge del tensor de Faraday en espacio curvo se define usando
-                el \emph{tensor} de Levi-Civita (no el símbolo):
-                \begin{equation}\label{eq:DualCurvo}
-                    {}^{*}F^{\mu\nu}
-                        = \frac{1}{2}\,\mathcal{E}^{\mu\nu\rho\sigma}F_{\rho\sigma}
-                        = \frac{1}{2\sqrt{-g}}\,\varepsilon^{\mu\nu\rho\sigma}F_{\rho\sigma}\;.
-                \end{equation}
-            \end{myDef}
-
-            Puesto que $\mathcal{E}^{\mu\nu\rho\sigma}$ es tensor y $F_{\rho\sigma}$ es tensor, ${}^{*}F^{\mu\nu}$ es también un tensor $(2,0)$ antisimétrico.
-
-            Una propiedad algebraica esencial del operador dual en cuatro dimensiones con signatura Lorentziana es que \emph{aplicado dos veces sobre una 2-forma reproduce el negativo de la 2-forma original}:
-
-            \begin{myteo}[Doble dual en cuatro dimensiones Lorentzianas]
-                \label{teo:DobleDual}
-                ${}^{**}F^{\mu\nu} = -F^{\mu\nu}$.
-            \end{myteo}
-
-            \begin{proof}
-                Por la definición \eqref{eq:DualCurvo} aplicada dos veces:
-                \begin{align*}
-                    {}^{**}F^{\mu\nu}
-                    &= \frac{1}{2}\mathcal{E}^{\mu\nu\rho\sigma}
-                    \left({}^{*}F_{\rho\sigma}\right)
-                    = \frac{1}{2}\mathcal{E}^{\mu\nu\rho\sigma}
-                    \cdot\frac{1}{2}\mathcal{E}_{\rho\sigma\alpha\beta}F^{\alpha\beta}\\
-                    &= \frac{1}{4}\mathcal{E}^{\mu\nu\rho\sigma}
-                    \mathcal{E}_{\rho\sigma\alpha\beta}F^{\alpha\beta}\;.
-                \end{align*}
-                Usando la identidad de contracción \eqref{eq:ContrLC}:
-                \begin{equation*}
-                    \mathcal{E}^{\mu\nu\rho\sigma}\mathcal{E}_{\rho\sigma\alpha\beta}
-                    = -2\!\left(\delta^{\mu}_{\ \alpha}\delta^{\nu}_{\ \beta}
-                            -\delta^{\mu}_{\ \beta}\delta^{\nu}_{\ \alpha}\right)\;,
-                \end{equation*}
-                por tanto
-                \begin{equation*}
-                    {}^{**}F^{\mu\nu}
-                    = \frac{1}{4}\cdot(-2)
-                    \!\left(\delta^{\mu}_{\ \alpha}\delta^{\nu}_{\ \beta}
-                            -\delta^{\mu}_{\ \beta}\delta^{\nu}_{\ \alpha}\right)
-                    F^{\alpha\beta}
-                    = -\frac{1}{2}(F^{\mu\nu}-F^{\nu\mu})
-                    = -F^{\mu\nu}\;,
-                \end{equation*}
-                donde en el último paso se usó la antisimetría $F^{\nu\mu}=-F^{\mu\nu}$.
-            \end{proof}
-
-        \subsection{Las ecuaciones de Maxwell en espacio-tiempo curvo}\label{subsec:MaxwellCurvo}
-
-            El principio de acoplamiento mínimo de la Relatividad General establece que las leyes físicas en espacio plano se extienden a espacio curvo mediante la sustitución $\partial_{\mu}\to\nabla_{\mu}$ y $\varepsilon^{\mu\nu\rho\sigma} \to\mathcal{E}^{\mu\nu\rho\sigma}$.  Bajo este principio las ecuaciones de Maxwell en espacio curvo son:
-
-            \begin{equation}\label{eq:MaxNoHomRG}
-                \nabla_{\nu}F^{\mu\nu} = J^{\mu}
-                \quad\Longleftrightarrow\quad
-                \frac{1}{\sqrt{-g}}\,\partial_{\nu}
-                \!\left(\sqrt{-g}\;F^{\mu\nu}\right) = J^{\mu}\;,
-            \end{equation}
-
-            \begin{equation}\label{eq:MaxHomRG}
-                \nabla_{\lambda}{}^{*}F^{\mu\nu} = 0
-                \quad\Longleftrightarrow\quad
-                \partial_{[\lambda}F_{\mu\nu]} = 0\;.
-            \end{equation}
-
-            La equivalencia en \eqref{eq:MaxNoHomRG} es consecuencia directa del Teorema~\ref{teo:DivCov}, pues $F^{\mu\nu}$ es antisimétrico.  La equivalencia en \eqref{eq:MaxHomRG} se verifica notando que la antisimetrización de $\nabla_{\lambda}F_{\mu\nu}$ colapsa a $\partial_{[\lambda}F_{\mu\nu]}$ al cancelarse los Christoffel (idéntico argumento que en \S\ref{subsec:Faraday}).
-
-            Ahora vamos a ahacer la deducción desde una densidad lagrangiana como ya se hizo previamente, esto, con el fin de dar rigurosidad al resultado.
-
-            En espacio plano la acción de Maxwell es $S=\int\Lambda\,d^4x$. En espacio curvo el elemento de volumen invariante bajo difeomorfismos es$\sqrt{-g}\,d^4x$, y la acción se escribe
-
-            \begin{equation}\label{eq:AccionRG}
-                S = \int_{\mathcal{M}}\Lambda_{\text{RG}}\,\sqrt{-g}\;d^4x\;.
-            \end{equation}
-
-            El factor $\sqrt{-g}$ es \emph{indispensable}: sin él la integral no seríaun escalar bajo cambios de coordenadas, pues $d^4x\to\det(\partial x'/\partial x)\,d^4x'$ y $\sqrt{-g}\to\det(\partial x/\partial x')\sqrt{-g'}$, de modo que el producto $\sqrt{-g}\,d^4x$ es invariante.
-
-            Siguiendo la misma lógica variacional de las secciones anteriores, la densidad lagrangiana en espacio curvo para el campo electromagnético con fuentes es
-
-            \begin{equation}\label{eq:LagDenRG}
-                \Lambda_{\text{RG}}
-                    = A_{\mu}J^{\mu}
-                    -\frac{1}{4}F^{\mu\nu}F_{\mu\nu}
-                    -\frac{i}{4}\,{}^{*}F^{\mu\nu}F_{\mu\nu}\;.
-            \end{equation}
-
-            Nótese que los escalares $F^{\mu\nu}F_{\mu\nu}$ y ${}^{*}F^{\mu\nu}F_{\mu\nu}$ son ya invariantes de Lorentz en espacio plano; en espacio curvo siguen siendo escalares genuinos (su contracción se efectúa con la métrica $g_{\mu\nu}$).
-
-            En la sección anterior el campo de Riemann-Silberstein se definió en espacio plano como $\vec{F}_{RS}=\vec{E}+i\vec{B}$ y su cuadrado resultó ser
-            \begin{equation*}
-                F^2_{RS} = -\frac{1}{2}F^{\alpha\beta}F_{\alpha\beta} - \frac{i}{4}\,{}^{*}F^{\alpha\beta}F_{\alpha\beta}\;.
-            \end{equation*}
-            Esta expresión escalar se transporta directamente al espacio curvo sin modificación, pues las contracciones tensoriales son covariantes.  Los invariantes del campo electromagnético en espacio curvo son entonces:
-            \begin{enumerate}
-                \item $F^{\mu\nu}F_{\mu\nu} = g^{\mu\alpha}g^{\nu\beta}F_{\mu\nu}F_{\alpha\beta}$ (escalar real).
-                \item ${}^{*}F^{\mu\nu}F_{\mu\nu}$ (pseudo-escalar real).
-                \item $F^2_{RS} = -\frac{1}{2}F^{\mu\nu}F_{\mu\nu} -\frac{i}{4}\,{}^{*}F^{\mu\nu}F_{\mu\nu}$(escalar complejo).
-            \end{enumerate}
-
-            Antes de continuar, vamos a dar la definición que extiende al tensor de Riemann-Silberstein en espacio-tiempos curvos.
-
-            \begin{myDef}[Tensor de Riemann-Silberstein en espacio curvo] \label{def:RSRG}
-                Sea $(\mathcal{M},g_{\mu\nu})$ un espacio-tiempo pseudo-Riemanniano de signatura $(-,+,+,+)$.  El \textbf{tensor de Riemann-Silberstein en relatividad general} se define como
-                \begin{equation}\label{eq:RSRG}
-                    \boxed{R^{\mu\nu} = F^{\mu\nu} + i\,{}^{*}F^{\mu\nu} = F^{\mu\nu} + \frac{i}{2\sqrt{-g}}\,\varepsilon^{\mu\nu\rho\sigma}F_{\rho\sigma} \;.}
-                \end{equation}
-            \end{myDef}
-
-            $F^{\mu\nu}$ es un tensor $(2,0)$ real (demostrado en \S\ref{subsec:Faraday}).  ${}^{*}F^{\mu\nu}$ es también un tensor $(2,0)$ (véase Definición~\ref{def:Dual}).  La combinación lineal de dos tensores del mismo tipo con coeficientes escalares (incluyendo escalares complejos) es un tensor del mismo tipo.  Por tanto $R^{\mu\nu}$ es un tensor $(2,0)$ complejo. $\square$
-
-            Tanto $F^{\mu\nu}$ como ${}^{*}F^{\mu\nu}$ son antisimétricos; por linealidad $R^{\mu\nu}=-R^{\nu\mu}$. $\square$
-
-            Usando el Teorema ~\ref{teo:DobleDual}:
-            \begin{equation}\label{eq:AutoDual}
-                {}^{*}R^{\mu\nu} = {}^{*}F^{\mu\nu} + i\,{}^{**}F^{\mu\nu} = {}^{*}F^{\mu\nu} - iF^{\mu\nu} = -i\,R^{\mu\nu}\;.
-            \end{equation}
-            Es decir, $R^{\mu\nu}$ es un \emph{tensor auto-dual complejo}: la operación de dualidad actúa sobre él como multiplicación por $-i$.  Esta propiedad refleja que el operador $\star$ actúa como $\sqrt{-1}$ en el espacio de 2-formas Lorentzianas de cuatro dimensiones.
-
-            En espacio plano, la ecuación de Euler-Lagrange para una densidad lagrangiana $\Lambda$ es la ecuación \eqref{eq:EL}.  En espacio curvo el campo dinámico es $A_{\mu}$ y la densidad lagrangiana que multiplica al volumen invariante $\sqrt{-g}$ es $\Lambda_{\text{RG}}$.  La acción es
-            \begin{equation*}
-                S = \int\Lambda_{\text{RG}}(x^{\mu}, A_{\mu}, \partial_{\nu}A_{\mu}) \,\sqrt{-g}\;d^4x\;.
-            \end{equation*}
-            Extremando $S$ respecto a $A_{\mu}$ con condiciones de frontera fijas, la ecuación de Euler-Lagrange covariante toma la forma
-            \begin{equation}\label{eq:ELcurvo}
-                \frac{\partial(\sqrt{-g}\,\Lambda_{\text{RG}})}{\partial A_{\mu}} - \partial_{\nu} \frac{\partial(\sqrt{-g}\,\Lambda_{\text{RG}})}{\partial(\partial_{\nu}A_{\mu})} = 0\;.
-            \end{equation}
-            Nótese que \eqref{eq:ELcurvo} contiene derivadas \emph{parciales} ordinarias porque la acción ya está escrita con la medida invariante $\sqrt{-g}\,d^4x$; el factor $\sqrt{-g}$ absorbe la curvatura en la densidad lagrangiana efectiva $\tilde{\Lambda}=\sqrt{-g}\,\Lambda_{\text{RG}}$.
-
-            Planteamos la siguiente densidad lagrangiana en espacio-tiempo curvo, motivada directamente por el invariante $F^2_{RS}$:
-
-            \begin{equation}\label{eq:LagRS_RG}
-                \Lambda_{\text{RG}}(x^{\mu},A_{\mu}) = K_1 A_{\mu}J^{\mu} + K_2 F^{\mu\nu}F_{\mu\nu} + iK_3\,{}^{*}F^{\mu\nu}F_{\mu\nu}\;,
-            \end{equation}
-            que reproduce la estructura de la densidad lagrangiana del campo de Riemann-Silberstein.  La densidad lagrangiana efectiva es $\tilde{\Lambda} = \sqrt{-g}\,\Lambda_{\text{RG}}$.
-
-            Calculemos cada miembro de la ecuación de Euler-Lagrange \eqref{eq:ELcurvo}.
-
-            \vspace{4pt}
-            \noindent\textbf{Primer miembro} (variación respecto a $A_{\mu}$):
-
-            La única dependencia explícita en $A_{\mu}$ proviene del término de acoplamiento
-            con la corriente:
-            \begin{equation}\label{eq:EL1}
-                \frac{1}{\sqrt{-g}}\,
-                \frac{\partial(\sqrt{-g}\,\Lambda_{\text{RG}})}{\partial A_{\mu}}
-                = K_1 J^{\mu}\;.
-            \end{equation}
-
-            \vspace{4pt}
-            \noindent\textbf{Segundo miembro} (variación respecto a $\partial_{\nu}A_{\mu}$):
-
-            El tensor de Faraday en espacio curvo cumple $F_{\rho\sigma}=\partial_{\rho}A_{\sigma}
-            -\partial_{\sigma}A_{\rho}$, lo que implica
-            \begin{equation}\label{eq:dFdA}
-                \frac{\partial F_{\rho\sigma}}{\partial(\partial_{\nu}A_{\mu})}
-                = \delta^{\nu}_{\ \rho}\delta^{\mu}_{\ \sigma}
-                - \delta^{\nu}_{\ \sigma}\delta^{\mu}_{\ \rho}\;.
-            \end{equation}
-
-            Calculemos la variación del término $F^{\rho\sigma}F_{\rho\sigma}$.
-            Con la ayuda de \eqref{eq:dFdA}:
-            \begin{align*}
-                \frac{\partial(F^{\rho\sigma}F_{\rho\sigma})}{\partial(\partial_{\nu}A_{\mu})}
-                &= F^{\rho\sigma}
-                \frac{\partial F_{\rho\sigma}}{\partial(\partial_{\nu}A_{\mu})}
-                + F_{\rho\sigma}
-                \frac{\partial F^{\rho\sigma}}{\partial(\partial_{\nu}A_{\mu})}\\
-                &= 2F^{\rho\sigma}\!\left(\delta^{\nu}_{\ \rho}\delta^{\mu}_{\ \sigma}
-                                        -\delta^{\nu}_{\ \sigma}\delta^{\mu}_{\ \rho}\right)
-                = 2F^{\nu\mu} - 2F^{\mu\nu} = -4F^{\mu\nu}\;,
-            \end{align*}
-            donde en el último paso se usó la antisimetría.  Por tanto:
-            \begin{equation}\label{eq:VarFF}
-                \frac{1}{\sqrt{-g}}\,
-                \partial_{\nu}\!\left[\sqrt{-g}\,
-                \frac{\partial(K_2 F^{\rho\sigma}F_{\rho\sigma})}
-                    {\partial(\partial_{\nu}A_{\mu})}\right]
-                = \frac{-4K_2}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;F^{\mu\nu}\right)\;.
-            \end{equation}
-
-            Calculemos ahora la variación del término dual
-            ${}^{*}F^{\rho\sigma}F_{\rho\sigma}
-            = \frac{1}{2\sqrt{-g}}\varepsilon^{\rho\sigma\alpha\beta}F_{\alpha\beta}F_{\rho\sigma}$.
-            Usando \eqref{eq:dFdA} dos veces:
-            \begin{align*}
-                \frac{\partial({}^{*}F^{\rho\sigma}F_{\rho\sigma})}
-                    {\partial(\partial_{\nu}A_{\mu})}
-                &= \frac{\varepsilon^{\rho\sigma\alpha\beta}}{2\sqrt{-g}}
-                \left[F_{\rho\sigma}\!\left(\delta^{\nu}_{\ \alpha}\delta^{\mu}_{\ \beta}
-                                            -\delta^{\nu}_{\ \beta}\delta^{\mu}_{\ \alpha}\right)
-                        +F_{\alpha\beta}\!\left(\delta^{\nu}_{\ \rho}\delta^{\mu}_{\ \sigma}
-                                            -\delta^{\nu}_{\ \sigma}\delta^{\mu}_{\ \rho}\right)
-                \right]\\
-                &= \frac{\varepsilon^{\rho\sigma\nu\mu}}{2\sqrt{-g}}\cdot 2\,F_{\rho\sigma}
-                \cdot 2
-                = \frac{2}{\sqrt{-g}}\,\varepsilon^{\rho\sigma\nu\mu}F_{\rho\sigma}
-                = -4\,{}^{*}F^{\mu\nu}\;,
-            \end{align*}
-            donde en el último paso se usó la definición \eqref{eq:DualCurvo} y la
-            antisimetría de $\varepsilon$ para reordenar índices.  Por tanto:
-            \begin{equation}\label{eq:VarFdF}
-                \frac{1}{\sqrt{-g}}\,
-                \partial_{\nu}\!\left[\sqrt{-g}\,
-                \frac{\partial(iK_3\,{}^{*}F^{\rho\sigma}F_{\rho\sigma})}
-                    {\partial(\partial_{\nu}A_{\mu})}\right]
-                = \frac{-4iK_3}{\sqrt{-g}}\,
-                \partial_{\nu}\!\left(\sqrt{-g}\;{}^{*}F^{\mu\nu}\right)\;.
-            \end{equation}
-
-            Sumando \eqref{eq:EL1}, \eqref{eq:VarFF} y \eqref{eq:VarFdF} la ecuación
-            de Euler-Lagrange \eqref{eq:ELcurvo} queda:
-            \begin{equation*}
-                K_1 J^{\mu}
-                = \frac{-4K_2}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;F^{\mu\nu}\right)
-                + \frac{-4iK_3}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;{}^{*}F^{\mu\nu}\right)
-                \;,
-            \end{equation*}
-            es decir,
-            \begin{equation}\label{eq:ELprev}
-                \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left[
-                \sqrt{-g}\!\left(F^{\mu\nu} + i\frac{K_3}{K_2}{}^{*}F^{\mu\nu}\right)
-                \right]
-                = -\frac{K_1}{4K_2}\,J^{\mu}\;.
-            \end{equation}
-
-            Imponemos ahora las mismas condiciones que en la sección anterior:
-            \begin{equation}\label{eq:CondK}
-                K_1 = 1\;,\quad K_2 = -\frac{1}{4}\;,\quad K_3 = K_2\;.
-            \end{equation}
-            Sustituyendo en \eqref{eq:ELprev}:
-            \begin{equation}\label{eq:MaxRS_RG_prev}
-                \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left[
-                \sqrt{-g}\!\left(F^{\mu\nu} + i\,{}^{*}F^{\mu\nu}\right)
-                \right]
-                = J^{\mu}\;.
-            \end{equation}
-
-            Reconocemos $F^{\mu\nu}+i\,{}^{*}F^{\mu\nu} = R^{\mu\nu}$ de la
-            Definición~\ref{def:RSRG}.  Usando el Teorema~\ref{teo:DivCov} la expresión
-            izquierda de \eqref{eq:MaxRS_RG_prev} es exactamente $\nabla_{\nu}R^{\mu\nu}$,
-            y obtenemos:
-
-            \begin{equation}\label{eq:MaxRS_RG}
-                \boxed{
-                    \nabla_{\nu}R^{\mu\nu} = J^{\mu}
-                    \quad\Longleftrightarrow\quad
-                    \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;R^{\mu\nu}\right)
-                    = J^{\mu}\;.
-                }
-            \end{equation}
-
-            Esta es la \textbf{extensión a la Relatividad General} de la ecuación de
-            Riemann-Silberstein.  La densidad lagrangiana asociada es
-
-            \begin{equation}\label{eq:LagFinalRG}
-                \Lambda_{\text{RG}}
-                    = A_{\mu}J^{\mu}
-                    - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}
-                    - \frac{i}{4}\,{}^{*}F^{\mu\nu}F_{\mu\nu}
-                    = A_{\mu}J^{\mu} + F^2_{RS}\;.
-            \end{equation}
-
-        \subsection{Verificación: deducción de las cuatro ecuaciones de Maxwell} \label{subsec:VerificacionRG}
-
-            \begin{myteo}[Equivalencia de la ecuación de Riemann-Silberstein en RG]
-                \label{teo:EquivRG}
-                En un espacio-tiempo pseudo-Riemanniano $(\mathcal{M},g_{\mu\nu})$ de signatura $(-,+,+,+)$, la ecuación
-                \begin{equation}\label{eq:MaxRS_RG_teo}
-                    \nabla_{\nu}R^{\mu\nu} = J^{\mu}
-                \end{equation}
-                es equivalente a las cuatro ecuaciones de Maxwell en espacio curvo:
-                \begin{align}
-                    \nabla_{\nu}F^{\mu\nu} &= J^{\mu}\;,\label{eq:M1RG}\\
-                    \nabla_{[\lambda}F_{\mu\nu]} &= 0\;.\label{eq:M2RG}
-                \end{align}
-            \end{myteo}
-
-            \begin{proof}
-                Expandimos \eqref{eq:MaxRS_RG_teo} usando la definición~\ref{def:RSRG}:
-                \begin{equation*}
-                    \nabla_{\nu}(F^{\mu\nu} + i\,{}^{*}F^{\mu\nu}) = J^{\mu}\;,
-                \end{equation*}
-                \begin{equation}\label{eq:SepPartes}
-                    \nabla_{\nu}F^{\mu\nu} + i\,\nabla_{\nu}{}^{*}F^{\mu\nu} = J^{\mu}\;.
-                \end{equation}
-                La 4-corriente $J^{\mu}$ es un campo real (densidad de carga y corriente de carga física).  Separando partes real e imaginaria en
-                \eqref{eq:SepPartes}:
-                \begin{align}
-                    \text{Re:}\quad &\nabla_{\nu}F^{\mu\nu} = J^{\mu}\;, \label{eq:ParteReal}\\
-                    \text{Im:}\quad &\nabla_{\nu}{}^{*}F^{\mu\nu} = 0\;.\label{eq:ParteImag}
-                \end{align}
-                La ecuación \eqref{eq:ParteReal} es precisamente la ecuación no homogénea \eqref{eq:M1RG}.  La ecuación \eqref{eq:ParteImag} es equivalente a la ecuación homogénea \eqref{eq:M2RG} (identidad de Bianchi), como se muestra a continuación.
-
-                Usando el Teorema~\ref{teo:DivCov} y la definición \eqref{eq:DualCurvo}:
-                \begin{equation*}
-                    \nabla_{\nu}{}^{*}F^{\mu\nu} = \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;{}^{*}F^{\mu\nu}\right) = \frac{1}{2\sqrt{-g}}\,\partial_{\nu}\!\left(\varepsilon^{\mu\nu\rho\sigma} F_{\rho\sigma}\right)\;.
-                \end{equation*}
-                Como $\varepsilon^{\mu\nu\rho\sigma}$ es constante en coordenadas generale (es la densidad tensorial de peso $+1$ con componentes $0,\pm1$):
-                \begin{equation*}
-                    \nabla_{\nu}{}^{*}F^{\mu\nu} = \frac{1}{2\sqrt{-g}}\,\varepsilon^{\mu\nu\rho\sigma} \partial_{\nu}F_{\rho\sigma} = 0 \quad\Longleftrightarrow\quad \varepsilon^{\mu\nu\rho\sigma}\partial_{[\nu}F_{\rho\sigma]} = 0 \quad\Longleftrightarrow\quad \partial_{[\mu}F_{\nu\rho]} = 0\;,
-                \end{equation*}
-                que es la identidad de Bianchi \eqref{eq:M2RG} (los Christoffel se cancelan en la antisimetrización total como se argumentó en \S\ref{subsec:Faraday}).
-
-                Recíprocamente, si se satisfacen \eqref{eq:M1RG} y \eqref{eq:M2RG}, multiplicamos la segunda por $i$ y sumamos a la primera:
-                \begin{equation*}
-                    \nabla_{\nu}F^{\mu\nu}+i\,\nabla_{\nu}{}^{*}F^{\mu\nu} = \nabla_{\nu}(F^{\mu\nu}+i\,{}^{*}F^{\mu\nu}) = \nabla_{\nu}R^{\mu\nu} = J^{\mu}\;.\quad\square
-                \end{equation*}
-            \end{proof}
-
-            A continuación mostramos explícitamente que las cuatro leyes de Maxwell clásicas se recuperan de \eqref{eq:ParteReal} y \eqref{eq:ParteImag}.
-
-            \subsubsection*{Ecuaciones no homogéneas: $\nabla_{\nu}F^{\mu\nu}=J^{\mu}$}
-
-                Usando el Teorema~\ref{teo:DivCov} escribimos equivalentemente:
-                \begin{equation}\label{eq:MaxNoHom_exp}
-                    \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;F^{\mu\nu}\right) = J^{\mu}\;.
-                \end{equation}
-
-                \textbf{Caso} $\mu=0$ (Ley de Gauss eléctrica generalizada):
-                \begin{equation}
-                    \frac{1}{\sqrt{-g}}\,\partial_{i}\!\left(\sqrt{-g}\;F^{0i}\right) = J^{0} = \rho\;.
-                \end{equation}
-                En el límite de espacio plano $\sqrt{-g}\to1$ y $F^{0i}\to E^i$, recuperando $\vec{\nabla}\cdot\vec{E}=\rho$.
-
-                \textbf{Caso} $\mu=k$ (Ley de Ampère-Maxwell generalizada):
-                \begin{equation}
-                    \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;F^{k\nu}\right) = J^{k}\;,
-                \end{equation}
-                que en espacio plano recupera $\vec{\nabla}\times\vec{B} = \vec{J}+\partial_t\vec{E}$.
-
-            \subsubsection*{Ecuaciones homogéneas: $\nabla_{\nu}{}^{*}F^{\mu\nu}=0$}
-
-                Equivalentemente $\partial_{[\mu}F_{\nu\rho]}=0$, i.e., $\varepsilon^{\mu\nu\rho\sigma}\partial_{\nu}F_{\rho\sigma}=0$.
-
-                \textbf{Caso} $\mu=0$ (Ley de Gauss magnética generalizada):
-                \begin{equation}
-                    \varepsilon^{0\nu\rho\sigma}\partial_{\nu}F_{\rho\sigma} = 0 \quad\xrightarrow{\text{plano}}\quad \vec{\nabla}\cdot\vec{B}=0\;.
-                \end{equation}
-
-                \textbf{Caso} $\mu=l$ (Ley de Faraday generalizada):
-                \begin{align*}
-                    \varepsilon^{l\nu\rho\sigma}\partial_{\nu}F_{\rho\sigma} &= 0\\
-                    \varepsilon^{l0ij}\partial_0 F_{ij} +\varepsilon^{li0j}\partial_i F_{0j} +\varepsilon^{lij0}\partial_i F_{j0} &= 0\\
-                    -\varepsilon^{0lij}\partial_t F_{ij}  -2\varepsilon^{0lij}\partial_i F_{j0} &= 0\\
-                    2\partial_t B^l - 2(\vec{\nabla}\times\vec{E})^l &= 0\;,
-                \end{align*}
-                que en forma vectorial da la ley de Faraday:
-                \begin{equation}
-                    \partial_t\vec{B} + \vec{\nabla}\times\vec{E} = 0\;.
-                \end{equation}
-
-            De esta forma queda demostrado que la ecuación
-            \begin{equation*}
-                \frac{1}{\sqrt{-g}}\,\partial_{\nu}\!\left(\sqrt{-g}\;R^{\mu\nu}\right) = J^{\mu}
-            \end{equation*}
-            contiene, en una sola expresión tensorial covariante válida en cualquier espacio-tiempo pseudo-Riemanniano, la totalidad de las cuatro ecuaciones de Maxwell: la ley de Gauss eléctrica, la ley de Ampère-Maxwell, la ley de Gauss magnética y la ley de Faraday.  En el límite de espacio plano $g_{\mu\nu}\to \eta_{\mu\nu}$, se tiene $\sqrt{-g}\to1$ y $\nabla_{\nu}\to\partial_{\nu}$, recuperando exactamente el resultado de la relatividad especial $\partial_{\nu}R^{\mu\nu}=J^{\nu}$ de la ecuación \eqref{eq:EcuaMax2}.
-
-    \section{Electrodinámica cuántica}
-
-        El vector de Riemann-Silberstein es útil para estudiar la interacción entre la luz y los sistemas cuánticos. Por ejemplo, cuando un fotón interactúa con un átomo o una molécula, el vector de Riemann-Silberstein permite describir la absorción y emisión de fotones, así como los cambios resultantes en la polarización de la luz. La utilización del vector de Riemann-Silberstein en la óptica cuántica ha sido fundamental para comprender y manipular fenómenos cuánticos relacionados con la polarización de la luz. Ha permitido avances significativos en áreas como la generación de estados de luz cuántica, la teleportación cuántica y la computación cuántica basada en fotones. \\
-
-        A continuación vamos a re hacer la cuantización canónica que ya hicimos previamente pero utilizando el vector de RS, a su vez veremos cómo este se puede utilizar para poder hablar de la función de onda del fotón y empezar a darnos una idea sobre qué es un fotón y por último una pequeña revisión del cálculo espinorial y su relación con el vector de RS.
-        \subsection{Cuantización canónica}
-
-            El procedimiento estándar para formular la teoría cuántica es la cuantización canónica de la teoría clásica. Este procedimiento fue aplicado por primera vez al electromagnetismo por Heisenberg y Pauli. La cuantización canónica requiere la identificación de las variables canónicas, y esto fue realizado adecuadamente en el caso general por Born e Infeld. Las ecuaciones de Maxwell indican claramente la identificación correcta: las variables canónicas son los vectores de campo $\Vec{E}$ y $\Vec{B}$, cuyas derivadas temporales están determinadas por las ecuaciones de Farday y Ampere. No importa realmente si se asigna el papel de posición a $\Vec{B}$ y el papel de momento a $\Vec{E}$, o viceversa. Sin embargo, la primera elección es más natural, ya que las fuentes, que son los equivalentes de las fuerzas mecánicas externas, aparecen en la ecuación para $\Vec{E}$. De cualquier manera, lo único necesario son los corchetes de Poisson para las variables canónicas, que permitirán determinar los conmutadores de los operadores de campo. El requisito básico para los corchetes de Poisson es que reproduzcan las ecuaciones de movimiento,
-
-            \begin{equation}\label{eq:PoissLiouville}
-                \partial_t A(t) = \{A(t),H\},
-            \end{equation}
-
-            donde $A(t)$ es cualquier cantidad física y $H$ el hamiltoniano del sistema, esta ecuación para el corchete de Poisson es un caso particular de la ecuación de Boltzmann y se conoce como ecuación de Liouville. El corchete de Poisson para los campos $\Vec{E}$ y $\Vec{B}$ es de la forma
-
-            \begin{equation}\label{eq:CorcPoisBi}
-                \{B_i(\Vec{r},t), D_j(\Vec{r}',t)\} = \epsilon_{ijk}\partial_k \delta^3(\Vec{r}-\Vec{r}'),
-            \end{equation}
-
-            No solo reproducen la ecuación de Liouville \ref{eq:PoissLiouville}, sino que también garantizan la acción adecuada de los generadores restantes del grupo de Poincaré\footnote{El grupo de Poincaré combina las transformaciones de Lorentz, que describen las transformaciones entre sistemas de referencia en movimiento relativo a velocidades cercanas a la velocidad de la luz, con las traslaciones en el espacio y el tiempo. En otras palabras, el grupo de Poincaré incluye tanto las rotaciones y las transformaciones de Lorentz, como las traslaciones espaciales y temporales.}. Hay que tener en cuenta que los corchetes de Poisson \ref{eq:CorcPoisBi} son universales, es decir, no contienen constantes materiales. Esto valida la elección de $\Vec{B}$ y $\Vec{D}$ (y no, por ejemplo, $\Vec{H}$ y $\Vec{E}$) como las variables canónicas. Según las reglas de la cuantización canónica, los corchetes de Poisson se reemplazan por los conmutadores de los operadores correspondientes (divididos por i). Las relaciones de conmutación para $\Hat{B}$ y $\hat{D}$ conducen a los siguientes conmutadores para los operadores $\hat{F}$ y $\hat{F}^{\dagger}$ que representan los operadores de campo de RS y su adjunto conjugado:
-
-            \begin{equation}\label{eq:ConmutacionDeF}
-                \left[ \hat{F}_i(\Vec{r},t) , \hat{F}^{\dagger}(\Vec{r}',t) \right] = i\hbar\epsilon_{ijk}\partial_k\delta^3(\Vec{r}-\Vec{r'}).
-            \end{equation}
-
-            La imagen del fotón empiezna a surgir de manera más directa cuando se utiliza el vector RS en lugar de la formulación estándar. Después de la transformación de Fourier de los operadores RS de acuerdo con la siguiente fórmula:
-
-            \begin{equation}
-                \Vec{F}(\Vec{r},t) =  \frac{1}{(2\pi)^{3/2}}\int \left[f_+(\Vec{k})e^{i(\Vec{k}\cdot \Vec{r} - \omega t)} + f_-^*(\Vec{k})e^{-i(\Vec{k}\cdot \Vec{r} - \omega t)}\right]\hat{e}(\Vec{k})d^3k,
-            \end{equation}
-
-            elevando a operador tenemos
-
-            \begin{equation}
-                \hat{F}(\Vec{r},t) =  \frac{1}{(2\pi)^{3/2}}\int \left[\hat{f}_+(\Vec{k})e^{i(\Vec{k}\cdot \Vec{r} - \omega t)} + \hat{f}_-^{\dagger}(\Vec{k})e^{-i(\Vec{k}\cdot \Vec{r} - \omega t)}\right]\hat{e}(\Vec{k})d^3k.
-            \end{equation}
-
-            Para recuperar las relaciones de conmutación \ref{eq:ConmutacionDeF} para el operador RS, se deben imponer las siguientes relaciones de conmutación en los operadores $\hat{f}_{\alpha}$:
-
-            \begin{equation}
-                \left[ \hat{f}_{\alpha}(\Vec{k}) , \hat{f}_{\beta}^{\dagger}(\Vec{k}') \right] = \hbar\omega \delta_{\alpha\beta}d^3(\Vec{k}-\Vec{k}').
-            \end{equation}
-
-            Donde a excepción por el término $\hbar\omega$ esta relación de conmutación sería idéntica a la que hay entre los operadores de creación y destrucción para la radiación, vamos a reescalar estos operadores utilizando el factor $\hbar C$
-
-            \begin{equation}
-                \hat{f}_{\alpha}(\Vec{k}) = \sqrt{\hbar C}\hat{a}_{\alpha}(\Vec{k}), \;\;\; \hat{f}_{\alpha}^{\dagger} = \sqrt{\hbar C} \hat{a}_{\alpha}^{\dagger}(\Vec{k}).
-            \end{equation}
-
-            La conmutación entre los operadores de creación y aniquilación se obtiene después de reescalar estos factores
-
-            \begin{equation}
-                \left[\hat{a}_{\alpha}(\Vec{k}) , \hat{a}_{\beta}(\Vec{k}')^{\dagger}\right] = k \delta_{\alpha\beta}\delta^3(\Vec{k}-\Vec{k}').
-            \end{equation}
-
-            Mantenemos el factor k en estas relaciones porque su presencia está relacionada con la normalización relativista de las funciones de onda del fotón, como se mostrará más adelante. Finalmente, la representación de Fourier del operador de campo RS toma la siguiente forma:
-
-            \begin{equation}\label{eq:FdeFourierxd}
-                \hat{F}(\Vec{r},t) =  \frac{\sqrt{\hbar C}}{(2\pi)^{3/2}}\int \left[\hat{a}_+(\Vec{k})e^{i(\Vec{k}\cdot \Vec{r} - \omega t)} + \hat{a}_-^{\dagger}(\Vec{k})e^{-i(\Vec{k}\cdot \Vec{r} - \omega t)}\right]\hat{e}(\Vec{k})d^3k.
-            \end{equation}
-
-            La ecuación \ref{eq:FdeFourierxd} tiene mucha más información sobre el qué es un fotón que los estados número $\ket{n}$ que se ven en el oscilador armónico y al cual la literatura les llama fotón, pues en el operador de RS está toda la información sobre los operadores de campo eléctrico y magnético, es decir contiene ya la información de los fotones, podemos empezar a interpretarlos desde un punto de vista matemático como contribuciones de las componentes de Fourier, es decir, todos y cada uno de los fotones que se propagan como perturbaciones en el campo electromagnético de la radiación se pueden sumar como componentes de Fourier. El modelo del fotón como armónicos de Fourier lo discutiremos con más detalle más adelante. \\
-
-            La dependencia temporal de los operadores de aniquilación y creación se da mediante $e^{-i\omega t}$ y $e^{i\omega t}$, como debería ser. Con frecuencia, esta dependencia temporal se utiliza para distinguir los operadores de aniquilación de los de creación. Sin embargo, este método a veces falla, mientras que la asignación basada en las relaciones de conmutación canónicas siempre funciona. Los generadores de las transformaciones de Poincaré en la electrodinámica cuántica se obtienen reemplazando los vectores RS clásicos en \ref{eq:VariableselectrodinamicasRS} por operadores de campo cuántico. Expresados en términos de los operadores de creación y aniquilación, los generadores tienen la forma:
-
-            \begin{align}\label{eq:PoincaréQunatumF}
-                \hat{H} = \sum_{\alpha}\int_{-\infty}^{\infty}\frac{1}{k}\hat{a}^{\dagger}_\alpha\hbar\omega\hat{a}_{\alpha}d^3k,\\
-                \hat{\mathbb{P}} = \sum_{\alpha}\int_{-\infty}^{\infty}\frac{1}{k}\hat{a}_{\alpha}^{\dagger}\hbar\Vec{k}\hat{a}_{\alpha}d^3k,\\
-                \hat{\mathbb{M}} = \sum_{\alpha}\int_{-\infty}^{\infty}\frac{1}{k}\hat{a}_{\alpha}^{\dagger}\left[ i\hbar\Vec{D}_{\alpha}\times \Vec{k} + \alpha\hbar\Vec{n}\right]\hat{a}_{\alpha}d^3k,\\
-                \hat{\mathbb{N}} = \sum_{\alpha}\int_{-\infty}^{\infty}\frac{1}{k}\hat{a}^{\dagger}_{\alpha}i\hbar\omega\Vec{D}_{\alpha}\hat{a}_{\alpha}d^3k.
-            \end{align}
-        
-        
-
-        \subsection{El vector de RS y los espinores}
-
-            Para enfatizar la interpretación del vector RS como la función de onda del fotón, ahora demostraremos que encaja muy bien en el esquema general de las funciones de onda para partículas relativistas sin masa. Las propiedades relativistas de los campos y las partículas encuentran su descripción adecuada en términos de espinores y el vector RS no se aparta de esta regla general. El vector RS está directamente relacionado con el campo de espinor relativista simétrico de segundo rango $\phi_{AB}(\Vec{r},t)$. Tal campo de espinor tiene solo tres componentes independientes $(\psi_{00},\phi_{11},\phi_{01})$. Asumiendo las relaciones entre $\phi_{AB}$ y el vector RS en la forma
-
-            \begin{equation}\label{eq:RelacionesFphi}
-                F_x = \phi_{11} - \phi_{00},\;\; F_y = -i(\phi_{11} + \phi_{00}),\;\; F_z = 2\phi_{01}=2\phi_{10},
-            \end{equation}
-
-            podemos demostrar la equivalencia entre las ecuaciones espinoriales :
-
-            \begin{equation}\label{eq:SpinorAB}
-                \partial_t \phi_{AB} = -C(\mathbb{\sigma} \cdot \Vec{\nabla})_A^{\;C}\phi_{CB},
-            \end{equation}
-
-            con las ecuaciones de Maxwell. Para demostrar esto reescribamos la ecuación \ref{eq:SpinorAB} en forma matricial
-
-            \begin{equation}\label{eq:SpinorABMatricial}
-                \frac{\partial}{\partial t}
-                \begin{bmatrix}
-                    \phi_{00}&\phi_{01}\\
-                    \phi_{01}&\phi_{11}
-                \end{bmatrix} = -C
-                \begin{bmatrix}
-                    \partial_z\phi_{00} + \left(\partial_x - i\partial_y\right)\phi_{01} & \partial_z\phi_{01} + \left(\partial_x - i\partial_y\right)\phi_{11}\\
-                    \left(\partial_x + i \partial_y \right)\phi_{00} - \partial_z\phi_{01} & \left(\partial_x + i\partial_y \right)\phi_{01} - \partial_z\phi_{11}
-                \end{bmatrix},
-            \end{equation}
-
-            donde hemos utilizado la representación estándar de las matrices de Pauli. A continuación, utilizamos las relaciones \ref{eq:RelacionesFphi} para reproducir las ecuaciones de Maxwell \ref{eq:RSEvolution}. La simetría de la matriz del lado izquierdo de \ref{eq:SpinorABMatricial} impone la condición de que el lado derecho también sea simétrico, es decir,
-
-            \begin{equation}
-                \partial_z\phi_{01} + \left( \partial_x - i\partial_y\right)\phi_{11} = \left( \partial_x + i\partial_y \right)\phi_{00} - \partial_z \phi_{01}.
-            \end{equation}
-
-            Esta igualdad implica que la divergencia del vector RS se anula. Por lo tanto, existe una equivalencia completa entre la descripción del campo electromagnético en términos del vector RS y en términos del espinor simétrico de segundo rango. Sin embargo, cuando se trata de aplicaciones concretas, el uso del vector RS es mucho más conveniente debido a su conexión directa con los vectores de campo eléctrico y magnético.\\
-
-            Hay una conexión simple entre el espinor $\phi_{AB}$ y el tensor complejo $F^{\mu\nu}$ definido en \ref{eq:FmunuGeneral} que se puede expresar en términos de las matrices de Pauli combinadas en el tensor de espín $S^{\mu\nu AB}$,
-
-            \begin{equation}
-                S^{0k} = - S^{k0} = -i\sigma_2\sigma_k,\;\; S^{ij} = - S^{ji} = \epsilon^{ijk}\sigma_2\sigma_k,
-            \end{equation}
-
-            donde omitimos los super índices $AB$, utilizando las relaciones \ref{eq:RelacionesFphi} tenemos
-
-            \begin{equation}
-                F^{\mu\nu} = S^{\mu\nu AB}\phi_{AB}.
-            \end{equation}
-
-            Las ondas electromagnéticas nulas tienen una forma muy simple en términos de espinores. Específicamente, están descritas por un solo campo de espinor de rango uno $\phi_{AB}$ $(\phi_{AB} = \phi_A\phi_B)$. Por supuesto, no todos los campos de espinor $\phi_A$ dan lugar a una solución nula de las ecuaciones de Maxwell. El espinor de rango dos $\phi_{AB}$ aún debe cumplir con \ref{eq:SpinorABMatricial}.
-
-            La ecuación \ref{eq:SpinorABMatricial} es un caso especial de la ecuación de onda general para una partícula sin masa. Independientemente del valor de spin $s$, estas ecuaciones siempre tienen la misma forma general:
-
-            \begin{equation}
-                \partial_t \phi_{AB...W} = -C\left( \sigma \cdot \Vec{\nabla} \right)_A^{\;\;Z}\phi_{ZB...W}.
-            \end{equation}
-
-            Difieren solo en el rango del espinor que es igual a $2s$. El espinor de rango uno que describe un neutrino sin masa con espín $-1/2$ satisface la ecuación de Weyl
-
-            \begin{equation}
-                \partial_t\phi_A = -C\left(\sigma \cdot \Vec{\nabla} \right)_A^{\;\;Z}\phi_Z.
-            \end{equation}
-
-            El espinor de rango cuarto satisface la ecuación
-
-            \begin{equation}
-                \partial_t \phi_{ABCD} = -C\left( \sigma \cdot \Vec{\nabla} \right)_A^{\;\;Z}\phi_{ZBCD}.
-            \end{equation}
-
-            ¡Esta ecuación describe los gravitones, los cuantos del campo gravitacional!
-
-
-            Como hemos podido observar en esta sección, el campo de Riemann-Silberstein tiene una versatilidad increíble facilita muchos cálculos y da paso a nuevas soluciones desconocidas, a pesar de haber rosado solo la punta del iceberg, acá podemos ver que este campo funciona perfectamente tanto en el electromagnetismo clásico, como el cuántico y el relativista todo esto a punta a que este podría ser perfectamente un campo del todo, reescribir las ecuaciones de la física en términos del vector de RS podría darnos información que se ha ocultado a simple vista hasta el día de hoy.
+        \end{myDef}
+
+        Este objeto, introducido de manera independiente por Landau y por von Neumann en 1927 \citep{landau1927dampfungsproblem, vonneumann1927wahrscheinlichkeitstheoretischer}, contiene toda la información físicamente accesible sobre el sistema, y reproduce correctamente las predicciones de la teoría. El valor medio de un observable en una mezcla debe ser el promedio de los valores medios en cada componente, pesado con las probabilidades respectivas,
+        \begin{equation}\label{eq:ValorMedioMezcla1}
+            \left\langle A\right\rangle = \sum_{i}p_{i}\braket{\psi_{i}|\hat{A}|\psi_{i}},
+        \end{equation}
+        y vamos a demostrar que esta expresión se escribe de manera compacta como una traza. Insertando una base completa $\{\ket{n}\}$ mediante \eqref{eq:CompletitudHilbert},
+        \begin{equation}\label{eq:ValorMedioMezcla2}
+            \left\langle A\right\rangle = \sum_{i}p_{i}\sum_{n}\braket{\psi_{i}|\hat{A}|n}\braket{n|\psi_{i}}
+            = \sum_{n}\braket{n|\left(\sum_{i}p_{i}\ket{\psi_{i}}\bra{\psi_{i}}\right)\hat{A}|n},
+        \end{equation}
+        donde en el segundo paso hemos reordenado los factores numéricos, lo que es lícito porque $\braket{n|\psi_{i}}$ es un número y puede moverse libremente, y hemos reconocido la estructura de \eqref{eq:MatrizDensidad}. Por tanto
+        \begin{equation}\label{eq:ValorMedioTraza}
+            \boxed{\;\left\langle A\right\rangle = \sum_{n}\braket{n|\hat{\rho}\hat{A}|n} = \mathrm{Tr}\left(\hat{\rho}\hat{A}\right) .\;}
+        \end{equation}
+        La traza es independiente de la base escogida, de manera que \eqref{eq:ValorMedioTraza} es una expresión intrínseca.
+
+        Las propiedades del operador densidad se siguen directamente de su definición. Es autoadjunto, pues cada proyector lo es y las probabilidades son reales. Tiene traza unidad,
+        \begin{equation}\label{eq:TrazaUno}
+            \mathrm{Tr}\,\hat{\rho} = \sum_{i}p_{i}\,\mathrm{Tr}\left(\ket{\psi_{i}}\bra{\psi_{i}}\right) = \sum_{i}p_{i}\braket{\psi_{i}|\psi_{i}} = \sum_{i}p_{i} = 1,
+        \end{equation}
+        que es la traducción de la conservación de la probabilidad. Y es semidefinido positivo, pues para cualquier estado
+        \begin{equation}\label{eq:PositividadRho}
+            \braket{\phi|\hat{\rho}|\phi} = \sum_{i}p_{i}\left|\braket{\phi|\psi_{i}}\right|^{2} \geq 0,
+        \end{equation}
+        por ser suma de términos no negativos. Recíprocamente, todo operador con estas tres propiedades describe un estado físico legítimo, de manera que podríamos haber tomado esta caracterización como definición.
+
+        El criterio que distingue un estado puro de una mezcla se obtiene calculando el cuadrado. Para un estado puro $\hat{\rho} = \ket{\psi}\bra{\psi}$ se tiene
+        \begin{equation}\label{eq:RhoPuro}
+            \hat{\rho}^{2} = \ket{\psi}\underbrace{\braket{\psi|\psi}}_{=1}\bra{\psi} = \hat{\rho}
+            \qquad\Longrightarrow\qquad
+            \mathrm{Tr}\left(\hat{\rho}^{2}\right) = 1,
+        \end{equation}
+        es decir, el operador densidad es un proyector. Para una mezcla propia, en cambio, se demuestra que $\mathrm{Tr}(\hat{\rho}^{2}) < 1$, y la cantidad
+        \begin{equation}\label{eq:Pureza}
+            \mathcal{P} = \mathrm{Tr}\left(\hat{\rho}^{2}\right),
+            \qquad
+            \frac{1}{d}\leq\mathcal{P}\leq 1,
+        \end{equation}
+        llamada \textit{pureza}, mide cuán lejos está el estado de ser puro, alcanzando su mínimo $1/d$ para la mezcla completamente desordenada en un espacio de dimensión $d$. La pureza es el análogo cuántico exacto del grado de coherencia que introdujimos en el capítulo segundo, y en el caso de un modo del campo electromagnético ambas cantidades resultarán estar directamente relacionadas.
+
+        La ecuación de evolución del operador densidad se obtiene derivando \eqref{eq:MatrizDensidad} y usando la ecuación de Schrödinger para cada ket y su adjunta para cada bra,
+        \begin{equation}\label{eq:DerivadaRho}
+            \frac{d\hat{\rho}}{dt} = \sum_{i}p_{i}\left[\left(\frac{d}{dt}\ket{\psi_{i}}\right)\bra{\psi_{i}} + \ket{\psi_{i}}\left(\frac{d}{dt}\bra{\psi_{i}}\right)\right]
+            = \sum_{i}p_{i}\left[\frac{\hat{H}\ket{\psi_{i}}\bra{\psi_{i}}}{i\hbar} - \frac{\ket{\psi_{i}}\bra{\psi_{i}}\hat{H}}{i\hbar}\right],
+        \end{equation}
+        donde el signo del segundo término proviene de conjugar la ecuación de Schrödinger, operación que cambia $i$ por $-i$. Reconociendo la definición del conmutador y de la propia matriz densidad,
+        \begin{equation}\label{eq:VonNeumann}
+            \boxed{\;i\hbar\frac{d\hat{\rho}}{dt} = \left[\hat{H},\hat{\rho}\right],\;}
+        \end{equation}
+        que es la \textit{ecuación de von Neumann}. Compárese con la ecuación de Heisenberg \eqref{eq:EcuacionHeisenberg}: el conmutador aparece con el signo opuesto, y la razón es que $\hat{\rho}$ no es un observable sino un estado, de modo que evoluciona como los estados y no como los operadores. Vale la pena compararla también con la ecuación de Liouville de la mecánica clásica, deducida en el capítulo anterior: la densidad en el espacio de fase satisface $\partial\rho/\partial t = \{H,\rho\}$, que es exactamente \eqref{eq:VonNeumann} bajo la correspondencia de Dirac.
+
+        El ejemplo que más usaremos es el \textit{estado térmico} de un oscilador de frecuencia $\omega$ en equilibrio a temperatura $T$, cuya matriz densidad es diagonal en la base de estados número con pesos de Boltzmann,
+        \begin{equation}\label{eq:EstadoTermico}
+            \hat{\rho}_{\mathrm{th}} = \frac{1}{Z}\sum_{n=0}^{\infty}e^{-\beta E_{n}}\ket{n}\bra{n},
+            \qquad
+            \beta = \frac{1}{k_{B}T},
+            \qquad
+            Z = \sum_{n=0}^{\infty}e^{-\beta E_{n}} .
+        \end{equation}
+        La función de partición se calcula sumando la serie geométrica que resulta de sustituir el espectro \eqref{eq:EspectroOscilador},
+        \begin{equation}\label{eq:FuncionParticion}
+            Z = \sum_{n=0}^{\infty}e^{-\beta\hbar\omega\left(n+1/2\right)} = e^{-\beta\hbar\omega/2}\sum_{n=0}^{\infty}\left(e^{-\beta\hbar\omega}\right)^{n}
+            = \frac{e^{-\beta\hbar\omega/2}}{1 - e^{-\beta\hbar\omega}},
+        \end{equation}
+        donde la serie converge porque $e^{-\beta\hbar\omega}<1$. El número medio de cuantos se obtiene entonces mediante \eqref{eq:ValorMedioTraza} aplicada al operador número, y el cálculo, que consiste en derivar el logaritmo de la función de partición respecto de $\beta$, arroja
+        \begin{equation}\label{eq:Planck}
+            \left\langle n\right\rangle = \mathrm{Tr}\left(\hat{\rho}_{\mathrm{th}}\,\hat{n}\right) = \frac{1}{e^{\beta\hbar\omega}-1},
+        \end{equation}
+        que es la distribución de Planck. La fórmula con la que Planck inauguró la física cuántica en 1900, y que en su deducción original era un ajuste afortunado, aparece aquí como el valor medio del operador número en un estado térmico, es decir, como una consecuencia del formalismo y no como una hipótesis sobre la emisión.
+
+    \subsection{Subsistemas, traza parcial y el puente con la teoría de la coherencia}
+
+        Vamos a volver a la segunda situación que motivó la introducción del operador densidad, la de un subsistema de un sistema compuesto. Si el conjunto está en el estado $\hat{\rho}_{AB}$ y solo tenemos acceso al subsistema $A$, el estado que describe todas las medidas realizables sobre él es la \textit{matriz densidad reducida}, obtenida trazando sobre los grados de libertad inaccesibles,
+        \begin{equation}\label{eq:TrazaParcial}
+            \hat{\rho}_{A} = \mathrm{Tr}_{B}\left(\hat{\rho}_{AB}\right) \equiv \sum_{j}\bra{b_{j}}\hat{\rho}_{AB}\ket{b_{j}},
+        \end{equation}
+        donde la suma recorre una base del espacio del subsistema $B$. La justificación de esta prescripción es que reproduce correctamente los valores medios de cualquier observable que actúe solo sobre $A$, y puede demostrarse que es la única que lo hace.
+
+        El hecho decisivo es que, incluso partiendo de un estado puro entrelazado, la matriz reducida resulta ser una mezcla. El entrelazamiento con un sistema inaccesible produce, en el sistema accesible, exactamente el mismo desorden estadístico que produciría la ignorancia, y esa equivalencia es el fundamento de la teoría de la decoherencia: un sistema que se entrelaza con su entorno, y cuyo entorno no observamos, pierde sus fases relativas y deja de exhibir interferencia. La transición de lo cuántico a lo clásico se convierte así en un proceso de entrelazamiento con un número inmenso de grados de libertad no observados.
+
+        Terminamos señalando el puente con el capítulo segundo, porque es el que motiva todo lo que sigue en este libro. Allí caracterizamos la luz clásica mediante la función de coherencia, definida como la correlación del campo consigo mismo en dos puntos del espacio y del tiempo, y encontramos que la visibilidad de las franjas de interferencia mide el módulo de esa correlación normalizada. En el lenguaje que acabamos de construir, el campo es un operador y la correlación se convierte en un valor medio cuántico calculado con la matriz densidad,
+        \begin{equation}\label{eq:CoherenciaCuantica}
+            G^{(1)}\left(\mathbf{r}_{1},t_{1};\mathbf{r}_{2},t_{2}\right) = \mathrm{Tr}\left[\hat{\rho}\,\hat{E}^{(-)}(\mathbf{r}_{1},t_{1})\,\hat{E}^{(+)}(\mathbf{r}_{2},t_{2})\right],
+        \end{equation}
+        donde $\hat{E}^{(\pm)}$ son las partes de frecuencia positiva y negativa del operador de campo eléctrico que construiremos en el capítulo siguiente. Esta es la primera de las funciones de correlación que Glauber introdujo en 1963 \citep{glauber1963quantum} y por las cuales recibió el premio Nobel en 2005, y su estructura reproduce exactamente la de la función de coherencia clásica, con la matriz densidad ocupando el lugar del promedio estadístico sobre realizaciones del campo aleatorio.
+
+        La diferencia aparece en las funciones de orden superior. La correlación de segundo orden, que Hanbury Brown y Twiss midieron en 1956 al determinar el diámetro angular de Sirio \citep{hanburybrown1956test}, distingue estados de la luz que son indistinguibles a primer orden, y existen estados, como los de número de fotones definido, para los cuales toma valores que ninguna teoría de campos clásicos aleatorios puede producir. Ese es el punto exacto en el cual la óptica cuántica deja de ser una reformulación de la óptica clásica y empieza a decir algo nuevo, y llegar hasta él es el objeto de los capítulos siguientes.

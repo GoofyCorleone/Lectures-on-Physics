@@ -1,0 +1,274 @@
+    En 1956 Robert Hanbury Brown y Richard Twiss publicaron un resultado que la comunidad óptica recibió con abierta incredulidad \citep{hanburybrown1956correlation}. Habían apuntado dos fotomultiplicadores a la misma fuente de luz térmica, habían multiplicado las dos corrientes y habían encontrado que las fluctuaciones estaban correlacionadas: cuando un detector registraba de más, el otro también. Poco después usaron el efecto para medir el diámetro angular de Sirio \citep{hanburybrown1956test}, con un instrumento que no medía amplitudes sino intensidades y que por tanto era inmune a la turbulencia atmosférica. Las objeciones fueron inmediatas, y no eran tontas: si la luz de una estrella consiste en fotones emitidos independientemente por átomos que ni siquiera se conocen entre sí, ¿por qué habrían de llegar en parejas a dos detectores separados? Edward Purcell contestó ese mismo año con un argumento de estadística de Bose y Einstein \citep{purcell1956question}, pero el asunto dejó claro que la teoría de la coherencia que teníamos, la de Wolf y la del capítulo segundo de estos apuntes, no bastaba: describía perfectamente las franjas de interferencia y no tenía nada que decir sobre las correlaciones de intensidad.
+
+    Roy Glauber construyó la teoría que faltaba en tres artículos de 1963 \citep{glauber1963photon, glauber1963quantum}, y lo hizo partiendo de una pregunta que hasta entonces nadie se había tomado en serio: qué es exactamente lo que mide un fotodetector. La respuesta resultó fijar toda la estructura de la teoría, y de ella salieron las funciones de correlación de orden arbitrario, la definición precisa de lo que significa que un campo sea coherente, los estados coherentes que ya construimos en el capítulo anterior y el criterio que separa la luz que admite descripción clásica de la que no la admite. Este capítulo recorre esa construcción, muestra que la teoría clásica del capítulo segundo se recupera íntegra como el caso particular de primer orden, y termina en la polarización, que en este lenguaje es un caso de coherencia como cualquier otro.
+
+\section{Qué mide un fotodetector}
+
+    Un fotodetector funciona absorbiendo luz. El fotocátodo de un fotomultiplicador, la unión de un fotodiodo o el grano de una emulsión fotográfica registran un suceso cuando un electrón ligado es arrancado de su sitio, y la energía para arrancarlo la aporta el campo. Este hecho, que parece una trivialidad de ingeniería, tiene una consecuencia formal que Glauber fue el primero en explotar: el proceso de detección \textit{destruye} un cuanto del campo, de manera que la amplitud del proceso involucra al operador que destruye fotones y no al campo completo.
+
+    Vamos a escribir esto con cuidado. El operador de campo eléctrico que construimos en el capítulo anterior se separa en dos partes, una que contiene solo operadores de aniquilación y otra que contiene solo operadores de creación,
+    \begin{equation}\label{eq:CampoPartes}
+        \hat{\mathbf{E}}(\mathbf{r},t) = \hat{\mathbf{E}}^{(+)}(\mathbf{r},t) + \hat{\mathbf{E}}^{(-)}(\mathbf{r},t),
+        \qquad
+        \hat{\mathbf{E}}^{(-)} = \left[\hat{\mathbf{E}}^{(+)}\right]^{\dagger},
+    \end{equation}
+    donde, para el campo libre desarrollado en modos,
+    \begin{equation}\label{eq:CampoPositiva}
+        \hat{\mathbf{E}}^{(+)}(\mathbf{r},t) = i\sum_{\mathbf{k},\lambda}\sqrt{\frac{\hbar\omega_{\mathbf{k}}}{2\epsilon_{0}V}}\;\hat{a}_{\mathbf{k},\lambda}\,\hat{\boldsymbol{\epsilon}}_{\mathbf{k},\lambda}\,e^{i(\mathbf{k}\cdot\mathbf{r}-\omega_{\mathbf{k}}t)} .
+    \end{equation}
+    La parte $\hat{\mathbf{E}}^{(+)}$ se llama de \textit{frecuencia positiva} porque su dependencia temporal es $e^{-i\omega t}$ con $\omega>0$, y es la que aniquila fotones; la parte $\hat{\mathbf{E}}^{(-)}$ los crea. En el lenguaje clásico del capítulo segundo estas dos partes eran la señal analítica y su conjugada, y la separación era una conveniencia matemática; aquí la separación es física, porque las dos partes hacen cosas distintas.
+
+    Supongamos que el campo está en el estado $\ket{i}$ y que el detector, al absorber, lo deja en el estado $\ket{f}$. La amplitud de ese proceso es proporcional al elemento de matriz $\bra{f}\hat{\mathbf{E}}^{(+)}(\mathbf{r},t)\ket{i}$, y la probabilidad de que ocurra es el cuadrado de su módulo. Como en general no medimos en qué estado quedó el campo, la probabilidad total de que el detector se dispare es la suma sobre todos los estados finales posibles,
+    \begin{equation}\label{eq:SumaFinales}
+        w \propto \sum_{f}\left|\bra{f}\hat{\mathbf{E}}^{(+)}\ket{i}\right|^{2}
+        = \sum_{f}\bra{i}\hat{\mathbf{E}}^{(-)}\ket{f}\bra{f}\hat{\mathbf{E}}^{(+)}\ket{i}
+        = \bra{i}\hat{\mathbf{E}}^{(-)}\hat{\mathbf{E}}^{(+)}\ket{i},
+    \end{equation}
+    donde en el último paso se ha usado la relación de completitud $\sum_{f}\ket{f}\bra{f}=\hat{\mathbb{1}}$ del capítulo de los postulados. Si el campo no está en un estado puro sino descrito por una matriz densidad, el promedio se toma como siempre con una traza,
+    \begin{equation}\label{eq:TasaDeteccion}
+        w(\mathbf{r},t) \propto \mathrm{Tr}\left[\hat{\rho}\,\hat{\mathbf{E}}^{(-)}(\mathbf{r},t)\,\hat{\mathbf{E}}^{(+)}(\mathbf{r},t)\right] .
+    \end{equation}
+
+    El resultado \eqref{eq:TasaDeteccion} merece leerse con atención porque en él está contenida toda la teoría. Lo que un detector mide no es el valor medio de $\hat{\mathbf{E}}^{2}$, que sería lo que uno escribiría por analogía ingenua con la intensidad clásica, sino el valor medio del producto $\hat{\mathbf{E}}^{(-)}\hat{\mathbf{E}}^{(+)}$, en el cual todos los operadores de creación están a la izquierda de todos los de aniquilación. Ese ordenamiento se llama \textit{orden normal}, y la diferencia entre una cosa y la otra no es cosmética. Si evaluamos ambas expresiones en el vacío,
+    \begin{equation}\label{eq:VacioDetector}
+        \bra{0}\hat{\mathbf{E}}^{(-)}\hat{\mathbf{E}}^{(+)}\ket{0} = 0,
+        \qquad\text{mientras que}\qquad
+        \bra{0}\hat{\mathbf{E}}^{2}\ket{0} \neq 0,
+    \end{equation}
+    porque $\hat{\mathbf{E}}^{(+)}\ket{0}=0$ mientras que las fluctuaciones del vacío que calculamos en el capítulo anterior son distintas de cero. La primera igualdad dice que un detector colocado en la oscuridad no hace clic, que es lo que se observa; la segunda dice que el campo fluctúa igualmente. \textbf{El orden normal no es una convención de cálculo sino la huella matemática de que el detector absorbe}, y es la razón por la cual las fluctuaciones del vacío no saturan de ruido todos los fotodetectores del mundo.
+
+\section{Las funciones de correlación de Glauber}
+
+    La expresión \eqref{eq:TasaDeteccion} se refiere a un solo detector en un punto. Un experimento de interferencia compara el campo en dos puntos, y el experimento de Hanbury Brown y Twiss compara las intensidades en dos puntos, es decir, involucra cuatro factores de campo. La generalización es inmediata y es la definición de Glauber.
+
+    Para abreviar, escribimos $x = (\mathbf{r},t)$ para un punto del espaciotiempo y omitimos los índices de polarización, que recuperaremos al final del capítulo.
+
+    \begin{myDef}\label{def:GlauberN}
+        La \textit{función de correlación de orden $n$} del campo, en el estado descrito por $\hat{\rho}$, es
+        \begin{equation}\label{eq:GlauberN}
+            G^{(n)}\left(x_{1},\ldots,x_{n};x_{n+1},\ldots,x_{2n}\right)
+            = \mathrm{Tr}\left[\hat{\rho}\,\hat{E}^{(-)}(x_{1})\cdots\hat{E}^{(-)}(x_{n})\,\hat{E}^{(+)}(x_{n+1})\cdots\hat{E}^{(+)}(x_{2n})\right],
+        \end{equation}
+        con todos los operadores de creación a la izquierda y en orden normal.
+    \end{myDef}
+
+    Los dos primeros casos son los que usaremos sin descanso. El de orden uno,
+    \begin{equation}\label{eq:G1}
+        G^{(1)}(x_{1};x_{2}) = \mathrm{Tr}\left[\hat{\rho}\,\hat{E}^{(-)}(x_{1})\hat{E}^{(+)}(x_{2})\right],
+    \end{equation}
+    se reduce en la diagonal a la intensidad medida, $G^{(1)}(x;x) = I(x)$, y fuera de la diagonal es lo que gobierna la interferencia. El de orden dos,
+    \begin{equation}\label{eq:G2}
+        G^{(2)}(x_{1},x_{2};x_{2},x_{1}) = \mathrm{Tr}\left[\hat{\rho}\,\hat{E}^{(-)}(x_{1})\hat{E}^{(-)}(x_{2})\hat{E}^{(+)}(x_{2})\hat{E}^{(+)}(x_{1})\right],
+    \end{equation}
+    es la correlación entre las intensidades registradas en $x_{1}$ y en $x_{2}$, es decir, exactamente lo que mide un montaje de Hanbury Brown y Twiss. El orden de los argumentos en \eqref{eq:G2} no es caprichoso: los dos operadores de aniquilación actúan primero, en el orden en que los dos detectores absorben, y esa es la razón por la cual la expresión describe una detección conjunta y no un producto de dos detecciones independientes.
+
+    Estas funciones tienen tres propiedades que se siguen directamente de su definición y que usaremos repetidamente. La primera es la simetría hermítica,
+    \begin{equation}\label{eq:G1Hermitica}
+        G^{(1)}(x_{1};x_{2}) = \left[G^{(1)}(x_{2};x_{1})\right]^{*},
+    \end{equation}
+    que se obtiene tomando el adjunto dentro de la traza y usando que $\hat{\rho}$ es autoadjunta. La segunda es la no negatividad de la diagonal,
+    \begin{equation}\label{eq:G1Positiva}
+        G^{(1)}(x;x) = \mathrm{Tr}\left[\hat{\rho}\,\hat{E}^{(-)}\hat{E}^{(+)}\right] \geq 0,
+    \end{equation}
+    porque es el valor medio de un operador de la forma $\hat{A}^{\dagger}\hat{A}$, cuyo valor esperado es la norma al cuadrado de $\hat{A}$ aplicado al estado. La tercera es una desigualdad de Cauchy y Schwarz,
+    \begin{equation}\label{eq:CauchySchwarzG1}
+        \left|G^{(1)}(x_{1};x_{2})\right|^{2} \leq G^{(1)}(x_{1};x_{1})\,G^{(1)}(x_{2};x_{2}),
+    \end{equation}
+    que es la misma que demostramos en el capítulo segundo para la función de coherencia clásica y que se obtiene aquí del mismo modo, tratando la traza como un producto interno entre los vectores $\hat{E}^{(+)}(x_{1})\ket{\psi}$ y $\hat{E}^{(+)}(x_{2})\ket{\psi}$.
+
+    La desigualdad \eqref{eq:CauchySchwarzG1} permite normalizar la función de correlación de manera que su módulo quede acotado por la unidad. Definimos
+    \begin{equation}\label{eq:g1}
+        g^{(1)}(x_{1};x_{2}) = \frac{G^{(1)}(x_{1};x_{2})}{\sqrt{G^{(1)}(x_{1};x_{1})\,G^{(1)}(x_{2};x_{2})}},
+        \qquad
+        0 \leq \left|g^{(1)}\right| \leq 1,
+    \end{equation}
+    y análogamente, para la correlación de intensidades,
+    \begin{equation}\label{eq:g2}
+        g^{(2)}(x_{1},x_{2}) = \frac{G^{(2)}(x_{1},x_{2};x_{2},x_{1})}{G^{(1)}(x_{1};x_{1})\,G^{(1)}(x_{2};x_{2})} .
+    \end{equation}
+    El grado de coherencia de primer orden $g^{(1)}$ es el que hemos visto ya en el capítulo segundo, con otro nombre; el de segundo orden $g^{(2)}$ es nuevo y no tiene, como veremos, ninguna cota superior universal.
+
+\section{Coherencia completa y los estados coherentes}
+
+    Con las funciones de correlación en la mano podemos por fin decir qué significa que un campo sea coherente, cosa que en la teoría clásica se definía mediante la visibilidad de unas franjas y que aquí adquiere una formulación cerrada.
+
+    \begin{myDef}\label{def:CoherenciaGlauber}
+        Un campo es \textit{coherente en primer orden} si su función de correlación se factoriza,
+        \begin{equation}\label{eq:FactorizaG1}
+            G^{(1)}(x_{1};x_{2}) = \mathcal{E}^{*}(x_{1})\,\mathcal{E}(x_{2}),
+        \end{equation}
+        para alguna función compleja $\mathcal{E}$, y es \textit{completamente coherente} si todas sus funciones de correlación se factorizan de la misma manera,
+        \begin{equation}\label{eq:FactorizaGN}
+            G^{(n)}\left(x_{1},\ldots,x_{2n}\right) = \prod_{j=1}^{n}\mathcal{E}^{*}(x_{j})\prod_{j=n+1}^{2n}\mathcal{E}(x_{j}),
+            \qquad \text{para todo } n .
+        \end{equation}
+    \end{myDef}
+
+    La condición \eqref{eq:FactorizaG1} equivale a que $|g^{(1)}|=1$ en todo par de puntos, que es la definición clásica de coherencia completa en términos de visibilidad unidad. Lo nuevo es \eqref{eq:FactorizaGN}, porque un campo puede satisfacer la primera condición y fallar todas las demás, y de hecho eso es exactamente lo que le ocurre a la luz de una lámpara filtrada, que puede tener $|g^{(1)}|=1$ y sin embargo un $g^{(2)}$ igual a dos.
+
+    ¿Existe algún estado del campo que satisfaga la condición a todos los órdenes? La respuesta es afirmativa y ya lo construimos en el capítulo anterior sin saber que cumplía esta propiedad. Un estado coherente $\ket{\alpha}$ es, por definición, estado propio del operador de aniquilación, y como $\hat{E}^{(+)}$ es una combinación lineal de operadores de aniquilación según \eqref{eq:CampoPositiva}, también es estado propio del campo de frecuencia positiva,
+    \begin{equation}\label{eq:PropioCampo}
+        \hat{E}^{(+)}(x)\ket{\alpha} = \mathcal{E}(x)\ket{\alpha},
+        \qquad
+        \mathcal{E}(x) = i\sum_{\mathbf{k},\lambda}\sqrt{\frac{\hbar\omega_{\mathbf{k}}}{2\epsilon_{0}V}}\;\alpha_{\mathbf{k},\lambda}\,e^{i(\mathbf{k}\cdot\mathbf{r}-\omega_{\mathbf{k}}t)},
+    \end{equation}
+    donde $\mathcal{E}(x)$ es un número complejo y no un operador. Tomando el adjunto, $\bra{\alpha}\hat{E}^{(-)}(x) = \mathcal{E}^{*}(x)\bra{\alpha}$. Al sustituir en la definición \eqref{eq:GlauberN}, cada operador puede actuar sobre el estado que tiene a su lado y sustituirse por su valor propio, de manera que la función de correlación de orden $n$ se convierte en un producto de números,
+    \begin{equation}\label{eq:FactorizacionCoherente}
+        G^{(n)} = \prod_{j=1}^{n}\mathcal{E}^{*}(x_{j})\prod_{j=n+1}^{2n}\mathcal{E}(x_{j})\;\underbrace{\braket{\alpha|\alpha}}_{=1},
+    \end{equation}
+    que es precisamente la condición \eqref{eq:FactorizaGN}. Los estados coherentes son, por lo tanto, completamente coherentes en el sentido de Glauber, y ahora sabemos en qué sentido preciso merecían el nombre que les dimos.
+
+    De la factorización se sigue de inmediato el valor de los grados normalizados. Al dividir por las intensidades, los factores $\mathcal{E}$ se cancelan por pares y queda
+    \begin{equation}\label{eq:gnCoherente}
+        \left|g^{(1)}\right| = 1,
+        \qquad
+        g^{(2)} = 1,
+        \qquad
+        g^{(n)} = 1 \quad\text{para todo } n .
+    \end{equation}
+    Un haz en un estado coherente tiene correlaciones de intensidad que son exactamente las de sucesos independientes: saber que un detector hizo clic no cambia en nada la probabilidad de que el otro lo haga. Esa es la propiedad que distingue a la luz de un láser ideal y, como veremos, el valor $g^{(2)}=1$ es la frontera entre dos regiones del espacio de estados, una accesible a la descripción clásica y otra no.
+
+\section{La recuperación de la teoría clásica}
+
+    Antes de explorar lo que la teoría cuántica añade, es obligado verificar que no destruye lo que ya teníamos. El capítulo segundo construyó toda una teoría de la coherencia sobre un campo aleatorio clásico, y lo hizo con un aparato considerable de probabilidad; si la teoría de Glauber fuese incompatible con ella, el problema lo tendríamos aquí y no allá.
+
+    El puente entre ambas descripciones es una representación del estado del campo que Glauber y Sudarshan introdujeron de manera independiente ese mismo año de 1963 \citep{sudarshan1963equivalence}. La idea consiste en escribir la matriz densidad como si fuese una mezcla estadística de estados coherentes,
+    \begin{equation}\label{eq:RepresentacionP}
+        \hat{\rho} = \int_{\mathbb{C}} P(\alpha)\,\ket{\alpha}\bra{\alpha}\;d^{2}\alpha,
+        \qquad
+        \int_{\mathbb{C}} P(\alpha)\,d^{2}\alpha = 1,
+    \end{equation}
+    donde $P(\alpha)$ es una función real llamada representación $P$ o distribución de Glauber y Sudarshan. La segunda condición es la traza unidad. Que semejante desarrollo exista para cualquier estado es un resultado nada obvio, y se debe a que los estados coherentes, pese a no ser ortogonales entre sí, forman un conjunto sobrecompleto.
+
+    La utilidad de \eqref{eq:RepresentacionP} para nuestro propósito es que permite calcular cualquier correlación en orden normal de manera puramente clásica. Al sustituir la representación en la definición \eqref{eq:GlauberN} y usar que cada $\ket{\alpha}\bra{\alpha}$ es estado propio del campo, se obtiene
+    \begin{equation}\label{eq:GnConP}
+        G^{(n)} = \int_{\mathbb{C}} P(\alpha)\left[\prod_{j=1}^{n}\mathcal{E}^{*}_{\alpha}(x_{j})\prod_{j=n+1}^{2n}\mathcal{E}_{\alpha}(x_{j})\right]d^{2}\alpha,
+    \end{equation}
+    es decir, el promedio de un producto de amplitudes clásicas, pesado por la función $P$. Comparando \eqref{eq:GnConP} con las definiciones del capítulo segundo la conclusión es inmediata y merece enunciarse con precisión.
+
+    \begin{myteo}\label{teo:RecuperacionWolf}
+        Si la representación $P$ de un estado del campo es no negativa y suficientemente regular como para ser una densidad de probabilidad, entonces todas las funciones de correlación de Glauber coinciden con los promedios de conjunto de la teoría clásica de la coherencia, con $P(\alpha)$ jugando el papel de la medida de probabilidad sobre las realizaciones del campo aleatorio. En particular
+        \begin{equation}\label{eq:G1esGamma}
+            G^{(1)}\left(\mathbf{r}_{1},t_{1};\mathbf{r}_{2},t_{2}\right) = \left\langle \mathcal{E}^{*}(\mathbf{r}_{1},t_{1})\,\mathcal{E}(\mathbf{r}_{2},t_{2})\right\rangle = \Gamma\left(\mathbf{r}_{1},t_{1};\mathbf{r}_{2},t_{2}\right),
+        \end{equation}
+        donde $\Gamma$ es la función de coherencia mutua de Wolf.
+    \end{myteo}
+
+    La lectura de este teorema es que el capítulo segundo de estos apuntes sobrevive intacto. La función de coherencia mutua, el grado complejo de coherencia, el teorema de Wiener y Khinchin, la propagación de la coherencia y el teorema de Van Cittert y Zernike son enunciados sobre $G^{(1)}$, y $G^{(1)}$ es la misma cosa en las dos teorías siempre que la fuente admita una representación $P$ clásica, cosa que ocurre con todas las fuentes térmicas y con el láser ideal. La cuantización del campo no corrige ni una coma de la teoría clásica de la coherencia de primer orden, y esa es la razón por la cual la óptica funcionó durante siglo y medio sin necesidad de fotones.
+
+    Lo que sí introduce la teoría cuántica es una frontera. La representación $P$ existe siempre, pero no siempre es una función bien comportada: hay estados para los cuales $P$ toma valores negativos, y estados para los cuales es tan singular que no se la puede escribir ni siquiera como una delta de Dirac, sino que exige derivadas de deltas. En esos casos \eqref{eq:GnConP} sigue siendo cierta como identidad formal, pero ya no puede interpretarse como el promedio de un campo aleatorio, porque una probabilidad negativa no describe ningún conjunto estadístico. Por eso se adopta el criterio siguiente, que es el que usaremos en el resto del capítulo: un estado del campo se llama \textit{clásico} cuando su representación $P$ es una densidad de probabilidad legítima, y \textit{no clásico} cuando no lo es.
+
+\section{Estadística de fotones}
+
+    Antes de calcular correlaciones de segundo orden vale la pena mirar la cantidad más simple que distingue unos estados de otros, que es la distribución del número de fotones. En un solo modo, la probabilidad de encontrar $n$ fotones es $p(n) = \bra{n}\hat{\rho}\ket{n}$, y las tres distribuciones que aparecen una y otra vez en el laboratorio son las siguientes.
+
+    El estado de número $\ket{n_{0}}$ da, trivialmente, $p(n) = \delta_{n n_{0}}$, de manera que el número de fotones no fluctúa en absoluto y $\left(\Delta n\right)^{2} = 0$.
+
+    El estado coherente $\ket{\alpha}$ da la distribución de Poisson que calculamos en el capítulo anterior,
+    \begin{equation}\label{eq:PoissonCoh}
+        p(n) = e^{-|\alpha|^{2}}\frac{|\alpha|^{2n}}{n!} = e^{-\bar{n}}\frac{\bar{n}^{n}}{n!},
+        \qquad
+        \bar{n} = |\alpha|^{2},
+        \qquad
+        \left(\Delta n\right)^{2} = \bar{n} .
+    \end{equation}
+
+    El estado térmico, cuya matriz densidad escribimos en el capítulo de los postulados, da una distribución geométrica. Sustituyendo el espectro del oscilador en los pesos de Boltzmann y usando la función de partición que allí calculamos,
+    \begin{equation}\label{eq:BoseEinstein}
+        p(n) = \frac{\bar{n}^{n}}{\left(1+\bar{n}\right)^{n+1}},
+        \qquad
+        \bar{n} = \frac{1}{e^{\hbar\omega/k_{B}T}-1},
+    \end{equation}
+    que es la distribución de Bose y Einstein. Su varianza se obtiene calculando $\langle n^{2}\rangle$ con la misma técnica de derivar la serie geométrica que usamos al deducir la ley de Planck, y el resultado es
+    \begin{equation}\label{eq:VarianzaTermica}
+        \left(\Delta n\right)^{2} = \bar{n} + \bar{n}^{2} .
+    \end{equation}
+
+    Las tres varianzas se comparan mejor si se las mide en unidades de la varianza de Poisson, y esa comparación es el contenido del parámetro que introdujo Mandel \citep{mandel1979sub},
+    \begin{equation}\label{eq:MandelQ}
+        Q = \frac{\left(\Delta n\right)^{2} - \bar{n}}{\bar{n}} .
+    \end{equation}
+    Para el estado coherente $Q=0$, para el térmico $Q = \bar{n} > 0$, y para el estado de número $Q = -1$, que es el valor mínimo posible. Las distribuciones con $Q>0$ se llaman \textit{super-Poissonianas} y las que tienen $Q<0$, \textit{sub-Poissonianas}.
+
+    El signo de $Q$ resulta ser un criterio de no clasicidad, y la demostración es corta. Para un estado con representación $P$ positiva, el número medio y su cuadrado se calculan promediando sobre $P$, y un cálculo directo da
+    \begin{equation}\label{eq:VarianzaConP}
+        \left(\Delta n\right)^{2} = \bar{n} + \int_{\mathbb{C}} P(\alpha)\left(|\alpha|^{2} - \bar{n}\right)^{2}d^{2}\alpha .
+    \end{equation}
+    El primer término es la varianza de Poisson y el segundo es la varianza de $|\alpha|^{2}$ respecto de la distribución $P$. Si $P$ es una densidad de probabilidad legítima ese segundo término es no negativo, por ser la integral de un cuadrado con un peso positivo, y por lo tanto
+    \begin{equation}\label{eq:CotaClasicaQ}
+        \left(\Delta n\right)^{2} \geq \bar{n},
+        \qquad\text{es decir}\qquad
+        Q \geq 0 .
+    \end{equation}
+    Ninguna fuente descriptible como un campo aleatorio clásico puede producir fluctuaciones de número menores que las de Poisson. Observar $Q<0$ es, por tanto, observar algo que ninguna teoría ondulatoria clásica puede reproducir, y la primera medida de luz sub-Poissoniana fue precisamente el experimento de fluorescencia de resonancia de Kimble, Dagenais y Mandel que mencionamos en la historia del capítulo quinto \citep{kimble1977photon}.
+
+\section{Agrupamiento, antiagrupamiento y el experimento de Hanbury Brown y Twiss}
+
+    Pasemos ahora a la correlación de segundo orden, que es donde la teoría cuántica dice algo genuinamente nuevo. Para un solo modo, y con los dos detectores midiendo al mismo tiempo, la definición \eqref{eq:g2} se reduce a
+    \begin{equation}\label{eq:g2UnModo}
+        g^{(2)}(0) = \frac{\left\langle \hat{a}^{\dagger}\hat{a}^{\dagger}\hat{a}\hat{a}\right\rangle}{\left\langle \hat{a}^{\dagger}\hat{a}\right\rangle^{2}},
+    \end{equation}
+    y el numerador se expresa en términos del operador número usando la relación de conmutación. Escribiendo $\hat{a}^{\dagger}\hat{a}^{\dagger}\hat{a}\hat{a} = \hat{a}^{\dagger}\left(\hat{a}\hat{a}^{\dagger}-\textcolor{blue}{1}\right)\hat{a} = \hat{n}^{2}-\hat{n}$, donde el uno en azul es el conmutador que se ha insertado al intercambiar los dos operadores centrales, queda
+    \begin{equation}\label{eq:g2Numero}
+        g^{(2)}(0) = \frac{\left\langle \hat{n}^{2}\right\rangle - \left\langle \hat{n}\right\rangle}{\left\langle \hat{n}\right\rangle^{2}}
+        = 1 + \frac{\left(\Delta n\right)^{2}-\bar{n}}{\bar{n}^{2}}
+        = 1 + \frac{Q}{\bar{n}},
+    \end{equation}
+    donde en el segundo paso se ha sumado y restado $\bar{n}^{2}$ en el numerador para hacer aparecer la varianza. La relación \eqref{eq:g2Numero} conecta las dos medidas de no clasicidad que hemos introducido y muestra que son la misma cosa vista de dos maneras.
+
+    Los tres estados de referencia dan entonces
+    \begin{equation}\label{eq:g2Tres}
+        g^{(2)}_{\text{coherente}}(0) = 1,
+        \qquad
+        g^{(2)}_{\text{térmico}}(0) = 2,
+        \qquad
+        g^{(2)}_{\ket{n}}(0) = 1 - \frac{1}{n},
+    \end{equation}
+    resultados que se obtienen sustituyendo en \eqref{eq:g2Numero} los valores de $Q$ y $\bar{n}$ de la sección anterior. El caso del estado de un solo fotón es el más elocuente: con $n=1$ se obtiene $g^{(2)}(0)=0$ exactamente, porque un único cuanto no puede ser absorbido por dos detectores. Este es, en el lenguaje que ahora tenemos, el contenido del experimento de Grangier, Roger y Aspect que discutimos en el capítulo quinto, cuyo parámetro de anticorrelación $\alpha$ no es otra cosa que $g^{(2)}(0)$ medido con un fotón anunciado.
+
+    La cota clásica para $g^{(2)}$ se obtiene igual que la de $Q$. Para un estado con $P$ positiva,
+    \begin{equation}\label{eq:g2Clasico}
+        g^{(2)}(0) = \frac{\displaystyle\int P(\alpha)\,|\alpha|^{4}\,d^{2}\alpha}{\left[\displaystyle\int P(\alpha)\,|\alpha|^{2}\,d^{2}\alpha\right]^{2}}
+        = \frac{\left\langle I^{2}\right\rangle}{\left\langle I\right\rangle^{2}} \geq 1,
+    \end{equation}
+    donde la desigualdad final es de nuevo la no negatividad de la varianza de una cantidad real. Todo campo clásico tiene $g^{(2)}(0)\geq 1$, y los valores menores que uno son inaccesibles a cualquier descripción ondulatoria. Un cálculo del mismo tipo, aplicado a dos instantes distintos, da además la condición clásica $g^{(2)}(0) \geq g^{(2)}(\tau)$, es decir, que la correlación nunca puede crecer al separar los detectores en el tiempo.
+
+    Estas desigualdades dan nombre a los tres comportamientos posibles. Cuando $g^{(2)}(0) > 1$ los fotones tienden a llegar en grupos y se habla de \textit{agrupamiento}; cuando $g^{(2)}(0) = 1$ llegan de manera completamente independiente, como los sucesos de un proceso de Poisson; y cuando $g^{(2)}(0) < 1$ tienden a separarse unos de otros y se habla de \textit{antiagrupamiento}. Solo el tercero carece de análogo clásico.
+
+    El resultado de Hanbury Brown y Twiss queda ahora explicado. La luz térmica tiene $g^{(2)}(0)=2$, es decir, la probabilidad de detectar dos fotones simultáneamente en dos detectores es el doble de la que tendrían sucesos independientes, y por eso las corrientes de los dos fotomultiplicadores fluctúan al unísono. El origen físico del factor dos es la estadística de Bose y Einstein, como Purcell argumentó: los fotones son bosones y tienden a ocupar el mismo modo, de manera que las fluctuaciones de intensidad de una fuente térmica son mayores que las de una fuente que emitiese cuantos independientes. En términos de la representación $P$, la luz térmica es una gaussiana ancha en el plano complejo, y la anchura de esa gaussiana es exactamente el exceso de fluctuación que produce el agrupamiento.
+
+    La objeción que se le hizo al experimento en 1956 tenía, en el fondo, una respuesta sencilla que vale la pena enunciar porque ilumina la diferencia entre las dos teorías. Los átomos de la estrella emiten independientemente, es cierto, pero lo que llega al detector no es una colección de fotones etiquetados por su átomo de origen sino un campo cuyas amplitudes se superponen, y la intensidad resultante fluctúa porque las fases relativas de esas contribuciones cambian al azar. Esas fluctuaciones de intensidad son las que se correlacionan en los dos detectores, y existen ya en la descripción clásica; lo que la descripción cuántica añade no es el agrupamiento térmico sino la posibilidad de lo contrario, el antiagrupamiento, que fue medido por primera vez veintiún años más tarde \citep{kimble1977photon}.
+
+    Con esto se completa la imagen que veníamos construyendo desde el capítulo segundo. La coherencia de primer orden mide la capacidad del campo de producir franjas y es idéntica en las dos teorías; la de segundo orden mide cómo llegan los fotones unos respecto de otros, y es allí donde aparecen estados que ninguna función de probabilidad positiva puede describir. Un haz térmico filtrado puede tener $|g^{(1)}|$ tan próximo a uno como se quiera, es decir, ser tan coherente como un láser a primer orden, y sin embargo delatarse de inmediato en $g^{(2)}$. \textbf{La visibilidad de las franjas no distingue la luz clásica de la cuántica; la estadística de las llegadas sí.}
+
+\section{Coherencia y polarización}
+
+    Queda por conectar todo esto con la polarización, que hasta ahora hemos tratado aparte y que en este lenguaje resulta ser un caso particular de coherencia. La observación de partida ya apareció en el capítulo segundo: la polarización es la coherencia entre las dos componentes transversales del campo en un mismo punto, del mismo modo que la coherencia espacial es la que hay entre dos puntos distintos.
+
+    Recuperemos entonces los índices de polarización que habíamos omitido. Para un solo punto del espaciotiempo y las dos componentes transversales $i,j \in \{x,y\}$, la función de correlación de primer orden es una matriz de dos por dos,
+    \begin{equation}\label{eq:MatrizCoherenciaCuantica}
+        J_{ij} = \mathrm{Tr}\left[\hat{\rho}\,\hat{E}^{(-)}_{i}(x)\,\hat{E}^{(+)}_{j}(x)\right],
+    \end{equation}
+    que es el análogo cuántico exacto de la matriz de coherencia de Wolf. Sus propiedades se siguen de las que ya demostramos para $G^{(1)}$: es hermítica por \eqref{eq:G1Hermitica}, sus elementos diagonales son no negativos por \eqref{eq:G1Positiva}, y su determinante es no negativo por la desigualdad de Cauchy y Schwarz \eqref{eq:CauchySchwarzG1}. Es, por tanto, una matriz semidefinida positiva, igual que en la teoría clásica.
+
+    Los parámetros de Stokes son las cuatro combinaciones lineales independientes de sus elementos,
+    \begin{equation}\label{eq:StokesDesdeJ}
+        S_{0} = J_{xx}+J_{yy},
+        \qquad
+        S_{1} = J_{xy}+J_{yx},
+        \qquad
+        S_{2} = i\left(J_{yx}-J_{xy}\right),
+        \qquad
+        S_{3} = J_{xx}-J_{yy},
+    \end{equation}
+    escritas con el mismo ordenamiento que se usa en el capítulo dedicado a la fase cuántica, y el grado de polarización se obtiene de la misma expresión que en la teoría clásica,
+    \begin{equation}\label{eq:GradoPolarizacion}
+        \mathcal{P} = \frac{\sqrt{S_{1}^{2}+S_{2}^{2}+S_{3}^{2}}}{S_{0}} = \sqrt{1 - \frac{4\det J}{\left(\mathrm{tr}\,J\right)^{2}}},
+    \end{equation}
+    donde la segunda forma se obtiene desarrollando el determinante y la traza en términos de los elementos de la matriz. La luz completamente polarizada corresponde a $\det J = 0$, es decir, a una matriz de rango uno, que es la condición de factorización \eqref{eq:FactorizaG1} aplicada a los índices de polarización en lugar de a los puntos del espaciotiempo. La luz no polarizada corresponde a $J$ proporcional a la identidad.
+
+    Esta coincidencia con la teoría clásica no es casual y es, otra vez, el teorema \ref{teo:RecuperacionWolf} en acción: las cuatro cantidades \eqref{eq:StokesDesdeJ} son correlaciones de primer orden, y las correlaciones de primer orden son idénticas en las dos teorías. De hecho, en el capítulo dedicado a la fase cuántica se definen los operadores de Stokes $\hat{S}_{i}$ en términos de los operadores de creación y aniquilación de los dos modos de polarización, y se comprueba que sus valores medios en un estado coherente bimodal reproducen exactamente los parámetros clásicos \eqref{eq:StokesDesdeJ}. Lo que allí se calcula es esto mismo visto desde el lado de los operadores.
+
+    La diferencia entre ambas teorías aparece, como cabía esperar a estas alturas, en el segundo orden. Los operadores de Stokes no conmutan entre sí, de manera que sus fluctuaciones están sujetas a relaciones de indeterminación y no pueden anularse simultáneamente; existe un ruido de polarización irreducible que la teoría clásica desconoce. Y existen estados cuyos cuatro parámetros de Stokes medios se anulan, de modo que la teoría clásica los declararía no polarizados, pero cuyas fluctuaciones de polarización son marcadamente distintas de las de la luz térmica no polarizada. Esos estados, a los que a veces se llama de polarización escondida, son no clásicos en el mismo sentido preciso en que lo era la luz con $g^{(2)}(0)<1$: su representación $P$ no es una densidad de probabilidad.
+
+    El cuadro que resulta de todo el capítulo puede resumirse así. La teoría de Glauber no sustituye a la de Wolf sino que la contiene: todo lo que el capítulo segundo dice sobre franjas, visibilidad, anchura espectral, propagación de la coherencia y polarización sigue siendo cierto palabra por palabra, porque son enunciados sobre $G^{(1)}$. Lo que la teoría cuántica añade es un piso inferior, el de las correlaciones de orden dos y superiores, en el cual viven fenómenos que ninguna distribución de probabilidad sobre campos clásicos puede reproducir, y es allí donde la óptica cuántica deja de ser una manera elegante de reescribir la óptica y empieza a describir cosas que la óptica no podía describir.

@@ -2,7 +2,7 @@ PWD /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Quantum_Optic
 INPUT /usr/local/texlive/2026/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Quantum_Optics/main.tex
+INPUT main.tex
 OUTPUT out/main.log
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
@@ -52,6 +52,21 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/tools/bm.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/tools/bm.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/cancel/cancel.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
@@ -61,9 +76,6 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
@@ -200,13 +212,6 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx
 INPUT out/main.out
 INPUT out/main.out
 INPUT out/main.out
@@ -262,6 +267,15 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/jknapltx/ursfs.fd
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib8.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib6.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
 INPUT ./Figures/logouis.png
 INPUT ./Figures/logouis.png
 INPUT ./Figures/logouis.png
@@ -275,8 +289,8 @@ INPUT out/main.toc
 INPUT out/main.toc
 INPUT out/main.toc
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/eccc1095.tfm
-OUTPUT out/main.toc
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecxc1095.tfm
+OUTPUT out/main.toc
 INPUT out/main.lof
 INPUT out/main.lof
 INPUT out/main.lof
@@ -288,14 +302,12 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT ./Capitulo 1/cap1.tex
 INPUT ./Capitulo 1/cap1.tex
 INPUT Capitulo 1/cap1.tex
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
 INPUT ./Capitulo 1/Figuras/GreenImagenes.pdf
 INPUT ./Capitulo 1/Figuras/GreenImagenes.pdf
@@ -309,159 +321,227 @@ INPUT ./Capitulo 1/Figuras/GreenNoPuntual.pdf
 INPUT ./Capitulo 1/Figuras/GreenNoPuntual.pdf
 INPUT ./Capitulo 1/Figuras/GreenNoPuntual.pdf
 INPUT ./Capitulo 1/Figuras/GreenNoPuntual.pdf
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
+INPUT ./Capitulo 1/Figuras/ConfocalSpheres.pdf
+INPUT ./Capitulo 1/Figuras/ConfocalSpheres.pdf
+INPUT ./Capitulo 1/Figuras/ConfocalSpheres.pdf
+INPUT ./Capitulo 1/Figuras/ConfocalSpheres.pdf
+INPUT ./Capitulo 1/Figuras/ConfocalSpheres.pdf
 INPUT ./Capitulo 1/Figuras/Cardinales.pdf
 INPUT ./Capitulo 1/Figuras/Cardinales.pdf
 INPUT ./Capitulo 1/Figuras/Cardinales.pdf
 INPUT ./Capitulo 1/Figuras/Cardinales.pdf
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbi1095.tfm
+INPUT ./Capitulo 1/Figuras/CardinalSpheres.pdf
+INPUT ./Capitulo 1/Figuras/CardinalSpheres.pdf
+INPUT ./Capitulo 1/Figuras/CardinalSpheres.pdf
+INPUT ./Capitulo 1/Figuras/CardinalSpheres.pdf
+INPUT ./Capitulo 1/Figuras/CardinalSpheres.pdf
+INPUT ./Capitulo 2/cap2.tex
+INPUT ./Capitulo 2/cap2.tex
+INPUT Capitulo 2/cap2.tex
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm0900.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
-INPUT ./Capitulo 1/Figuras/RandomVar.pdf
-INPUT ./Capitulo 1/Figuras/RandomVar.pdf
-INPUT ./Capitulo 1/Figuras/RandomVar.pdf
-INPUT ./Capitulo 1/Figuras/RandomVar.pdf
-INPUT ./Capitulo 1/Figuras/Estrecho.pdf
-INPUT ./Capitulo 1/Figuras/Estrecho.pdf
-INPUT ./Capitulo 1/Figuras/Estrecho.pdf
-INPUT ./Capitulo 1/Figuras/Estrecho.pdf
-INPUT ./Capitulo 1/Figuras/Propagation.pdf
-INPUT ./Capitulo 1/Figuras/Propagation.pdf
-INPUT ./Capitulo 1/Figuras/Propagation.pdf
-INPUT ./Capitulo 1/Figuras/Propagation.pdf
-INPUT ./Capitulo 1/Figuras/Propagation2.pdf
-INPUT ./Capitulo 1/Figuras/Propagation2.pdf
-INPUT ./Capitulo 1/Figuras/Propagation2.pdf
-INPUT ./Capitulo 1/Figuras/Propagation2.pdf
-INPUT ./Capitulo 1/Figuras/Random2.pdf
-INPUT ./Capitulo 1/Figuras/Random2.pdf
-INPUT ./Capitulo 1/Figuras/Random2.pdf
-INPUT ./Capitulo 1/Figuras/Random2.pdf
-INPUT ./Capitulo 1/Figuras/FourierGamma.pdf
-INPUT ./Capitulo 1/Figuras/FourierGamma.pdf
-INPUT ./Capitulo 1/Figuras/FourierGamma.pdf
-INPUT ./Capitulo 1/Figuras/FourierGamma.pdf
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./Capitulo 2/cap2.tex
-INPUT ./Capitulo 2/cap2.tex
-INPUT Capitulo 2/cap2.tex
-INPUT ./Capitulo 2/Figuras/Aspect.pdf
-INPUT ./Capitulo 2/Figuras/Aspect.pdf
-INPUT ./Capitulo 2/Figuras/Aspect.pdf
-INPUT ./Capitulo 2/Figuras/Aspect.pdf
-INPUT ./Capitulo 2/Figuras/Aspect.pdf
-INPUT ./Capitulo 2/Figuras/CavidadL.pdf
-INPUT ./Capitulo 2/Figuras/CavidadL.pdf
-INPUT ./Capitulo 2/Figuras/CavidadL.pdf
-INPUT ./Capitulo 2/Figuras/CavidadL.pdf
-INPUT ./Capitulo 2/Figuras/CavidadL.pdf
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib8.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib6.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
-INPUT ./Capitulo 2/Figuras/EstadosNumero.pdf
-INPUT ./Capitulo 2/Figuras/EstadosNumero.pdf
-INPUT ./Capitulo 2/Figuras/EstadosNumero.pdf
-INPUT ./Capitulo 2/Figuras/EstadosNumero.pdf
-INPUT ./Capitulo 2/Figuras/EstadosNumero.pdf
-INPUT ./Capitulo 2/Figuras/EvolEstadosCoherentes.pdf
-INPUT ./Capitulo 2/Figuras/EvolEstadosCoherentes.pdf
-INPUT ./Capitulo 2/Figuras/EvolEstadosCoherentes.pdf
-INPUT ./Capitulo 2/Figuras/EvolEstadosCoherentes.pdf
-INPUT ./Capitulo 2/Figuras/EvolEstadosCoherentes.pdf
-INPUT ./Capitulo 2/Figuras/HistogramasEstadoNumero.pdf
-INPUT ./Capitulo 2/Figuras/HistogramasEstadoNumero.pdf
-INPUT ./Capitulo 2/Figuras/HistogramasEstadoNumero.pdf
-INPUT ./Capitulo 2/Figuras/HistogramasEstadoNumero.pdf
-INPUT ./Capitulo 2/Figuras/HistogramasEstadoNumero.pdf
-INPUT ./Capitulo 2/Figuras/DistribucionDeFaseCoherentes.pdf
-INPUT ./Capitulo 2/Figuras/DistribucionDeFaseCoherentes.pdf
-INPUT ./Capitulo 2/Figuras/DistribucionDeFaseCoherentes.pdf
-INPUT ./Capitulo 2/Figuras/DistribucionDeFaseCoherentes.pdf
-INPUT ./Capitulo 2/Figuras/DistribucionDeFaseCoherentes.pdf
-INPUT ./Capitulo 2/Figuras/FaseDirac.pdf
-INPUT ./Capitulo 2/Figuras/FaseDirac.pdf
-INPUT ./Capitulo 2/Figuras/FaseDirac.pdf
-INPUT ./Capitulo 2/Figuras/FaseDirac.pdf
-INPUT ./Capitulo 2/Figuras/FaseDirac.pdf
-INPUT ./Capitulo 2/Figuras/chivsphi.pdf
-INPUT ./Capitulo 2/Figuras/chivsphi.pdf
-INPUT ./Capitulo 2/Figuras/chivsphi.pdf
-INPUT ./Capitulo 2/Figuras/chivsphi.pdf
-INPUT ./Capitulo 2/Figuras/chivsphi.pdf
-INPUT ./Capitulo 2/Figuras/WignerRot.pdf
-INPUT ./Capitulo 2/Figuras/WignerRot.pdf
-INPUT ./Capitulo 2/Figuras/WignerRot.pdf
-INPUT ./Capitulo 2/Figuras/WignerRot.pdf
-INPUT ./Capitulo 2/Figuras/WignerRot.pdf
-INPUT ./Capitulo 2/Figuras/PhaseRot.pdf
-INPUT ./Capitulo 2/Figuras/PhaseRot.pdf
-INPUT ./Capitulo 2/Figuras/PhaseRot.pdf
-INPUT ./Capitulo 2/Figuras/PhaseRot.pdf
-INPUT ./Capitulo 2/Figuras/PhaseRot.pdf
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy9.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecti0800.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecti0600.tfm
+INPUT ./Capitulo 2/Figuras/RandomVar.pdf
+INPUT ./Capitulo 2/Figuras/RandomVar.pdf
+INPUT ./Capitulo 2/Figuras/RandomVar.pdf
+INPUT ./Capitulo 2/Figuras/RandomVar.pdf
+INPUT ./Capitulo 2/Figuras/Estrecho.pdf
+INPUT ./Capitulo 2/Figuras/Estrecho.pdf
+INPUT ./Capitulo 2/Figuras/Estrecho.pdf
+INPUT ./Capitulo 2/Figuras/Estrecho.pdf
+INPUT ./Capitulo 2/Figuras/Propagation.pdf
+INPUT ./Capitulo 2/Figuras/Propagation.pdf
+INPUT ./Capitulo 2/Figuras/Propagation.pdf
+INPUT ./Capitulo 2/Figuras/Propagation.pdf
+INPUT ./Capitulo 2/Figuras/Propagation2.pdf
+INPUT ./Capitulo 2/Figuras/Propagation2.pdf
+INPUT ./Capitulo 2/Figuras/Propagation2.pdf
+INPUT ./Capitulo 2/Figuras/Propagation2.pdf
+INPUT ./Capitulo 2/Figuras/Random2.pdf
+INPUT ./Capitulo 2/Figuras/Random2.pdf
+INPUT ./Capitulo 2/Figuras/Random2.pdf
+INPUT ./Capitulo 2/Figuras/Random2.pdf
+INPUT ./Capitulo 2/Figuras/FourierGamma.pdf
+INPUT ./Capitulo 2/Figuras/FourierGamma.pdf
+INPUT ./Capitulo 2/Figuras/FourierGamma.pdf
+INPUT ./Capitulo 2/Figuras/FourierGamma.pdf
 INPUT ./Capitulo 3/cap3.tex
 INPUT ./Capitulo 3/cap3.tex
 INPUT Capitulo 3/cap3.tex
-INPUT ./Capitulo 3/Figuras/difraccionfresnel.pdf
-INPUT ./Capitulo 3/Figuras/difraccionfresnel.pdf
-INPUT ./Capitulo 3/Figuras/difraccionfresnel.pdf
-INPUT ./Capitulo 3/Figuras/difraccionfresnel.pdf
-INPUT ./Capitulo 3/Figuras/difraccionfresnel.pdf
-INPUT ./Capitulo 3/Figuras/ftesferica.pdf
-INPUT ./Capitulo 3/Figuras/ftesferica.pdf
-INPUT ./Capitulo 3/Figuras/ftesferica.pdf
-INPUT ./Capitulo 3/Figuras/ftesferica.pdf
-INPUT ./Capitulo 3/Figuras/ftesferica.pdf
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
-INPUT ./Capitulo 3/Figuras/ftparabol.pdf
-INPUT ./Capitulo 3/Figuras/ftparabol.pdf
-INPUT ./Capitulo 3/Figuras/ftparabol.pdf
-INPUT ./Capitulo 3/Figuras/ftparabol.pdf
-INPUT ./Capitulo 3/Figuras/ftparabol.pdf
-INPUT ./Capitulo 3/Figuras/experimento.png
-INPUT ./Capitulo 3/Figuras/experimento.png
-INPUT ./Capitulo 3/Figuras/experimento.png
-INPUT ./Capitulo 3/Figuras/experimento.png
-INPUT ./Capitulo 3/Figuras/experimento.png
-INPUT ./Capitulo 3/Figuras/dataexp.png
-INPUT ./Capitulo 3/Figuras/dataexp.png
-INPUT ./Capitulo 3/Figuras/dataexp.png
-INPUT ./Capitulo 3/Figuras/dataexp.png
-INPUT ./Capitulo 3/Figuras/dataexp.png
-INPUT ./Capitulo 3/Figuras/simulacion.png
-INPUT ./Capitulo 3/Figuras/simulacion.png
-INPUT ./Capitulo 3/Figuras/simulacion.png
-INPUT ./Capitulo 3/Figuras/simulacion.png
-INPUT ./Capitulo 3/Figuras/simulacion.png
+INPUT ./Capitulo 3/Figuras/VariacionCamino.pdf
+INPUT ./Capitulo 3/Figuras/VariacionCamino.pdf
+INPUT ./Capitulo 3/Figuras/VariacionCamino.pdf
+INPUT ./Capitulo 3/Figuras/VariacionCamino.pdf
+INPUT ./Capitulo 3/Figuras/VariacionCamino.pdf
+INPUT ./Capitulo 3/Figuras/Legendre.pdf
+INPUT ./Capitulo 3/Figuras/Legendre.pdf
+INPUT ./Capitulo 3/Figuras/Legendre.pdf
+INPUT ./Capitulo 3/Figuras/Legendre.pdf
+INPUT ./Capitulo 3/Figuras/Legendre.pdf
+INPUT ./Capitulo 3/Figuras/FrentesAccion.pdf
+INPUT ./Capitulo 3/Figuras/FrentesAccion.pdf
+INPUT ./Capitulo 3/Figuras/FrentesAccion.pdf
+INPUT ./Capitulo 3/Figuras/FrentesAccion.pdf
+INPUT ./Capitulo 3/Figuras/FrentesAccion.pdf
+INPUT ./Capitulo 3/Figuras/IntegralCamino.pdf
+INPUT ./Capitulo 3/Figuras/IntegralCamino.pdf
+INPUT ./Capitulo 3/Figuras/IntegralCamino.pdf
+INPUT ./Capitulo 3/Figuras/IntegralCamino.pdf
+INPUT ./Capitulo 3/Figuras/IntegralCamino.pdf
 INPUT ./Capitulo 4/cap4.tex
 INPUT ./Capitulo 4/cap4.tex
 INPUT Capitulo 4/cap4.tex
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbi1095.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecti0800.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecti0600.tfm
-INPUT ./Capitulo 5/cap5.tex
-INPUT ./Capitulo 5/cap5.tex
+INPUT ./Capitulo 4/Figuras/MedidaProyeccion.pdf
+INPUT ./Capitulo 4/Figuras/MedidaProyeccion.pdf
+INPUT ./Capitulo 4/Figuras/MedidaProyeccion.pdf
+INPUT ./Capitulo 4/Figuras/MedidaProyeccion.pdf
+INPUT ./Capitulo 4/Figuras/MedidaProyeccion.pdf
 INPUT ./Capitulo 5/cap5.tex
 INPUT ./Capitulo 5/cap5.tex
 INPUT Capitulo 5/cap5.tex
+INPUT ./Capitulo 5/Figuras/ConteoModos.pdf
+INPUT ./Capitulo 5/Figuras/ConteoModos.pdf
+INPUT ./Capitulo 5/Figuras/ConteoModos.pdf
+INPUT ./Capitulo 5/Figuras/ConteoModos.pdf
+INPUT ./Capitulo 5/Figuras/ConteoModos.pdf
+INPUT ./Capitulo 5/Figuras/EspectroCuerpoNegro.pdf
+INPUT ./Capitulo 5/Figuras/EspectroCuerpoNegro.pdf
+INPUT ./Capitulo 5/Figuras/EspectroCuerpoNegro.pdf
+INPUT ./Capitulo 5/Figuras/EspectroCuerpoNegro.pdf
+INPUT ./Capitulo 5/Figuras/EspectroCuerpoNegro.pdf
+INPUT ./Capitulo 5/Figuras/Fotoelectrico.pdf
+INPUT ./Capitulo 5/Figuras/Fotoelectrico.pdf
+INPUT ./Capitulo 5/Figuras/Fotoelectrico.pdf
+INPUT ./Capitulo 5/Figuras/Fotoelectrico.pdf
+INPUT ./Capitulo 5/Figuras/Fotoelectrico.pdf
+INPUT ./Capitulo 5/Figuras/Compton.pdf
+INPUT ./Capitulo 5/Figuras/Compton.pdf
+INPUT ./Capitulo 5/Figuras/Compton.pdf
+INPUT ./Capitulo 5/Figuras/Compton.pdf
+INPUT ./Capitulo 5/Figuras/Compton.pdf
+INPUT ./Capitulo 5/Figuras/Aspect.pdf
+INPUT ./Capitulo 5/Figuras/Aspect.pdf
+INPUT ./Capitulo 5/Figuras/Aspect.pdf
+INPUT ./Capitulo 5/Figuras/Aspect.pdf
+INPUT ./Capitulo 5/Figuras/Aspect.pdf
+INPUT ./Capitulo 5/Figuras/CavidadL.pdf
+INPUT ./Capitulo 5/Figuras/CavidadL.pdf
+INPUT ./Capitulo 5/Figuras/CavidadL.pdf
+INPUT ./Capitulo 5/Figuras/CavidadL.pdf
+INPUT ./Capitulo 5/Figuras/CavidadL.pdf
+INPUT ./Capitulo 5/Figuras/EstadosNumero.pdf
+INPUT ./Capitulo 5/Figuras/EstadosNumero.pdf
+INPUT ./Capitulo 5/Figuras/EstadosNumero.pdf
+INPUT ./Capitulo 5/Figuras/EstadosNumero.pdf
+INPUT ./Capitulo 5/Figuras/EstadosNumero.pdf
+INPUT ./Capitulo 5/Figuras/EvolEstadosCoherentes.pdf
+INPUT ./Capitulo 5/Figuras/EvolEstadosCoherentes.pdf
+INPUT ./Capitulo 5/Figuras/EvolEstadosCoherentes.pdf
+INPUT ./Capitulo 5/Figuras/EvolEstadosCoherentes.pdf
+INPUT ./Capitulo 5/Figuras/EvolEstadosCoherentes.pdf
+INPUT ./Capitulo 5/Figuras/HistogramasEstadoNumero.pdf
+INPUT ./Capitulo 5/Figuras/HistogramasEstadoNumero.pdf
+INPUT ./Capitulo 5/Figuras/HistogramasEstadoNumero.pdf
+INPUT ./Capitulo 5/Figuras/HistogramasEstadoNumero.pdf
+INPUT ./Capitulo 5/Figuras/HistogramasEstadoNumero.pdf
+INPUT ./Capitulo 5/Figuras/DistribucionDeFaseCoherentes.pdf
+INPUT ./Capitulo 5/Figuras/DistribucionDeFaseCoherentes.pdf
+INPUT ./Capitulo 5/Figuras/DistribucionDeFaseCoherentes.pdf
+INPUT ./Capitulo 5/Figuras/DistribucionDeFaseCoherentes.pdf
+INPUT ./Capitulo 5/Figuras/DistribucionDeFaseCoherentes.pdf
+INPUT ./Capitulo 6/cap6.tex
+INPUT ./Capitulo 6/cap6.tex
+INPUT Capitulo 6/cap6.tex
+INPUT ./Capitulo 7/cap7.tex
+INPUT ./Capitulo 7/cap7.tex
+INPUT Capitulo 7/cap7.tex
+INPUT ./Capitulo 7/Figuras/FaseDirac.pdf
+INPUT ./Capitulo 7/Figuras/FaseDirac.pdf
+INPUT ./Capitulo 7/Figuras/FaseDirac.pdf
+INPUT ./Capitulo 7/Figuras/FaseDirac.pdf
+INPUT ./Capitulo 7/Figuras/FaseDirac.pdf
+INPUT ./Capitulo 7/Figuras/chivsphi.pdf
+INPUT ./Capitulo 7/Figuras/chivsphi.pdf
+INPUT ./Capitulo 7/Figuras/chivsphi.pdf
+INPUT ./Capitulo 7/Figuras/chivsphi.pdf
+INPUT ./Capitulo 7/Figuras/chivsphi.pdf
+INPUT ./Capitulo 7/Figuras/WignerRot.pdf
+INPUT ./Capitulo 7/Figuras/WignerRot.pdf
+INPUT ./Capitulo 7/Figuras/WignerRot.pdf
+INPUT ./Capitulo 7/Figuras/WignerRot.pdf
+INPUT ./Capitulo 7/Figuras/WignerRot.pdf
+INPUT ./Capitulo 7/Figuras/PhaseRot.pdf
+INPUT ./Capitulo 7/Figuras/PhaseRot.pdf
+INPUT ./Capitulo 7/Figuras/PhaseRot.pdf
+INPUT ./Capitulo 7/Figuras/PhaseRot.pdf
+INPUT ./Capitulo 7/Figuras/PhaseRot.pdf
+INPUT ./Capitulo 8/cap8.tex
+INPUT ./Capitulo 8/cap8.tex
+INPUT Capitulo 8/cap8.tex
+INPUT ./Capitulo 8/Figuras/difraccionfresnel.pdf
+INPUT ./Capitulo 8/Figuras/difraccionfresnel.pdf
+INPUT ./Capitulo 8/Figuras/difraccionfresnel.pdf
+INPUT ./Capitulo 8/Figuras/difraccionfresnel.pdf
+INPUT ./Capitulo 8/Figuras/difraccionfresnel.pdf
+INPUT ./Capitulo 8/Figuras/ftesferica.pdf
+INPUT ./Capitulo 8/Figuras/ftesferica.pdf
+INPUT ./Capitulo 8/Figuras/ftesferica.pdf
+INPUT ./Capitulo 8/Figuras/ftesferica.pdf
+INPUT ./Capitulo 8/Figuras/ftesferica.pdf
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
+INPUT ./Capitulo 8/Figuras/ftparabol.pdf
+INPUT ./Capitulo 8/Figuras/ftparabol.pdf
+INPUT ./Capitulo 8/Figuras/ftparabol.pdf
+INPUT ./Capitulo 8/Figuras/ftparabol.pdf
+INPUT ./Capitulo 8/Figuras/ftparabol.pdf
+INPUT ./Capitulo 8/Figuras/experimento.png
+INPUT ./Capitulo 8/Figuras/experimento.png
+INPUT ./Capitulo 8/Figuras/experimento.png
+INPUT ./Capitulo 8/Figuras/experimento.png
+INPUT ./Capitulo 8/Figuras/experimento.png
+INPUT ./Capitulo 8/Figuras/dataexp.png
+INPUT ./Capitulo 8/Figuras/dataexp.png
+INPUT ./Capitulo 8/Figuras/dataexp.png
+INPUT ./Capitulo 8/Figuras/dataexp.png
+INPUT ./Capitulo 8/Figuras/dataexp.png
+INPUT ./Capitulo 8/Figuras/simulacion.png
+INPUT ./Capitulo 8/Figuras/simulacion.png
+INPUT ./Capitulo 8/Figuras/simulacion.png
+INPUT ./Capitulo 8/Figuras/simulacion.png
+INPUT ./Capitulo 8/Figuras/simulacion.png
+INPUT ./Capitulo 9/cap9.tex
+INPUT ./Capitulo 9/cap9.tex
+INPUT Capitulo 9/cap9.tex
+INPUT ./Capitulo 10/cap10.tex
+INPUT ./Capitulo 10/cap10.tex
+INPUT Capitulo 10/cap10.tex
 INPUT out/main.bbl
 INPUT out/main.bbl
 INPUT out/main.bbl
 INPUT out/main.aux
 INPUT out/main.out
 INPUT out/main.out
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb

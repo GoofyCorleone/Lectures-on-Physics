@@ -8,6 +8,10 @@
 
 % Paquetes matemáticos y gráficos
 \usepackage{amsmath,amsfonts,amssymb,mathrsfs}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{cancel}
+\renewcommand{\CancelColor}{\color{red}}
 \usepackage{graphicx,epstopdf,subcaption}
 \usepackage{microtype}
 \setlength{\emergencystretch}{3em}
@@ -27,6 +31,7 @@
 \usepackage[colorlinks=true,urlcolor=black,linkcolor=black]{hyperref}
 \usepackage{natbib}
 \usepackage{braket}
+\usepackage{bm}
 % Paquete de fecha
 \usepackage{datetime}
 
@@ -42,9 +47,13 @@
 \fancyhead[LE,RO]{\bfseries\thepage}
 \fancyhead[RE]{\bfseries\nouppercase{\leftmark}}
 \fancyhead[LO]{\bfseries\nouppercase{\rightmark}}
-\fancyfoot[C]{\it Autores: Jafert, Dayan, Santiago, Angel, Brayan\quad UIS}
+\fancyfoot[C]{\it Autor: Jafert Serrano\quad UIS}
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0.5pt}
+
+% Profundidad del índice y de la numeración: incluir subsubsecciones
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 
 % Configuración de capítulos con página completa
 \titleformat{\chapter}[display]
@@ -65,6 +74,7 @@
 \newtheorem{myteo}{Teorema}
 \newtheorem{myDef}{Definición}
 \newtheorem{proof}{Demostración}
+\newtheorem{Assumption}{Supuesto}
 
 \begin{document}
 	
@@ -101,11 +111,7 @@
 		
 		\vspace{1.5cm}
 		
-		{\Large\textbf{Jafert Serrano (Edición 1 y 2)}\\
-			\textbf{Brayan Pedraza (Edición 1)}\\
-			\textbf{Ángel Blanco (Edición 1)} \\
-			\textbf{Dayan Aselas (Edición 1 y 2)}\\
-			\textbf{Santiago Montes (Edición 2)}\par}
+		{\Large\textbf{Jafert Serrano (Edición 1, 2 y 3)}\par}
 		
 		\vspace{1cm}
 		
@@ -127,18 +133,54 @@
 	\listoffigures
 	
 	\mainmatter
-	\chapter{Introducción a la propagación de la radiación y teoría estocástica de la luz}
+	\chapter{Teoría de la difracción}
 	\thispagestyle{empty}
 	\vspace*{2cm}
 	\begin{center}
-		{\itshape\Huge \par}
+		{\itshape\Huge Donde la geometría prometía sombras nítidas, la luz insistió en pintar franjas. \par}
 		\vspace{1cm}
-		\epigraph{``La luz es la sombra de Dios''}{-- San Agustín}
+		\epigraph{``La difracción es cualquier desviación de los rayos de luz respecto de las trayectorias rectilíneas que no pueda interpretarse como reflexión o refracción''}{-- Arnold Sommerfeld}
 	\end{center}
 	\clearpage
-	
+
 	\input{Capitulo 1/cap1.tex}
-	
+
+	\chapter{Teoría de la coherencia}\label{chap:Coherencia}
+	\thispagestyle{empty}
+	\vspace*{2cm}
+	\begin{center}
+		{\itshape\Huge La coherencia es el hilo que teje el orden a partir del caos de la luz aleatoria. \par}
+		\vspace{1cm}
+		\epigraph{``El tiempo avanza en la dirección en que las correlaciones aumentan''}{-- atribuido a Ludwig Boltzmann}
+	\end{center}
+	\clearpage
+
+	\input{Capitulo 2/cap2.tex}
+
+	\chapter{Mecánica analítica y el principio de acción}\label{chap:MecanicaAnalitica}
+	\thispagestyle{empty}
+	\vspace*{2cm}
+	\begin{center}
+		{\itshape\Huge De todos los caminos que la naturaleza podría seguir, escoge aquel sobre el cual la acción no cambia. \par}
+		\vspace{1cm}
+		\epigraph{``La naturaleza es siempre ahorrativa en la acción''}{-- Pierre Louis Moreau de Maupertuis}
+	\end{center}
+	\clearpage
+
+	\input{Capitulo 3/cap3.tex}
+
+	\chapter{Los postulados de la mecánica cuántica}\label{chap:PostuladosQM}
+	\thispagestyle{empty}
+	\vspace*{2cm}
+	\begin{center}
+		{\itshape\Huge El estado de un sistema dejó de ser un punto y pasó a ser una dirección en un espacio de infinitas dimensiones. \par}
+		\vspace{1cm}
+		\epigraph{``No podemos describir los procesos atómicos con el lenguaje de la física clásica, pero tampoco disponemos de otro lenguaje''}{-- Niels Bohr}
+	\end{center}
+	\clearpage
+
+	\input{Capitulo 4/cap4.tex}
+
 	\chapter{Cuantización del campo electromagnético}
 	\thispagestyle{empty}
 	\vspace*{2cm}
@@ -148,8 +190,32 @@
 		\epigraph{``El fotón es el portador cuántico de la realidad electromagnética''}{-- Roy J. Glauber}
 	\end{center}
 	\clearpage
-	
-	\input{Capitulo 2/cap2.tex}
+
+	\input{Capitulo 5/cap5.tex}
+
+	\chapter{Coherencia cuántica y estadística de fotones}\label{chap:CoherenciaCuantica}
+	\thispagestyle{empty}
+	\vspace*{2cm}
+	\begin{center}
+		{\itshape\Huge Contar fotones de a uno resultó decir más sobre la luz que medir su intensidad. \par}
+		\vspace{1cm}
+		\epigraph{``Un haz de luz es coherente cuando todas sus funciones de correlación se factorizan''}{-- Roy J. Glauber}
+	\end{center}
+	\clearpage
+
+	\input{Capitulo 6/cap6.tex}
+
+	\chapter{La fase cuántica}\label{chap:FaseCuantica}
+	\thispagestyle{empty}
+	\vspace*{2cm}
+	\begin{center}
+		{\itshape\Huge De todas las variables del campo, la fase es la que se resiste a convertirse en operador. \par}
+		\vspace{1cm}
+		\epigraph{``La fase de un campo cuántico es una cantidad tan fundamental como difícil de definir''}{-- Peter L. Knight}
+	\end{center}
+	\clearpage
+
+	\input{Capitulo 7/cap7.tex}
 
     \chapter{La propoagación fundamental de los fotones}
 	\thispagestyle{empty}
@@ -160,8 +226,8 @@
 		\epigraph{``El fotón es emitido aquí, absorbido allá, y entre esos puntos no sabemos —ni podemos saber— qué camino siguió. La naturaleza solo exige que la suma de todos los caminos posibles contribuya a la probabilidad final''}{-- Richard Feynman }
 	\end{center}
 	\clearpage
-	
-	\input{Capitulo 3/cap3.tex}
+
+	\input{Capitulo 8/cap8.tex}
 
 
         \chapter{El Campo de Riemann-Silberstein}
@@ -173,8 +239,8 @@
 		\epigraph{``El fotón no se encuentra en el campo eléctrico o en el campo magnético sino en ambos al mismo tiempo, por eso, el vector de Riemann-Silberstein es la mejor opción para describir una función de onda del fotón.''}{-- Iwo Bialynicki-Birula }
 	\end{center}
 	\clearpage
-	
-	\input{Capitulo 4/cap4.tex}
+
+	\input{Capitulo 9/cap9.tex}
 
     \chapter{Un modelo del fotón}
     	\thispagestyle{empty}
@@ -185,8 +251,8 @@
     		\epigraph{Por el resto de mi vida, voy a reflexionar sobre lo que es la luz}{Albert Einstein}
     	\end{center}
     	\clearpage
-    	
-    	\input{Capitulo 5/cap5}
+
+    	\input{Capitulo 10/cap10.tex}
 	
 	\bibliography{referencias}
 	

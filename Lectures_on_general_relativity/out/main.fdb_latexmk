@@ -1,13 +1,19 @@
 # Fdb version 4
-["bibtex out/main"] 1789855854.23985 "out/main.aux" "out/main.bbl" "out/main" 1789855855.8167 0
+["bibtex /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main"] 1789856266.17733 "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.aux" "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.bbl" "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main" 1789856267.72633 0
   "./bibliografia.bib" 1789854541.89816 15650 47cc0caf1fcbf7aaba318b76529bb772 ""
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.aux" 1789856267.50573 54163 31fb796d59b99a23d5b1e096b9ecaa6e "pdflatex"
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "out/main.aux" 1789855855.56765 54163 31fb796d59b99a23d5b1e096b9ecaa6e "pdflatex"
   (generated)
-  "out/main.bbl"
-  "out/main.blg"
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.bbl"
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.blg"
   (rewritten before read)
-["pdflatex"] 1789855854.31288 "main.tex" "out/main.pdf" "main" 1789855855.81686 0
+["pdflatex"] 1789856266.25203 "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/main.tex" "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.pdf" "main" 1789856267.72649 0
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/main.tex" 1789855748.49309 6642 262912d8005faf0a9bafb5728ec7a1a5 ""
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.aux" 1789856267.50573 54163 31fb796d59b99a23d5b1e096b9ecaa6e "pdflatex"
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.bbl" 1789856266.24752 12592 d1080a0e865f1cad60b002e5c0e58722 "bibtex /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main"
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.lof" 1789856267.50915 7802 a4c58f99307d14b72b9c2da976fae595 "pdflatex"
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.out" 1789856267.50876 23518 c98962b9b83f0c108879afa21772c865 "pdflatex"
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.toc" 1789856267.50912 10355 417642be3f59bd283b0adada90bc31f9 "pdflatex"
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -254,17 +260,11 @@
   "Chapter 5/chap5.tex" 1789855577.86439 52433 f61814a60c440a0e225140ef0ae77a92 ""
   "Figures/LoGOTS.png" 1771986394 56924 0eb3d3c0ccaeac2fa2164ae400c3163f ""
   "Figures/logouis.png" 1771986394 63563 516325fe37699bb556ddbb3ecd6899e7 ""
-  "main.tex" 1789855748.49309 6642 262912d8005faf0a9bafb5728ec7a1a5 ""
-  "out/main.aux" 1789855855.56765 54163 31fb796d59b99a23d5b1e096b9ecaa6e "pdflatex"
-  "out/main.bbl" 1789855854.31037 12660 e933c6d5dc455c623f21dd702d27cff0 "bibtex out/main"
-  "out/main.lof" 1789855855.5706 7802 a4c58f99307d14b72b9c2da976fae595 "pdflatex"
-  "out/main.out" 1789855855.5704 23518 c98962b9b83f0c108879afa21772c865 "pdflatex"
-  "out/main.toc" 1789855855.57058 10355 417642be3f59bd283b0adada90bc31f9 "pdflatex"
   (generated)
-  "out/main.aux"
-  "out/main.lof"
-  "out/main.log"
-  "out/main.out"
-  "out/main.pdf"
-  "out/main.toc"
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.aux"
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.lof"
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.log"
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.out"
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.pdf"
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_general_relativity/out/main.toc"
   (rewritten before read)
