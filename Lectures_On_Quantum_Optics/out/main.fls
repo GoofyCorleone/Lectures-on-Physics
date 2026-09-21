@@ -2,7 +2,7 @@ PWD /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Quantum_Optic
 INPUT /usr/local/texlive/2026/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT main.tex
+INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Quantum_Optics/main.tex
 OUTPUT out/main.log
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls

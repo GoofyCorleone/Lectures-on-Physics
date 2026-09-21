@@ -1,13 +1,14 @@
 # Fdb version 4
-["bibtex out/main"] 1789966071.19376 "out/main.aux" "out/main.bbl" "out/main" 1789966073.15474 0
+["bibtex out/main"] 1789966071.19376 "out/main.aux" "out/main.bbl" "out/main" 1789966142.12834 0
   "./referencias.bib" 1789965961.65092 49292 d40e6a6e14195fe84a4b15db0606caa3 ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "out/main.aux" 1789966072.88046 139657 b65d9fc5c6473b56ee08457d6378d550 "pdflatex"
+  "out/main.aux" 1789966141.87434 139657 b65d9fc5c6473b56ee08457d6378d550 "pdflatex"
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1789966071.26675 "main.tex" "out/main.pdf" "main" 1789966073.15498 0
+["pdflatex"] 1789966139.99766 "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Quantum_Optics/main.tex" "out/main.pdf" "main" 1789966142.12863 0
+  "/Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_On_Quantum_Optics/main.tex" 1789965979.89694 7831 b4ab75de622910aefc2aa08304999c81 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbi1095.tfm" 1136768653 3072 19a65fbc725cfc66f5a5fc183b9d418b ""
@@ -262,11 +263,11 @@
   "Figures/LoGOTS.png" 1750275000 58761 d30b2db1e9efaf752cebe7551c894d9d ""
   "Figures/logouis.png" 1750275000 62450 f09c4e4b788c95739ca2931443f6d84e ""
   "main.tex" 1789965979.89694 7831 b4ab75de622910aefc2aa08304999c81 ""
-  "out/main.aux" 1789966072.88046 139657 b65d9fc5c6473b56ee08457d6378d550 "pdflatex"
+  "out/main.aux" 1789966141.87434 139657 b65d9fc5c6473b56ee08457d6378d550 "pdflatex"
   "out/main.bbl" 1789966071.26055 30740 05471156bbf01c9c1a5fee0284ca44b4 "bibtex out/main"
-  "out/main.lof" 1789966072.88773 11205 ed8d163dd74daf9ddb44298b59374c55 "pdflatex"
-  "out/main.out" 1789966072.88747 40810 f00a69b3aa635031eeda2306edbc2bd8 "pdflatex"
-  "out/main.toc" 1789966072.8877 15678 399b997028d0da012047f65735cbe16f "pdflatex"
+  "out/main.lof" 1789966141.88173 11205 ed8d163dd74daf9ddb44298b59374c55 "pdflatex"
+  "out/main.out" 1789966141.88148 40810 f00a69b3aa635031eeda2306edbc2bd8 "pdflatex"
+  "out/main.toc" 1789966141.88169 15678 399b997028d0da012047f65735cbe16f "pdflatex"
   (generated)
   "out/main.aux"
   "out/main.lof"
