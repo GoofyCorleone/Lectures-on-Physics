@@ -61,21 +61,21 @@
 \contentsline {subsection}{\numberline {3.5.2}Time evolution of the polarisations: Stokes parameters and the Poincaré sphere}{107}{subsection.3.5.2}%
 \contentsline {subsubsection}{\numberline {3.5.2.1}Why the Stokes vector is not a vector}{113}{subsubsection.3.5.2.1}%
 \contentsline {subsection}{\numberline {3.5.3}The bridge between Jones and Stokes: the stereographic projection}{115}{subsection.3.5.3}%
-\contentsline {subsubsection}{\numberline {3.5.3.1}What the stereographic projection is}{116}{subsubsection.3.5.3.1}%
-\contentsline {subsubsection}{\numberline {3.5.3.2}Why a polarisation state is a single complex number}{117}{subsubsection.3.5.3.2}%
+\contentsline {subsubsection}{\numberline {3.5.3.1}What the stereographic projection is}{115}{subsubsection.3.5.3.1}%
+\contentsline {subsubsection}{\numberline {3.5.3.2}Why a polarisation state is a single complex number}{116}{subsubsection.3.5.3.2}%
 \contentsline {subsubsection}{\numberline {3.5.3.3}The Poincaré sphere is that sphere}{117}{subsubsection.3.5.3.3}%
 \contentsline {subsubsection}{\numberline {3.5.3.4}A flat atlas of every polarisation state}{119}{subsubsection.3.5.3.4}%
-\contentsline {subsection}{\numberline {3.5.4}Transformations of Polarisation: Jones matrices}{120}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.4}Transformations of Polarisation: Jones matrices}{119}{subsection.3.5.4}%
 \contentsline {subsubsection}{\numberline {3.5.4.1}Retarders}{121}{subsubsection.3.5.4.1}%
-\contentsline {subsubsection}{\numberline {3.5.4.2}Rotators}{124}{subsubsection.3.5.4.2}%
+\contentsline {subsubsection}{\numberline {3.5.4.2}Rotators}{123}{subsubsection.3.5.4.2}%
 \contentsline {subsubsection}{\numberline {3.5.4.3}Dichroics and polarisers}{124}{subsubsection.3.5.4.3}%
 \contentsline {subsection}{\numberline {3.5.5}Transformations of Polarisation: Mueller matrices}{127}{subsection.3.5.5}%
 \contentsline {subsubsection}{\numberline {3.5.5.1}From the Jones matrix to the coherence matrix}{127}{subsubsection.3.5.5.1}%
 \contentsline {subsubsection}{\numberline {3.5.5.2}The Mueller matrix}{128}{subsubsection.3.5.5.2}%
 \contentsline {subsubsection}{\numberline {3.5.5.3}Retarders are rotations of the Poincaré sphere}{129}{subsubsection.3.5.5.3}%
 \contentsline {subsubsection}{\numberline {3.5.5.4}Polarisers, dichroics and the Malus law}{131}{subsubsection.3.5.5.4}%
-\contentsline {subsubsection}{\numberline {3.5.5.5}What no Jones matrix can do: depolarisation}{133}{subsubsection.3.5.5.5}%
-\contentsline {subsubsection}{\numberline {3.5.5.6}Why this matters}{134}{subsubsection.3.5.5.6}%
+\contentsline {subsubsection}{\numberline {3.5.5.5}What no Jones matrix can do: depolarisation}{132}{subsubsection.3.5.5.5}%
+\contentsline {subsubsection}{\numberline {3.5.5.6}Why this matters}{133}{subsubsection.3.5.5.6}%
 \contentsline {subsection}{\numberline {3.5.6}The Jones theorems}{134}{subsection.3.5.6}%
 \contentsline {subsubsection}{\numberline {3.5.6.1}Theorem I: every system has an eigenpolarisation}{135}{subsubsection.3.5.6.1}%
 \contentsline {subsubsection}{\numberline {3.5.6.2}Theorem II: retarders and rotators}{136}{subsubsection.3.5.6.2}%
@@ -83,14 +83,14 @@
 \contentsline {subsubsection}{\numberline {3.5.6.4}Theorem IV: the general equivalence theorem}{138}{subsubsection.3.5.6.4}%
 \contentsline {subsubsection}{\numberline {3.5.6.5}Theorem V: reversibility}{139}{subsubsection.3.5.6.5}%
 \contentsline {subsubsection}{\numberline {3.5.6.6}What the theorems say together}{140}{subsubsection.3.5.6.6}%
-\contentsline {subsection}{\numberline {3.5.7}Generation of elliptic states: Composition of Waveplates}{141}{subsection.3.5.7}%
+\contentsline {subsection}{\numberline {3.5.7}Generation of elliptic states: Composition of Waveplates}{140}{subsection.3.5.7}%
 \contentsline {subsubsection}{\numberline {3.5.7.1}The linear birrefringents law}{141}{subsubsection.3.5.7.1}%
 \contentsline {subsubsection}{\numberline {3.5.7.2}The full tunable birrefringent}{147}{subsubsection.3.5.7.2}%
-\contentsline {subsubsection}{\numberline {3.5.7.3}The elliptic birrefringents law}{154}{subsubsection.3.5.7.3}%
+\contentsline {subsubsection}{\numberline {3.5.7.3}The elliptic birrefringents law}{153}{subsubsection.3.5.7.3}%
 \contentsline {subsection}{\numberline {3.5.8}Generation of elliptic states: Polarizers as projection operators }{159}{subsection.3.5.8}%
-\contentsline {subsubsection}{\numberline {3.5.8.1}The Malus law}{160}{subsubsection.3.5.8.1}%
-\contentsline {subsubsection}{\numberline {3.5.8.2}The elliptic polariser}{165}{subsubsection.3.5.8.2}%
-\contentsline {subsubsection}{\numberline {3.5.8.3}The elliptic Malus law}{172}{subsubsection.3.5.8.3}%
+\contentsline {subsubsection}{\numberline {3.5.8.1}The Malus law}{159}{subsubsection.3.5.8.1}%
+\contentsline {subsubsection}{\numberline {3.5.8.2}The elliptic polariser}{164}{subsubsection.3.5.8.2}%
+\contentsline {subsubsection}{\numberline {3.5.8.3}The elliptic Malus law}{171}{subsubsection.3.5.8.3}%
 \contentsline {chapter}{\numberline {4}Interference and Interferometers}{177}{chapter.4}%
 \contentsline {section}{\numberline {4.1}A historical context of interference and interferometers}{178}{section.4.1}%
 \contentsline {section}{\numberline {4.2}How does interference occur?}{179}{section.4.2}%
@@ -134,11 +134,13 @@
 \contentsline {subsection}{\numberline {6.3.2}The sigma algebra, or which questions may be asked}{265}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Measure, the Lebesgue measure and the probability measure}{267}{subsection.6.3.3}%
 \contentsline {subsection}{\numberline {6.3.4}Random variables and the meaning of measurability}{268}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Stochastic processes}{270}{subsection.6.3.5}%
-\contentsline {subsection}{\numberline {6.3.6}The probability space of the electromagnetic field}{270}{subsection.6.3.6}%
-\contentsline {subsection}{\numberline {6.3.7}Stationarity, ergodicity and the right to measure}{272}{subsection.6.3.7}%
-\contentsline {section}{\numberline {6.4}The coherence function}{273}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Manifestations of coherence: the WienerKhinchin theorem}{277}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}The wave equation of coherence}{279}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Propagation of coherence and the direction of time: the van CittertZernike theorem}{282}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.3.5}A worked example: the throw of a die}{270}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}A worked example: interference with a beam of random phase}{271}{subsection.6.3.6}%
+\contentsline {subsection}{\numberline {6.3.7}Stochastic processes}{273}{subsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.3.8}The probability space of the electromagnetic field}{274}{subsection.6.3.8}%
+\contentsline {subsection}{\numberline {6.3.9}Stationarity, ergodicity and the right to measure}{276}{subsection.6.3.9}%
+\contentsline {section}{\numberline {6.4}The coherence function}{277}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Manifestations of coherence: the WienerKhinchin theorem}{281}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}The wave equation of coherence}{283}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Propagation of coherence and the direction of time: the van CittertZernike theorem}{285}{subsection.6.4.3}%
 \contentsfinish 

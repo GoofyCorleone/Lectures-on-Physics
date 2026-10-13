@@ -322,8 +322,8 @@
 	a sign attached. But if the two variables know nothing about each other, then for every
 	realisation in which the product happens to come out positive there is, somewhere in the
 	ensemble, an equally likely realisation in which it comes out negative, the contributions
-	annihilate one another, and the average collapses to zero. \textbf{The averaging is
-	therefore not an incidental technicality but the entire mechanism}: it is precisely what
+	annihilate one another, and the average collapses to zero. The averaging is
+	therefore not an incidental technicality but the entire mechanism: it is precisely what
 	destroys the terms that carry no shared information while allowing the terms that do to
 	accumulate.
 
@@ -365,13 +365,13 @@
 
 		\begin{myDef}
 			\textit{(Sample space)} A \textbf{sample space} is a nonempty set $\Omega$. Its
-			elements $\omega\in\Omega$ are called \textbf{elementary outcomes} or
-			\textbf{sample points}.
+			elements $\omega\in\Omega$ are called \emph{elementary outcomes} or
+			\emph{sample points}.
 		\end{myDef}
 
 		The temptation is to read $\omega$ as a number, and it is essential to resist it. In
 		optics an elementary outcome is not a field value and not a measurement; it is one
-		complete \textbf{realisation} of the source, that is, one entire spacetime history that
+		complete \emph{realisation} of the source, that is, one entire spacetime history that
 		the field could have had. A thermal lamp contains of the order of $10^{20}$ atoms
 		radiating independently, each with an emission instant and an initial phase that we
 		neither control nor know. One particular assignment of all those microscopic details,
@@ -389,8 +389,8 @@
 			\textit{(Event)} An \textbf{event} is a subset $A\subseteq\Omega$.
 		\end{myDef}
 
-		The physical content of this definition is that an event is a \textbf{statement about
-		the realisation that can be declared true or false}. The statement ``the field at
+		The physical content of this definition is that an event is a statement about
+		the realisation that can be declared true or false. The statement ``the field at
 		$\vec{r}_{0}$ at the instant $t_{0}$ exceeded the value $E_{0}$'' is not a number; it is
 		the set of all realisations for which that happens to be the case. To say that the event
 		occurred is to say that the $\omega$ nature selected belongs to that subset. Events and
@@ -408,11 +408,11 @@
 				\item if $A_{1},A_{2},A_{3},\dots\in\mathcal{F}$ then
 				$\bigcup_{n=1}^{\infty}A_{n}\in\mathcal{F}$.
 			\end{enumerate}
-			The pair $(\Omega,\mathcal{F})$ is called a \textbf{measurable space}.
+			The pair $(\Omega,\mathcal{F})$ is called a \emph{measurable space}.
 		\end{myDef}
 
 		A sigma algebra looks like a piece of bookkeeping and is in fact a physical statement.
-		It is the \textbf{catalogue of admissible questions}, the list of statements to which
+		It is the \emph{catalogue of admissible questions}, the list of statements to which
 		the theory is prepared to attach a probability, and the three axioms are exactly the
 		three properties that any honest catalogue of questions must have.
 
@@ -441,7 +441,7 @@
 		The example we shall need constantly is the following.
 
 		\begin{myDef}
-			\textit{(Borel sigma algebra)} The \textbf{Borel sigma algebra}
+			\textit{(Borel sigma algebra)} The \emph{Borel sigma algebra}
 			$\mathcal{B}(\mathbb{R}^{n})$ is the smallest sigma algebra on $\mathbb{R}^{n}$
 			containing all the open sets.
 		\end{myDef}
@@ -463,7 +463,7 @@
 			\begin{equation}\label{eq:CountableAdditivity}
 				\mu\left(\bigcup_{n=1}^{\infty}A_{n}\right) = \sum_{n=1}^{\infty}\mu(A_{n}).
 			\end{equation}
-			The triple $(\Omega,\mathcal{F},\mu)$ is a \textbf{measure space}.
+			The triple $(\Omega,\mathcal{F},\mu)$ is a \emph{measure space}.
 		\end{myDef}
 
 		A measure is a consistent way of assigning a \textit{size}. Condition
@@ -475,7 +475,7 @@
 		Among all measures one is singled out by the geometry of space itself.
 
 		\begin{myDef}
-			\textit{(Lebesgue measure)} The \textbf{Lebesgue measure} $\lambda$ is the unique
+			\textit{(Lebesgue measure)} The \emph{Lebesgue measure} $\lambda$ is the unique
 			translation invariant measure on $\mathcal{B}(\mathbb{R}^{n})$ satisfying
 			$\lambda\left(\prod_{j=1}^{n}[a_{j},b_{j}]\right) = \prod_{j=1}^{n}(b_{j}-a_{j})$.
 		\end{myDef}
@@ -489,9 +489,9 @@
 		the domain and it knows nothing whatever about probability.
 
 		It is worth insisting on this separation, because in coherence theory both measures
-		appear at once and they do entirely different jobs. \textbf{The Lebesgue measure records
+		appear at once and they do entirely different jobs. The Lebesgue measure records
 		how long the detector integrated and how large the aperture was; the probability measure
-		records how likely each realisation of the source was.} The time average of a single
+		records how likely each realisation of the source was. The time average of a single
 		beam is an integral against $\lambda$ on the time axis; the ensemble average over
 		realisations is an integral against $P$ on $\Omega$. These are different operations on
 		different spaces, and the fact that they so often agree is not a triviality but a
@@ -511,7 +511,7 @@
 
 		\begin{myDef}
 			\textit{(Probability space)} A \textbf{probability measure} is a measure $P$ with
-			$P(\Omega)=1$. The triple $(\Omega,\mathcal{F},P)$ is called a \textbf{probability
+			$P(\Omega)=1$. The triple $(\Omega,\mathcal{F},P)$ is called a \emph{probability
 			space}.
 		\end{myDef}
 
@@ -520,8 +520,8 @@
 		Countable additivity, read now in $P$, is the statement that mutually exclusive
 		alternatives have probabilities that add.
 
-		Here lies the crucial physical remark of this subsection. \textbf{The probability
-		measure is where the physics of the source resides.} A thermal lamp, a laser and a
+		Here lies the crucial physical remark of this subsection. The probability
+		measure is where the physics of the source resides. A thermal lamp, a laser and a
 		single photon emitter may perfectly well share the same $\Omega$ and the same
 		$\mathcal{F}$, since all three could in principle produce any of the same field
 		histories; what distinguishes them is that they weight those histories differently. To
@@ -533,7 +533,7 @@
 		\begin{myDef}
 			\textit{(Random variable)} Let $(\Omega,\mathcal{F},P)$ be a probability space and
 			$(S,\mathcal{S})$ a measurable space. A map $X:\Omega\to S$ is a
-			\textbf{random variable} if it is \textbf{measurable}, that is, if
+			\textbf{random variable} if it is \emph{measurable}, that is, if
 			\begin{equation}\label{eq:Measurability}
 				X^{-1}(B) = \left\{\omega\in\Omega : X(\omega)\in B\right\}\in\mathcal{F}
 				\qquad\text{for every } B\in\mathcal{S}.
@@ -551,7 +551,7 @@
 		which realisation we are in.
 
 		The second is that the measurability condition \eqref{eq:Measurability} is the
-		mathematical statement that \textbf{the instrument is a legitimate instrument}. It
+		mathematical statement that the instrument is a legitimate instrument. It
 		demands that the question ``did the reading fall inside $B$?'' be one of the admissible
 		questions of $\mathcal{F}$. A non measurable map would be an apparatus that reports an
 		answer to a question the theory refuses to assign a probability to, which is a polite
@@ -562,14 +562,14 @@
 		not $P$ but its image.
 
 		\begin{myDef}
-			\textit{(Law of a random variable)} The \textbf{law} or \textbf{distribution} of $X$
+			\textit{(Law of a random variable)} The \emph{law} or \emph{distribution} of $X$
 			is the probability measure $P_{X}$ on $(S,\mathcal{S})$ defined by the push forward
 			\begin{equation}\label{eq:PushForward}
 				P_{X}(B) = P\left(X^{-1}(B)\right), \qquad B\in\mathcal{S}.
 			\end{equation}
 			If $P_{X}$ is absolutely continuous with respect to the Lebesgue measure, its
 			Radon-Nikodym derivative $p = \mathrm{d}P_{X}/\mathrm{d}\lambda$ is the
-			\textbf{probability density} of $X$.
+			\emph{probability density} of $X$.
 		\end{myDef}
 
 		The law is what a histogram estimates. Two sources built on completely different sample
@@ -578,7 +578,7 @@
 		exactly the $p_{2}$ that was used without apology in \eqref{eq:CorrFunc}.
 
 		\begin{myDef}
-			\textit{(Expectation)} The \textbf{expectation} of an integrable random variable
+			\textit{(Expectation)} The \emph{expectation} of an integrable random variable
 			$X$ is the Lebesgue integral of $X$ over the probability space,
 			\begin{equation}\label{eq:Expectation}
 				E\{X\} = \int_{\Omega}X(\omega)\,\mathrm{d}P(\omega)
@@ -608,8 +608,8 @@
 		\end{equation}
 
 		This is a Hilbert space, and comparing \eqref{eq:L2InnerProduct} with the definition
-		\eqref{eq:CorrFunc} of the correlation function we see that \textbf{the correlation
-		function is an inner product}, not by analogy but literally, in the space of random
+		\eqref{eq:CorrFunc} of the correlation function we see that the correlation
+		function is an inner product, not by analogy but literally, in the space of random
 		variables of finite energy. The dot product with which the previous section began was
 		not an illustrative parallel; it was the same object, waiting for the space to be named.
 		The weight function $W$ of \eqref{eq:ProdIn} has become the measure $P$, and the sum
@@ -629,13 +629,220 @@
 		this is why a degree of coherence larger than unity is not merely unobserved but
 		impossible.
 
+	\subsection{A worked example: the throw of a die}
+
+		Before the machinery is applied to the electromagnetic field it is worth watching it work
+		on the simplest random experiment there is, because every definition of this section has
+		got a perfectly concrete meaning there, and the reader who has seen it once on a die
+		will recognise it later on a light beam. Consider then a single throw of a fair die. The
+		elementary outcomes are the six faces, so the sample space is the finite set
+		\begin{equation}\label{eq:DieSampleSpace}
+			\Omega = \left\{1,2,3,4,5,6\right\}.
+		\end{equation}
+		Since $\Omega$ is finite there are no Vitali monsters to keep out, and we may take as
+		catalogue of questions the collection of \textit{all} its subsets, the power set
+		$\mathcal{F} = 2^{\Omega}$, which contains $2^{6}=64$ events. The statement ``the result
+		is even'' is the event $A = \{2,4,6\}$, the statement ``the result is larger than four''
+		is $B = \{5,6\}$, and the statement ``the result is even and larger than four'' is their
+		intersection $A\cap B = \{6\}$, which is again in $\mathcal{F}$ because, by De Morgan's
+		laws, $A\cap B = \left(A^{c}\cup B^{c}\right)^{c}$ is built from the axioms by two
+		complements and one union.
+
+		The fairness of the die is a physical statement about the cube, its homogeneity and its
+		symmetry, and it is translated into mathematics by the choice of the measure. We demand
+		that the six faces be equally likely, $P(\{k\}) = p$ for $k=1,\dots,6$. Since the six
+		singletons are pairwise disjoint and their union is $\Omega$, countable additivity
+		\eqref{eq:CountableAdditivity} together with the normalisation gives
+		\begin{equation*}
+			1 = P(\Omega) = P\left(\bigcup_{k=1}^{6}\{k\}\right) = \sum_{k=1}^{6}P(\{k\}) = 6p
+			\qquad\Longrightarrow\qquad p = \frac{1}{6},
+		\end{equation*}
+		and then, for an arbitrary event $A$, which is the disjoint union of its own points,
+		\begin{equation}\label{eq:DieMeasure}
+			P(A) = \sum_{k\in A}P(\{k\}) = \frac{|A|}{6},
+		\end{equation}
+		where $|A|$ is the number of elements of $A$. This is the counting measure divided by
+		six, and the classical rule ``favourable cases over possible cases'' is nothing but
+		\eqref{eq:DieMeasure}. In particular $P(A) = 3/6 = 1/2$ and $P(A\cap B) = 1/6$. A loaded
+		die would have exactly the same $\Omega$ and the same $\mathcal{F}$ and a different $P$,
+		which is the remark made above about the thermal lamp and the laser, now in miniature.
+
+		The number printed on the upper face is a random variable $X:\Omega\to\mathbb{R}$,
+		$X(\omega) = \omega$, and with the power set every map is measurable, so there is
+		nothing to check. The interesting situation appears when the observer is \textit{not}
+		allowed to ask every question. Suppose that the die is thrown behind a screen and that
+		an assistant only tells us whether the result was even or odd. The questions we can
+		answer then form the much smaller collection
+		\begin{equation}\label{eq:DieParity}
+			\mathcal{F}_{\text{par}} = \left\{\emptyset,\ \{2,4,6\},\ \{1,3,5\},\ \Omega\right\},
+		\end{equation}
+		which is easily checked to be a sigma algebra: it contains $\Omega$, the complement of
+		each of its members is again a member, and any union of its members is one of the four.
+		With respect to $\mathcal{F}_{\text{par}}$ the face value is no longer a random variable,
+		because
+		\begin{equation*}
+			X^{-1}\left(\{6\}\right) = \left\{\omega\in\Omega : X(\omega) = 6\right\} = \{6\}
+			\notin\mathcal{F}_{\text{par}},
+		\end{equation*}
+		so that the condition \eqref{eq:Measurability} fails for $B=\{6\}$. In words, a
+		device that announces ``six'' cannot be built out of an assistant who only knows the
+		parity; it would answer a question that the available information does not allow to be
+		asked. The parity itself, $Y(\omega) = 1$ if $\omega$ is even and $Y(\omega)=0$
+		otherwise, is perfectly measurable with respect to $\mathcal{F}_{\text{par}}$, since
+		$Y^{-1}(\{1\}) = \{2,4,6\}$ and $Y^{-1}(\{0\}) = \{1,3,5\}$. This is the precise sense
+		in which measurability is the licence of an instrument: a sigma algebra encodes how much
+		an experimenter can resolve, and the observables are exactly the functions that do not
+		demand a finer resolution than that.
+
+		The law of $X$ is obtained from the push forward \eqref{eq:PushForward}. For a Borel set
+		$B\subseteq\mathbb{R}$ we have $X^{-1}(B) = B\cap\Omega$, therefore
+		\begin{equation}\label{eq:DieLaw}
+			P_{X}(B) = \frac{\left|B\cap\{1,\dots,6\}\right|}{6}
+			= \frac{1}{6}\sum_{k=1}^{6}\delta_{k}(B),
+		\end{equation}
+		where $\delta_{k}(B)$ is equal to one when $k\in B$ and to zero otherwise. This measure
+		lives on six points, a set of zero Lebesgue measure, and it is not absolutely
+		continuous with respect to $\lambda$: the interval $[5.9,6.1]$ has probability $1/6$
+		although its length can be made as small as we please by shrinking it around $6$. The
+		die possesses no probability density, and it is the same obstruction that we met for
+		the ideal laser, a law concentrated on a set that the Lebesgue measure does not see.
+
+		The expectation \eqref{eq:Expectation} is an integral against $P$, and on a finite space
+		an integral is a finite sum,
+		\begin{equation*}
+			E\{X\} = \int_{\Omega}X(\omega)\,\mathrm{d}P(\omega) = \sum_{k=1}^{6}k\,P(\{k\})
+			= \frac{1+2+3+4+5+6}{6} = \frac{21}{6} = \frac{7}{2}.
+		\end{equation*}
+		The value $7/2$ is not a possible result of any throw, which makes visible the warning
+		that an average is a property of the measure and not of any single realisation. The
+		second moment and the variance follow in the same way,
+		\begin{equation*}
+			E\left\{X^{2}\right\} = \frac{1+4+9+16+25+36}{6} = \frac{91}{6},
+			\qquad
+			E\left\{X^{2}\right\} - E\{X\}^{2} = \frac{91}{6} - \frac{49}{4}
+			= \frac{182-147}{12} = \frac{35}{12},
+		\end{equation*}
+		and since $E\{X^{2}\}<\infty$ the face value belongs to $L^{2}(\Omega,\mathcal{F},P)$,
+		so that the whole Hilbert space structure \eqref{eq:L2InnerProduct} is available for it.
+
+	\subsection{A worked example: interference with a beam of random phase}
+
+		The second example is closer to the laboratory and was chosen because it contains, in a
+		few lines, the reason why two independent lamps do not produce interference fringes.
+		Consider a fixed point of a screen illuminated by two scalar, monochromatic beams of the
+		same frequency and the same polarisation. The first one is a reference beam of real
+		amplitude $E_{r}>0$ and fixed phase, which we take as the origin of phases. The second
+		one has got real amplitude $E_{0}>0$ and a phase $\varphi$ that is completely
+		uncontrolled, for instance because it comes from a laser whose cavity length drifts by
+		many wavelengths between two measurements. All we know about $\varphi$ is that no value
+		is preferred to any other.
+
+		The elementary outcome is one value of the phase, so the sample space is the interval
+		$\Omega = [0,2\pi)$, and here, unlike the die, we cannot take every subset as an event,
+		so we take the Borel sigma algebra $\mathcal{F} = \mathcal{B}([0,2\pi))$. The statement
+		``no phase is preferred'' fixes the measure: the probability of finding the phase in an
+		interval must depend only on its length and not on its position, which is the
+		translation invariance that defines the Lebesgue measure, and the normalisation then
+		requires
+		\begin{equation}\label{eq:RandomPhaseMeasure}
+			P(A) = \frac{\lambda(A)}{2\pi}, \qquad A\in\mathcal{B}([0,2\pi)).
+		\end{equation}
+		Here, for the first time, both measures of this section appear in the same formula, and
+		the uniform probability is simply the Lebesgue measure normalised. One consequence is
+		worth pointing out at once. A single point has got zero length, so
+		$P(\{\varphi_{0}\}) = 0$ for every $\varphi_{0}$, and yet in every realisation some phase
+		does occur: an event of probability zero is not an impossible event, it is an event
+		whose chance is not detectable by any finite sequence of trials. This is the price of
+		an uncountable $\Omega$ and the reason why probabilities on a continuum are assigned to
+		intervals and never to points.
+
+		The total field on the screen is the random variable
+		\begin{equation}\label{eq:RandomPhaseField}
+			E(\varphi) = E_{r} + E_{0}e^{i\varphi},
+		\end{equation}
+		measurable because it is continuous, and the intensity read by the detector is
+		\begin{equation}\label{eq:RandomPhaseIntensity}
+			\begin{split}
+				I(\varphi) = \left|E(\varphi)\right|^{2}
+				&= \left(E_{r} + E_{0}e^{i\varphi}\right)\left(E_{r} + E_{0}e^{-i\varphi}\right)\\
+				&= E_{r}^{2} + E_{0}^{2} + E_{r}E_{0}\left(e^{i\varphi} + e^{-i\varphi}\right)\\
+				&= I_{0} + V\cos\varphi,
+			\end{split}
+		\end{equation}
+		where we have written $I_{0} = E_{r}^{2}+E_{0}^{2}$ for the sum of the two intensities
+		and $V = 2E_{r}E_{0}$ for the amplitude of the interference term. In every single
+		realisation the interference term is there, untouched, and the reading lies somewhere
+		in the interval $[I_{0}-V,\,I_{0}+V]$.
+
+		The expectation of the intensity can be computed in the two ways allowed by
+		\eqref{eq:Expectation}, and doing both is the best way of seeing that they are one
+		definition. On the sample space, using \eqref{eq:RandomPhaseMeasure},
+		\begin{equation}\label{eq:RandomPhaseMean}
+			E\{I\} = \int_{0}^{2\pi}\left(I_{0} + V\cos\varphi\right)\frac{\mathrm{d}\varphi}{2\pi}
+			= I_{0}\,\frac{2\pi}{2\pi} + \frac{V}{2\pi}\textcolor{red}{\cancel{\int_{0}^{2\pi}\cos\varphi\,\mathrm{d}\varphi}}
+			= I_{0},
+		\end{equation}
+		because the cosine integrates to $\sin 2\pi - \sin 0 = 0$ over a whole period. The
+		interference term has disappeared, and with the same computation the mean of the field
+		itself is $E\{E\} = E_{r} + \frac{E_{0}}{2\pi}\int_{0}^{2\pi}e^{i\varphi}\,\mathrm{d}\varphi = E_{r}$,
+		that is, the random beam contributes nothing to the average amplitude although it
+		contributes the full $E_{0}^{2}$ to the average intensity.
+
+		For the second way we need the law of $I$, which is the push forward of
+		\eqref{eq:RandomPhaseMeasure} by \eqref{eq:RandomPhaseIntensity}, and it is the
+		calculation that best shows the push forward at work. Take $s\in[I_{0}-V,\,I_{0}+V]$ and
+		\textcolor{blue}{introduce the auxiliary variable $u = (s-I_{0})/V\in[-1,1]$}. The
+		distribution function of $I$ is the probability of the event ``the reading does not
+		exceed $s$'', which is the preimage of the half line $(-\infty,s]$,
+		\begin{equation*}
+			F_{I}(s) = P_{I}\left((-\infty,s]\right) = P\left(\left\{\varphi : I_{0} + V\cos\varphi\leq s\right\}\right)
+			= P\left(\left\{\varphi : \cos\varphi\leq u\right\}\right).
+		\end{equation*}
+		On $[0,2\pi)$ the cosine is not larger than $u$ precisely on the interval between
+		$\arccos u$ and $2\pi - \arccos u$, whose length is $2\pi - 2\arccos u$, so by
+		\eqref{eq:RandomPhaseMeasure}
+		\begin{equation*}
+			F_{I}(s) = \frac{2\pi - 2\arccos u}{2\pi} = 1 - \frac{1}{\pi}\arccos\left(\frac{s-I_{0}}{V}\right).
+		\end{equation*}
+		This function is differentiable inside the interval, so the law is absolutely
+		continuous and its density is obtained by the chain rule, with
+		$\frac{\mathrm{d}}{\mathrm{d}u}\arccos u = -1/\sqrt{1-u^{2}}$ and $\mathrm{d}u/\mathrm{d}s = 1/V$,
+		\begin{equation}\label{eq:ArcsineLaw}
+			p_{I}(s) = \frac{\mathrm{d}F_{I}}{\mathrm{d}s}
+			= \frac{1}{\pi}\,\frac{1}{\sqrt{1-u^{2}}}\,\frac{1}{V}
+			= \frac{1}{\pi\sqrt{V^{2}-\left(s-I_{0}\right)^{2}}},
+			\qquad I_{0}-V< s< I_{0}+V,
+		\end{equation}
+		and $p_{I}(s) = 0$ outside. As a check, the substitution $s - I_{0} = V\sin\theta$ gives
+		$\int_{I_{0}-V}^{I_{0}+V}p_{I}(s)\,\mathrm{d}s = \frac{1}{\pi}\int_{-\pi/2}^{\pi/2}\mathrm{d}\theta = 1$,
+		and since \eqref{eq:ArcsineLaw} is symmetric about $I_{0}$ the integral
+		$\int s\,p_{I}(s)\,\mathrm{d}s$ returns $I_{0}$, in agreement with \eqref{eq:RandomPhaseMean}.
+		The two members of \eqref{eq:Expectation} have been computed on two different spaces,
+		$[0,2\pi)$ with the uniform measure and the real line with the arcsine density, and they
+		agree, as they must.
+
+		The physical reading of \eqref{eq:ArcsineLaw} is instructive and somewhat surprising.
+		The density is smallest at the mean value $I_{0}$ and diverges at the two ends of the
+		interval, so if we repeat the experiment many times and draw the histogram of the
+		readings, the detector will most often report values close to a bright fringe or close
+		to a dark fringe, and rarely the average. The reason is that the cosine lingers near its
+		turning points and crosses its zero quickly, so a uniform phase spends more of its
+		measure where $\cos\varphi$ is close to $\pm1$. This leads to the lesson of the example:
+		\textbf{the interference is not destroyed in any single realisation, it is destroyed by
+		the average over the probability measure}. A fast detector that reads one realisation
+		at a time sees fringes whose position wanders from shot to shot; an observer who averages
+		over many realisations sees the flat intensity $I_{0} = E_{r}^{2}+E_{0}^{2}$, the plain sum of the
+		intensities of two incoherent beams. Whether the averaging is done over the ensemble, as here, or over the
+		response time of a slow detector, as in the chapter on interference, is precisely the
+		question of ergodicity to which we return at the end of this section.
+
 	\subsection{Stochastic processes}
 
 		A single random variable describes the field at one point of spacetime. To describe it
 		everywhere at once we need a family.
 
 		\begin{myDef}
-			\textit{(Stochastic process)} Let $T$ be an index set. A \textbf{stochastic
+			\textit{(Stochastic process)} Let $T$ be an index set. A \emph{stochastic
 			process} is a family $\{X_{\tau}\}_{\tau\in T}$ of random variables defined on a
 			common probability space $(\Omega,\mathcal{F},P)$, equivalently a map
 			$X:T\times\Omega\to S$ such that $X(\tau,\cdot)$ is measurable for every $\tau\in T$.
@@ -646,7 +853,7 @@
 		$\omega$ vary, we obtain a random variable: a \textit{vertical} slice through
 		Figure~\ref{fig:randomvar}, comparing all realisations at one instant. If instead we fix
 		$\omega$ and let $\tau$ vary, we obtain a single function of the index, called a
-		\textbf{sample path} or \textbf{realisation}: a \textit{horizontal} slice, that is, one
+		\emph{sample path} or \emph{realisation}: a \textit{horizontal} slice, that is, one
 		of the individual curves of the figure. The experimentalist observes horizontal slices
 		and the theory speaks about vertical ones, and reconciling the two is the central
 		practical problem of statistical optics.
@@ -660,15 +867,15 @@
 		field is a complex, three component object, the analytic signal
 		$\vec{\mathcal{E}} = (\mathcal{E}_{x},\mathcal{E}_{y},\mathcal{E}_{z})$.
 
-		\textbf{The sample space.} We take
+		\textit{The sample space.} We take
 
 		\begin{equation}\label{eq:FieldSampleSpace}
 			\Omega = \left\{\omega : D\to\mathbb{C}^{3} \;\middle|\; \omega \text{ satisfies Maxwell's equations in } D\right\},
 		\end{equation}
 		that is, the set of admissible field histories. The restriction is essential and it is
 		physical: nature does not select arbitrary functions of spacetime but only those
-		compatible with the dynamics. \textbf{Randomness enters through the sources and never
-		through the propagation}, which remains exactly as deterministic as it was in the
+		compatible with the dynamics. Randomness enters through the sources and never
+		through the propagation, which remains exactly as deterministic as it was in the
 		previous chapters. A probability measure on an optical field is a measure on the
 		solution space of Maxwell's equations, and this is why, as we shall see in a later
 		subsection, coherence itself obeys a wave equation.
@@ -685,7 +892,7 @@
 		is a $\mathbb{C}^{3}$ valued random variable. The whole field is the stochastic process
 		indexed by $T = D\times\{x,y,z\}$.
 
-		\textbf{The sigma algebra.} We equip $\Omega$ with the \textbf{cylinder sigma algebra}
+		\textit{The sigma algebra.} We equip $\Omega$ with the \emph{cylinder sigma algebra}
 		$\mathcal{F}$, generated by the sets
 
 		\begin{equation}\label{eq:CylinderSets}
@@ -695,16 +902,16 @@
 		for every finite collection of spacetime points and every Borel set $B$.
 
 		The physical reading of \eqref{eq:CylinderSets} is the most important remark of this
-		section. \textbf{A cylinder set is exactly a statement that can be checked by placing a
+		section. A cylinder set is exactly a statement that can be checked by placing a
 		finite number of detectors at a finite number of spacetime points and looking at their
-		readings.} No experiment has ever measured a field everywhere; every experiment samples
+		readings. No experiment has ever measured a field everywhere; every experiment samples
 		it at finitely many places and finitely many instants. The sigma algebra generated by
 		the cylinder sets is therefore the collection of all statements decidable by countable
 		sequences of finite measurements, which is to say, the collection of all statements an
 		optical experiment can ever settle. The cylinder construction is not a mathematical
 		convenience, it is the transcription of experimental practice.
 
-		\textbf{The probability measure.} It remains to place a measure on this enormous space,
+		\textit{The probability measure.} It remains to place a measure on this enormous space,
 		and it would be hopeless to attempt it directly. Kolmogorov's extension theorem
 		\citep{kolmogorov1933grundbegriffe} shows that it is unnecessary.
 
@@ -717,8 +924,8 @@
 			$\mathcal{F}$ whose finite dimensional marginals are the given ones.
 		\end{myteo}
 
-		The physical content is emancipating. \textbf{To specify a source it is enough to
-		specify the joint statistics of any finite set of detector readings}, and this is
+		The physical content is emancipating. To specify a source it is enough to
+		specify the joint statistics of any finite set of detector readings, and this is
 		precisely the data that an experiment can access. We never have to say what $P$ does to
 		the monstrous space of all field histories; we say what the joint distribution of two
 		detectors is, and of three, and so on, taking care only that these prescriptions do not
@@ -726,7 +933,7 @@
 		consistent object. The probability space of an optical field is built out of exactly the
 		information a laboratory can supply.
 
-		\textbf{The finite energy hypothesis.} We assume finally that
+		\textit{The finite energy hypothesis.} We assume finally that
 
 		\begin{equation}\label{eq:FiniteEnergy}
 			E\left\{\left|\mathcal{E}_{j}(\vec{r},t)\right|^{2}\right\}<\infty
@@ -739,7 +946,7 @@
 		spacetime is a vector in one and the same Hilbert space, and the geometry of that space
 		is the geometry of coherence.
 
-		\textbf{The coherence tensor.} We may now define, with every symbol having been given a
+		\textit{The coherence tensor.} We may now define, with every symbol having been given a
 		meaning, the object that the rest of this chapter studies. For two spacetime points and
 		two Cartesian components,
 
@@ -753,14 +960,14 @@
 		from the construction.
 
 		\begin{enumerate}
-			\item \textbf{Hermitian symmetry.} Exchanging the two points and the two indices and
+			\item \textit{Hermitian symmetry.} Exchanging the two points and the two indices and
 			conjugating,
 			\begin{equation}\label{eq:GammaHermitian}
 				\Gamma_{kj}^{*}(\vec{r}\,',t';\vec{r},t) = E\left\{\mathcal{E}_{k}^{*}(\vec{r}\,',t')\,\mathcal{E}_{j}(\vec{r},t)\right\} = \Gamma_{jk}(\vec{r},t;\vec{r}\,',t'),
 			\end{equation}
 			since conjugation may be taken inside the expectation, which is an integral of a
 			complex function.
-			\item \textbf{Non negative definiteness.} For any finite set of spacetime points
+			\item \textit{Non negative definiteness.} For any finite set of spacetime points
 			labelled by $m$ and any complex coefficients $a_{j}^{(m)}$,
 			\begin{equation}\label{eq:GammaPositive}
 				\sum_{m,n}\sum_{j,k}a_{j}^{(m)}a_{k}^{(n)*}\,\Gamma_{jk}(m;n)
@@ -769,7 +976,7 @@
 			because the expectation of a non negative quantity is non negative. Physically this
 			says that no superposition of field components, at whatever points, can carry
 			negative intensity.
-			\item \textbf{Bounded correlation.} By \eqref{eq:CauchySchwarzProb},
+			\item \textit{Bounded correlation.} By \eqref{eq:CauchySchwarzProb},
 			\begin{equation}\label{eq:GammaBound}
 				\left|\Gamma_{jk}(\vec{r},t;\vec{r}\,',t')\right|^{2} \leq \Gamma_{jj}(\vec{r},t;\vec{r},t)\;\Gamma_{kk}(\vec{r}\,',t';\vec{r}\,',t'),
 			\end{equation}
@@ -782,8 +989,8 @@
 		intensity carried by each Cartesian component while the off diagonal entries measure the
 		correlation between components, and the resulting matrix is exactly the polarisation
 		matrix \eqref{eq:CoherenceMatrix} introduced in the chapter on polarisation.
-		\textbf{Polarisation is coherence between the components of the field at one point;
-		coherence proper is correlation between the field at different points.} They are the
+		Polarisation is coherence between the components of the field at one point;
+		coherence proper is correlation between the field at different points. They are the
 		same tensor read in two different regimes, which is the reason a unified treatment of
 		coherence and polarisation is possible at all \citep{wolf2007introduction}.
 
@@ -890,7 +1097,7 @@
 	time translations. This condition manifests in different degrees:
 
 	\begin{enumerate}
-		\item \textbf{Strict (strong) stationarity}: the most demanding form of stationarity requires that all joint probability distributions be time-invariant:
+		\item \textit{Strict (strong) stationarity}: the most demanding form of stationarity requires that all joint probability distributions be time-invariant:
 
 		\begin{equation}
 			F_X(x_{t_1+\tau}, \ldots, x_{t_k+\tau}) = F_X(x_{t_1}, \ldots, x_{t_k}) \quad \forall \tau, k, t_i,
@@ -902,7 +1109,7 @@
 			\item it is a sufficient but not necessary condition for ARMA models.
 		\end{itemize}
 
-		\item \textbf{Weak (second-order) stationarity}: more practical in applications, it only requires invariance of the first two moments:
+		\item \textit{Weak (second-order) stationarity}: more practical in applications, it only requires invariance of the first two moments:
 		\begin{equation}
 			\begin{cases}
 				\mathbb{E}[X_t] = \mu \quad (\text{constant}) \quad \forall t \\
@@ -912,7 +1119,7 @@
 		\end{equation}
 		This is the definition used in most econometric models (ARIMA, GARCH) and in the WienerKhinchin spectral analysis (which we shall use later).
 
-		\item \textbf{Trend stationarity (deterministic stationarity)}: a non-stationary process that can be made stationary by removing deterministic components:
+		\item \textit{Trend stationarity (deterministic stationarity)}: a non-stationary process that can be made stationary by removing deterministic components:
 		\begin{equation}
 			X_t = \alpha + \beta t + \epsilon_t,
 		\end{equation}
@@ -930,7 +1137,7 @@
 	gives rise to an explicit dependence on the time difference $\tau$ in the ensemble average.
 
 	It is worth asking: how necessary is it to analyse the ensemble average; why not take the
-	temporal average? Answering this is \textbf{very complicated}, since it touches on the
+	temporal average? Answering this is \emph{very complicated}, since it touches on the
 	problem of \textit{ergodicity}. Ergodicity, in the sense of ergodic theory, requires that
 	a dynamical system satisfy that the temporal averages coincide with the spatial averages
 	for almost every initial condition. Its rigorous proof is highly non-trivial, to the point
@@ -1095,7 +1302,7 @@
 	\subsection{The wave equation of coherence}
 
 		Let us step a little out of the comfort zone and understand how correlations propagate
-		through space and time. Let $\mathcal{E}^{(r)}(\vec{r},t)$ be some \textbf{real} component
+		through space and time. Let $\mathcal{E}^{(r)}(\vec{r},t)$ be some \emph{real} component
 		of the electric field, viewed as a random signal. As is well known from classical
 		electromagnetic theory, it obeys Maxwell's equations and therefore has an associated wave
 		equation, namely

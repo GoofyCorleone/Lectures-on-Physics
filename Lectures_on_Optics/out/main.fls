@@ -2,7 +2,7 @@ PWD /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_on_Optics
 INPUT /usr/local/texlive/2026/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/jafertserrano/Desktop/U/Lectures-on-Physics/Lectures_on_Optics/main.tex
+INPUT main.tex
 OUTPUT out/main.log
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
@@ -372,7 +372,6 @@ INPUT ./Chapter 2/Figures/Prism.pdf
 INPUT ./Chapter 2/Figures/Prism.pdf
 INPUT ./Chapter 2/Figures/Prism.pdf
 INPUT ./Chapter 2/Figures/Prism.pdf
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbi1095.tfm
 INPUT ./Chapter 2/Figures/OpticalSystem_1.pdf
 INPUT ./Chapter 2/Figures/OpticalSystem_1.pdf
 INPUT ./Chapter 2/Figures/OpticalSystem_1.pdf
@@ -419,6 +418,7 @@ INPUT ./Chapter 2/Figures/Stigmatism.pdf
 INPUT ./Chapter 2/Figures/Stigmatism.pdf
 INPUT ./Chapter 2/Figures/Stigmatism.pdf
 INPUT ./Chapter 2/Figures/Stigmatism.pdf
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbi1095.tfm
 INPUT ./Chapter 2/Figures/AlmostOvoid.pdf
 INPUT ./Chapter 2/Figures/AlmostOvoid.pdf
 INPUT ./Chapter 2/Figures/AlmostOvoid.pdf

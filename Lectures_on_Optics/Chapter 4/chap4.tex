@@ -84,9 +84,9 @@
         & \left\langle \left|\left|\vec{E}(\vec{r},t) \right|\right|^2\right\rangle = \left|\left|\vec{E}_1(\vec{r})\right|\right|^2 + \left|\left|\vec{E}_2(\vec{r})\right|\right|^2 + 2 Re\left\{ \vec{E}_1^*(\vec{r})\cdot\vec{E}_2(\vec{r}) \left\langle e^{-i(\omega_1-\omega_2)t} \right\rangle \right\}.
     \end{align*}
 
-    The first two terms corresponds to \textbf{the total field intensity} and the third terms is called \textbf{the interference term}because it contains the interaction of both fields.
+    The first two terms corresponds to \emph{the total field intensity} and the third terms is called \textbf{the interference term}because it contains the interaction of both fields.
 
-    From a mathematical point of view, to make the interaction non zero, both frequencies must be the same $\omega_1=\omega_2$, this, like most books say, should imply that the interference only ocurrs with two sources with the same frequency or on identical photons but, this is not completely correct. The frequency-difference exponential $\exp\left(-i \left[\omega_1 - \omega_2 \right]t\right)$ is, in general, not zero, so \textbf{there are a lot ultrafast oscillations and interferences} what we see, and what we detected using measuring instruments is the time average, and in average, these are zero.
+    From a mathematical point of view, to make the interaction non zero, both frequencies must be the same $\omega_1=\omega_2$, this, like most books say, should imply that the interference only ocurrs with two sources with the same frequency or on identical photons but, this is not completely correct. The frequency-difference exponential $\exp\left(-i \left[\omega_1 - \omega_2 \right]t\right)$ is, in general, not zero, so there are a lot ultrafast oscillations and interferences what we see, and what we detected using measuring instruments is the time average, and in average, these are zero.
 
     Before going further, lets define the field intensisties as
     \begin{align}
@@ -103,12 +103,12 @@
         I = I_1 + I_2 + 2Re\left\{\left(\hat{e}^*_1\cdot \hat{e}_2\right)e^{i\triangle\phi (\vec{r})} \right\} \underbrace{E_1(\vec{r})E_2(\vec{r})}_{\left(I_1I_2\right)^{1/2}}.
     \end{equation}
 
-    The functional $\triangle\phi = \phi_2(\vec{r}) - \phi_1(\vec{r})$ is known as the phase-difference of the waves. The intereference term is zero if the \textbf{polarisations are orthogonal} this means $\hat{e}^*_1\cdot\hat{e}_2 = 0$. Without any loss of generality an only for mathematical convenience\footnote{In fact, the polarisation here is only an contrast modulator, however, when we study the spatial coherence, the polarisation is even more important and conditionates the behavior of the interference.} we're going to consider both sources have got the same polarisation, this means $\hat{e}_1 = \hat{e}_2 \rightarrow \hat{e}_1^* \cdot \hat{e}_1 = 1$. Thus, the total intensity becomes
+    The functional $\triangle\phi = \phi_2(\vec{r}) - \phi_1(\vec{r})$ is known as the phase-difference of the waves. The intereference term is zero if the \emph{polarisations are orthogonal} this means $\hat{e}^*_1\cdot\hat{e}_2 = 0$. Without any loss of generality an only for mathematical convenience\footnote{In fact, the polarisation here is only an contrast modulator, however, when we study the spatial coherence, the polarisation is even more important and conditionates the behavior of the interference.} we're going to consider both sources have got the same polarisation, this means $\hat{e}_1 = \hat{e}_2 \rightarrow \hat{e}_1^* \cdot \hat{e}_1 = 1$. Thus, the total intensity becomes
     \begin{equation}\label{eq:GenInterferenceTerm}
         I = I_1 + I_2 + 2\left(I_1 I_2\right)^{1/2} \cos\triangle\phi = \left(I_1 + I_2\right)\left(1 + 2\frac{\left(I_1I_2\right)^{1/2}}{I_1+I_2}\cos\triangle\phi\right).
     \end{equation}
 
-    The equation \ref{eq:GenInterferenceTerm} is the our most general expression for the interference. Lets notice that the intereference terms is composed in two parts: the first one is a relation between the two intensities $I_1,I_2$ and the second one only depends of the phase-difference of the two sources by a cosine, then, \textbf{the real interference becomes in the phases not in the intensities}, the first terms only \textbf{modulates the visibility} of the interference, and we then can call it $\mathcal{V}$ and write it as
+    The equation \ref{eq:GenInterferenceTerm} is the our most general expression for the interference. Lets notice that the intereference terms is composed in two parts: the first one is a relation between the two intensities $I_1,I_2$ and the second one only depends of the phase-difference of the two sources by a cosine, then, the real interference becomes in the phases not in the intensities, the first terms only \emph{modulates the visibility} of the interference, and we then can call it $\mathcal{V}$ and write it as
     \begin{align}
         & \mathcal{V} = 2 \frac{\left(I_1 I_2\right)^{1/2}}{I_1+ I_2} = \frac{I_{max} - I_{min}}{I_{max} + I_{min}},\\
         & I_{min} = \left(I_1^{1/2} - I_2^{1/2} \right)^2, \quad I_{max} = \left(I_1^{1/2} + I_2^{1/2} \right)^2,
@@ -202,7 +202,7 @@
         \begin{equation}
             I = 2I_0 \left\{1 + \cos\left[\kappa \left(r_2-r_1\right) + \triangle\varphi \right]\right\},
         \end{equation}
-        before going further, see that the \textbf{surfaces of equal intensity $\mathbf{r_2-r_1}=cte$ are hyperboloids with focii in $\mathcal{S}_1,\mathcal{S}_2$}.
+        before going further, see that the surfaces of equal intensity $\mathbf{r_2-r_1}=cte$ are hyperboloids with focii in $\mathcal{S}_1,\mathcal{S}_2$.
 
         In a plane parallel to $\overline{\mathcal{S}_1\mathcal{S}_2}$ at a distance $z=D$ two hyperbolids are produced. For $r_1 \approx r_2$ and $D \gg a$ this hiperboloids are practically planes. Therefore
 
@@ -258,7 +258,7 @@
         \begin{equation}
             \left\langle \left|\left|\vec{E}\right|\right|^2 \right\rangle = I_1 + I_2 + 2\,\text{Re}\left\{ \vec{E}_1^*\cdot\vec{E}_2\, \left\langle e^{-i(\omega_1-\omega_2)t} \right\rangle \right\}.
         \end{equation}
-        The average $\left\langle e^{-i(\omega_1-\omega_2)t} \right\rangle$ vanishes for any detector whose integration time $T$ satisfies $|\omega_1-\omega_2|T \gg 1$, so the interference term survives only when $\omega_1 = \omega_2 = \omega$. This first condition is \textbf{temporal, not geometric}, and the statement grants it by declaring both waves monochromatic and of the same nature. Its immediate translation to the space of wave number vectors, in a homogeneous and isotropic medium of index $n$, is
+        The average $\left\langle e^{-i(\omega_1-\omega_2)t} \right\rangle$ vanishes for any detector whose integration time $T$ satisfies $|\omega_1-\omega_2|T \gg 1$, so the interference term survives only when $\omega_1 = \omega_2 = \omega$. This first condition is \emph{temporal, not geometric}, and the statement grants it by declaring both waves monochromatic and of the same nature. Its immediate translation to the space of wave number vectors, in a homogeneous and isotropic medium of index $n$, is
         \begin{equation}\label{eq:P1modules}
             \left|\left|\vec{k}_1\right|\right| = \left|\left|\vec{k}_2\right|\right| = \kappa = \frac{n\omega}{c} = \frac{2\pi}{\lambda}.
         \end{equation}
@@ -689,7 +689,7 @@
 
         Everything that remains is to let the two equivalent sources interfere, and since the machinery for that was built in the first half of this chapter the work is short. We treat the two cases in turn.
 
-        Consider first the case in which the instrument is illuminated by \textbf{plane waves}, which is what happens when the source is placed at the focus of a collimating lens or, equivalently, when it is pushed to infinity. There are then no point sources to speak of, but the method of images applies just as well to the direction of propagation as to the position of the source, because the reflection of a wave vector in a plane obeys the very same operator \ref{eq:MichReflectOp} with the point $\vec{P}$ removed, that is $\vec{k} \to \vec{k} - 2\left(\vec{k}\cdot\hat{n}\right)\hat{n}$. Let the wave arrive along the first arm, $\vec{k} = \kappa\hat{x}$. In the first arm it is reflected in $M_1$, for which $\vec{k}\cdot\hat{n}_1 = \kappa\cos\theta$ and therefore
+        Consider first the case in which the instrument is illuminated by \emph{plane waves}, which is what happens when the source is placed at the focus of a collimating lens or, equivalently, when it is pushed to infinity. There are then no point sources to speak of, but the method of images applies just as well to the direction of propagation as to the position of the source, because the reflection of a wave vector in a plane obeys the very same operator \ref{eq:MichReflectOp} with the point $\vec{P}$ removed, that is $\vec{k} \to \vec{k} - 2\left(\vec{k}\cdot\hat{n}\right)\hat{n}$. Let the wave arrive along the first arm, $\vec{k} = \kappa\hat{x}$. In the first arm it is reflected in $M_1$, for which $\vec{k}\cdot\hat{n}_1 = \kappa\cos\theta$ and therefore
 
         \begin{equation*}
             \vec{k} \longrightarrow \kappa\left(1-2\cos^{2}\theta,\;-2\sin\theta\cos\theta\right) = -\kappa\left(\cos 2\theta,\;\sin 2\theta\right),
@@ -731,7 +731,7 @@
         \end{equation}
         where $X$ is measured on the observation plane along the direction of $\vec{K}$, the term $4\pi(\ell_1-\ell_2)/\lambda$ is the phase accumulated by the difference $2(\ell_1-\ell_2)$ of the two optical paths on the axis, and $\delta_B$ is the phase introduced by the splitter itself, equal to $\pi$ for a symmetric beamsplitter, which is what makes the two output ports of the instrument complementary and conserves the energy between them. The behaviour of \ref{eq:MichLambdaPlane} is the expected one, since aligning the mirrors sends $\theta+\phi \to 0$ and therefore $\Lambda \to \infty$, the fringes widening without limit until the whole field is uniformly bright or uniformly dark according to the value of the arm difference, which is exactly what one observes when a Michelson interferometer is well aligned under collimated illumination.
 
-        Consider now the case of \textbf{spherical waves}, that is, of a genuine point source at a finite distance, which is the case the whole image construction was built for. The instrument has been replaced by the two mutually coherent point sources $\mathcal{S}_1$ and $\mathcal{S}_2$ of \ref{eq:MichFinal1} and \ref{eq:MichFinal2}, and we observe the light on a screen placed perpendicular to the output axis at a distance $D$ below the beamsplitter, with coordinates $X$ in the plane of the figure and $Z$ perpendicular to it. Writing $\mathcal{S}_j = (X_j, Y_j)$ the distances from each source to a point of the screen are
+        Consider now the case of \emph{spherical waves}, that is, of a genuine point source at a finite distance, which is the case the whole image construction was built for. The instrument has been replaced by the two mutually coherent point sources $\mathcal{S}_1$ and $\mathcal{S}_2$ of \ref{eq:MichFinal1} and \ref{eq:MichFinal2}, and we observe the light on a screen placed perpendicular to the output axis at a distance $D$ below the beamsplitter, with coordinates $X$ in the plane of the figure and $Z$ perpendicular to it. Writing $\mathcal{S}_j = (X_j, Y_j)$ the distances from each source to a point of the screen are
 
         \begin{equation*}
             r_j = \left[\left(X-X_j\right)^{2} + Z^{2} + \left(D+Y_j\right)^{2}\right]^{1/2},
