@@ -960,14 +960,14 @@
 		from the construction.
 
 		\begin{enumerate}
-			\item \textit{Hermitian symmetry.} Exchanging the two points and the two indices and
+			\item Hermitian symmetry: exchanging the two points and the two indices and
 			conjugating,
 			\begin{equation}\label{eq:GammaHermitian}
 				\Gamma_{kj}^{*}(\vec{r}\,',t';\vec{r},t) = E\left\{\mathcal{E}_{k}^{*}(\vec{r}\,',t')\,\mathcal{E}_{j}(\vec{r},t)\right\} = \Gamma_{jk}(\vec{r},t;\vec{r}\,',t'),
 			\end{equation}
 			since conjugation may be taken inside the expectation, which is an integral of a
 			complex function.
-			\item \textit{Non negative definiteness.} For any finite set of spacetime points
+			\item Non negative definiteness: for any finite set of spacetime points
 			labelled by $m$ and any complex coefficients $a_{j}^{(m)}$,
 			\begin{equation}\label{eq:GammaPositive}
 				\sum_{m,n}\sum_{j,k}a_{j}^{(m)}a_{k}^{(n)*}\,\Gamma_{jk}(m;n)
@@ -976,7 +976,7 @@
 			because the expectation of a non negative quantity is non negative. Physically this
 			says that no superposition of field components, at whatever points, can carry
 			negative intensity.
-			\item \textit{Bounded correlation.} By \eqref{eq:CauchySchwarzProb},
+			\item Bounded correlation: by \eqref{eq:CauchySchwarzProb},
 			\begin{equation}\label{eq:GammaBound}
 				\left|\Gamma_{jk}(\vec{r},t;\vec{r}\,',t')\right|^{2} \leq \Gamma_{jj}(\vec{r},t;\vec{r},t)\;\Gamma_{kk}(\vec{r}\,',t';\vec{r}\,',t'),
 			\end{equation}
@@ -1097,7 +1097,7 @@
 	time translations. This condition manifests in different degrees:
 
 	\begin{enumerate}
-		\item \textit{Strict (strong) stationarity}: the most demanding form of stationarity requires that all joint probability distributions be time-invariant:
+		\item Strict (strong) stationarity: the most demanding form of stationarity requires that all joint probability distributions be time-invariant:
 
 		\begin{equation}
 			F_X(x_{t_1+\tau}, \ldots, x_{t_k+\tau}) = F_X(x_{t_1}, \ldots, x_{t_k}) \quad \forall \tau, k, t_i,
@@ -1109,7 +1109,7 @@
 			\item it is a sufficient but not necessary condition for ARMA models.
 		\end{itemize}
 
-		\item \textit{Weak (second-order) stationarity}: more practical in applications, it only requires invariance of the first two moments:
+		\item Weak (second-order) stationarity: more practical in applications, it only requires invariance of the first two moments:
 		\begin{equation}
 			\begin{cases}
 				\mathbb{E}[X_t] = \mu \quad (\text{constant}) \quad \forall t \\
@@ -1119,7 +1119,7 @@
 		\end{equation}
 		This is the definition used in most econometric models (ARIMA, GARCH) and in the WienerKhinchin spectral analysis (which we shall use later).
 
-		\item \textit{Trend stationarity (deterministic stationarity)}: a non-stationary process that can be made stationary by removing deterministic components:
+		\item Trend stationarity (deterministic stationarity): a non-stationary process that can be made stationary by removing deterministic components:
 		\begin{equation}
 			X_t = \alpha + \beta t + \epsilon_t,
 		\end{equation}
