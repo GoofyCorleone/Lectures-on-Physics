@@ -516,7 +516,7 @@
                 \textit{(Characteristic polarisation angles)}: We define the two characteristic polarisation angles as the orientation angle $-\pi \leq \alpha \leq \pi$ which describes how orientated is the ellipse respect to the horizontal axis, and the elipticity angle $-\pi/2 \leq \chi \leq \pi/2$ which describes completily the form of the ellipse.
             \end{myDef}
 
-            \textit{How can we translate the Jones spinor with characteristic angles?} To do this, lets remind that without any loss of generality we can say the Jones spinor is unitary $(\hat{e}\cdot\hat{e}=1)$ and lets consider the following phases $\phi_1 =0$ and $\phi_2 = \pi/2$ and we'll have a polarization elllipse as in shown in \ref{fig:EllipPolBase}.
+            How can we translate the Jones spinor with characteristic angles? To do this, lets remind that without any loss of generality we can say the Jones spinor is unitary $(\hat{e}\cdot\hat{e}=1)$ and lets consider the following phases $\phi_1 =0$ and $\phi_2 = \pi/2$ and we'll have a polarization elllipse as in shown in \ref{fig:EllipPolBase}.
 
             \begin{figure}[ht]
                 \centering
@@ -593,7 +593,7 @@
             \end{equation}
             Every state below is obtained by feeding a particular $\vec{e}$ into the system \ref{eq:AlphaChiSystem} and solving for $\alpha,\chi$ inside their allowed ranges $-\pi\leq\alpha\leq\pi$ and $-\pi/2\leq\chi\leq\pi/2$.
 
-            \textit{Horizontal linear polarisation.} The field only oscillates along the $x$ axis, so the second component of the spinor must vanish, $\mathcal{E}_2=0,\mathcal{E}_1=1$. A common phase multiplying the whole spinor has got no physical meaning, since it is only a redefinition of the origin of time, so we are free to set $\phi_1=0$; the phase $\phi_2$ plays no role at all because it multiplies a null amplitude. The normalised spinor is
+            For horizontal linear polarisation the field only oscillates along the $x$ axis, so the second component of the spinor must vanish, $\mathcal{E}_2=0,\mathcal{E}_1=1$. A common phase multiplying the whole spinor has got no physical meaning, since it is only a redefinition of the origin of time, so we are free to set $\phi_1=0$; the phase $\phi_2$ plays no role at all because it multiplies a null amplitude. The normalised spinor is
             \begin{equation}\label{eq:JonesHoriz}
                 \vec{e}_H = \begin{bmatrix}1\\0\end{bmatrix}, \qquad \phi_1=0,\quad \mathcal{E}_2=0.
             \end{equation}
@@ -602,7 +602,7 @@
                 \boxed{\alpha=0,\qquad \chi=0} \qquad\Longrightarrow\qquad \ket{0;0}=\begin{bmatrix}1\\0\end{bmatrix}.
             \end{equation}
 
-            \textit{Vertical linear polarisation.} By the same argument, now the field only oscillates along $y$, so $\mathcal{E}_1=0,\mathcal{E}_2=1$ and we set $\phi_2=0$ (again, $\phi_1$ is irrelevant),
+            For vertical linear polarisation, by the same argument, now the field only oscillates along $y$, so $\mathcal{E}_1=0,\mathcal{E}_2=1$ and we set $\phi_2=0$ (again, $\phi_1$ is irrelevant),
             \begin{equation}\label{eq:JonesVert}
                 \vec{e}_V = \begin{bmatrix}0\\1\end{bmatrix}, \qquad \phi_2=0,\quad \mathcal{E}_1=0.
             \end{equation}
@@ -611,7 +611,7 @@
                 \boxed{\alpha=\frac{\pi}{2},\qquad \chi=0} \qquad\Longrightarrow\qquad \ket{\pi/2;0}=\begin{bmatrix}0\\1\end{bmatrix}.
             \end{equation}
 
-            \textit{Diagonal linear polarisation, at $\pi/4$ from the horizontal.} Now both components carry the same amplitude, $\mathcal{E}_1=\mathcal{E}_2=1/\sqrt{2}$, and, this being the new ingredient, they also share the same phase, $\phi_1=\phi_2=0$, so that $\triangle\phi=\phi_1-\phi_2=0$ and
+            For diagonal linear polarisation, at $\pi/4$ from the horizontal, both components now carry the same amplitude, $\mathcal{E}_1=\mathcal{E}_2=1/\sqrt{2}$, and, this being the new ingredient, they also share the same phase, $\phi_1=\phi_2=0$, so that $\triangle\phi=\phi_1-\phi_2=0$ and
             \begin{equation}\label{eq:JonesDiag}
                 \vec{e}_{D} = \frac{1}{\sqrt{2}}\begin{bmatrix}1\\1\end{bmatrix}, \qquad \phi_1=\phi_2=0.
             \end{equation}
@@ -620,7 +620,7 @@
                 \boxed{\alpha=\frac{\pi}{4},\qquad \chi=0}.
             \end{equation}
 
-            \textit{Antidiagonal linear polarisation, at $-\pi/4$ from the horizontal.} The amplitudes are the same as in the diagonal case, but now the two components oscillate in opposition, $\phi_1=0,\phi_2=\pi$, so that $e^{i\phi_2}=-1$, $\triangle\phi=-\pi$, and
+            For antidiagonal linear polarisation, at $-\pi/4$ from the horizontal, the amplitudes are the same as in the diagonal case, but now the two components oscillate in opposition, $\phi_1=0,\phi_2=\pi$, so that $e^{i\phi_2}=-1$, $\triangle\phi=-\pi$, and
             \begin{equation}\label{eq:JonesAntiDiag}
                 \vec{e}_{A} = \frac{1}{\sqrt{2}}\begin{bmatrix}1\\-1\end{bmatrix}, \qquad \phi_1=0,\quad\phi_2=\pi.
             \end{equation}
@@ -630,7 +630,7 @@
             \end{equation}
             It is worth pausing on the four linear states \ref{eq:HorizAngles}, \ref{eq:VertAngles}, \ref{eq:DiagAngles} and \ref{eq:AntiDiagAngles}: all of them share $\chi=0$, and this is not a coincidence, since the ellipticity angle measures how far the ellipse has departed from a straight segment, and every linear state is nothing but a degenerate ellipse of zero ellipticity. The orientation angle $\alpha$ is the only one that changes from state to state, and it does exactly what its name promises, it tells us the tilt of that segment with respect to the $x$ axis.
 
-            \textit{Circular polarisations.} We now ask for the opposite extreme, the states in which the two orthogonal oscillations have got the same amplitude, $\mathcal{E}_1=\mathcal{E}_2=1/\sqrt2$, but are shifted by a quarter of a cycle rather than being in phase or in opposition, $\phi_1=0,\phi_2=\mp\pi/2$, so that $e^{i\phi_2}=\pm i$, $\triangle\phi=\pm\pi/2$, and
+            We now ask for the opposite extreme, the circular polarisations, that is, the states in which the two orthogonal oscillations have got the same amplitude, $\mathcal{E}_1=\mathcal{E}_2=1/\sqrt2$, but are shifted by a quarter of a cycle rather than being in phase or in opposition, $\phi_1=0,\phi_2=\mp\pi/2$, so that $e^{i\phi_2}=\pm i$, $\triangle\phi=\pm\pi/2$, and
             \begin{equation}\label{eq:JonesCirc}
                 \vec{e}_{\pm} = \frac{1}{\sqrt2}\begin{bmatrix}1\\ \pm i\end{bmatrix}, \qquad \phi_1=0,\quad\phi_2=\mp\frac{\pi}{2}.
             \end{equation}

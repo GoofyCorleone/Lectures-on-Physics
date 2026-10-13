@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex out/main"] 1791865414.79487 "out/main.aux" "out/main.bbl" "out/main" 1791865416.75184 0
+["bibtex out/main"] 1791865414.79487 "out/main.aux" "out/main.bbl" "out/main" 1791865710.26485 0
   "./references.bib" 1788627160.62653 30563 57ba3bb1ba675ae7d58c83a683dfc730 ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "out/main.aux" 1791865416.49273 140848 ab3320d2c8cda9249f2bef9c7d96cb09 "pdflatex"
+  "out/main.aux" 1791865710.00436 140848 ab3320d2c8cda9249f2bef9c7d96cb09 "pdflatex"
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1791865414.86439 "main.tex" "out/main.pdf" "main" 1791865416.7521 0
+["pdflatex"] 1791865708.13983 "main.tex" "out/main.pdf" "main" 1791865710.2651 0
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -286,7 +286,7 @@
   "Chapter 3/Figures/QuarterWavePlate.pdf" 1788059544.28173 70115 45f0a0a7c223f40a0a6face653e5ca20 ""
   "Chapter 3/Figures/RetarderOnPoincare.pdf" 1788059544.28205 27084 606b1319c024fb1135dd6131d526ce5a ""
   "Chapter 3/Figures/RotatingRetarderCone.pdf" 1788639851.64854 29859 fd58d40b6c8f0567206b6b37e1aa65a3 ""
-  "Chapter 3/chap3.tex" 1791865324.36175 324938 71f2cce6162309f5afdf5fc982f48b2a ""
+  "Chapter 3/chap3.tex" 1791865702.53869 324912 b83072f2f3f9d51092d1968a25aaf437 ""
   "Chapter 4/Figures/FresnelBiprism.pdf" 1788059544.2828 12121 7b46457a2f301a4b4a1bc58fcd8c3b86 ""
   "Chapter 4/Figures/MichelsonImages1.pdf" 1788230765.13675 79314 c3298a8f3164c1261d8035796e25a0e9 ""
   "Chapter 4/Figures/MichelsonImages2.pdf" 1788230766.12462 73958 aa39b44b5bb5d939b5c7c89071c392ad ""
@@ -302,22 +302,22 @@
   "Chapter 5/Figures/GreenImagenes.pdf" 1788059544.28583 18859 31fd6d56d8ca4a927466971deedf8a06 ""
   "Chapter 5/Figures/GreenNoPuntual.pdf" 1788059544.28623 27035 acff4151beca5b9445e69637c7a2c7e9 ""
   "Chapter 5/Figures/GreenPuntual.pdf" 1788059544.28673 25660 e27a3ffce723cfd3d964127af1c38b22 ""
-  "Chapter 5/chap5.tex" 1791865324.36238 146578 bb06fbab15b7da31aec633304699f862 ""
+  "Chapter 5/chap5.tex" 1791865708.06779 146545 cfefe6f0764570414af701a10d0b7aab ""
   "Chapter 6/Figures/Estrecho.pdf" 1788059544.28706 35389 6a9becda114279712867b0decc2eb085 ""
   "Chapter 6/Figures/FourierGamma.pdf" 1788059544.28718 15760 f18c41c818418794d85cbff65ae8f04f ""
   "Chapter 6/Figures/Propagation.pdf" 1788059544.28753 20593 8f27724c06423aaab94caba0915cd05d ""
   "Chapter 6/Figures/Propagation2.pdf" 1788059544.28771 22476 c66512ec23898ab6763a5ee947c880f7 ""
   "Chapter 6/Figures/Random2.pdf" 1788059544.28813 25569 4cfc8b4378a401590155428b9e7cc468 ""
   "Chapter 6/Figures/RandomVar.pdf" 1788059544.28832 14567 2ee5e89219d1458896545cd7882c3f39 ""
-  "Chapter 6/chap6.tex" 1791865412.72564 96242 bcbd6316e3ce37af0568bbc310124e37 ""
+  "Chapter 6/chap6.tex" 1791865702.53899 96143 f81358fd12be185b658e6d3c10018be7 ""
   "Figures/LoGOTS.png" 1788059544.30232 58761 d30b2db1e9efaf752cebe7551c894d9d ""
   "Figures/logouis.png" 1788059544.30252 62450 f09c4e4b788c95739ca2931443f6d84e ""
   "main.tex" 1788622969.10776 6816 894226aead7b1be9a3f0caf0805364c6 ""
-  "out/main.aux" 1791865416.49273 140848 ab3320d2c8cda9249f2bef9c7d96cb09 "pdflatex"
+  "out/main.aux" 1791865710.00436 140848 ab3320d2c8cda9249f2bef9c7d96cb09 "pdflatex"
   "out/main.bbl" 1791865414.86012 24350 bb072b3f2576f019d7870945c479bb1b "bibtex out/main"
-  "out/main.lof" 1791865416.50028 25619 223a9afac3ffd1cbec86b9812df7d574 "pdflatex"
-  "out/main.out" 1791865416.50005 37413 9e38c4d96915b6c79b8d6b7854936136 "pdflatex"
-  "out/main.toc" 1791865416.50025 15731 007ca9489fddbae5638fa440af5fb044 "pdflatex"
+  "out/main.lof" 1791865710.01227 25619 223a9afac3ffd1cbec86b9812df7d574 "pdflatex"
+  "out/main.out" 1791865710.012 37413 9e38c4d96915b6c79b8d6b7854936136 "pdflatex"
+  "out/main.toc" 1791865710.01223 15731 007ca9489fddbae5638fa440af5fb044 "pdflatex"
   (generated)
   "out/main.aux"
   "out/main.lof"

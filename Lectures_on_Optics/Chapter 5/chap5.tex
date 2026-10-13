@@ -377,12 +377,12 @@
 		\end{equation}
 		so that \eqref{sol_Green_RS} reads simply $G = f(r_{1}) - f(r_{2})$.
 
-		\textit{First step: the derivative of $f$.} Differentiating the quotient,
+		The first step is the derivative of $f$, which follows from differentiating the quotient,
 		\begin{equation}\label{eq:RSderivf}
 			\dfrac{df}{d\rho} = \dfrac{\left(ik\,e^{ik\rho}\right)\rho - e^{ik\rho}}{\rho^{2}} = \dfrac{e^{ik\rho}}{\rho}\left(ik - \dfrac{1}{\rho}\right) = \left(ik-\dfrac{1}{\rho}\right)f(\rho).
 		\end{equation}
 
-		\textit{Second step: the gradient of a distance.} With $\vec{r} = (x,y,z)$ the point of integration and $\vec{r}' = (x',y',z')$ held fixed,
+		The second step is the gradient of a distance. With $\vec{r} = (x,y,z)$ the point of integration and $\vec{r}' = (x',y',z')$ held fixed,
 		\begin{equation}\label{eq:RSr1}
 			r_{1} = \left[(x-x')^{2}+(y-y')^{2}+(z-z')^{2}\right]^{1/2},
 		\end{equation}
@@ -392,17 +392,17 @@
 		\end{equation}
 		the same computation with $\vec{r}''$ in place of $\vec{r}'$ giving $\partial r_{2}/\partial z = (z-z'')/r_{2}$. Carried out for the three components at once these two results read $\nabla r_{1} = (\vec{r}-\vec{r}')/r_{1}$ and $\nabla r_{2} = (\vec{r}-\vec{r}'')/r_{2}$: the gradient of a distance is the unit vector that points away from the centre from which the distance is measured.
 
-		\textit{Third step: the gradient of $G$.} Applying the chain rule to each term and using \eqref{eq:RSderivf},
+		The gradient of $G$ follows next. Applying the chain rule to each term and using \eqref{eq:RSderivf},
 		\begin{equation}\label{eq:RSgradG}
 			\nabla G = \left(ik-\dfrac{1}{r_{1}}\right)\dfrac{e^{ikr_{1}}}{r_{1}}\,\dfrac{\vec{r}-\vec{r}'}{r_{1}} \;-\; \left(ik-\dfrac{1}{r_{2}}\right)\dfrac{e^{ikr_{2}}}{r_{2}}\,\dfrac{\vec{r}-\vec{r}''}{r_{2}} .
 		\end{equation}
 
-		\textit{Fourth step: the projection on the axis.} Taking the scalar product of \eqref{eq:RSgradG} with $\hat{z}$, which amounts to keeping the third component of each of the two vectors,
+		We then project on the axis. Taking the scalar product of \eqref{eq:RSgradG} with $\hat{z}$, which amounts to keeping the third component of each of the two vectors,
 		\begin{equation}\label{eq:RSgradGz}
 			\nabla G\cdot\hat{z} = \left(ik-\dfrac{1}{r_{1}}\right)\dfrac{e^{ikr_{1}}}{r_{1}}\,\dfrac{z-z'}{r_{1}} \;-\; \left(ik-\dfrac{1}{r_{2}}\right)\dfrac{e^{ikr_{2}}}{r_{2}}\,\dfrac{z-z''}{r_{2}} .
 		\end{equation}
 
-		\textit{Fifth step: evaluation on the plane.} The integral of \eqref{eq:RSnormal} runs over $\Sigma_{1}$, so \eqref{eq:RSgradGz} is needed only at $z=0$. There the two distances coincide, $r_{1} = r_{2} \equiv r$, which is the mirror relation already used, and the two axial displacements are
+		The integral of \eqref{eq:RSnormal} runs over $\Sigma_{1}$, so \eqref{eq:RSgradGz} is needed only at $z=0$. There the two distances coincide, $r_{1} = r_{2} \equiv r$, which is the mirror relation already used, and the two axial displacements are
 		\begin{equation}\label{eq:RSopposite}
 			\left.\left(z-z'\right)\right|_{z=0} = -z', \qquad \left.\left(z-z''\right)\right|_{z=0} = -z'' = z' ,
 		\end{equation}
@@ -412,7 +412,7 @@
 		\end{equation}
 		The factor of two is worth a comment. The minus sign that separates the two terms of \eqref{sol_Green_RS} is what makes the two spherical waves cancel on the plane; the very same minus sign, combined with the opposite direction cosines of \eqref{eq:RSopposite}, makes their axial derivatives add. The Dirichlet Green's function vanishes on $\Sigma_{1}$ and has there exactly twice the normal derivative of a single wavelet, which is the analytical trace of the fact that the screen behaves as a perfect mirror.
 
-		\textit{Sixth step: the obliquity factor.} It only remains to name the geometrical quantity $z'/r$. Let $\theta$ be the angle between the axis $\hat{z}$ and the vector $\vec{r}\,'-\vec{r}$ that goes from the point of the aperture to the point of observation, so that
+		It only remains to name the geometrical quantity $z'/r$, which is the obliquity factor. Let $\theta$ be the angle between the axis $\hat{z}$ and the vector $\vec{r}\,'-\vec{r}$ that goes from the point of the aperture to the point of observation, so that
 		\begin{equation}\label{eq:RSobliquity}
 			\cos\theta = \hat{z}\cdot\dfrac{\vec{r}\,'-\vec{r}}{\|\vec{r}\,'-\vec{r}\|} = \dfrac{z'}{r} ,
 		\end{equation}
@@ -699,7 +699,7 @@ Studying the propagation of the field through Fresnel diffraction is of great im
 			\begin{equation}\label{eq:FrFT:GSelf}
 				\mathcal{F}\left[G(\cdot,t)\right](\xi) = G(\xi,-it).
 			\end{equation}
-			\textit{The generating function is mapped into itself with the parameter rotated by a quarter turn in the complex plane.} Expanding both sides of \eqref{eq:FrFT:GSelf} in powers of $t$ by means of \eqref{eq:FrFT:GDef},
+			The generating function is mapped into itself with the parameter rotated by a quarter turn in the complex plane, and to see it we expand both sides of \eqref{eq:FrFT:GSelf} in powers of $t$ by means of \eqref{eq:FrFT:GDef},
 			\begin{equation*}
 				\sum_{n=0}^{\infty}\frac{t^{n}}{n!}\,\mathcal{F}\!\left[H_{n}\,e^{-x^{2}/2}\right](\xi) = \sum_{n=0}^{\infty}\frac{\left(-it\right)^{n}}{n!}H_{n}(\xi)e^{-\xi^{2}/2},
 			\end{equation*}
@@ -1052,11 +1052,11 @@ Studying the propagation of the field through Fresnel diffraction is of great im
 			\end{equation}
 			and the order sweeps the interval $[0,\pi]$ monotonically as the observation cap recedes. The reading of $\alpha$ is then completely transparent, and there are three equivalent ways of stating it.
 
-			\textit{As a degree of diffraction.} The order measures how far the field has travelled from the near field towards the far field, on a scale in which $\alpha = 0$ is the aperture itself and $\alpha = \pi/2$ is its Fraunhofer pattern. A field observed at $\alpha = \pi/4$ is halfway between its own distribution and its Fourier transform, in a sense that is not metaphorical but exact, since applying the same transformation twice produces the Fourier transform. The continuum of intermediate regimes that the Fresnel approximation describes only implicitly is here labelled by a single number.
+			Read as a degree of diffraction, the order measures how far the field has travelled from the near field towards the far field, on a scale in which $\alpha = 0$ is the aperture itself and $\alpha = \pi/2$ is its Fraunhofer pattern. A field observed at $\alpha = \pi/4$ is halfway between its own distribution and its Fourier transform, in a sense that is not metaphorical but exact, since applying the same transformation twice produces the Fourier transform. The continuum of intermediate regimes that the Fresnel approximation describes only implicitly is here labelled by a single number.
 
-			\textit{As a rotation of phase space.} By the theorem of Lohmann \citeyearpar{lohmann1993image}, later established rigorously by Mustard \citeyearpar{mustard1996fractional}, the transformation $\mathcal{F}_{\alpha}$ acts on the Wigner distribution of the field simply by rotating the plane of the transverse position and the transverse spatial frequency by the angle $\alpha$. Free propagation between cardinal spheres is therefore a rigid rotation of phase space, which is why the orders add: rotations compose by adding angles. This also explains geometrically why plane to plane propagation is not a fractional transformation, since in the plane description propagation is a shear of phase space rather than a rotation.
+			The order can also be read as a rotation of phase space. By the theorem of Lohmann \citeyearpar{lohmann1993image}, later established rigorously by Mustard \citeyearpar{mustard1996fractional}, the transformation $\mathcal{F}_{\alpha}$ acts on the Wigner distribution of the field simply by rotating the plane of the transverse position and the transverse spatial frequency by the angle $\alpha$. Free propagation between cardinal spheres is therefore a rigid rotation of phase space, which is why the orders add: rotations compose by adding angles. This also explains geometrically why plane to plane propagation is not a fractional transformation, since in the plane description propagation is a shear of phase space rather than a rotation.
 
-			\textit{As a Gouy phase.} The residual factor $e^{-i\alpha}$ of \eqref{eq:FrFT:MainResult} is not an accident. If instead of arbitrary caps one chooses as reference surfaces the wavefronts of a Gaussian beam of Rayleigh range $z_{R}$, the order that comes out of the same computation is
+			Finally, the order can be read as a Gouy phase. The residual factor $e^{-i\alpha}$ of \eqref{eq:FrFT:MainResult} is not an accident. If instead of arbitrary caps one chooses as reference surfaces the wavefronts of a Gaussian beam of Rayleigh range $z_{R}$, the order that comes out of the same computation is
 			\begin{equation}\label{eq:FrFT:Gouy}
 				\alpha = \arctan\!\left(\frac{z}{z_{R}}\right),
 			\end{equation}
