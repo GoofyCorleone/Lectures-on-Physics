@@ -92,7 +92,7 @@
 \contentsline {subsection}{\numberline {5.5.2}Fluctuaciones del vacío}{179}{subsection.5.5.2}%
 \contentsline {section}{\numberline {5.6}Los estados coherentes}{180}{section.5.6}%
 \contentsline {subsection}{\numberline {5.6.1}Distribución de probabilidad de los estados coherentes}{187}{subsection.5.6.1}%
-\contentsline {chapter}{\numberline {6}Coherencia cuántica y estadística de fotones}{191}{chapter.6}%
+\contentsline {chapter}{\numberline {6}La fase cuántica}{191}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Qué mide un fotodetector}{192}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Las funciones de correlación de Glauber}{193}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Coherencia completa y los estados coherentes}{195}{section.6.3}%
@@ -100,7 +100,7 @@
 \contentsline {section}{\numberline {6.5}Estadística de fotones}{197}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Agrupamiento, antiagrupamiento y el experimento de Hanbury Brown y Twiss}{198}{section.6.6}%
 \contentsline {section}{\numberline {6.7}Coherencia y polarización}{200}{section.6.7}%
-\contentsline {chapter}{\numberline {7}La fase cuántica}{203}{chapter.7}%
+\contentsline {chapter}{\numberline {7}La propoagación fundamental de los fotones}{203}{chapter.7}%
 \contentsline {section}{\numberline {7.1}La fase de Dirac}{204}{section.7.1}%
 \contentsline {section}{\numberline {7.2}El formalismo de Susskind-Glogower}{210}{section.7.2}%
 \contentsline {section}{\numberline {7.3}La fase cuántica y la transformación de Fourier Fraccionaria}{213}{section.7.3}%
@@ -108,7 +108,7 @@
 \contentsline {section}{\numberline {7.5}Operador Exponencial de fase}{219}{section.7.5}%
 \contentsline {section}{\numberline {7.6}Operador de fase cuántica}{221}{section.7.6}%
 \contentsline {section}{\numberline {7.7}El operador de diferencia de fase cuántica y su relación con la polarización}{224}{section.7.7}%
-\contentsline {chapter}{\numberline {8}La propoagación fundamental de los fotones}{229}{chapter.8}%
+\contentsline {chapter}{\numberline {8}El Campo de Riemann-Silberstein}{229}{chapter.8}%
 \contentsline {section}{\numberline {8.1}La idea de Feynman y la construcción del propagador}{230}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}De la doble rendija a la suma sobre caminos}{230}{subsection.8.1.1}%
 \contentsline {subsection}{\numberline {8.1.2}La constante de normalización y la partícula libre}{233}{subsection.8.1.2}%
@@ -120,7 +120,7 @@
 \contentsline {subsection}{\numberline {8.2.4}Correspondencia a la teoría de la difracción escalar}{242}{subsection.8.2.4}%
 \contentsline {subsection}{\numberline {8.2.5}Experimento de conteo de fotones}{244}{subsection.8.2.5}%
 \contentsline {subsection}{\numberline {8.2.6}Simulación de la distribución de probabilidad para la propagación de fotones únicos}{245}{subsection.8.2.6}%
-\contentsline {chapter}{\numberline {9}El Campo de Riemann-Silberstein}{247}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Un modelo del fotón}{247}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Electrodinámica clásica}{249}{section.9.1}%
 \contentsline {subsection}{\numberline {9.1.1}Propiedades básicas del vector de RS}{250}{subsection.9.1.1}%
 \contentsline {subsubsection}{\numberline {9.1.1.1}La polarización de la luz como vector en la esfera de Poincaré como solución a las ecuaciones de Maxwell}{252}{subsubsection.9.1.1.1}%
@@ -134,10 +134,4 @@
 \contentsline {section}{\numberline {9.3}Electrodinámica cuántica}{269}{section.9.3}%
 \contentsline {subsection}{\numberline {9.3.1}Cuantización canónica}{269}{subsection.9.3.1}%
 \contentsline {subsection}{\numberline {9.3.2}El vector de RS y los espinores}{271}{subsection.9.3.2}%
-\contentsline {chapter}{\numberline {10}Un modelo del fotón}{275}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Necesidad de plantear un modelo alternativo}{276}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Ecuación de onda de los fotones}{276}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Fotones como paquetes de ondas}{278}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Estados Coherentes de los paquetes de onda}{280}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}La emisión de fotones como estados paquetes de onda coherentes}{281}{subsection.10.2.3}%
 \contentsfinish 

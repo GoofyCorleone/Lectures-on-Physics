@@ -134,13 +134,13 @@
 \contentsline {subsection}{\numberline {6.3.2}The sigma algebra, or which questions may be asked}{265}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Measure, the Lebesgue measure and the probability measure}{267}{subsection.6.3.3}%
 \contentsline {subsection}{\numberline {6.3.4}Random variables and the meaning of measurability}{268}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}A worked example: the throw of a die}{270}{subsection.6.3.5}%
-\contentsline {subsection}{\numberline {6.3.6}A worked example: interference with a beam of random phase}{271}{subsection.6.3.6}%
+\contentsline {subsection}{\numberline {6.3.5}The throw of a die}{270}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}Interference with a beam of random phase}{271}{subsection.6.3.6}%
 \contentsline {subsection}{\numberline {6.3.7}Stochastic processes}{273}{subsection.6.3.7}%
 \contentsline {subsection}{\numberline {6.3.8}The probability space of the electromagnetic field}{274}{subsection.6.3.8}%
-\contentsline {subsection}{\numberline {6.3.9}Stationarity, ergodicity and the right to measure}{276}{subsection.6.3.9}%
-\contentsline {section}{\numberline {6.4}The coherence function}{277}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Manifestations of coherence: the WienerKhinchin theorem}{281}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}The wave equation of coherence}{283}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Propagation of coherence and the direction of time: the van CittertZernike theorem}{285}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.3.9}Stationarity, ergodicity and the right to measure}{278}{subsection.6.3.9}%
+\contentsline {section}{\numberline {6.4}The coherence function}{279}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Manifestations of coherence: the Wiener-Khinchin theorem}{283}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}The wave equation of coherence}{290}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Propagation of coherence and the direction of time: the van Cittert-Zernike theorem}{292}{subsection.6.4.3}%
 \contentsfinish 

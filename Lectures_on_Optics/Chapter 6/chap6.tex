@@ -863,9 +863,83 @@
 		We can now carry out the construction that this whole section was preparing, and build
 		explicitly the probability space on which coherence theory operates. Let
 		$D\subseteq\mathbb{R}^{3}\times\mathbb{R}$ be the region of spacetime in which we intend
-		to describe the field, and recall from the chapter on electromagnetic optics that the
-		field is a complex, three component object, the analytic signal
-		$\vec{\mathcal{E}} = (\mathcal{E}_{x},\mathcal{E}_{y},\mathcal{E}_{z})$.
+		to describe the field. Before saying what the points of the sample space are we have to
+		say what kind of object the field is, and this requires recalling two notions that run
+		underneath the whole of statistical optics, the signal and the analytic signal.
+
+		A \textit{signal} is, for our purposes, a physical quantity read as a function of time
+		at a fixed place,
+
+		\begin{equation}\label{eq:Signal}
+			\begin{split}
+				u^{(r)} : \mathbb{R} &\longrightarrow \mathbb{R}\\
+				t &\longmapsto u^{(r)}(t).
+			\end{split}
+		\end{equation}
+		The voltage across a photodiode is a signal, and so is one Cartesian component of the
+		electric field at a fixed point $\vec{r}$. The superscript $(r)$ reminds us that the
+		quantity is real, since every number an instrument returns is real. When the source is
+		deterministic there is a single such function; when the source is random, every
+		realisation $\omega$ of the previous subsections supplies its own signal, and a
+		\textit{random signal} is nothing but a stochastic process indexed by time whose sample
+		paths are the individual curves of Figure~\ref{fig:randomvar}.
+
+		The spectral content of a signal is read from its Fourier transform, which with the
+		sign convention of these notes is
+		$\tilde{u}(\nu) = \int_{\mathbb{R}}u^{(r)}(t)\,e^{i2\pi\nu t}\,\mathrm{d}t$. Since
+		$u^{(r)}$ is real, conjugating this integral only flips the sign of the exponent, and
+		therefore
+
+		\begin{equation}\label{eq:RealSymmetry}
+			\tilde{u}^{*}(\nu) = \int_{\mathbb{R}}u^{(r)}(t)\,e^{-i2\pi\nu t}\,\mathrm{d}t = \tilde{u}(-\nu).
+		\end{equation}
+		The negative frequencies of a real signal carry no information that the positive ones
+		do not already carry: half of the spectrum is redundant. Dennis Gabor drew the obvious
+		conclusion in 1946, in the paper that founded the modern theory of communication
+		\citep{gabor1946theory}: throw the negative frequencies away and keep only the
+		positive ones.
+
+		\begin{myDef}
+			\textit{(Analytic signal)} The \emph{analytic signal} associated with the real
+			signal $u^{(r)}$ is
+			\begin{equation}\label{eq:AnalyticSignal}
+				u(t) = 2\int_{0}^{\infty}\tilde{u}(\nu)\,e^{-i2\pi\nu t}\,\mathrm{d}\nu .
+			\end{equation}
+		\end{myDef}
+
+		The factor two is there so that nothing is lost. Splitting the inverse transform of the
+		real signal at $\nu=0$, substituting $\nu\to-\nu$ in the negative half and using
+		\eqref{eq:RealSymmetry} in it,
+
+		\begin{align}
+			u^{(r)}(t) &= \int_{0}^{\infty}\tilde{u}(\nu)\,e^{-i2\pi\nu t}\,\mathrm{d}\nu + \int_{-\infty}^{0}\tilde{u}(\nu)\,e^{-i2\pi\nu t}\,\mathrm{d}\nu \nonumber\\
+			&= \int_{0}^{\infty}\tilde{u}(\nu)\,e^{-i2\pi\nu t}\,\mathrm{d}\nu + \int_{0}^{\infty}\textcolor{blue}{\tilde{u}^{*}(\nu)}\,e^{i2\pi\nu t}\,\mathrm{d}\nu \nonumber\\
+			&= \frac{1}{2}\left[u(t) + u^{*}(t)\right] = \operatorname{Re}\,u(t),
+		\end{align}
+		so the physical signal is recovered as the real part of the analytic one. Its imaginary
+		part is not independent information either; it is fixed by the real part through the
+		Hilbert transform \citep{mandel1995optical},
+		$u^{(i)}(t) = \frac{1}{\pi}\,\mathrm{P}\!\int_{\mathbb{R}}\frac{u^{(r)}(t')}{t'-t}\,\mathrm{d}t'$,
+		where $\mathrm{P}$ denotes the Cauchy principal value. The name comes from the fact that,
+		containing only factors $e^{-i2\pi\nu t}$ with $\nu>0$, the function $u(t)$ can be
+		continued to complex values of $t$ and is analytic in the whole lower half plane, where
+		every such factor decays.
+
+		The simplest example says almost everything. For $u^{(r)}(t) = A\cos(2\pi\nu_{0}t)$ the
+		spectrum consists of two deltas at $\pm\nu_{0}$, the definition \eqref{eq:AnalyticSignal}
+		keeps only the one at $+\nu_{0}$, and $u(t) = A\,e^{-i2\pi\nu_{0}t}$. This is the complex
+		exponential with which every wave of the previous chapters was written, so that
+		\textbf{the analytic signal is the generalisation of the phasor to light that is not
+		monochromatic}. It also explains why optics works with it: $|u|^{2}=A^{2}$ is constant,
+		whereas $(u^{(r)})^{2}=A^{2}\cos^{2}(2\pi\nu_{0}t)$ oscillates at $2\nu_{0}$, some
+		$10^{15}$ times per second, a rate no detector can follow. The modulus squared of the
+		analytic signal discards exactly the oscillation that the detector cannot see and keeps
+		the envelope that it does read. Finally, keeping the positive frequencies is a linear
+		operation that commutes with derivatives in space and time, so if the real field solves
+		Maxwell's equations its analytic signal solves them too. This is why, from now on, the
+		field is the complex, three component object
+		$\vec{\mathcal{E}} = (\mathcal{E}_{x},\mathcal{E}_{y},\mathcal{E}_{z})$ whose real part is
+		the physical field.
 
 		As sample space we take
 
@@ -1076,20 +1150,54 @@
 	\textit{coherent} the oscillations are across the realisations.
 
 	We speak of coherence when we want to analyse the correlation of electromagnetic radiation
-	between spacetime points. If we have two sources emitting an electric field (for the
-	moment understood as scalar), their coherence function is given by
+	between spacetime points, and after the previous section every ingredient of that
+	sentence has a precise meaning. The field component $\mathcal{E}$ (for the moment a
+	single one, so that the field is understood as scalar) is the analytic signal
+	\eqref{eq:AnalyticSignal} of the real field; at each spacetime point it is the evaluation
+	map \eqref{eq:EvaluationMap}, a complex random variable on the probability space
+	$(\Omega,\mathcal{F},P)$ of admissible field histories; and the finite energy hypothesis
+	\eqref{eq:FiniteEnergy} places it in the Hilbert space $L^{2}(\Omega,\mathcal{F},P)$ of
+	\eqref{eq:L2Omega}. With all of this in hand the coherence function can be written down
+	again, this time without a single undefined symbol.
 
-	\begin{equation}
-		\Gamma(\vec{r},\vec{r}';t,t') = E \left\{ \mathcal{E} (\vec{r},t) \mathcal{E}^*(\vec{r}',t') \right\},
+	\begin{myDef}
+		\textit{(Coherence function)} Let $\mathcal{E}(\vec{r},t)\in L^{2}(\Omega,\mathcal{F},P)$
+		for every $(\vec{r},t)\in D$. The \emph{coherence function} of the field between the
+		spacetime points $(\vec{r},t)$ and $(\vec{r}\,',t')$ is
+		\begin{equation}\label{eq:CoherenceFunction}
+			\Gamma(\vec{r},\vec{r}\,';t,t') = E\left\{\mathcal{E}(\vec{r},t)\,\mathcal{E}^{*}(\vec{r}\,',t')\right\}
+			= \int_{\Omega}\omega(\vec{r},t)\,\omega^{*}(\vec{r}\,',t')\,\mathrm{d}P(\omega)
+			= \braket{\mathcal{E}(\vec{r},t),\mathcal{E}(\vec{r}\,',t')}.
+		\end{equation}
+	\end{myDef}
+
+	Each of the three expressions in \eqref{eq:CoherenceFunction} says something. The first is
+	the ensemble average of the old notation. The second, obtained by inserting the
+	evaluation map into the definition \eqref{eq:Expectation} of the expectation, says what
+	that average actually does: it runs over every admissible field history $\omega$, reads
+	the value of that history at the two spacetime points, multiplies one by the conjugate of
+	the other and weighs the product with the probability $P$ that the source assigns to that
+	history. It is a vertical slice through Figure~\ref{fig:randomvar}, taken at two instants
+	at once. The third expression, the inner product \eqref{eq:L2InnerProduct}, says that
+	$\Gamma$ measures how parallel the two random variables are as vectors of a Hilbert
+	space, and it also guarantees that the definition makes sense, because by the
+	Cauchy-Schwarz inequality \eqref{eq:CauchySchwarzProb} the integral is bounded by
+	$\sqrt{E\{|\mathcal{E}(\vec{r},t)|^{2}\}\,E\{|\mathcal{E}(\vec{r}\,',t')|^{2}\}}$, which is
+	finite precisely because of \eqref{eq:FiniteEnergy}. That was the reason for imposing it.
+	Definition \eqref{eq:CoherenceFunction} is the diagonal entry $\Gamma_{jj}$ of the
+	coherence tensor \eqref{eq:CoherenceTensor} for the chosen component.
+
+	If we take $\vec{r}=\vec{r}\,'$ we compare the field with itself at two different
+	instants and obtain
+
+	\begin{equation}\label{eq:SelfCoherence}
+		\Gamma(\vec{r};t,t') = E \left\{ \mathcal{E}(\vec{r},t)\, \mathcal{E}^*(\vec{r},t') \right\},
 	\end{equation}
-
-	where we are computing the ensemble average of the components $\mathcal{E}$, which are
-	complex numbers as already discussed in these notes. If we take $\vec{r}=\vec{r}'$ we
-	obtain what is known as the \textit{mutual coherence function}
-
-	\begin{equation}
-		\Gamma(\vec{r}';t,t') = E \left\{ \mathcal{E}(\vec{r}',t) \mathcal{E}^*(\vec{r}',t') \right\}.
-	\end{equation}
+	which in these notes we shall keep calling the \textit{mutual coherence function} at the
+	point $\vec{r}$, although the reader should be warned that Mandel and Wolf reserve that
+	name for the two point object \eqref{eq:CoherenceFunction} and call
+	\eqref{eq:SelfCoherence} the \textit{self coherence function}
+	\citep{mandel1995optical}.
 
 	We can go even further by including the concept of \textit{statistical stationarity}, but
 	one must be careful since there are several kinds. Formally, a stochastic process
@@ -1117,7 +1225,7 @@
 				\text{Cov}(X_t, X_{t+h}) = \gamma(h) \quad (\text{depends only on } h, \text{ not on } t)
 			\end{cases}
 		\end{equation}
-		This is the definition used in most econometric models (ARIMA, GARCH) and in the WienerKhinchin spectral analysis (which we shall use later).
+		This is the definition used in most econometric models (ARIMA, GARCH) and in the Wiener-Khinchin spectral analysis (which we shall use later).
 
 		\item Trend stationarity (deterministic stationarity): a non-stationary process that can be made stationary by removing deterministic components:
 		\begin{equation}
@@ -1127,29 +1235,59 @@
 	\end{enumerate}
 
 	We shall use a hypothesis of strong stationarity (although weak stationarity often
-	suffices). In this spirit, if $\tau = t-t'$ we have
+	suffices), and in the language of the previous section it is exactly the invariance
+	\eqref{eq:StationarityMeasure} of the measure. Strict stationarity asks the finite
+	dimensional distributions to be unchanged by a time shift, and by the uniqueness part of
+	Kolmogorov's extension theorem those distributions determine $P$ completely, so the
+	shifted measure $P\circ\theta_{\tau}^{-1}$ and $P$ coincide. Weak stationarity, in turn,
+	is all that the coherence function needs, since $\Gamma$ only involves second moments.
+
+	The dependence on the time difference follows from this invariance in one line of
+	measure theory. For any integrable random variable $X$, the change of variables formula
+	applied to the map $\theta_{s}$ gives
 
 	\begin{equation}
-		\Gamma(\vec{r}',t,t') = \Gamma(\vec{r}',t-t') = \Gamma(\vec{r}',\tau).
+		E\left\{X\circ\theta_{s}\right\} = \int_{\Omega}X\big(\theta_{s}\omega\big)\,\mathrm{d}P(\omega)
+		= \int_{\Omega}X(\omega)\,\mathrm{d}\big(\textcolor{blue}{P\circ\theta_{s}^{-1}}\big)(\omega)
+		= \int_{\Omega}X(\omega)\,\mathrm{d}\textcolor{blue}{P}(\omega) = E\{X\},
 	\end{equation}
+	where in the third step we used \eqref{eq:StationarityMeasure}. Taking
+	$X(\omega) = \omega(\vec{r},t)\,\omega^{*}(\vec{r},t')$, the shifted variable is
+	$X(\theta_{s}\omega) = \omega(\vec{r},t+s)\,\omega^{*}(\vec{r},t'+s)$, and choosing the
+	shift $s=-t$ we arrive at
 
-	As we can see, the mutual coherence at a point $\vec{r}'$ under a stationarity hypothesis
-	gives rise to an explicit dependence on the time difference $\tau$ in the ensemble average.
+	\begin{equation}\label{eq:GammaTau}
+		\Gamma(\vec{r};t,t') = E\left\{\mathcal{E}(\vec{r},0)\,\mathcal{E}^{*}(\vec{r},t'-t)\right\}
+		= \Gamma(\vec{r};\tau), \qquad \tau = t'-t .
+	\end{equation}
+	As we can see, the mutual coherence at a point $\vec{r}$ under a stationarity hypothesis
+	depends only on the delay $\tau$ between the two instants. Physically, the source has no
+	clock: it cannot tell whether we start comparing its field at noon or at midnight, only
+	how long we wait between the two comparisons. Throughout what follows
+	$\Gamma(\vec{r};\tau) = E\{\mathcal{E}(\vec{r},t)\,\mathcal{E}^{*}(\vec{r},t+\tau)\}$, with
+	any $t$.
 
 	It is worth asking: how necessary is it to analyse the ensemble average; why not take the
-	temporal average? Answering this is \emph{very complicated}, since it touches on the
+	temporal average? Answering this in general is very complicated, since it touches on the
 	problem of \textit{ergodicity}. Ergodicity, in the sense of ergodic theory, requires that
-	a dynamical system satisfy that the temporal averages coincide with the spatial averages
-	for almost every initial condition. Its rigorous proof is highly non-trivial, to the point
+	a dynamical system satisfy that the temporal averages coincide with the ensemble averages
+	for almost every initial condition. Its rigorous proof is highly non trivial, to the point
 	that the problems for which ergodicity has been proven with mathematical rigour are few.
 
 	From a phenomenological standpoint we shall assume, from now on, an \textit{ergodic
-	hypothesis} in which electromagnetic radiation has a stationary and ergodic character.
-	Under these conditions the mutual coherence function coincides with the temporal average
+	hypothesis} in which electromagnetic radiation has a stationary and ergodic character in
+	the sense of the definitions of the previous section. Under these conditions Birkhoff's
+	theorem \eqref{eq:Ergodic}, with $j=k$ and $\vec{r}=\vec{r}\,'$, states that the mutual
+	coherence function coincides with the temporal average along a single realisation,
 
-	\begin{equation}
-		\Gamma(\vec{r}';t,t') = \int_{\mathbb{R}} \mathcal{E}(\vec{r}',t') \mathcal{E}^*(\vec{r}',t-t')\,dt'.
+	\begin{equation}\label{eq:GammaTimeAverage}
+		\Gamma(\vec{r};\tau) = \lim_{T\to\infty}\frac{1}{T}\int_{-T/2}^{T/2} \omega(\vec{r},t)\, \omega^*(\vec{r},t+\tau)\,\mathrm{d}t
+		\qquad \text{for } P \text{ almost every } \omega .
 	\end{equation}
+	The left hand side is an integral over $\Omega$ against $P$ and the right hand side an
+	integral over the time axis against the Lebesgue measure, and this identity is what
+	allows us, from here on, to write $\braket{\cdots}$ for either of the two averages
+	without ambiguity.
 
 	The mutual coherence function has several properties, some of which are:
 
@@ -1162,7 +1300,7 @@
 			& \Gamma(\vec{r}',\tau) = \braket{\mathcal{E}(\vec{r}')\mathcal{E}^*(\vec{r}',t + \tau)} = \braket{\mathcal{E}(\vec{r}',t-\tau)\mathcal{E}^*(\vec{r}')} = \Gamma^*(\vec{r}',-\tau).
 		\end{align}
 
-		\item[c)] $|\Gamma(\vec{r}',\tau)| \leq \Gamma(\vec{r}',0)$. This property follows from the \textit{CauchySchwarz inequality}
+		\item[c)] $|\Gamma(\vec{r}',\tau)| \leq \Gamma(\vec{r}',0)$. This property follows from the \textit{Cauchy-Schwarz inequality}
 
 		\begin{equation}
 			|\Gamma(\vec{r}',\tau)|^2 = | \braket{\mathcal{E}(\vec{r}')\mathcal{E}^*(\vec{r}',t+\tau)} |^2 \leq  \braket{\mathcal{E}(\vec{r}',t)\mathcal{E}^*(\vec{r}',t)} \braket{\mathcal{E}(\vec{r}',t+\tau)\mathcal{E}^*(\vec{r}',t+\tau)} = \Gamma^2(\vec{r}',0),
@@ -1197,28 +1335,103 @@
 		\gamma (\vec{r}',\tau) = \frac{\Gamma(\vec{r}',\tau)}{\Gamma(\vec{r}',0)},
 	\end{equation}
 
-	and from the CauchySchwarz inequality we have $0 \leq |\gamma(\vec{r}',\tau)| \leq 1$.
+	and from the Cauchy-Schwarz inequality we have $0 \leq |\gamma(\vec{r}',\tau)| \leq 1$.
 
-	\subsection{Manifestations of coherence: the WienerKhinchin theorem}
+	\subsection{Manifestations of coherence: the Wiener-Khinchin theorem}
 
 		The mutual coherence function and the power spectral density are two sides of the same coin
 		in the study of light and wave signals. Mutual coherence describes how the fluctuations of
 		a luminous field are correlated in space and time, acting as a map that reveals to what
 		extent the variations at one point of space are synchronised with those at another, even
-		with a certain temporal delay. The power spectral density, in turn, decomposes the energy
-		of the signal into its frequency components, showing which tones or colours - in the case
-		of light - dominate its behaviour. The intimate relation between the two concepts lies in
+		with a certain temporal delay. The power spectral density, in turn, decomposes the power
+		of the signal into its frequency components, showing which tones or colours (in the case
+		of light) dominate its behaviour. The intimate relation between the two concepts lies in
 		the fact that, through mathematical transformations, it is possible to convert the detailed
 		information on the spacetime correlations captured by mutual coherence into a precise
-		description of how the energy is distributed in the frequency domain, and vice versa. This
+		description of how the power is distributed in the frequency domain, and vice versa. This
 		link allows researchers to jump between complementary perspectives: analysing interference
 		patterns in an interferometer or identifying spectral signatures in a material, all from
 		the same fundamental principles.
 
 		We are going to find one of the most important theorems in coherence theory, the
-		\textit{WienerKhinchin theorem}. Note that stationary random signals do not have a
-		Fourier transform; hence we may define the following truncated random signals of the
-		electric field
+		\textit{Wiener-Khinchin theorem}, proved by Norbert Wiener in 1930 for individual
+		functions \citep{wiener1930generalized} and by Aleksandr Khinchin in 1934 for stationary
+		random processes \citep{khinchin1934korrelationstheorie}. Before writing a single
+		integral we have to decide what it is that we decompose in frequency, because there are
+		two candidates, the energy spectral density and the power spectral density, and only
+		one of them makes sense for the light we are studying.
+
+		For a signal $u$ of finite energy, that is, $u\in L^{2}(\mathbb{R})$, the theorem of
+		Plancherel \citep{plancherel1910contribution} guarantees that the Fourier transform
+		$\tilde{u}(\nu)=\int_{\mathbb{R}}u(t)\,e^{i2\pi\nu t}\,\mathrm{d}t$ exists and that
+
+		\begin{equation}\label{eq:ParsevalEnergy}
+			\int_{\mathbb{R}}|u(t)|^{2}\,\mathrm{d}t = \int_{\mathbb{R}}|\tilde{u}(\nu)|^{2}\,\mathrm{d}\nu ,
+		\end{equation}
+		so that $|\tilde{u}(\nu)|^{2}$ is the energy carried per unit frequency interval: the
+		\textit{energy spectral density}. This is the right object for a pulse, a field that is
+		switched on, does something and is switched off again. It is, however, the wrong object
+		for a stationary field, and the reason is the content of the following statement.
+
+		\begin{myteo}
+			Let $\mathcal{E}(\vec{r},t)$ be a stationary field at a fixed point $\vec{r}$ with
+			$\Gamma(\vec{r};0)>0$. Then its expected total energy is infinite and, if the field is
+			moreover ergodic, almost every realisation $\omega(\vec{r},\cdot)$ belongs neither to
+			$L^{2}(\mathbb{R})$ nor to $L^{1}(\mathbb{R})$. In consequence the realisations of a
+			stationary field have no Fourier transform as functions, and no energy spectral
+			density.
+		\end{myteo}
+
+		\textbf{\textit{Demonstration:}} Let
+		$W_{T}(\omega)=\int_{-T/2}^{T/2}|\omega(\vec{r},t)|^{2}\,\mathrm{d}t$ be the energy
+		collected during a window of duration $T$ in the realisation $\omega$. Its expectation is
+		an integral over $\Omega$ of an integral over time; since the integrand is non negative,
+		Tonelli's theorem allows the order of the two integrations to be exchanged without any
+		further condition, and
+
+		\begin{align}
+			E\{W_{T}\} &= \int_{\Omega}\int_{-T/2}^{T/2}|\omega(\vec{r},t)|^{2}\,\mathrm{d}t\,\mathrm{d}P(\omega)
+			= \int_{-T/2}^{T/2}\int_{\Omega}|\omega(\vec{r},t)|^{2}\,\mathrm{d}P(\omega)\,\mathrm{d}t \nonumber\\
+			&= \int_{-T/2}^{T/2}\textcolor{blue}{\Gamma(\vec{r};0)}\,\mathrm{d}t = T\,\Gamma(\vec{r};0),
+		\end{align}
+		where we used \eqref{eq:GammaTau}: by stationarity
+		$E\{|\mathcal{E}(\vec{r},t)|^{2}\}=\Gamma(\vec{r};0)$ is the same at every instant. The
+		energies $W_{T}$ grow monotonically with $T$ towards the total energy
+		$W=\int_{\mathbb{R}}|\omega(\vec{r},t)|^{2}\,\mathrm{d}t$, so by the monotone convergence
+		theorem $E\{W\}=\lim_{T\to\infty}T\,\Gamma(\vec{r};0)=\infty$, which is the first claim.
+
+		For the second we go from the average to the individual realisation using ergodicity.
+		Equation \eqref{eq:GammaTimeAverage} at $\tau=0$ states that, for almost every $\omega$,
+
+		\begin{equation}
+			\lim_{T\to\infty}\frac{W_{T}(\omega)}{T} = \Gamma(\vec{r};0) > 0 ,
+		\end{equation}
+		so that, for $T$ large enough, $W_{T}(\omega)\geq\frac{1}{2}\,T\,\Gamma(\vec{r};0)$,
+		which grows without bound. Hence $\int_{\mathbb{R}}|\omega(\vec{r},t)|^{2}\,\mathrm{d}t=\infty$
+		and $\omega(\vec{r},\cdot)\notin L^{2}(\mathbb{R})$. The same argument applied to the
+		integrable random variable $|\mathcal{E}(\vec{r},t)|$, whose mean $E\{|\mathcal{E}|\}$ is
+		strictly positive (it could vanish only if $\mathcal{E}=0$ almost surely, which would
+		force $\Gamma(\vec{r};0)=0$), gives $\int_{\mathbb{R}}|\omega(\vec{r},t)|\,\mathrm{d}t=\infty$,
+		so $\omega(\vec{r},\cdot)\notin L^{1}(\mathbb{R})$ either. Now the Fourier integral
+		$\int_{\mathbb{R}}\omega(\vec{r},t)\,e^{i2\pi\nu t}\,\mathrm{d}t$ exists as a Lebesgue
+		integral only for functions in $L^{1}(\mathbb{R})$, and Plancherel's extension exists
+		only for functions in $L^{2}(\mathbb{R})$, so neither construction applies. Even if some
+		generalised transform were attached to the realisation, \eqref{eq:ParsevalEnergy} would
+		force its modulus squared to integrate to $W=\infty$, so it could never be a density of a
+		finite quantity. $\blacksquare$
+
+		The physics behind the proof is simple. A stationary source has, by definition, been
+		shining since the infinite past and will go on shining forever with the same finite
+		intensity $\Gamma(\vec{r};0)$, so the energy it delivers is infinite, and asking how that
+		total energy is distributed among the frequencies is asking how to share out infinity.
+		The individual realisations of stationary light do possess a spectral decomposition, but
+		only in the much weaker sense of Wiener's generalised harmonic analysis
+		\citep{wiener1930generalized}, as random measures and not as functions.
+
+		The way out is visible in the proof itself: the energy $W_{T}$ diverges, but it diverges
+		linearly in $T$, so the energy per unit time, which is the power, stays finite. The
+		quantity to decompose in frequency is therefore the power. We first truncate each
+		realisation to a window of duration $T$,
 
 		\begin{equation}\label{eq:NearlyWiener}
 			^\omega \mathcal{E}_T (\vec{r},t) = \left\{
@@ -1227,60 +1440,258 @@
 				0 & \text{otherwise}
 			\end{matrix} \right.
 		\end{equation}
-
-		and we define the spectral power for a realisation $\omega$ as the squared magnitude of
-		the Fourier transforms of the electric fields \eqref{eq:NearlyWiener}, that is,
+		and this truncated signal does belong to $L^{2}(\mathbb{R})$ for almost every $\omega$,
+		since its energy $W_{T}$ has the finite expectation $T\,\Gamma(\vec{r};0)$ and a non
+		negative random variable with finite expectation is finite almost surely. Its Fourier
+		transform therefore exists, and its energy spectral density
 
 		\begin{equation}\label{eq:SpecWT}
-			^\omega S_T (\vec{r},\nu) = \left| \int_\mathbb{R} ^\omega \mathcal{E}_T(\vec{r},t)e^{i2\pi\nu t}dt \right|^2 = \left| \int_{-T/2}^{T/2}\;^\omega \mathcal{E}(\vec{r},t)e^{i2\pi\nu t}dt \right|^2,
+			^\omega S_T (\vec{r},\nu) = \left| \int_\mathbb{R} {}^\omega \mathcal{E}_T(\vec{r},t)e^{i2\pi\nu t}\,\mathrm{d}t \right|^2 = \left| \int_{-T/2}^{T/2}{}^\omega \mathcal{E}(\vec{r},t)e^{i2\pi\nu t}\,\mathrm{d}t \right|^2
 		\end{equation}
-
-		and the \textit{power spectral density of the event} $\omega$ we compute as
+		is well defined. By \eqref{eq:ParsevalEnergy} it integrates over $\nu$ to $W_{T}$, which
+		grows like $T$; dividing by $T$ gives a density whose integral, $W_{T}/T$, tends to the
+		finite value $\Gamma(\vec{r};0)$. This motivates the definition of the
+		\textit{power spectral density},
 
 		\begin{equation}\label{eq:SpecW}
-			\lim_{T \to \infty} \frac{^\omega S_T(\vec{r},\nu)}{T} = {}^\omega S(\vec{r},\nu).
+			S(\vec{r},\nu) = \lim_{T \to \infty} \frac{E\left\{{}^\omega S_T(\vec{r},\nu)\right\}}{T}.
 		\end{equation}
+		The order of the operations in \eqref{eq:SpecW}, first the ensemble average and then the
+		limit, is not a matter of taste. The quantity ${}^\omega S_{T}/T$ of a single realisation,
+		called the periodogram, does not converge as $T\to\infty$: for thermal light its
+		fluctuations about the mean remain as large as the mean itself however long we observe
+		\citep{goodman2015statistical}, and the spectrum of one realisation is as speckled as a
+		laser spot on a rough wall. A spectrometer provides the missing average by integrating
+		over its finite resolution bandwidth.
 
-		Since we already possess a tool to study, in each event or realisation, the power spectral
-		density, then, through its ensemble average, we can find the total density, that is,
-
-		\begin{equation}
-			S(\vec{r},\nu) = E\left\{^\omega S(\vec{r},\nu)\right\},
-		\end{equation}
-
-		introducing equations \eqref{eq:SpecWT} and \eqref{eq:SpecW} we then have
+		We now evaluate \eqref{eq:SpecW}, and we shall do it in an order that keeps the
+		single realisation in view for as long as possible, because this is what will let us see
+		where stationarity acts and where ergodicity acts. Writing the modulus squared in
+		\eqref{eq:SpecWT} as the product of the integral by its complex conjugate, and giving the
+		conjugated factor its own integration variable $t'$ so that the two integrals do not get
+		mixed up,
 
 		\begin{align}
-			& S(\vec{r},\nu) = E\left\{ \lim_{T \to \infty} \left| \frac{1}{T} \int_{-T/2}^{T/2}\;^\omega \mathcal{E}(\vec{r},t)e^{i2\pi\nu t}dt \right|^2 \right\},\\
-			& S(\vec{r},\nu) = \lim_{T \to \infty} \frac{1}{T}  \int_{-T/2}^{T/2}\int_{-T/2}^{T/2} E \left\{ \mathcal{E}(\vec{r},t)\mathcal{E}^*(\vec{r}',t') \right\} e^{i2\pi\nu(t-t')}dt\,dt',\\
-			& S(\vec{r},\nu) = \int_{\mathbb{R}}\Gamma(\vec{r},\vec{r}';\tau)e^{i2\pi\nu \tau}d\tau,
+			{}^\omega S_{T}(\vec{r},\nu) &= \left(\int_{-T/2}^{T/2}\omega(\vec{r},t)\,e^{i2\pi\nu t}\,\mathrm{d}t\right)\left(\int_{-T/2}^{T/2}\omega(\vec{r},t')\,e^{i2\pi\nu t'}\,\mathrm{d}t'\right)^{*} \nonumber\\
+			&= \int_{-T/2}^{T/2}\int_{-T/2}^{T/2}\omega(\vec{r},t)\,\omega^{*}(\vec{r},t')\,e^{i2\pi\nu(t-t')}\,\mathrm{d}t\,\mathrm{d}t' . \label{eq:SpecWTdouble}
 		\end{align}
+		The product of the two one dimensional integrals may be written as a double integral
+		over the square $Q_{T}=[-T/2,T/2]\times[-T/2,T/2]$ of the $(t,t')$ plane because the
+		integrand is absolutely integrable there: $\iint_{Q_{T}}|\omega(\vec{r},t)|\,|\omega(\vec{r},t')|\,\mathrm{d}t\,\mathrm{d}t'
+		=\left(\int_{-T/2}^{T/2}|\omega(\vec{r},t)|\,\mathrm{d}t\right)^{2}\leq T\,W_{T}(\omega)$
+		by the Cauchy-Schwarz inequality on the window, and $W_{T}(\omega)$ is finite for almost
+		every $\omega$, as we have just seen. Fubini's theorem therefore allows us to integrate
+		over $Q_{T}$ in any order and with any change of variables we like.
 
-		\begin{equation}\label{eq:WienerKhinchin}
-			\boxed{S(\vec{r},\nu) = \mathcal{F}\left\{ \Gamma(\vec{r},\vec{r}',\tau) \right\}}.
+		The integrand of \eqref{eq:SpecWTdouble} involves the two instants $t$ and $t'$
+		separately, but the exponential already depends only on their difference, and we shall
+		see in a moment that, on average, so does the product of fields. This suggests taking as
+		new variables the first instant and the delay,
+
+		\begin{equation}\label{eq:ChangeTtau}
+			\begin{split}
+				\Phi:\; Q_{T} &\longrightarrow R_{T}\\
+				(t,t') &\longmapsto (t,\tau) = (t,\,t'-t),
+			\end{split}
+			\qquad\qquad
+			\frac{\partial(t,t')}{\partial(t,\tau)} = \det\begin{pmatrix} \dfrac{\partial t}{\partial t} & \dfrac{\partial t}{\partial \tau}\\[2mm] \dfrac{\partial t'}{\partial t} & \dfrac{\partial t'}{\partial \tau}\end{pmatrix}
+			= \det\begin{pmatrix} 1 & 0\\ 1 & 1\end{pmatrix} = 1 ,
+		\end{equation}
+		where we used the inverse map $t'=t+\tau$. The Jacobian is one, so
+		$\mathrm{d}t\,\mathrm{d}t'=\mathrm{d}t\,\mathrm{d}\tau$: the map is a shear, which slides
+		every horizontal line of the plane without stretching it, and areas are preserved. What
+		does change is the shape of the integration domain. Following the four corners of the
+		square,
+
+		\begin{equation}
+			\left(-\tfrac{T}{2},-\tfrac{T}{2}\right)\mapsto\left(-\tfrac{T}{2},0\right),\quad
+			\left(\tfrac{T}{2},-\tfrac{T}{2}\right)\mapsto\left(\tfrac{T}{2},-T\right),\quad
+			\left(\tfrac{T}{2},\tfrac{T}{2}\right)\mapsto\left(\tfrac{T}{2},0\right),\quad
+			\left(-\tfrac{T}{2},\tfrac{T}{2}\right)\mapsto\left(-\tfrac{T}{2},T\right),
+		\end{equation}
+		the square $Q_{T}$ becomes the parallelogram $R_{T}$ of the $(t,\tau)$ plane with these
+		four vertices, described by the two conditions
+
+		\begin{equation}\label{eq:RegionRT}
+			R_{T} = \left\{(t,\tau)\;\middle|\; -\frac{T}{2}\leq t\leq\frac{T}{2}\quad\text{and}\quad -\frac{T}{2}\leq t+\tau\leq\frac{T}{2}\right\}.
+		\end{equation}
+		The delay ranges over $-T\leq\tau\leq T$, since two instants of a window of duration $T$
+		can be at most $T$ apart, and Fubini lets us cut $R_{T}$ into horizontal strips of
+		constant $\tau$ and integrate first along each strip. On the strip of height $\tau$ the
+		instant $t$ must satisfy both conditions of \eqref{eq:RegionRT}, that is
+		$t\geq\max\left(-\tfrac{T}{2},-\tfrac{T}{2}-\tau\right)$ and
+		$t\leq\min\left(\tfrac{T}{2},\tfrac{T}{2}-\tau\right)$. For $\tau\geq0$ the binding
+		conditions are $t\geq-T/2$ and $t\leq T/2-\tau$, and for $\tau<0$ they are
+		$t\geq-T/2-\tau$ and $t\leq T/2$, so that
+
+		\begin{equation}\label{eq:StripLimits}
+			t\in I_{T}(\tau) =
+			\begin{cases}
+				\left[-\frac{T}{2},\;\frac{T}{2}-\tau\right], & 0\leq\tau\leq T,\\[2mm]
+				\left[-\frac{T}{2}-\tau,\;\frac{T}{2}\right], & -T\leq\tau<0,
+			\end{cases}
+			\qquad\qquad
+			|I_{T}(\tau)| = T-|\tau| .
+		\end{equation}
+		The length of the strip is $T-|\tau|$ in both cases, which is the elementary fact that
+		inside a window of duration $T$ the pairs of instants separated by $\tau$ can only be
+		formed during a time $T-|\tau|$; the strips shrink linearly from the full window at
+		$\tau=0$ to nothing at $\tau=\pm T$. Rewriting \eqref{eq:SpecWTdouble} in the new
+		variables, with $t'=t+\tau$ and $e^{i2\pi\nu(t-t')}=e^{-i2\pi\nu\tau}$, and dividing by
+		$T$,
+
+		\begin{align}
+			\frac{{}^\omega S_{T}(\vec{r},\nu)}{T}
+			&= \frac{1}{T}\iint_{R_{T}}\omega(\vec{r},t)\,\omega^{*}(\vec{r},t+\tau)\,e^{-i2\pi\nu\tau}\,\mathrm{d}t\,\mathrm{d}\tau \nonumber\\
+			&= \int_{-T}^{T}\left[\frac{1}{T}\int_{I_{T}(\tau)}\omega(\vec{r},t)\,\omega^{*}(\vec{r},t+\tau)\,\mathrm{d}t\right]e^{-i2\pi\nu\tau}\,\mathrm{d}\tau
+			\equiv \int_{-T}^{T}{}^{\omega}C_{T}(\vec{r};\tau)\,e^{-i2\pi\nu\tau}\,\mathrm{d}\tau , \label{eq:PeriodogramCorrelogram}
+		\end{align}
+		where the exponential has left the inner integral because it does not depend on $t$.
+		This is still an exact statement about one realisation, with no average and no
+		hypothesis on the source. The bracket ${}^{\omega}C_{T}(\vec{r};\tau)$ multiplies the
+		field by its own conjugate a delay $\tau$ later and accumulates the product while
+		sliding along the record: it is the correlation of the beam with itself measured by
+		time integration, which is exactly what a Michelson interferometer with path difference
+		$C\tau$ builds up during an exposure of duration $T$. The periodogram of a single
+		realisation is the Fourier transform of this measured correlation.
+
+		We can now follow the coherence function as each hypothesis is switched on. Taking the
+		expectation of the bracket, $E$ may be carried inside the $t$ integral by Fubini's
+		theorem, since by \eqref{eq:CauchySchwarzProb} and \eqref{eq:FiniteEnergy}
+		$E\{|\mathcal{E}(\vec{r},t)\,\mathcal{E}^{*}(\vec{r},t+\tau)|\}\leq\Gamma(\vec{r};t,t)^{1/2}\,\Gamma(\vec{r};t+\tau,t+\tau)^{1/2}$,
+		which for a stationary field is the constant $\Gamma(\vec{r};0)$, integrable over the
+		bounded interval $I_{T}(\tau)$. With no hypothesis at all the expectation produces the
+		two time coherence function \eqref{eq:SelfCoherence},
+
+		\begin{equation}\label{eq:CTnoHyp}
+			E\left\{{}^{\omega}C_{T}(\vec{r};\tau)\right\} = \frac{1}{T}\int_{I_{T}(\tau)}E\left\{\mathcal{E}(\vec{r},t)\,\mathcal{E}^{*}(\vec{r},t+\tau)\right\}\mathrm{d}t
+			= \frac{1}{T}\int_{I_{T}(\tau)}\Gamma(\vec{r};t,t+\tau)\,\mathrm{d}t ,
+		\end{equation}
+		which still depends on where in the window the pair of instants is placed, and the $t$
+		integral is a genuine integral: it averages, over the window, correlations that may be
+		different at different moments, as they are for a pulse. Stationarity, in the form
+		\eqref{eq:GammaTau}, says that $\Gamma(\vec{r};t,t+\tau)=\Gamma(\vec{r};\tau)$ for every
+		$t$, so the integrand no longer depends on the variable of integration and may be taken
+		out, leaving the length \eqref{eq:StripLimits} of the strip,
+
+		\begin{equation}\label{eq:CTstationary}
+			E\left\{{}^{\omega}C_{T}(\vec{r};\tau)\right\} = \frac{1}{T}\,\textcolor{blue}{\Gamma(\vec{r};\tau)}\int_{I_{T}(\tau)}\mathrm{d}t
+			= \frac{T-|\tau|}{T}\,\Gamma(\vec{r};\tau) = \left(1-\frac{|\tau|}{T}\right)\Gamma(\vec{r};\tau) .
+		\end{equation}
+		This is the precise sense in which stationarity simplifies the problem: it collapses the
+		two time function to a function of the delay alone and turns the $t$ integral into a
+		mere count of how many pairs separated by $\tau$ fit in the window.
+
+		Ergodicity acts on the bracket itself and not on its average. Factoring the length of
+		the strip,
+
+		\begin{equation}\label{eq:CTergodic}
+			{}^{\omega}C_{T}(\vec{r};\tau) = \left(1-\frac{|\tau|}{T}\right)\left[\frac{1}{T-|\tau|}\int_{I_{T}(\tau)}\omega(\vec{r},t)\,\omega^{*}(\vec{r},t+\tau)\,\mathrm{d}t\right],
+		\end{equation}
+		and the new bracket is the time average of $\omega(\vec{r},t)\,\omega^{*}(\vec{r},t+\tau)$
+		over a window of length $T-|\tau|$ whose two ends run off to $-\infty$ and $+\infty$ as
+		$T\to\infty$ (each half of the window is a one sided average, and Birkhoff's theorem
+		guarantees that the forward and the backward averages converge to the same limit). By
+		\eqref{eq:GammaTimeAverage}, for every fixed $\tau$ and almost every $\omega$,
+
+		\begin{equation}\label{eq:CTlimit}
+			\lim_{T\to\infty}{}^{\omega}C_{T}(\vec{r};\tau)
+			= \underbrace{\lim_{T\to\infty}\left(1-\frac{|\tau|}{T}\right)}_{=\,1}\;\lim_{T\to\infty}\frac{1}{T-|\tau|}\int_{I_{T}(\tau)}\omega(\vec{r},t)\,\omega^{*}(\vec{r},t+\tau)\,\mathrm{d}t
+			= \Gamma(\vec{r};\tau) .
+		\end{equation}
+		The chain of the three expressions is the content of the argument. Without hypotheses
+		the coherence function is a function $\Gamma(\vec{r};t,t')$ of two instants and an
+		average over the ensemble; stationarity reduces it to a function $\Gamma(\vec{r};\tau)$
+		of the delay, so that the window only weighs it with the triangle $1-|\tau|/T$;
+		ergodicity identifies that same function with the time integral that a single beam
+		accumulates in the laboratory,
+
+		\begin{equation}
+			\Gamma(\vec{r};t,t') = E\left\{\mathcal{E}(\vec{r},t)\,\mathcal{E}^{*}(\vec{r},t')\right\}
+			\;\xrightarrow{\;\text{stationarity}\;}\;
+			\Gamma(\vec{r};\tau)
+			\;\xrightarrow{\;\text{ergodicity}\;}\;
+			\lim_{T\to\infty}\frac{1}{T}\int_{-T/2}^{T/2}\omega(\vec{r},t)\,\omega^{*}(\vec{r},t+\tau)\,\mathrm{d}t .
+		\end{equation}
+		The integral over the ensemble has become an integral over time, and the double integral
+		over $t$ and $t'$ has become a single integral over the delay, the integral over the
+		remaining instant $t$ having been absorbed either into the length $T-|\tau|$ (on average)
+		or into the time average (along one realisation).
+
+		A word of caution is needed before the limit. Equation \eqref{eq:CTlimit} holds for each
+		fixed $\tau$, but the periodogram \eqref{eq:PeriodogramCorrelogram} integrates
+		${}^{\omega}C_{T}$ up to $|\tau|=T$, where the strip is short and the time average is
+		taken over almost nothing; these poorly estimated delays are what keep the periodogram of
+		a single realisation from converging, as remarked after \eqref{eq:SpecW}. This is why the
+		definition takes the expectation first. Doing so in \eqref{eq:PeriodogramCorrelogram},
+		where $E$ passes through the $\tau$ integral by the same Fubini argument, and inserting
+		\eqref{eq:CTstationary},
+
+		\begin{equation}
+			\frac{E\left\{{}^\omega S_{T}(\vec{r},\nu)\right\}}{T}
+			= \int_{-T}^{T}E\left\{{}^{\omega}C_{T}(\vec{r};\tau)\right\}e^{-i2\pi\nu\tau}\,\mathrm{d}\tau
+			= \int_{-T}^{T}\left(1-\frac{|\tau|}{T}\right)\Gamma(\vec{r};\tau)\,e^{-i2\pi\nu\tau}\,\mathrm{d}\tau .
+		\end{equation}
+		It remains to let $T\to\infty$. Extending the integrand by zero for $|\tau|>T$, the
+		triangular factor tends to one for every fixed $\tau$, and the integrand is bounded in
+		modulus by $|\Gamma(\vec{r};\tau)|$ uniformly in $T$. If the coherence function is
+		integrable, which is the statement that correlations die out after a finite coherence
+		time, the dominated convergence theorem allows the limit to be taken inside the integral,
+		and
+
+		\begin{equation}
+			S(\vec{r},\nu) = \int_{\mathbb{R}}\Gamma(\vec{r};\tau)\,e^{-i2\pi\nu\tau}\,\mathrm{d}\tau ,
 		\end{equation}
 
+		\begin{equation}\label{eq:WienerKhinchin}
+			\boxed{S(\vec{r},\nu) = \mathcal{F}\left\{ \Gamma(\vec{r};\tau) \right\}, \qquad \Gamma(\vec{r};\tau) = \int_{\mathbb{R}}S(\vec{r},\nu)\,e^{i2\pi\nu\tau}\,\mathrm{d}\nu }.
+		\end{equation}
+		The sign of the exponent is the one dictated by the analytic signal: the field contains
+		factors $e^{-i2\pi\nu t}$, so $\mathcal{E}(t)\mathcal{E}^{*}(t+\tau)$ oscillates as
+		$e^{+i2\pi\nu\tau}$, and the transform that extracts $S$ carries the opposite sign.
+
 		Result \eqref{eq:WienerKhinchin} reads: the Fourier transform of the coherence function
-		corresponds to the power spectral density, and is known as the WienerKhinchin theorem.
+		is the power spectral density, and it is known as the Wiener-Khinchin theorem. Every step
+		of the derivation has a physical reading. The truncation was forced on us because the
+		stationary field has infinite energy; the division by $T$ converted energy into power;
+		the shear \eqref{eq:ChangeTtau} reorganised the double integral by delays;
+		stationarity was used exactly once, in \eqref{eq:CTstationary}, to replace the
+		correlation at two instants by $\Gamma(\vec{r};\tau)$; ergodicity, in
+		\eqref{eq:CTlimit}, guarantees that this $\Gamma$ is the correlation that a single beam
+		actually delivers to an interferometer, so that the spectrum we compute is the spectrum
+		of the light in the laboratory and not of a fictitious ensemble; and the triangular
+		window $1-|\tau|/T$ records that an observation of duration $T$ samples the delay $\tau$
+		only during a time $T-|\tau|$, so the measured spectrum converges to the true one once
+		$T$ is much longer than the coherence time. Evaluating the inverse relation at $\tau=0$ gives
+		$\Gamma(\vec{r};0)=\int_{\mathbb{R}}S(\vec{r},\nu)\,\mathrm{d}\nu$: the mean intensity
+		is the sum of the powers carried by all frequencies, finite exactly as the energy was
+		not. Moreover $S\geq0$, being a limit of expectations of non negative quantities, so the
+		Fourier transform of a coherence function can never be negative, which is the spectral
+		face of the non negative definiteness \eqref{eq:GammaPositive}.
+
 		Its use is fundamental, since it tells us that by methods such as spectrometry we can find
-		the coherence function of any phenomenon; we can even go further, since this result really
-		stems from something more general - the correlation function - meaning that every
-		stochastic phenomenon has an associated spectrum, and from the measurements or estimates of
-		that spectrum we can compute the correlations in the system.
+		the coherence function of any phenomenon, and conversely. This is the principle of Fourier
+		transform spectroscopy: a Michelson interferometer measures the visibility of the fringes
+		as a function of the path difference, that is, $\Gamma(\vec{r};\tau)$ as a function of
+		$\tau$, and a Fourier transform turns that record into the spectrum of the source. We can
+		even go further, since this result really stems from something more general, the
+		correlation function, meaning that every stationary stochastic phenomenon has an
+		associated spectrum, and from the measurements or estimates of that spectrum we can
+		compute the correlations in the system.
 
 		If we make a simple observation, the optical range of radiation - the visible - is a
 		band of very low frequencies relative to the whole spectrum; the visible runs roughly from
 		$400$~nm to $700$~nm, and we may say that all of optics is \textit{narrowband}. This obeys
 		the inequality
 
-		\begin{equation}
+		\begin{equation}\label{eq:NarrowBand}
 			\frac{\triangle \nu}{\nu} \ll 1,
 		\end{equation}
 
 		and, in this narrowband regime, the coherence function takes the form
 
-		\begin{equation}
-			\Gamma(\vec{r};\tau) = \tilde{\Gamma}(\vec{r})e^{i2\pi \tilde{\nu}\tau},
+		\begin{equation}\label{eq:NarrowBandGamma}
+			\Gamma(\vec{r};\tau) = \tilde{\Gamma}(\vec{r};\tau)\,e^{i2\pi \tilde{\nu}\tau},
 		\end{equation}
 
 		which we can represent graphically as shown in Figure~\ref{fig:narrow}, where one can see
@@ -1314,7 +1725,7 @@
 		where $C$ is the speed of light in vacuum. We also have, by Fourier analysis,
 
 		\begin{equation}\label{eq:EandFourier}
-			\mathcal{E}(\vec{r},t) = \int_0^{\infty} \tilde{\mathcal{E}}(\vec{r},\nu) e^{-i2\pi\nu t}d\nu .
+			\mathcal{E}(\vec{r},t) = 2\int_0^{\infty} \tilde{\mathcal{E}}(\vec{r},\nu) e^{-i2\pi\nu t}d\nu .
 		\end{equation}
 
 		And if we apply the d'Alembertian operator $\square = \nabla^2 -
@@ -1322,7 +1733,7 @@
 		that $\tilde{\mathcal{E}}(\vec{r},\nu)$ has the form of a Helmholtz-type equation, that is,
 
 		\begin{equation}
-			\nabla^2 \mathcal{E}(\vec{r},t) - \frac{1}{C^2}\frac{\partial^2 \mathcal{E}(\vec{r},t)}{\partial t^2} = \int_0^{\infty} \left[ \nabla^2 \tilde{\mathcal{E}}(\vec{r},\nu) + k^2 \tilde{\mathcal{E}}(\vec{r},\nu) \right]e^{-i2\pi\nu t}d\nu,
+			\nabla^2 \mathcal{E}(\vec{r},t) - \frac{1}{C^2}\frac{\partial^2 \mathcal{E}(\vec{r},t)}{\partial t^2} = 2\int_0^{\infty} \left[ \nabla^2 \tilde{\mathcal{E}}(\vec{r},\nu) + k^2 \tilde{\mathcal{E}}(\vec{r},\nu) \right]e^{-i2\pi\nu t}d\nu,
 		\end{equation}
 
 		which leads us to the fact that the electric field, as an analytic and complex signal, also
@@ -1366,7 +1777,7 @@
 		that is, without doubt, remarkable. We can take this result even further and study this
 		propagation in the next section.
 
-	\subsection{Propagation of coherence and the direction of time: the van CittertZernike theorem}
+	\subsection{Propagation of coherence and the direction of time: the van Cittert-Zernike theorem}
 
 		\begin{figure}[htbp]
 			\centering
@@ -1375,40 +1786,83 @@
 			\label{fig:propagation}
 		\end{figure}
 
-		As we know, the electric field obeys a wave-type equation and the orientation of the
-		fields is given by the polarisation of the field; in turn, as we saw in the diffraction
-		chapter (see Section~\ref{Sec:Diffraction}), at the classical level light fundamentally
-		propagates as spherical waves, as illustrated in Figure~\ref{fig:propagation}, and at each
-		point of the wavefront the components of the electric field oscillate randomly, but within
-		the mean polarisation ellipse of their representative state. Mathematically we can
-		represent this component as
+		The problem solved by van Cittert and Zernike is the following. On the plane $z=0$ there
+		is a source, or an aperture illuminated by one, whose coherence function
+		$\Gamma_{0}(\vec{r},\vec{r}\,';\tau)$ we know, and we want to find the coherence function
+		$\Gamma(\vec{r}_{1},\vec{r}_{2};\tau)$ on a plane placed at a distance $z$, as illustrated
+		in Figure~\ref{fig:propagation}. The way to do it is already contained in the choice
+		\eqref{eq:FieldSampleSpace} of the sample space: every realisation $\omega$ is a solution
+		of Maxwell's equations, randomness enters only through the source, and therefore each
+		realisation propagates exactly as a deterministic field does in the diffraction chapter
+		(see Section~\ref{Sec:Diffraction}). We propagate the realisations and then average, and
+		the statistics are simply carried along by the propagation. As in the definition
+		\eqref{eq:CoherenceFunction} we work with a single Cartesian component $\mathcal{E}$ of
+		the analytic signal, so the treatment is scalar: at each point of the wavefront that
+		component oscillates randomly, but within the mean polarisation ellipse of its
+		representative state.
+
+		We start from one spectral component. For the frequency $\nu$, with wavenumber
+		$k=2\pi\nu/C$ and wavelength $\lambda=C/\nu$, the Huygens-Fresnel principle
+		\eqref{eq:RSfinal} gives the field at an observation point $\vec{r}_{1}$ as a sum of
+		spherical wavelets emitted by the points $\vec{r}$ of the plane $\Sigma$ of the source,
+
+		\begin{equation}\label{eq:VCZspectral}
+			\tilde{\mathcal{E}}(\vec{r}_{1},\nu) = \frac{1}{i\lambda}\int_{\Sigma}\tilde{\mathcal{E}}(\vec{r},\nu)\,\frac{e^{ikR_{1}}}{R_{1}}\,\cos\theta_{1}\,\mathrm{d}\sigma,
+			\qquad R_{1} = \|\vec{r}_{1}-\vec{r}\|, \qquad \cos\theta_{1} = \hat{z}\cdot\frac{\vec{r}_{1}-\vec{r}}{R_{1}},
+		\end{equation}
+		where, exactly as in \eqref{eq:RSobliquity}, the obliquity angle is measured from the
+		vector that goes from the source point to the observation point. Strictly speaking, by
+		the theorem proved in the previous subsection a stationary realisation has no Fourier
+		transform; \eqref{eq:VCZspectral} must be read for the truncated realisation
+		\eqref{eq:NearlyWiener}, with a window much longer than any propagation time involved.
+		This is harmless, because the result we are about to reach is written entirely in the
+		time domain and no longer contains any Fourier transform.
+
+		To return to the time domain we insert \eqref{eq:VCZspectral} into the analytic signal
+		\eqref{eq:AnalyticSignal}, write $1/\lambda=\nu/C$ and $kR_{1}=2\pi\nu R_{1}/C$, and
+		collect the two exponentials,
+
+		\begin{align}
+			\mathcal{E}(\vec{r}_{1},t) &= 2\int_{0}^{\infty}\tilde{\mathcal{E}}(\vec{r}_{1},\nu)\,e^{-i2\pi\nu t}\,\mathrm{d}\nu
+			= 2\int_{0}^{\infty}\frac{\textcolor{blue}{\nu}}{i\textcolor{blue}{C}}\int_{\Sigma}\tilde{\mathcal{E}}(\vec{r},\nu)\,\frac{e^{\textcolor{blue}{i2\pi\nu R_{1}/C}}}{R_{1}}\,\cos\theta_{1}\,\mathrm{d}\sigma\;e^{-i2\pi\nu t}\,\mathrm{d}\nu \nonumber\\
+			&= \frac{1}{iC}\int_{\Sigma}\frac{\cos\theta_{1}}{R_{1}}\left[2\int_{0}^{\infty}\nu\,\tilde{\mathcal{E}}(\vec{r},\nu)\,e^{-i2\pi\nu\left(t-R_{1}/C\right)}\,\mathrm{d}\nu\right]\mathrm{d}\sigma , \label{eq:VCZtimeExact}
+		\end{align}
+		where the order of the two integrations was exchanged, since the source occupies a
+		bounded region and the spectrum a finite band. The bracket would be the analytic signal
+		at the source evaluated at the instant $t-R_{1}/C$, were it not for the factor $\nu$.
+		That factor is what turns a field into its time derivative, because
+		$\partial_{t}e^{-i2\pi\nu t}=-i2\pi\nu\,e^{-i2\pi\nu t}$, so that the bracket equals
+		$\frac{i}{2\pi}\,\dot{\mathcal{E}}(\vec{r},t-R_{1}/C)$ and \eqref{eq:VCZtimeExact} is the
+		exact statement
 
 		\begin{equation}
-			\mathcal{E}_z(\vec{r}_1,\nu) = \frac{i}{\lambda} \int_{\Sigma} \mathcal{E}_0 (\vec{r},\nu) \frac{e^{ik \|\vec{r}_1-\vec{r}\|}}{\|\vec{r}_1-\vec{r}\|}\cos(\hat{z}; \vec{r}_1-\vec{r})\,d\sigma .
+			\mathcal{E}(\vec{r}_{1},t) = \frac{1}{2\pi C}\int_{\Sigma}\frac{\partial\mathcal{E}}{\partial t}\left(\vec{r},\,t-\frac{R_{1}}{C}\right)\frac{\cos\theta_{1}}{R_{1}}\,\mathrm{d}\sigma .
 		\end{equation}
+		Two features of this expression carry the physics. The first is causality: the field at
+		$\vec{r}_{1}$ at the instant $t$ is built from what the source did at the
+		\textit{retarded} instant $t-R_{1}/C$, the moment at which the light that arrives now left
+		the point $\vec{r}$. The second is that the source enters through its time derivative,
+		which is the time domain face of the factor $1/\lambda$ of the Huygens-Fresnel principle:
+		higher frequencies radiate more efficiently.
 
-		Using equation \eqref{eq:EandFourier} we have
-
-		\begin{equation}
-			\mathcal{E}_z(\vec{r}_1,t) = \frac{1}{i}\int_{\mathbb{R}^+} \frac{\nu}{V} \int_{\Sigma} \mathcal{E}_0(\vec{r},\nu)\frac{\cos\left(  \hat{z}; \vec{r}_1 - \vec{r} \right)}{\|\vec{r}_1 - \vec{r}\|} e^{i2\pi \nu \left( t + \frac{\|\vec{r}_1 - \vec{r}\|}{V} \right)} d\sigma\, d\nu,
-		\end{equation}
-
-		where $V$ is the propagation velocity of the envelope. Rewriting a little more, we have
-
-		\begin{equation}
-			\mathcal{E}_z(\vec{r}_1,t) = \frac{1}{i} \int_{\Sigma} \frac{\cos\left( \hat{z}; \vec{r}_1-\vec{r} \right)}{\|\vec{r}_1 -\vec{r}\|} \int _{\mathbb{R}^+} \frac{\nu}{V} \mathcal{E}_0 (\vec{r},\nu)e^{i2\pi\nu \left(t + \frac{\|\vec{r}_1 - \vec{r}\|}{V}\right)}d\nu\, d\sigma,
-		\end{equation}
-
-		and, taking the narrowband approximation, we have
+		For narrowband light \eqref{eq:NarrowBand} the spectrum $\tilde{\mathcal{E}}(\vec{r},\nu)$
+		is concentrated in a band of width $\triangle\nu\ll\tilde{\nu}$ about the central
+		frequency, so inside the bracket $\nu$ may be replaced by $\tilde{\nu}$, with a relative
+		error of the order of $\triangle\nu/\tilde{\nu}$, and taken out of the integral. What
+		remains is $\tilde{\nu}\,\mathcal{E}(\vec{r},t-R_{1}/C)$, and with the mean wavelength
+		$\tilde{\lambda}=C/\tilde{\nu}$,
 
 		\begin{equation}\label{eq:IntegralEz}
-			\mathcal{E}_z(\vec{r}_1,t) = \frac{1}{i\tilde{\lambda}} \int_{\Sigma} \mathcal{E}_0 \left(\vec{r}, t +\frac{\|\vec{r}_1 - \vec{r}\|}{V}\right) \frac{\cos\left(\hat{z} ; \vec{r}_1 - \vec{r}\right)}{\|\vec{r}_1-\vec{r}\|} d\sigma .
+			\mathcal{E}(\vec{r}_{1},t) = \frac{1}{i\tilde{\lambda}}\int_{\Sigma}\mathcal{E}\left(\vec{r},\,t-\frac{R_{1}}{C}\right)\frac{\cos\theta_{1}}{R_{1}}\,\mathrm{d}\sigma .
 		\end{equation}
+		Notice that the approximation touches only the amplitude factor $\nu$; the phase
+		$2\pi\nu R_{1}/C$, which is enormous, has been kept exactly in the form of the retarded
+		time.
 
-		We can visualise graphically how we intend to propagate in Figure~\ref{fig:propagation2},
-		where we observe that we are starting from the coherence function between two points
-		$\vec{r},\vec{r}'$ at instants $t,t'$, respectively, and carrying it to a coherence function
-		at the points $\vec{r}_1,\vec{r}_2$ at two instants $t_1,t_2$, respectively.
+		We can visualise graphically how we intend to propagate in Figure~\ref{fig:propagation2}:
+		we start from the coherence function between two points $\vec{r},\vec{r}\,'$ of the source
+		and carry it to the coherence function between two points $\vec{r}_{1},\vec{r}_{2}$ of the
+		observation plane.
 
 		\begin{figure}[htbp]
 			\centering
@@ -1417,25 +1871,42 @@
 			\label{fig:propagation2}
 		\end{figure}
 
-		Starting from equation \eqref{eq:IntegralEz} we can compute the coherence function in its
-		propagation as
+		With the convention used throughout this chapter, \eqref{eq:CoherenceFunction} with
+		$t'=t+\tau$, the coherence function on the observation plane is
+		$\Gamma(\vec{r}_{1},\vec{r}_{2};\tau)=E\{\mathcal{E}(\vec{r}_{1},t)\,\mathcal{E}^{*}(\vec{r}_{2},t+\tau)\}$.
+		We insert \eqref{eq:IntegralEz} for each of the two factors, using an independent source
+		point $\vec{r}\,'$, with $R_{2}=\|\vec{r}_{2}-\vec{r}\,'\|$ and
+		$\cos\theta_{2}=\hat{z}\cdot(\vec{r}_{2}-\vec{r}\,')/R_{2}$, for the second, which is
+		evaluated at the instant $t+\tau$ and conjugated,
+
+		\begin{align}
+			\Gamma(\vec{r}_{1},\vec{r}_{2};\tau) &= E\left\{\frac{1}{i\tilde{\lambda}}\int_{\Sigma}\mathcal{E}\left(\vec{r},\,t-\frac{R_{1}}{C}\right)\frac{\cos\theta_{1}}{R_{1}}\,\mathrm{d}\sigma\;\cdot\;\frac{1}{-i\tilde{\lambda}}\int_{\Sigma}\mathcal{E}^{*}\left(\vec{r}\,',\,t+\tau-\frac{R_{2}}{C}\right)\frac{\cos\theta_{2}}{R_{2}}\,\mathrm{d}\sigma'\right\} \nonumber\\
+			&= \frac{1}{\tilde{\lambda}^{2}}\int_{\Sigma}\int_{\Sigma}E\left\{\mathcal{E}\left(\vec{r},\,t-\frac{R_{1}}{C}\right)\mathcal{E}^{*}\left(\vec{r}\,',\,t+\tau-\frac{R_{2}}{C}\right)\right\}\frac{\cos\theta_{1}\cos\theta_{2}}{R_{1}R_{2}}\,\mathrm{d}\sigma\,\mathrm{d}\sigma' ,
+		\end{align}
+		where $\frac{1}{i\tilde{\lambda}}\cdot\frac{1}{-i\tilde{\lambda}}=\frac{1}{-i^{2}\tilde{\lambda}^{2}}=\frac{1}{\tilde{\lambda}^{2}}$ and where the
+		expectation has been carried inside the two surface integrals by Fubini's theorem, which
+		is legitimate because by \eqref{eq:CauchySchwarzProb} and \eqref{eq:FiniteEnergy} the
+		modulus of the integrand is bounded in mean by
+		$\Gamma_{0}(\vec{r};0)^{1/2}\,\Gamma_{0}(\vec{r}\,';0)^{1/2}\,/(R_{1}R_{2})$, which is
+		integrable over a bounded source. The expectation that remains is the coherence function
+		of the source between $(\vec{r},t-R_{1}/C)$ and $(\vec{r}\,',t+\tau-R_{2}/C)$, and since
+		the source is stationary it depends only on the difference of the two instants,
 
 		\begin{equation}
-			\Gamma_z(\vec{r}_1,\vec{r}_2;\tau) = E \left\{ \mathcal{E}_z(\vec{r}_1,t) \mathcal{E}_z^*(\vec{r}_2,t-\tau) \right\},
+			\left(t+\tau-\frac{R_{2}}{C}\right)-\left(t-\frac{R_{1}}{C}\right) = \cancel{t}+\tau-\frac{R_{2}}{C}-\cancel{t}+\frac{R_{1}}{C} = \tau+\frac{R_{1}-R_{2}}{C},
 		\end{equation}
-
-		\begin{align}
-			&\Gamma_z(\vec{r}_1,\vec{r}_2;\tau) = E\left\{\frac{1}{i\tilde{\lambda}} \int_{\Sigma} \mathcal{E}_0 \left(\vec{r},t + \frac{\|\vec{r}_1 - \vec{r}\|}{V}\right) \frac{\cos\left(\hat{z};\vec{r}_1-\vec{r}\right)}{\|\vec{r}_1-\vec{r}\|}d\sigma \right. \\
-			& \left. \cdot \frac{1}{-i\tilde{\lambda}} \int_{\Sigma'} \mathcal{E}_0^* \left(\vec{r}',t - \tau + \frac{\|\vec{r}_2 - \vec{r}'\|}{V}\right) \frac{\cos\left(\hat{z};\vec{r}_2-\vec{r}'\right)}{\|\vec{r}_2-\vec{r}'\|}d\sigma'  \right\},
-		\end{align}
-
-		\begin{align}
-			& \Gamma_z(\vec{r}_1,\vec{r}_2;\tau) = \frac{1}{\tilde{\lambda}^2} \int_{\Sigma}\int_{\Sigma'} E \left\{ \mathcal{E}_0\left(\vec{r}, t + \frac{\|\vec{r}_1 - \vec{r}\|}{V}\right) \mathcal{E}_0^* \left(\vec{r}', t-\tau + \frac{\|\vec{r}_2 - \vec{r}'\|}{V}\right) \right\}\frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r}' \right) }{\|\vec{r}_2-\vec{r}'\|\cdot \|\vec{r}_1 - \vec{r}\|} d\sigma\, d\sigma',
-		\end{align}
+		so that
 
 		\begin{equation}\label{eq:IntGamma}
-			\Gamma_z (\vec{r}_1,\vec{r}_2;\tau) = \frac{1}{\tilde{\lambda}^2}\int_{\Sigma}\int_{\Sigma'} \Gamma_0 \left(\vec{r},\vec{r}';\tau + \frac{\|\vec{r}_1 - \vec{r}\| + \|\vec{r}_2 - \vec{r}'\|}{V}\right) \frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r}' \right) }{\|\vec{r}_2-\vec{r}'\|\cdot \|\vec{r}_1 - \vec{r}\|} d\sigma\, d\sigma'
+			\Gamma(\vec{r}_{1},\vec{r}_{2};\tau) = \frac{1}{\tilde{\lambda}^{2}}\int_{\Sigma}\int_{\Sigma}\Gamma_{0}\left(\vec{r},\vec{r}\,';\,\tau+\frac{R_{1}-R_{2}}{C}\right)\frac{\cos\theta_{1}\cos\theta_{2}}{R_{1}R_{2}}\,\mathrm{d}\sigma\,\mathrm{d}\sigma' .
 		\end{equation}
+		The instant $t$ has disappeared, which says that \textbf{stationarity is preserved by
+		propagation}: the light on the observation plane is again stationary, and its coherence
+		function depends on $\tau$ alone. Each pair of source points contributes its own
+		correlation, but evaluated at a delay corrected by the \emph{difference} of the two
+		travel times, $(R_{1}-R_{2})/C$, and not by their sum: what the observation compares is
+		the light emitted by $\vec{r}$ a time $R_{1}/C$ ago with the light emitted by
+		$\vec{r}\,'$ a time $R_{2}/C$ ago, so only the relative retardation matters.
 
 		\begin{figure}[htbp]
 			\centering
@@ -1447,88 +1918,155 @@
 		The propagation of the random oscillations across $n$ realisations can be visualised in
 		Figure~\ref{fig:random2}.
 
-		We are going to impose the following condition on the coherence function
+		We now specialise to the case that gives the theorem its interest, a thermal source such
+		as a lamp, a star or the Sun, in which every atom radiates independently of its
+		neighbours. The field at two distinct points of such a source is uncorrelated as soon as
+		the points are farther apart than a distance of the order of $\tilde{\lambda}$, and since
+		no detail finer than a wavelength survives propagation over distances much larger than
+		$\tilde{\lambda}$, the correlation may be idealised as a delta,
 
-		\begin{equation}
-			\Gamma(\vec{r},\vec{r}';\tau) = \Gamma(\vec{r}';\tau) \delta(\vec{r}-\vec{r}'),
+		\begin{equation}\label{eq:IncoherentSource}
+			\Gamma_{0}(\vec{r},\vec{r}\,';\tau) = \kappa\,\Gamma_{0}(\vec{r};\tau)\,\delta(\vec{r}-\vec{r}\,') .
 		\end{equation}
+		Here $\delta$ is the two dimensional delta on the plane $\Sigma$, which has dimensions of
+		an inverse area, and the constant $\kappa$, which has dimensions of area, is required so
+		that both sides of \eqref{eq:IncoherentSource} have the dimensions of an intensity; it
+		measures the small area over which the source is still correlated, and a more careful
+		treatment gives $\kappa=\tilde{\lambda}^{2}/\pi$ \citep{goodman2015statistical}. The weight
+		$\Gamma_{0}(\vec{r};\tau)$ is the mutual coherence function \eqref{eq:SelfCoherence} at
+		the source point. A field that is literally delta correlated could not exist, since it
+		would carry infinite power at infinitely fine scales, but this does not matter: we shall
+		see that $\kappa$ drops out of every normalised quantity. Inserting
+		\eqref{eq:IncoherentSource} into \eqref{eq:IntGamma}, the delta collapses the integral over
+		$\vec{r}\,'$ and sets $\vec{r}\,'=\vec{r}$ everywhere, in particular in
+		$R_{2}=\|\vec{r}_{2}-\vec{r}\|$ and in $\cos\theta_{2}$,
 
-		which, in a few words, means that, spatially speaking, the distribution representing the
-		coherence function is point-localised and weighted by the mutual coherence at the point
-		$\vec{r}'$. Imposing this on equation \eqref{eq:IntGamma} we have
-
-		\begin{equation}
-			\Gamma_z\left(\vec{r}_1,\vec{r}_2;\tau\right) = \frac{1}{\tilde{\lambda}^2}\int_{\Sigma}\Gamma_0 \left( \vec{r}; \tau + \frac{\|\vec{r}-\vec{r}_1\| - \|\vec{r} -\vec{r}_2\| }{V} \right)\frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r} \right) }{\|\vec{r}_2-\vec{r}\|\cdot \|\vec{r}_1 - \vec{r}\|} d\sigma .
+		\begin{equation}\label{eq:VCZincoherent}
+			\Gamma(\vec{r}_{1},\vec{r}_{2};\tau) = \frac{\kappa}{\tilde{\lambda}^{2}}\int_{\Sigma}\Gamma_{0}\left(\vec{r};\,\tau+\frac{R_{1}-R_{2}}{C}\right)\frac{\cos\theta_{1}\cos\theta_{2}}{R_{1}R_{2}}\,\mathrm{d}\sigma,
+			\qquad R_{1}=\|\vec{r}_{1}-\vec{r}\|,\quad R_{2}=\|\vec{r}_{2}-\vec{r}\|.
 		\end{equation}
+		The two observation points are now illuminated by the \emph{same} source points, and this
+		is the whole mechanism of the theorem: although no two points of the source are
+		correlated, every point of the source sends light to both $\vec{r}_{1}$ and
+		$\vec{r}_{2}$, and the common origin of that light correlates them.
 
 		In nature we will not always have narrowband sources; however, we can resort to another
 		argument, namely that most instruments do not have an infinite or broad range but a short
-		one - or, in other words, measurement instruments measure a narrow part of the spectrum.
-		Therefore, including the narrowband condition we have
+		one, or, in other words, measurement instruments measure a narrow part of the spectrum.
+		We therefore write the coherence function of the source in the narrowband form
+		\eqref{eq:NarrowBandGamma},
+		$\Gamma_{0}(\vec{r};\tau)=\tilde{\Gamma}_{0}(\vec{r};\tau)\,e^{i2\pi\tilde{\nu}\tau}$, an
+		envelope that varies slowly, on the scale of the coherence time
+		$\tau_{C}=\int_{\mathbb{R}}|\gamma(\vec{r};\tau)|^{2}\,\mathrm{d}\tau$
+		\citep{goodman2015statistical}, times a carrier that oscillates at the central frequency.
+		At the delay that appears in \eqref{eq:VCZincoherent},
 
 		\begin{equation}
-			\Gamma_z(\vec{r}_1,\vec{r}_2)e^{i2\pi\tilde{\nu}\tau} = \frac{1}{\tilde{\lambda}^2} \int_{\Sigma} \Gamma_0(\vec{r})e^{i2\pi\tilde{\nu} \left( \tau + \frac{\|\vec{r} - \vec{r}_1\| - \|\vec{r}-\vec{r}_2\|}{V} \right) } \frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r} \right) }{\|\vec{r}_2-\vec{r}\|\cdot \|\vec{r}_1 - \vec{r}\|} d\sigma .
+			\Gamma_{0}\left(\vec{r};\,\tau+\frac{R_{1}-R_{2}}{C}\right) = \tilde{\Gamma}_{0}\left(\vec{r};\,\tau+\frac{R_{1}-R_{2}}{C}\right)e^{i2\pi\tilde{\nu}\tau}\,e^{i2\pi\tilde{\nu}\frac{R_{1}-R_{2}}{C}} .
 		\end{equation}
+		If the delay is small compared with the coherence time, $|\tau|\ll\tau_{C}$, and the path
+		difference is small compared with the coherence length, $|R_{1}-R_{2}|\ll C\tau_{C}$,
+		the envelope has no time to change and may be evaluated at zero delay,
+		$\tilde{\Gamma}_{0}(\vec{r};0)=\Gamma_{0}(\vec{r};0)=I_{0}(\vec{r})$, which by property
+		a) is the mean intensity of the source at $\vec{r}$. The carrier, on the other hand, may
+		not be dropped, because $2\pi\tilde{\nu}(R_{1}-R_{2})/C=\tilde{k}(R_{1}-R_{2})$, with
+		$\tilde{k}=2\pi/\tilde{\lambda}$, is a phase of many radians even for tiny path
+		differences. The factor $e^{i2\pi\tilde{\nu}\tau}$ is common to the whole integral, and
+		it is the trivial oscillation of the propagated coherence function at the central
+		frequency; all the information is in what multiplies it, so we evaluate at $\tau=0$ and
+		obtain
 
-		Given the coherence time defined by $\tau_C = \int_{\mathbb{R}^+}| \gamma(\vec{r},\tau) |^2
-		d\tau$, and if we impose a condition of very small times, smaller than a coherence time
-		$\tau \ll \tau_C$, we have
-
-		\begin{equation}
-			\Gamma_z(\vec{r}_1,\vec{r}_2) = \frac{1}{\tilde{\lambda}^2}\int_{\Sigma}I_0(\vec{r})e^{i2\pi \left( \frac{\|\vec{r}-\vec{r}_1\| - \|\vec{r} - \vec{r}_2\|}{V/\tilde{\nu}} \right)} \frac{\cos \left(\hat{z};\vec{r}_1-\vec{r}\right) \cos\left(\hat{z}; \vec{r}_2 - \vec{r} \right) }{\|\vec{r}_2-\vec{r}\|\cdot \|\vec{r}_1 - \vec{r}\|} d\sigma .
+		\begin{equation}\label{eq:VCZgeneral}
+			\Gamma(\vec{r}_{1},\vec{r}_{2};0) = \frac{\kappa}{\tilde{\lambda}^{2}}\int_{\Sigma}I_{0}(\vec{r})\,e^{i\tilde{k}\left(R_{1}-R_{2}\right)}\frac{\cos\theta_{1}\cos\theta_{2}}{R_{1}R_{2}}\,\mathrm{d}\sigma .
 		\end{equation}
+		This is already the van Cittert-Zernike theorem in its general form. Its structure is
+		that of the Huygens-Fresnel integral \eqref{eq:RSfinal}, with the intensity of the source
+		playing the role of the field on the aperture, and this is what is meant by saying that
+		\textit{coherence diffracts}.
 
-		Taking the far-field approximation we can simplify the problem as follows
-
-		\begin{equation}\label{eq:IntegralProx}
-			\Gamma_z(\vec{r}_1,\vec{r}_2) = \frac{1}{\tilde{\lambda}^2 z^2} \int_{\Sigma} I_0(\vec{r}) e^{i2\pi \left( \frac{\|\vec{r}-\vec{r}_1\| - \|\vec{r} - \vec{r}_2\|}{V/\tilde{\nu}} \right)} d\sigma .
-		\end{equation}
-
-		We may now make a Taylor-series expansion, the same one performed in the diffraction
-		chapter. In this spirit the following terms become
+		To make the result transparent we place ourselves in the paraxial regime of the
+		diffraction chapter: the source and the observation region are small compared with the
+		distance $z$, so that $\cos\theta_{1}\approx\cos\theta_{2}\approx1$ and, in the amplitude,
+		$R_{1}R_{2}\approx z^{2}$, while in the phase, multiplied by the enormous $\tilde{k}$, the
+		quadratic term must be retained, exactly as in \eqref{aprox_r}. With $\vec{r}=(x,y,0)$ on
+		the source and $\vec{r}_{j}=(x_{j},y_{j},z)$ on the observation plane,
 
 		\begin{align}
-			& \|\vec{r} - \vec{r}_1\| = \left( z^2 + (x-x_1)^2 + (y-y_1)^2 \right)^{1/2} = z \left(1 + \frac{(x-x_1)^2 + (y-y_1)^2}{z^2}\right)^{1/2} \approx z + \frac{(x-x_1)^2 + (y-y_1)^2}{2z},\\
-			& \|\vec{r}-\vec{r}_2\| \approx z + \frac{(x-x_2)^2 + (y-y_2)^2}{2z}.
+			R_{1} &= \left(z^{2}+(x_{1}-x)^{2}+(y_{1}-y)^{2}\right)^{1/2} = z\left(1+\frac{(x_{1}-x)^{2}+(y_{1}-y)^{2}}{z^{2}}\right)^{1/2} \nonumber\\
+			&\approx z+\frac{(x_{1}-x)^{2}+(y_{1}-y)^{2}}{2z},\\
+			R_{2} &\approx z+\frac{(x_{2}-x)^{2}+(y_{2}-y)^{2}}{2z}.
 		\end{align}
+		Expanding the squares, $(x_{j}-x)^{2}=x_{j}^{2}-2xx_{j}+x^{2}$, and subtracting,
 
-		Introducing this into integral \eqref{eq:IntegralProx} we obtain
-
-		\begin{equation}
-			\Gamma_z (\vec{r}_1,\vec{r}_2) = \frac{1}{\tilde{\lambda}^2 z^2}\int_{\mathbb{R}^2}I_0(x,y)e^{-\frac{i2\pi}{\tilde{\lambda}z}\left(xx_1 + yy_1\right)}e^{\frac{i2\pi}{\tilde{\lambda} z}(xx_2 + yy_2)} e^{-\frac{i\pi}{\tilde{\lambda}z}(x_1^2 + y_1^2)}dx\,dy.
-		\end{equation}
-
-		Let us define the vectors $\vec{S}_1 = (x_1,y_1)$, $\vec{S}_2 = (x_2,y_2)$ and $\vec{S} =
-		(x,y)$. Then
-
-		\begin{equation}
-			\Gamma_z(\vec{S}_1,\vec{S}_2) = \frac{e^{i \frac{\pi}{\tilde{\lambda}z} (\|\vec{S}_1\|^2 - \|\vec{S}_2\|^2)}}{\tilde{\lambda}^2 z^2} \int_{\mathbb{R}^2} I_0(\vec{S})e^{-i \frac{2\pi}{\tilde{\lambda}z}\vec{S}\cdot (\vec{S}_1 - \vec{S}_2)}dS.
-		\end{equation}
-
-		If we set $\vec{S}_2 = \vec{0}$ we arrive at the Fourier integral
+		\begin{align}
+			R_{1}-R_{2} &\approx \cancel{z}-\cancel{z}+\frac{x_{1}^{2}+y_{1}^{2}-2(xx_{1}+yy_{1})+\cancel{x^{2}+y^{2}}-x_{2}^{2}-y_{2}^{2}+2(xx_{2}+yy_{2})-\cancel{x^{2}-y^{2}}}{2z} \nonumber\\
+			&= \frac{\left(x_{1}^{2}+y_{1}^{2}\right)-\left(x_{2}^{2}+y_{2}^{2}\right)}{2z}-\frac{x(x_{1}-x_{2})+y(y_{1}-y_{2})}{z}.
+		\end{align}
+		Let us define the transverse vectors $\vec{S}=(x,y)$ on the source and
+		$\vec{S}_{1}=(x_{1},y_{1})$, $\vec{S}_{2}=(x_{2},y_{2})$ on the observation plane. Since
+		$\tilde{k}/2z=\pi/\tilde{\lambda}z$ and $\tilde{k}/z=2\pi/\tilde{\lambda}z$, the phase of
+		\eqref{eq:VCZgeneral} is
 
 		\begin{equation}
-			\boxed{ \Gamma_z (\vec{S}_1)  = \frac{e^{\frac{i\pi}{\tilde{\lambda}z}\|\vec{S}_1\|^2} }{\tilde{\lambda}^2z^2}\int_{\mathbb{R}^2} \Gamma_0(\vec{S}) e^{-\frac{i2\pi}{\tilde{\lambda}z}\vec{S}\cdot\vec{S}_1}dS},
+			\tilde{k}\left(R_{1}-R_{2}\right) \approx \underbrace{\frac{\pi}{\tilde{\lambda}z}\left(\|\vec{S}_{1}\|^{2}-\|\vec{S}_{2}\|^{2}\right)}_{\equiv\,\psi(\vec{S}_{1},\vec{S}_{2})}-\frac{2\pi}{\tilde{\lambda}z}\,\vec{S}\cdot\left(\vec{S}_{1}-\vec{S}_{2}\right),
 		\end{equation}
+		and, since $I_{0}$ vanishes outside the source, the integral may be extended to the whole
+		plane,
 
-		which, basically, means that the correlations, under all the approximations we have made,
-		propagate by means of a Fourier integral; or, what is the same, the van CittertZernike
-		theorem tells us that coherence diffracts - it propagates naturally as a diffraction
-		integral (see Figure~\ref{fig:fouriergamma}).
+		\begin{equation}\label{eq:VanCittertZernike}
+			\boxed{\Gamma(\vec{S}_{1},\vec{S}_{2};0) = \frac{\kappa\,e^{i\psi(\vec{S}_{1},\vec{S}_{2})}}{\tilde{\lambda}^{2}z^{2}}\int_{\mathbb{R}^{2}}I_{0}(\vec{S})\,e^{-i\frac{2\pi}{\tilde{\lambda}z}\vec{S}\cdot\left(\vec{S}_{1}-\vec{S}_{2}\right)}\,\mathrm{d}^{2}S }.
+		\end{equation}
+		Up to the phase factor $e^{i\psi}$, the coherence between two points of the observation
+		plane is the two dimensional Fourier transform of the intensity of the source, evaluated
+		at the spatial frequency $(\vec{S}_{1}-\vec{S}_{2})/\tilde{\lambda}z$, with the same sign
+		convention as the Fraunhofer integral \eqref{eq:FresnelThreeFactors}. Two remarks make
+		the content precise. The first is that the quadratic phase in the source coordinates,
+		$x^{2}+y^{2}$, has cancelled exactly, because both distances are measured from the same
+		source point; for this reason \eqref{eq:VanCittertZernike} requires only the paraxial
+		approximation, and not the far field condition that the Fraunhofer formula of diffraction
+		demands. The second is that $\kappa$ disappears from the normalised quantity. The
+		intensity on the observation plane is
+		$I(\vec{S}_{1})=\Gamma(\vec{S}_{1},\vec{S}_{1};0)=\kappa\int I_{0}\,\mathrm{d}^{2}S/\tilde{\lambda}^{2}z^{2}$,
+		since $\psi(\vec{S}_{1},\vec{S}_{1})=0$, so the complex degree of coherence between the
+		two observation points is
+
+		\begin{equation}\label{eq:VCZdegree}
+			\gamma(\vec{S}_{1},\vec{S}_{2}) = \frac{\Gamma(\vec{S}_{1},\vec{S}_{2};0)}{\sqrt{I(\vec{S}_{1})\,I(\vec{S}_{2})}}
+			= e^{i\psi(\vec{S}_{1},\vec{S}_{2})}\,\frac{\displaystyle\int_{\mathbb{R}^{2}}I_{0}(\vec{S})\,e^{-i\frac{2\pi}{\tilde{\lambda}z}\vec{S}\cdot\left(\vec{S}_{1}-\vec{S}_{2}\right)}\,\mathrm{d}^{2}S}{\displaystyle\int_{\mathbb{R}^{2}}I_{0}(\vec{S})\,\mathrm{d}^{2}S},
+		\end{equation}
+		which contains no trace of $\kappa$ and whose modulus depends only on the separation
+		$\vec{S}_{1}-\vec{S}_{2}$ of the two points. Taking the reference point on the axis,
+		$\vec{S}_{2}=\vec{0}$, the coherence of every other point with it is the Fourier
+		integral of the intensity, as shown in Figure~\ref{fig:fouriergamma}.
 
 		\begin{figure}[htbp]
 			\centering
 			\includegraphics[width=0.65\linewidth]{Chapter 6/Figures/FourierGamma}
-			\caption{The mutual coherence propagated to the far field is the Fourier transform of the intensity distribution $\Gamma_0(\vec{S})$ of the source.}
+			\caption{The mutual coherence propagated to the observation plane is the Fourier transform of the intensity distribution $I_0(\vec{S})$ of the source.}
 			\label{fig:fouriergamma}
 		\end{figure}
+
+		The physical consequence is immediate from the reciprocity of Fourier widths. A source of
+		transverse size $D$ has an intensity whose transform has a width of the order of
+		$\tilde{\lambda}z/D$, so the light it produces at a distance $z$ is coherent over a
+		transverse distance $\ell_{C}\sim\tilde{\lambda}z/D=\tilde{\lambda}/\alpha$, where
+		$\alpha=D/z$ is the angle subtended by the source. The smaller the source looks, the
+		larger the patch over which its light is coherent. For the Sun, with
+		$\alpha\approx9.3\times10^{-3}$~rad and $\tilde{\lambda}\approx550$~nm, this gives a
+		coherence width of some tens of micrometres, which is why Young's experiment with
+		sunlight needs pinholes very close together; for a star, whose angular size is smaller by
+		a factor of the order of $10^{5}$, it amounts to metres. Michelson and Pease turned the
+		argument around in 1920: measuring the separation of two mirrors at which the fringes of
+		Betelgeuse disappeared, they read off $|\gamma|$, inverted \eqref{eq:VCZdegree}, and
+		obtained the first measurement of the angular diameter of a star other than the Sun
+		\citep{michelson1921diameter}.
 
 		How can we tell in which direction time flows? This may sound like a question rather out of
 		context for these notes, but if we could travel back to the golden age of Boltzmann, we
 		would find a heated debate of the time on how statistical physics gives a direction to
 		time, an \textit{arrow}. Paraphrasing Boltzmann, it is said that \textit{time advances in
-		the direction in which correlations increase}. If we look at the van CittertZernike
-		theorem, we can start from two completely uncorrelated sources but, as they propagate, they
-		gradually become correlated; time grows and so does coherence, until a point is reached at
-		which the radiation of those sources is coherent. This is, without doubt, one of the
+		the direction in which correlations increase}. If we look at the van Cittert-Zernike
+		theorem, we can start from a source whose points are completely uncorrelated but, as its light
+		propagates, it gradually becomes correlated; time grows and so does coherence, until a point is reached at
+		which its radiation is coherent. This is, without doubt, one of the
 		strongest and most beautiful results we can find in statistical physics.

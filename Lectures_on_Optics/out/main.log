@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  12 OCT 2026 23:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  16 OCT 2026 14:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1733,131 +1733,123 @@ Chapter 6.
 ] (./Chapter 6/chap6.tex [258
 
 ] [259] [260] [261] [262] [263] [264] [265]
-[266] [267] [268] [269] [270] [271] [272] [273] [274] [275] [276]
-<Chapter 6/Figures/RandomVar.pdf, id=7038, 472.44035pt x 866.30989pt>
+[266] [267] [268] [269] [270] [271] [272] [273] [274] [275] [276] [277]
+[278]
+<Chapter 6/Figures/RandomVar.pdf, id=7064, 472.44035pt x 866.30989pt>
 File: Chapter 6/Figures/RandomVar.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/RandomVar.pdf>
-Package pdftex.def Info: Chapter 6/Figures/RandomVar.pdf  used on input line 10
-63.
+Package pdftex.def Info: Chapter 6/Figures/RandomVar.pdf  used on input line 11
+37.
 (pdftex.def)             Requested size: 187.89912pt x 344.54822pt.
- [277]
-[278 <./Chapter 6/Figures/RandomVar.pdf>] [279] [280] [281] [282]
-<Chapter 6/Figures/Estrecho.pdf, id=7109, 549.38483pt x 459.57813pt>
+ [279 <./Chapter 6/Figures/RandomVar.pdf>] [280] [281] [282] [283]
+[284] [285] [286] [287] [288] [289]
+<Chapter 6/Figures/Estrecho.pdf, id=7221, 549.38483pt x 459.57813pt>
 File: Chapter 6/Figures/Estrecho.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/Estrecho.pdf>
-Package pdftex.def Info: Chapter 6/Figures/Estrecho.pdf  used on input line 129
-7.
+Package pdftex.def Info: Chapter 6/Figures/Estrecho.pdf  used on input line 170
+8.
 (pdftex.def)             Requested size: 328.82706pt x 275.07579pt.
- [283 <./Chapter 6/Figures/Estrecho.pdf>] [284]
-<Chapter 6/Figures/Propagation.pdf, id=7136, 586.54031pt x 380.42159pt>
+ [290 <./Chapter 6/Figures/Estrecho.pdf>]
+<Chapter 6/Figures/Propagation.pdf, id=7235, 586.54031pt x 380.42159pt>
 File: Chapter 6/Figures/Propagation.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/Propagation.pdf>
 Package pdftex.def Info: Chapter 6/Figures/Propagation.pdf  used on input line 
-1373.
+1784.
 (pdftex.def)             Requested size: 375.80542pt x 243.74179pt.
- [285 <./Chapter 6/Figures/Propagation.pdf>]
-<Chapter 6/Figures/Propagation2.pdf, id=7160, 592.28485pt x 567.3423pt>
+
+[291] [292 <./Chapter 6/Figures/Propagation.pdf>]
+<Chapter 6/Figures/Propagation2.pdf, id=7280, 592.28485pt x 567.3423pt>
 File: Chapter 6/Figures/Propagation2.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/Propagation2.pdf>
 Package pdftex.def Info: Chapter 6/Figures/Propagation2.pdf  used on input line
- 1415.
+ 1869.
 (pdftex.def)             Requested size: 375.80542pt x 359.97267pt.
-
-Overfull \hbox (66.00877pt too wide) detected at line 1434
-[]
- []
-
-<Chapter 6/Figures/Random2.pdf, id=7162, 639.8206pt x 825.70494pt>
+ [293] [294 <./Chapter 6/Figures/Propagation2.pdf>]
+<Chapter 6/Figures/Random2.pdf, id=7301, 639.8206pt x 825.70494pt>
 File: Chapter 6/Figures/Random2.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/Random2.pdf>
-Package pdftex.def Info: Chapter 6/Figures/Random2.pdf  used on input line 1442
+Package pdftex.def Info: Chapter 6/Figures/Random2.pdf  used on input line 1913
 .
 (pdftex.def)             Requested size: 281.85585pt x 363.73967pt.
-[286] [287 <./Chapter 6/Figures/Propagation2.pdf>] [288 <./Chapter 6/Figures/Ra
-ndom2.pdf>]
-Overfull \hbox (42.22426pt too wide) detected at line 1493
-[]
- []
-
-[289]
-<Chapter 6/Figures/FourierGamma.pdf, id=7215, 440.77277pt x 770.00833pt>
+ [295] [296 <./Chapter 6/Figures/Random2.pdf>] [297]
+[298]
+<Chapter 6/Figures/FourierGamma.pdf, id=7358, 440.77277pt x 770.00833pt>
 File: Chapter 6/Figures/FourierGamma.pdf Graphic file (type pdf)
 <use Chapter 6/Figures/FourierGamma.pdf>
 Package pdftex.def Info: Chapter 6/Figures/FourierGamma.pdf  used on input line
- 1521.
+ 2044.
 (pdftex.def)             Requested size: 305.33788pt x 533.43295pt.
-) (out/main.bbl [290] [291 <./Chapter 6/Figures/FourierGamma.pdf>]
-[292
+) (out/main.bbl [299] [300 <./Chapter 6/Figures/FourierGamma.pdf>]
+[301
 
-] [293] [294] [295] [296] [297]
-Underfull \hbox (badness 2213) in paragraph at lines 513--516
+] [302] [303] [304] [305]
+Underfull \hbox (badness 2213) in paragraph at lines 524--527
 []\T1/cmr/m/n/10.95 (+20) Shih, C.-C. (1995a).  Frac-tion-al-iza-tion of fourie
 r trans-form.  \T1/cmr/m/it/10.95 (+20) Op-tics Com-mu-ni-ca-tions\T1/cmr/m/n/1
 0.95 (+20) ,
  []
 
-[298]) [299] (out/main.aux)
+[306]) [307] (out/main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9E38C4D96915B6C79B8D6B7854936136;37413.
+(rerunfilecheck)             Checksum: D285F2CE46C2253A9B5AE2AC6D3A2486;37225.
  ) 
 Here is how much of TeX's memory you used:
- 23655 strings out of 467525
- 392090 string characters out of 5418982
- 909457 words of memory out of 5000000
- 50271 multiletter control sequences out of 15000+600000
- 679855 words of font info for 380 fonts, out of 8000000 for 9000
+ 23720 strings out of 467525
+ 393067 string characters out of 5418982
+ 911576 words of memory out of 5000000
+ 50302 multiletter control sequences out of 15000+600000
+ 680086 words of font info for 383 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,19n,79p,2442b,831s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
 /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
-></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
-sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
-al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
-exlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
-ive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
-/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-26/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2026/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2026/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fon
-ts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2026/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf
--dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/t
-exmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2026/tex
-mf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2026/texmf
--dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf-d
-ist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-dis
-t/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2026/texmf-dist/
-fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2026/texmf-dist/fo
-nts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/font
-s/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2026/texmf-dist/fonts/
-type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type
-1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/
-public/cm-super/sfti0800.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pu
-blic/cm-super/sfti1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
-ic/cm-super/sfti1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public
-/cm-super/sfti2488.pfb>
-Output written on out/main.pdf (317 pages, 8586087 bytes).
+usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
+cal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
+l/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/
+texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/te
+xlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texl
+ive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive
+/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/20
+26/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2026/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2026/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts/
+type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2026/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/texm
+f-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2026/texmf-di
+st/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf-dist
+/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-dist/f
+onts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2026/texmf-dist/fon
+ts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2026/texmf-dist/fonts
+/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/fonts/t
+ype1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
+/public/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/p
+ublic/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pub
+lic/cm-super/sfti0800.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publi
+c/cm-super/sfti1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
+cm-super/sfti1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm
+-super/sfti2488.pfb>
+Output written on out/main.pdf (325 pages, 8633107 bytes).
 PDF statistics:
- 7771 PDF objects out of 8907 (max. 8388607)
- 6417 compressed objects within 65 object streams
- 1436 named destinations out of 1440 (max. 500000)
+ 7915 PDF objects out of 8907 (max. 8388607)
+ 6554 compressed objects within 66 object streams
+ 1464 named destinations out of 1728 (max. 500000)
  87549 words of extra memory for PDF output out of 89155 (max. 10000000)
 

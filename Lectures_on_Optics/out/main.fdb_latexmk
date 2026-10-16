@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex out/main"] 1791865414.79487 "out/main.aux" "out/main.bbl" "out/main" 1791865792.92222 0
-  "./references.bib" 1788627160.62653 30563 57ba3bb1ba675ae7d58c83a683dfc730 ""
+["bibtex out/main"] 1792177379.21599 "out/main.aux" "out/main.bbl" "out/main" 1792177381.41941 0
+  "./references.bib" 1791908325.75342 30865 5fa6a1e79ca54b48d577ce5f842f19e3 ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "out/main.aux" 1791865792.6628 140848 ab3320d2c8cda9249f2bef9c7d96cb09 "pdflatex"
+  "out/main.aux" 1792177381.17132 144196 2556532a624f18faf417e2712008a186 "pdflatex"
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1791865790.7877 "main.tex" "out/main.pdf" "main" 1791865792.92247 0
+["pdflatex"] 1792177379.28744 "main.tex" "out/main.pdf" "main" 1792177381.41966 0
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -104,7 +104,6 @@
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb" 1248133631 32442 c975af247b6702f7ca0c299af3616b80 ""
-  "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb" 1248133631 11493 4f5ed183a47d3197cf8cd322325db6de ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
@@ -309,15 +308,15 @@
   "Chapter 6/Figures/Propagation2.pdf" 1788059544.28771 22476 c66512ec23898ab6763a5ee947c880f7 ""
   "Chapter 6/Figures/Random2.pdf" 1788059544.28813 25569 4cfc8b4378a401590155428b9e7cc468 ""
   "Chapter 6/Figures/RandomVar.pdf" 1788059544.28832 14567 2ee5e89219d1458896545cd7882c3f39 ""
-  "Chapter 6/chap6.tex" 1791865790.70797 96089 898f96bd327b5a5b94a63edcd02abb48 ""
+  "Chapter 6/chap6.tex" 1792177371.96229 134650 ac329f9708c22bc2231a72972e91f8ff ""
   "Figures/LoGOTS.png" 1788059544.30232 58761 d30b2db1e9efaf752cebe7551c894d9d ""
   "Figures/logouis.png" 1788059544.30252 62450 f09c4e4b788c95739ca2931443f6d84e ""
   "main.tex" 1788622969.10776 6816 894226aead7b1be9a3f0caf0805364c6 ""
-  "out/main.aux" 1791865792.6628 140848 ab3320d2c8cda9249f2bef9c7d96cb09 "pdflatex"
-  "out/main.bbl" 1791865414.86012 24350 bb072b3f2576f019d7870945c479bb1b "bibtex out/main"
-  "out/main.lof" 1791865792.66988 25619 223a9afac3ffd1cbec86b9812df7d574 "pdflatex"
-  "out/main.out" 1791865792.66966 37413 9e38c4d96915b6c79b8d6b7854936136 "pdflatex"
-  "out/main.toc" 1791865792.66985 15731 007ca9489fddbae5638fa440af5fb044 "pdflatex"
+  "out/main.aux" 1792177381.17132 144196 2556532a624f18faf417e2712008a186 "pdflatex"
+  "out/main.bbl" 1792177379.2849 24773 cce01f96cee3db62e1f51941627ca4de "bibtex out/main"
+  "out/main.lof" 1792177381.17888 25621 cb6b911661b057af268461034fee2193 "pdflatex"
+  "out/main.out" 1792177381.17835 37225 d285f2ce46c2253a9b5ae2ac6d3a2486 "pdflatex"
+  "out/main.toc" 1792177381.17886 15697 7e4240166eb06a14fe03db79b65413af "pdflatex"
   (generated)
   "out/main.aux"
   "out/main.lof"

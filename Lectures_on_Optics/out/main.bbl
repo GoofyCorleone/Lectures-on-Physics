@@ -180,6 +180,12 @@ Fresnel, A.-J. (1819).
 \newblock In {\em M{\'e}moires de l'Acad{\'e}mie des Sciences}, volume~5, pages
   339--475. Acad{\'e}mie Royale des Sciences, Paris.
 
+\bibitem[Gabor, 1946]{gabor1946theory}
+Gabor, D. (1946).
+\newblock Theory of communication. part 1: The analysis of information.
+\newblock {\em Journal of the Institution of Electrical Engineers, Part III:
+  Radio and Communication Engineering}, 93(26):429--441.
+
 \bibitem[Galton, 1888]{galton1888correlations}
 Galton, F. (1888).
 \newblock Co-relations and their measurement, chiefly from anthropometric data.
@@ -200,6 +206,11 @@ Glauber, R.~J. (1963).
 Goodman, J.~W. (2005).
 \newblock {\em Introduction to Fourier Optics}.
 \newblock Roberts and Company Publishers, 3rd edition.
+
+\bibitem[Goodman, 2015]{goodman2015statistical}
+Goodman, J.~W. (2015).
+\newblock {\em Statistical Optics}.
+\newblock John Wiley and Sons, Hoboken, 2 edition.
 
 \bibitem[Green, 1828]{green1828essay}
 Green, G. (1828).
